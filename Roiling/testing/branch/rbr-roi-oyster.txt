@@ -5,12 +5,12 @@
 #--vtc.py checks for verb cases
 #--rbr.py v to verify nothing slipped
 
-file=reg-roi-oyster-max.txt,max,maximum walkthrough
-file=reg-roi-oyster-min.txt,min,minimum walkthrough
-file=reg-roi-oyster-nudmis.txt,nudmis/nudges/nud/nu/mis,walkthrough with all nudges
-file=reg-roi-oyster-slider.txt,sli,walkthrough with slider readings
-file=reg-roi-oyster-hints.txt,hints/hin,walkthrough with hints
-file=reg-roi-oyster-verbs.txt,verbs,walkthrough testing verbs
+file=reg-roi-oyster-max.txt,abbr=max,desc=maximum walkthrough
+file=reg-roi-oyster-min.txt,abbr=min,desc=minimum walkthrough
+file=reg-roi-oyster-nudmis.txt,abbr=nudmis/nudges/nud/nu/mis,desc=walkthrough with all nudges
+file=reg-roi-oyster-slider.txt,abbr=sli,desc=walkthrough with slider readings
+file=reg-roi-oyster-hints.txt,abbr=hints/hin,desc=walkthrough with hints
+file=reg-roi-oyster-verbs.txt,abbr=verbs,desc=walkthrough testing verbs
 
 }}MAX=45
 }}CURMAX=45
@@ -45,7 +45,7 @@ Taken.
 >ptf 2
 
 @verbs
-#ttc-table-of-oyster-nowheres-posh-hops-shop
+#testcase-table-of-oyster-nowheres-posh-hops-shop
 >e
 You just got here, so direction means nothing. So you can only really go out, but those LOLstr trolls will just coax you back inside. Unless you can out-cool them
 \\
@@ -61,21 +61,21 @@ You can't just sneak past the LOLstr trolls. But there is a way.
 >talk to casper
 (You record the information about the haunter/DIE THOU in multiple entries in your pedanto-notepad.)
 \\
-#ttc-table-of-notepad-entries-die-thou
+#testcase-table-of-notepad-entries-die-thou
 >pad die thou
 If the Horned Hedron could be undermined or infiltrated, perhaps things would get back to normal. And perhaps the haunter could be used against them. It hates them.
 \\
-#ttc-table-of-notepad-entries-the-haunter
+#testcase-table-of-notepad-entries-the-haunter
 >pad haunter
 The haunter is beneath Anger Range, but it is only part of what is making everyone angry. It is angry about a jewel it had stolen from it.
 \\
 ##balance undos
-#ttc-table-of-region-initial-scoring-commentary-oyster-1
+#testcase-table-of-region-initial-scoring-commentary-oyster-1
 >spit tips
 by one point
 You've started to get some action in.
 \\
-#ttc-table-of-region-initial-scoring-commentary-oyster-2
+#testcase-table-of-region-initial-scoring-commentary-oyster-2
 >inset tines
 Bam! More action! You'll still sort of be guessing the verb, but it's sort of just reacting, too.
 by one point
@@ -163,11 +163,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >remap
 by one point
 \\
-#ttc-table-of-posh-hops-shop-nudges-remap
+#testcase-table-of-posh-hops-shop-nudges-remap
 >rempa
 You already got a temporary escape from the bad music. You can't really do any more, there.
 \\
-#ttc-table-of-posh-hops-shop-nudges-unset
+#testcase-table-of-posh-hops-shop-nudges-unset
 >unste
 You already got a temporary escape from the bad music. You can't really do any more, there.
 >undo
@@ -175,7 +175,7 @@ You already got a temporary escape from the bad music. You can't really do any m
 >undo
 
 @verbs
-#ttc-table-of-oyster-attacks-lolstr-trolls
+#testcase-table-of-oyster-attacks-lolstr-trolls
 >attack lolstr trolls
 "I'd beat..." you think, before you realize you've been BAITED. You think bouncers, one scrub. That cools you down.
 
@@ -186,7 +186,7 @@ You already got a temporary escape from the bad music. You can't really do any m
 The LOLstr trolls seem concerned you haven't had any fun at all. You try to argue with them, but it's hopeless. They claim, bored, they're just the messenger as they escort you back inside. The galoots gloat so. Perhaps if you were more obnoxious, they'd be less inclined to keep you in.
 !by one point
 \\
-#ttc-table-of-oyster-prefigurings-lolstr-trolls
+#testcase-table-of-oyster-prefigurings-lolstr-trolls
 >pf
 You can STROLL past the LOLstr trolls once you're not worth stopping.
 \\
@@ -258,29 +258,29 @@ The bar fails to change into an ethnic restaurant.
 >spyte
 The pesty types probably spell it that way, but I'm not letting YOU do so.
 \\
-#ttc-table-of-posh-hops-shop-nudges-pti
+#testcase-table-of-posh-hops-shop-nudges-pti
 >pti
 You can't pick out which pit to do something to. Maybe there's an action to apply to all of them.
 \\
-#ttc-table-of-posh-hops-shop-nudges-vets
+#testcase-table-of-posh-hops-shop-nudges-vets
 >vest
 Focus on the trolls, not their clothes.
 \\
-#ttc-table-of-posh-hops-shop-nudges-vet
+#testcase-table-of-posh-hops-shop-nudges-vet
 >vte
 Focus on the trolls, not their clothes.
 \\
-#ttc-table-of-posh-hops-shop-nudges-pesty
+#testcase-table-of-posh-hops-shop-nudges-pesty
 >pesyt
 The pesty types resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that. Maybe the only way to change them is by changing society.
 \\
-#ttc-table-of-posh-hops-shop-nudges-type
+#testcase-table-of-posh-hops-shop-nudges-type
 >tyep
 The pesty types resist change. Not that they wouldn't mind a bit of drinking tales for next time. Maybe you could provide that. Maybe the only way to change them is by changing society.
 >inset
 by one point
 \\
-#ttc-table-of-oyster-done-rejects-tines
+#testcase-table-of-oyster-done-rejects-tines
 >tinse
 You destroyed the stein, and that's enough.
 >undo
@@ -288,11 +288,11 @@ You destroyed the stein, and that's enough.
 >spit
 by one point
 \\
-#ttc-table-of-oyster-done-rejects-tips-pits
+#testcase-table-of-oyster-done-rejects-tips-pits
 >spti
 You can't and don't want to do anything else to the tips pits.
 \\
-#+ttc-table-of-posh-hops-shop-nudges-pti
+#+testcase-table-of-posh-hops-shop-nudges-pti
 >pti
 You already dealt with the tips pits.
 >undo
@@ -301,7 +301,7 @@ You already dealt with the tips pits.
 >scrape
 by one point
 \\
-#ttc-table-of-oyster-done-rejects-capers-recaps
+#testcase-table-of-oyster-done-rejects-capers-recaps
 >scapre
 Casper has suffered enough indignities. You should annoy someone else.
 >undo
@@ -309,17 +309,17 @@ Casper has suffered enough indignities. You should annoy someone else.
 >sing
 by one point
 \\
-#ttc-table-of-oyster-done-rejects-gins-sign
+#testcase-table-of-oyster-done-rejects-gins-sign
 >igsn
 There's no other way to disobey the sign.
 >undo
 >undo
 \\
-#ttc-table-of-oyster-readables-stein
+#testcase-table-of-oyster-readables-stein
 >read stein
 The stein reads TIENS in red, trying to be foreign and exotic, maybe.
 \\
-#ttc-table-of-oyster-readables-jukebox
+#testcase-table-of-oyster-readables-jukebox
 >read jukebox
 Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, in red, never songs. Do, undo.
 \\
@@ -329,11 +329,11 @@ Complicated instructions for, of all things, how to turn off the tunes currently
 >read jukebox
 Complicated instructions for, of all things, how to turn off the tunes currently playing. Always tunes, in red, never songs. Do, undo, set, reset? Hm.
 \\
-#ttc-table-of-oyster-readables-tips-pits
+#testcase-table-of-oyster-readables-tips-pits
 >read tips pits
 IT'S P is written in red on the bottom.
 \\
-#ttc-table-of-oyster-spechelp-capers-recaps
+#testcase-table-of-oyster-spechelp-capers-recaps
 >scraep
 You think of mocking Casper's writing style, but that's not quite it. Something more direct and physically insulting, maybe.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Capers Recaps. That's a decent omen.
@@ -344,7 +344,7 @@ You think of mocking Casper's writing style, but that's not quite it. Something 
 DEBUG ONLY: You feel a slight psychic push-pull coming from Capers Recaps. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-gins-sign
+#testcase-table-of-oyster-spechelp-gins-sign
 >igns
 Nobody pays attention to your performance as you disobey the sign. Or try to. I guess the sign doesn't strictly disallow THAT.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the gins sign. That's a decent omen.
@@ -355,7 +355,7 @@ Nobody pays attention to your performance as you disobey the sign. Or try to. I 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the gins sign. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-tips-pits
+#testcase-table-of-oyster-spechelp-tips-pits
 >spti
 The tips pits rattle a bit as you try to do ... something ... to them.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tips pits. That's a decent omen.
@@ -366,7 +366,7 @@ The tips pits rattle a bit as you try to do ... something ... to them.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tips pits. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-tines
+#testcase-table-of-oyster-spechelp-tines
 >inste
 Hmm. There must be some way to destroy the stein, but that's not it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tines. That's a decent omen.
@@ -377,7 +377,7 @@ Hmm. There must be some way to destroy the stein, but that's not it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tines. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-tunes
+#testcase-table-of-oyster-spechelp-tunes
 >unste
 The tunes grow slightly less annoying, for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tunes. That's a decent omen.
@@ -388,7 +388,7 @@ The tunes grow slightly less annoying, for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tunes. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-trolls
+#testcase-table-of-oyster-spechelp-trolls
 >strlol
 The trolls laugh at you a bit, but nervously.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the LOLstr trolls. That's a decent omen.
@@ -399,69 +399,69 @@ The trolls laugh at you a bit, but nervously.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the LOLstr trolls. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-scannotes-gins-sign
+#testcase-table-of-oyster-scannotes-gins-sign
 >scan gins sign
 Hmm. Whatever the variable colors are, you think you can do something with the fixed ones.
 \\
-#ttc-table-of-oyster-scannotes-capers-recaps
+#testcase-table-of-oyster-scannotes-capers-recaps
 >scan capers recaps
 Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue.
 Casper Spacer and Capers Recaps may be linked. You could probably bulldoze through with the information from scanning both.
 \\
-#ttc-table-of-oyster-scannotes-casper-spacer
+#testcase-table-of-oyster-scannotes-casper-spacer
 >scan casper spacer
 Your settler is not giving a full readout. Spacer's books are known for deceptive simplicity, for stringing together short words everyone knows confusingly. Still, those three reds at the start must be a clue.
 Casper Spacer and Capers Recaps may be linked. You could probably bulldoze through with the information from scanning both.
 \\
-#ttc-table-of-oyster-scannotes-perma-amper
+#testcase-table-of-oyster-scannotes-perma-amper
 >scan perma amper
 It's a perma-amper, so that might account for the twitchy light.
 \\
-#ttc-table-of-oyster-scannotes-lil-ps-pills
+#testcase-table-of-oyster-scannotes-lil-ps-pills
 >scan li'l p's pills
 The pills can't be that fidgety. The particular brand must be a clue, too.
 \\
-#ttc-table-of-oyster-scannotes-lolstr-trolls
+#testcase-table-of-oyster-scannotes-lolstr-trolls
 >scan lolstr trolls
 Well, of course it's not perfectly straightforward with trolls. And yet, as with other trolls, there may be simple ways to reason around them and put them in the past.
 \\
-#ttc-table-of-oyster-nudges-storey
+#testcase-table-of-oyster-nudges-storey
 >storye
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 \\
-#ttc-table-of-posh-hops-shop-nudges-posh
+#testcase-table-of-posh-hops-shop-nudges-posh
 >pohs
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 \\
-#ttc-table-of-posh-hops-shop-nudges-tine
+#testcase-table-of-posh-hops-shop-nudges-tine
 >tien
 Just one tine doesn't seem up to much.
 \\
-#ttc-table-of-posh-hops-shop-nudges-troll
+#testcase-table-of-posh-hops-shop-nudges-troll
 >troll
 Dealing with just one troll would cause the rest to call you a bully and beat you up. Gotta take 'em all, somehow.
 \\
-#ttc-table-of-posh-hops-shop-nudges-recap
+#testcase-table-of-posh-hops-shop-nudges-recap
 >recpa
 Casper glares at you, as if he knows you're thinking all his recaps are the same. No. You need to deal with them all.
 \\
-#ttc-table-of-posh-hops-shop-nudges-tune
+#testcase-table-of-posh-hops-shop-nudges-tune
 >tuen
 Eh, you know how jukeboxes are. One tune quashed, another pops up. Get rid of 'em all.
 \\
-#ttc-table-of-oyster-nudges-jar
+#testcase-table-of-oyster-nudges-jar
 >jra
 You suspect it's what's in the jar that's important.
 \\
-#ttc-table-of-oyster-nudges-spill
+#testcase-table-of-oyster-nudges-spill
 >splil
 You seem to be fumbling what to do with the pills.
 \\
-#ttc-table-of-posh-hops-shop-nudges-jukebox
+#testcase-table-of-posh-hops-shop-nudges-jukebox
 >jukebxo
 You can't work on the jukebox as a whole, but maybe you could meddle with its two main parts: the tunes and perma-amper
 \\
-#ttc-table-of-oyster-spechelp-perma-amper
+#testcase-table-of-oyster-spechelp-perma-amper
 >rempa
 You can't change the bad music selection. But you can neutralize it--the jukebox has instructions.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the perma-amper. That's a decent omen.
@@ -472,7 +472,7 @@ You can't change the bad music selection. But you can neutralize it--the jukebox
 DEBUG ONLY: You feel a slight psychic push-pull coming from the perma-amper. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#+ttc-table-of-posh-hops-shop-nudges-unset
+#+testcase-table-of-posh-hops-shop-nudges-unset
 >unste
 The tunes grow slightly less annoying, for a moment.
 \\
@@ -483,15 +483,15 @@ by one point
 !(tunes)
 You already dealt with the tunes and perma-amper.
 \\
-#+ttc-table-of-posh-hops-shop-nudges-unset
+#+testcase-table-of-posh-hops-shop-nudges-unset
 >unste
 You already got a temporary escape from the bad music. You can't really do any more, there.
 \\
-#+ttc-table-of-posh-hops-shop-nudges-remap
+#+testcase-table-of-posh-hops-shop-nudges-remap
 >rempa
 You already got a temporary escape from the bad music. You can't really do any more, there.
 \\
-#+ttc-table-of-posh-hops-shop-nudges-jukebox
+#+testcase-table-of-posh-hops-shop-nudges-jukebox
 >jukebxo
 The jukebox is already temporarily out of commission.
 >undo
@@ -611,11 +611,11 @@ DEBUG INFO: clam hinting.
 --Another way to break the jukebox was to REMAP the perma-amper.
 
 @verbs
-#ttc-table-of-oyster-nowheres-olde-lode
+#testcase-table-of-oyster-nowheres-olde-lode
 >e
 Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The clam isn't that complex, even if you once again can't use directions.
 \\
-#ttc-table-of-goto-sectioning-posh-hops-shop-1--
+#testcase-table-of-goto-sectioning-oyster-1-posh-hops-shop
 >gt shop
 The LOLstr trolls would not welcome you back.
 \\
@@ -674,19 +674,19 @@ A weapon won't do much good here. You need action!
 >el doodle
 That would be more in place in a game with palindromes. Someone should write one! Whoops, they already did and called it Ailihphilia. Um, I mean, I already did. If you haven't played it, you totally should. After you're done here, of course.
 \\
-#ttc-table-of-olde-lode-nudges-lode
+#testcase-table-of-olde-lode-nudges-lode
 >loed
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-olde-lode-nudges-braes
+#testcase-table-of-olde-lode-nudges-braes
 >brase
 The baser braes can't be changed. There is enough to do in the Olde Lode.
 \\
-#ttc-table-of-olde-lode-nudges-brae
+#testcase-table-of-olde-lode-nudges-brae
 >brea
 The baser braes can't be changed. There is enough to do in the Olde Lode.
 \\
-#ttc-table-of-oyster-spechelp-clam
+#testcase-table-of-oyster-spechelp-clam
 >caml
 The clam still seems enraged.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the clam. That's a decent omen.
@@ -737,16 +737,16 @@ It's--well, beautiful, like you could take it and forget all about this quest.
 {$SCOS}
 
 @verbs
-#+ttc-table-of-oyster-nowheres-olde-lode
+#+testcase-table-of-oyster-nowheres-olde-lode
 >e
 Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The urn isn't that complex, even if you once again can't use directions.
 
 @nud
-#ttc-table-of-olde-lode-nudges-calm
+#testcase-table-of-olde-lode-nudges-calm
 >clma
 Odd! Now, you feel a need to panic and flee after calming the clam.
 \\
-#ttc-table-of-oyster-spechelp-urn
+#testcase-table-of-oyster-spechelp-urn
 >rnu
 The urn sits there, daring you to walk away.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the urn. That's a decent omen.
@@ -763,7 +763,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the urn. That's a de
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @verbs
-#ttc-table-of-oyster-attacks-urn
+#testcase-table-of-oyster-attacks-urn
 >attack urn
 Your irrational anger turns to irrational greed when you get close enough to smack it.
 
@@ -779,7 +779,7 @@ DEBUG INFO: frat raft hinting.
 >fart
 DEBUG INFO: interlocking oars hinting.
 \\
-#ttc-table-of-oyster-hint-request-rejects-frat-raft
+#testcase-table-of-oyster-hint-request-rejects-frat-raft
 >hint frat raft
 Now you've charged up the frat raft, you need to find a way to use the oars.
 \\
@@ -791,7 +791,7 @@ Now you've charged up the frat raft, you need to find a way to use the oars.
 You can't cross Saccade Cascade on your own. One of the sabot boats would hit you. Or, if you went underwater, you'd fear strident tridents.
 
 @verbs
-#ttc-table-of-oyster-nowheres-disease-seaside
+#testcase-table-of-oyster-nowheres-disease-seaside
 >e
 The matterless streamlets, err, don't matter. They might even lead to a not-safer seafront.
 You need to cross to the north for more action.
@@ -804,19 +804,19 @@ Say, spare sea spray.
 >listen
 You hear voices from the sabot boats talking about great accomplishments. The frat raft makes unpleasant, disturbing noises.
 \\
-#ttc-table-of-oyster-attacks-sabot-boats
+#testcase-table-of-oyster-attacks-sabot-boats
 >attack sabot boats
 O, bats!
 \\
-#ttc-table-of-oyster-attacks-frat-raft
+#testcase-table-of-oyster-attacks-frat-raft
 >attack frat raft
 Yes, the stupid oars don't seem to move themselves, but that's no reason to get upset! Think!
 \\
-#ttc-table-of-goto-sectioning-olde-lode-2--
+#testcase-table-of-goto-sectioning-oyster-2-olde-lode
 >gt lode
 You don't want to go back near that urn.
 \\
-#+ttc-table-of-goto-sectioning-posh-hops-shop-1--
+#+testcase-table-of-goto-sectioning-oyster-1-posh-hops-shop
 >gt shop
 The LOLstr trolls would not welcome you back, and it'd take too long to get there.
 \\
@@ -855,7 +855,7 @@ Alas, no Lady of the Lake appears to help you. Her name, if she exists, is proba
 >arrive
 Easier said than done. Perhaps a river craft could help you across. Like the raft. Or the boats.
 \\
-#ttc-table-of-oyster-spechelp-frat-raft
+#testcase-table-of-oyster-spechelp-frat-raft
 >ratf
 The frat raft rocks slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the frat raft. That's a decent omen.
@@ -866,7 +866,7 @@ The frat raft rocks slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the frat raft. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-oars
+#testcase-table-of-oyster-spechelp-oars
 >oasr
 The oars splash around in the water, briefly rising out, as if they don't belong there.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the interlocking oars. That's a decent omen.
@@ -877,7 +877,7 @@ The oars splash around in the water, briefly rising out, as if they don't belong
 DEBUG ONLY: You feel a slight psychic push-pull coming from the interlocking oars. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-sabot-boats
+#testcase-table-of-oyster-spechelp-sabot-boats
 >bosat
 Perhaps if you were louder and more confident, the sabot boats would hear you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sabot boats. That's a decent omen.
@@ -888,15 +888,15 @@ Perhaps if you were louder and more confident, the sabot boats would hear you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sabot boats. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-disease-seaside-nudges-seaside
+#testcase-table-of-disease-seaside-nudges-seaside
 >seasied
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-disease-seaside-nudges-streamlet
+#testcase-table-of-disease-seaside-nudges-streamlet
 >streamlte
 The streamlets change, and don't change, at the same time. But that's just because they're water, not because of you. You don't need to do anything
 \\
-#ttc-table-of-disease-seaside-nudges-streamlets
+#testcase-table-of-disease-seaside-nudges-streamlets
 >streamlest
 The streamlets change, and don't change, at the same time. But that's just because they're water, not because of you. You don't need to do anything
 \\
@@ -904,7 +904,7 @@ The streamlets change, and don't change, at the same time. But that's just becau
 >a cone
 That wouldn't make the canoe any more helpful. It wouldn't make it any less helpful, either. Maybe the frat raft or sabot boats are a better bet.
 \\
-#ttc-table-of-disease-seaside-nudges-canoe
+#testcase-table-of-disease-seaside-nudges-canoe
 >caneo
 The canoe sways alarmingly. Maybe it isn't the best vessel for crossing the river.
 \\
@@ -919,59 +919,59 @@ The canoe is all red and has a fish carved into it. The fish seems to be trying 
 As you seek to change the canoe, you hear a rush of water and realize that the red fish cutting the tree there is, in fact, a herring. The last thing you needed was more water! But it is too late to change the ocean back. You don't even see if Shoer Osher's statue was washed away as well.
 >undo
 \\
-#ttc-table-of-disease-seaside-nudges-soak
+#testcase-table-of-disease-seaside-nudges-soak
 >soka
 No, best concentrate on what the raft is.
 \\
-#ttc-table-of-disease-seaside-nudges-oak
+#testcase-table-of-disease-seaside-nudges-oak
 >oka
 No, best concentrate on what the raft is.
 \\
-#ttc-table-of-disease-seaside-nudges-fish
+#testcase-table-of-disease-seaside-nudges-fish
 >fihs
 T'fish won't shift nowt.
 \\
-#ttc-table-of-disease-seaside-nudges-herring
+#testcase-table-of-disease-seaside-nudges-herring
 >herrign
 Nothing doing. It is, after all, a RED herring. Ba dum bum.
 \\
-#ttc-table-of-disease-seaside-nudges-sculpture
+#testcase-table-of-disease-seaside-nudges-sculpture
 >sculptuer
 That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for.
 \\
-#ttc-table-of-disease-seaside-nudges-cult
+#testcase-table-of-disease-seaside-nudges-cult
 >cutl
 That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for.
 \\
-#ttc-table-of-disease-seaside-nudges-super
+#testcase-table-of-disease-seaside-nudges-super
 >supre
 That sculpture is pretty firm and stuck as-is. Better to go off and do something cooler than Shoer Osher ever got credit for.
 \\
-#ttc-table-of-disease-seaside-nudges-river
+#testcase-table-of-disease-seaside-nudges-river
 >rivre
 That would cause serious injury to people and property, even if it could work.
 \\
-#ttc-table-of-disease-seaside-nudges-rivera
+#testcase-table-of-disease-seaside-nudges-rivera
 >rivear
 That would cause serious injury to people and property, even if it could work.
 \\
-#ttc-table-of-disease-seaside-nudges-saccade
+#testcase-table-of-disease-seaside-nudges-saccade
 >saccaed
 That would cause serious injury to people and property, even if it could work.
 \\
-#ttc-table-of-disease-seaside-nudges-oar
+#testcase-table-of-disease-seaside-nudges-oar
 >ora
 If you looked at just one oar, the raft would do no better than go in circles.
 \\
-#ttc-table-of-disease-seaside-nudges-boat
+#testcase-table-of-disease-seaside-nudges-boat
 >bota
 No one boat seems better than the others. Maybe you should widen your focus to all the boats.
 \\
-#ttc-table-of-disease-seaside-nudges-interlocking
+#testcase-table-of-disease-seaside-nudges-interlocking
 >interlockign
 Whoah, they're just oars. Think simpler. Much simpler.
 \\
-#ttc-table-of-oyster-scannotes-frat-raft
+#testcase-table-of-oyster-scannotes-frat-raft
 >scan frat raft
 You're pretty sure you can get this one quickly. I mean, you've been given one of the letters.
 
@@ -981,12 +981,12 @@ You're pretty sure you can get this one quickly. I mean, you've been given one o
 !by one point
 The oars have no gas, or whatever they might run on
 \\
-#ttc-table-of-oyster-prefigurings-oars
+#testcase-table-of-oyster-prefigurings-oars
 >pf
 You can SOAR once the frat raft is full of, umm, whatever powers it.
 
 @nud
-#ttc-table-of-oyster-scannotes-sabot-boats
+#testcase-table-of-oyster-scannotes-sabot-boats
 >scan sabot boats
 It can't be too hard to get the boats' attention. Something brute-force must work. Once you've figured this out, you may want to proclaim how great you are. That could help!
 \\
@@ -998,7 +998,7 @@ Your score has just gone up by one point
 >score
 {$SCOS}
 #here we branch to check the otherway over Saccade Cascade
-#ttc-table-of-oyster-done-rejects-frat-raft
+#testcase-table-of-oyster-done-rejects-frat-raft
 >ratf
 The frat raft has fuel. It needs to use that fuel, now, with the oars.
 >soar
@@ -1024,7 +1024,7 @@ Your score has just gone up by one point
 >fart
 Like a butterfly's wings in China, your fart causes the frat raft to waver. Maybe if you got on the raft, something more would happen.
 \\
-#ttc-table-of-oyster-prefigurings-frat-raft
+#testcase-table-of-oyster-prefigurings-frat-raft
 >pf
 You can get on the frat raft and FART.
 >enter raft
@@ -1037,7 +1037,7 @@ by one point
 You're a bit too winded to make a really good boast after your recent exertions, so it isn't your best, but...
 !by one point
 \\
-#+ttc-table-of-oyster-prefigurings-frat-raft
+#+testcase-table-of-oyster-prefigurings-frat-raft
 >pf
 !FART
 >undo
@@ -1057,7 +1057,7 @@ DEBUG INFO: pale plea hinting.
 {$SCOS}
 
 @verbs
-#ttc-table-of-oyster-nowheres-fighter-freight
+#testcase-table-of-oyster-nowheres-fighter-freight
 >e
 Directions aren't what matters here. You just need some sort of action to get off the boat.
 
@@ -1071,27 +1071,27 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >refight
 That's not very good English, and you haven't gotten in a fight yet. Soon, though.
 \\
-#ttc-table-of-fighter-freight-nudges-freight
+#testcase-table-of-fighter-freight-nudges-freight
 >freigth
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-fighter-freight-nudges-bota
+#testcase-table-of-fighter-freight-nudges-bota
 >boat
 Destroying the boat would be a bad idea. You need to escape it.
 \\
-#ttc-table-of-fighter-freight-nudges-boats
+#testcase-table-of-fighter-freight-nudges-boats
 >basto
 Destroying the boat would be a bad idea. You need to escape it.
 \\
-#ttc-table-of-fighter-freight-nudges-crays
+#testcase-table-of-fighter-freight-nudges-crays
 >crasy
 No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out.
 \\
-#ttc-table-of-fighter-freight-nudges-cray
+#testcase-table-of-fighter-freight-nudges-cray
 >crya
 No way. You're not changing the crays--and if you changed one, the others would get you. You need a way out.
 \\
-#ttc-table-of-oyster-spechelp-pale-plea
+#testcase-table-of-oyster-spechelp-pale-plea
 >lepa
 Yes, the pale plea is calling and warning you to leave. But how?
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pale plea. That's a decent omen.
@@ -1127,7 +1127,7 @@ You catch a whiff of Apple Ale. Yes, you remember the red label quite clearly.
 >listen
 /("A\.\.\. 'elp!"|"Pal! Pal! Ee!")
 \\
-#ttc-table-of-goto-sectioning-disease-seaside-3--
+#testcase-table-of-goto-sectioning-oyster-3-disease-seaside
 >gt seaside
 No sense crossing back. There's more on the other side of the shore.
 
@@ -1150,17 +1150,19 @@ You can't help but listen to the carps' and pikes' immature, nasty jibes.
 >listen trout
 Whimpering slightly.
 \\
-#ttc-table-of-goto-sectioning-fighter-freight-4--
+#testcase-table-of-goto-sectioning-oyster-4-fighter-freight
 >gt freight
 You don't really want to revisit the crays.
 \\
-#+ttc-table-of-goto-sectioning-disease-seaside-3--
+#+testcase-table-of-goto-sectioning-oyster-3-disease-seaside
 >gt seaside
 No sense crossing back. There's more on this side of the shore.
 \\
-#+ttc-table-of-goto-sectioning-olde-lode-2--
+#+testcase-table-of-goto-sectioning-oyster-2-olde-lode
 >gt lode
 You don't want to go back near that urn, and it'd be hard, being on the other side of the shore.
+\\
+#+testcase-table-of-goto-sectioning-oyster-1-posh-hops-shop
 >gt shop
 The LOLstr trolls would not welcome you back, and it'd take too long to get there.
 \\
@@ -1186,7 +1188,7 @@ Batso.
 You probably can't help the trout until they're off his case, but they wouldn't be on his case if he had tutoring in fighting earlier. Catch-22. At least, here. Also, the poor trout's probably getting beaten up for learning in the first place.
 !by one point
 \\
-#ttc-table-of-oyster-prefigurings-trout
+#testcase-table-of-oyster-prefigurings-trout
 >pf
 You should be able to TUTOR the trout, wherever he went, with the carps and pikes gone.
 
@@ -1209,19 +1211,19 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >craps
 You have no dice to tempt the carps with. Or large amounts of money. Perhaps you'll need to try something more violent.
 \\
-#ttc-table-of-anger-range-nudges-anger
+#testcase-table-of-anger-range-nudges-anger
 >angre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-anger-range-nudges-pike
+#testcase-table-of-anger-range-nudges-pike
 >piek
 You need to deal with all the bullies at once, somehow, not just one at a time.
 \\
-#ttc-table-of-anger-range-nudges-carp
+#testcase-table-of-anger-range-nudges-carp
 >capr
 You need to deal with all the bullies at once, somehow, not just one at a time.
 \\
-#ttc-table-of-oyster-spechelp-carps
+#testcase-table-of-oyster-spechelp-carps
 >carsp
 The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the carps. That's a decent omen.
@@ -1232,7 +1234,7 @@ The carps and pikes laugh at--whatever you tried. But you know bullies are like 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the carps. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-pikes
+#testcase-table-of-oyster-spechelp-pikes
 >pikse
 The carps and pikes laugh at--whatever you tried. But you know bullies are like that when someone is onto them. Hm, how to fix things.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pikes. That's a decent omen.
@@ -1243,7 +1245,7 @@ The carps and pikes laugh at--whatever you tried. But you know bullies are like 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pikes. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-trout
+#testcase-table-of-oyster-spechelp-trout
 >trotu
 The best way to help the trout at the moment is to deal with the carps and pikes.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the trout. That's a decent omen.
@@ -1271,11 +1273,11 @@ Silly Internet slang isn't active enough, here.
 Now is not the time for poetry.
 
 @verbs
-#ttc-table-of-oyster-attacks-carps
+#testcase-table-of-oyster-attacks-carps
 >attack carps
 Brutality's the idea here, but you need a more specific verb.
 \\
-#ttc-table-of-oyster-attacks-pikes
+#testcase-table-of-oyster-attacks-pikes
 >attack pikes
 Brutality's the idea here, but you need a more specific verb.
 
@@ -1322,12 +1324,12 @@ DEBUG INFO: HUNTER HUNT AREA hinting.
 !by one point
 Nothing to unearth a haunter with.
 \\
-#ttc-table-of-oyster-prefigurings-hunter-hunt-area
+#testcase-table-of-oyster-prefigurings-hunter-hunt-area
 >pf
 You can UNEARTH the HAUNTER (from under the HUNTER HUNT AREA) with the right equipment.
 
 @nud
-#ttc-table-of-oyster-spechelp-HUNTER-HUNT-AREA
+#testcase-table-of-oyster-spechelp-HUNTER-HUNT-AREA
 >unearht
 You need a slightly more organized way to reveal what's under the ground, and you don't have a digging instrument, either.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the HUNTER HUNT AREA. That's a decent omen.
@@ -1338,27 +1340,27 @@ You need a slightly more organized way to reveal what's under the ground, and yo
 DEBUG ONLY: You feel a slight psychic push-pull coming from the HUNTER HUNT AREA. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-scannotes-HUNTER-HUNT-AREA
+#testcase-table-of-oyster-scannotes-HUNTER-HUNT-AREA
 >scan hunter hunt area
 You feel mad the letters settler isn't giving you information RIGHT NOW. Then you feel mad imagining the Respect Specter saying "You know, sometimes, that's more helpful than straight-up clues."
 \\
-#ttc-table-of-oyster-readables-HUNTER-HUNT-AREA
+#testcase-table-of-oyster-readables-HUNTER-HUNT-AREA
 >read scrawl
 Etahn Ru. Near-Hut Haunter.
 \\
-#ttc-table-of-anger-range-nudges-scrawl
+#testcase-table-of-anger-range-nudges-scrawl
 >scralw
 It's a HUNTER HUNT AREA, which seems more important.
 \\
-#ttc-table-of-anger-range-nudges-darnel
+#testcase-table-of-anger-range-nudges-darnel
 >darnle
 If it were just one darnel, there'd be no point in getting mad. But there are a bunch.
 \\
-#ttc-table-of-oyster-scannotes-snarled-darnels
+#testcase-table-of-oyster-scannotes-snarled-darnels
 >scan snarled darnels
 So very tangled! No vowels showed up for certain, which makes it tougher ... or does it?
 \\
-#ttc-table-of-oyster-spechelp-snarled-darnels
+#testcase-table-of-oyster-spechelp-snarled-darnels
 >snadrel
 The snarled darnels rustle a bit.
 \\
@@ -1395,7 +1397,7 @@ by one point
 {$SCOS}
 
 @hints
-#ttc-table-of-oyster-hint-request-rejects-snarled-darnels
+#testcase-table-of-oyster-hint-request-rejects-snarled-darnels
 >hint snarled darnels
 You had your say about the snarled darnels.
 
@@ -1413,16 +1415,16 @@ Anger Range won't be helped further by an advice column or columnist.
 I award you zero points for that anagramming try, and may God have mercy on your soul for trying to sneak another point.
 
 @nud
-#+ttc-table-of-anger-range-nudges-darnel
+#+testcase-table-of-anger-range-nudges-darnel
 >darnle
 You already got mad at all the snarled darnels. You need to move on.
 \\
-#ttc-table-of-oyster-done-rejects-snarled-darnels
+#testcase-table-of-oyster-done-rejects-snarled-darnels
 >snarled darnels
 It's okay to get mad, but staying mad? No.
 
 @verbs
-#ttc-table-of-oyster-attacks-hunter-hunt-area
+#testcase-table-of-oyster-attacks-hunter-hunt-area
 >attack hunter hunt area
 As you kick at the area, a vision of a red hate urn, replete with frowns and scowls, pops up for a second or two before disappearing.
 
@@ -1433,11 +1435,11 @@ As you kick at the area, a vision of a red hate urn, replete with frowns and sco
 DEBUG INFO: pest pets hinting.
 
 @nudmis
-#ttc-table-of-oyster-readables-pest-pets
+#testcase-table-of-oyster-readables-pest-pets
 >read pest pets
 You notice PEP-TESTS as the brand name, once you have a look.
 \\
-#ttc-table-of-oyster-spechelp-pest-pets
+#testcase-table-of-oyster-spechelp-pest-pets
 >epst
 The pest pets seem less persistent for a moment.
 \\
@@ -1446,7 +1448,7 @@ The pest pets seem less persistent for a moment.
 The pest pets seem less persistent for a moment.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-hardest-trashed-dearths-nudges-pet
+#testcase-table-of-hardest-trashed-dearths-nudges-pet
 >ept
 But there are many pets to deal with here.
 
@@ -1468,7 +1470,7 @@ If you listen or look the right way, you could figure where the eeks are coming 
 {$SCOS}
 
 @verbs
-#ttc-table-of-oyster-nowheres-hardest-trashed-dearths
+#testcase-table-of-oyster-nowheres-hardest-trashed-dearths
 >e
 Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow.
 \\
@@ -1492,11 +1494,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#ttc-table-of-oyster-readables-cans
+#testcase-table-of-oyster-readables-cans
 >read cans
 You squint. NASC is the name of the company that produced these cans, written in red.
 \\
-#ttc-table-of-oyster-spechelp-eeks
+#testcase-table-of-oyster-spechelp-eeks
 >eesk
 You guess the eeks must be there--no, there!
 DEBUG ONLY: You feel a slight psychic push-pull coming from the eeks. That's a decent omen.
@@ -1507,31 +1509,31 @@ You guess the eeks must be there--no, there!
 DEBUG ONLY: You feel a slight psychic push-pull coming from the eeks. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-hardest-trashed-dearths-nudges-hardest
+#testcase-table-of-hardest-trashed-dearths-nudges-hardest
 >hardets
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-hardest-trashed-dearths-nudges-hardet
+#testcase-table-of-hardest-trashed-dearths-nudges-hardet
 >hardte
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-hardest-trashed-dearths-nudges-spark
+#testcase-table-of-hardest-trashed-dearths-nudges-spark
 >spakr
 You don't need or want to destabilize the spark parks.
 \\
-#ttc-table-of-hardest-trashed-dearths-nudges-park
+#testcase-table-of-hardest-trashed-dearths-nudges-park
 >pakr
 You don't need or want to destabilize the spark parks.
 \\
-#ttc-table-of-hardest-trashed-dearths-nudges-can
+#testcase-table-of-hardest-trashed-dearths-nudges-can
 >cna
 Getting rid of one can would still leave a mess. Maybe you can deal with them all.
 \\
-#ttc-table-of-hardest-trashed-dearths-nudges-cans
+#testcase-table-of-hardest-trashed-dearths-nudges-cans
 >casn
 You wonder if there is some odd-yet-familiar way to clean the cans up. That's not it, though.
 \\
-#ttc-table-of-hardest-trashed-dearths-nudges-eek
+#testcase-table-of-hardest-trashed-dearths-nudges-eek
 >eke
 You try to eke out an eek, but you only have one data point, and that's not enough.
 
@@ -1539,7 +1541,7 @@ You try to eke out an eek, but you only have one data point, and that's not enou
 {$SCOS}
 
 @nud
-#ttc-table-of-oyster-spechelp-cans
+#testcase-table-of-oyster-spechelp-cans
 >scna
 You wonder if there is some odd-yet-familiar way to clean the cans up. That's not it, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the cans. That's a decent omen.
@@ -1564,7 +1566,7 @@ There are no clothing stores around, nor is there anything physical to lead you 
 There are no clothing stores around, nor is there anything physical to lead you to where the trout is.
 
 @hints
-#ttc-table-of-settler-shake-descriptions-eeks
+#testcase-table-of-settler-shake-descriptions-eeks
 >ss
 A couple things: some cartoony representation of EEKS and the cans (very blurry) are visible.
 # I'm having problems with item order with the exact match above. It's not what's important, so if it happens, the regex below should fix things to avoid false positives.
@@ -1619,7 +1621,7 @@ Your score has just gone up by one point
 DEBUG INFO: Tea-at-a-Tee hinting.
 
 @verbs
-#ttc-table-of-oyster-nowheres-lean-lane
+#testcase-table-of-oyster-nowheres-lean-lane
 >e
 Though you are a guest, probably best not to go poking around. You can go back west.
 \\
@@ -1635,7 +1637,7 @@ Antiseptic spice taint.
 >listen tuna
 Aunt Tuna is humming something tuneless as she goes about her business.
 \\
-#ttc-table-of-oyster-attacks-trout
+#testcase-table-of-oyster-attacks-trout
 >attack trout
 A Roiling Original's kind of topsy turvy, but not like THAT.
 \\
@@ -1686,15 +1688,15 @@ ETA's one move later now that you went fishing for this anagram.
 >neal
 It would be nice if Tortu the Trout gained a friend named Neal. Or any friend.
 \\
-#ttc-table-of-lean-lane-nudges-lean
+#testcase-table-of-lean-lane-nudges-lean
 >elna
 You would upset countless people named Lena or Neal.
 \\
-#ttc-table-of-lean-lane-nudges-reward
+#testcase-table-of-lean-lane-nudges-reward
 >rewadr
 Aunt Tuna would probably open the drawer if you helped poor Tortu the Trout.
 \\
-#ttc-table-of-oyster-spechelp-dent
+#testcase-table-of-oyster-spechelp-dent
 >detn
 Fixing the dent is a tricky business. Get two things out of order, and it might get worse. But you must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dent. That's a decent omen.
@@ -1705,7 +1707,7 @@ Fixing the dent is a tricky business. Get two things out of order, and it might 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dent. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-tea
+#testcase-table-of-oyster-spechelp-tea
 >tae
 You anticipate Aunt Tuna telling you to stop playing with your food, already.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Tea-at-a-Tee. That's a decent omen.
@@ -1716,7 +1718,7 @@ You anticipate Aunt Tuna telling you to stop playing with your food, already.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Tea-at-a-Tee. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-lean-lane-nudges-tuna
+#testcase-table-of-lean-lane-nudges-tuna
 >tuan
 She is a bit fussy, but she is more than okay as she is.
 
@@ -1770,7 +1772,7 @@ At the moment, "it" means the raw red drawer, "him" means the trout, "her" means
 {$SCOS}
 
 @nud
-#ttc-table-of-lean-lane-nudges-dent
+#testcase-table-of-lean-lane-nudges-dent
 >detn
 You already fixed the dent. It's gone.
 
@@ -1802,7 +1804,8 @@ Paw-R-Wrap has been a great commercial success in Yorpwald, appealing to two dem
 As for this piece of wrap, it's about two feet in diameter, all twisted up and thick enough to be covering something. But you don't have time to pop each bubble individually.
 
 @hin
-#ttc-table-of-oyster-location-hint-checkoffs-lean-lane
+#testcase-table-of-oyster-location-hint-checkoffs-lean-lane
+>hint
 You helped Tortu and got a paler pearl. That's all you need to do here. There may be bonus points here, but a generic HINT will not reveal them.
 \\
 >hint
@@ -1813,7 +1816,7 @@ You helped Tortu and got a paler pearl. That's all you need to do here.
 {$SCOS}
 
 @verbs
-#ttc-table-of-oyster-attacks-paw-r-wrap
+#testcase-table-of-oyster-attacks-paw-r-wrap
 >attack paw r wrap
 Alas, the Paw-R-Wrap is nor Wap-R-Wrap.
 
@@ -1824,7 +1827,7 @@ Alas, the Paw-R-Wrap is nor Wap-R-Wrap.
 Like all good bubble wrap, maybe the Paw-R-Wrap needs to be saved 'til you find the right person to annoy.
 !by one point
 \\
-#ttc-table-of-oyster-prefigurings-paw-r-wrap
+#testcase-table-of-oyster-prefigurings-paw-r-wrap
 >pf
 You need to figure out where to WARP the Paw-R-Wrap.
 
@@ -1833,15 +1836,15 @@ You need to figure out where to WARP the Paw-R-Wrap.
 >wrap zozimus
 The bubble wrap is already covering something.
 \\
-#+ttc-table-of-lean-lane-nudges-reward
+#+testcase-table-of-lean-lane-nudges-reward
 >rewadr
 There's nothing else in the drawer and no way to get in by yourself.
 \\
-#ttc-table-of-oyster-done-rejects-trout
+#testcase-table-of-oyster-done-rejects-trout
 >trotu
 Retutor? Torture. Rot. True!
 \\
-#ttc-table-of-oyster-spechelp-wrap
+#testcase-table-of-oyster-spechelp-wrap
 >wrpa
 That's not quite the way to pop the Paw-R-Wrap.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Paw-R-Wrap. That's a decent omen.
@@ -1852,23 +1855,23 @@ That's not quite the way to pop the Paw-R-Wrap.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Paw-R-Wrap. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-nudges-bubble
+#testcase-table-of-oyster-nudges-bubble
 >bubbel
 It's just wrap, really.
 \\
-#ttc-table-of-oyster-nudges-bubblewrap
+#testcase-table-of-oyster-nudges-bubblewrap
 >bubblewrpa
 It's just wrap, really.
 \\
-#ttc-table-of-lean-lane-nudges-wipe
+#testcase-table-of-lean-lane-nudges-wipe
 >wiep
 It'd be easier to steal all the wipes at once. Pulling them out and so forth--tiring.
 \\
-#ttc-table-of-oyster-nudges-pearl
+#testcase-table-of-oyster-nudges-pearl
 >pealr
 The pearl is too jagged to change easily, but it seems like it was roughly cut in half. Maybe if you find the other bit...
 \\
-#ttc-table-of-oyster-spechelp-wipes
+#testcase-table-of-oyster-spechelp-wipes
 >wipse
 You try to take the wipes, but you worry you're not fast enough.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the wipes. That's a decent omen.
@@ -1894,7 +1897,7 @@ Your score has just gone up by one point
 {$SCOS}
 
 @nud
-#+ttc-table-of-lean-lane-nudges-wipe
+#+testcase-table-of-lean-lane-nudges-wipe
 >wiep
 You will need to use them all at once, and on something else
 
@@ -1907,7 +1910,7 @@ DEBUG INFO: wherever the crate is coming from hinting.
 DEBUG INFO: crate hinting.
 
 @verbs
-#ttc-table-of-oyster-nowheres-lapsin-plains
+#testcase-table-of-oyster-nowheres-lapsin-plains
 >e
 With the sloppy polyps on most all sides, you can only go back south or, once the span pans are neutralized, inside.
 \\
@@ -1978,59 +1981,59 @@ No vilence, err, violence, please.
 The knob remains Hangin' Tough. Let's Try it Again, until You Got It.
 
 @nud
-#ttc-table-of-oyster-done-rejects-wipes
+#testcase-table-of-oyster-done-rejects-wipes
 >wipse
 Now that you've got the wipes, you need to find how to use them constructively. Maybe there's something worth using them on.
 \\
-#ttc-table-of-lapsin'-plains-nudges-acters
+#testcase-table-of-lapsin'-plains-nudges-acters
 >actesr
 Hmm, no, it's only one crate at a time.
 \\
-#ttc-table-of-lapsin'-plains-nudges-debris
+#testcase-table-of-lapsin'-plains-nudges-debris
 >debrsi
 You can't learn much from the debris. You're pretty sure it's from a crate.
 \\
-#ttc-table-of-lapsin'-plains-nudges-fragments
+#testcase-table-of-lapsin'-plains-nudges-fragments
 >fragmenst
 They're fragments of a crate--this may or may not help.
 \\
-#ttc-table-of-lapsin'-plains-nudges-fragment
+#testcase-table-of-lapsin'-plains-nudges-fragment
 >fragmetn
 They're fragments of a crate--this may or may not help.
 \\
-#ttc-table-of-lapsin'-plains-nudges-shut
+#testcase-table-of-lapsin'-plains-nudges-shut
 >shtu
 The huts are too secure, but maybe you can go by the pans.
 \\
-#ttc-table-of-lapsin'-plains-nudges-hut
+#testcase-table-of-lapsin'-plains-nudges-hut
 >htu
 The huts are too secure, but maybe you can go by the pans.
 \\
-#ttc-table-of-lapsin'-plains-nudges-plain
+#testcase-table-of-lapsin'-plains-nudges-plain
 >plani
 "I...plan," you think, then in a fit of confidence, "I...PLANS!"
 \\
-#ttc-table-of-lapsin'-plains-nudges-polyp
+#testcase-table-of-lapsin'-plains-nudges-polyp
 >polpy
 You're a bit worried anything you did to unstabilize the polyps would make the plains lapse further.
 \\
-#ttc-table-of-lapsin'-plains-nudges-polyps
+#testcase-table-of-lapsin'-plains-nudges-polyps
 >polysp
 You're a bit worried anything you did to unstabilize the polyps would make the plains lapse further.
 \\
-#ttc-table-of-lapsin'-plains-nudges-pna
+#testcase-table-of-lapsin'-plains-nudges-pna
 >pan
 There are two pans.
 \\
-#ttc-table-of-lapsin'-plains-nudges-isk
+#testcase-table-of-lapsin'-plains-nudges-isk
 >iks
 But you need to remove both skis.
 \\
-#ttc-table-of-lapsin'-plains-nudges-doorknob
+#testcase-table-of-lapsin'-plains-nudges-doorknob
 >doorknbo
 It's just a knob. Which thankfully cuts down the possibilities.
 \\
-#ttc-table-of-oyster-spechelp-bogus-trace
+#testcase-table-of-oyster-spechelp-bogus-trace
 >traec
 The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from wherever the crate is coming from. That's a decent omen.
@@ -2041,7 +2044,7 @@ The crate's from there! No, there! No, there! Well, you thought you had an idea,
 DEBUG ONLY: You feel a slight psychic push-pull coming from wherever the crate is coming from. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-crate
+#testcase-table-of-oyster-spechelp-crate
 >reatc
 The crate's from there! No, there! No, there! Well, you thought you had an idea, but it was a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from wherever the crate is coming from. That's a decent omen.
@@ -2052,7 +2055,7 @@ The crate's from there! No, there! No, there! Well, you thought you had an idea,
 DEBUG ONLY: You feel a slight psychic push-pull coming from wherever the crate is coming from. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-knob
+#testcase-table-of-oyster-spechelp-knob
 >knbo
 The knob rattles slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the knob. That's a decent omen.
@@ -2063,7 +2066,7 @@ The knob rattles slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the knob. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-skis
+#testcase-table-of-oyster-spechelp-skis
 >sksi
 The skis momentarily seem more polished.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the skis. That's a decent omen.
@@ -2074,7 +2077,7 @@ The skis momentarily seem more polished.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the skis. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-span-pans
+#testcase-table-of-oyster-spechelp-span-pans
 >pasn
 The pans wobble slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the span pans. That's a decent omen.
@@ -2085,7 +2088,7 @@ The pans wobble slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the span pans. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-bogus-plains
+#testcase-table-of-oyster-spechelp-bogus-plains
 >splani
 You feel like making a big speech about what you've done and what you plan to do, but not quite like that.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
@@ -2096,7 +2099,7 @@ You feel like making a big speech about what you've done and what you plan to do
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-scannotes-bogus-plains
+#testcase-table-of-oyster-scannotes-bogus-plains
 >scan
 !Your settler appears to register this all across the plains.
 \\
@@ -2136,11 +2139,11 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @nud
-#ttc-table-of-oyster-done-rejects-bogus-plains
+#testcase-table-of-oyster-done-rejects-bogus-plains
 >splani
 You start up a grand lecture again, but you feel something spinal and think "I...plans." Time to move on.
 \\
-#+ttc-table-of-lapsin'-plains-nudges-plain
+#+testcase-table-of-lapsin'-plains-nudges-plain
 >plani
 You had your say.
 
@@ -2149,7 +2152,7 @@ You had your say.
 >react
 That's a good idea, but you're not sure HOW to react. You need a bit of data, first.
 \\
-#ttc-table-of-oyster-prefigurings-crate
+#testcase-table-of-oyster-prefigurings-crate
 >pf
 You can REACT to the crate better once you have more data.
 \\
@@ -2157,7 +2160,7 @@ You can REACT to the crate better once you have more data.
 >kiss
 That feels right, but as you reach to do so, you feel something on the back of your head, then a splintering noise. You see a bunch of wood fragments behind you. You're not sure how you survived without feeling dizzy, but someone's out to get you. You'll need to get rid of distractions before doing that again.
 \\
-#ttc-table-of-oyster-prefigurings-skis
+#testcase-table-of-oyster-prefigurings-skis
 >pf
 You can KISS the skis once you are less distracted.
 \\
@@ -2165,7 +2168,7 @@ You can KISS the skis once you are less distracted.
 >snap
 You hear a crate crash nearby. You can't snap just RIGHT, though you must be on the right track.
 \\
-#ttc-table-of-oyster-prefigurings-span-pans
+#testcase-table-of-oyster-prefigurings-span-pans
 >pf
 You can SNAP to clear the span pans once everything else is out of the way.
 
@@ -2174,7 +2177,7 @@ You can SNAP to clear the span pans once everything else is out of the way.
 >thus
 Your inactive word does nothing to the huts. Perhaps you can do something to the door.
 \\
-#+ttc-table-of-lapsin'-plains-nudges-acters
+#+testcase-table-of-lapsin'-plains-nudges-acters
 >actres
 Hmm, no, it's only one crate at a time.
 
@@ -2195,15 +2198,15 @@ DEBUG INFO: crate hinting.
 {$SCOS}
 
 @verbs
-#ttc-table-of-oyster-attacks-knob
+#testcase-table-of-oyster-attacks-knob
 >attack knob
 Yes, but how?
 \\
-#ttc-table-of-oyster-attacks-skis
+#testcase-table-of-oyster-attacks-skis
 >attack skis
 You give them a whack, and it hurts much more than it should. You wonder if love, not hate, is the answer.
 \\
-#ttc-table-of-oyster-attacks-span-pans
+#testcase-table-of-oyster-attacks-span-pans
 >attack span pans
 Well, you need to do something to the pans.
 
@@ -2222,11 +2225,11 @@ You would, but you would probably get hit with the crate. You need to anticipate
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#+ttc-table-of-lapsin'-plains-nudges-acters
+#+testcase-table-of-lapsin'-plains-nudges-acters
 >actres
 Hmm, no, it's only one crate at a time.
 \\
-#+ttc-table-of-oyster-spechelp-crate
+#+testcase-table-of-oyster-spechelp-crate
 >craet
 The crates that missed you wobble a bit. You know what'll happen, just not what to do...quite yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the crate. That's a decent omen.
@@ -2248,7 +2251,7 @@ DEBUG INFO: skis hinting.
 {$SCOS}
 
 @nud
-#+ttc-table-of-lapsin'-plains-nudges-acters
+#+testcase-table-of-lapsin'-plains-nudges-acters
 >actres
 Hmm, no, it was only one crate at a time, and you dealt with things, anyway.
 \\
@@ -2256,15 +2259,15 @@ Hmm, no, it was only one crate at a time, and you dealt with things, anyway.
 >caret
 You needed to shift letters and not sixes, here.
 \\
-#ttc-table-of-oyster-done-rejects-crate
+#testcase-table-of-oyster-done-rejects-crate
 >craet
 Besides identifying it as a rect, you can't do much else with the crate.
 \\
-#+ttc-table-of-lapsin'-plains-nudges-fragments
+#+testcase-table-of-lapsin'-plains-nudges-fragments
 >fragmenst
 Not worth messing with the fragments any more.
 \\
-#+ttc-table-of-lapsin'-plains-nudges-fragment
+#+testcase-table-of-lapsin'-plains-nudges-fragment
 >fragmetn
 Not worth messing with the fragments any more.
 
@@ -2284,7 +2287,7 @@ DEBUG INFO: knob hinting.
 {$SCOS}
 
 @nud
-#ttc-table-of-oyster-readables-span-pans
+#testcase-table-of-oyster-readables-span-pans
 >read span pans
 Red writing indicates the pans were made by Nan's Apps.
 
@@ -2307,7 +2310,7 @@ You already did what you needed with the knob, Step by Step.
 
 @nud
 #note the pans must be taken care of last
-#ttc-table-of-oyster-scannotes-span-pans
+#testcase-table-of-oyster-scannotes-span-pans
 >scan span pans
 There are two entries that are ambiguous, but--maybe knowing they're span pans might actually make things kind of easy, here.
 
@@ -2316,11 +2319,11 @@ Your score has just gone up by one point
 }}SCORE++
 
 @hin
-#ttc-table-of-oyster-location-hint-checkoffs-lapsin-plains
+#testcase-table-of-oyster-location-hint-checkoffs-lapsin-plains
 With the way inside open, you no longer have anything you need to do here.
 
 @verbs
-#+ttc-table-of-oyster-nowheres-lapsin-plains
+#+testcase-table-of-oyster-nowheres-lapsin-plains
 >e
 With the sloppy polyps on most all sides, you can only go back south or inside.
 \\
@@ -2371,23 +2374,23 @@ You tap the tubs lightly with your toe. Then you tap them enough to hurt. Not ev
 >utah
 The hut only looks like Utah. However, I bet Adenville is nice. Or it would be, if it existed. Man, I loved those Great Brain books.
 \\
-#ttc-table-of-shuttle-hutlets-nudges-hutlet
+#testcase-table-of-shuttle-hutlets-nudges-hutlet
 >hutlte
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-shuttle-hutlets-nudges-hutlets
+#testcase-table-of-shuttle-hutlets-nudges-hutlets
 >hutlest
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-shuttle-hutlets-nudges-shadier
+#testcase-table-of-shuttle-hutlets-nudges-shadier
 >airshde
 The Shadier Airshed is immovable and unchangeable.
 \\
-#ttc-table-of-shuttle-hutlets-nudges-ubt
+#testcase-table-of-shuttle-hutlets-nudges-ubt
 >utb
 Clear ALL the tubs!
 \\
-#ttc-table-of-oyster-spechelp-tubs
+#testcase-table-of-oyster-spechelp-tubs
 >tusb
 Hm. The tubs shake slightly. Maybe if you were more forceful.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tubs. That's a decent omen.
@@ -2432,7 +2435,7 @@ Nothing (significant) like that is in the immediate vicinity or region.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#ttc-table-of-oyster-spechelp-prod
+#testcase-table-of-oyster-spechelp-prod
 >prdo
 You juggle the prod a bit, but it doesn't change into anything new.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the prod. That's a decent omen.
@@ -2453,14 +2456,14 @@ Your score has just gone up by one point
 }}SCORE++
 
 @hin
-#ttc-table-of-oyster-location-hint-checkoffs-shuttle-hutlets
+#testcase-table-of-oyster-location-hint-checkoffs-shuttle-hutlets
 You've found what you needed here.
 
 >score
 {$SCOS}
 
 @nud
-#ttc-table-of-oyster-nudges-digger
+#testcase-table-of-oyster-nudges-digger
 >diggre
 It's already been, err, rigged, enough.
 \\
@@ -2475,7 +2478,7 @@ You need to dig to some purpose, though maybe somewhere else--and not just dig.
 You need to dig to some purpose, though maybe somewhere else--and not just dig.
 #?? try other places
 \\
-#ttc-table-of-oyster-done-rejects-rigged-digger
+#testcase-table-of-oyster-done-rejects-rigged-digger
 >drpo
 You managed to get a digger from a prod, and that's good enough.
 
@@ -2485,7 +2488,7 @@ You managed to get a digger from a prod, and that's good enough.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#ttc-table-of-oyster-spechelp-waste
+#testcase-table-of-oyster-spechelp-waste
 >waset
 You make an effort to clean the waste but feel you could do better.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the waste. That's a decent omen.
@@ -2524,7 +2527,7 @@ They are just a mess. You're not obligated to beautify Yorpwald, but maybe somet
 Too grimy and dirty.
 
 @nud
-#ttc-table-of-oyster-spechelp-lance
+#testcase-table-of-oyster-spechelp-lance
 >lanec
 The lance glimmers slightly. It has potential to be shiny.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
@@ -2535,11 +2538,11 @@ The lance glimmers slightly. It has potential to be shiny.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-shuttle-hutlets-nudges-waste
+#testcase-table-of-shuttle-hutlets-nudges-waste
 >waset
 The heaps are still technically waste, but you cleaned them up enough.
 \\
-#ttc-table-of-oyster-spechelp-heaps
+#testcase-table-of-oyster-spechelp-heaps
 >heasp
 The heaps still look ugly as ever.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the heaps. That's a decent omen.
@@ -2550,7 +2553,7 @@ The heaps still look ugly as ever.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the heaps. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-shuttle-hutlets-nudges-heap
+#testcase-table-of-shuttle-hutlets-nudges-heap
 >hepa
 Change ALL the heaps!
 
@@ -2575,12 +2578,12 @@ DEBUG INFO: min-up codepath
 {$SCOS}
 
 @hints
-#ttc-table-of-oyster-hint-request-rejects-heaps
+#testcase-table-of-oyster-hint-request-rejects-heaps
 >hint heaps
 I can't give any artistic advice. They're--good enough, I guess. Better than before.
 
 @nud
-#+ttc-table-of-shuttle-hutlets-nudges-heap
+#+testcase-table-of-shuttle-hutlets-nudges-heap
 >hepa
 You don't need or want to futz with one heap to make things super-extra-perfect.
 
@@ -2590,7 +2593,7 @@ You don't need or want to futz with one heap to make things super-extra-perfect.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#+ttc-table-of-oyster-spechelp-lance
+#+testcase-table-of-oyster-spechelp-lance
 >clena
 The lance glimmers slightly. It has potential to be shiny.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
@@ -2603,7 +2606,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a 
 \\
 >abstract wipes to lean lane
 \\
-#+ttc-table-of-oyster-spechelp-lance
+#+testcase-table-of-oyster-spechelp-lance
 >clena
 The lance glimmers slightly. It has potential to be shiny.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a decent omen.
@@ -2627,7 +2630,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the lance. That's a 
 Good idea, but you have nothing that could clean the lance effectively.
 FLIPS
 \\
-#ttc-table-of-oyster-prefigurings-lance
+#testcase-table-of-oyster-prefigurings-lance
 >pf
 You'll want to CLEAN the lance once you have something to wash it with.
 >clean
@@ -2659,23 +2662,23 @@ Nothing (significant) like that is in the immediate vicinity or region.
 {$SCOS}
 
 @hints
-#ttc-table-of-oyster-hint-request-rejects-lance
+#testcase-table-of-oyster-hint-request-rejects-lance
 >hint lance
 I can't give you details on how to fight, but now your lance is clean, you'll be able to use it when need be.
 
 @nud
-#ttc-table-of-oyster-done-rejects-heaps
+#testcase-table-of-oyster-done-rejects-heaps
 >heasp
 You figure the heaps are at a point where you can't change them for the better.
 \\
-#ttc-table-of-oyster-done-rejects-lance
+#testcase-table-of-oyster-done-rejects-lance
 >lanec
 It's clean enough. You can't, like, make it sharper or anything.
 
 >out
 
 @nud
-#+ttc-table-of-lapsin'-plains-nudges-shut
+#+testcase-table-of-lapsin'-plains-nudges-shut
 >shtu
 You found the hut you needed to.
 
@@ -2710,7 +2713,7 @@ You need a slightly more organized way to reveal what's under the ground with yo
 DEBUG INFO: Paw-R-Wrap hinting.
 
 @verbs
-#ttc-table-of-oyster-nowheres-sclerous-closures
+#testcase-table-of-oyster-nowheres-sclerous-closures
 >w
 You can only go north to the Horned Hedron, once the sardine is gone, or east back to Anger Range. The Handsome Sand Home blocks you west and south.
 \\
@@ -2737,35 +2740,35 @@ The only way you seem to be able to go is east to Anger Range.
 Nobody jumps from the Achers' Chaser Arches to say, trust me, I know what I'm doing.
 
 @nud
-#ttc-table-of-oyster-scannotes-paw-r-wrap
+#testcase-table-of-oyster-scannotes-paw-r-wrap
 >scan paw r wrap
 Fourth wall note: there were no multiple possible answers when this was just (bubble) wrap. Now there are. Like, two instead of one. So I hope that's okay.
 \\
-#ttc-table-of-sclerous-closures-nudges-closure
+#testcase-table-of-sclerous-closures-nudges-closure
 >closuer
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-sclerous-closures-nudges-closures
+#testcase-table-of-sclerous-closures-nudges-closures
 >closurse
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-sclerous-closures-nudges-hedron
+#testcase-table-of-sclerous-closures-nudges-hedron
 >hedrno
 You'll probably need to destroy the hedron from within.
 \\
-#ttc-table-of-sclerous-closures-nudges-arch
+#testcase-table-of-sclerous-closures-nudges-arch
 >arhc
 There's not just one arch, there's two. And they've made more than one person ache.
 \\
-#ttc-table-of-sclerous-closures-nudges-acher
+#testcase-table-of-sclerous-closures-nudges-acher
 >achre
 There's not just one arch, there's two. And they've made more than one person ache.
 \\
-#ttc-table-of-sclerous-closures-nudges-sardine
+#testcase-table-of-sclerous-closures-nudges-sardine
 >sardien
 The sardine gives you a weird look, as if you need to stop mumbling. You're not sure you can do anything to him directly.
 \\
-#ttc-table-of-oyster-spechelp-achers-chaser-arches
+#testcase-table-of-oyster-spechelp-achers-chaser-arches
 >searhc
 Hm, you almost thought you found something. But you have more finding to do. Or stuff to do before you find something.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Achers' Chaser Arches. That's a decent omen.
@@ -2776,7 +2779,7 @@ Hm, you almost thought you found something. But you have more finding to do. Or 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Achers' Chaser Arches. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-scannotes-achers-chaser-arches
+#testcase-table-of-oyster-scannotes-achers-chaser-arches
 >scan achers chaser arches
 You note they're also CHASER arches, so maybe that accounts for some of the conflicting readings in the settler.
 
@@ -2794,7 +2797,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >search
 A snider near-dis from the sardine keeps you in check. You'll need to get rid of it to have a serious look.
 \\
-#ttc-table-of-oyster-prefigurings-achers-chaser-arches
+#testcase-table-of-oyster-prefigurings-achers-chaser-arches
 >pf
 You can SEARCH the arches once you've chased the sandier sardine away.
 \\
@@ -2815,7 +2818,7 @@ DEBUG INFO: Achers' Chaser Arches hinting.
 Nothing (significant) like that is in the immediate vicinity or region.
 
 @verbs
-#+ttc-table-of-oyster-nowheres-sclerous-closures
+#+testcase-table-of-oyster-nowheres-sclerous-closures
 >w
 You can only go north to the Horned Hedron or east back to Anger Range. The Handsome Sand Home blocks you west and south.
 \\
@@ -2832,7 +2835,7 @@ You have more than one way to leave: north and east. So you'll need to specify w
 There are two unblocked exits: north and east to Anger Range.
 
 @max
-#+ttc-table-of-oyster-prefigurings-achers-chaser-arches
+#+testcase-table-of-oyster-prefigurings-achers-chaser-arches
 >pf
 You can SEARCH the arches now you've chased the sandier sardine away.
 
@@ -2872,19 +2875,19 @@ You hope to have peered deeper for a vision, but it's too small. All you can mak
 >undo
 
 @nud
-#+ttc-table-of-sclerous-closures-nudges-arch
+#+testcase-table-of-sclerous-closures-nudges-arch
 >arhc
 You already dealt with both arches--no need to deal with one.
 \\
-#+ttc-table-of-sclerous-closures-nudges-acher
+#+testcase-table-of-sclerous-closures-nudges-acher
 >achre
 You already dealt with both arches--no need to deal with one.
 \\
-#ttc-table-of-oyster-done-rejects-achers-chaser-arches
+#testcase-table-of-oyster-done-rejects-achers-chaser-arches
 >srecha
 Further searching proves fruitless.
 \\
-#ttc-table-of-oyster-spechelp-bogus-enlarge
+#testcase-table-of-oyster-spechelp-bogus-enlarge
 >gleanre
 The gleaner remains too small to read.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the general gleaner. That's a decent omen.
@@ -2895,11 +2898,11 @@ The gleaner remains too small to read.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the general gleaner. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-readables-gleaner
+#testcase-table-of-oyster-readables-gleaner
 >read gleaner
 The gleaner was made by Al Green, written in red.
 \\
-#ttc-table-of-oyster-scannotes-bogus-enlarge
+#testcase-table-of-oyster-scannotes-bogus-enlarge
 >scan general gleaner
 You step back, mentally. Having a big-picture view may mean the ambiguous readings aren't so bad.
 
@@ -2913,7 +2916,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >reangle
 You might be able to REANGLE after doing something more necessary with the gleaner.
 \\
-#ttc-table-of-oyster-prefigurings-bogus-reangle
+#testcase-table-of-oyster-prefigurings-bogus-reangle
 >pf
 You can REANGLE the general gleaner once you've figured how to see something more basic in it.
 \\
@@ -2944,13 +2947,13 @@ Your score has just gone up by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @hints
-#ttc-table-of-settler-shake-descriptions-bogus-reangle
+#testcase-table-of-settler-shake-descriptions-bogus-reangle
 >ss
 the general gleaner (very blurry)
 !the the
 
 @nud
-#ttc-table-of-oyster-spechelp-bogus-reangle
+#testcase-table-of-oyster-spechelp-bogus-reangle
 >gleanre
 All you really have to do with the gleaner is to examine it. There might be more in the gleaner, but trying that gives nothing.
 \\
@@ -2960,12 +2963,12 @@ All you really have to do with the gleaner is to examine it. There might be more
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hints
-#ttc-table-of-oyster-location-hint-checkoffs-sclerous-closures
+#testcase-table-of-oyster-location-hint-checkoffs-sclerous-closures
 >hint
 You've gotten passage north and found something important, so you're done here.
 
 @nud
-#ttc-table-of-oyster-scannotes-bogus-reangle
+#testcase-table-of-oyster-scannotes-bogus-reangle
 >scan gleaner
 Hmm! There's something more to do with the gleaner. You've gotten what you need, though.
 
@@ -2976,7 +2979,7 @@ Hmm! There's something more to do with the gleaner. You've gotten what you need,
 DEBUG INFO: weaselly walleyes hinting.
 
 @verbs
-#ttc-table-of-oyster-nowheres-horned-hedron
+#testcase-table-of-oyster-nowheres-horned-hedron
 >e
 The main exit is south, though an area west is in disrepair. You can also go IN past the ol' trap once you disarm it, though you probably don't need the walleyes watching you try.
 \\
@@ -3000,7 +3003,7 @@ There are two unblocked exits: south to Sclerous Closures and west.
 Now there's a good plan. But right now, that gang of walleyes might rough you up. You need a way to get the gang to vacate these premises.
 \\
 #detour to test burying ruby without digger
-#ttc-table-of-oyster-prefigurings-ol-trap
+#testcase-table-of-oyster-prefigurings-ol-trap
 >pf
 You can PATROL to disable the ol' trap once the weaselly walleyes are gone.
 >bury ruby
@@ -3012,7 +3015,7 @@ You don't have anywhere to bury the ruby, and you might be seen. Perhaps burying
 >bury
 Nothing to bury anything with. Well, there's your fingers, but that'd take too long.
 \\
-#ttc-table-of-oyster-prefigurings-ruby
+#testcase-table-of-oyster-prefigurings-ruby
 >pf
 You will want to BURY the ruby once you have a digging implement.
 >undo
@@ -3034,27 +3037,27 @@ The ol' trap is too wily, and stuck in the north wall, for that. You may want to
 >tarp
 Nothing happens. You wonder if part of the ol' trap is that an ol' tarp will fall on you and suffocate you, if you walk in there.
 \\
-#ttc-table-of-horned-hedron-nudges-hedrno
+#testcase-table-of-horned-hedron-nudges-hedrno
 >hedron
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-horned-hedron-nudges-theses
+#testcase-table-of-horned-hedron-nudges-theses
 >thesse
 The hedron's spirit will remain intact even if you meddle there. You must go into its heart.
 \\
-#ttc-table-of-horned-hedron-nudges-these
+#testcase-table-of-horned-hedron-nudges-these
 >thees
 It'd be fun to rip up even one, but it'd be worse if you got caught. Take down the hedron, instead.
 \\
-#ttc-table-of-horned-hedron-nudges-tarp
+#testcase-table-of-horned-hedron-nudges-tarp
 >tapr
 You think of changing the trap--maybe even a tarp! But what if the tarp enfolded you and became a trap that way? Scary! No, thinking of it as an ol' trap would make it less intimidating.
 \\
-#ttc-table-of-horned-hedron-nudges-walleye
+#testcase-table-of-horned-hedron-nudges-walleye
 >walleey
 Just tacking one walleye won't change the crowd. They're past redemption, anyway.
 \\
-#ttc-table-of-horned-hedron-nudges-walleyes
+#testcase-table-of-horned-hedron-nudges-walleyes
 >walleyse
 The walleyes are a bad crowd, past redemption.
 
@@ -3065,7 +3068,7 @@ The walleyes are a bad crowd, past redemption.
 DEBUG INFO: ruby hinting.
 
 @verbs
-#ttc-table-of-oyster-nowheres-rascal-craals
+#testcase-table-of-oyster-nowheres-rascal-craals
 >w
 The round bay boundary blocks you from going any way but back east.
 \\
@@ -3084,15 +3087,15 @@ The only way to exit is east, so let's go that way.
 The only way you seem to be able to go is east to Horned Hedron.
 
 @nud
-#ttc-table-of-rascal-craals-nudges-craals
+#testcase-table-of-rascal-craals-nudges-craals
 >craasl
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-rascal-craals-nudges-craal
+#testcase-table-of-rascal-craals-nudges-craal
 >crala
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-oyster-spechelp-ruby
+#testcase-table-of-oyster-spechelp-ruby
 >ruyb
 No, that's not quite it. The ruby dulls as if covered by dirt.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ruby. That's a decent omen.
@@ -3126,18 +3129,18 @@ Your score has just gone up by one point
 The thin hint marks where you buried the ruby. You will be able to find it if you leave and come back.
 
 @nud
-#ttc-table-of-rascal-craals-nudges-hint
+#testcase-table-of-rascal-craals-nudges-hint
 >hitn
 The thin hint doesn't reveal anything else. You've hidden the ruby well enough.
 \\
-#ttc-table-of-rascal-craals-nudges-yurb
+#testcase-table-of-rascal-craals-nudges-yurb
 >yurb
 Now that the ruby's buried, you don't need to do anything more to it.
 
 >e
 
 @verbs
-#+ttc-table-of-oyster-nowheres-horned-hedron
+#+testcase-table-of-oyster-nowheres-horned-hedron
 >e
 The main exit is south, though you can go back west to the Rascal Craals. You can also go IN past the ol' trap once you disarm it, though you probably don't need the walleyes watching you try.
 
@@ -3189,7 +3192,7 @@ At the moment, "it" means the Use-Saga Sausage, "him" means the Use-Saga Sausage
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#ttc-table-of-oyster-spechelp-use-saga-sausage
+#testcase-table-of-oyster-spechelp-use-saga-sausage
 >assuaeg
 You're a bit tongue-tied, but that seems close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Use-Saga Sausage. That's a decent omen.
@@ -3200,11 +3203,11 @@ You're a bit tongue-tied, but that seems close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Use-Saga Sausage. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-nudges-howler
+#testcase-table-of-oyster-nudges-howler
 >howlre
 A howler or haunter is not specific enough. This is a big ol' SAUSAGE, here.
 \\
-#ttc-table-of-oyster-scannotes-use-saga-sausage
+#testcase-table-of-oyster-scannotes-use-saga-sausage
 >scan use saga sausage
 The Use-Saga Sausage's moans envelop you and almost make you believe your settler is giving these weird readings on purpose. But no. They must be revealing something, if you think about it.
 
@@ -3221,7 +3224,7 @@ by one point
 {$SCOS}
 
 @nud
-#ttc-table-of-oyster-done-rejects-use-saga-sausage
+#testcase-table-of-oyster-done-rejects-use-saga-sausage
 >assuega
 Don't oversell it! Just take the Use-Saga Sausage to where it was probably (heh) the walleyes who buried the ruby.
 
@@ -3239,7 +3242,7 @@ DEBUG INFO: ol' trap hinting.
 {$SCOS}
 
 @verbs
-#+ttc-table-of-oyster-nowheres-horned-hedron
+#+testcase-table-of-oyster-nowheres-horned-hedron
 >e
 The main exit is south, and you daren't go west now the Use-Saga Sausage took care of things. You can also go IN past the ol' trap once you disarm it.
 \\
@@ -3271,7 +3274,7 @@ It's sort of appropriate now that you're in the north, but it's disrespectful to
 >undo
 >undo
 \\
-#ttc-table-of-oyster-spechelp-ol-trap
+#testcase-table-of-oyster-spechelp-ol-trap
 >patrlo
 Hm, no, that's not quite how to cover all the ground looking for the ol' trap.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ol' trap. That's a decent omen.
@@ -3285,11 +3288,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the ol' trap. That's
 >s
 >e
 \\
-#ttc-table-of-anger-range-nudges-hoser
+#testcase-table-of-anger-range-nudges-hoser
 >hosre
 You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, but your actions have worked better.
 \\
-#ttc-table-of-anger-range-nudges-hero
+#testcase-table-of-anger-range-nudges-hero
 >heor
 You give a few Er-ohs, oh-ers, Or Ehs. Not very heroic, but your actions have worked better.
 >undo
@@ -3307,7 +3310,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @hin
-#ttc-table-of-oyster-location-hint-checkoffs-horned-hedron
+#testcase-table-of-oyster-location-hint-checkoffs-horned-hedron
 You've found a way further in, and that's all you need here
 
 @max
@@ -3316,7 +3319,7 @@ You've found a way further in, and that's all you need here
 Nothing (significant) like that is in the immediate vicinity or region.
 
 @verbs
-#+ttc-table-of-oyster-nowheres-horned-hedron
+#+testcase-table-of-oyster-nowheres-horned-hedron
 >e
 The main exit is south, and you daren't go west now the Use-Saga Sausage took care of things. You can also go IN through the portal.
 \\
@@ -3349,7 +3352,7 @@ Oh! So that's how the map looks! And that's where you are now! You trace around 
 >in
 /^End Den
 \\
-#ttc-table-of-oyster-nowheres-end-den
+#testcase-table-of-oyster-nowheres-end-den
 >e
 You're disoriented here, but you can go back OUT to get to the Horned Hedron.
 \\
@@ -3363,7 +3366,7 @@ You can go back outside to the Horned Hedron.
 /^Horned Hedron
 
 @nud
-#ttc-table-of-oyster-done-rejects-pol-art-portal
+#testcase-table-of-oyster-done-rejects-pol-art-portal
 >patrlo
 You discovered the portal. No need to look further.
 \\
@@ -3375,7 +3378,7 @@ You discovered the portal. No need to look further.
 >ned
 That was my pen name in Shuffling Around.
 \\
-#ttc-table-of-end-den-nudges-end
+#testcase-table-of-end-den-nudges-end
 \\
 >edn
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
@@ -3389,7 +3392,7 @@ EXAMINE the general gleaner, now you've enlarged it.
 \\
 >gt anger range
 \\
-#ttc-table-of-oyster-location-hint-checkoffs-anger-range
+#testcase-table-of-oyster-location-hint-checkoffs-anger-range
 You've gotten all you need from the Use-Saga Sausage. Hero's Shore has nothing left to offer you.
 >undo
 
@@ -3417,47 +3420,47 @@ You can go back outside, though you can also finish the job back here.
 While you can go back outside, you can just finish things here, or maybe you can look around to get more points.
 
 @nud
-#ttc-table-of-den-loft-nudges-tenfold
+#testcase-table-of-den-loft-nudges-tenfold
 >tenfodl
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-den-loft-nudges-loft
+#testcase-table-of-den-loft-nudges-loft
 >lotf
 You should never need to riff on part of a location name, so that's one less thing to worry about, I hope.
 \\
-#ttc-table-of-den-loft-nudges-den
+#testcase-table-of-den-loft-nudges-den
 >dne
 You should never need to riff on part of a location name.
 \\
-#ttc-table-of-den-loft-nudges-jumble
+#testcase-table-of-den-loft-nudges-jumble
 >jumbel
 It's the words on the jumble you need to mess with. With which you need to mess. Well, once the yapper's out of the way.
 \\
-#ttc-table-of-den-loft-nudges-stupid
+#testcase-table-of-den-loft-nudges-stupid
 >stupdi
 You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper.
 \\
-#ttc-table-of-den-loft-nudges-papre
+#testcase-table-of-den-loft-nudges-papre
 >paper
 You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper.
 \\
-#ttc-table-of-den-loft-nudges-necklace
+#testcase-table-of-den-loft-nudges-necklace
 >necklaec
 You may have more luck with the necklace's message. Not that it's very clever, it just--fits in more with the papery yapper.
 \\
-#ttc-table-of-den-loft-nudges-intercom
+#testcase-table-of-den-loft-nudges-intercom
 >intercmo
 The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead.
 \\
-#ttc-table-of-den-loft-nudges-not
+#testcase-table-of-den-loft-nudges-not
 >nto
 Changing the intercom to a ton-crime intercom would be the opposite of what you want to do.
 \\
-#ttc-table-of-den-loft-nudges-crime
+#testcase-table-of-den-loft-nudges-crime
 >criem
 The intercom crackles a bit, but you hear a louder buzz from the dialer. Maybe work on that instead.
 \\
-#ttc-table-of-oyster-spechelp-papery-yapper
+#testcase-table-of-oyster-spechelp-papery-yapper
 >yappre
 "Quit yer mumblin, ya perp!" the yapper yells, turning red. "You here to do business or not?"
 DEBUG ONLY: You feel a slight psychic push-pull coming from the papery yapper. That's a decent omen.
@@ -3471,7 +3474,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the papery yapper. T
 >derali
 The yapper might alert its cronies if you try anything. Even something not quite right, like that
 \\
-#ttc-table-of-oyster-scannotes-papery-yapper
+#testcase-table-of-oyster-scannotes-papery-yapper
 >scan papery yapper
 Oh no! Where is the orange/y? It'd be easier if that was one of the stable colors. But you can figure that out quickly enough. Hopefully.
 \\
@@ -3491,11 +3494,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 The yapper'd totally tell on you. Perhaps there is a reason the yapper hasn't told on you yet, and you could use that to ditch the yapper.
 !by one point
 \\
-#ttc-table-of-oyster-prefigurings-bogus-derail
+#testcase-table-of-oyster-prefigurings-bogus-derail
 >pf
 You can use the dialer to DERAIL once the papery yapper is gone.
 \\
-#ttc-table-of-oyster-prefigurings-bogus-redial
+#testcase-table-of-oyster-prefigurings-bogus-redial
 >redial
 You can't even dial with the yapper around.
 >pf
@@ -3515,7 +3518,7 @@ Mindless babble about mutually favorable transactions. Perhaps you can find one 
 >listen dialer
 You hear a hum from the dialer.
 \\
-#ttc-table-of-oyster-attacks-yapper
+#testcase-table-of-oyster-attacks-yapper
 >attack yapper
 Without scissors, it'd be tricky. Why, that papery yapper looks tough enough to take out multiple rock creatures!
 
@@ -3534,7 +3537,7 @@ by one point
 {$SCOS}
 
 @nud
-#ttc-table-of-oyster-done-rejects-bogus-reangle
+#testcase-table-of-oyster-done-rejects-bogus-reangle
 >gleanre
 You've exhausted the possibilities with the gleaner.
 
@@ -3569,7 +3572,7 @@ You're quite glad you found it, even if you're not sure how or why to pull it, y
 {$SCOS}
 
 @verbs
-#ttc-table-of-oyster-attacks-dialer
+#testcase-table-of-oyster-attacks-dialer
 >attack dialer
 That would only sabotage communications here. You need to sabotage the supplier.
 
@@ -3580,16 +3583,16 @@ You need use the dialer meaningfully first.
 >undo
 
 @nud
-#+ttc-table-of-den-loft-nudges-jumble
+#+testcase-table-of-den-loft-nudges-jumble
 >jumbel
 It's the words on the jumble you need to mess with. With which you need to mess.
 !yapper
 \\
-#ttc-table-of-oyster-readables-templar-ramplet
+#testcase-table-of-oyster-readables-templar-ramplet
 >read ramplet
 Someone named LAMPERT carved their name in red in the templar ramplet.
 \\
-#ttc-table-of-oyster-spechelp-templar-ramplet
+#testcase-table-of-oyster-spechelp-templar-ramplet
 >trampel
 There has to be a way to storm down the templar ramplet. But not that.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the templar ramplet. That's a decent omen.
@@ -3600,7 +3603,7 @@ There has to be a way to storm down the templar ramplet. But not that.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the templar ramplet. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-scannotes-templar-ramplet
+#testcase-table-of-oyster-scannotes-templar-ramplet
 >scan templar ramplet
 With so little positive information, this might be tough to bulldoze. Still, maybe you can focus on certain clumps of consonants being pronounceable, or not.
 
@@ -3621,7 +3624,7 @@ You'd think your lance would make you worthy of climbing the templar ramplet, bu
 >trample
 You do not have anything denoting you as worthy to trample the templar ramplet. If you want, you can look around, but it is optional.
 \\
-#ttc-table-of-oyster-prefigurings-templar-ramplet
+#testcase-table-of-oyster-prefigurings-templar-ramplet
 >pf
 You can TRAMPLE the templar ramplet now you have a shiny worthy weapon.
 >undo
@@ -3631,7 +3634,7 @@ You can TRAMPLE the templar ramplet now you have a shiny worthy weapon.
 >undo
 
 @verbs
-#ttc-table-of-oyster-nowheres-tenfold-teflond-den-loft
+#testcase-table-of-oyster-nowheres-tenfold-teflond-den-loft
 >e
 While you can go back outside, you can just finish things here, or maybe you can look around to get more points.
 
@@ -3658,7 +3661,7 @@ DEBUG INFO: natant ant hinting.
 {$SCOS}
 
 @verbs
-#ttc-table-of-oyster-nowheres-plasm-lamps
+#testcase-table-of-oyster-nowheres-plasm-lamps
 >e
 It's you against the ant! There's no running, but it can't be too hard to defeat.
 \\
@@ -3685,15 +3688,15 @@ You don't need to name the ant. It's not a pet.
 There's a simpler way to attack the ant.
 
 @nud
-#ttc-table-of-oyster-scannotes-bogus-psalm
+#testcase-table-of-oyster-scannotes-bogus-psalm
 >scan
 Perhaps finding where the vowel is would be a good start.
 \\
-#ttc-table-of-oyster-scannotes-natant-ant
+#testcase-table-of-oyster-scannotes-natant-ant
 >scan natant ant
 You grumble a bit. But with just six possibilities, it may be easier to brute force things than to work out the logic.
 \\
-#ttc-table-of-oyster-spechelp-natant-ant
+#testcase-table-of-oyster-spechelp-natant-ant
 >tna
 There must be a simple way to take down the ant. You haven't quite got it right yet, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the natant ant. That's a decent omen.
@@ -3704,7 +3707,7 @@ There must be a simple way to take down the ant. You haven't quite got it right 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the natant ant. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-oyster-spechelp-bogus-psalm
+#testcase-table-of-oyster-spechelp-bogus-psalm
 >psaml
 The plasm lamps flicker slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
@@ -3719,7 +3722,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a
 >atn
 You've already got the ant's attention. You'll need to take care of it, now.
 \\
-#ttc-table-of-plasm-lamps-nudges-plam
+#testcase-table-of-plasm-lamps-nudges-plam
 >plma
 Maybe riff on ALL the lamps. But only for fun.
 
@@ -3749,12 +3752,12 @@ by one point
 {$SCOS}
 
 @nud
-#+ttc-table-of-plasm-lamps-nudges-plam
+#+testcase-table-of-plasm-lamps-nudges-plam
 >plma
 You did enough.
 
 @verbs
-#ttc-table-of-oyster-attacks-ant
+#testcase-table-of-oyster-attacks-ant
 >attack ant
 You poke at the ant, which keeps it at bay. You need something more simple, violent and direct.
 
@@ -3795,7 +3798,7 @@ Old heat. Loathed hot lead.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#ttc-table-of-oyster-spechelp-lever
+#testcase-table-of-oyster-spechelp-lever
 >levre
 You look at the lever, wishing it would be a little more fun to pull.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lever. That's a decent omen.
@@ -3810,7 +3813,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the lever. That's a 
 The dialer seems to click slightly
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dialer. That's a decent omen.
 \\
-#ttc-table-of-oyster-readables-dialer
+#testcase-table-of-oyster-readables-dialer
 >read dialer
 A red warning courtesy of I. ALDER says the letters can be shuffled but not LAIRED.
 
@@ -3849,7 +3852,7 @@ The dialer is quiet. Your orders to DERAIL must've put it out of commission. May
 Maybe in a bit, but the pins are in the way at the moment. They can't be too hard to get rid of.
 !by one point
 \\
-#+ttc-table-of-oyster-prefigurings-bogus-redial
+#+testcase-table-of-oyster-prefigurings-bogus-redial
 >pf
 You can REDIAL the dialer once the pins are not in your way.
 
@@ -3859,11 +3862,11 @@ You can REDIAL the dialer once the pins are not in your way.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#ttc-table-of-den-loft-nudges-pin
+#testcase-table-of-den-loft-nudges-pin
 >inp
 You have many pins you must deal with.
 \\
-#ttc-table-of-oyster-spechelp-pins
+#testcase-table-of-oyster-spechelp-pins
 >spni
 You look at the pins. They're in the way, but they don't look particularly sturdy.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pins. That's a decent omen.
@@ -3911,7 +3914,7 @@ DEBUG INFO: repaired dialer hinting.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#ttc-table-of-oyster-spechelp-bogus-redial
+#testcase-table-of-oyster-spechelp-bogus-redial
 >redila
 The dialer must have another setting, but that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the repaired dialer. That's a decent omen.
@@ -3922,7 +3925,7 @@ The dialer must have another setting, but that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the repaired dialer. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-den-loft-nudges-spin
+#testcase-table-of-den-loft-nudges-spin
 >spni
 You don't need to bring the pins back.
 
@@ -3945,16 +3948,16 @@ DEBUG INFO: min-up codepath
 {$SCOMAX}
 
 @hin
-#ttc-table-of-oyster-hint-request-rejects-lever
+#testcase-table-of-oyster-hint-request-rejects-lever
 >hint lever
 The lever was designed not to give extra points for pulling it too much.
 
 @nud
-#ttc-table-of-oyster-done-rejects-lever
+#testcase-table-of-oyster-done-rejects-lever
 >levre
 You riff on your previous celebrations, but it doesn't feel as cool.
 \\
-#ttc-table-of-oyster-spechelp-bogus-derail
+#testcase-table-of-oyster-spechelp-bogus-derail
 >drilea
 The dialer must have another setting, but that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the repaired dialer. That's a decent omen.
@@ -3966,7 +3969,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the repaired dialer.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @verbs
-#+ttc-table-of-oyster-nowheres-tenfold-teflond-den-loft
+#+testcase-table-of-oyster-nowheres-tenfold-teflond-den-loft
 >e
 While you can go back outside, you can just finish things here, as you've done everything else you can.
 

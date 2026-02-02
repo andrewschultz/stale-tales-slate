@@ -18,28 +18,28 @@ ELVIRA SAYS KEEP EXTRA DOUBLE OUT: T
 >x engravings
 NOUNED: UNDONE
 
-#ttc-table-of-notepad-entries-progress
+#testcase-table-of-notepad-entries-progress
 >pad progress
 You note the following: Ordeal Reload = stuff
 
 >sorbet
 Your score has just gone up by one point
 
-#ttc-table-of-region-initial-scoring-commentary-stores-1
+#testcase-table-of-region-initial-scoring-commentary-stores-1
 Well, it looks like the stores can be changed into something else. Maybe it won't be so easy behind them, but maybe you can get rid of a few to start and see any tricks later.
 
 >score
-Score in a scenario: 1 out of 11 total points in the current region, Stores. Lowest score to solve is 4. Maximum score available is 11.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >nestor
 Your score has just gone up by one point
 >score
-Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 5. Maximum score available is 11.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >tokers
 Your score has just gone up by one point
 >score
-Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 6. Maximum score available is 11.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-postrule-table-of-stores-anagrams-post-storek-tokers-rule
 >x mangiest steaming
@@ -49,14 +49,14 @@ It hangs all around the tokers, a product of their, umm, activity. But it probab
 /^Cruelest Lectures
 
 >score
-Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >outside
 Your score has just gone up by one point
 !DEBUG INFO: min-up codepath
 #this is because we already added the min-point listening to the lecturer. Once you're in Cruelest Lecturers, you need the point scoring activity to get out.
 >score
-Score in a scenario: 4 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-prerule-table-of-stores-anagrams-pre-babbler-outside-rule
 >x steaming
@@ -70,30 +70,30 @@ The slider, which is red (a nice touch--slider and idlers not having any letters
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 5 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >troves
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 6 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >towers
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 7 out of 11 total points in the current region, Stores. Lowest score to solve is 8. Maximum score available is 11.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >oyster
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 8 out of 11 total points in the current region, Stores. Lowest score to solve is 9. Maximum score available is 11.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >others
 Your score has just gone up by one point
 >score
-Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 11.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-postrule-table-of-stores-anagrams-post-storeh-hoster-rule
 >pronouns
@@ -101,7 +101,7 @@ At the moment, "it" means the Throes Hoster, "him" means the Throes Hoster, "her
 
 >presto
 >score
-Score in a scenario: 10 out of 11 total points in the current region, Stores. There are no secrets left to find here, so the score to win is 11 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >otters
 Your score has just gone up by one point

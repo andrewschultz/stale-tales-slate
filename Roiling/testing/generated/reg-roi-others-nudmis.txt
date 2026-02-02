@@ -79,51 +79,51 @@ You smile at the slime. It can't be that hard to figure what to do. You even see
 >miles
 You don't want miles and miles of slime.
 
-#ttc-table-of-others-nudges-arugula
+#testcase-table-of-others-nudges-arugula
 >arugual
 The arugula is just for eating, so you can change something else that's been stumping you.
 
-#ttc-table-of-rustic-citrus-nudges-greenish
+#testcase-table-of-rustic-citrus-nudges-greenish
 >sheerign
 The greenish sheering can't be changed. Killing all those trees and plants would be bad for the environment, anyway. Perhaps if you had a sense of direction, you could figure how to leave.
 
-#ttc-table-of-others-nudges-storeh
+#testcase-table-of-others-nudges-storeh
 >streho
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 
-#ttc-table-of-others-nudges-other
+#testcase-table-of-others-nudges-other
 >oreth
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 
-#ttc-table-of-rustic-citrus-nudges-rustic
+#testcase-table-of-rustic-citrus-nudges-rustic
 >rucsit
 You can't change this clearing or Curtis, but you don't need to.
 
-#ttc-table-of-rustic-citrus-nudges-plum
+#testcase-table-of-rustic-citrus-nudges-plum
 >pulm
 Well, you don't technically need plurals for this, but you're on the right track
 
-#ttc-table-of-rustic-citrus-nudges-pear
+#testcase-table-of-rustic-citrus-nudges-pear
 >prea
 Well, you don't technically need plurals for this, but you're on the right track
 
-#ttc-table-of-rustic-citrus-nudges-pager
+#testcase-table-of-rustic-citrus-nudges-pager
 >agper
 Well, you don't technically need plurals for this, but you're on the right track
 
-#ttc-table-of-rustic-citrus-nudges-circuit
+#testcase-table-of-rustic-citrus-nudges-circuit
 >circuti
 Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
 
-#ttc-table-of-rustic-citrus-nudges-circuits
+#testcase-table-of-rustic-citrus-nudges-circuits
 >circuist
 Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
 
-#ttc-table-of-rustic-citrus-nudges-rtu
+#testcase-table-of-rustic-citrus-nudges-rtu
 >rtu
 Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
 
-#ttc-table-of-rustic-citrus-nudges-ruts
+#testcase-table-of-rustic-citrus-nudges-ruts
 >urst
 Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might turn something up.
 
@@ -131,11 +131,11 @@ Nothing happens. The ruts circuits seem pretty dead, but EXAMINEing them might t
 >rust
 You're trying to make things MORE organic, not less.
 
-#ttc-table-of-rustic-citrus-nudges-lime
+#testcase-table-of-rustic-citrus-nudges-lime
 >elim
 Well, you don't technically need plurals for this, but you're on the right track
 
-#ttc-table-of-others-spechelp-lumps
+#testcase-table-of-others-spechelp-lumps
 >lumsp
 The lumps seem almost ready to burst.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lumps. That's a decent omen.
@@ -146,7 +146,7 @@ The lumps seem almost ready to burst.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lumps. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-pagers
+#testcase-table-of-others-spechelp-pagers
 >pagesr
 The pagers light up slightly. Maybe give it another go.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pagers. That's a decent omen.
@@ -157,7 +157,7 @@ The pagers light up slightly. Maybe give it another go.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pagers. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-slime
+#testcase-table-of-others-spechelp-slime
 >sliem
 The slime shifts about slightly, but not enough--yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the slime. That's a decent omen.
@@ -168,7 +168,7 @@ The slime shifts about slightly, but not enough--yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the slime. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-spear
+#testcase-table-of-others-spechelp-spear
 >spera
 The spear stays as-is. But it can't be that hard to change.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the spear. That's a decent omen.
@@ -187,32 +187,32 @@ You've parsed the spelling of quite a few words so far. Just a bit more, now.
 Your score has just gone up by one point.
 
 >score
-You have 1 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >pears
 Your score has just gone up by one point.
 
 >score
-You have 2 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >grapes
 Your score has just gone up by one point.
 
 >score
-You have 3 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >plums
 Your score has just gone up by one point.
 
 >score
-You have 4 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
-#ttc-table-of-rustic-citrus-nudges-moss
+#testcase-table-of-rustic-citrus-nudges-moss
 >msso
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-rustic-citrus-nudges-cap
+#testcase-table-of-rustic-citrus-nudges-cap
 >pca
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-others-spechelp-moss-cap
+#testcase-table-of-others-spechelp-moss-cap
 >compssa
 The cap itches for a bit, then seems to try to spin you around.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the moss cap. That's a decent omen.
@@ -226,19 +226,19 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the moss cap. That's
 >compass
 Your score has just gone up by one point.
 
-#ttc-table-of-rustic-citrus-nudges-ditties
+#testcase-table-of-rustic-citrus-nudges-ditties
 >dittise
 The ditties are Curtis's. They're really quite good and don't need changing. You're pretty sure you couldn't improve them, anyway.
 
-#ttc-table-of-others-done-rejects-compass
+#testcase-table-of-others-done-rejects-compass
 >compssa
 The compass is accurate enough. Changing it might ruin things.
 
-#+ttc-table-of-rustic-citrus-nudges-greenish
+#+testcase-table-of-rustic-citrus-nudges-greenish
 >sheering
 The greenish sheering can't be changed. Killing all those trees and plants would be bad for the environment, anyway. So you can only exit to the north.
 
-#ttc-table-of-others-nudges-needle
+#testcase-table-of-others-nudges-needle
 >needel
 The needle is working fine. No need to meddle.
 
@@ -250,11 +250,11 @@ The needle is working fine. No need to meddle.
 >tased
 You don't need that, and neither does Curtis.
 
-#ttc-table-of-others-scannotes-sated-stead
+#testcase-table-of-others-scannotes-sated-stead
 >scan sated stead
 Three of five letters is a lot of ambiguity, but you are pretty sure what sort of thing you need, so it can't be too bad.
 
-#ttc-table-of-others-spechelp-sated-stead
+#testcase-table-of-others-spechelp-sated-stead
 >estad
 The sated stead bubbles slightly.
 
@@ -263,11 +263,11 @@ The sated stead bubbles slightly.
 The sated stead bubbles slightly.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-scannotes-hire-recs-re-riches
+#testcase-table-of-others-scannotes-hire-recs-re-riches
 >scan hire recs
 As Hire Recs Re: Riches recommended hiring out the tricky technical parts, so too are you fobbing off the technical bits on your settler. It's probably gotten you really close. But of course you must make the big-picture decisions!
 
-#ttc-table-of-others-spechelp-hire-recs-re-riches
+#testcase-table-of-others-spechelp-hire-recs-re-riches
 >cherreis
 The pages of Hire Recs Re: Riches flutter briefly.
 
@@ -276,15 +276,15 @@ The pages of Hire Recs Re: Riches flutter briefly.
 The pages of Hire Recs Re: Riches flutter briefly.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-readables-hire-recs-re-riches
+#testcase-table-of-others-readables-hire-recs-re-riches
 >read riches
 It's autographed in red, and pompously, by someone who's scribbled HERE'S RIC.
 
-#ttc-table-of-others-readables-id-mantra-mad-train
+#testcase-table-of-others-readables-id-mantra-mad-train
 >read mad train
 The name of the train's creator is in red: DR. NIMATA.
 
-#ttc-table-of-others-spechelp-mad-train
+#testcase-table-of-others-spechelp-mad-train
 >madtrani
 The train emits some fake smoke and seems ready to blow up--but no.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the id-mantra mad train. That's a decent omen.
@@ -295,27 +295,27 @@ The train emits some fake smoke and seems ready to blow up--but no.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the id-mantra mad train. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-scannotes-id-mantra-mad-train
+#testcase-table-of-others-scannotes-id-mantra-mad-train
 >scan mad train
 The train seems to toot joyously at seemingly confusing your letters settler, so wrapped up in getting some attention.
 
-#ttc-table-of-rustic-citrus-nudges-hire
+#testcase-table-of-rustic-citrus-nudges-hire
 >iher
 Work with Hire Recs Re: Riches in its entirety.
 
-#ttc-table-of-rustic-citrus-nudges-recs
+#testcase-table-of-rustic-citrus-nudges-recs
 >ercs
 Work with Hire Recs Re: Riches in its entirety.
 
-#ttc-table-of-rustic-citrus-nudges-riches
+#testcase-table-of-rustic-citrus-nudges-riches
 >ichser
 Work with Hire Recs Re: Riches in its entirety.
 
-#+ttc-table-of-rustic-citrus-nudges-ruts
+#+testcase-table-of-rustic-citrus-nudges-ruts
 >rust
 You found enough in the ruts circuits. No need to bring them back.
 
-#ttc-table-of-others-spechelp-harmonicas
+#testcase-table-of-others-spechelp-harmonicas
 >maraschion
 The harmonicas whistle, as if something happened.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the harmonicas. That's a decent omen.
@@ -326,79 +326,79 @@ The harmonicas whistle, as if something happened.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the harmonicas. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-rustic-citrus-nudges-harmonica
+#testcase-table-of-rustic-citrus-nudges-harmonica
 >harmonica
 The harmonicas seem stuck together, so you probably have to deal with both of them.
 
-#ttc-table-of-rustic-citrus-nudges-megaton
+#testcase-table-of-rustic-citrus-nudges-megaton
 >megaton
 No, the whole thing. You see several...similar...items here right now.
 
-#ttc-table-of-rustic-citrus-nudges-pera
+#testcase-table-of-rustic-citrus-nudges-pera
 >pear
 No, the whole thing. You see several...similar...items here right now.
 
-#ttc-table-of-rustic-citrus-nudges-mopeage
+#testcase-table-of-rustic-citrus-nudges-mopeage
 >mopeage
 No, the whole thing. You see several...similar...items here right now.
 
-#ttc-table-of-rustic-citrus-nudges-rant
+#testcase-table-of-rustic-citrus-nudges-rant
 >rant
 No, the whole thing. You see several...similar...items here right now.
 
-#ttc-table-of-rustic-citrus-nudges-magenta
+#testcase-table-of-rustic-citrus-nudges-magenta
 >magenta
 No, the whole thing. You see several...similar...items here right now.
 
-#ttc-table-of-rustic-citrus-nudges-roep
+#testcase-table-of-rustic-citrus-nudges-roep
 >rope
 No, the whole thing. You see several...similar...items here right now.
 
-#ttc-table-of-rustic-citrus-nudges-rampage
+#testcase-table-of-rustic-citrus-nudges-rampage
 >rampage
 No, the whole thing. You see several...similar...items here right now.
 
-#ttc-table-of-rustic-citrus-nudges-note
+#testcase-table-of-rustic-citrus-nudges-note
 >note
 No, the whole thing. You see several...similar...items here right now.
 
-#ttc-table-of-rustic-citrus-nudges-dam
+#testcase-table-of-rustic-citrus-nudges-dam
 >amd
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-rustic-citrus-nudges-train
+#testcase-table-of-rustic-citrus-nudges-train
 >intra
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-rustic-citrus-nudges-peanut
+#testcase-table-of-rustic-citrus-nudges-peanut
 >peatun
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-rustic-citrus-nudges-cola
+#testcase-table-of-rustic-citrus-nudges-cola
 >calo
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-rustic-citrus-nudges-blurbs
+#testcase-table-of-rustic-citrus-nudges-blurbs
 >bulbrs
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-rustic-citrus-nudges-eerie
+#testcase-table-of-rustic-citrus-nudges-eerie
 >eriee
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-rustic-citrus-nudges-blurb
+#testcase-table-of-rustic-citrus-nudges-blurb
 >bblur
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-rustic-citrus-nudges-eerieblurb
+#testcase-table-of-rustic-citrus-nudges-eerieblurb
 >eerieblubr
 Every single last blurb.
 
-#ttc-table-of-others-readables-eerie-blurbs
+#testcase-table-of-others-readables-eerie-blurbs
 >read eerie blurbs
 /One reads ('ERE IS RUBBLE|REEL\? RISE, BUB|RUBBER I ELSE|RUBLE BEE, SIR|REEL RUSE BIB), and it makes you see red.
 
-#ttc-table-of-others-spechelp-eerie-blurbs
+#testcase-table-of-others-spechelp-eerie-blurbs
 >eerieblursb
 The blurbs turn a few shades of purple before settling again.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the eerie blurbs. That's a decent omen.
@@ -409,7 +409,7 @@ The blurbs turn a few shades of purple before settling again.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the eerie blurbs. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-peanut-cola
+#testcase-table-of-others-spechelp-peanut-cola
 >peanutcoal
 The peanut cola smells slightly fruity for a minute.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the can of peanut cola. That's a decent omen.
@@ -420,11 +420,11 @@ The peanut cola smells slightly fruity for a minute.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the can of peanut cola. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-readables-peanut-cola
+#testcase-table-of-others-readables-peanut-cola
 >read peanut cola
 The brand name is A PLACE UNTO. It feels forced enough to make you see red.
 
-#ttc-table-of-others-spechelp-magenta-rope
+#testcase-table-of-others-spechelp-magenta-rope
 >magentaroep
 The magenta rope and other items you uncovered briefly seem as one.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the magenta rope. That's a decent omen.
@@ -435,7 +435,7 @@ The magenta rope and other items you uncovered briefly seem as one.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the magenta rope. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-omen-prism
+#testcase-table-of-others-spechelp-omen-prism
 >persimmno
 You must be on the right track--but nothing happens. Yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the omen prism. That's a decent omen.
@@ -446,20 +446,20 @@ You must be on the right track--but nothing happens. Yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the omen prism. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-rustic-citrus-nudges-omen
+#testcase-table-of-rustic-citrus-nudges-omen
 >omne
 Not just omen, or prism. It's an omen prism.
 
-#ttc-table-of-rustic-citrus-nudges-prism
+#testcase-table-of-rustic-citrus-nudges-prism
 >prims
 Not just omen, or prism. It's an omen prism.
 
-#ttc-table-of-others-readables-omen-prism
+#testcase-table-of-others-readables-omen-prism
 >read omen prism
 /Looking into the omen prism, you see text form in red: (Mr. Pinsome|One Ms. Prim|Moni's Perm|Nope, Mr. Sim\.)
 
 >score
-You have 5 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 #only three points here to test the reject case of going east to the clearing without a token
 
@@ -467,122 +467,122 @@ You have 5 of 47 total points for the post-Elvira Others region, though you only
 Your score has just gone up by one point.
 
 >score
-You have 6 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >blueberries
 Your score has just gone up by one point.
 
 >score
-You have 7 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >cantaloupe
 Your score has just gone up by one point.
 
 >score
-You have 8 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >persimmon
 Take on a token
 Your score has just gone up by one point.
 
 >score
-You have 9 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >maraschino
 Your score has just gone up by one point.
 
 >score
-You have 10 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >pomegranate
 Your score has just gone up by one point.
 
 >score
-You have 11 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >cherries
 Your score has just gone up by one point.
 You worry Curtis won't give you credit for both plain old cherries and maraschino cherries, but he nods as if to say, no problem. Whew!
 
 >score
-You have 12 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
-#ttc-table-of-others-nudges-tekno
+#testcase-table-of-others-nudges-tekno
 >tenok
 There's enough credit on the token. Don't get greedy.
 
 >n
 /^Swell Wells
 
-#ttc-table-of-swell-wells-nudges-wells
+#testcase-table-of-swell-wells-nudges-wells
 >swlle
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-swell-wells-nudges-well
+#testcase-table-of-swell-wells-nudges-well
 >wlle
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-swell-wells-nudges-mound
+#testcase-table-of-swell-wells-nudges-mound
 >moudn
 The mound is just for descending. You don't need to change it.
 
-#ttc-table-of-swell-wells-nudges-stucco
+#testcase-table-of-swell-wells-nudges-stucco
 >stucoc
 Stucco? No. ScoutCon, the message... (You see red recognizing what you should be chasing).
 
-#ttc-table-of-swell-wells-nudges-elp
+#testcase-table-of-swell-wells-nudges-elp
 >epl
 The whole 'Elp PSA.
 
-#ttc-table-of-swell-wells-nudges-pas
+#testcase-table-of-swell-wells-nudges-pas
 >psa
 The whole 'Elp PSA.
 
-#ttc-table-of-swell-wells-nudges-riot
+#testcase-table-of-swell-wells-nudges-riot
 >orti
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-swell-wells-nudges-cpa
+#testcase-table-of-swell-wells-nudges-cpa
 >pca
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-swell-wells-nudges-miser
+#testcase-table-of-swell-wells-nudges-miser
 >mersi
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-swell-wells-nudges-ruble
+#testcase-table-of-swell-wells-nudges-ruble
 >ublre
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-swell-wells-nudges-sorer
+#testcase-table-of-swell-wells-nudges-sorer
 >srreo
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-swell-wells-nudges-bogey
+#testcase-table-of-swell-wells-nudges-bogey
 >begyo
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-swell-wells-nudges-green
+#testcase-table-of-swell-wells-nudges-green
 >grene
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-swell-wells-nudges-stain
+#testcase-table-of-swell-wells-nudges-stain
 >sinta
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-swell-wells-nudges-tangerine
+#testcase-table-of-swell-wells-nudges-tangerine
 >tangerien
 The green stain could make just one fruit, but why not think bigger? It could become many.
 
-#ttc-table-of-others-readables-stucco
+#testcase-table-of-others-readables-stucco
 >read stucco
 /One of two advertisements is for (ScoutCon|SunCotCo), whatever that is, in red.
 
-#ttc-table-of-others-readables-psa-elp
+#testcase-table-of-others-readables-psa-elp
 >read psa elp
 It says Pal! ESP! in red. Not very good advice, but maybe it will help in its own odd way.
 
-#ttc-table-of-others-readables-riot-cap
+#testcase-table-of-others-readables-riot-cap
 >read riot cap
 /It's red and (made of I-TARP-CO material|designed and shaped by CAPTOR-I)
 
-#ttc-table-of-others-spechelp-PSA-Elp
+#testcase-table-of-others-spechelp-PSA-Elp
 >applse
 You don't fully seem to be grokking the PSA 'Elp. Your thoughts are a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the PSA 'Elp. That's a decent omen.
@@ -593,7 +593,7 @@ You don't fully seem to be grokking the PSA 'Elp. Your thoughts are a bit jumble
 DEBUG ONLY: You feel a slight psychic push-pull coming from the PSA 'Elp. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-riot-cap
+#testcase-table-of-others-spechelp-riot-cap
 >apricto
 Nothing happens. Your magic skills feel like the pits for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the riot cap. That's a decent omen.
@@ -604,7 +604,7 @@ Nothing happens. Your magic skills feel like the pits for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the riot cap. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-miser-ruble
+#testcase-table-of-others-spechelp-miser-ruble
 >mulberrise
 The miser ruble turns a bit purpler.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the miser ruble. That's a decent omen.
@@ -615,7 +615,7 @@ The miser ruble turns a bit purpler.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the miser ruble. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-sorer-bogey
+#testcase-table-of-others-spechelp-sorer-bogey
 >gooseberyr
 The sorer bogey's tone changes slightly for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sorer bogey. That's a decent omen.
@@ -626,7 +626,7 @@ The sorer bogey's tone changes slightly for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sorer bogey. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-stucco
+#testcase-table-of-others-spechelp-stucco
 >stucocno
 The stucco looks almost hairy for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stucco. That's a decent omen.
@@ -637,7 +637,7 @@ The stucco looks almost hairy for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stucco. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-green-stain
+#testcase-table-of-others-spechelp-green-stain
 >tangerinse
 Parts of the green stain turn orange-ish but is too small to be oranges.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the green stain. That's a decent omen.
@@ -652,22 +652,22 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the green stain. Tha
 Your score has just gone up by one point.
 
 >score
-You have 13 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >apples
 Your score has just gone up by one point.
 
 >score
-You have 14 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >mulberries
 Your score has just gone up by one point.
 
 >score
-You have 15 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >gooseberry
 Your score has just gone up by one point.
 
 >score
-You have 16 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 #only really need to test this nag once.
 You may want to go see Curtis for a new reward. Or you can keep getting new fruits.
 
@@ -681,11 +681,11 @@ The singed design on the coin should make you not just want to deign but DO.
 >deigns
 The singed design on the coin should make you not just want to deign but DO.
 
-#ttc-table-of-others-nudges-singed
+#testcase-table-of-others-nudges-singed
 >deigsn
 The design is sort of glommed onto the coin. So you should figure what to do, there.
 
-#ttc-table-of-others-spechelp-coin
+#testcase-table-of-others-spechelp-coin
 >coni
 The coin looks a bit more artistic for a moment--no, it's too drab, again. Hmm. You must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the coin. That's a decent omen.
@@ -710,12 +710,12 @@ by one point
 >s
 Curtis, looking quite the citric critic, hands you another coin identical to the one he gave you before.
 
-#+ttc-table-of-others-nudges-singed
+#+testcase-table-of-others-nudges-singed
 >deigsn
 The design is sort of glommed onto the coins. So you should figure what to do, there.
 >undo
 
-#ttc-table-of-others-scannotes-coins
+#testcase-table-of-others-scannotes-coins
 >scan coins
 The settler flashes back, with all five entries changing. This is odd. Maybe it would be better to scan just one coin?
 #it's important to say yes/no here so the balance undo tracker understands this is just replying to a question and not making a move
@@ -729,17 +729,17 @@ The settler flashes back, with all five entries changing. This is odd. Maybe it 
 Even the reds and yellows seem to be blinking here. It's as though the coins need to be changed twice.
 >undo
 
-#ttc-table-of-others-readables-singed-design
+#testcase-table-of-others-readables-singed-design
 >read singed design
 The singed design on the coins reads, when you look close, property of NISCO.
 >undo
 
-#ttc-table-of-others-nudges-icon
+#testcase-table-of-others-nudges-icon
 >icno
 Hmm. You could probably do something with just one coin, or you could do something with all of them.
 >undo
 
-#ttc-table-of-others-spechelp-coins
+#testcase-table-of-others-spechelp-coins
 >cisno
 The coins jingle promisingly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the coins. That's a decent omen.
@@ -754,12 +754,12 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the coins. That's a 
 >sonic
 by one point
 
-#ttc-table-of-others-scannotes-s-c
+#testcase-table-of-others-scannotes-s-c
 >scan sonic coins
 You're a pro at all this, now, so two question marks don't bother you. Yes... they have to be...
 >undo
 
-#ttc-table-of-others-spechelp-s-c
+#testcase-table-of-others-spechelp-s-c
 >sonci
 The sonic coins hum almost questioningly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sonic coins. That's a decent omen.
@@ -788,12 +788,12 @@ by one point
 Your score has just gone up by one point.
 
 >score
-You have 17 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >icon
 by one point
 
-#ttc-table-of-others-done-rejects-icon
+#testcase-table-of-others-done-rejects-icon
 >inco
 The icon seems good as-is, yet ... you can't help think it could become more later, once you've seen, done and known more.
 
@@ -808,7 +808,7 @@ Maybe if you had more than one icon.
 Your score has just gone up by one point.
 
 >score
-You have 18 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >s
 
@@ -816,11 +816,11 @@ You have 18 of 47 total points for the post-Elvira Others region, though you onl
 by one point
 
 >score
-You have 19 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >n
 
-#+ttc-table-of-others-readables-singed-design
+#+testcase-table-of-others-readables-singed-design
 >read singed design
 The singed design on the icons reads, when you look close, property of NISCO.
 
@@ -835,139 +835,139 @@ A thin voice howls "I fled!"
 >fart
 This raft isn't as receptive as the one in Anger Range.
 
-#ttc-table-of-filed-field-nudges-liepen
+#testcase-table-of-filed-field-nudges-liepen
 >liepne
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-lieapp
+#testcase-table-of-filed-field-nudges-lieapp
 >lieapp
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-penapp
+#testcase-table-of-filed-field-nudges-penapp
 >penapp
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-lie
+#testcase-table-of-filed-field-nudges-lie
 >lei
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-pen
+#testcase-table-of-filed-field-nudges-pen
 >pne
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-app
+#testcase-table-of-filed-field-nudges-app
 >app
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-piep
+#testcase-table-of-filed-field-nudges-piep
 >piep
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-panel
+#testcase-table-of-filed-field-nudges-panel
 >panle
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-eog
+#testcase-table-of-filed-field-nudges-eog
 >eog
 There's no way to chop the foliage down, but you don't need to.
 
-#ttc-table-of-filed-field-nudges-fail
+#testcase-table-of-filed-field-nudges-fail
 >ifla
 There's no way to chop the foliage down, but you don't need to.
 
-#ttc-table-of-filed-field-nudges-rapt
+#testcase-table-of-filed-field-nudges-rapt
 >rapt
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-figure
+#testcase-table-of-filed-field-nudges-figure
 >fugire
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-utensil
+#testcase-table-of-filed-field-nudges-utensil
 >utsenil
 The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. It seems worth changing more than the spoon.
 
-#ttc-table-of-filed-field-nudges-spono
+#testcase-table-of-filed-field-nudges-spono
 >spono
 The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. It seems worth changing more than the spoon.
 
-#ttc-table-of-filed-field-nudges-jagged
+#testcase-table-of-filed-field-nudges-jagged
 >jaggde
 The rapt figure almost seems to glare at you--or maybe its smile seems a little fake. It seems worth changing more than the spoon.
 
-#ttc-table-of-filed-field-nudges-fidle
+#testcase-table-of-filed-field-nudges-fidle
 >edlif
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-filed-field-nudges-pryerbar
+#testcase-table-of-filed-field-nudges-pryerbar
 >pryerbar
 No, it's both pryer bars
 
-#ttc-table-of-filed-field-nudges-pryer
+#testcase-table-of-filed-field-nudges-pryer
 >pryer
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-bars
+#testcase-table-of-filed-field-nudges-bars
 >bars
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-drupelet
+#testcase-table-of-filed-field-nudges-drupelet
 >drupelet
 Not just the drupelets. The pryer bars in their entirety.
 
-#ttc-table-of-filed-field-nudges-drupelets
+#testcase-table-of-filed-field-nudges-drupelets
 >drupelets
 Not just the drupelets. The pryer bars in their entirety.
 
-#ttc-table-of-filed-field-nudges-briar
+#testcase-table-of-filed-field-nudges-briar
 >brira
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-briars
+#testcase-table-of-filed-field-nudges-briars
 >barris
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-screen
+#testcase-table-of-filed-field-nudges-screen
 >crenes
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-buried
+#testcase-table-of-filed-field-nudges-buried
 >budrie
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-raft
+#testcase-table-of-filed-field-nudges-raft
 >rfat
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-barber
+#testcase-table-of-filed-field-nudges-barber
 >barbre
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-sickle
+#testcase-table-of-filed-field-nudges-sickle
 >sickel
 Nothing happens. Perhaps it's the whole item that's important.
 
-#ttc-table-of-filed-field-nudges-barriers
+#testcase-table-of-filed-field-nudges-barriers
 >barriesr
 The barriers' westness is important.
 
-#ttc-table-of-filed-field-nudges-foliage
+#testcase-table-of-filed-field-nudges-foliage
 >foliaeg
 Alas, the foliage also blocks your magical powers and not just your explorations, but there's plenty else to work at here.
 
-#ttc-table-of-filed-field-nudges-barrier
+#testcase-table-of-filed-field-nudges-barrier
 >barrire
 There are multiple barriers west.
 
-#ttc-table-of-filed-field-nudges-barrierwest
+#testcase-table-of-filed-field-nudges-barrierwest
 >barrirestew
 There are multiple barriers west.
 
-#ttc-table-of-others-readables-mean-trowel
+#testcase-table-of-others-readables-mean-trowel
 >read mean trowel
 It's designed by Newt L'Amore, along with Mr. Owen Late, to help you avoid a Moaner Welt.
 
-#ttc-table-of-others-spechelp-barren-cries
+#testcase-table-of-others-spechelp-barren-cries
 >barren crise
 The briar screen seems to turn dark reddish, and the barren cries seem like they could change--or is it a dream to you?
 DEBUG ONLY: You feel a slight psychic push-pull coming from the barren cries. That's a decent omen.
@@ -978,7 +978,7 @@ The briar screen seems to turn dark reddish, and the barren cries seem like they
 DEBUG ONLY: You feel a slight psychic push-pull coming from the barren cries. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-barber-sickle
+#testcase-table-of-others-spechelp-barber-sickle
 >barber sickel
 The barber sickle darkens a bit. You must be on the right track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the barber sickle. That's a decent omen.
@@ -989,7 +989,7 @@ The barber sickle darkens a bit. You must be on the right track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the barber sickle. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-mean-trowel
+#testcase-table-of-others-spechelp-mean-trowel
 >meantrowle
 You had the seed of an idea there, you thought.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the mean trowel. That's a decent omen.
@@ -1000,7 +1000,7 @@ You had the seed of an idea there, you thought.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the mean trowel. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-pryer-bars
+#testcase-table-of-others-spechelp-pryer-bars
 >pryer basr
 The pryer bars briefly turn very red.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pryer bars. That's a decent omen.
@@ -1011,7 +1011,7 @@ The pryer bars briefly turn very red.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pryer bars. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-rapt-figure
+#testcase-table-of-others-spechelp-rapt-figure
 >rapt figuer
 The rapt figure frowns as if it's eaten something sour.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the rapt figure. That's a decent omen.
@@ -1022,7 +1022,7 @@ The rapt figure frowns as if it's eaten something sour.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the rapt figure. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-pipe-panel-lie-pen-app
+#testcase-table-of-others-spechelp-pipe-panel-lie-pen-app
 >pineappel
 The pipe panel lie pen app rattles slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe panel lie pen app. That's a decent omen.
@@ -1033,11 +1033,11 @@ The pipe panel lie pen app rattles slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe panel lie pen app. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-scannotes-pipe-panel-lie-pen-app
+#testcase-table-of-others-scannotes-pipe-panel-lie-pen-app
 >scan pipe panel lie pen app
 Hmm. There are a lot of P's. Maybe that helps.
 
-#ttc-table-of-others-spechelp-barriers-west
+#testcase-table-of-others-spechelp-barriers-west
 >strawberrise
 You feel the barriers west pulling towards you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the barriers west. That's a decent omen.
@@ -1048,7 +1048,7 @@ You feel the barriers west pulling towards you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the barriers west. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-buried-raft
+#testcase-table-of-others-spechelp-buried-raft
 >breadfruti
 You loaf a bit after thinking that, hoping for something to happen. It doesn't.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the buried raft. That's a decent omen.
@@ -1059,7 +1059,7 @@ You loaf a bit after thinking that, hoping for something to happen. It doesn't.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the buried raft. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-readables-pipe-panel-lie-pen-app
+#testcase-table-of-others-readables-pipe-panel-lie-pen-app
 >read lie pen app
 There's no red text, but there is a mention of how people finally tweaked it to contain gelatin, and also that a truly odd someone could enjoy living in it under the sea.
 
@@ -1067,24 +1067,24 @@ There's no red text, but there is a mention of how people finally tweaked it to 
 Your score has just gone up by one point.
 
 >score
-You have 20 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >blackberries
 Your score has just gone up by one point.
 
 >score
-You have 21 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >watermelon
 Your score has just gone up by one point.
 
 >score
-You have 22 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >pineapple
 Your score has just gone up by one point.
 min-up
 
 >score
-You have 23 of 47 total points for the post-Elvira Others region, though you only need 27 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >e
 >s
@@ -1095,9 +1095,9 @@ droll dollar
 >dates
 Your score has just gone up by one point.
 >score
-You have 24 of 47 total points for the post-Elvira Others region, though you only need 28 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
-#ttc-table-of-others-nudges-bluer
+#testcase-table-of-others-nudges-bluer
 >ubler
 That doesn't really describe the Tekno-Token
 
@@ -1111,7 +1111,7 @@ Money, or something like it, should not be the guide of you.
 
 >icons
 
-#ttc-table-of-others-spechelp-icons
+#testcase-table-of-others-spechelp-icons
 >icosn
 The icons rattle promisingly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the icons. That's a decent omen.
@@ -1135,24 +1135,24 @@ by one point
 Blam!
 
 >score
-You have 25 of 47 total points for the post-Elvira Others region, though you only need 28 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 #+testcase-mistake-roiling-scion
 >scion
 Money, or something like it, should not be the guide of you.
 
-#ttc-table-of-others-done-rejects-s-i
+#testcase-table-of-others-done-rejects-s-i
 >icons
 The sonic icons seem right. No use meddling.
 
-#ttc-table-of-others-scannotes-concisions
+#testcase-table-of-others-scannotes-concisions
 >scan sonic icons
 Whoah, that's odd. You thought the sonic icons were what you needed. Maybe there's one more cool thing you can do.
 
 >concisions
 Your score has just gone up by one point.
 >score
-You have 26 of 47 total points for the post-Elvira Others region, though you only need 29 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >n
 
@@ -1160,21 +1160,21 @@ You have 26 of 47 total points for the post-Elvira Others region, though you onl
 >strawberries
 Your score has just gone up by one point.
 >score
-You have 27 of 47 total points for the post-Elvira Others region, though you only need 30 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 #strawberries = last with minimum at base
 
 >grapefruit
 Your score has just gone up by one point.
 >score
-You have 28 of 47 total points for the post-Elvira Others region, though you only need 31 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >raspberry
 Your score has just gone up by one point.
 >score
-You have 29 of 47 total points for the post-Elvira Others region, though you only need 32 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >breadfruit
 Your score has just gone up by one point.
 >score
-You have 30 of 47 total points for the post-Elvira Others region, though you only need 33 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >e
 >e
 /^Clangier Clearing
@@ -1197,11 +1197,11 @@ You don't need to summon someone who deals in spices, or (dated political joke) 
 >cigar
 That'd be out of place among fresh fruits. Plus, whether or not Len deserves a cigar, he doesn't deserve to be turned into one.
 
-#ttc-table-of-clangier-clearing-nudges-yell
+#testcase-table-of-clangier-clearing-nudges-yell
 >ylle
 The selly yells just add atmosphere. They can't be changed.
 
-#ttc-table-of-clangier-clearing-nudges-yells
+#testcase-table-of-clangier-clearing-nudges-yells
 >yelsl
 The selly yells just add atmosphere. They can't be changed.
 
@@ -1212,7 +1212,7 @@ Yes, there are probably disproportionately many people with a first name of Lyle
 >lyles
 Yes, there are probably disproportionately many people with a first name of Lyle or last name of Lyles involves in all the commerce, but that's not important to your goal, and neither are the yells.
 
-#ttc-table-of-others-spechelp-i-solve-voiles
+#testcase-table-of-others-spechelp-i-solve-voiles
 >evliso
 The I-Solve Voiles rustle slightly.
 
@@ -1221,16 +1221,16 @@ The I-Solve Voiles rustle slightly.
 The I-Solve Voiles rustle slightly.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-scannotes-i-solve-voiles
+#testcase-table-of-others-scannotes-i-solve-voiles
 >scan i solve voiles
 You make sure it's not just the I-Solve Voiles fluttering about that give such an ambiguous reading. No, it is not.
 
-#ttc-table-of-clangier-clearing-nudges-voile
+#testcase-table-of-clangier-clearing-nudges-voile
 >voiel
 No, it's what's behind the voiles.
 >abstract melon to ll
 
-#ttc-table-of-clangier-clearing-nudges-lemon
+#testcase-table-of-clangier-clearing-nudges-lemon
 >elmon
 You can't focus on just one of the lemons, but you don't need to.
 >abstract melon to clearing
@@ -1239,49 +1239,49 @@ You can't focus on just one of the lemons, but you don't need to.
 Hm, there must be a better melon than that, but how to ask Len, now.
 >abstract lemons to clearing
 
-#ttc-table-of-clangier-clearing-nudges-price
+#testcase-table-of-clangier-clearing-nudges-price
 >priec
 Hm, no, the pattern of prices
 
-#ttc-table-of-clangier-clearing-nudges-clearing
+#testcase-table-of-clangier-clearing-nudges-clearing
 >clegnira
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-clangier-clearing-nudges-len
+#testcase-table-of-clangier-clearing-nudges-len
 >eln
 Len Craig doesn't change, and even if you messed with his full name, he wouldn't.
 
-#ttc-table-of-clangier-clearing-nudges-craig
+#testcase-table-of-clangier-clearing-nudges-craig
 >criga
 Len Craig doesn't change, and even if you messed with his full name, he wouldn't.
 
-#ttc-table-of-clangier-clearing-nudges-nameless
+#testcase-table-of-clangier-clearing-nudges-nameless
 >nameelss
 You can't do anything other than listen to the nameless salesmen, and you don't need to move them out of the way.
 
-#ttc-table-of-clangier-clearing-nudges-superstore
+#testcase-table-of-clangier-clearing-nudges-superstore
 >superstoer
 It's an eyesore, but unlike the Curst Palace, people are still in it--so destroying it would mean big problems. Best to concentrate on the open-air market.
 
-#ttc-table-of-clangier-clearing-nudges-overpriced
+#testcase-table-of-clangier-clearing-nudges-overpriced
 >overpriced
 That's over-thinking it. It's just a peach.
 
-#ttc-table-of-clangier-clearing-nudges-auction
+#testcase-table-of-clangier-clearing-nudges-auction
 >uctiona
 You're probably over-thinking it--just pay attention to what it says, instead.
 
-#ttc-table-of-clangier-clearing-nudges-banner
+#testcase-table-of-clangier-clearing-nudges-banner
 >abnner
 You're probably over-thinking it--just pay attention to what it says, instead.
 
-#ttc-table-of-others-spechelp-quince
+#testcase-table-of-others-spechelp-quince
 >quinec
 That certainly sounds foreign--but it doesn't seem to sway Len.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the quince. That's a decent omen.
 !no u right after the q
 
-#+ttc-table-of-others-spechelp-quince
+#+testcase-table-of-others-spechelp-quince
 >qiunec
 That certainly sounds foreign--but it doesn't seem to sway Len, especially with no u right after the q.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the quince. That's a decent omen.
@@ -1292,7 +1292,7 @@ That certainly sounds foreign--but it doesn't seem to sway Len.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the quince. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-auction-caution
+#testcase-table-of-others-spechelp-auction-caution
 >papaysa
 Everyone promises quick payment, but what are you promising to pay quickly for? Hmm...
 DEBUG ONLY: You feel a slight psychic push-pull coming from the auction caution. That's a decent omen.
@@ -1303,7 +1303,7 @@ Everyone promises quick payment, but what are you promising to pay quickly for? 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the auction caution. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-scannotes-auction-caution
+#testcase-table-of-others-scannotes-auction-caution
 >scan auction caution
 Hm, that certainly cuts things down a ton, or it should, once you read that sign--caution has four vowels, but the settler indicates three.
 >x auction caution
@@ -1315,7 +1315,7 @@ Hm, that certainly cuts things down a ton. Just one possibility.
 Hm, that certainly cuts things down a ton. Just three possibilities.
 >c
 
-#ttc-table-of-others-spechelp-peach
+#testcase-table-of-others-spechelp-peach
 >peahc
 The peach still looks too expensive.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the overpriced peach. That's a decent omen.
@@ -1329,25 +1329,25 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the overpriced peach
 >olives
 Your score has just gone up by one point.
 >score
-You have 31 of 47 total points for the post-Elvira Others region, though you only need 34 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >cinque
 Your score has just gone up by one point.
 >score
-You have 32 of 47 total points for the post-Elvira Others region, though you only need 35 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >cheap
 Your score has just gone up by one point.
 >score
-You have 33 of 47 total points for the post-Elvira Others region, though you only need 36 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >papayas
 Your score has just gone up by one point.
 >score
-You have 34 of 47 total points for the post-Elvira Others region, though you only need 37 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
-#ttc-table-of-others-done-rejects-quince
+#testcase-table-of-others-done-rejects-quince
 >quicne
 The quince doesn't need any modifications.
 
-#+ttc-table-of-others-done-rejects-quince
+#+testcase-table-of-others-done-rejects-quince
 >qiucne
 The quince doesn't need any modifications, especially not anything drastic with the q and u out of place.
 
@@ -1367,11 +1367,11 @@ You get all red faced asking people how to trade for a mango, and asking, and as
 >an omg
 Lashing out that way leaves you feeling you must be close to the right way to get a mango.
 
-#ttc-table-of-others-scannotes-ammo-gang
+#testcase-table-of-others-scannotes-ammo-gang
 >scan ammo gang
 The No Ammo Gang doesn't seem too hard to hang with, and your settler's clues probably reveal enough, too, to put this mystery away quickly.
 
-#ttc-table-of-others-spechelp-ammo-gang
+#testcase-table-of-others-spechelp-ammo-gang
 >amogn
 You must not be mingling right with the No Ammo Gang.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the No Ammo Gang. That's a decent omen.
@@ -1382,14 +1382,14 @@ You must not be mingling right with the No Ammo Gang.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the No Ammo Gang. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-done-rejects-auction-caution
+#testcase-table-of-others-done-rejects-auction-caution
 >papaysa
 You've already established yourself as a prompt payer.
 
 >among
 Your score has just gone up by one point.
 
-#ttc-table-of-others-spechelp-lemons
+#testcase-table-of-others-spechelp-lemons
 >lemosn
 Len frowns at the lemons.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lemons. That's a decent omen.
@@ -1400,7 +1400,7 @@ Len frowns at the lemons.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lemons. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-melon
+#testcase-table-of-others-spechelp-melon
 >melno
 Hm, there must be a better melon than that, but how to ask Len, now.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the melon. That's a decent omen.
@@ -1411,11 +1411,11 @@ Hm, there must be a better melon than that, but how to ask Len, now.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the melon. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-scannotes-melon
+#testcase-table-of-others-scannotes-melon
 >scan melon
 Now this is weird. It looks like there should be a space, but it's jumping back and forth. Maybe there are two very similar ways to ask Len about that melon.
 
-#ttc-table-of-others-spechelp-nectarine
+#testcase-table-of-others-spechelp-nectarine
 >nectarien
 The nectarine seems a little less shiny and new. But not enough.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the nectarine. That's a decent omen.
@@ -1426,7 +1426,7 @@ The nectarine seems a little less shiny and new. But not enough.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the nectarine. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-prices-precis
+#testcase-table-of-others-spechelp-prices-precis
 >cripse
 Something glints off the prices precis.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the prices precis. That's a decent omen.
@@ -1437,79 +1437,79 @@ Something glints off the prices precis.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the prices precis. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-scannotes-prices-precis
+#testcase-table-of-others-scannotes-prices-precis
 >scan prices precis
 Whoah, only reds and greens. Interesting.
 
 >score
-You have 35 of 47 total points for the post-Elvira Others region, though you only need 38 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >ancienter
 Your score has just gone up by one point.
 >score
-You have 36 of 47 total points for the post-Elvira Others region, though you only need 39 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >solemn
 Your score has just gone up by one point.
 >score
-You have 37 of 47 total points for the post-Elvira Others region, though you only need 40 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >len mo
 Your score has just gone up by one point.
 >score
-You have 38 of 47 total points for the post-Elvira Others region, though you only need 41 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >cripes
 Your score has just gone up by one point.
 >score
-You have 39 of 47 total points for the post-Elvira Others region, though you only need 42 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
-#ttc-table-of-others-done-rejects-olives
+#testcase-table-of-others-done-rejects-olives
 >olives
 The olives are just find as they are. They're even pitted! No need to change them. I mean, what if they became SO EVIL?
 
-#+ttc-table-of-clangier-clearing-nudges-price
+#+testcase-table-of-clangier-clearing-nudges-price
 >priec
 No, you already helped correct the prices precis.
 
-#ttc-table-of-others-done-rejects-melon
+#testcase-table-of-others-done-rejects-melon
 >melno
 The melon is fine as-is. It's better than the one that was on display, for sure.
 
-#ttc-table-of-others-done-rejects-peach
+#testcase-table-of-others-done-rejects-peach
 >peahc
 You got enough of a discount. Really.
 
-#ttc-table-of-others-done-rejects-lemons
+#testcase-table-of-others-done-rejects-lemons
 >lemosn
 You sour on changing the lemons further.
 
-#ttc-table-of-others-nudges-kumquat
+#testcase-table-of-others-nudges-kumquat
 >kumquta
 The kumquat is in perfectly good shape. Just return it to Curtis.
 
-#ttc-table-of-others-done-rejects-mango
+#testcase-table-of-others-done-rejects-mango
 >manog
 Snag mo' mangos? No mas, G.
 
-#ttc-table-of-others-done-rejects-prices-precis
+#testcase-table-of-others-done-rejects-prices-precis
 >cripse
 You corrected the prices precis enough.
 
 >w
 
 #this is a bunch of negative tests which may be objectively trivial but were one of the last things to fix ... I finally defined certain things as "reflexive" instead of flipping them to fruits, and I want to make sure this causes no core regressions
-#+ttc-table-of-others-done-rejects-prices-precis
+#+testcase-table-of-others-done-rejects-prices-precis
 >cripes
 That's not something you can say, do or see here. For a general list of verbs, type VERBS, or for options, type OPTIONS.
 
-#ttc-table-of-others-nudges-papayas
+#testcase-table-of-others-nudges-papayas
 >papaysa
 The papayas are in perfectly good shape. Don't ruin them for Curtis.
 >s
 >gt clearing
 
-#+ttc-table-of-others-done-rejects-prices-precis
+#+testcase-table-of-others-done-rejects-prices-precis
 >cripes
 You corrected the prices precis enough.
 
-#+ttc-table-of-others-done-rejects-auction-caution
+#+testcase-table-of-others-done-rejects-auction-caution
 >papaysa
 You've already established yourself as a prompt payer.
 
@@ -1522,7 +1522,7 @@ You've already established yourself as a prompt payer.
 
 >n
 
-#ttc-table-of-gates-stage-nudges-halt
+#testcase-table-of-gates-stage-nudges-halt
 >ltha
 The halt lath remains firm. Maybe you need an actual item to open it.
 
@@ -1533,11 +1533,11 @@ The halt lath remains firm. Maybe you need an actual item to open it.
 >d
 /^Scape Space
 
-#ttc-table-of-others-nudges-storage
+#testcase-table-of-others-nudges-storage
 >strogea
 You might break what is in the storage.
 
-#ttc-table-of-others-nudges-great
+#testcase-table-of-others-nudges-great
 >grtea
 You might break what is in the storage. Then it would be neither great nor so great.
 
@@ -1553,43 +1553,43 @@ Art Erd has nowhere to run, and you don't know if you want him taking that So-Gr
 >retard
 You can picture people like Red Rat Art Erd calling you, or people he "provided financial services to," that, but two wrongs don't make a right. Besides, if anything, he was being too clever.
 
-#ttc-table-of-scape-space-nudges-space
+#testcase-table-of-scape-space-nudges-space
 >sceap
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-scape-space-nudges-drawing
+#testcase-table-of-scape-space-nudges-drawing
 >drawign
 The drawing can't be changed. It's stuck to the wall as a warning.
 
-#ttc-table-of-others-nudges-droll
+#testcase-table-of-others-nudges-droll
 >dllor
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
 
-#ttc-table-of-others-nudges-dollar
+#testcase-table-of-others-nudges-dollar
 >dllora
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
 
-#+ttc-table-of-others-nudges-singed
+#+testcase-table-of-others-nudges-singed
 >deigsn
 The design is sort of glommed onto the icons. So you should figure what to do, there.
 
-#ttc-table-of-others-nudges-designs
+#testcase-table-of-others-nudges-designs
 >desigsn
 The design doesn't need changing. It's what the design's on.
 
-#ttc-table-of-others-readables-orange
+#testcase-table-of-others-readables-orange
 >read orange
 It's stamped with the word ENGARO in red.
 
-#ttc-table-of-scape-space-nudges-red
+#testcase-table-of-scape-space-nudges-red
 >red
 first-name basis
 
-#ttc-table-of-scape-space-nudges-art
+#testcase-table-of-scape-space-nudges-art
 >rat
 first-name basis
 
-#ttc-table-of-others-nudges-drol
+#testcase-table-of-others-nudges-drol
 >drol
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
 >gs
@@ -1607,21 +1607,21 @@ Lola says nothing back.
 >a lol
 You laugh at how silly Dr. Lola Ollard looks on the fake currency.
 
-#ttc-table-of-others-nudges-lola
+#testcase-table-of-others-nudges-lola
 >alol
 It's counterfeit enough as-is. You probably need to just find someone who'd actually accept it.
 
-#ttc-table-of-scape-space-nudges-tera
+#testcase-table-of-scape-space-nudges-tera
 >tera
 first-name basis
 
-#ttc-table-of-scape-space-nudges-trader
+#testcase-table-of-scape-space-nudges-trader
 >drtear
 Dr. Tera is tarred real good. That's the point of tarring. But she might trade that So-Great Storage.
 >gs
 male
 
-#ttc-table-of-others-nudges-lots
+#testcase-table-of-others-nudges-lots
 >ltso
 Nothing close to anagramming LOST is on the box right now. You may need to use something entirely different to get the slot to appear.
 
@@ -1637,7 +1637,7 @@ You only need the one slot.
 >reeves
 You don't need to guess Dr. Severe's real last name or have any medieval bailiff escort him away.
 
-#+ttc-table-of-others-nudges-lots
+#+testcase-table-of-others-nudges-lots
 >ltso
 After all that work getting it to appear, you don't want to make the lost slot vanish.
 
@@ -1646,9 +1646,9 @@ As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, d
 Your score has just gone up by one point.
 
 >score
-You have 40 of 47 total points for the post-Elvira Others region, though you only need 42 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
-#ttc-table-of-scape-space-nudges-banna
+#testcase-table-of-scape-space-nudges-banna
 >naban
 It's a banna'. The puzzle here is criminally corny, but it's not criminal like Red Rat Art Erd.
 >gs
@@ -1656,7 +1656,7 @@ It's a banna'. The puzzle here is criminally corny, but it's not criminal like R
 It's a banna'. The puzzle here is criminally corny, but it's not criminal like Dr. Tera Darter.
 >gs
 
-#ttc-table-of-others-spechelp-a-brr-hub
+#testcase-table-of-others-spechelp-a-brr-hub
 >rhubabr
 The (a) brr hub seems to swirl closed for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the brr-hub. That's a decent omen.
@@ -1667,11 +1667,11 @@ The (a) brr hub seems to swirl closed for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the brr-hub. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-scannotes-a-brr-hub
+#testcase-table-of-others-scannotes-a-brr-hub
 >scan a brr hub
 Wow, seven letters, odd. It must be *a* brr-hub. Maybe poking it would give another clue or so.
 
-#ttc-table-of-others-spechelp-orange
+#testcase-table-of-others-spechelp-orange
 >oraneg
 The orange seems a bit closer for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ENGARO orange. That's a decent omen.
@@ -1682,7 +1682,7 @@ The orange seems a bit closer for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ENGARO orange. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-a-banna
+#testcase-table-of-others-spechelp-a-banna
 >nabaan
 The (a) banna' flutters about for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the banna'. That's a decent omen.
@@ -1693,11 +1693,11 @@ The (a) banna' flutters about for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the banna'. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-scannotes-a-banna
+#testcase-table-of-others-scannotes-a-banna
 >scan a banna
 The message on the/a banna' must be interfering with the/a banna' itself.
 
-#ttc-table-of-others-spechelp-Reserved-Deserver-Dr-Severe
+#testcase-table-of-others-spechelp-Reserved-Deserver-Dr-Severe
 >reservde
 You seem to see a mirror image of Dr. Severe for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Reserved Deserver Dr. Severe. That's a decent omen.
@@ -1708,50 +1708,50 @@ You seem to see a mirror image of Dr. Severe for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Reserved Deserver Dr. Severe. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-scannotes-reserved-deserver-Dr-Severe
+#testcase-table-of-others-scannotes-reserved-deserver-Dr-Severe
 >scan dr severe
 Dr. Severe rolls his eyes. "My arguments certainly merit analysis, but there is no quick way to grokking them."
 Whatever Dr. Severe rattles on about seems less important than how many letters are repeated, and that has to help cut down possibilities.
 
-#ttc-table-of-scape-space-nudges-brrhub
+#testcase-table-of-scape-space-nudges-brrhub
 >brrhbu
 It's a burr hub, not the burr hub. A small but important distinction.
 
-#ttc-table-of-scape-space-nudges-pace
+#testcase-table-of-scape-space-nudges-pace
 >paec
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-scape-space-nudges-severe
+#testcase-table-of-scape-space-nudges-severe
 >seveer
 You need to change Dr. Severe, title and all.
 
 >banana
 Your score has just gone up by one point.
 >score
-You have 41 of 47 total points for the post-Elvira Others region, though you only need 43 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >go near
 Your score has just gone up by one point.
 >score
-You have 42 of 47 total points for the post-Elvira Others region, though you only need 44 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >rhubarb
 Your score has just gone up by one point.
 >score
-You have 43 of 47 total points for the post-Elvira Others region, though you only need 45 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >reversed
 Your score has just gone up by one point.
 >score
-You have 44 of 47 total points for the post-Elvira Others region.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region.
 There are no fruits left to find or give back to Curtis.
 
-#ttc-table-of-others-nudges-guava
+#testcase-table-of-others-nudges-guava
 >guaav
 The guava doesn't need to be changed. Curtis will be happy with it.
 
-#ttc-table-of-others-nudges-popstar
+#testcase-table-of-others-nudges-popstar
 >popstra
 You don't know whose passport it was, but it's yours now, and you need to study it, not just hope to be a pop star.
 
-#ttc-table-of-others-nudges-passport
+#testcase-table-of-others-nudges-passport
 >passpotr
 The passport is fine as it is, full of practical knowledge to look at it. You wonder if perhaps the
 
@@ -1772,42 +1772,42 @@ You don't need to be part of Yorpwald's Funniest* Home Videos right now.
 >poring
 You ponder the gropin' roping for a bit. You decide it isn't as worth thinking about as the Valence Enclave to the north.
 
-#ttc-table-of-gates-stage-nudges-gates
+#testcase-table-of-gates-stage-nudges-gates
 >gesta
 The gate needs to be unlocked some other way.
 
-#ttc-table-of-gates-stage-nudges-gate
+#testcase-table-of-gates-stage-nudges-gate
 >geta
 The gate needs to be unlocked some other way.
 
-#ttc-table-of-gates-stage-nudges-sagest
+#testcase-table-of-gates-stage-nudges-sagest
 >sagets
 The gate needs to be unlocked some other way.
 
-#ttc-table-of-gates-stage-nudges-roping
+#testcase-table-of-gates-stage-nudges-roping
 >rpigon
 You don't need to grapple with the roping, and you don't need the roping to grapple with you.
 
-#ttc-table-of-gates-stage-nudges-arean
+#testcase-table-of-gates-stage-nudges-arean
 >arean
 The Valence Enclave doesn't need modifications. Especially with people potentially inside. Maybe you can get inside, too.
 
-#ttc-table-of-gates-stage-nudges-nera
+#testcase-table-of-gates-stage-nudges-nera
 >nera
 The Valence Enclave doesn't need modifications. Especially with people potentially inside. Maybe you can get inside, too.
 
-#ttc-table-of-gates-stage-nudges-valence
+#testcase-table-of-gates-stage-nudges-valence
 >valenec
 The Valence Enclave doesn't need modifications. Especially with people potentially inside. Maybe you can get inside, too.
 
 >n
 PERP
 
-#ttc-table-of-others-nudges-feeling
+#testcase-table-of-others-nudges-feeling
 >feelign
 You can't shake the fleeing feeling, and it's not just a general one. It says to you, PERP, PERP, PERP.
 
-#ttc-table-of-others-spechelp-viewer
+#testcase-table-of-others-spechelp-viewer
 >reviwe
 That's not the way to learn from the viewer--it's probably not that complicated. You hope.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the viewer. That's a decent omen.
@@ -1818,7 +1818,7 @@ That's not the way to learn from the viewer--it's probably not that complicated.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the viewer. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-searcher
+#testcase-table-of-others-spechelp-searcher
 >searchre
 That's not the way to learn from the searcher--it's probably not that complicated. You hope.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the searcher. That's a decent omen.
@@ -1829,7 +1829,7 @@ That's not the way to learn from the searcher--it's probably not that complicate
 DEBUG ONLY: You feel a slight psychic push-pull coming from the searcher. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-others-spechelp-fleeing-feeling
+#testcase-table-of-others-spechelp-fleeing-feeling
 >prpe
 It hurt to be called a perp. But maybe you can figure a way to spin that and heal the pain. Not quite like that, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fleeing feeling. That's a decent omen.
@@ -1843,7 +1843,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the fleeing feeling.
 >prep
 by one point
 
-#ttc-table-of-others-done-rejects-fleeing-feeling
+#testcase-table-of-others-done-rejects-fleeing-feeling
 >pepr
 You don't want to bring back that fleeing feeling whispering "PERP." Not in any form. There's got to be another way or two to prep, though.
 >undo
@@ -1852,7 +1852,7 @@ You don't want to bring back that fleeing feeling whispering "PERP." Not in any 
 >review
 by one point
 
-#ttc-table-of-others-done-rejects-viewer
+#testcase-table-of-others-done-rejects-viewer
 >reveiw
 You've done enough reviewing, and now you need to try something else.
 >undo
@@ -1862,10 +1862,10 @@ You've done enough reviewing, and now you need to try something else.
 by one point
 >score
 
-You have 45 of 47 total points for the post-Elvira Others region.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region.
 There are no fruits left to find or give back to Curtis.
 
-#ttc-table-of-others-done-rejects-searcher
+#testcase-table-of-others-done-rejects-searcher
 >reserach
 You've done enough researching, and now you need to try something else.
 
@@ -1874,17 +1874,17 @@ by one point
 
 >score
 
-You have 46 of 47 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
 
-#+ttc-table-of-others-done-rejects-searcher
+#+testcase-table-of-others-done-rejects-searcher
 >searchre
 You've done enough researching, and now you can just go north.
 
-#+ttc-table-of-others-done-rejects-viewer
+#+testcase-table-of-others-done-rejects-viewer
 >viewre
 You've done enough reviewing, and now you can just go north.
 
-#ttc-table-of-others-nudges-repp
+#testcase-table-of-others-nudges-repp
 >repp
 You don't want to bring back that fleeing feeling whispering "PERP." Not in any form. Just go north through the gates.
 

@@ -13,18 +13,18 @@
 /^Same Mesa
 
 >score
-Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >score
-Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-prerule-table-of-routes-anagrams-pre-side-art-astride-rule
 >astride
 You get astride the anti-sag sit-a-nag for a while, but it's pointless with nobody around. Maybe later.
 !by one point
 
-#ttc-table-of-routes-prefigurings-side-art
-#ttc-table-of-notepad-entries-flips
+#testcase-table-of-routes-prefigurings-side-art
+#testcase-table-of-notepad-entries-flips
 >pad flips
 [NOTE: you can abbreviate this with PF in the future.]
 You can sit ASTRIDE the anti-sag sit-a-nag once you have a reason to.
@@ -35,7 +35,7 @@ You can sit ASTRIDE the anti-sag sit-a-nag once you have a reason to.
 You hear loud footsteps and hide under the anti-sag sit-a-nag in fear. A giant walks by but can't see anyone and runs off, complaining how there's nobody to complain to. Maybe if you had a reason to talk to the giant, or a purpose here, you might listen a bit better. Maybe if you could find a way to visit the Cleric Circle and find inner peace.
 You add the information to your pedanto-notepad under FLIPS.
 
-#ttc-table-of-routes-prefigurings-sit-a-nag
+#testcase-table-of-routes-prefigurings-sit-a-nag
 >pf
 You can lean AGAINST the anti-sag sit-a-nag once you feel less fear and more purpose.
 
@@ -45,40 +45,40 @@ Something blocks you. Perhaps you were a bit too glib about entering and need to
 >inside
 Your score has just gone up by one point
 
-#ttc-table-of-region-initial-scoring-commentary-routes-1
+#testcase-table-of-region-initial-scoring-commentary-routes-1
 Well, that was different from the standard directions. But there can't be too many other ways to go.
 
 /^Cleric Circle
 
 >score
-Score in a scenario: 1 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >x list o toils
 
-#ttc-table-of-notepad-entries-reagents
+#testcase-table-of-notepad-entries-reagents
 >pad reagents
 You need three reagents to help Brother Horbert:
 
 >x pews
 Mum Ray's Summary!
 
-#ttc-table-of-mum-ray-summary-pages-1
+#testcase-table-of-mum-ray-summary-pages-1
 >x summary
 The story starts with Rev. Ali being violently opposed to Elvira. He dropped by the Same Mesa, and many people followed him. He was constantly yelling how she was too exciting, and the way to fight back was not to get swept up in her newness and be happy enough, you guess.
 
-#ttc-table-of-mum-ray-summary-pages-2
+#testcase-table-of-mum-ray-summary-pages-2
 >x summary
 People listened to Rev. Ali, and his austerity helped prevent hearing about Elvira's latest charm offensive. But he got more and more severe, restricting where people could go, and even directions how to get there. If people knew where they wanted to go, and it was really important, they'd get there.
 
-#ttc-table-of-mum-ray-summary-pages-3
+#testcase-table-of-mum-ray-summary-pages-3
 >x summary
 Then Elvira dropped by. Rev. Ali took the time to admit he was wrong! In doing so, he informed the residents of the Same Mesa that they would do well to follow his lead. Terrified, they accepted. Elvira's excitement had matured, and he didn't realize how good she was at pointing out people's faults. It would help to improve them.
 
-#ttc-table-of-mum-ray-summary-pages-4
+#testcase-table-of-mum-ray-summary-pages-4
 >x summary
 Rev. Ali left, but with one final "character-building" challenge. The roads out of the Same Mesa would lead nowhere until someone found a new clever way out beyond them. And if nobody found the way out--well, there were some wise guys who were all about thinking for yourself. Maybe they were not as good at it as they claimed to be.
 
-#ttc-table-of-mum-ray-summary-pages-5
+#testcase-table-of-mum-ray-summary-pages-5
 >x summary
 It was rumored Rev. Ali moved on to a new community to "help." His legacy remains, though. People are not willing even to visit Pat's and Oscar's. Why should they? The Same Mesa is a mix of countermanding and warnings about what you can't do, and how you can't even get the basics right, like cardinal directions. Someone needs to break through, somehow.
 
@@ -105,13 +105,13 @@ by one point
 !by one point
 >pf
 
-#ttc-table-of-routes-prefigurings-worst-ad
+#testcase-table-of-routes-prefigurings-worst-ad
 You can go TOWARDS the worst ad once things are a bit more settled.
 
-#ttc-table-of-routes-prefigurings-lairage-regalia
+#testcase-table-of-routes-prefigurings-lairage-regalia
 You can go ACROSS the lairage regalia to Oscar's SOS Arc once things are a bit more settled.
 
-#ttc-table-of-routes-prefigurings-adsorbing-signboard
+#testcase-table-of-routes-prefigurings-adsorbing-signboard
 You can go PAST the adsorbing signboard to Pat's Stap once things are a bit more settled.
 >undo
 >undo
@@ -202,7 +202,7 @@ pipe soot
 >scan uhh tut hut
 You read what the settler says--and you realize you already took care of the Uhh Tut Hut or something closely related.
 
-#+ttc-table-of-routes-prefigurings-sit-a-nag
+#+testcase-table-of-routes-prefigurings-sit-a-nag
 >againts
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !NOTE: you may have misspelled
@@ -224,9 +224,9 @@ Your score has just gone up by one point
 They're not very good tirades, but maybe you could position yourself better to listen to them.
 
 >score
-Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#+ttc-table-of-routes-prefigurings-side-art
+#+testcase-table-of-routes-prefigurings-side-art
 >astried
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
@@ -267,7 +267,7 @@ DEBUG INFO: General LLPish min-up for worst ad.
 
 >in
 
-#ttc-table-of-notepad-entries-no-lag-logan
+#testcase-table-of-notepad-entries-no-lag-logan
 >pad logan
 No-Lag Logan may have left behind a ship that can get you out of here. It is beyond an un-road.
 
@@ -277,7 +277,7 @@ No-Lag Logan may have left behind a ship that can get you out of here. It is bey
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: 11 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >from
 Your score has just gone up by one point
@@ -288,7 +288,7 @@ Your score has just gone up by one point
 /^Harms Marsh
 
 >score
-Score in a scenario: 13 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >until
 Your score has just gone up by one point
@@ -315,6 +315,13 @@ Your score has just gone up by one point
 
 /^Ripe Pier
 
+>during
+Your score has just gone up by one point
+DEBUG INFO: General LLPish min-up for drudging ruin.
+
+>score
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+
 >amidst
 Your score has just gone up by one point
 
@@ -330,7 +337,7 @@ Your score has just gone up by one point
 That could work later, but the hog and ewe don't trust you to go by yet.
 !by one point
 
-#ttc-table-of-routes-prefigurings-hurt-hog
+#testcase-table-of-routes-prefigurings-hurt-hog
 >pf
 You can go THROUGH once you've managed to deal with the bent ewe.
 
@@ -363,7 +370,7 @@ Your score has just gone up by one point
 
 >score
 
-Score in a scenario: 21 out of 22 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 22 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >beyond
 Your score has just gone up by one point
@@ -371,5 +378,5 @@ Your score has just gone up by one point
 /^Strip of Profits
 
 >score
-Routes (22/22)
+Routes ({SCORE}/{MAX})
 

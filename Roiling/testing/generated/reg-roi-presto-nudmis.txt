@@ -16,12 +16,12 @@
 >enter tornado
 /^Grey Gyre
 
-#ttc-table-of-presto-spechelp-maze-walls
+#testcase-table-of-presto-spechelp-maze-walls
 >veltamoz
 The volt maze rumbles a bit. You must have all the right letters to bring it crashing down in style.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the volt maze. That's a decent omen.
 
-#ttc-table-of-presto-spechelp-lamb
+#testcase-table-of-presto-spechelp-lamb
 >blma
 The lamb looks confused. Maybe you could be more forceful. Verbally, not physically.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lamb. That's a decent omen.
@@ -49,43 +49,43 @@ joke death
 
 >undo
 
-#ttc-table-of-grey-gyre-nudges-volt
+#testcase-table-of-grey-gyre-nudges-volt
 >votl
 That can't be it. It's more than a volt: a VOLT MAZE.
 
-#ttc-table-of-grey-gyre-nudges-maze
+#testcase-table-of-grey-gyre-nudges-maze
 >maez
 That can't be it. It's more than a maze: a VOLT MAZE.
 
-#ttc-table-of-presto-nudges-storep
+#testcase-table-of-presto-nudges-storep
 >storpe
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 
-#ttc-table-of-presto-nudges-crust
+#testcase-table-of-presto-nudges-crust
 >cruts
 You shouldn't play with your food. Yes, even if it is less traumatic to play with than to eat.
 
-#ttc-table-of-grey-gyre-nudges-grye
+#testcase-table-of-grey-gyre-nudges-grye
 >grey
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-grey-gyre-nudges-entry
+#testcase-table-of-grey-gyre-nudges-entry
 >entyr
 It's the maze you need to change, not the zany meter.
 
-#ttc-table-of-grey-gyre-nudges-mazeentry
+#testcase-table-of-grey-gyre-nudges-mazeentry
 >mazeentyr
 It's the maze you need to change, not the zany meter.
 
-#ttc-table-of-grey-gyre-nudges-zany
+#testcase-table-of-grey-gyre-nudges-zany
 >zayn
 It's the maze you need to change, not the zany meter.
 
-#ttc-table-of-grey-gyre-nudges-meter
+#testcase-table-of-grey-gyre-nudges-meter
 >metre
 It's the maze you need to change, not the zany meter.
 
-#ttc-table-of-presto-spechelp-hump
+#testcase-table-of-presto-spechelp-hump
 >umhp
 The hump suddenly looks a bit smaller. But not enough.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the hump. That's a decent omen.
@@ -107,7 +107,7 @@ Your score has just gone up by one point
 /^Austerer Treasure
 
 >score
-Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-mistake-roiling-ooph-phoo
 >ooph
@@ -119,11 +119,11 @@ That sounds almost like the sort of grunt that would help you reach the hoop, bu
 >pheyoo
 But nothing really smells in here. Perhaps you need something more straightforward and universal.
 
-#ttc-table-of-austerer-treasure-nudges-austerer
+#testcase-table-of-austerer-treasure-nudges-austerer
 >austerre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-presto-spechelp-ye-hoop
+#testcase-table-of-presto-spechelp-ye-hoop
 >phooye
 The hoop dips a bit as if to taunt you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a decent omen.
@@ -134,7 +134,7 @@ The hoop dips a bit as if to taunt you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#+ttc-table-of-presto-spechelp-ye-hoop
+#+testcase-table-of-presto-spechelp-ye-hoop
 >poho
 The hoop dips a bit as if to taunt you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ye Hoop. That's a decent omen.
@@ -160,14 +160,14 @@ You probably want to TALK to people instead. Well, most of the time.
 >phooey
 Your score has just gone up by two points
 >score
-Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-presto-nudges-earring
+#testcase-table-of-presto-nudges-earring
 >earrign
 The earring pulses a bit more, but you doubt you can do anything with it on your own.
 
 >score
-Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-mistake-roiling-rangier-rearing
 >rangier
@@ -177,7 +177,7 @@ The earring shakes a bit more than usual, but maybe you're not in an area where 
 
 >e
 
-#ttc-table-of-grey-gyre-nudges-hump
+#testcase-table-of-grey-gyre-nudges-hump
 >umhp
 You search for the hump you overcame. You can't find it now. But it's not relevant.
 
@@ -232,23 +232,23 @@ No golfers appear.
 >pgas
 No golfers appear.
 
-#ttc-table-of-char-arch-nudges-char
+#testcase-table-of-char-arch-nudges-char
 >chra
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-char-arch-nudges-cretin
+#testcase-table-of-char-arch-nudges-cretin
 >cretni
 You won't change the cistern, but maybe you can track down the dart.
 
-#ttc-table-of-char-arch-nudges-cistern
+#testcase-table-of-char-arch-nudges-cistern
 >cistenr
 You won't change the cistern, but maybe you can track down the dart.
 
-#ttc-table-of-char-arch-nudges-mad
+#testcase-table-of-char-arch-nudges-mad
 >mda
 Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
 
-#ttc-table-of-char-arch-nudges-maddam
+#testcase-table-of-char-arch-nudges-maddam
 >maddma
 It looks like you tried to act on something doubly, possibly something that anagrams itself. To remove any future confusion, you should know you don't need to do that--though in the future, it does give a bonus point, for a special but odd word.
 !Here in the
@@ -257,30 +257,30 @@ It looks like you tried to act on something doubly, possibly something that anag
 Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
 !It looks like
 
-#ttc-table-of-char-arch-nudges-amaddam
+#testcase-table-of-char-arch-nudges-amaddam
 >amaddma
 Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
 
-#ttc-table-of-char-arch-nudges-amad
+#testcase-table-of-char-arch-nudges-amad
 >amda
 Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
 
-#ttc-table-of-char-arch-nudges-themad
+#testcase-table-of-char-arch-nudges-themad
 >themda
 Here in the Char Arch, you don't need to mess with the scenery. Especially scenery farther away and nicer looking than the cretins' cistern.
 
-#ttc-table-of-char-arch-nudges-gasp
+#testcase-table-of-char-arch-nudges-gasp
 >gaps
 You try, but fail, to make something out of nothing.
 
-#ttc-table-of-char-arch-nudges-gpa
+#testcase-table-of-char-arch-nudges-gpa
 >pag
 You try, but fail, to make something out of nothing.
 
 >x cistern
 You take a peek in--to see a dart in there.
 
-#ttc-table-of-presto-spechelp-dart
+#testcase-table-of-presto-spechelp-dart
 >drta
 The dart seems a bit closer, but...dang! Not quite.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dart. That's a decent omen.
@@ -291,11 +291,11 @@ The dart seems a bit closer, but...dang! Not quite.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the dart. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-readables-drab-yoke
+#testcase-table-of-presto-readables-drab-yoke
 >read drab yoke
 It is, apparently, an OAK DERBY drab yoke, from the small red print.
 
-#ttc-table-of-presto-spechelp-tsar-star
+#testcase-table-of-presto-spechelp-tsar-star
 >rast
 The tsar star seems to wiggle a bit, but not enough to pull it out.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tsar star. That's a decent omen.
@@ -306,7 +306,7 @@ The tsar star seems to wiggle a bit, but not enough to pull it out.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tsar star. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-char-arch-nudges-tar
+#testcase-table-of-char-arch-nudges-tar
 >tra
 The tars remain heterogeneous. And very sticky. And the same size.
 
@@ -334,32 +334,32 @@ Your score has just gone up by one point
 But you already took the tsar star from the tars! Plus, you'd get all sticky.
 
 >score
-Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >drat
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 5 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >x cistern
 !You take a peek in--to see a dart in there.
 
-#+ttc-table-of-char-arch-nudges-cistern
+#+testcase-table-of-char-arch-nudges-cistern
 >cistenr
 You got the dart from the cistern. No need to futz further.
 
-#ttc-table-of-presto-done-rejects-tsar-star
+#testcase-table-of-presto-done-rejects-tsar-star
 >tsra
 No need for additional arts.
 
-#ttc-table-of-presto-done-rejects-dart
+#testcase-table-of-presto-done-rejects-dart
 >drta
 The dart's just fine as-is.
 
 >n
 
-#ttc-table-of-presto-spechelp-plebe
+#testcase-table-of-presto-spechelp-plebe
 >blepe
 The plebe looks confused, as if you garbled what you said.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the plebe. That's a decent omen.
@@ -370,7 +370,7 @@ The plebe looks confused, as if you garbled what you said.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the plebe. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-readables-volt-maze
+#testcase-table-of-presto-readables-volt-maze
 >read volt maze
 The writing says EZ-Ol'-Av' (TM) Volt Maze.
 >read volt maze
@@ -382,12 +382,12 @@ It was built by Olav Metz and Zemo Valt of EZ-Ol'-Av'.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 >w
 
-#+ttc-table-of-presto-spechelp-maze-walls
+#+testcase-table-of-presto-spechelp-maze-walls
 >mazeltvo
 The maze walls rumble a bit. You must have all the right letters to bring them crashing down in style.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the maze walls. That's a decent omen.
@@ -433,31 +433,31 @@ That may've happened during the seminar, but you don't need that sort of violenc
 >strop
 That's not the kind of weapon you need. You see red, slightly, at the prospect of cutting yourself with a razor strop by mistake.
 
-#ttc-table-of-marines-seminar-remains-nudges-marines
+#testcase-table-of-marines-seminar-remains-nudges-marines
 >marinse
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-marines-seminar-remains-nudges-marine
+#testcase-table-of-marines-seminar-remains-nudges-marine
 >marien
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-presto-nudges-popgun
+#testcase-table-of-presto-nudges-popgun
 >popgnu
 Hmm. It's not the popgun itself that's cracked but the boing-go bin inside.
 
-#ttc-table-of-presto-nudges-spoilt
+#testcase-table-of-presto-nudges-spoilt
 >spoitl
 Hmm. It's not the popgun itself that's cracked but the boing-go bin inside.
 
-#ttc-table-of-presto-nudges-serial
+#testcase-table-of-presto-nudges-serial
 >serila
 The number's got more numerals than letters.
 
-#ttc-table-of-presto-nudges-number
+#testcase-table-of-presto-nudges-number
 >numbre
 The number's got more numerals than letters.
 
-#ttc-table-of-presto-spechelp-boing
+#testcase-table-of-presto-spechelp-boing
 >binog
 You try something that doesn't quite work, but now you're that much closer to an a-ha moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the boing-go bin. That's a decent omen.
@@ -468,17 +468,17 @@ You try something that doesn't quite work, but now you're that much closer to an
 DEBUG ONLY: You feel a slight psychic push-pull coming from the boing-go bin. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-scannotes-boing-go-bin
+#testcase-table-of-presto-scannotes-boing-go-bin
 >scan boing go bin
 Well! No matches, but the name is short enough, you might be able to eliminate things that clearly don't work. Then, eureka!
 
-#ttc-table-of-presto-scannotes-sport-ports
+#testcase-table-of-presto-scannotes-sport-ports
 >scan sport ports
 Maybe you can find where the vowel is. That could help.
 
 >get popgun
 
-#ttc-table-of-presto-spechelp-sport-ports
+#testcase-table-of-presto-spechelp-sport-ports
 >prots
 The sport ports seem even shinier for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sport ports. That's a decent omen.
@@ -489,11 +489,11 @@ The sport ports seem even shinier for a second.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sport ports. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-readables-sport-ports
+#testcase-table-of-presto-readables-sport-ports
 >read sport ports
 TOP'RS is the name of the firm who built the Sport Ports, carved in red.
 
-#ttc-table-of-marines-seminar-remains-nudges-port
+#testcase-table-of-marines-seminar-remains-nudges-port
 >potr
 But there is more than one port to deal with.
 
@@ -502,13 +502,13 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 7 out of 41 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#+ttc-table-of-marines-seminar-remains-nudges-port
+#+testcase-table-of-marines-seminar-remains-nudges-port
 >potr
 You already observed all the ports. No need to try to single one out.
 
-#ttc-table-of-presto-done-rejects-sport-ports
+#testcase-table-of-presto-done-rejects-sport-ports
 >prots
 You don't need to praise military activity and sacrifice too much. Countries where people feel obliged to are at risk of authoritarianism.
 
@@ -521,7 +521,7 @@ You don't need to praise military activity and sacrifice too much. Countries whe
 >mazeltov
 Your score has just gone up by two points
 >score
-Score in a scenario: 9 out of 41 total points in the current region, Presto. Lowest score to solve is 31. Maximum score available is 40.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >undo
 >undo
 >undo
@@ -532,7 +532,7 @@ Score in a scenario: 9 out of 41 total points in the current region, Presto. Low
 >n
 /^Nowt Town
 
-#ttc-table-of-presto-spechelp-n-t-air
+#testcase-table-of-presto-spechelp-n-t-air
 >wotn
 You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not yet.
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
@@ -543,19 +543,19 @@ You feel defiant. But not defiant enough to ditch Nowt Town for good! Well, not 
 DEBUG ONLY: You feel a slight psychic push-pull coming from all around. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-scannotes-n-t-air
+#testcase-table-of-presto-scannotes-n-t-air
 >scan
 Hmm. Part of you thinks you could just deal with Nowt Town now--it can't be too hard. But part of you also wants to see if there's a way to deal with the whole volt maze. You know, for style points.
 
-#ttc-table-of-presto-scannotes-maze-walls
+#testcase-table-of-presto-scannotes-maze-walls
 >scan maze walls
 Whoa! You'd think, in Nowt Town, it'd only be four letters. But maybe there is a longer solution than that. It'd, like, give you more satisfaction or something. Maybe.
 
-#ttc-table-of-presto-nudges-mazeroom
+#testcase-table-of-presto-nudges-mazeroom
 >mazeromo
 This is just the entry. You may want to tackle the whole maze.
 
-#ttc-table-of-nowt-town-nudges-bigl
+#testcase-table-of-nowt-town-nudges-bigl
 >bilg
 The big L may be some sort of clue, but you can't do anything with it.
 
@@ -564,15 +564,15 @@ The big L may be some sort of clue, but you can't do anything with it.
 You'll need to be glib with something like g-lib later. If you get through this maze. In fact, maybe being glib might be easier than walking through.
 >w
 
-#ttc-table-of-r10-nudges-bigm
+#testcase-table-of-r10-nudges-bigm
 >bimg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 
-#+ttc-table-of-presto-nudges-mazeroom
+#+testcase-table-of-presto-nudges-mazeroom
 >mazeromo
 You can't think of any way to tackle this one room. Perhaps it is the whole maze you need to tackle.
 
-#ttc-table-of-presto-nudges-floor
+#testcase-table-of-presto-nudges-floor
 >floro
 You think about doing something to the floor. But making it disappear would probably be fatal. Best find another angle.
 >w
@@ -594,27 +594,27 @@ You already did that, and with 25% more word power, too.
 >undo
 >undo
 
-#ttc-table-of-r00-nudges-bign
+#testcase-table-of-r00-nudges-bign
 >bgin
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >n
 
-#ttc-table-of-r01-nudges-bigo
+#testcase-table-of-r01-nudges-bigo
 >biog
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >n
 
-#ttc-table-of-r02-nudges-bigp
+#testcase-table-of-r02-nudges-bigp
 >bipg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >e
 
-#ttc-table-of-r12-nudges-bigq
+#testcase-table-of-r12-nudges-bigq
 >biqg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >e
 
-#ttc-table-of-r22-nudges-bigr
+#testcase-table-of-r22-nudges-bigr
 >birg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 
@@ -623,30 +623,30 @@ It's just one letter in the maze. You may want to focus on the whole volt maze.
 There, there. This maze is much less hard to get out of than a prison.
 >e
 
-#ttc-table-of-r32-nudges-bigs
+#testcase-table-of-r32-nudges-bigs
 >bisg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >n
 
-#ttc-table-of-r33-nudges-bigt
+#testcase-table-of-r33-nudges-bigt
 >bitg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >w
 
-#ttc-table-of-r23-nudges-bigu
+#testcase-table-of-r23-nudges-bigu
 >biug
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 >n
 
-#ttc-table-of-unwary-runway-nudges-unwary
+#testcase-table-of-unwary-runway-nudges-unwary
 >unwayr
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-unwary-runway-nudges-bigv
+#testcase-table-of-unwary-runway-nudges-bigv
 >bivg
 It's just one letter in the maze. You may want to focus on the whole volt maze.
 
-#ttc-table-of-presto-nudges-dreidl
+#testcase-table-of-presto-nudges-dreidl
 >n
 >dreild
 You won't be able to do anything to the dreidl to see it, but it'll be so horrifying once you do, you won't be able to focus. Catch-22.
@@ -656,11 +656,11 @@ You won't be able to do anything to the dreidl to see it, but it'll be so horrif
 #separate semi-forcing stuff
 >abstract tom avlez to runway
 
-#ttc-table-of-unwary-runway-nudges-avlez
+#testcase-table-of-unwary-runway-nudges-avlez
 >avlze
 No, his full name is the clue, here.
 
-#ttc-table-of-unwary-runway-nudges-tom
+#testcase-table-of-unwary-runway-nudges-tom
 >tmo
 No, his full name is the clue, here.
 >undo
@@ -668,7 +668,7 @@ No, his full name is the clue, here.
 >undo
 >abstract zo mavelt to runway
 
-#ttc-table-of-unwary-runway-nudges-mavelt
+#testcase-table-of-unwary-runway-nudges-mavelt
 >mavetl
 
 No, his full name is the clue, here.
@@ -676,11 +676,11 @@ No, his full name is the clue, here.
 >undo
 >abstract lev tzoma to runway
 
-#ttc-table-of-unwary-runway-nudges-lev
+#testcase-table-of-unwary-runway-nudges-lev
 >lve
 No, his full name is the clue, here.
 
-#ttc-table-of-unwary-runway-nudges-tzoma
+#testcase-table-of-unwary-runway-nudges-tzoma
 >tzoam
 No, his full name is the clue, here.
 >undo
@@ -690,12 +690,12 @@ No, his full name is the clue, here.
 >mazeltov
 Your score has just gone up by three points
 >score
-Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >blam
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >blma
 That's not something
@@ -710,15 +710,15 @@ That's not something
 There's no sense in making the vile veil worse than it is and even less sense in turning Leo evil. He's just a bit rough--and beatable. Maybe you could make friends with him afterwards.
 !That'd be mean.
 
-#ttc-table-of-dirge-ridge-nudges-dirge
+#testcase-table-of-dirge-ridge-nudges-dirge
 >direg
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-dirge-ridge-nudges-liev
+#testcase-table-of-dirge-ridge-nudges-liev
 >live
 The vile veil is impassive. It--kind of protects you, actually.
 
-#ttc-table-of-presto-spechelp-leo
+#testcase-table-of-presto-spechelp-leo
 >oel
 There aren't that many things to do with Leo. So few, you could probably brute-force how to get by his, uh, brute force.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Leo. That's a decent omen.
@@ -748,17 +748,17 @@ No chance.
 by one point
 
 >score
-Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-presto-done-rejects-leo
+#testcase-table-of-presto-done-rejects-leo
 >loe
 Giving Leo flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
 
-#ttc-table-of-presto-nudges-leonard
+#testcase-table-of-presto-nudges-leonard
 >leonadr
 You don't need to face double the strength.
 
-#ttc-table-of-presto-spechelp-rand
+#testcase-table-of-presto-spechelp-rand
 >danr
 There aren't that many things to do with Rand. So few, you could probably brute-force how to get by his, uh, brute force.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Rand. That's a decent omen.
@@ -769,7 +769,7 @@ There aren't that many things to do with Rand. So few, you could probably brute-
 DEBUG ONLY: You feel a slight psychic push-pull coming from Rand. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-spechelp-odes-song
+#testcase-table-of-presto-spechelp-odes-song
 >nessgood
 The odes song sounds warpy for a second or two. Who knows, maybe you could get rid of it. You've heard worse on top-40 radio stations, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sods gone odes song. That's a decent omen.
@@ -780,7 +780,7 @@ The odes song sounds warpy for a second or two. Who knows, maybe you could get r
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sods gone odes song. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-scannotes-sods-gone-odes-song
+#testcase-table-of-presto-scannotes-sods-gone-odes-song
 >scan sods gone odes song
 My heavens, that's not a lot of positive clues! But the one variable letter may help things work out okay. And there're a lot of consonants.
 
@@ -809,25 +809,25 @@ There's no sense in making the vile veil worse than it is and even less sense in
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+testcase-mistake-roiling-evil
 >evil
 There's no sense in making the vile veil worse than it is.
 
-#ttc-table-of-presto-done-rejects-rand
+#testcase-table-of-presto-done-rejects-rand
 >radn
 Giving Rand flashbacks to his humiliating loss would be a bad idea. He may've forgotten who beat him, already.
 
-#+ttc-table-of-presto-nudges-leonard
+#+testcase-table-of-presto-nudges-leonard
 >leonadr
 You need to concentrate on them being washups. Combining them would mean they couldn't have a friend.
 
-#ttc-table-of-dirge-ridge-nudges-whasup
+#testcase-table-of-dirge-ridge-nudges-whasup
 >whaspu
 Maybe something like that'd work with just one washup. But there are two.
 
-#ttc-table-of-presto-spechelp-wzup
+#testcase-table-of-presto-spechelp-wzup
 >whasspu
 You mumble a greeting that doesn't quite seem to work. Hm, that's not quite it.
 /DEBUG ONLY: You feel a slight psychic push-pull coming from both (Rand and Leo|Leo and Rand). That's a decent omen.
@@ -860,12 +860,12 @@ You need to find a way to cheer them up.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >goodness
 by one point
 >score
-Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+testcase-mistake-roiling-leonard-renaldo-leandro-rolande
 >leonard
@@ -875,11 +875,11 @@ You wouldn't want that, now they're your friends.
 >asswhup
 They're on your side. They will fight when they need to.
 
-#ttc-table-of-presto-done-rejects-wzup
+#testcase-table-of-presto-done-rejects-wzup
 >asshuwp
 /You don't need to greet (Rand and Leo|Leo and Rand) again.
 
-#+ttc-table-of-presto-nudges-leonard
+#+testcase-table-of-presto-nudges-leonard
 >leonadr
 You don't need to combine them physically, but their physical strengths combined could be a help.
 
@@ -891,7 +891,7 @@ You don't need to combine them physically, but their physical strengths combined
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+testcase-mistake-roiling-nobig-no-big
 >no big
@@ -907,30 +907,30 @@ SHOOT something with the gun instead.
 >shoot zozimus with zozimus
 Just say what you want to shoot.
 
-#ttc-table-of-presto-done-rejects-boing-go-bin
+#testcase-table-of-presto-done-rejects-boing-go-bin
 >binog
 You can't force another revelation, but you don't need to.
 
-#+ttc-table-of-presto-nudges-popgun
+#+testcase-table-of-presto-nudges-popgun
 >popgnu
 The popgun is just fine.
 
-#+ttc-table-of-presto-nudges-spoilt
+#+testcase-table-of-presto-nudges-spoilt
 >spoitl
 The popgun is just fine.
 
-#+ttc-table-of-presto-nudges-serial
+#+testcase-table-of-presto-nudges-serial
 >serila
 You got the boing-go bin working.
 
-#+ttc-table-of-presto-nudges-number
+#+testcase-table-of-presto-nudges-number
 >numbre
 You got the boing-go bin working.
 
 >load gun with dart
 You put the dart into the PG-on-up popgun.
 
-#ttc-table-of-presto-spechelp-ether
+#testcase-table-of-presto-spechelp-ether
 >theer
 The ether pulsates, but you still can't see through it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ether. That's a decent omen.
@@ -945,13 +945,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the ether. That's a 
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-presto-nudges-mazeltov
+#testcase-table-of-presto-nudges-mazeltov
 >mazeltvo
 The volt maze is gone. Re-forming it would not be fun.
 
-#ttc-table-of-presto-nudges-ether
+#testcase-table-of-presto-nudges-ether
 >ethre
 The ether is gone. You can just go north.
 
@@ -993,44 +993,44 @@ Maybe one day, Saps' Pass will lure unsuspecting travelers to empty their wallet
 
 >s
 
-#+ttc-table-of-presto-nudges-ether
+#+testcase-table-of-presto-nudges-ether
 >ethre
 The ether is gone. You can just go back north.
 >n
 
-#ttc-table-of-saps'-pass-nudges-lawl
+#testcase-table-of-saps'-pass-nudges-lawl
 >lalw
 The lawl wall is too expansive for you to constructively (destructively?) use any mental energy on.
 
-#ttc-table-of-saps'-pass-nudges-ssap
+#testcase-table-of-saps'-pass-nudges-ssap
 >sspa
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-saps'-pass-nudges-sap
+#testcase-table-of-saps'-pass-nudges-sap
 >aps
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-saps'-pass-nudges-mount
+#testcase-table-of-saps'-pass-nudges-mount
 >moutn
 Mount Um, Not silently disposes of your attempts to manipulate it.
 
-#ttc-table-of-saps'-pass-nudges-deil
+#testcase-table-of-saps'-pass-nudges-deil
 >deli
 Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
 
-#ttc-table-of-saps'-pass-nudges-deils
+#testcase-table-of-saps'-pass-nudges-deils
 >deisl
 Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
 
-#ttc-table-of-saps'-pass-nudges-hog
+#testcase-table-of-saps'-pass-nudges-hog
 >hgo
 The three hogs are pretty indistinguishable, but they're still, well, more than one. Deal with them all.
 
-#ttc-table-of-saps'-pass-nudges-key
+#testcase-table-of-saps'-pass-nudges-key
 >kye
 You aren't sure which key would work, so you need a plan to get them all.
 
-#ttc-table-of-presto-spechelp-hogs
+#testcase-table-of-presto-spechelp-hogs
 >gohs
 The hogs snicker a bit, but they seem a little nervous, too.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the hogs. That's a decent omen.
@@ -1041,7 +1041,7 @@ The hogs snicker a bit, but they seem a little nervous, too.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the hogs. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-spechelp-keys
+#testcase-table-of-presto-spechelp-keys
 >syek
 The hogs snicker a bit, but they seem a little nervous, too.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the keys. That's a decent omen.
@@ -1056,15 +1056,15 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the keys. That's a d
 >rats
 Boy! You miss that tsar star.
 
-#+ttc-table-of-saps'-pass-nudges-mount
+#+testcase-table-of-saps'-pass-nudges-mount
 >moutn
 Mount Um, Not silently disposes of your attempts to manipulate it.
 
-#+ttc-table-of-saps'-pass-nudges-deil
+#+testcase-table-of-saps'-pass-nudges-deil
 >deli
 Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
 
-#+ttc-table-of-saps'-pass-nudges-deils
+#+testcase-table-of-saps'-pass-nudges-deils
 >deisl
 Despite being dangerous to walk into, Deil's Slide serves an important ecological purpose I can't explain here. So, best not to meddle.
 
@@ -1077,11 +1077,11 @@ Your score has just gone up by one point
 >ptah
 No Egyptian deity comes to your rescue. Or needs to.
 
-#ttc-table-of-saps'-pass-nudges-phat
+#testcase-table-of-saps'-pass-nudges-phat
 >phta
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-saps'-pass-nudges-clump
+#testcase-table-of-saps'-pass-nudges-clump
 >clupm
 No, it's not just any clump, but hawt thaw.
 
@@ -1093,7 +1093,7 @@ Vandalism! For shame!
 >slog on
 /You need (Rand and Leo|Leo and Rand) to go away, for now, before you can slog on.
 
-#ttc-table-of-presto-spechelp-hawt-thaw
+#testcase-table-of-presto-spechelp-hawt-thaw
 >whta
 The hawt thaw crackles slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the clump of hawt thaw. That's a decent omen.
@@ -1104,7 +1104,7 @@ The hawt thaw crackles slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the clump of hawt thaw. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-scannotes-hawt-thaw
+#testcase-table-of-presto-scannotes-hawt-thaw
 >scan hawt thaw
 Wow! Three ambiguous letters out of four. But you wonder if they won't help in their own way, or if you really need a huge hint.
 
@@ -1113,26 +1113,26 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#+ttc-table-of-presto-nudges-leonard
+#+testcase-table-of-presto-nudges-leonard
 >leonadr
 /(Leo and Rand|Rand and Leo) need to be together, but by themselves, for themselves. They've done enough for you.
 
-#ttc-table-of-saps'-pass-nudges-harpings
+#testcase-table-of-saps'-pass-nudges-harpings
 >harpinsg
 Concentrate on the words of the harpings phrasing.
 
-#ttc-table-of-saps'-pass-nudges-harping
+#testcase-table-of-saps'-pass-nudges-harping
 >harpign
 Concentrate on the words of the harpings phrasing.
 
-#ttc-table-of-saps'-pass-nudges-yrnet
+#testcase-table-of-saps'-pass-nudges-yrnet
 >n
 >yrnte
 /The YrNet entry is secure. You wouldn't know where to start hacking it. But it won't let you by until (Rand and Leo|Leo and Rand) are gone.
 
-#ttc-table-of-presto-spechelp-alert-letters
+#testcase-table-of-presto-spechelp-alert-letters
 >latre
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled
 DEBUG ONLY: You feel a slight psychic push-pull coming from the alert letters. That's a decent omen.
@@ -1143,7 +1143,7 @@ It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the alert letters. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-spechelp-log-ons-letters
+#testcase-table-of-presto-spechelp-log-ons-letters
 >sologn
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the log ons letters. That's a decent omen.
@@ -1154,7 +1154,7 @@ It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the log ons letters. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-spechelp-ought-letters
+#testcase-table-of-presto-spechelp-ought-letters
 >touhg
 It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. You feel a bit jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ought letters. That's a decent omen.
@@ -1165,7 +1165,7 @@ It's kind of tough to say goodbye, firmly but kindly, and--that isn't quite it. 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ought letters. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-scannotes-alert
+#testcase-table-of-presto-scannotes-alert
 >scan alert
 Hmm. The settler is giving a weird result, but the sheer number of question marks indicates ALERT/ALTER has a lot right between them.
 
@@ -1177,7 +1177,7 @@ Hmm. The settler is giving a weird result, but the sheer number of question mark
 >later
 by one point
 
-#ttc-table-of-presto-done-rejects-alert
+#testcase-table-of-presto-done-rejects-alert
 >aletr
 That'd be an awkward rehash. You need another way to say good-bye.
 >undo
@@ -1185,7 +1185,7 @@ That'd be an awkward rehash. You need another way to say good-bye.
 >so long
 by one point
 
-#ttc-table-of-presto-done-rejects-log-ons
+#testcase-table-of-presto-done-rejects-log-ons
 >sloong
 That'd be an awkward rehash. You need another way to say good-bye.
 >undo
@@ -1193,7 +1193,7 @@ That'd be an awkward rehash. You need another way to say good-bye.
 >tough
 by one point
 
-#ttc-table-of-presto-done-rejects-ought
+#testcase-table-of-presto-done-rejects-ought
 >ughot
 That'd be an awkward rehash. You need another way to say good-bye.
 >undo
@@ -1203,7 +1203,7 @@ That'd be an awkward rehash. You need another way to say good-bye.
 Your score has just gone up by one point
 But we ain't bored yet, boss!
 >score
-Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >tough
 Your score has just gone up by one point
@@ -1211,13 +1211,13 @@ Hut! Go!
 Dat was a good dust-up
 
 >score
-Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#+ttc-table-of-saps'-pass-nudges-yrnet
+#+testcase-table-of-saps'-pass-nudges-yrnet
 >yrnte
 /The YrNet entry is secure. You wouldn't know where to start hacking it. It only seemed to stop (Rand and Leo|Leo and Rand), so you should be able to bypass it easily.
 
-#ttc-table-of-presto-spechelp-starch-charts
+#testcase-table-of-presto-spechelp-starch-charts
 >trashc
 The starch charts flutter about aimlessly. They seem harmless, but then, it couldn't hurt to dispose of them correctly, if you see the way.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Starch Charts. That's a decent omen.
@@ -1228,22 +1228,22 @@ The starch charts flutter about aimlessly. They seem harmless, but then, it coul
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Starch Charts. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-scannotes-starch-charts
+#testcase-table-of-presto-scannotes-starch-charts
 >scan starch charts
 Starch is calorically and consonantally (if that's a word) heavy. This must help.
 
-#ttc-table-of-saps'-pass-nudges-summit
+#testcase-table-of-saps'-pass-nudges-summit
 >summti
 The mutism summit is meant to be stable. You'll need to go north to do what you need, in peace and quiet.
 
-#ttc-table-of-saps'-pass-nudges-chart
+#testcase-table-of-saps'-pass-nudges-chart
 >chatr
 But there is more than one chart to twiddle.
 
 >trasch
 by one point
 >score
-Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 /^Hacks' Shack
@@ -1256,19 +1256,19 @@ You don't need any D&D character to magick things the rest of the way here.
 >alef
 You recite the Hebrew alphabet, proving to yourself you could perform the whole anagramming-to-save-the-country deal pretty much anywhere.
 
-#ttc-table-of-presto-scannotes-n-e-recs-censer
+#testcase-table-of-presto-scannotes-n-e-recs-censer
 >scan n e recs censer
 This cannot be too hard to figure out, but nonetheless, your settler is giving funny readings.
 
-#ttc-table-of-hacks'-shack-nudges-recs
+#testcase-table-of-hacks'-shack-nudges-recs
 >resc
 It's the censer that's important, not the brand name.
 
-#ttc-table-of-hacks'-shack-nudges-rec
+#testcase-table-of-hacks'-shack-nudges-rec
 >rce
 It's the censer that's important, not the brand name.
 
-#ttc-table-of-presto-spechelp-n-e-recs-censer
+#testcase-table-of-presto-spechelp-n-e-recs-censer
 >screne
 That feels right, but it's not enough yet. You don't need anything grumbly, here.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the N-E-Recs Censer. That's a decent omen.
@@ -1284,11 +1284,11 @@ by one point
 Only one more piece of hardware is needed, and the computer will work.
 
 >score
-Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >s
 
-#+ttc-table-of-saps'-pass-nudges-yrnet
+#+testcase-table-of-saps'-pass-nudges-yrnet
 >yrnte
 The YrNet entry is secure. You wouldn't know where to start hacking it. Besides, you've already been north to the Hacks' Shack, and it let you by
 >n
@@ -1296,20 +1296,20 @@ The YrNet entry is secure. You wouldn't know where to start hacking it. Besides,
 >rom sticks
 by one point
 
-#ttc-table-of-presto-done-rejects-rom-sticks
+#testcase-table-of-presto-done-rejects-rom-sticks
 # this needs to be tested BEFORE we assemble the computer and the e-robot automatically disappears them
 >trimsocsk
 Man, it would be too easy to mess the rom sticks up. Better not tinker like that.
 
-#ttc-table-of-hacks'-shack-nudges-sticks
+#testcase-table-of-hacks'-shack-nudges-sticks
 >sticsk
 You'll know what to do with the sticks when you're ready to program
 
-#ttc-table-of-hacks'-shack-nudges-rom
+#testcase-table-of-hacks'-shack-nudges-rom
 >rmo
 You'll know what to do with the sticks when you're ready to program
 
-#ttc-table-of-hacks'-shack-nudges-stick
+#testcase-table-of-hacks'-shack-nudges-stick
 >banish gum
 >stikc
 You'll know what to do with the sticks when you're ready to program
@@ -1344,13 +1344,13 @@ The locs aren't that gangsta, and neither are you. And that's a good thing.
 
 >s
 
-#+ttc-table-of-saps'-pass-nudges-summit
+#+testcase-table-of-saps'-pass-nudges-summit
 >summti
 The mutism summit is meant to be stable. You'll need to go back north to do what you need, in peace and quiet.
 
 >n
 
-#ttc-table-of-hacks'-shack-nudges-boredyak
+#testcase-table-of-hacks'-shack-nudges-boredyak
 >boredyka
 The book is unchangeably bad. Sure, there are probably good parodies to be written, but that's not your area of wordsmithing.
 
@@ -1359,107 +1359,107 @@ The book is unchangeably bad. Sure, there are probably good parodies to be writt
 That seems like a decent idea for later, though
 >undo
 
-#ttc-table-of-hacks'-shack-nudges-dongle
+#testcase-table-of-hacks'-shack-nudges-dongle
 >dongel
 It's built to be sturdy. You don't want to mess with it.
 
-#ttc-table-of-hacks'-shack-nudges-pile
+#testcase-table-of-hacks'-shack-nudges-pile
 >piel
 It's not just any pile--it's a pile of coal.
 
-#ttc-table-of-hacks'-shack-nudges-stikc
+#testcase-table-of-hacks'-shack-nudges-stikc
 >stick
 It's just gum.
 
-#ttc-table-of-hacks'-shack-nudges-stickofgum
+#testcase-table-of-hacks'-shack-nudges-stickofgum
 >stickofgmu
 It's just gum.
 
-#ttc-table-of-hacks'-shack-nudges-catechism
+#testcase-table-of-hacks'-shack-nudges-catechism
 >catechims
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 
-#ttc-table-of-hacks'-shack-nudges-textbook
+#testcase-table-of-hacks'-shack-nudges-textbook
 >textboko
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 
-#ttc-table-of-hacks'-shack-nudges-bkoo
+#testcase-table-of-hacks'-shack-nudges-bkoo
 >bkoo
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 
-#ttc-table-of-hacks'-shack-nudges-drive
+#testcase-table-of-hacks'-shack-nudges-drive
 >driev
 Since there's both Drive A and Drive E, that's ambiguous. You could tweak each individually if you wanted, though.
 
-#ttc-table-of-hacks'-shack-nudges-shakc
+#testcase-table-of-hacks'-shack-nudges-shakc
 >shack
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-hacks'-shack-nudges-hack
+#testcase-table-of-hacks'-shack-nudges-hack
 >hakc
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-hacks'-shack-nudges-algorithm
+#testcase-table-of-hacks'-shack-nudges-algorithm
 >algoritmh
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 
-#ttc-table-of-hacks'-shack-nudges-algorithms
+#testcase-table-of-hacks'-shack-nudges-algorithms
 >algorithsm
 The catechism would be more likely to scramble YOU up. It'll be there when you need to gloss over it.
 
-#ttc-table-of-hacks'-shack-nudges-labs
+#testcase-table-of-hacks'-shack-nudges-labs
 >lasb
 The labs slab remains sturdy. Technology 1, Wordplay Magic 0.
 
-#ttc-table-of-hacks'-shack-nudges-alb
+#testcase-table-of-hacks'-shack-nudges-alb
 >abl
 The labs slab remains sturdy. Technology 2, Wordplay Magic 0.
 
-#ttc-table-of-hacks'-shack-nudges-dead
+#testcase-table-of-hacks'-shack-nudges-dead
 >deda
 There must be a more eco-friendly way to reincarnate the flea.
 
-#ttc-table-of-hacks'-shack-nudges-rebuff
+#testcase-table-of-hacks'-shack-nudges-rebuff
 >rebuff
 The rebuff-buffer is too technical for you, but even if it weren't, removing its protection would be unwise.
 
-#ttc-table-of-hacks'-shack-nudges-magnetic
+#testcase-table-of-hacks'-shack-nudges-magnetic
 >magnetci
 The magnetic magic-net is too technical for you, but even if it weren't, removing its protection would be unwise.
 
-#ttc-table-of-hacks'-shack-nudges-computer
+#testcase-table-of-hacks'-shack-nudges-computer
 >computre
 You need to fix the program in the computer, well, once you get it running.
 
-#ttc-table-of-hacks'-shack-nudges-button
+#testcase-table-of-hacks'-shack-nudges-button
 >buttno
 There are buttons all over the shack, but they should remain that way. You may have to figure or change their functions, though.
 
-#ttc-table-of-hacks'-shack-nudges-buttons
+#testcase-table-of-hacks'-shack-nudges-buttons
 >buttosn
 There are buttons all over the shack, but they should remain that way. You may have to figure or change their functions, though.
 
-#ttc-table-of-hacks'-shack-nudges-escarole
+#testcase-table-of-hacks'-shack-nudges-escarole
 >escaroel
 All the escaroles.
 
-#ttc-table-of-hacks'-shack-nudges-trim
+#testcase-table-of-hacks'-shack-nudges-trim
 >trmi
 They're not just socks, or trim. They're trim socks.
 
-#ttc-table-of-hacks'-shack-nudges-sock
+#testcase-table-of-hacks'-shack-nudges-sock
 >sokc
 They're not just socks, or trim. They're trim socks.
 
-#ttc-table-of-hacks'-shack-nudges-socks
+#testcase-table-of-hacks'-shack-nudges-socks
 >socsk
 They're not just socks, or trim. They're trim socks.
 
-#ttc-table-of-hacks'-shack-nudges-trimsock
+#testcase-table-of-hacks'-shack-nudges-trimsock
 >trimsokc
 You don't have the available memory in your head to see all the possibilities, but yes, something like that should work.
 
-#ttc-table-of-presto-spechelp-disk
+#testcase-table-of-presto-spechelp-disk
 >skdi
 The disk seems to want to expand, but not quite into that. You must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the disk. That's a decent omen.
@@ -1471,7 +1471,7 @@ The disk seems to want to expand, but not quite into that. You must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the disk. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-spechelp-clack-ops-locs-pack
+#testcase-table-of-presto-spechelp-clack-ops-locs-pack
 >capslokc
 NO, REARRANGE AND TRY AGAIN, you think.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Clack Ops Locs Pack. That's a decent omen.
@@ -1482,26 +1482,26 @@ NO, REARRANGE AND TRY AGAIN, you think.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Clack Ops Locs Pack. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-readables-clack-ops-locs-pack
+#testcase-table-of-presto-readables-clack-ops-locs-pack
 >read clack ops locs pack
 /(The Clack Ops Locs Pack mentions, in red, PC CLOAKS are also a super cool productivity booster.|The Clack Ops Locs Pack mentions, in red, POLACCK'S products are shoddy imitations of, well, this. Don't be fooled!)
 
 >read clack ops locs pack
 /(The Clack Ops Locs Pack mentions, in red, PC CLOAKS are also a super cool productivity booster.|The Clack Ops Locs Pack mentions, in red, POLACCK'S products are shoddy imitations of, well, this. Don't be fooled!)
 
-#ttc-table-of-presto-scannotes-clack-ops-locs-pack
+#testcase-table-of-presto-scannotes-clack-ops-locs-pack
 >scan clack ops locs pack
 Ugh, no matches for so many letters. Yet the definitive colors may have clues.
 
-#ttc-table-of-presto-scannotes-im-le-cop-polemic
+#testcase-table-of-presto-scannotes-im-le-cop-polemic
 >scan polemic
 Well! You can probably figure what the undefined color is, and maybe reading the polemic will provide more clues.
 
-#ttc-table-of-presto-scannotes-drive-e
+#testcase-table-of-presto-scannotes-drive-e
 >scan drive e
 Given it's both DRIVE E and E DRIVE, you suspect that's where the confusion is coming from. But maybe the extra data can help you straighten things out, if you think about it.
 
-#ttc-table-of-presto-scannotes-drive-a
+#testcase-table-of-presto-scannotes-drive-a
 >scan drive a
 It's DRIVE A, A DRIVE and something else you can READ, if you want, which may be what's causing the whole jumble.
 >x drive a
@@ -1509,23 +1509,23 @@ It's an old-school hard drive (brand name: Eco-Trump Computer) where you put clu
 >scan drive a
 It's DRIVE A, A DRIVE and VARIED, which may be what's causing the whole jumble.
 
-#ttc-table-of-hacks'-shack-nudges-clack
+#testcase-table-of-hacks'-shack-nudges-clack
 >clakc
 You need to deal with the full Clack Ops Locs Pack.
 
-#ttc-table-of-hacks'-shack-nudges-ops
+#testcase-table-of-hacks'-shack-nudges-ops
 >osp
 You need to deal with the full Clack Ops Locs Pack.
 
-#ttc-table-of-hacks'-shack-nudges-locs
+#testcase-table-of-hacks'-shack-nudges-locs
 >losc
 You need to deal with the full Clack Ops Locs Pack.
 
-#ttc-table-of-hacks'-shack-nudges-pack
+#testcase-table-of-hacks'-shack-nudges-pack
 >pakc
 You need to deal with the full Clack Ops Locs Pack.
 
-#ttc-table-of-presto-spechelp-flea
+#testcase-table-of-presto-spechelp-flea
 >lefa
 The flea makes a crinkly noise but still seems quite dead.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the giant dead flea. That's a decent omen.
@@ -1549,13 +1549,13 @@ However, you do take a second to reflect that nobody told you you're doing this 
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >leaf
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+testcase-mistake-roiling-kids
 >kids
@@ -1566,7 +1566,7 @@ Kids don't need to listen to the words you've used so far! They wouldn't help wi
 >repo
 Nobody else seems to own the oper rope or the skid.
 
-#ttc-table-of-presto-spechelp-skid
+#testcase-table-of-presto-spechelp-skid
 >diks
 No, skid <=> disk is about it. There's no tricky third way.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from the skid. That's a decent omen.
@@ -1582,15 +1582,15 @@ No, skid <=> disk is about it. There's no tricky third way.
 No, skid <=> disk is about it. There's no tricky third way.
 >skid
 
-#ttc-table-of-hacks'-shack-nudges-rope
+#testcase-table-of-hacks'-shack-nudges-rope
 >roep
 You don't need to do anything tricky with the skid's rope.
 
-#ttc-table-of-hacks'-shack-nudges-fountain
+#testcase-table-of-hacks'-shack-nudges-fountain
 >fountani
 It's too small to be a fountain--really, just a fount.
 
-#ttc-table-of-presto-spechelp-coal
+#testcase-table-of-presto-spechelp-coal
 >cloa
 Microscopic bubbles seem to form on the coal and burst in the air.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pile of coal. That's a decent omen.
@@ -1601,7 +1601,7 @@ Microscopic bubbles seem to form on the coal and burst in the air.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pile of coal. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-spechelp-gum
+#testcase-table-of-presto-spechelp-gum
 >gmu
 Ugg... umm... you stare at the gum. Not many ways to stretch it, really.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the gum. That's a decent omen.
@@ -1620,7 +1620,7 @@ Alcohol doesn't work as well as caffeine in this situation.
 >loca
 What you want needs to help programming more than water or French champagne or dancing in the rain.
 
-#ttc-table-of-presto-spechelp-fount
+#testcase-table-of-presto-spechelp-fount
 >futno
 Hm, might be nice to try another guess. Or useful. Maybe even FUN TO.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fount. That's a decent omen.
@@ -1631,15 +1631,15 @@ Hm, might be nice to try another guess. Or useful. Maybe even FUN TO.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the fount. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-done-rejects-leaf
+#testcase-table-of-presto-done-rejects-leaf
 >lefa
 You can't bring the flea back to life--or do anything else to the leaf.
 
-#ttc-table-of-presto-done-rejects-screen
+#testcase-table-of-presto-done-rejects-screen
 >screne
 The screen is less ancient than the censer, but you can't do any better. It works, so you don't need to fiddle.
 
-#ttc-table-of-presto-spechelp-escaroles
+#testcase-table-of-presto-spechelp-escaroles
 >casseroel
 The escaroles seem slightly meatier.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the escaroles. That's a decent omen.
@@ -1654,9 +1654,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the escaroles. That'
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-presto-done-rejects-casserole
+#testcase-table-of-presto-done-rejects-casserole
 >casseroel
 The casserole is mixed up enough.
 
@@ -1667,23 +1667,23 @@ The casserole is mixed up enough.
 
 >put leaf on skid
 
-#ttc-table-of-char-arch-nudges-yak
+#testcase-table-of-char-arch-nudges-yak
 >yka
 The yak doesn't seem to react to three plain letters thrown around like that. Its look indicates not only that it is bored, but it wants to let people know it's bored, too bored to do so actively. The drab yoke it is wearing probably does not help.
 
-#ttc-table-of-char-arch-nudges-yoke
+#testcase-table-of-char-arch-nudges-yoke
 >yoek
 It's not just any yoke. It's a drab yoke. I mean, a particularly drab yoke. On the bored yak.
 
-#ttc-table-of-char-arch-nudges-drab
+#testcase-table-of-char-arch-nudges-drab
 >drba
 It's not just drab. It's a drab yoke. On the bored yak.
 
-#ttc-table-of-char-arch-nudges-scratchings
+#testcase-table-of-char-arch-nudges-scratchings
 >scratchinsg
 You may wish to decipher the scratchings, instead.
 
-#ttc-table-of-char-arch-nudges-scratching
+#testcase-table-of-char-arch-nudges-scratching
 >scratchign
 You may wish to decipher the scratchings, instead.
 
@@ -1698,9 +1698,9 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-presto-spechelp-drab-yoke
+#testcase-table-of-presto-spechelp-drab-yoke
 >keyboadr
 It'd take too long to type out all the possibilities, but that seems basically right. Hmm.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the drab yoke. That's a decent omen.
@@ -1716,29 +1716,29 @@ Your score has just gone up by one point
 You can now do computery things unimpeded! Hooray!
 
 >score
-Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-mistake-roiling-bat
 >bat
 You don't want to take a bat to anything, here. Or have a bat swoop and take it. Trust me.
 
-#ttc-table-of-presto-done-rejects-keyboard
+#testcase-table-of-presto-done-rejects-keyboard
 >keyboadr
 You don't need to resummon the bored yak. And programming exercises can become enough of a drab yoke.
 
-#ttc-table-of-hacks'-shack-nudges-tbakey
+#testcase-table-of-hacks'-shack-nudges-tbakey
 >tbakye
 Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down.
 
-#ttc-table-of-hacks'-shack-nudges-yke
+#testcase-table-of-hacks'-shack-nudges-yke
 >yek
 Nothing happens. It's probably just the TBA you need to work with, which certainly cuts things down.
 
-#+ttc-table-of-hacks'-shack-nudges-computer
+#+testcase-table-of-hacks'-shack-nudges-computer
 >compuert
 You need to fix the program in the computer.
 
-#ttc-table-of-presto-spechelp-be-troo-e-robot
+#testcase-table-of-presto-spechelp-be-troo-e-robot
 >reboto
 The Be-Troo E-Robot gives a futile kick, but it's trying. Some sort of command like that must work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Be-Troo E-Robot. That's a decent omen.
@@ -1757,11 +1757,11 @@ The Be-Troo E-Robot isn't interested in monologues.
 
 >put disk in drive a
 
-#ttc-table-of-presto-readables-be-troo-e-robot
+#testcase-table-of-presto-readables-be-troo-e-robot
 >read robot
 OBERTO, in red. That's its name.
 
-#ttc-table-of-presto-scannotes-be-troo-e-robot
+#testcase-table-of-presto-scannotes-be-troo-e-robot
 >scan robot
 You wonder if you need a step back to take a new look at the ambiguous clues.
 
@@ -1769,7 +1769,7 @@ You wonder if you need a step back to take a new look at the ambiguous clues.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >capslock
 Your score has just gone up by one point
@@ -1777,15 +1777,15 @@ Your score has just gone up by one point
 >put lock on keyboard
 fits in perfectly
 
-#ttc-table-of-presto-done-rejects-caps-lock
+#testcase-table-of-presto-done-rejects-caps-lock
 >capslokc
 YOU HAVE WHAT YOU NEED.
 
-#ttc-table-of-hacks'-shack-nudges-caps
+#testcase-table-of-hacks'-shack-nudges-caps
 >casp
 It'd sort of stink if a caps lock button broke in real life, so, no.
 
-#ttc-table-of-hacks'-shack-nudges-lock
+#testcase-table-of-hacks'-shack-nudges-lock
 >lokc
 It'd sort of stink if a caps lock button broke in real life, so, no.
 
@@ -1793,25 +1793,25 @@ It'd sort of stink if a caps lock button broke in real life, so, no.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-presto-done-rejects-futon
+#testcase-table-of-presto-done-rejects-futon
 >futno
 The futon could be a little less lumpy, sure, but that's beyond your magic powers.
 
-#ttc-table-of-presto-done-rejects-be-troo-e-robot
+#testcase-table-of-presto-done-rejects-be-troo-e-robot
 >toober
 No need to reboot twice.
 
-#ttc-table-of-presto-scannotes-peels-speel
+#testcase-table-of-presto-scannotes-peels-speel
 >scan peels speel
 Oh man. Even small puzzles are getting to you. Ones you should be able to knock off easily, but they add up. Fatigue...
 
-#ttc-table-of-presto-readables-peels-speel
+#testcase-table-of-presto-readables-peels-speel
 >read peels speel
 Through the jargon, you read 'E Elps! 'E Elps! a lot. It's emphasized in red.
 
-#ttc-table-of-presto-spechelp-peels-speel
+#testcase-table-of-presto-spechelp-peels-speel
 >epsel
 Whatever you thought seemed a bit of a tired mess.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the peels speel. That's a decent omen.
@@ -1826,13 +1826,13 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the peels speel. Tha
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-presto-done-rejects-peels-speel
+#testcase-table-of-presto-done-rejects-peels-speel
 >epsle
 You've had enough comforts from cots to do the programming you need. You might re-wake weaker.
 
-#ttc-table-of-presto-spechelp-im-le-cop-polemic
+#testcase-table-of-presto-spechelp-im-le-cop-polemic
 >compiel
 Man! That's the thing about compiling. Switch one or two characters, and foom, it's just as bad as if you were completely off-base.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the I'm Le Cop Polemic. That's a decent omen.
@@ -1847,27 +1847,27 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the I'm Le Cop Polem
 by one point
 
 >score
-Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >cola
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+testcase-mistake-roiling-loca
 >loca
 What you have helps programming more than water or French champagne or dancing in the rain.
 
-#ttc-table-of-presto-done-rejects-alocalco-cola
+#testcase-table-of-presto-done-rejects-alocalco-cola
 >aloc
 No need to go technologically backwards. Plus the cola was processed enough before it got in the bottle.
 
-#ttc-table-of-hacks'-shack-nudges-soda
+#testcase-table-of-hacks'-shack-nudges-soda
 >soad
 It's cola, not soda or pop. And you can just drink it.
 
-#ttc-table-of-hacks'-shack-nudges-pop
+#testcase-table-of-hacks'-shack-nudges-pop
 >ppo
 It's cola, not soda or pop. And you can just drink it.
 
@@ -1886,22 +1886,22 @@ It's cola. It has to be. Soda could make you into a sod, of course.
 >mug
 Your score has just gone up by one point
 >score
-Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-presto-done-rejects-mug
+#testcase-table-of-presto-done-rejects-mug
 >mgu
 The mug is no longer manipulable.
 
-#ttc-table-of-presto-done-rejects-im-le-cop-polemic
+#testcase-table-of-presto-done-rejects-im-le-cop-polemic
 >compeil
 After compiling, you often need to make small tweaks, but not like that.
 
-#ttc-table-of-presto-spechelp-trim-socks
+#testcase-table-of-presto-spechelp-trim-socks
 >romsticsk
 You don't have the available memory in your head to see all the possibilities, but yes, something like that should work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pair of trim socks. That's a decent omen.
 
-#+ttc-table-of-presto-spechelp-trim-socks
+#+testcase-table-of-presto-spechelp-trim-socks
 >romstikc
 You don't have the available memory in your head to see all the possibilities, but yes, something like that should work.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pair of trim socks. That's a decent omen.
@@ -1912,18 +1912,18 @@ You don't have the available memory in your head to see all the possibilities, b
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pair of trim socks. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-readables-drive-a
+#testcase-table-of-presto-readables-drive-a
 >read drive a
 It says DRIVE A/A DRIVE: VARIED
 
-#ttc-table-of-presto-readables-drive-e
+#testcase-table-of-presto-readables-drive-e
 >read drive e
 It's alternately referred to as Drive E and E Drive. But wait! There's some kibitzing in red, which you can see if you READ again
 
 >read drive e
 It's alternately referred to as Drive E and E Drive. I'D VEER, someone has written in red.
 
-#ttc-table-of-presto-spechelp-tba-key
+#testcase-table-of-presto-spechelp-tba-key
 >abt
 The TBA key rattles within the keyboard a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the TBA key. That's a decent omen.
@@ -1934,7 +1934,7 @@ The TBA key rattles within the keyboard a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the TBA key. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-spechelp-drive-a
+#testcase-table-of-presto-spechelp-drive-a
 >drivea
 Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more efficiently.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Drive A. That's a decent omen.
@@ -1945,7 +1945,7 @@ Hmm. Drive A coughs for a bit but doesn't really catch. It could be running more
 DEBUG ONLY: You feel a slight psychic push-pull coming from Drive A. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-spechelp-drive-e
+#testcase-table-of-presto-spechelp-drive-e
 >drivee
 Hmm. Drive E (the E drive) has something wrong with it. Maybe you can work things out, even if you don't know right away, but that's not it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Drive E. That's a decent omen.
@@ -1964,9 +1964,9 @@ But you've figured nothing about Drive E yet. Not that you strictly need to.
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 36 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#+ttc-table-of-hacks'-shack-nudges-drive
+#+testcase-table-of-hacks'-shack-nudges-drive
 >driev
 Since there's both Drive A and Drive E, that's ambiguous. You can still tweak Drive E, though.
 
@@ -1974,23 +1974,23 @@ Since there's both Drive A and Drive E, that's ambiguous. You can still tweak Dr
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 # we want to check a final test case and put it in the "max" subfile, so in this case, we hold off on TAB until the very end.
 >tab
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
-#+ttc-table-of-hacks'-shack-nudges-drive
+#+testcase-table-of-hacks'-shack-nudges-drive
 >driev
 Since there's both Drive A and Drive E, that's ambiguous. But it doesn't matter. You did what you could with both, anyway
 
@@ -1998,23 +1998,23 @@ Since there's both Drive A and Drive E, that's ambiguous. But it doesn't matter.
 >redive
 Deriving was tricky enough.
 
-#+ttc-table-of-presto-readables-drive-a
+#+testcase-table-of-presto-readables-drive-a
 >read drive a
 It says DRIVE A/A DRIVE: AVIDER
 
-#+ttc-table-of-hacks'-shack-nudges-tbakey
+#+testcase-table-of-hacks'-shack-nudges-tbakey
 >tbakye
 You already did enough with the TAB key.
 
-#+ttc-table-of-hacks'-shack-nudges-yke
+#+testcase-table-of-hacks'-shack-nudges-yke
 >yek
 You already did enough with the TAB key.
 
-#ttc-table-of-presto-done-rejects-tba-key
+#testcase-table-of-presto-done-rejects-tba-key
 >bta
 No, the TAB key is what it should be.
 
-#ttc-table-of-presto-spechelp-bub-dude-egg
+#testcase-table-of-presto-spechelp-bub-dude-egg
 >debgu
 Hmm. Fixing code you've compiled is tricky. Once it's fixed, if you have even one thing in the wrong order, it does nothing right. That has to be what's happening here, why BUB DUDE EGG is showing.
 DEBUG ONLY: You feel a slight psychic push-pull coming from BUB DUDE EGG. That's a decent omen.
@@ -2025,30 +2025,30 @@ Hmm. Fixing code you've compiled is tricky. Once it's fixed, if you have even on
 DEBUG ONLY: You feel a slight psychic push-pull coming from BUB DUDE EGG. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-presto-scannotes-bub-dude-egg
+#testcase-table-of-presto-scannotes-bub-dude-egg
 >scan bub dude egg
 Only one color for sure? And you don't even get any clues from BUB DUDE EGG? Well, perhaps there is some detective work here.
 
 >debug
 The process of debugging is going to take a while. You will need some sort of energy. That ALocalCo Cola won't quite be enough for the task ahead, as-is.
 
-#+ttc-table-of-presto-scannotes-bub-dude-egg
+#+testcase-table-of-presto-scannotes-bub-dude-egg
 >scan bub dude egg
 Wait. Maybe you don't need to scan anything with the settler. You remember you've already figured what to do, here, just not when. The information's in your pedanto-notepad.
 
-#ttc-table-of-hacks'-shack-nudges-bub
+#testcase-table-of-hacks'-shack-nudges-bub
 >bbu
 Nothing happens. "Budge, BUDGE!" you mutter, turning red and reading the whole message.
 
-#ttc-table-of-hacks'-shack-nudges-dude
+#testcase-table-of-hacks'-shack-nudges-dude
 >dued
 Nothing happens. "Budge, BUDGE!" you mutter, turning red and reading the whole message.
 
-#ttc-table-of-hacks'-shack-nudges-geg
+#testcase-table-of-hacks'-shack-nudges-geg
 >egg
 Nothing happens. "Budge, BUDGE!" you mutter, turning red and reading the whole message.
 
-#ttc-table-of-hacks'-shack-nudges-local
+#testcase-table-of-hacks'-shack-nudges-local
 >locla
 The cola has already been reprocessed enough. You'll drink it when the time comes.
 
@@ -2056,11 +2056,11 @@ The cola has already been reprocessed enough. You'll drink it when the time come
 You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
 The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably because it's a bot o' root beer.
 
-#+ttc-table-of-presto-done-rejects-mug
+#+testcase-table-of-presto-done-rejects-mug
 >mgu
 You'd get cola all over you if you tried anything with the mug.
 
-#ttc-table-of-presto-nudges-lcao
+#testcase-table-of-presto-nudges-lcao
 >lcoa
 The mug is already somehow generating infinite cola. Don't want to mess with that.
 
@@ -2068,24 +2068,24 @@ The mug is already somehow generating infinite cola. Don't want to mess with tha
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
-#ttc-table-of-presto-done-rejects-bub-dude-egg
+#testcase-table-of-presto-done-rejects-bub-dude-egg
 >debgu
 You had to consider all sorts of combinations while debugging, but things will be easier now.
 
-#+ttc-table-of-hacks'-shack-nudges-algorithms
+#+testcase-table-of-hacks'-shack-nudges-algorithms
 >algorithsm
 The catechism would be more likely to scramble YOU up. It's way more complex than what you need to do now.
 
 >misses
 !presto
 
-#ttc-table-of-presto-scannotes-usb
+#testcase-table-of-presto-scannotes-usb
 >scan usb
 Hm, USB seems pretty straightforward. Maybe there are two solutions, each equally good.
 
-#ttc-table-of-presto-spechelp-usb
+#testcase-table-of-presto-spechelp-usb
 >ubs
 Hmm. There are only five possibilities, and more than one may be right. You've done the tough stuff.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the USB. That's a decent omen.
@@ -2104,4 +2104,4 @@ Diver time
 
 >score
 
-Presto (41/41)
+Presto ({MAX}/{MAX})

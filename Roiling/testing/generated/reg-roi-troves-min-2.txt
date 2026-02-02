@@ -19,13 +19,13 @@
 /^Loather Rathole
 
 >score
-Score in a scenario: 0 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >hate
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 1 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >care
 Your score has just gone up by one point
@@ -33,13 +33,13 @@ Your score has just gone up by one point
 /^Bustle Sublet
 
 >score
-Score in a scenario: 2 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 29.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >observe
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 3 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 29.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >spot
 Your score has just gone up by one point
@@ -47,13 +47,13 @@ Your score has just gone up by one point
 /^Boarded Roadbed
 
 >score
-Score in a scenario: 4 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 28.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >reason
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 5 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 28.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >recall
 by one point
@@ -64,13 +64,13 @@ by one point
 #lose a point for not ignoring A Tasty Sty, Say
 
 >score
-Score in a scenario: 6 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >despair
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 7 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 26.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >decide
 Your score has just gone up by one point
@@ -78,13 +78,13 @@ Your score has just gone up by one point
 /^Boredom Bedroom
 
 >score
-Score in a scenario: 8 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 25.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >master
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 9 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 25.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >deal
 Your score has just gone up by one point
@@ -95,10 +95,10 @@ Your score has just gone up by one point
 #lose a point for only one of BOLSTER/MASTER
 
 >score
-Score in a scenario: 10 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >score
-Score in a scenario: 10 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 23.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >desire
 Your score has just gone up by one point
@@ -108,13 +108,13 @@ Your score has just gone up by one point
 /^Econ-Cone
 
 >score
-Score in a scenario: 11 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >strive
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >ponder
 Your score has just gone up by one point
@@ -124,25 +124,25 @@ Your score has just gone up by one point
 #lose a maximum point for only one of aspire/strive
 
 >score
-Score in a scenario: 13 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >deserve
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >last
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 15 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >resist
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 20.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >misses
 /^====TROVES:
@@ -186,4 +186,4 @@ This will escape Upscale Capsule, but you could do a bit more if you want. Stay 
 /^Strip of Profits
 
 >score
-, Troves (17/30)
+, Troves ({SCORE}/{MAX})

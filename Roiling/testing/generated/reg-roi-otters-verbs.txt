@@ -46,7 +46,7 @@ There are two unblocked exits: north and south.
 Ed Riley doesn't seem to make any noise. He just blocks you west.
 
 >score
-Score in a scenario: 1 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >l
 /^Burnt Brunt
@@ -58,7 +58,7 @@ They crackle with energy and possibilities as you take them. Perhaps there is mo
 >smell
 The deli rye smells good, but Ed won't share.
 
-#ttc-table-of-otters-attacks-ed-riley
+#testcase-table-of-otters-attacks-ed-riley
 >attack ed riley
 "I could DRIL YEE!" Ed booms. You can just HEAR the flagrant misspelling, and it makes you see red.
 
@@ -75,7 +75,7 @@ You have more than one way to leave: north, south and west. So you'll need to sp
 There are three unblocked exits: north, south and west.
 
 >score
-Score in a scenario: 2 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >w
 /^Disowned Downside
@@ -89,7 +89,7 @@ You have more than one way to leave: north, south and east. So you'll need to sp
 >exits
 There are three unblocked exits: north, south and east to Burnt Brunt.
 
-#ttc-table-of-otters-attacks-players
+#testcase-table-of-otters-attacks-players
 >attack players
 Don't hate the player, hate the game.
 Um, sorry about that. But being outnumbered, maybe you can attack their arguments instead.
@@ -123,18 +123,18 @@ Ick, man. Mackin'. You really don't want to pay attention to the details, but yo
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: 3 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >angrily
 Your score has just gone up by one point.
 >score
-Score in a scenario: 4 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >blearily
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: 5 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >au 0
 
 >1
@@ -151,7 +151,7 @@ You can still smell the parleys splayer players' Cool-Gen Cologne, from that coy
 >n
 /^Loop Pool
 
-#ttc-table-of-otters-nowheres-loop-pool
+#testcase-table-of-otters-nowheres-loop-pool
 >e
 The pool is wide and long. You can only go back south.
 
@@ -168,7 +168,7 @@ The only way to exit is south, so let's go that way.
 >exits
 The only way you seem to be able to go is south to Disowned Downside.
 
-#ttc-table-of-otters-attacks-sea-cube
+#testcase-table-of-otters-attacks-sea-cube
 >attack sea cube
 Bounce no cube.
 
@@ -176,27 +176,27 @@ Bounce no cube.
 by one point
 
 >score
-Score in a scenario: 6 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-otters-attacks-eels
+#testcase-table-of-otters-attacks-eels
 >attack eels
 Be nice. They're on your side. Or they will be, once you gain their trust.
 
 >else
 by one point
 
-#+ttc-table-of-otters-attacks-eels
+#+testcase-table-of-otters-attacks-eels
 >attack eels
 Be nice. They're on your side.
 !Or they will be, once you gain their trust.
 
 >score
-Score in a scenario: 7 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >unless
 by one point
 >score
-Score in a scenario: 8 out of 38 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >misses
 !--you could've dispelled the "Sullenness, Us" voices in Loop Pool after satisfying the eels by saying UNLESS.
 
@@ -206,7 +206,7 @@ Score in a scenario: 8 out of 38 total points in the current region, Otters. Low
 
 /^Bran Barn
 
-#ttc-table-of-otters-nowheres-bran-barn
+#testcase-table-of-otters-nowheres-bran-barn
 >e
 You don't need to explore Mr. Lee's property. Your only way out is back north.
 
@@ -214,7 +214,7 @@ You don't need to explore Mr. Lee's property. Your only way out is back north.
 >listen
 You hear morose mooers you can't see.
 
-#ttc-table-of-otters-attacks-mr-lee
+#testcase-table-of-otters-attacks-mr-lee
 >attack mr lee
 Be nice. He's on your side. Or he will be, once you gain his trust.
 
@@ -232,20 +232,20 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 9 out of 38 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >ergo
 by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 10 out of 38 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #verbcase listen-otters-if-vow-here-is-touchable
 >listen
 You see red as you hear some nonsense repeated: "Eeh, row V!"
 
-#+ttc-table-of-otters-attacks-mr-lee
+#+testcase-table-of-otters-attacks-mr-lee
 >attack mr lee
 Be nice. He's on your side.
 !Or he will be, once you gain his trust.
@@ -255,14 +255,14 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 11 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >n
 
 >atom
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >open
 Your score has just gone up by one point
@@ -277,14 +277,14 @@ You have more than one way to leave: north, south, east and west. So you'll need
 There are four unblocked exits: north to Loop Pool, south to Bran Barn, east to Burnt Brunt and west.
 
 >score
-Score in a scenario: 13 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >e
 
 >n
 /^Shiner Shrine
 
-#ttc-table-of-otters-nowheres-shiner-shrine
+#testcase-table-of-otters-nowheres-shiner-shrine
 >e
 The coma camo may be detectable, but you can't change it.
 
@@ -301,7 +301,7 @@ There are two unblocked exits: north and south to Burnt Brunt.
 >listen
 The imp's really messing with your mind. You think you hear it whizzing about or laughing under its breath. It's just too smooth for you right now.
 
-#ttc-table-of-otters-attacks-imp
+#testcase-table-of-otters-attacks-imp
 >attack imp
 The imp jumps out of reach, streakily, satyrlike.
 
@@ -309,18 +309,18 @@ The imp jumps out of reach, streakily, satyrlike.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >remotely
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 15 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 /^Lamer Realm
 
-#ttc-table-of-otters-attacks-owls
+#testcase-table-of-otters-attacks-owls
 >attack owls
 You are outnumbered. You need a bit of magic here.
 
@@ -337,25 +337,25 @@ The only way you seem to be able to go is south to Shiner Shrine.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-otters-nowheres-lamer-realm
+#testcase-table-of-otters-nowheres-lamer-realm
 >n
 You can only go back south. Yup, lame.
 
-#ttc-table-of-otters-attacks-leopard
+#testcase-table-of-otters-attacks-leopard
 >attack leopard
 Messing with a leopard is a bad idea, especially one with orange jumpsuit-ish markings.
 
-#ttc-table-of-otters-attacks-ocelots
+#testcase-table-of-otters-attacks-ocelots
 >attack ocelots
 They're bigger than average. And the leopard would back them up.
 
-#ttc-table-of-otters-attacks-satyr
+#testcase-table-of-otters-attacks-satyr
 >attack satyr
 He's bigger than average. And the leopard would back him up.
 
-#ttc-table-of-otters-attacks-badger
+#testcase-table-of-otters-attacks-badger
 >attack badger
 It's bigger than average. And the leopard would back it up.
 
@@ -363,24 +363,24 @@ It's bigger than average. And the leopard would back it up.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 17 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >paroled
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 18 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >artsy
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 19 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >l
 /^Blest Belts
 
-#+ttc-table-of-otters-nowheres-lamer-realm
+#+testcase-table-of-otters-nowheres-lamer-realm
 >n
 You can only go back south. The Blest Belts are private to animals and those who helped them.
 
@@ -388,21 +388,21 @@ You can only go back south. The Blest Belts are private to animals and those who
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 20 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#+ttc-table-of-otters-attacks-leopard
+#+testcase-table-of-otters-attacks-leopard
 >attack leopard
 Messing with a leopard is a bad idea, especially one you made friends with.
 
-#+ttc-table-of-otters-attacks-ocelots
+#+testcase-table-of-otters-attacks-ocelots
 >attack ocelots
 They're bigger than average. And the leopard would back them up.
 
-#+ttc-table-of-otters-attacks-satyr
+#+testcase-table-of-otters-attacks-satyr
 >attack satyr
 He's bigger than average. And the leopard would back him up.
 
-#+ttc-table-of-otters-attacks-badger
+#+testcase-table-of-otters-attacks-badger
 >attack badger
 It's bigger than average. And the leopard would back it up.
 
@@ -412,7 +412,7 @@ It's bigger than average. And the leopard would back it up.
 
 /^Clarthead Cathedral
 
-#ttc-table-of-otters-nowheres-clarthead-cathedral
+#testcase-table-of-otters-nowheres-clarthead-cathedral
 >e
 The coma camo may be detectable, but you can't change it.
 
@@ -429,7 +429,7 @@ There are two unblocked exits: north to Burnt Brunt and south.
 >listen
 It's hard not to hear what the shrewin' whiners have to say, actually
 
-#ttc-table-of-otters-attacks-whiners
+#testcase-table-of-otters-attacks-whiners
 >attack whiners
 That idea is banefully unflyable.
 
@@ -437,14 +437,14 @@ That idea is banefully unflyable.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 21 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >joltily
 Your score has just gone up by one point
 They find another place where rioters roister.
 
 >score
-Score in a scenario: 22 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >s
 /^Perverse Preserve
@@ -462,37 +462,37 @@ The only way to exit is north, so let's go that way.
 >exits
 The only way you seem to be able to go is north to Clarthead Cathedral.
 
-#ttc-table-of-otters-attacks-raptor
+#testcase-table-of-otters-attacks-raptor
 >attack raptor
 You'll need a bit of magic, not force, to tame the raptor.
 
 >parrot
 Your score has just gone up by one point
 
-#ttc-table-of-otters-nowheres-perverse-preserve
+#testcase-table-of-otters-nowheres-perverse-preserve
 >w
 You feel jolted as you go that way. You may not be able to see it, but you know the tell-tale signs of a CRITTERS-RESTRICT field. It is even, err, STRICTER for animals than for humans, but it still hurts a lot!
 
 >score
-Score in a scenario: 23 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >snail
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 24 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >hornets
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 25 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >racoon
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 26 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >l
 /^Uprates Pasture
@@ -502,25 +502,25 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 27 out of 38 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-otters-attacks-hornets
+#testcase-table-of-otters-attacks-hornets
 >attack hornets
 You didn't rescue the hornets just to do that!
 
-#ttc-table-of-otters-attacks-snipe
+#testcase-table-of-otters-attacks-snipe
 >attack snipe
 You didn't rescue the snipe just to do that!
 
-#ttc-table-of-otters-attacks-snail
+#testcase-table-of-otters-attacks-snail
 >attack snail
 You didn't rescue the snail just to do that!
 
-#ttc-table-of-otters-attacks-racoon
+#testcase-table-of-otters-attacks-racoon
 >attack racoon
 You didn't rescue the racoon just to do that!
 
-#ttc-table-of-otters-attacks-parrot
+#testcase-table-of-otters-attacks-parrot
 >attack parrot
 No. The parrot's here to help.
 
@@ -535,7 +535,7 @@ No. The parrot's here to help.
 >basically
 by one point
 >score
-Score in a scenario: 28 out of 38 total points in the current region, Otters. Lowest score to solve is 32. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+verbcase listen-otters-if-noun-is-asyllabic-lilac-bays 1 7102
 >listen
@@ -546,14 +546,14 @@ You can't hear anything from the bays now
 >sable
 by one point
 >score
-Score in a scenario: 29 out of 38 total points in the current region, Otters. Lowest score to solve is 33. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >w
 
 >actually
 by one point
 >score
-Score in a scenario: 30 out of 38 total points in the current region, Otters. Lowest score to solve is 34. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >w
 /^Reclusion Inclosure
@@ -567,7 +567,7 @@ The only way to exit is east, so let's go that way.
 >exits
 The only way you seem to be able to go is east to Disowned Downside.
 
-#ttc-table-of-otters-nowheres-reclusion-inclosure
+#testcase-table-of-otters-nowheres-reclusion-inclosure
 >n
 The coevals' alcoves north and south may seem less intimidating, but you really should be focused on what's to the west.
 
@@ -579,11 +579,11 @@ sniff faux-piously.
 >smell
 A clove, likely from one alcove.
 
-#ttc-table-of-otters-attacks-elmer
+#testcase-table-of-otters-attacks-elmer
 >attack elmer
 "Die, brag brigade!" you think. But they see your sour look and say "Venomous? Us? Move on."
 
-#ttc-table-of-otters-attacks-merle
+#testcase-table-of-otters-attacks-merle
 >attack merle
 "Die, brag brigade!" you think. But they see your sour look and say "Venomous? Us? Move on."
 
@@ -591,26 +591,26 @@ A clove, likely from one alcove.
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 31 out of 38 total points in the current region, Otters. Lowest score to solve is 35. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >honestly
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 32 out of 38 total points in the current region, Otters. Lowest score to solve is 36. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 # the cinders are moved to the end to test the above case: do we have a chance to get all the points?
 >rescind
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 33 out of 38 total points in the current region, Otters. Lowest score to solve is 37. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >raptor
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 34 out of 38 total points in the current region, Otters. Lowest score to solve is 37. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+testcase-outside-reclusion-inclosure
 >out
@@ -621,7 +621,7 @@ You have more than one way to leave: east and west. So you'll need to specify wh
 >exits
 There are two unblocked exits: east to Disowned Downside and west.
 
-#ttc-table-of-otters-attacks-educers-us-creed
+#testcase-table-of-otters-attacks-educers-us-creed
 >attack us creed
 It'd hurt to bang your fists on the EDUCERS, US Creed, so you resort to seeing red and whispering "'Cused-er and 'cused-er!"
 
@@ -630,14 +630,14 @@ The EDUCERS, US Creed crumbles as you get a bit creative with your words until n
 First, though, to make her history.
 
 >score
-Score in a scenario: 35 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >quickly
 The medals clink together. You feel infused with speed. Even your fats feel fast.
 by one point
 
 >score
-Score in a scenario: 36 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 #this is how we get rid of Elvira
 >w
@@ -646,7 +646,7 @@ WTF FTW
 >7
 "No mercy, my crone! Corny, me?"
 
-#ttc-table-of-otters-nowheres-rancho-archon-anchor
+#testcase-table-of-otters-nowheres-rancho-archon-anchor
 >n
 Even without the Edictal Citadel that way, Elvira wouldn't let you anywhere into her private chambers. Neither will her creations. Maybe you can sneak back east.
 
@@ -689,12 +689,12 @@ Your score has just gone up by one point
 
 >score
 
-Score in a scenario: 37 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >w
 
 >score
-Score in a scenario: 37 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >misses
 !otters

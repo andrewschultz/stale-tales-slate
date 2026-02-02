@@ -21,7 +21,7 @@ Your score has just gone up by one point
 /^Austerer Treasure
 
 >score
-Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >pooh
 Your score has just gone up by one point
@@ -29,7 +29,7 @@ Taking away a max point.
 DEBUG INFO: Taking away a max point.
 
 >score
-Score in a scenario: 2 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 40.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >e
 
@@ -40,13 +40,13 @@ Score in a scenario: 2 out of 41 total points in the current region, Presto. Low
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 40.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >drat
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 40.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 
@@ -54,7 +54,7 @@ Score in a scenario: 4 out of 41 total points in the current region, Presto. Low
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 5 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 40.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >e
 /^Marines Seminar Remains
@@ -62,7 +62,7 @@ Score in a scenario: 5 out of 41 total points in the current region, Presto. Low
 >get popgun
 
 >score
-Score in a scenario: 5 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 40.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >w
 
@@ -71,7 +71,7 @@ Your score has just gone up by one point
 #times two
 DEBUG INFO: Taking away a max point.
 >score
-Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >s
 
@@ -82,19 +82,19 @@ Score in a scenario: 6 out of 41 total points in the current region, Presto. Low
 by one point
 
 >score
-Score in a scenario: 7 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >darn
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 8 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >whassup
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 9 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 
@@ -106,7 +106,7 @@ Score in a scenario: 9 out of 41 total points in the current region, Presto. Low
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >load gun with dart
 You put the dart into the PG-on-up popgun.
@@ -115,7 +115,7 @@ You put the dart into the PG-on-up popgun.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 /^Saps' Pass
@@ -129,13 +129,13 @@ Your score has just gone up by one point
 /^Phat Path
 
 >score
-Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >later
 Your score has just gone up by one point
 But we ain't bored yet, boss!
 >score
-Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >tough
 Your score has just gone up by one point
@@ -143,7 +143,7 @@ Hut! Go!
 Dat was a good dust-up
 
 >score
-Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 /^Hacks' Shack
@@ -153,19 +153,19 @@ by one point
 Only one more piece of hardware is needed, and the computer will work.
 
 >score
-Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >skid
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >leaf
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >get book
 >push skid s
@@ -180,14 +180,14 @@ Score in a scenario: 17 out of 41 total points in the current region, Presto. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 18 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >keyboard
 Your score has just gone up by one point
 You can now do computery things unimpeded! Hooray!
 
 >score
-Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >disk
 
@@ -197,7 +197,7 @@ Score in a scenario: 19 out of 41 total points in the current region, Presto. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >capslock
 Your score has just gone up by one point
@@ -209,30 +209,30 @@ fits in perfectly
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >sleep
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 37.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >compile
 by one point
 
 >score
-Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 33.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >cola
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 33.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >mug
 Your score has just gone up by one point
 >score
-Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 33.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >pour cola in mug
 You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
@@ -242,7 +242,7 @@ The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably beca
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 33.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >misses
 /^====Grey Gyre====

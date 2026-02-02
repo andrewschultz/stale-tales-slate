@@ -16,7 +16,7 @@
 
 /^Loftier Trefoil
 
-#ttc-table-of-towers-progress-comments-loftier-trefoil
+#testcase-table-of-towers-progress-comments-loftier-trefoil
 The palace--well, you couldn't even see it before you stepped in here. Maybe someone will help you, once you've sorted this mess out.
 
 >z
@@ -125,32 +125,32 @@ Your score has just gone up by one point
 
 >gone
 
-#ttc-table-of-region-initial-scoring-commentary-towers-1
+#testcase-table-of-region-initial-scoring-commentary-towers-1
 Well! You kind of cost Geno a few macho points, but you didn't, like, name-call him. He's probably better off being described that way in the long run.
 
 >score
-Score in a scenario: 1 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >lardy
 
-#ttc-table-of-region-initial-scoring-commentary-towers-2
+#testcase-table-of-region-initial-scoring-commentary-towers-2
 Most of these fellows seem short-named and not too complex. I mean, if they got suckered by Rodney... things will probably get tougher to describe outside the Loftier Trefoil, but this is good practice.
 
 >score
-Score in a scenario: 2 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 #testcase-prerule-table-of-towers-anagrams-pre-rodney-rule
 >droney
 Rodney's voice would certainly seem droney by itself, but he segues into a marching song. I guess when you're a leader, you have that confidence. Maybe diminish his forces?
 
-#ttc-table-of-towers-prefigurings-rodney
+#testcase-table-of-towers-prefigurings-rodney
 >pf
 Rodney can be made DRONEY once he's lost enough followers.
 
 >yonder
 Your attempt to bounce Rodney yonder is blocked by a few of his followers, who stumble a bit but stay upright as they combat the invisible force sucking him away. That looked like the right idea, but maybe get rid of a few of them, first?
 
-#+ttc-table-of-towers-prefigurings-rodney
+#+testcase-table-of-towers-prefigurings-rodney
 >pf
 Rodney can be sent YONDER or made DRONEY once he's lost enough followers.
 
@@ -187,7 +187,7 @@ by one point
 >yonder
 !by one point
 
-#+ttc-table-of-towers-prefigurings-rodney
+#+testcase-table-of-towers-prefigurings-rodney
 >pf
 Rodney can be sent YONDER once he's lost enough followers.
 
@@ -197,21 +197,21 @@ Rodney can be sent YONDER once he's lost enough followers.
 >bleak
 
 >score
-Score in a scenario: 3 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >achier
 Your score has just gone up by one point
 >score
-Score in a scenario: 4 out of 57 total points in the current region, Towers. Lowest score to solve is 27. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >snared
 Your score has just gone up by one point
 >score
-Score in a scenario: 5 out of 57 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >cricked
 Your score has just gone up by one point
 >score
-Score in a scenario: 6 out of 57 total points in the current region, Towers. Lowest score to solve is 29. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >talcier
 by one point
@@ -221,15 +221,15 @@ Your score has just gone up by one point
 
 /^Topside Deposit
 
-#ttc-table-of-castle-approaching-narratives-1
-#ttc-table-of-towers-progress-comments-topside-deposit
+#testcase-table-of-castle-approaching-narratives-1
+#testcase-table-of-towers-progress-comments-topside-deposit
 The palace is barely visible now.
 
-#ttc-table-of-notepad-entries-curst-palace
+#testcase-table-of-notepad-entries-curst-palace
 >pad curst palace
 You apparently can't scan the curst palace fully with the settler 'til you're all the way there. But maybe you can guess.
 
-#ttc-table-of-notepad-entries-the-wildest-wilteds
+#testcase-table-of-notepad-entries-the-wildest-wilteds
 >pad wildest wilteds
 Ornate Atoner Renato told you that the people guarding passage would be tough. Like, six or more letters tough. But you might be able to listen to them and talk to them. He also mentioned Dr. Yow, whom you haven't found yet, and how the top opt pot was for...well, someone Renato was sad to have lost touch with.
 
@@ -261,14 +261,14 @@ Someone comes ... coasting into view with the atheists and
 >undo
 
 >score
-Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 #testcase-prerule-table-of-towers-anagrams-pre-curst-palace-spectacular-rule
 >spectacular
 Your word, stupendous as it is, has no effect. Yet. You are probably not close enough.
 !by one point
 
-#ttc-table-of-towers-prefigurings-curst-palace
+#testcase-table-of-towers-prefigurings-curst-palace
 >pf
 You can make the Curst Palace SPECTACULAR once you're near it.
 
@@ -278,63 +278,63 @@ Your score has just gone up by one point
 >put tarts in toaster
 Looking at yourself after eating the pastry, you see you can see what you'd want to be--stronger, slimmer, etc. You feel like you could look through something else to see what it really should be now. Just XRAY it.
 
-#ttc-table-of-notepad-entries-xray
+#testcase-table-of-notepad-entries-xray
 >pad xray
 You can XRAY something you can't describe to see what it can or should be, with that skan-snak you ate. You can wait as long as you want/need.
 
 >score
-Score in a scenario: 9 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >get all
 
 >n
 /^Scope Copse
 
-#ttc-table-of-towers-progress-comments-scope-copse
-#ttc-table-of-castle-approaching-narratives-2
+#testcase-table-of-towers-progress-comments-scope-copse
+#testcase-table-of-castle-approaching-narratives-2
 The palace seems a bit closer now. You probably have a way to go, but it's a start. Maybe the Spec-O-Scope could provide some sort of map. And those three guardians--well, maybe you can bribe, attack or talk to them. For information if nothing else. The bluster butlers, particularly, keep their eyes on you. Maybe they're guarding something important.
 
 >rusty
 Your score has just gone up by one point
 >score
-Score in a scenario: 10 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >subtler
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 11 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >reined
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >rinsed
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 57 total points in the current region, Towers. Lowest score to solve is 32. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >e
 
-#ttc-table-of-castle-approaching-narratives-3
-#ttc-table-of-towers-progress-comments-leveraged-everglade
+#testcase-table-of-castle-approaching-narratives-3
+#testcase-table-of-towers-progress-comments-leveraged-everglade
 You still can't make out any details of the palace, but it's certainly there, across the big lake to the northeast. But there are more stupid guardians here--they look more resolute and tougher to figure, but you are getting the hang of things. You think.
 >restful
 by one point
 >e
 
-#ttc-table-of-castle-approaching-narratives-4
-#ttc-table-of-towers-progress-comments-danger-garden
+#testcase-table-of-castle-approaching-narratives-4
+#testcase-table-of-towers-progress-comments-danger-garden
 The palace looks a little bigger now--but you may eventually need to cut north a bit to get to it. It looks like there're dead ends south and east, and you still aren't sure how to cross Leak Lake.
 >marginal
 by one point
 >n
 
-#ttc-table-of-castle-approaching-narratives-6
-#ttc-table-of-towers-progress-comments-artist-traits-strait
+#testcase-table-of-castle-approaching-narratives-6
+#testcase-table-of-towers-progress-comments-artist-traits-strait
 Now that you're at the shores of Leak Lake, it's too far to swim. You may need some craft. And crossing here might leave you far from the palace.
 >undo
 >undo
@@ -346,44 +346,44 @@ Now that you're at the shores of Leak Lake, it's too far to swim. You may need s
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 57 total points in the current region, Towers. Lowest score to solve is 33. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >n
 
 /^Baldest Blasted Saltbed
 
-#+ttc-table-of-castle-approaching-narratives-3
-#ttc-table-of-towers-progress-comments-baldest-blasted-saltbed
+#+testcase-table-of-castle-approaching-narratives-3
+#testcase-table-of-towers-progress-comments-baldest-blasted-saltbed
 You still can't make out any details of the palace, but it's certainly there, across the big lake to the northeast. But there are more stupid guardians here--they look more resolute and tougher to figure, but you are getting the hang of things. You think.
 
 >coiled
 Your score has just gone up by one point
 >score
-Score in a scenario: 15 out of 57 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >semipro
 Your score has just gone up by one point
 >score
-Score in a scenario: 16 out of 57 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >e
 
-#ttc-table-of-towers-progress-comments-treading-gradient
-#ttc-table-of-castle-approaching-narratives-5
+#testcase-table-of-towers-progress-comments-treading-gradient
+#testcase-table-of-castle-approaching-narratives-5
 You're a good deal closer to the palace than at the Scope Copse, but you can probably go northeast a bit more to get closer. That still leaves Leak Lake to pass.
 >undo
 
 >pastier
 Your score has just gone up by one point
 >score
-Score in a scenario: 17 out of 57 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >n
 
 /^Anemic Cinema
 
-#+ttc-table-of-castle-approaching-narratives-4
-#ttc-table-of-towers-progress-comments-anemic-cinema
+#+testcase-table-of-castle-approaching-narratives-4
+#testcase-table-of-towers-progress-comments-anemic-cinema
 The palace looks a little bigger now--but you may eventually need to cut east a bit to get to it. It looks like there're dead ends north and west, and you still aren't sure how to cross Leak Lake.
 
 #nowhere else to put this. We basically verify that the trips to Dourest Detours all work.
@@ -407,12 +407,12 @@ The palace looks a little bigger now--but you may eventually need to cut east a 
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 18 out of 57 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >w
 
 /^Fringe Finger
 
-#ttc-table-of-towers-progress-comments-fringe-finger
+#testcase-table-of-towers-progress-comments-fringe-finger
 This may've been a step away from the palace, but hooray, stuff to pick up.
 
 >take strudel
@@ -427,7 +427,7 @@ by one point
 >rustled
 Your score has just gone up by one point
 >score
-Score in a scenario: 19 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 #testcase-postrule-table-of-towers-anagrams-post-strudel-rustled-rule
 >x sled rut
@@ -464,17 +464,17 @@ Nothing (significant) like that is in the immediate vicinity or region.
 Your score has just gone up by one point
 #while this breaks the H/I pattern it does not add to CURMIN as it makes a meaningful link -- Coastlines to your current path.
 >score
-Score in a scenario: 20 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >married
 Your score has just gone up by one point
 >score
-Score in a scenario: 21 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >n
 
 /^Shaven Havens
 
-#ttc-table-of-towers-progress-comments-shaven-havens
+#testcase-table-of-towers-progress-comments-shaven-havens
 You're going side-to-side to see the Curst Palace without getting closer, but hooray to seeing some other life form.
 
 # no offical table test case, just verifying you can get to the Dourest Detours
@@ -487,19 +487,19 @@ You get lost in the savager ravages a bit. And it's fun for a while, until you r
 
 /^Salted Deltas
 
-#+ttc-table-of-castle-approaching-narratives-6
-#ttc-table-of-towers-progress-comments-salted-deltas
+#+testcase-table-of-castle-approaching-narratives-6
+#testcase-table-of-towers-progress-comments-salted-deltas
 Now that you're at the shores of Leak Lake, it's too far to swim. You may need some craft. And crossing here might leave you far from the palace.
 
 >hastiest
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 22 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >weariest
 Your score has just gone up by one point
 >score
-Score in a scenario: 23 out of 57 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >s
 
 /^Treading Gradient
@@ -507,17 +507,17 @@ Score in a scenario: 23 out of 57 total points in the current region, Towers. Lo
 >nerdiest
 Your score has just gone up by one point
 >score
-Score in a scenario: 24 out of 57 total points in the current region, Towers. Lowest score to solve is 38. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >saltier
 Your score has just gone up by one point
 >score
-Score in a scenario: 25 out of 57 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >sewed
 Your score has just gone up by one point
 >score
-Score in a scenario: 26 out of 57 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 #testcase-postrule-table-of-towers-anagrams-post-weeds-sewed-rule
 >x raves saver
@@ -526,12 +526,12 @@ It doesn't even have a socket for Hears-Share earphones.
 
 >mined
 >score
-Score in a scenario: 27 out of 57 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >gs
 >e
 
-#ttc-table-of-guardian-specific-taunts-lois-the-hostile-grailman
+#testcase-table-of-guardian-specific-taunts-lois-the-hostile-grailman
 >marginal
 Lois the Hostile sniffs that the grailman probably wasn't even guarding a very, um, virtuous grail.
 >undo
@@ -542,29 +542,29 @@ Lois the Hostile sniffs that the grailman probably wasn't even guarding a very, 
 /^Dire and Arid Den
 
 >score
-Score in a scenario: 27 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >dandier
 /^Treading Gradient
 
 >score
-Score in a scenario: 28 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >e
 
 >marginal
-#ttc-table-of-guardian-specific-taunts-hostile-is-he-lot-grailman
+#testcase-table-of-guardian-specific-taunts-hostile-is-he-lot-grailman
 The Hostile-is-He Lot sniffs that the grailman probably wasn't even guarding a very, um, virtuous grail.
 Your score has just gone up by one point
 >score
-Score in a scenario: 29 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >holiest
 Your score has just gone up by one point
 >score
-Score in a scenario: 30 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >n
 /^Actionless Coastlines
 
-#ttc-table-of-castle-approaching-narratives-7
-#ttc-table-of-towers-progress-comments-actionless-coastlines
+#testcase-table-of-castle-approaching-narratives-7
+#testcase-table-of-towers-progress-comments-actionless-coastlines
 You can see the other side of Leak Lake from here. It's still too far to swim, but it's clearly closer than anywhere else you've been.
 
 >s
@@ -574,7 +574,7 @@ You can see the other side of Leak Lake from here. It's still too far to swim, b
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 57 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >vainest
 Your score has just gone up by one point
@@ -587,7 +587,7 @@ Your score has just gone up by one point
 >thisalt
 --you could've also made the natives' site van VAINEST to uproot them.
 >score
-Score in a scenario: 32 out of 57 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >w
 
 /^Leveraged Everglade
@@ -595,12 +595,12 @@ Score in a scenario: 32 out of 57 total points in the current region, Towers. Lo
 >grandiose
 Your score has just gone up by one point
 >score
-Score in a scenario: 33 out of 57 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >e
 >s
 /^Lost Lots
 
-#ttc-table-of-towers-progress-comments-lost-lots
+#testcase-table-of-towers-progress-comments-lost-lots
 This may've been a step away from the palace, but hooray, stuff to pick up.
 
 >w
@@ -614,24 +614,24 @@ by one point
 /^Lost Lots
 
 >score
-Score in a scenario: 34 out of 57 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 56.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >undo
 >undo
 >aimless
 Your score has just gone up by one point
 # don't need curmin or score++--we already got it above with the meta-commands before the UNDO!
 >score
-Score in a scenario: 34 out of 57 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >rousted
 Your score has just gone up by one point
 >score
-Score in a scenario: 35 out of 57 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >prosiest
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 36 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >n
 
@@ -645,7 +645,7 @@ Your score has just gone up by one point
 It's certainly active. Maybe if it calmed down, you could get past it.
 
 >score
-Score in a scenario: 37 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >resting
 Your score has just gone up by one point
@@ -655,13 +655,13 @@ Your score has just gone up by one point
 You can't get a glimpse of the gander for all their noise.
 
 >score
-Score in a scenario: 38 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >e
 
 /^Obscurest Subsector
 
-#ttc-table-of-towers-progress-comments-obscurest-subsector
+#testcase-table-of-towers-progress-comments-obscurest-subsector
 You're going side-to-side to see the Curst Palace, but hooray to seeing some other person. Even if he is locked up.
 
 #testcase-prerule-table-of-towers-anagrams-pre-fussier-rule
@@ -669,7 +669,7 @@ You're going side-to-side to see the Curst Palace, but hooray to seeing some oth
 The fissure squirms a bit but settles back down. When it was open, maybe something could've gone in, but you're carrying nothing close to the right shape.
 !by one point
 
-#ttc-table-of-towers-prefigurings-fries-us-fissure
+#testcase-table-of-towers-prefigurings-fries-us-fissure
 >pf
 The Fries-Us Fissure can be made FUSSIER to some effect once there's something it can fuss at.
 
@@ -678,7 +678,7 @@ The Fries-Us Fissure can be made FUSSIER to some effect once there's something i
 You fiddle with the prison ropins but probably need someone or something to facilitate unlocking them due to how they're configured. You don't have anything on you. Then, UNLOCKED should work. It just feels right.
 !by one point
 
-#ttc-table-of-towers-prefigurings-luck-node
+#testcase-table-of-towers-prefigurings-luck-node
 >pf
 The luck node needs to be UNLOCKED, but what you had before didn't work.
 The Fries-Us Fissure can be made FUSSIER to some effect once there's something it can fuss at.
@@ -687,7 +687,7 @@ The Fries-Us Fissure can be made FUSSIER to some effect once there's something i
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 39 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >push retape
 
@@ -715,9 +715,9 @@ Nothing (significant) like that is in the immediate vicinity or region.
 Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
-Score in a scenario: 40 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#+ttc-table-of-towers-prefigurings-luck-node
+#+testcase-table-of-towers-prefigurings-luck-node
 >pf
 !UNLOCKED
 !Fries-Us Fissure
@@ -727,7 +727,7 @@ Score in a scenario: 40 out of 57 total points in the current region, Towers. Lo
 
 /^Outer Route
 
-#ttc-table-of-towers-progress-comments-outer-route
+#testcase-table-of-towers-progress-comments-outer-route
 The palace has receded a bit, but--well--that machine's got to be good for something.
 
 >revised
@@ -736,7 +736,7 @@ The palace has receded a bit, but--well--that machine's got to be good for somet
 by one point
 
 >score
-Score in a scenario: 42 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >gt coastlines
 
@@ -744,7 +744,7 @@ Score in a scenario: 42 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 43 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 #testcase-postrule-table-of-towers-anagrams-post-dinger-grained-rule
 >x loaves
@@ -760,11 +760,11 @@ Inscribed with "lo, save," they are not huge loaves and could probably fit in a 
 >pearly
 Your score has just gone up by one point
 >score
-Score in a scenario: 44 out of 57 total points in the current region, Towers. Lowest score to solve is 48. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >attentive
 Your score has just gone up by one point
 >score
-Score in a scenario: 45 out of 57 total points in the current region, Towers. Lowest score to solve is 49. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 #+testcase-postrule-table-of-towers-anagrams-post-tentative-attentive-rule
 >misses
@@ -774,7 +774,7 @@ Score in a scenario: 45 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 46 out of 57 total points in the current region, Towers. Lowest score to solve is 49. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >gt coastlines
 >give gizmo to agnostic
@@ -789,8 +789,8 @@ by one point
 >enter boat
 /^Rawest Waster Waters
 
-#ttc-table-of-castle-approaching-narratives-8
-#ttc-table-of-towers-progress-comments-rawest-waster-waters
+#testcase-table-of-castle-approaching-narratives-8
+#testcase-table-of-towers-progress-comments-rawest-waster-waters
 Since your head's barely above water, you can't see a shore any more. But you know it must be there.
 >nearest
 Your score has just gone up by one point
@@ -820,15 +820,20 @@ Your score has just gone up by one point
 >rewired
 Your score has just gone up by one point
 >score
-Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >enter boat
 You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
 
 /^Mislit Limits
 
-#ttc-table-of-castle-approaching-narratives-9
-#ttc-table-of-towers-progress-comments-mislit-limits
+#}}CURMIN=SCORE
+#}}CURMIN++
+#}}CURMAX=SCORE
+#}}CURMAX+=7
+
+#testcase-table-of-castle-approaching-narratives-9
+#testcase-table-of-towers-progress-comments-mislit-limits
 The palace--well, you can see why it was spectacular, once.
 >au 0
 >spectacular
@@ -837,7 +842,7 @@ This will restore the Curst Palace, but you can also figure what to do with that
 >undo
 
 >score
-Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >thisalt
 --If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waster Waters, where you'd have needed to bring the Earnest Eastern Neaters NEAREST.
@@ -845,12 +850,12 @@ Score in a scenario: 49 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 50 out of 57 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >antsier
 by one point
 >score
-Score in a scenario: 51 out of 57 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 #testcase-postrule-table-of-towers-anagrams-post-retinas-antsier-rule
 >x succor crocus
@@ -860,7 +865,7 @@ It looks much better than the blub bulb it was.
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 52 out of 57 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >in
 
@@ -877,7 +882,7 @@ She mumbles "'S trite," but she does seem slightly intrigued. Maybe you need to 
 >triste
 Your score has just gone up by one point
 >score
-Score in a scenario: 53 out of 57 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 #testcase-postrule-table-of-towers-anagrams-post-itster-triste-rule
 >x st teri
@@ -889,19 +894,19 @@ St. Teri seems interested, but her hands reflexively grasp the Done-Any Anodyne.
 >annoyed
 Your score has just gone up by one point
 >score
-Score in a scenario: 54 out of 57 total points in the current region, Towers. Lowest score to solve is 55. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >give pot to sitter
 Your score has just gone up by one point
 >score
-Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >ask teri about palace
 It can be something super special.
 
 >out
 
-#ttc-table-of-notepad-entries-scenery
+#testcase-table-of-notepad-entries-scenery
 >pad scenery
 St. Teri told you to look for
 
@@ -914,5 +919,5 @@ Your score has just gone up by one point
 /^Strip of Profits
 
 >score
-, Towers (57/57)
+, Towers ({SCORE}/{MAX})
 

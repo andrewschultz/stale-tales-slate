@@ -22,7 +22,7 @@
 >opt in
 >enter solid idols
 
-#ttc-table-of-otters-anagrams-barely
+#testcase-table-of-otters-anagrams-barely
 As you gaze into the cinders, they blow away, leaving you feeling the barley can appear BARELY.
 #note: this is not actually a valid test case!
 
@@ -31,7 +31,7 @@ DEBUG INFO: bleary barley hinting.
 >barely
 Your score has just gone up by one point
 
-#ttc-table-of-otters-anagrams-reedily
+#testcase-table-of-otters-anagrams-reedily
 As you gaze into the cinders, they blow away, leaving you feeling Ed Riley can speak REEDILY.
 
 DEBUG INFO: Ed Riley hinting.
@@ -45,7 +45,7 @@ You pause, realizing you do not need to discern. Perhaps now is a good time to r
 >ptf 2
 
 >score
-Score in a scenario: 1 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >l
 /^Burnt Brunt
@@ -56,7 +56,7 @@ Your score has just gone up by one point
 You made a way west. You're done here.
 
 >score
-Score in a scenario: 2 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >w
 /^Disowned Downside
@@ -66,49 +66,49 @@ As you gaze into the cinders, they blow away, leaving you feeling the players ca
 !DEBUG INFO: Gretta
 DEBUG INFO: parleys splayer players hinting.
 
-#ttc-table-of-otters-anagrams-sparely
+#testcase-table-of-otters-anagrams-sparely
 As you gaze into the cinders, they blow away, leaving you feeling the players can talk SPARELY.
 
 >sparely
 by one point
 
-#ttc-table-of-otters-anagrams-really
+#testcase-table-of-otters-anagrams-really
 
 >really
 by one point
 
-#ttc-table-of-otters-anagrams-bossily
-#ttc-table-of-otters-anagrams-cattily
-#ttc-table-of-otters-anagrams-seedily
-#ttc-table-of-otters-anagrams-irately
-#ttc-table-of-otters-anagrams-tersely
-#ttc-table-of-otters-anagrams-angrily
-#ttc-table-of-otters-anagrams-nastily
-#ttc-table-of-otters-anagrams-shadily
-#ttc-table-of-otters-anagrams-snidely
-#ttc-table-of-otters-anagrams-starkly
-#ttc-table-of-otters-anagrams-blearily
-#ttc-table-of-otters-anagrams-coitally
-#ttc-table-of-otters-anagrams-formally
-#ttc-table-of-otters-anagrams-ribaldly
-#ttc-table-of-otters-anagrams-shabbily
-#ttc-table-of-otters-anagrams-shoddily
-#ttc-table-of-otters-anagrams-silently
-#ttc-table-of-otters-anagrams-suddenly
-#ttc-table-of-otters-anagrams-modestly
-#ttc-table-of-otters-anagrams-steamily
-#ttc-table-of-otters-anagrams-stupidly
-#ttc-table-of-otters-anagrams-martially
-#ttc-table-of-otters-anagrams-sincerely
-#ttc-table-of-otters-anagrams-sobbingly
-#ttc-table-of-otters-anagrams-tediously
-#ttc-table-of-otters-anagrams-wearingly
-#ttc-table-of-otters-anagrams-desperately
-#ttc-table-of-otters-anagrams-drawlingly
-#ttc-table-of-otters-anagrams-emotionally
-#ttc-table-of-otters-anagrams-reactively
-#ttc-table-of-otters-anagrams-despairingly
-#ttc-table-of-otters-anagrams-indiscreetly
+#testcase-table-of-otters-anagrams-bossily
+#testcase-table-of-otters-anagrams-cattily
+#testcase-table-of-otters-anagrams-seedily
+#testcase-table-of-otters-anagrams-irately
+#testcase-table-of-otters-anagrams-tersely
+#testcase-table-of-otters-anagrams-angrily
+#testcase-table-of-otters-anagrams-nastily
+#testcase-table-of-otters-anagrams-shadily
+#testcase-table-of-otters-anagrams-snidely
+#testcase-table-of-otters-anagrams-starkly
+#testcase-table-of-otters-anagrams-blearily
+#testcase-table-of-otters-anagrams-coitally
+#testcase-table-of-otters-anagrams-formally
+#testcase-table-of-otters-anagrams-ribaldly
+#testcase-table-of-otters-anagrams-shabbily
+#testcase-table-of-otters-anagrams-shoddily
+#testcase-table-of-otters-anagrams-silently
+#testcase-table-of-otters-anagrams-suddenly
+#testcase-table-of-otters-anagrams-modestly
+#testcase-table-of-otters-anagrams-steamily
+#testcase-table-of-otters-anagrams-stupidly
+#testcase-table-of-otters-anagrams-martially
+#testcase-table-of-otters-anagrams-sincerely
+#testcase-table-of-otters-anagrams-sobbingly
+#testcase-table-of-otters-anagrams-tediously
+#testcase-table-of-otters-anagrams-wearingly
+#testcase-table-of-otters-anagrams-desperately
+#testcase-table-of-otters-anagrams-drawlingly
+#testcase-table-of-otters-anagrams-emotionally
+#testcase-table-of-otters-anagrams-reactively
+#testcase-table-of-otters-anagrams-despairingly
+#testcase-table-of-otters-anagrams-indiscreetly
 
 /You can make the macks talk more (BOSSILY|CATTILY|SEEDILY|IRATELY|TERSELY|ANGRILY|NASTILY|SHADILY|SNIDELY|STARKLY|BLEARILY|COITALLY|FORMALLY|RIBALDLY|SHABBILY|SHODDILY|SILENTLY|SUDDENLY|MODESTLY|STEAMILY|STUPIDLY|MARTIALLY|SINCERELY|SOBBINGLY|TEDIOUSLY|WEARINGLY|DESPERATELY|DRAWLINGLY|EMOTIONALLY|REACTIVELY|DESPAIRINGLY|INDISCREETLY)\.
 
@@ -119,12 +119,12 @@ by one point
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: 3 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >angrily
 Your score has just gone up by one point.
 >score
-Score in a scenario: 4 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >blearily
 Your score has just gone up by one point.
@@ -132,7 +132,7 @@ Your score has just gone up by one point.
 Listening to Gretta is more important right now than anagram-munging.
 
 >score
-Score in a scenario: 5 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >au 0
 
 >1
@@ -159,11 +159,11 @@ DEBUG INFO: damsel medals hinting.
 >undo
 >undo
 
-#ttc-table-of-otters-anagrams-although
+#testcase-table-of-otters-anagrams-although
 >s
 As you gaze into the cinders, they blow away, leaving you feeling you can say ALTHOUGH.
 
-#ttc-table-of-otters-anagrams-ergo
+#testcase-table-of-otters-anagrams-ergo
 >although
 As you gaze into the cinders, they blow away, leaving you feeling you can say ERGO.
 >undo
@@ -172,7 +172,7 @@ As you gaze into the cinders, they blow away, leaving you feeling you can say ER
 >n
 /^Loop Pool
 
-#ttc-table-of-otters-anagrams-because
+#testcase-table-of-otters-anagrams-because
 As you gaze into the cinders, they blow away, leaving you feeling you can say BECAUSE.
 
 DEBUG INFO: sea cube hinting.
@@ -181,36 +181,36 @@ DEBUG INFO: sea cube hinting.
 >because
 by one point
 
-#ttc-table-of-otters-anagrams-else
+#testcase-table-of-otters-anagrams-else
 As you gaze into the cinders, they blow away, leaving you feeling you can say ELSE.
 
 DEBUG INFO: eels hinting.
 
 >score
-Score in a scenario: 6 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >else
 by one point
 
 DEBUG INFO: damsel medals hinting.
 
-#ttc-table-of-otters-hint-request-rejects-eels
+#testcase-table-of-otters-hint-request-rejects-eels
 >hint eels
 The eels will assist you when the time comes.
 
 >score
-Score in a scenario: 7 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >unless
 by one point
 >score
-Score in a scenario: 8 out of 38 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >misses
 !--you could've dispelled the "Sullenness, Us" voices in Loop Pool after satisfying the eels by saying UNLESS.
 
 >s
 
-#ttc-table-of-otters-anagrams-atom
+#testcase-table-of-otters-anagrams-atom
 As you gaze into the cinders, they blow away, leaving you feeling you can make an ATOM.
 
 DEBUG INFO: atmo-moat hinting.
@@ -219,7 +219,7 @@ DEBUG INFO: atmo-moat hinting.
 
 /^Bran Barn
 
-#ttc-table-of-otters-anagrams-quickly
+#testcase-table-of-otters-anagrams-quickly
 As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the areas north and south of Burnt Brunt.
 You also feel there's something more to do here, if you want, but isn't critical.
 
@@ -231,21 +231,21 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 9 out of 38 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >ergo
 by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 10 out of 38 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >however
 by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 11 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >n
 
 DEBUG INFO: atmo-moat hinting.
@@ -253,11 +253,11 @@ DEBUG INFO: atmo-moat hinting.
 >atom
 Your score has just gone up by one point
 
-#ttc-table-of-otters-anagrams-open
+#testcase-table-of-otters-anagrams-open
 DEBUG INFO: Pen O' NOPE hinting.
 
 >score
-Score in a scenario: 12 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >open
 Your score has just gone up by one point
@@ -265,7 +265,7 @@ Your score has just gone up by one point
 Gretta's gone. Go back east for help.
 
 >score
-Score in a scenario: 13 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >e
 
@@ -274,9 +274,9 @@ Score in a scenario: 13 out of 38 total points in the current region, Otters. Lo
 
 DEBUG INFO: simply sly imp hinting.
 
-#ttc-table-of-otters-anagrams-enragedly
-#ttc-table-of-otters-anagrams-brutely
-#ttc-table-of-otters-anagrams-remotely
+#testcase-table-of-otters-anagrams-enragedly
+#testcase-table-of-otters-anagrams-brutely
+#testcase-table-of-otters-anagrams-remotely
 /As you gaze into the cinders, they blow away, leaving you feeling the imp could act (ENRAGEDLY|BRUTELY|REMOTELY)\.
 >enragedly
 /As you gaze into the cinders, they blow away, leaving you feeling the imp could act (BRUTELY|REMOTELY)\.
@@ -295,7 +295,7 @@ DEBUG INFO: simply sly imp hinting.
 You may need yet another adverb. (+)
 
 >score
-Score in a scenario: 14 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >remotely
 Your score has just gone up by one point
@@ -304,27 +304,27 @@ Your score has just gone up by one point
 The path north is cleared, and you feel ready to challenge yourself there.
 
 >score
-Score in a scenario: 15 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 /^Lamer Realm
 
-#ttc-table-of-otters-anagrams-slow
+#testcase-table-of-otters-anagrams-slow
 As you gaze into the cinders, they blow away, leaving you feeling you can make the owls SLOW.
 
 >slow
 Your score has just gone up by one point
 
-#ttc-table-of-otters-anagrams-coolest
-#ttc-table-of-otters-anagrams-artsy
-#ttc-table-of-otters-anagrams-garbed
-#ttc-table-of-otters-anagrams-paroled
+#testcase-table-of-otters-anagrams-coolest
+#testcase-table-of-otters-anagrams-artsy
+#testcase-table-of-otters-anagrams-garbed
+#testcase-table-of-otters-anagrams-paroled
 /As you gaze into the cinders, they blow away, leaving you feeling you can make the (ocelots COOLEST|satyr ARTSY|badger GARBED|leopard PAROLED)\.
 
 /DEBUG INFO: (leopard|stray satyr|ocelots|badger) hinting\.
 
 >score
-Score in a scenario: 16 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >coolest
 Your score has just gone up by one point
@@ -334,7 +334,7 @@ Your score has just gone up by one point
 /DEBUG INFO: (leopard|stray satyr|badger) hinting\.
 
 >score
-Score in a scenario: 17 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >paroled
 Your score has just gone up by one point
@@ -344,7 +344,7 @@ Your score has just gone up by one point
 /DEBUG INFO: (stray satyr|badger) hinting\.
 
 >score
-Score in a scenario: 18 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >artsy
 Your score has just gone up by one point
@@ -355,7 +355,7 @@ You also feel there's something more to do here, if you want, but isn't critical
 DEBUG INFO: damsel medals hinting.
 
 >score
-Score in a scenario: 19 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >l
 /^Blest Belts
@@ -366,7 +366,7 @@ DEBUG INFO: min-up codepath
 As you gaze into the cinders, they blow away, leaving you feeling the medals need refurbishing. Maybe in the area south of Burnt Brunt.
 !You also feel there's something more to do here, if you want, but isn't critical.
 >score
-Score in a scenario: 20 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >s
 >s
@@ -377,9 +377,9 @@ Score in a scenario: 20 out of 38 total points in the current region, Otters. Lo
 DEBUG INFO: shrewin' whiners hinting.
 The whiners have a lot of energy and exercise it many different ways. (+)
 
-#ttc-table-of-otters-anagrams-joltily
-#ttc-table-of-otters-anagrams-loathingly
-#ttc-table-of-otters-anagrams-stoically
+#testcase-table-of-otters-anagrams-joltily
+#testcase-table-of-otters-anagrams-loathingly
+#testcase-table-of-otters-anagrams-stoically
 /As you gaze into the cinders, they blow away, leaving you feeling the whiners could talk (LOATHINGLY|STOICALLY|JOLTILY).
 >loathingly
 by one point
@@ -393,7 +393,7 @@ DEBUG INFO: shrewin' whiners hinting.
 You can soften them up a bit more. (+)
 
 >score
-Score in a scenario: 21 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >joltily
 Your score has just gone up by one point
@@ -403,12 +403,12 @@ They find another place where rioters roister.
 The path south is cleared, and you feel ready to challenge yourself there.
 
 >score
-Score in a scenario: 22 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >s
 /^Perverse Preserve
 
-#ttc-table-of-otters-anagrams-parrot
+#testcase-table-of-otters-anagrams-parrot
 As you gaze into the cinders, they blow away, leaving you feeling you can make the raptor a PARROT.
 
 DEBUG INFO: raptor hinting.
@@ -416,16 +416,16 @@ DEBUG INFO: raptor hinting.
 >parrot
 Your score has just gone up by one point
 
-#ttc-table-of-otters-anagrams-hornets
-#ttc-table-of-otters-anagrams-snipe
-#ttc-table-of-otters-anagrams-snail
-#ttc-table-of-otters-anagrams-racoon
+#testcase-table-of-otters-anagrams-hornets
+#testcase-table-of-otters-anagrams-snipe
+#testcase-table-of-otters-anagrams-snail
+#testcase-table-of-otters-anagrams-racoon
 /As you gaze into the cinders, they blow away, leaving you feeling you can make (a SNIPE|a RACOON|a SNAIL|HORNETS)\.
 
 /DEBUG INFO: (pines|thrones|corona|nails) hinting\.
 
 >score
-Score in a scenario: 23 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >snail
 Your score has just gone up by one point
@@ -435,7 +435,7 @@ Your score has just gone up by one point
 /DEBUG INFO: (pines|thrones|corona) hinting\.
 
 >score
-Score in a scenario: 24 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >hornets
 Your score has just gone up by one point
@@ -445,19 +445,19 @@ Your score has just gone up by one point
 /DEBUG INFO: (pines|corona) hinting\.
 
 >score
-Score in a scenario: 25 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >racoon
 Your score has just gone up by one point
 
-#+ttc-table-of-otters-anagrams-quickly
+#+testcase-table-of-otters-anagrams-quickly
 As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY, but maybe not here.
 You also feel there's something more to do here, if you want, but isn't critical.
 
 DEBUG INFO: damsel medals hinting.
 
 >score
-Score in a scenario: 26 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >l
 /^Uprates Pasture
@@ -469,7 +469,7 @@ As you gaze into the cinders, they blow away, leaving you feeling the medals can
 !You also feel there's something more to do here, if you want, but isn't critical.
 
 >score
-Score in a scenario: 27 out of 38 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 >n
@@ -477,12 +477,12 @@ Score in a scenario: 27 out of 38 total points in the current region, Otters. Lo
 >basically
 by one point
 >score
-Score in a scenario: 28 out of 38 total points in the current region, Otters. Lowest score to solve is 32. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >sable
 by one point
 >score
-Score in a scenario: 29 out of 38 total points in the current region, Otters. Lowest score to solve is 33. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >w
 
@@ -491,17 +491,17 @@ Gretta's gone. Fulfill your destiny to the west.
 >actually
 by one point
 >score
-Score in a scenario: 30 out of 38 total points in the current region, Otters. Lowest score to solve is 34. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >w
 /^Reclusion Inclosure
 
-#ttc-table-of-otters-anagrams-raptor
+#testcase-table-of-otters-anagrams-raptor
 As you gaze into the cinders, they blow away, leaving you feeling you can re-make a RAPTOR.
 
 DEBUG INFO: parrot hinting.
 
-#ttc-table-of-settler-shake-descriptions-aside-llp
+#testcase-table-of-settler-shake-descriptions-aside-llp
 >ss
 /Many things: the cinders \(very blurry\), the damsel medals, the parrot, the weltish whistle and rays of tension between (Elmer and Merle|Merle and Elmer) \(very blurry\) are visible\.
 
@@ -509,38 +509,38 @@ DEBUG INFO: parrot hinting.
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 31 out of 38 total points in the current region, Otters. Lowest score to solve is 35. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >honestly
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 32 out of 38 total points in the current region, Otters. Lowest score to solve is 36. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 # the cinders are moved to the end to test the above case: do we have a chance to get all the points?
 >rescind
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 33 out of 38 total points in the current region, Otters. Lowest score to solve is 37. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >raptor
 Your score has just gone up by one point
 
-#ttc-table-of-otters-anagrams-deeply
+#testcase-table-of-otters-anagrams-deeply
 As you gaze into the cinders, they blow away, leaving you feeling you can play the whistle DEEPLY.
 
 DEBUG INFO: weltish whistle hinting.
 
 >score
-Score in a scenario: 34 out of 38 total points in the current region, Otters. Lowest score to solve is 37. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >decurse
 The EDUCERS, US Creed crumbles as you get a bit creative with your words until nothing's left. You think back at how you thought up the word which doesn't quite appear in a dictionary, but maybe it could. This sort of thing is useful for fighting back, or trying to identify feelings or views you can't quite express. They're out there in good times and bad. Maybe how you found this will provide a blueprint many, many years later (you hope it's many years) once Elvira's long since history.
 First, though, to make her history.
 
 >score
-Score in a scenario: 35 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >deeply
 As you gaze into the cinders, they blow away, leaving you feeling the medals can make you go QUICKLY.
@@ -551,7 +551,7 @@ The medals clink together. You feel infused with speed. Even your fats feel fast
 by one point
 
 >score
-Score in a scenario: 36 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 #this is how we get rid of Elvira
 >w
@@ -572,12 +572,12 @@ Just PLAY THE WHISTLE to defeat her.
 
 >score
 
-Score in a scenario: 37 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >w
 
 >score
-Score in a scenario: 37 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >misses
 !otters

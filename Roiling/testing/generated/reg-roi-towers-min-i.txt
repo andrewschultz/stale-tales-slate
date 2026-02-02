@@ -21,17 +21,17 @@
 >gone
 
 >score
-Score in a scenario: 1 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >lardy
 
 >score
-Score in a scenario: 2 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >bleak
 
 >score
-Score in a scenario: 3 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >yonder
 Your score has just gone up by one point
@@ -39,13 +39,13 @@ Your score has just gone up by one point
 /^Topside Deposit
 
 >score
-Score in a scenario: 4 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 53.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >sadder
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 5 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 53.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >get all
 
@@ -73,21 +73,21 @@ Hmm. You bet you could get past if the denier nereid were REINED.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 6 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >rinsed
 Your score has just gone up by one point
 >score
-Score in a scenario: 7 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >e
 >restful
 Your score has just gone up by one point
 >score
-Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >saltier
 Your score has just gone up by one point
 >score
-Score in a scenario: 9 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >e
 >w
 >n
@@ -95,31 +95,31 @@ Score in a scenario: 9 out of 57 total points in the current region, Towers. Low
 >sewed
 Your score has just gone up by one point
 >score
-Score in a scenario: 10 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >weariest
 Your score has just gone up by one point
 >score
-Score in a scenario: 11 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >n
 >hastiest
 Your score has just gone up by one point
 >score
-Score in a scenario: 12 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >released
 Your score has just gone up by one point
 >score
-Score in a scenario: 13 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >e
 >holiest
 Your score has just gone up by one point
 >score
-Score in a scenario: 14 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >w
 >w
 >married
 Your score has just gone up by one point
 >score
-Score in a scenario: 15 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >n
 >s
 >e
@@ -133,13 +133,13 @@ Score in a scenario: 15 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >resting
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 17 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >e
 
@@ -149,7 +149,7 @@ Score in a scenario: 17 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 18 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >push retape
 
@@ -163,7 +163,7 @@ Score in a scenario: 18 out of 57 total points in the current region, Towers. Lo
 by one point
 
 >score
-Score in a scenario: 19 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >gt copse
 >w
@@ -176,7 +176,7 @@ Score in a scenario: 19 out of 57 total points in the current region, Towers. Lo
 by one point
 
 >score
-Score in a scenario: 21 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >gt coastlines
 
@@ -184,7 +184,7 @@ Score in a scenario: 21 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 22 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >ask agnostic about doctor yow
 !Your score has just gone up by one point
@@ -193,7 +193,7 @@ Score in a scenario: 22 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 23 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 51.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >gt coastlines
 >give gizmo to agnostic
@@ -209,8 +209,13 @@ You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines
 
 /^Mislit Limits
 
+#}}CURMIN=SCORE
+#}}CURMIN++
+#}}CURMAX=SCORE
+#}}CURMAX+=7
+
 >score
-Score in a scenario: 25 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 32.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >au 0
 
@@ -222,5 +227,5 @@ This will restore the Curst Palace, but you can also figure what to do with that
 /^Strip of Profits
 
 >score
-, Towers (26/57)
+, Towers ({SCORE}/{MAX})
 

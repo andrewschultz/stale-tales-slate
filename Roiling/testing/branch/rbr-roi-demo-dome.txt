@@ -7,8 +7,8 @@
 
 # test cases are a bit squashed: MAX tries all the odd verbs, but NUD tried the nudges
 
-file=reg-roi-demo-dome-max.txt,max/verbs,maximum walkthrough
-file=reg-roi-demo-dome-nudmis.txt,nudges/nud/nu/mis,walkthrough with nudges
+file=reg-roi-demo-dome-max.txt,abbr=max/verbs,desc=maximum walkthrough
+file=reg-roi-demo-dome-nudmis.txt,abbr=nudges/nud/nu/mis,desc=walkthrough with nudges
 
 ## *FILE
 
@@ -89,7 +89,7 @@ There's nothing too tricky to do in the Demo Dome. You can THINK or request the 
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !The spy dial is already laid out.
 \\
-#ttc-table-of-peek-keep-nudges-peek
+#testcase-table-of-peek-keep-nudges-peek
 >pkee
 You don't need to flip anything here, really. Certainly not a room.
 
@@ -123,28 +123,28 @@ UNNOTED exhibits: disport tripods (Peek Keep), novella (Evoc-Cove), Tester Stree
 PERUSED exhibits: nothing.
 EXHAUSTED exhibits: nothing.
 \\
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-1
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-1
 >x tripods
 The disport tripods advertise another way to enjoyably pass time after you are done.
 \\
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-2
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-3
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-4
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-5
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-6
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-7
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-8
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-9
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-10
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-11
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-12
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-13
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-14
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-15
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-2
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-3
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-4
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-5
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-6
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-7
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-8
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-9
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-10
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-11
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-12
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-13
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-14
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-15
 >xab tripods
 The disport tripods advertise another way to enjoyably pass time after you are done.
 \\
-#ttc-table-of-demo-dome-exhibit-disport-tripods-text-16
+#testcase-table-of-demo-dome-exhibit-disport-tripods-text-16
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 PERUSED exhibits: disport tripods (Peek Keep).
@@ -168,69 +168,69 @@ Unfold old fun! Memoir: I'm More!
 >blather
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 \\
-#ttc-table-of-peek-keep-nudges-greta
+#testcase-table-of-peek-keep-nudges-greta
 >gerta
 It was tested to make sure even you couldn't magic it open.
 \\
-#ttc-table-of-peek-keep-nudges-sgni
+#testcase-table-of-peek-keep-nudges-sgni
 >igns
 No need to mess with the helpful sign.
 \\
-#ttc-table-of-peek-keep-nudges-saying
+#testcase-table-of-peek-keep-nudges-saying
 >siyang
 No need to mess with the helpful sign.
 \\
-#ttc-table-of-peek-keep-nudges-unfold
+#testcase-table-of-peek-keep-nudges-unfold
 >unfold
 No need to mess with the helpful sign.
 \\
-#ttc-table-of-peek-keep-nudges-memoir
+#testcase-table-of-peek-keep-nudges-memoir
 >memoir
 No need to mess with the helpful sign.
 \\
 ##############################################these nudges should fail before X GRATE
 \\
-#ttc-table-of-peek-keep-nudges-display
+#testcase-table-of-peek-keep-nudges-display
 >dipslay
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !You won't figure the code. There isn't one. Muahaha.
 \\
-#ttc-table-of-peek-keep-nudges-spy
+#testcase-table-of-peek-keep-nudges-spy
 >spy
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !You won't figure the code. There isn't one. Muahaha.
 \\
-#ttc-table-of-peek-keep-nudges-dial
+#testcase-table-of-peek-keep-nudges-dial
 >dial
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !You won't figure the code. There isn't one. Muahaha.
 \\
-#ttc-table-of-peek-keep-nudges-design
+#testcase-table-of-peek-keep-nudges-design
 >edgins
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-peek-keep-nudges-deign
+#testcase-table-of-peek-keep-nudges-deign
 >edgin
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-peek-keep-nudges-talks
+#testcase-table-of-peek-keep-nudges-talks
 >talsk
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-peek-keep-nudges-talk
+#testcase-table-of-peek-keep-nudges-talk
 >takl
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-peek-keep-nudges-spce
+#testcase-table-of-peek-keep-nudges-spce
 >spec
 There's nothing too tricky to do in the Demo Dome. You can THINK or request the SCORE to see if there's anything you missed. VERBS has limited utility, since there are no puzzles here.
 !This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-peek-keep-nudges-speca
+#testcase-table-of-peek-keep-nudges-speca
 >spaec
 # note this is defined in the general table, so we get the non-default response.
 Meta-commands don't have any easter eggs, sadly.
@@ -254,55 +254,55 @@ Not surreal enough for you?
 >laid
 The spy dial is already laid out.
 \\
-#ttc-table-of-peek-keep-nudges-shall
+#testcase-table-of-peek-keep-nudges-shall
 >shlal
 You can't get near the shall halls, although you still have the nonmagical ability to change the future. Well, some day you will.
 \\
-#ttc-table-of-demo-dome-nudges-demo
+#testcase-table-of-demo-dome-nudges-demo
 >edom
 Museums are designed to be impassive and impermeable, for the most part. This is full of exhibits--your questing days are over.
 \\
-#+ttc-table-of-peek-keep-nudges-display
+#+testcase-table-of-peek-keep-nudges-display
 >dipslay
 You won't figure the code. There isn't one. Muahaha.
 \\
-#+ttc-table-of-peek-keep-nudges-spy
+#+testcase-table-of-peek-keep-nudges-spy
 >spy
 You won't figure the code. There isn't one. Muahaha.
 \\
-#+ttc-table-of-peek-keep-nudges-dial
+#+testcase-table-of-peek-keep-nudges-dial
 >dial
 You won't figure the code. There isn't one. Muahaha.
 \\
-#+ttc-table-of-peek-keep-nudges-design
+#+testcase-table-of-peek-keep-nudges-design
 >edgins
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#+ttc-table-of-peek-keep-nudges-deign
+#+testcase-table-of-peek-keep-nudges-deign
 >edgin
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#+ttc-table-of-peek-keep-nudges-talks
+#+testcase-table-of-peek-keep-nudges-talks
 >talsk
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#+ttc-table-of-peek-keep-nudges-talk
+#+testcase-table-of-peek-keep-nudges-talk
 >takl
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#+ttc-table-of-peek-keep-nudges-spce
+#+testcase-table-of-peek-keep-nudges-spce
 >spec
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#+ttc-table-of-peek-keep-nudges-speca
+#+testcase-table-of-peek-keep-nudges-speca
 >space
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-peek-keep-nudges-tripods
+#testcase-table-of-peek-keep-nudges-tripods
 >triposd
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-peek-keep-nudges-tripdo
+#testcase-table-of-peek-keep-nudges-tripdo
 >tripod
 This is a museum! Messing with the exhibits would be very bad form.
 
@@ -333,22 +333,22 @@ The only way you seem to be able to go is south to Peek Keep.
 @max
 ##############################hows show: tester street
 \\
-#ttc-table-of-demo-dome-exhibit-tester-street-text-1
+#testcase-table-of-demo-dome-exhibit-tester-street-text-1
 >x tester street
 Looking through Tester Street, you see how people helped the Stale Tales Slate become what it was. The "couldn't have done it without them" cliche is true in many ways. Of course, you can type CREDITS for individual names. Here is more general stuff with my reactions to testing.
 \\
-#ttc-table-of-demo-dome-exhibit-tester-street-text-2
+#testcase-table-of-demo-dome-exhibit-tester-street-text-2
 >g
 More on testing.
 \\
-#ttc-table-of-demo-dome-exhibit-tester-street-text-3
-#ttc-table-of-demo-dome-exhibit-tester-street-text-4
-#ttc-table-of-demo-dome-exhibit-tester-street-text-5
-#ttc-table-of-demo-dome-exhibit-tester-street-text-6
-#ttc-table-of-demo-dome-exhibit-tester-street-text-7
-#ttc-table-of-demo-dome-exhibit-tester-street-text-8
-#ttc-table-of-demo-dome-exhibit-tester-street-text-9
-#ttc-table-of-demo-dome-exhibit-tester-street-text-10
+#testcase-table-of-demo-dome-exhibit-tester-street-text-3
+#testcase-table-of-demo-dome-exhibit-tester-street-text-4
+#testcase-table-of-demo-dome-exhibit-tester-street-text-5
+#testcase-table-of-demo-dome-exhibit-tester-street-text-6
+#testcase-table-of-demo-dome-exhibit-tester-street-text-7
+#testcase-table-of-demo-dome-exhibit-tester-street-text-8
+#testcase-table-of-demo-dome-exhibit-tester-street-text-9
+#testcase-table-of-demo-dome-exhibit-tester-street-text-10
 >xab tester street
 More on testing.
 \\
@@ -357,7 +357,7 @@ UNNOTED exhibits: novella (Evoc-Cove), coder decor (Hows Show), raised aiders (H
 PERUSED exhibits: Tester Street (Hows Show).
 EXHAUSTED exhibits: disport tripods (Peek Keep).
 \\
-#ttc-table-of-demo-dome-exhibit-tester-street-text-11
+#testcase-table-of-demo-dome-exhibit-tester-street-text-11
 >x tester street
 Many of the original testers of Shuffling Around have moved on. But thinking, yes, this is what they were REALLY asking for still helps me with the later releases. Or saying, yes, I know this puzzle isn't optimal, but I don't see how to fix it. Then years later seeing a way. Of course I want to move on. But it feels good to close the door on some issues, or know I can do better.
 [NOTE: you've read all the way through.]
@@ -375,18 +375,18 @@ EXHAUSTED exhibits: disport tripods (Peek Keep) and Tester Street (Hows Show).
 \\
 #################################hows show: coder decor
 \\
-#ttc-table-of-demo-dome-exhibit-coder-decor-text-1
+#testcase-table-of-demo-dome-exhibit-coder-decor-text-1
 >x coder decor
 You read some of the coder decor.
 !You read some more of the coder decor.
 \\
-#ttc-table-of-demo-dome-exhibit-coder-decor-text-2
-#ttc-table-of-demo-dome-exhibit-coder-decor-text-3
-#ttc-table-of-demo-dome-exhibit-coder-decor-text-4
-#ttc-table-of-demo-dome-exhibit-coder-decor-text-5
-#ttc-table-of-demo-dome-exhibit-coder-decor-text-6
-#ttc-table-of-demo-dome-exhibit-coder-decor-text-7
-#ttc-table-of-demo-dome-exhibit-coder-decor-text-8
+#testcase-table-of-demo-dome-exhibit-coder-decor-text-2
+#testcase-table-of-demo-dome-exhibit-coder-decor-text-3
+#testcase-table-of-demo-dome-exhibit-coder-decor-text-4
+#testcase-table-of-demo-dome-exhibit-coder-decor-text-5
+#testcase-table-of-demo-dome-exhibit-coder-decor-text-6
+#testcase-table-of-demo-dome-exhibit-coder-decor-text-7
+#testcase-table-of-demo-dome-exhibit-coder-decor-text-8
 >xab coder decor
 !You read some of the coder decor.
 You read some more of the coder decor.
@@ -396,7 +396,7 @@ UNNOTED exhibits: novella (Evoc-Cove), raised aiders (Hows Show), shiest thesis 
 PERUSED exhibits: coder decor (Hows Show).
 EXHAUSTED exhibits: disport tripods (Peek Keep) and Tester Street (Hows Show).
 \\
-#+ttc-table-of-demo-dome-exhibit-coder-decor-text-8
+#+testcase-table-of-demo-dome-exhibit-coder-decor-text-8
 >x coder decor
 NOTE: you've read all the way through.
 \\
@@ -410,29 +410,29 @@ You saw the raised aiders here in Hows Show, but you didn't examine them.
 \\
 #################################hows show: raised aiders
 \\
-#ttc-table-of-demo-dome-exhibit-raised-aiders-text-1
+#testcase-table-of-demo-dome-exhibit-raised-aiders-text-1
 >x raised aiders
 You read some of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
 !You read some more of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
 \\
-#ttc-table-of-demo-dome-exhibit-raised-aiders-text-2
-#ttc-table-of-demo-dome-exhibit-raised-aiders-text-3
-#ttc-table-of-demo-dome-exhibit-raised-aiders-text-4
-#ttc-table-of-demo-dome-exhibit-raised-aiders-text-5
-#ttc-table-of-demo-dome-exhibit-raised-aiders-text-6
-#ttc-table-of-demo-dome-exhibit-raised-aiders-text-7
-#ttc-table-of-demo-dome-exhibit-raised-aiders-text-8
-#ttc-table-of-demo-dome-exhibit-raised-aiders-text-9
-#ttc-table-of-demo-dome-exhibit-raised-aiders-text-10
-#ttc-table-of-demo-dome-exhibit-raised-aiders-text-11
-#ttc-table-of-demo-dome-exhibit-raised-aiders-text-12
-#ttc-table-of-demo-dome-exhibit-raised-aiders-text-13
+#testcase-table-of-demo-dome-exhibit-raised-aiders-text-2
+#testcase-table-of-demo-dome-exhibit-raised-aiders-text-3
+#testcase-table-of-demo-dome-exhibit-raised-aiders-text-4
+#testcase-table-of-demo-dome-exhibit-raised-aiders-text-5
+#testcase-table-of-demo-dome-exhibit-raised-aiders-text-6
+#testcase-table-of-demo-dome-exhibit-raised-aiders-text-7
+#testcase-table-of-demo-dome-exhibit-raised-aiders-text-8
+#testcase-table-of-demo-dome-exhibit-raised-aiders-text-9
+#testcase-table-of-demo-dome-exhibit-raised-aiders-text-10
+#testcase-table-of-demo-dome-exhibit-raised-aiders-text-11
+#testcase-table-of-demo-dome-exhibit-raised-aiders-text-12
+#testcase-table-of-demo-dome-exhibit-raised-aiders-text-13
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 PERUSED exhibits: raised aiders (Hows Show).
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show) and coder decor (Hows Show).
 \\
-#ttc-table-of-demo-dome-exhibit-raised-aiders-text-14
+#testcase-table-of-demo-dome-exhibit-raised-aiders-text-14
 >xab raised aiders
 You read some more of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
 !You read some of the raised aiders. Some of this might be useful if you make your own game. You never know what general or specific ideas will come in handy.
@@ -449,27 +449,27 @@ EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), code
 /You still haven't gone (east|west|inside) from Peek Keep.
 
 @nud
-#ttc-table-of-hows-show-nudges-hows
+#testcase-table-of-hows-show-nudges-hows
 >hosw
 You don't need to flip anything here, really. Certainly not a room.
 \\
-#ttc-table-of-hows-show-nudges-chest
+#testcase-table-of-hows-show-nudges-chest
 >chets
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-hows-show-nudges-raised
+#testcase-table-of-hows-show-nudges-raised
 >raisde
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-hows-show-nudges-aider
+#testcase-table-of-hows-show-nudges-aider
 >aidre
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-hows-show-nudges-coder
+#testcase-table-of-hows-show-nudges-coder
 >codre
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-hows-show-nudges-tech
+#testcase-table-of-hows-show-nudges-tech
 >tehc
 This is a museum! Messing with the exhibits would be very bad form.
 
@@ -498,30 +498,30 @@ The only way you seem to be able to go is east to Peek Keep.
 >score
 You saw the Chic Loner Chronicle here in Ned's Dens, but you didn't examine it.
 \\
-#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-1
+#testcase-table-of-demo-dome-exhibit-chic-loner-chronicle-text-1
 >x chronicle
 The Chronicle has a list of silly things the author thought of while writing this game. The first one reads:
 !Another thought reads:
 \\
-#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-2
-#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-3
-#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-4
-#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-5
-#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-6
-#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-7
-#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-8
-#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-9
-#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-10
-#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-11
-#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-12
-#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-13
-#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-14
+#testcase-table-of-demo-dome-exhibit-chic-loner-chronicle-text-2
+#testcase-table-of-demo-dome-exhibit-chic-loner-chronicle-text-3
+#testcase-table-of-demo-dome-exhibit-chic-loner-chronicle-text-4
+#testcase-table-of-demo-dome-exhibit-chic-loner-chronicle-text-5
+#testcase-table-of-demo-dome-exhibit-chic-loner-chronicle-text-6
+#testcase-table-of-demo-dome-exhibit-chic-loner-chronicle-text-7
+#testcase-table-of-demo-dome-exhibit-chic-loner-chronicle-text-8
+#testcase-table-of-demo-dome-exhibit-chic-loner-chronicle-text-9
+#testcase-table-of-demo-dome-exhibit-chic-loner-chronicle-text-10
+#testcase-table-of-demo-dome-exhibit-chic-loner-chronicle-text-11
+#testcase-table-of-demo-dome-exhibit-chic-loner-chronicle-text-12
+#testcase-table-of-demo-dome-exhibit-chic-loner-chronicle-text-13
+#testcase-table-of-demo-dome-exhibit-chic-loner-chronicle-text-14
 >xtrak
 UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet) and Passe Apses (Intel Inlet).
 PERUSED exhibits: Chic Loner Chronicle (Ned's Dens).
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show) and raised aiders (Hows Show).
 \\
-#ttc-table-of-demo-dome-exhibit-chic-loner-chronicle-text-15
+#testcase-table-of-demo-dome-exhibit-chic-loner-chronicle-text-15
 >xab chronicle
 !The Chronicle has a list of silly things the author thought of while writing this game. The first one reads:
 Another thought reads:
@@ -542,23 +542,23 @@ EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), code
 >send
 Maybe in another game, you could do that, if you walked around right. But not this one.
 \\
-#ttc-table-of-ned's-dens-nudges-neds
+#testcase-table-of-ned's-dens-nudges-neds
 >sedn
 You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one! There are so many awesome ones!
 \\
-#ttc-table-of-ned's-dens-nudges-icch
+#testcase-table-of-ned's-dens-nudges-icch
 >icch
 You can't change the book's writing. Well, you could, I guess. But this is a museum!
 \\
-#ttc-table-of-ned's-dens-nudges-ernol
+#testcase-table-of-ned's-dens-nudges-ernol
 >ernol
 You can't change the book's writing. Well, you could, I guess. But this is a museum!
 \\
-#ttc-table-of-ned's-dens-nudges-chicloner
+#testcase-table-of-ned's-dens-nudges-chicloner
 >chronicle
 You can't change the book's writing. Well, you could, I guess. But this is a museum!
 \\
-#+ttc-table-of-ned's-dens-nudges-neds
+#+testcase-table-of-ned's-dens-nudges-neds
 >edns
 You suddenly feel a desire to play an entirely different Andrew Schultz game. But you don't know which one!
 
@@ -575,7 +575,7 @@ You can only go outside here.
 >score
 /You saw (the shiest thesis|the Passe Apses|the CareLand Calendar) here in Intel Inlet, but you didn't examine (it|them).
 \\
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-1
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-1
 >x apses
 The Passe Apses contain puzzles that were removed or significantly modified before the final release--if you want a log of what was added, that'd be in the release notes. If the names and ideas make you groan now, well, at least you didn't have to go through them to get here. You observe a page of former content:
 (ORDEAL RELOAD) You see the Roman Manor region renamed Means Manse, then Ordeal Reload.
@@ -586,50 +586,50 @@ UNNOTED exhibits: novella (Evoc-Cove), shiest thesis (Intel Inlet) and CareLand 
 PERUSED exhibits: Passe Apses (Intel Inlet).
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show) and Chic Loner Chronicle (Ned's Dens).
 \\
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-2
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-3
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-4
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-5
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-6
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-7
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-8
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-9
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-10
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-11
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-12
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-13
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-14
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-15
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-16
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-17
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-18
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-19
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-20
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-21
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-22
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-23
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-24
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-25
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-26
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-27
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-28
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-29
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-30
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-31
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-32
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-33
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-34
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-35
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-36
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-37
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-38
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-39
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-40
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-2
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-3
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-4
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-5
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-6
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-7
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-8
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-9
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-10
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-11
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-12
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-13
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-14
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-15
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-16
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-17
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-18
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-19
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-20
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-21
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-22
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-23
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-24
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-25
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-26
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-27
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-28
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-29
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-30
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-31
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-32
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-33
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-34
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-35
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-36
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-37
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-38
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-39
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-40
 >xab apses
 !You observe a page of former content:
 You observe another page of former content:
 \\
-#ttc-table-of-demo-dome-exhibit-passe-apses-text-41
+#testcase-table-of-demo-dome-exhibit-passe-apses-text-41
 >x apses
 There is other illegible writing. Stuff forgotten even after I researched it. Well, there is enough, I hope, for those interested in that sort of thing.
 [NOTE: you've read all the way through.]
@@ -645,7 +645,7 @@ EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), code
 \\
 #######################################Intel Inlet: CareLand Calendar
 \\
-#ttc-table-of-demo-dome-exhibit-careland-calendar-text-1
+#testcase-table-of-demo-dome-exhibit-careland-calendar-text-1
 >x calendar
 The CareLand Calendar is divided into several parts based on what is there. You read through one.
 Part one: Protean
@@ -655,22 +655,22 @@ UNNOTED exhibits: novella (Evoc-Cove) and shiest thesis (Intel Inlet).
 PERUSED exhibits: CareLand Calendar (Intel Inlet).
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 \\
-#ttc-table-of-demo-dome-exhibit-careland-calendar-text-2
-#ttc-table-of-demo-dome-exhibit-careland-calendar-text-3
-#ttc-table-of-demo-dome-exhibit-careland-calendar-text-4
-#ttc-table-of-demo-dome-exhibit-careland-calendar-text-5
-#ttc-table-of-demo-dome-exhibit-careland-calendar-text-6
-#ttc-table-of-demo-dome-exhibit-careland-calendar-text-7
-#ttc-table-of-demo-dome-exhibit-careland-calendar-text-8
-#ttc-table-of-demo-dome-exhibit-careland-calendar-text-9
-#ttc-table-of-demo-dome-exhibit-careland-calendar-text-10
-#ttc-table-of-demo-dome-exhibit-careland-calendar-text-11
-#ttc-table-of-demo-dome-exhibit-careland-calendar-text-12
-#ttc-table-of-demo-dome-exhibit-careland-calendar-text-13
+#testcase-table-of-demo-dome-exhibit-careland-calendar-text-2
+#testcase-table-of-demo-dome-exhibit-careland-calendar-text-3
+#testcase-table-of-demo-dome-exhibit-careland-calendar-text-4
+#testcase-table-of-demo-dome-exhibit-careland-calendar-text-5
+#testcase-table-of-demo-dome-exhibit-careland-calendar-text-6
+#testcase-table-of-demo-dome-exhibit-careland-calendar-text-7
+#testcase-table-of-demo-dome-exhibit-careland-calendar-text-8
+#testcase-table-of-demo-dome-exhibit-careland-calendar-text-9
+#testcase-table-of-demo-dome-exhibit-careland-calendar-text-10
+#testcase-table-of-demo-dome-exhibit-careland-calendar-text-11
+#testcase-table-of-demo-dome-exhibit-careland-calendar-text-12
+#testcase-table-of-demo-dome-exhibit-careland-calendar-text-13
 >xab calendar
 The CareLand Calendar is divided into several parts based on what is there. You read through one.
 \\
-#ttc-table-of-demo-dome-exhibit-careland-calendar-text-14
+#testcase-table-of-demo-dome-exhibit-careland-calendar-text-14
 >x calendar
 The CareLand Calendar is divided into several parts based on what is there. You read through one.
 [NOTE: you've read all the way through.]
@@ -689,23 +689,23 @@ PERUSED exhibits: nothing.
 EXHAUSTED exhibits: disport tripods (Peek Keep), Tester Street (Hows Show), coder decor (Hows Show), raised aiders (Hows Show), shiest thesis (Intel Inlet), CareLand Calendar (Intel Inlet), Passe Apses (Intel Inlet) and Chic Loner Chronicle (Ned's Dens).
 
 @nud
-#ttc-table-of-intel-inlet-nudges-intel
+#testcase-table-of-intel-inlet-nudges-intel
 >eltin
 You don't need to flip anything here, really. Certainly not a room.
 \\
-#ttc-table-of-intel-inlet-nudges-calendar
+#testcase-table-of-intel-inlet-nudges-calendar
 >careladn
 These are documents of historical records! Revisionism is so Elvira.
 \\
-#ttc-table-of-intel-inlet-nudges-thesis
+#testcase-table-of-intel-inlet-nudges-thesis
 >thessi
 These are documents of historical records! Revisionism is so Elvira.
 \\
-#ttc-table-of-intel-inlet-nudges-passe
+#testcase-table-of-intel-inlet-nudges-passe
 >pases
 I have full creative control over the Passe Apses, and I'm not giving it up.
 \\
-#ttc-table-of-intel-inlet-nudges-apse
+#testcase-table-of-intel-inlet-nudges-apse
 >apes
 I have full creative control over the Passe Apses, and I'm not giving it up.
 
@@ -763,7 +763,7 @@ You still have more of the novella (examined but not read) to look through.
 \\
 >e
 \\
-#ttc-table-of-demo-dome-exhibit-novella-text-1
+#testcase-table-of-demo-dome-exhibit-novella-text-1
 >read
 The next page (1) makes enough sense, you guess.
 \\
@@ -778,151 +778,151 @@ Okay, why not look around a bit more.
 \\
 >e
 \\
-#ttc-table-of-demo-dome-exhibit-novella-text-2
-#ttc-table-of-demo-dome-exhibit-novella-text-3
-#ttc-table-of-demo-dome-exhibit-novella-text-4
-#ttc-table-of-demo-dome-exhibit-novella-text-5
-#ttc-table-of-demo-dome-exhibit-novella-text-6
-#ttc-table-of-demo-dome-exhibit-novella-text-7
-#ttc-table-of-demo-dome-exhibit-novella-text-8
-#ttc-table-of-demo-dome-exhibit-novella-text-9
-#ttc-table-of-demo-dome-exhibit-novella-text-10
-#ttc-table-of-demo-dome-exhibit-novella-text-11
+#testcase-table-of-demo-dome-exhibit-novella-text-2
+#testcase-table-of-demo-dome-exhibit-novella-text-3
+#testcase-table-of-demo-dome-exhibit-novella-text-4
+#testcase-table-of-demo-dome-exhibit-novella-text-5
+#testcase-table-of-demo-dome-exhibit-novella-text-6
+#testcase-table-of-demo-dome-exhibit-novella-text-7
+#testcase-table-of-demo-dome-exhibit-novella-text-8
+#testcase-table-of-demo-dome-exhibit-novella-text-9
+#testcase-table-of-demo-dome-exhibit-novella-text-10
+#testcase-table-of-demo-dome-exhibit-novella-text-11
 >rr
 PAGE 2:
 PAGE 11:
 \\
 # test the page skipping feature
-#ttc-table-of-demo-dome-exhibit-novella-text-12
-#ttc-table-of-demo-dome-exhibit-novella-text-13
+#testcase-table-of-demo-dome-exhibit-novella-text-12
+#testcase-table-of-demo-dome-exhibit-novella-text-13
 >read
 You have to skip a bit to get to a sensible page (13).
 \\
 You glance over page 13. The most interesting bit seems to be Tether in thin tree, then tire.
 \\
-#ttc-table-of-demo-dome-exhibit-novella-text-14
-#ttc-table-of-demo-dome-exhibit-novella-text-15
-#ttc-table-of-demo-dome-exhibit-novella-text-16
-#ttc-table-of-demo-dome-exhibit-novella-text-17
-#ttc-table-of-demo-dome-exhibit-novella-text-18
-#ttc-table-of-demo-dome-exhibit-novella-text-19
-#ttc-table-of-demo-dome-exhibit-novella-text-20
-#ttc-table-of-demo-dome-exhibit-novella-text-21
-#ttc-table-of-demo-dome-exhibit-novella-text-22
-#ttc-table-of-demo-dome-exhibit-novella-text-23
-#ttc-table-of-demo-dome-exhibit-novella-text-24
+#testcase-table-of-demo-dome-exhibit-novella-text-14
+#testcase-table-of-demo-dome-exhibit-novella-text-15
+#testcase-table-of-demo-dome-exhibit-novella-text-16
+#testcase-table-of-demo-dome-exhibit-novella-text-17
+#testcase-table-of-demo-dome-exhibit-novella-text-18
+#testcase-table-of-demo-dome-exhibit-novella-text-19
+#testcase-table-of-demo-dome-exhibit-novella-text-20
+#testcase-table-of-demo-dome-exhibit-novella-text-21
+#testcase-table-of-demo-dome-exhibit-novella-text-22
+#testcase-table-of-demo-dome-exhibit-novella-text-23
+#testcase-table-of-demo-dome-exhibit-novella-text-24
 >rr
 PAGE 14:
 (skipping some totally nonsensical stuff) PAGE 23:
 PAGE 24:
 \\
-#ttc-table-of-demo-dome-exhibit-novella-text-25
-#ttc-table-of-demo-dome-exhibit-novella-text-26
-#ttc-table-of-demo-dome-exhibit-novella-text-27
-#ttc-table-of-demo-dome-exhibit-novella-text-28
-#ttc-table-of-demo-dome-exhibit-novella-text-29
-#ttc-table-of-demo-dome-exhibit-novella-text-30
-#ttc-table-of-demo-dome-exhibit-novella-text-31
-#ttc-table-of-demo-dome-exhibit-novella-text-32
-#ttc-table-of-demo-dome-exhibit-novella-text-33
-#ttc-table-of-demo-dome-exhibit-novella-text-34
+#testcase-table-of-demo-dome-exhibit-novella-text-25
+#testcase-table-of-demo-dome-exhibit-novella-text-26
+#testcase-table-of-demo-dome-exhibit-novella-text-27
+#testcase-table-of-demo-dome-exhibit-novella-text-28
+#testcase-table-of-demo-dome-exhibit-novella-text-29
+#testcase-table-of-demo-dome-exhibit-novella-text-30
+#testcase-table-of-demo-dome-exhibit-novella-text-31
+#testcase-table-of-demo-dome-exhibit-novella-text-32
+#testcase-table-of-demo-dome-exhibit-novella-text-33
+#testcase-table-of-demo-dome-exhibit-novella-text-34
 >rr
 PAGE 25:
 PAGE 34:
 \\
-#ttc-table-of-demo-dome-exhibit-novella-text-35
-#ttc-table-of-demo-dome-exhibit-novella-text-36
-#ttc-table-of-demo-dome-exhibit-novella-text-37
-#ttc-table-of-demo-dome-exhibit-novella-text-38
-#ttc-table-of-demo-dome-exhibit-novella-text-39
-#ttc-table-of-demo-dome-exhibit-novella-text-40
-#ttc-table-of-demo-dome-exhibit-novella-text-41
-#ttc-table-of-demo-dome-exhibit-novella-text-42
-#ttc-table-of-demo-dome-exhibit-novella-text-43
-#ttc-table-of-demo-dome-exhibit-novella-text-44
-#ttc-table-of-demo-dome-exhibit-novella-text-45
+#testcase-table-of-demo-dome-exhibit-novella-text-35
+#testcase-table-of-demo-dome-exhibit-novella-text-36
+#testcase-table-of-demo-dome-exhibit-novella-text-37
+#testcase-table-of-demo-dome-exhibit-novella-text-38
+#testcase-table-of-demo-dome-exhibit-novella-text-39
+#testcase-table-of-demo-dome-exhibit-novella-text-40
+#testcase-table-of-demo-dome-exhibit-novella-text-41
+#testcase-table-of-demo-dome-exhibit-novella-text-42
+#testcase-table-of-demo-dome-exhibit-novella-text-43
+#testcase-table-of-demo-dome-exhibit-novella-text-44
+#testcase-table-of-demo-dome-exhibit-novella-text-45
 >rr
 PAGE 35:
 (skipping some totally nonsensical stuff) PAGE 43:
 PAGE 45:
 \\
-#ttc-table-of-demo-dome-exhibit-novella-text-46
-#ttc-table-of-demo-dome-exhibit-novella-text-47
-#ttc-table-of-demo-dome-exhibit-novella-text-48
-#ttc-table-of-demo-dome-exhibit-novella-text-49
-#ttc-table-of-demo-dome-exhibit-novella-text-50
-#ttc-table-of-demo-dome-exhibit-novella-text-51
-#ttc-table-of-demo-dome-exhibit-novella-text-52
-#ttc-table-of-demo-dome-exhibit-novella-text-53
-#ttc-table-of-demo-dome-exhibit-novella-text-54
-#ttc-table-of-demo-dome-exhibit-novella-text-55
-#ttc-table-of-demo-dome-exhibit-novella-text-56
-#ttc-table-of-demo-dome-exhibit-novella-text-57
+#testcase-table-of-demo-dome-exhibit-novella-text-46
+#testcase-table-of-demo-dome-exhibit-novella-text-47
+#testcase-table-of-demo-dome-exhibit-novella-text-48
+#testcase-table-of-demo-dome-exhibit-novella-text-49
+#testcase-table-of-demo-dome-exhibit-novella-text-50
+#testcase-table-of-demo-dome-exhibit-novella-text-51
+#testcase-table-of-demo-dome-exhibit-novella-text-52
+#testcase-table-of-demo-dome-exhibit-novella-text-53
+#testcase-table-of-demo-dome-exhibit-novella-text-54
+#testcase-table-of-demo-dome-exhibit-novella-text-55
+#testcase-table-of-demo-dome-exhibit-novella-text-56
+#testcase-table-of-demo-dome-exhibit-novella-text-57
 >rr
 PAGE 46:
 (skipping some totally nonsensical stuff) PAGE 56:
 \\
-#ttc-table-of-demo-dome-exhibit-novella-text-58
-#ttc-table-of-demo-dome-exhibit-novella-text-59
-#ttc-table-of-demo-dome-exhibit-novella-text-60
-#ttc-table-of-demo-dome-exhibit-novella-text-61
-#ttc-table-of-demo-dome-exhibit-novella-text-62
-#ttc-table-of-demo-dome-exhibit-novella-text-63
-#ttc-table-of-demo-dome-exhibit-novella-text-64
-#ttc-table-of-demo-dome-exhibit-novella-text-65
-#ttc-table-of-demo-dome-exhibit-novella-text-66
-#ttc-table-of-demo-dome-exhibit-novella-text-67
+#testcase-table-of-demo-dome-exhibit-novella-text-58
+#testcase-table-of-demo-dome-exhibit-novella-text-59
+#testcase-table-of-demo-dome-exhibit-novella-text-60
+#testcase-table-of-demo-dome-exhibit-novella-text-61
+#testcase-table-of-demo-dome-exhibit-novella-text-62
+#testcase-table-of-demo-dome-exhibit-novella-text-63
+#testcase-table-of-demo-dome-exhibit-novella-text-64
+#testcase-table-of-demo-dome-exhibit-novella-text-65
+#testcase-table-of-demo-dome-exhibit-novella-text-66
+#testcase-table-of-demo-dome-exhibit-novella-text-67
 >rr
 PAGE 57:
 (skipping some totally nonsensical stuff) PAGE 67:
 \\
-#ttc-table-of-demo-dome-exhibit-novella-text-68
-#ttc-table-of-demo-dome-exhibit-novella-text-69
-#ttc-table-of-demo-dome-exhibit-novella-text-70
-#ttc-table-of-demo-dome-exhibit-novella-text-71
-#ttc-table-of-demo-dome-exhibit-novella-text-72
-#ttc-table-of-demo-dome-exhibit-novella-text-73
-#ttc-table-of-demo-dome-exhibit-novella-text-74
-#ttc-table-of-demo-dome-exhibit-novella-text-75
-#ttc-table-of-demo-dome-exhibit-novella-text-76
-#ttc-table-of-demo-dome-exhibit-novella-text-77
+#testcase-table-of-demo-dome-exhibit-novella-text-68
+#testcase-table-of-demo-dome-exhibit-novella-text-69
+#testcase-table-of-demo-dome-exhibit-novella-text-70
+#testcase-table-of-demo-dome-exhibit-novella-text-71
+#testcase-table-of-demo-dome-exhibit-novella-text-72
+#testcase-table-of-demo-dome-exhibit-novella-text-73
+#testcase-table-of-demo-dome-exhibit-novella-text-74
+#testcase-table-of-demo-dome-exhibit-novella-text-75
+#testcase-table-of-demo-dome-exhibit-novella-text-76
+#testcase-table-of-demo-dome-exhibit-novella-text-77
 >rr
 PAGE 68:
 PAGE 77:
 \\
-#ttc-table-of-demo-dome-exhibit-novella-text-78
-#ttc-table-of-demo-dome-exhibit-novella-text-79
-#ttc-table-of-demo-dome-exhibit-novella-text-80
-#ttc-table-of-demo-dome-exhibit-novella-text-81
-#ttc-table-of-demo-dome-exhibit-novella-text-82
-#ttc-table-of-demo-dome-exhibit-novella-text-83
-#ttc-table-of-demo-dome-exhibit-novella-text-84
-#ttc-table-of-demo-dome-exhibit-novella-text-85
-#ttc-table-of-demo-dome-exhibit-novella-text-86
-#ttc-table-of-demo-dome-exhibit-novella-text-87
-#ttc-table-of-demo-dome-exhibit-novella-text-88
+#testcase-table-of-demo-dome-exhibit-novella-text-78
+#testcase-table-of-demo-dome-exhibit-novella-text-79
+#testcase-table-of-demo-dome-exhibit-novella-text-80
+#testcase-table-of-demo-dome-exhibit-novella-text-81
+#testcase-table-of-demo-dome-exhibit-novella-text-82
+#testcase-table-of-demo-dome-exhibit-novella-text-83
+#testcase-table-of-demo-dome-exhibit-novella-text-84
+#testcase-table-of-demo-dome-exhibit-novella-text-85
+#testcase-table-of-demo-dome-exhibit-novella-text-86
+#testcase-table-of-demo-dome-exhibit-novella-text-87
+#testcase-table-of-demo-dome-exhibit-novella-text-88
 >rr
 PAGE 78:
 (skipping some totally nonsensical stuff) PAGE 87:
 PAGE 88:
 \\
-#ttc-table-of-demo-dome-exhibit-novella-text-89
-#ttc-table-of-demo-dome-exhibit-novella-text-90
-#ttc-table-of-demo-dome-exhibit-novella-text-91
-#ttc-table-of-demo-dome-exhibit-novella-text-92
-#ttc-table-of-demo-dome-exhibit-novella-text-93
-#ttc-table-of-demo-dome-exhibit-novella-text-94
-#ttc-table-of-demo-dome-exhibit-novella-text-95
-#ttc-table-of-demo-dome-exhibit-novella-text-96
-#ttc-table-of-demo-dome-exhibit-novella-text-97
-#ttc-table-of-demo-dome-exhibit-novella-text-98
-#ttc-table-of-demo-dome-exhibit-novella-text-99
+#testcase-table-of-demo-dome-exhibit-novella-text-89
+#testcase-table-of-demo-dome-exhibit-novella-text-90
+#testcase-table-of-demo-dome-exhibit-novella-text-91
+#testcase-table-of-demo-dome-exhibit-novella-text-92
+#testcase-table-of-demo-dome-exhibit-novella-text-93
+#testcase-table-of-demo-dome-exhibit-novella-text-94
+#testcase-table-of-demo-dome-exhibit-novella-text-95
+#testcase-table-of-demo-dome-exhibit-novella-text-96
+#testcase-table-of-demo-dome-exhibit-novella-text-97
+#testcase-table-of-demo-dome-exhibit-novella-text-98
+#testcase-table-of-demo-dome-exhibit-novella-text-99
 >rr
 PAGE 89:
 (skipping some totally nonsensical stuff) PAGE 91:
 PAGE 99:
 \\
-#ttc-table-of-demo-dome-exhibit-novella-text-100
+#testcase-table-of-demo-dome-exhibit-novella-text-100
 >read
 The next page (100) makes enough sense, you guess.
 You glance over page 100. The most interesting bit seems to be Undone herd endured, hon. Oh! Run Ended!
@@ -963,7 +963,7 @@ in Sparse Spares.
 >undo
 
 @nud
-#ttc-table-of-evoc-cove-nudges-novella
+#testcase-table-of-evoc-cove-nudges-novella
 >novelal
 You can't change the book's writing. Well, you could, I guess. But this is a museum
 \\
@@ -973,15 +973,15 @@ Yeah, the novel is pretty unbelievable, but it's not there to be profound.
 >lol
 Yeah, the novel is pretty unbelievable, but it's not there to be profound.
 \\
-#ttc-table-of-evoc-cove-nudges-neva
+#testcase-table-of-evoc-cove-nudges-neva
 >neav
 You can't change the book's writing. Well, you could, I guess. But this is a museum
 \\
-#ttc-table-of-evoc-cove-nudges-lol
+#testcase-table-of-evoc-cove-nudges-lol
 >llo
 You can't change the book's writing. Well, you could, I guess. But this is a museum
 \\
-#ttc-table-of-evoc-cove-nudges-evoc
+#testcase-table-of-evoc-cove-nudges-evoc
 >evco
 You don't need to flip anything here, really. Certainly not a room.
 \\
@@ -1063,72 +1063,72 @@ You take a break and get back to, well, running Yorpwald. The museum was about t
 >spears
 There's nothing you need a weapon to fight against.
 \\
-#ttc-table-of-sparse-spares-nudges-trifle
+#testcase-table-of-sparse-spares-nudges-trifle
 >tifler
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-sparse-spares-nudges-placer
+#testcase-table-of-sparse-spares-nudges-placer
 >palcer
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-sparse-spares-nudges-scalper
+#testcase-table-of-sparse-spares-nudges-scalper
 >palcers
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-sparse-spares-nudges-rudest
+#testcase-table-of-sparse-spares-nudges-rudest
 >rudest
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-sparse-spares-nudges-dustpan
+#testcase-table-of-sparse-spares-nudges-dustpan
 >dupstan
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-sparse-spares-nudges-ladder
+#testcase-table-of-sparse-spares-nudges-ladder
 >lardde
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-sparse-spares-nudges-scalpit
+#testcase-table-of-sparse-spares-nudges-scalpit
 >sclipat
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-sparse-spares-nudges-btol
+#testcase-table-of-sparse-spares-nudges-btol
 >blto
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-sparse-spares-nudges-case
+#testcase-table-of-sparse-spares-nudges-case
 >scea
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-sparse-spares-nudges-boltcase
+#testcase-table-of-sparse-spares-nudges-boltcase
 >boltcaes
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-sparse-spares-nudges-best
+#testcase-table-of-sparse-spares-nudges-best
 >bets
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-sparse-spares-nudges-calo
+#testcase-table-of-sparse-spares-nudges-calo
 >calo
 This is a museum! Messing with the exhibits would be very bad form.
 \\
-#ttc-table-of-sparse-spares-nudges-sparse
+#testcase-table-of-sparse-spares-nudges-sparse
 >spresa
 You don't need to flip anything here, really. Certainly not a room.
 \\
-#ttc-table-of-sparse-spares-nudges-spare
+#testcase-table-of-sparse-spares-nudges-spare
 \\
 #testcase-mistake-roiling-clasp
 >clasp
 If there were a puzzle for stealing stuff, that'd work. But there isn't.
 \\
-#ttc-table-of-sparse-spares-nudges-clasp
+#testcase-table-of-sparse-spares-nudges-clasp
 >alcsp
 This is a museum! Messing with the exhibits would be very bad form.
 \\
 >spresa
 You don't need to flip anything here, really. Certainly not a room.
 \\
-#ttc-table-of-sparse-spares-nudges-bulk
+#testcase-table-of-sparse-spares-nudges-bulk
 >ublk
 Bulk-Klub's credibility took a hit once Elvira got on their board of directors, and it may need some fundamental reorganization, but you vowed to use your wits and not your wordplay power for that.
 

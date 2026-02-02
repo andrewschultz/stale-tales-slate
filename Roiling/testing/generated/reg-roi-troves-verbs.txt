@@ -18,7 +18,7 @@
 >enter tastee
 /^Loather Rathole
 
-#ttc-table-of-troves-nowheres-loather-rathole
+#testcase-table-of-troves-nowheres-loather-rathole
 >e
 Consciously going into any hurt-thru might leave you vulnerable. You need to find temporary warmth now you were kicked out from Eh, At Heat.
 Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on.
@@ -43,11 +43,11 @@ You must work to make your dreams of going there become reality.
 >bother
 Such words, thought or spoken, may help some get ahead in life. But they are a bit suboptimal for you here.
 
-#ttc-table-of-troves-attacks-pa-egg-pea
+#testcase-table-of-troves-attacks-pa-egg-pea
 >attack pa egg pea
 It deserves to be ripped to shreds, but that'd just be littering.
 
-#ttc-table-of-troves-attacks-tears-taser
+#testcase-table-of-troves-attacks-tears-taser
 >attack tears taser
 It would fight back much more powerfully.
 
@@ -66,38 +66,38 @@ Random dialogue on again.
 Eew-gas sewage. Skint-stink.
 
 >score
-Score in a scenario: 0 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >gape
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 1 out of 30 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >stare
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 2 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >hate
 Your score has just gone up by one point
 
-#+ttc-table-of-troves-nowheres-loather-rathole
+#+testcase-table-of-troves-nowheres-loather-rathole
 >e
 Consciously going into any hurt-thru might leave you vulnerable. You need to find motivation to get through the Race Acre. You need to catch that thief!
 !Physical directions are not as important as the actions and thoughts that help you go forward. Think and focus to move on.
 
 >score
-Score in a scenario: 3 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >care
 Your score has just gone up by one point
 
 /^Bustle Sublet
 
-#ttc-table-of-troves-nowheres-bustle-sublet
+#testcase-table-of-troves-nowheres-bustle-sublet
 >e
 The reastier arteries lead nowhere good. You still have a lot to look for.
 
@@ -110,7 +110,7 @@ The reastier arteries lead nowhere good. You still have a lot to look for.
 No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world.
 
 >score
-Score in a scenario: 4 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #verbcase listen-troves-if-noun-is-sob-ever-verbose
 >listen verbose
@@ -121,12 +121,12 @@ The sob ever verbose just rattles on and on. A sad, stupid, winding story about
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 5 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >surmise
 Your score has just gone up by one point
 >score
-Score in a scenario: 6 out of 30 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >spot
 Your score has just gone up by one point
@@ -134,9 +134,9 @@ Your score has just gone up by one point
 /^Boarded Roadbed
 
 >score
-Score in a scenario: 7 out of 30 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-troves-nowheres-boarded-roadbed
+#testcase-table-of-troves-nowheres-boarded-roadbed
 >e
 A voice says "Bad! Redo!" when you try to drift away from where L'Clear Cellar must be. Besides, that bee might chase after you. Maybe if you disabled it a bit, you could have a brief walk that would help you think.
 !Nevertheless, on your brief walk, you saw
@@ -154,7 +154,7 @@ No one direction seems better or worse than the next. Perhaps you need to find d
 >stay
 by one point
 >score
-Score in a scenario: 8 out of 30 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+verbcase goto-troves-default
 >gt rathole
@@ -177,7 +177,7 @@ A snore arises from the arena. You see red. There's more, if you can deal with i
 >believe
 Your score has just gone up by one point
 
-#+ttc-table-of-troves-nowheres-boarded-roadbed
+#+testcase-table-of-troves-nowheres-boarded-roadbed
 >e
 There's a chance you might wind up in ruts: Rustin' Ruin St.!
 
@@ -197,14 +197,14 @@ The live bee is silent. So is the SNORE SO ARENA beneath it.
 Nothing now that you reasoned your way around the arena's distractions.
 
 >score
-Score in a scenario: 10 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >recall
 by one point
 
 /^Drain Nadir
 
-#ttc-table-of-troves-nowheres-drain-nadir
+#testcase-table-of-troves-nowheres-drain-nadir
 >e
 No. You're so low, you might just walk off to SAD PIER and end it all, maybe after eating a few rad pies that won't make you see red.
 
@@ -217,17 +217,17 @@ No. You're so low, you might just walk off to SAD PIER and end it all, maybe aft
 No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move ahead in the world.
 
 >score
-Score in a scenario: 11 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >despair
 Your score has just gone up by one point
 
-#+ttc-table-of-troves-nowheres-drain-nadir
+#+testcase-table-of-troves-nowheres-drain-nadir
 >e
 No. You're so low, you can picture yourself slipping on a rind or dinar. "I... darn." You need to build yourself up here, somehow.
 
 >score
-Score in a scenario: 12 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #verbcase smell-troves-if-noun-is-large-regal-lager
 >smell lager
@@ -236,7 +236,7 @@ A faint rye-be-beery odor.
 >glare
 Your score has just gone up by one point
 >score
-Score in a scenario: 13 out of 30 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #verbcase smell-troves-if-player-is-in-drain-nadir
 >smell
@@ -258,9 +258,9 @@ Your score has just gone up by one point
 /^Boredom Bedroom
 
 >score
-Score in a scenario: 14 out of 30 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-troves-nowheres-boredom-bedroom
+#testcase-table-of-troves-nowheres-boredom-bedroom
 >e
 Running into a wall--or unprepared into the Real World--would leave your bod more red: boom! Study what's in the bedroom, and how it can make you better.
 
@@ -283,26 +283,26 @@ No one direction seems better or worse than the next. Perhaps you need to find d
 >relapse
 Your score has just gone up by one point
 >score
-Score in a scenario: 15 out of 30 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >bolster
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 30 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >master
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 17 out of 30 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >deal
 Your score has just gone up by one point
 
 /^Browse Bowers
 
-#ttc-table-of-troves-nowheres-browse-bowers
+#testcase-table-of-troves-nowheres-browse-bowers
 >e
 You are definitely going places, but you are going even better places than the Miser Emirs Mires. To you, they are un-go-ish housing. Maybe you can learn to want and expect more right here.
 
@@ -323,7 +323,7 @@ You are definitely going places, but you are going even better places than the M
 No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move further ahead in the world.
 
 >score
-Score in a scenario: 18 out of 30 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >discover
 by one point
@@ -336,9 +336,9 @@ Your score has just gone up by one point
 /^Econ-Cone
 
 >score
-Score in a scenario: 20 out of 30 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-troves-nowheres-econ-cone
+#testcase-table-of-troves-nowheres-econ-cone
 >e
 The Save Aves are a well-off place, to be sure, where everyone has a nice vase, but only one. You can do even better!
 
@@ -369,7 +369,7 @@ No one direction seems better or worse than the next. Perhaps you need to find d
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 21 out of 30 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >listen
 Actually, you can't help but hear posh dialogue. Anyway, no more badgering beggar din.
@@ -391,18 +391,18 @@ Random dialogue on again.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 22 out of 30 total points in the current region, Troves. Lowest score to solve is 27. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >ascertain
 >score
-Score in a scenario: 23 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >ponder
 Your score has just gone up by one point
 
 /^Upscale Capsule
 
-#ttc-table-of-troves-nowheres-upscale-capsule
+#testcase-table-of-troves-nowheres-upscale-capsule
 >e
 You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. And you couldn't just run out for no reason at all.
 
@@ -415,7 +415,7 @@ You couldn't just run out on your company and your responsibilities like that! Y
 No one direction seems better or worse than the next. Perhaps you need to find direction inside you, and you will move even further ahead in the world.
 
 >score
-Score in a scenario: 24 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #verbcase sleep-troves-if-player-is-in-upscale-capsule
 >sleep
@@ -428,38 +428,38 @@ White noise, it is on. Whee.
 >deserve
 Your score has just gone up by one point
 
-#+ttc-table-of-troves-nowheres-upscale-capsule
+#+testcase-table-of-troves-nowheres-upscale-capsule
 >e
 You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. And you'd need to have proved yourself. You haven't, yet.
 
 >score
-Score in a scenario: 25 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >last
 Your score has just gone up by one point
 
-#+ttc-table-of-troves-nowheres-upscale-capsule
+#+testcase-table-of-troves-nowheres-upscale-capsule
 >e
 You couldn't just run out on your company and your responsibilities like that! You would need to leave a note or something first. And, of course, you would need to mentally prepare yourself to. I guess you could leave now, if you did the right thing, first.
 
 >score
-Score in a scenario: 26 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >ramble
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 27 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >resist
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 28 out of 30 total points in the current region, Troves. Lowest score to solve is 29. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >romanticise
 >score
-Score in a scenario: 29 out of 30 total points in the current region, Troves. There are no secrets left to find here, so the score to win is 30 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >recant
 Your score has just gone up by one point
@@ -467,4 +467,4 @@ Your score has just gone up by one point
 /^Strip of Profits
 
 >score
-, Troves (30/30)
+, Troves ({SCORE}/{MAX})

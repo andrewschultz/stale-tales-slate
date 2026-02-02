@@ -157,14 +157,14 @@ by one point
 >{include} _1_eval_back
 >{include} _1_to_2
 
-#ttc-table-of-curtis-rewards-1-2
+#testcase-table-of-curtis-rewards-1-2
 >s
 "Glad you didn't say scru-it. We're getting somewhere." Curtis hands you a coin for your efforts.
 >n
 >{include} _2_to_3
->s
 
-#ttc-table-of-curtis-rewards-2-3
+#testcase-table-of-curtis-rewards-2-3
+>s
 Curtis, looking quite the citric critic, hands you another coin identical to the one he gave you before.
 >n
 >{include} _3_to_4
@@ -182,7 +182,7 @@ Curtis, looking quite the citric critic, hands you another coin identical to the
 >{include} _2_to_3
 >{include} _3_to_4
 
-#ttc-table-of-curtis-rewards-2-4
+#testcase-table-of-curtis-rewards-2-4
 Curtis goes to take your bounty but backs off on seeing how much there is. "I, old as..." He snaps his fingers. "A solid load is laid, so! Lo, aids! Oi, lads!" he booms, and a couple assistants carry away your haul. "Do sail!" he exhorts you.
 Curtis hands you another coin and a suspicious looking dollar. He nods as if to say, that's all you'll get from him.
 
@@ -195,7 +195,7 @@ Curtis hands you another coin and a suspicious looking dollar. He nods as if to 
 >{include} _2_to_3
 >s
 
-#ttc-table-of-curtis-rewards-1-3
+#testcase-table-of-curtis-rewards-1-3
 "Wow. So much done at once." Curtis hands you two coins for your efforts.
 >n
 >{include} _3_to_4
@@ -210,7 +210,7 @@ Curtis hands you another coin and a suspicious looking dollar. He nods as if to 
 >{include} _2_to_3
 >{include} _3_to_4
 
-#ttc-table-of-curtis-rewards-1-4
+#testcase-table-of-curtis-rewards-1-4
 "Spurtin' turnips! All that at once? I--well, here's the rest of my junk I don't know what to do with." Curtis, looking very pleased, hands you two coins and some sort of dollar.
 
 * 00234
@@ -220,7 +220,7 @@ Curtis hands you another coin and a suspicious looking dollar. He nods as if to 
 >{include} _1_to_2
 >s
 
-#ttc-table-of-curtis-rewards-0-2
+#testcase-table-of-curtis-rewards-0-2
 "Wow! You got a lot done on that errand. Here's a Tekno-Token AND a coin. If you go to the clearing east of the wells, the token'll last you a bit. More deals. Coin'll be useful for...something."
 A Tekno-Token. It's long since been Yorpwald's equivalent of a credit or debit card. It'll be handier than more classical currency.
 >n
@@ -252,14 +252,14 @@ Curtis hands you another coin and a suspicious looking dollar. He nods as if to 
 >{include} _1_to_2
 >{include} _2_to_3
 
-#ttc-table-of-curtis-rewards-0-3
+#testcase-table-of-curtis-rewards-0-3
 >s
 "Surprised you can lug all that back! Here's a Tekno-Token to use in the clearing east of the wells, along with some coins. Maybe you'll find what to do with them. Keep it up!"
 A Tekno-Token. It's long since been Yorpwald's equivalent of a credit or debit card. It'll be handier than more classical currency.
 >n
 >{include} _3_to_4
 
-#ttc-table-of-curtis-rewards-3-4
+#testcase-table-of-curtis-rewards-3-4
 "Nice going. Here. Have this paper currency I never could quite spend. It looks kind of illegal. It's all I have for you."
 
 * 00004
@@ -270,7 +270,7 @@ A Tekno-Token. It's long since been Yorpwald's equivalent of a credit or debit c
 >{include} _2_to_3
 >{include} _3_to_4
 
-#ttc-table-of-curtis-rewards-0-4
+#testcase-table-of-curtis-rewards-0-4
 "Spurtin' turnips! All that at once? I--well, here's the rest of my junk I don't know what to do with." Curtis, looking very pleased, hands you two coins and a droll dollar.
 
 * _intro
@@ -355,7 +355,7 @@ by one point
 
 * _1_eval_back
 
-#ttc-table-of-curtis-rewards-0-1
+#testcase-table-of-curtis-rewards-0-1
 >s
 !coin
 !coins

@@ -21,7 +21,7 @@
 !by one point
 You try and cuss, but the plebe is not intimidated by your civilian clothes. Perhaps you need something proclaiming your authority.
 
-#ttc-table-of-presto-prefigurings-plebe
+#testcase-table-of-presto-prefigurings-plebe
 >pf
 You can shout BLEEP at the plebe once you look more authoritative.
 
@@ -58,21 +58,21 @@ by one point
 Your score has just gone up by one point
 /^Austerer Treasure
 
-#ttc-table-of-region-initial-scoring-commentary-presto-1
+#testcase-table-of-region-initial-scoring-commentary-presto-1
 It feels cathartic, using a non-dirty exclamation to get going.
 
 >score
-Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >phooey
 Your score has just gone up by two points
-#ttc-table-of-region-initial-scoring-commentary-presto-2
+#testcase-table-of-region-initial-scoring-commentary-presto-2
 Gee! Such good clean fun! But--how many clean swears are there? Golly! If you run into compound words...
 >score
-Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >score
-Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >e
 
@@ -84,7 +84,7 @@ Score in a scenario: 3 out of 41 total points in the current region, Presto. Low
 The yak emits an air of aggressive apathy. It's like the yak is foiling your attempts, or perhaps you wonder if the yoke might do something nasty to the yak when it changes.
 Perhaps it would be an act of kindness to move the yak from bored to sleepy. A bedtime song or story or something.
 
-#ttc-table-of-presto-prefigurings-drab-yoke
+#testcase-table-of-presto-prefigurings-drab-yoke
 >pf
 You can change the drab yoke to a KEYBOARD once it's free of the bored yak.
 
@@ -96,13 +96,13 @@ Your score has just gone up by one point
 You are also wearing a tsar star.
 
 >score
-Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >drat
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 5 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 
@@ -110,7 +110,7 @@ Score in a scenario: 5 out of 41 total points in the current region, Presto. Low
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >e
 /^Marines Seminar Remains
@@ -129,7 +129,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 7 out of 41 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >w
 
@@ -166,7 +166,7 @@ by three points
 >mazeltov
 Your score has just gone up by three points
 >score
-Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >blam
 Your score has just gone up by one point
 
@@ -177,13 +177,13 @@ It's trickier to see through than moist-o-mist. Anyone or anything could be wait
 Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
-Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-prerule-table-of-presto-anagrams-pre-ether-there-rule
 >there
 You suspect someone is in the mist where the maze was. "THERE!" you yell. But you doubt you fooled or intimidated them. You need backup.
 
-#ttc-table-of-presto-prefigurings-ether
+#testcase-table-of-presto-prefigurings-ether
 >pf
 You can shout THERE once you have the firepower and assistance to win the fight in the ether
 
@@ -203,7 +203,7 @@ Rand is Leo's mirror image, loutish and muscular and taller than you. He looks o
 Rand is Leo's mirror image, loutish and muscular and taller than you.
 
 >score
-Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >darn
 Your score has just gone up by one point
@@ -213,7 +213,7 @@ Your score has just gone up by one point
 /^At the moment, "it" means Rand, "him" means Rand, "her" means the lamb and "them" means both (Leo and Rand|Rand and Leo)\.$
 
 >score
-Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >whassup
 Your score has just gone up by one point
@@ -227,12 +227,12 @@ Rand is Leo's mirror image, loutish and muscular and taller than you.
 Leo is Rand's mirror image--violent, not evil. A naughty anythug on a gay hunt
 
 >score
-Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >goodness
 by one point
 >score
-Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 
@@ -278,7 +278,7 @@ Your score has just gone up by one point
 !(taking the popgun first while you mess with the boing-go bin)
 
 >score
-Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >load gun with dart
 You put the dart into the PG-on-up popgun.
@@ -291,7 +291,7 @@ Your score has just gone up by one point
 Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
-Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 /^Saps' Pass
@@ -303,7 +303,7 @@ Score in a scenario: 17 out of 41 total points in the current region, Presto. Lo
 Your score has just gone up by one point
 /^Phat Path
 >score
-Score in a scenario: 18 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-prerule-table-of-presto-anagrams-pre-hogs-not-keys-rule
 >thisalt
@@ -326,7 +326,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 # all 6 combos to get through
 >tough
@@ -409,7 +409,7 @@ Dat was a good dust-up
 Your score has just gone up by one point
 But we ain't bored yet, boss!
 >score
-Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >tough
 Your score has just gone up by one point
@@ -417,12 +417,12 @@ Hut! Go!
 Dat was a good dust-up
 
 >score
-Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >trasch
 by one point
 >score
-Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 /^Hacks' Shack
@@ -430,11 +430,11 @@ Score in a scenario: 22 out of 41 total points in the current region, Presto. Lo
 >x catechism
 The title is Algorithms, Logarithms, and it's by Olga Smirth.
 
-#ttc-table-of-notepad-entries-hacking
+#testcase-table-of-notepad-entries-hacking
 >pad hacking
 A reminder that cussing won't make a computer work any better, and you need to get everything set up first on your comfy labs slab, and only then should you take action with various technical programming activities.
 
-#ttc-table-of-notepad-entries-leo-and-rand
+#testcase-table-of-notepad-entries-leo-and-rand
 >pad leo
 /(Leo and Rand|Rand and Leo) may be able to help you with heavy lifting.
 
@@ -456,7 +456,7 @@ Only one more piece of hardware is needed, and the computer will work.
 You realize you might trip over the screen if you leave on the floor. Fortunately, the labs slab is just the place to hoist the computer screen so it's useful! And you do.
 
 >score
-Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >get polemic
 You take it. You don't need to, but it'd be nice to have handy.
@@ -469,7 +469,7 @@ You take it. You don't need to, but it'd be nice to have handy.
 There is no computer around. You probably want to go back to the Hacks' Shack for this.
 You add the information to your pedanto-notepad under FLIPS.
 
-#ttc-table-of-presto-prefigurings-im-le-cop-polemic
+#testcase-table-of-presto-prefigurings-im-le-cop-polemic
 >pf
 You can COMPILE once you've started coding.
 >undo
@@ -488,19 +488,19 @@ Your score has just gone up by one point
 You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or even remember the basics. You can just make it a SKID, as long as the disk isn't in a disk drive.
 
 >score
-Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >leaf
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-prerule-table-of-presto-anagrams-pre-reboot-rule
 >reboot
 You have nothing to type with, so it doesn't do much good.
 
-#ttc-table-of-presto-prefigurings-be-troo-e-robot
+#testcase-table-of-presto-prefigurings-be-troo-e-robot
 >pf
 You can have the Be-Troo E-Robot REBOOT once your computing parts are in place.
 
@@ -513,7 +513,7 @@ You may need sleep later, but not now. Besides, you have nowhere to sleep.
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >get book
 >push skid s
@@ -535,7 +535,7 @@ That stupid SHATTER-THREATS law might pick you up out here. Anyway, the yak on t
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >keyboard
 Your score has just gone up by one point
@@ -546,7 +546,7 @@ You can now do computery things unimpeded! Hooray!
 Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
-Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >put keyboard on slab
 It already is!
@@ -583,7 +583,7 @@ The disk is where it needs to be, and the skid has served its purpose. Changing 
 >sleep
 You may need sleep later, but not now. Besides, you have nowhere to sleep.
 
-#ttc-table-of-notepad-entries-sleep
+#testcase-table-of-notepad-entries-sleep
 >pad sleep
 SLEEP is only advisable in a protected area.
 
@@ -608,7 +608,7 @@ Your score has just gone up by one point
 You check where it's hidden. It looks to be sleeping after helping you reboot.
 
 >score
-Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >capslock
 Your score has just gone up by one point
@@ -631,7 +631,7 @@ fits in perfectly
 You haven't yet made anywhere comfortable to sleep.
 You add the information to your pedanto-notepad under FLIPS.
 
-#ttc-table-of-presto-prefigurings-peels-speel
+#testcase-table-of-presto-prefigurings-peels-speel
 >pf
 You can SLEEP once you've gotten a good start on your coding task.
 
@@ -639,7 +639,7 @@ You can SLEEP once you've gotten a good start on your coding task.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >compile
 !by one point
@@ -656,7 +656,7 @@ That stupid NEED IF-DEFINE and that peels speel, still.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >compile
 by one point
@@ -674,7 +674,7 @@ Ugh! There must be something wrong with the code you compiled, if you're seeing 
 The process of debugging is going to take a while. You will need some sort of energy. That coal won't cut it. Too early 20th century.
 !by one point
 
-#ttc-table-of-presto-prefigurings-bub-dude-egg
+#testcase-table-of-presto-prefigurings-bub-dude-egg
 >pf
 You weren't ready to DEBUG yet.
 >undo
@@ -684,24 +684,24 @@ You weren't ready to DEBUG yet.
 >undo
 
 >score
-Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >cola
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >mug
 Your score has just gone up by one point
 >score
-Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >avider
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 36 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >au 0
 >purloin usb
@@ -719,7 +719,7 @@ DEBUG INFO: min-up codepath
 You imagine it can't be too hard to open up the disk drive and put them in.
 
 >score
-Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+testcase-prerule-table-of-presto-anagrams-pre-bub-dude-egg-rule
 >debug
@@ -738,7 +738,7 @@ Your score has just gone up by one point
 It's an ordinary USB. Or it would be, around anyone but you.
 
 >score
-Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >misses
 !presto
@@ -759,13 +759,13 @@ by one point
 DEBUG INFO: min-up codepath
 Well, flipping Drive E didn't help speed up your programming, but hooray for generally satisfying your curiosity!
 >score
-Score in a scenario: 39 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >tab
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >bus
 Your score has just gone up by one point
@@ -788,4 +788,4 @@ You could also have made the USB into a BUS.
 
 >score
 
-Presto (41/41)
+Presto ({MAX}/{MAX})

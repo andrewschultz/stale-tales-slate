@@ -84,7 +84,7 @@ Your score has just gone up by one point.
 Bean soup. Subpoena is near.
 
 >score
-Score in a scenario: 1 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >satchel
 Your score has just gone up by one point.
@@ -97,7 +97,7 @@ Shouty youths.
 You realize a basement is the sort of thing that would be below, even if, once you get there, it's called something different.
 Your score has just gone up by two points
 >score
-Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 #+testcase-outside-dusty-study
 >exit
@@ -109,16 +109,16 @@ Score in a scenario: 4 out of 15 total points in the current region, Ordeal Relo
 The only way you seem to be able to go is down.
 
 >stable
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
 
 >score
-Score in a scenario: 5 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 9. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >chimney
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 10.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
 
 >score
-Score in a scenario: 6 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 10. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 #+testcase-outside-dusty-study
 >exit
@@ -129,10 +129,10 @@ You have more than one way to leave: up, down and inside. So you'll need to spec
 There are three unblocked exits: up, down and inside.
 
 >painting
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
 
 >score
-Score in a scenario: 7 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 11. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >in
 /^Farming Framing
@@ -147,7 +147,7 @@ The only way to exit is inside, so let's go that way.
 >exits
 The only way you seem to be able to go is inside to Dusty Study.
 
-#ttc-table-of-ordeal-reload-nowheres-farming-framing
+#testcase-table-of-ordeal-reload-nowheres-farming-framing
 >n
 No time for mooching around your means manse. You probably need to take a secret passage in, or down.
 
@@ -156,12 +156,12 @@ No time for mooching around your means manse. You probably need to take a secret
 Thankfully, this is a game about anagrams and not spoonerisms, and you cleaned the tables before flipping them, so you smell no table scrap.
 
 >stair
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 12.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
 
 >score
-Score in a scenario: 8 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 12. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#+ttc-table-of-ordeal-reload-nowheres-farming-framing
+#+testcase-table-of-ordeal-reload-nowheres-farming-framing
 >n
 No time for mooching around your means manse. You probably need to take that secret passage in, or down.
 
@@ -171,7 +171,7 @@ No time for mooching around your means manse. You probably need to take that sec
 >u
 /^Highest Heights
 
-#ttc-table-of-ordeal-reload-nowheres-highest-heights
+#testcase-table-of-ordeal-reload-nowheres-highest-heights
 >n
 You can go back IN to the study, though you don't need to, or you could try to get the pram out of the way.
 
@@ -202,19 +202,19 @@ You have more than one way to leave: down and inside. So you'll need to specify 
 >undo
 
 >ramp
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 13.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
 
 >score
-Score in a scenario: 9 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 13. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#+ttc-table-of-ordeal-reload-nowheres-highest-heights
+#+testcase-table-of-ordeal-reload-nowheres-highest-heights
 >n
 You can go back IN to the study, though you don't need to, or you could try going DOWN the ramp.
 
 >d
 /^Largely All-Grey Gallery
 
-#ttc-table-of-ordeal-reload-nowheres-largely-all-grey-gallery
+#testcase-table-of-ordeal-reload-nowheres-largely-all-grey-gallery
 >w
 You can probably go back up, or you can go in if you're ready to face what's beyond.
 
@@ -234,7 +234,7 @@ You have more than one way to leave: up and inside. So you'll need to specify wh
 in Manor! You've found all the secrets here. You can just exit the gallery now, but it'd be a good idea to examine the settler, first.
 
 >score
-Score in a scenario: 10 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >x settler
 
@@ -244,7 +244,7 @@ Score in a scenario: 10 out of 15 total points in the current region, Ordeal Rel
 >listen elmo
 Awkward silence, what with Elmo holding that rifle.
 
-#ttc-table-of-ordeal-reload-attacks-elmo
+#testcase-table-of-ordeal-reload-attacks-elmo
 >attack elmo
 Elmo kind of has the upper hand here.
 
@@ -252,9 +252,9 @@ Elmo kind of has the upper hand here.
 by one point
 
 >score
-Score in a scenario: 11 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#+ttc-table-of-ordeal-reload-attacks-elmo
+#+testcase-table-of-ordeal-reload-attacks-elmo
 >attack elmo
 Dialogue is more important right now than action. Elmo is here to help you at great personal risk, and if you poked around, it'd mean less time for him to escape.
 You can RECAP to see your options.
@@ -282,7 +282,7 @@ Nothing yet. You need to use your powers to reveal the exit.
 #verbcase sleep-ordeal-reload-if-player-is-in-carven-cavern
 It's way safer here than in the Means Manse, but it's also way less comfortable.
 
-#ttc-table-of-goto-sectioning--1-ordeal-reload
+#testcase-table-of-goto-sectioning--1-ordeal-reload
 >gt study
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 
@@ -299,7 +299,7 @@ Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 >gt farming framing
 Your Means Manse was surrounded, and you escaped. Bad idea to turn back.
 
-#ttc-table-of-ordeal-reload-attacks-plaster
+#testcase-table-of-ordeal-reload-attacks-plaster
 >attack plaster
 There's too much of it, and it's too hardened.
 
@@ -307,15 +307,15 @@ There's too much of it, and it's too hardened.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >stapler
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#ttc-table-of-ordeal-reload-attacks-apertured-departure
+#testcase-table-of-ordeal-reload-attacks-apertured-departure
 >attack apertured departure
 It's still too thick, even though some of the plaster is peeled away.
 
@@ -334,14 +334,14 @@ You can't fit through the departure yet.
 >staple aperture
 
 >score
-Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 # Carven Cavern has several "check going" rules to make sure you are directed to the apertured departure
 >au 0
 >w
 The only way to make progress is inward, through the apertured departure.
 
-#+ttc-table-of-ordeal-reload-attacks-apertured-departure
+#+testcase-table-of-ordeal-reload-attacks-apertured-departure
 >attack apertured departure
 You can just enter it.
 
@@ -349,8 +349,9 @@ You can just enter it.
 The Respect Specter coughs.
 >y
 by one point
+
 >score
-Score in a scenario: 15 out of 15 total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
+Score in a scenario: {MAX} out of {MAX} total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
 
 #+testcase-exits-carven-cavern
 >exits

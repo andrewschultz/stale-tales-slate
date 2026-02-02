@@ -13,184 +13,184 @@
 The Gird Grid is the real thing--endorsed by Dr. Ridrig! It is divided 2x3, into sections labeled, not quite in alphabetical order, U(1), V(2), P(3), Y(4), W(5) and T(6).
 It's tricky enough to look at, you can't just X it to examine. You need to XG, along with the part of the grid you want to examine!
 
-#ttc-table-of-gird-grid-topics-1-u
+#testcase-table-of-gird-grid-topics-1-u
 >xg 1
 The Poison Stripe surrounding the Same Mesa has caused people there to lose all sense of direction, physically and mentally. If one person could escape, that would change. The Oopsin' Priest may be able to help you.
 >xg u
 The Poison Stripe surrounding the Same Mesa has caused people there to lose all sense of direction, physically and mentally. If one person could escape, that would change. The Oopsin' Priest may be able to help you.
 
-#ttc-table-of-gird-grid-topics-2-v
+#testcase-table-of-gird-grid-topics-2-v
 >xg 2
 Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order.
 >xg v
 Spoiloplis was founded on self-help books, pyramid schemes, and other shady industries. Mayor Irv Lea lauds it as a center of positive thought. And not the nerdy brainy thought that goes into anagrams. You probably can't meet him, but maybe you can upset the social order.
 
-#ttc-table-of-gird-grid-topics-3-p
+#testcase-table-of-gird-grid-topics-3-p
 >xg 3
 There is rumor of a Hacks' Shack immune to Elvira's SHATTER-THREATS legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks' Shack, you may feel a sense of normality that gets you back to how things were before Elvira.
 >xg p
 There is rumor of a Hacks' Shack immune to Elvira's SHATTER-THREATS legislation behind a near-nonsensical maze that may have you saying or thinking impolite words. In that Hacks' Shack, you may feel a sense of normality that gets you back to how things were before Elvira.
 
-#ttc-table-of-gird-grid-topics-4-y
+#testcase-table-of-gird-grid-topics-4-y
 >xg 4
 A seashore seahorse mentioned subsea abuses you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it.
 >xg y
 A seashore seahorse mentioned subsea abuses you need freaky fakery to avoid. Something about a hideout, and a gang called DIE THOU. Vigorous action is necessary, and a lot of it.
 
-#ttc-table-of-gird-grid-topics-5-w
+#testcase-table-of-gird-grid-topics-5-w
 >xg 5
 The Wildest Wilteds are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. The Curst Palace lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow...
 
 >xg w
 The Wildest Wilteds are not to be traversed lightly. People protecting their territory just because. Bandits sacking taverns for no reason. The Curst Palace lies there, at the other side of Leak Lake. Condemned to be torn down to make a new MoneyCo office. Tax-free and all. Oh, and luxury condos endorsed by Avrile, that lifestyle maven. But if you could restore the palace somehow...
 
-#ttc-table-of-gird-grid-topics-6-t
+#testcase-table-of-gird-grid-topics-6-t
 >xg 6
 Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!
 >xg t
 Little is known about the region beyond Store T except that an Or-Not-O-Tron dissuades people from paying it much attention. It must be important!
 
-#ttc-table-of-gird-grid-topics-0
+#testcase-table-of-gird-grid-topics-0
 >xg 0
 You'd guess area zero would be the ordeal reload in your Means Manse.
 
-#ttc-table-of-gird-grid-topics-7
+#testcase-table-of-gird-grid-topics-7
 >xg 7
 You vaguely dread a seventh area, as if there isn't enough already. But on the other hand, it would be nice to have assurance you'd survive all the way there!
 
-#ttc-table-of-gird-grid-topics-8
+#testcase-table-of-gird-grid-topics-8
 >xg 8
 You vaguely dread an eighth area area, as if there isn't enough already. But on the other hand, it would be nice to have assurance you'd survive all the way there!
 
-#ttc-table-of-gird-grid-topics-9
+#testcase-table-of-gird-grid-topics-9
 >xg 9
 You vaguely dread a ninth area area, as if there isn't enough already. But on the other hand, it would be nice to have assurance you'd survive all the way there!
 
-#ttc-table-of-gird-grid-topics-f
+#testcase-table-of-gird-grid-topics-f
 >xg f
 You daydream back to solving Store F. Salad days!
 
-#ttc-table-of-gird-grid-topics-i
+#testcase-table-of-gird-grid-topics-i
 >xg i
 You daydream back to solving Store I. Salad days!
 
-#ttc-table-of-gird-grid-topics-m
+#testcase-table-of-gird-grid-topics-m
 >xg m
 You daydream back to solving Store M. Salad days!
 
-#ttc-table-of-gird-grid-topics-r
+#testcase-table-of-gird-grid-topics-r
 >xg r
 You daydream back to solving Store R and defeating Red Bull Burdell. Salad days!
 
 
-#ttc-table-of-x1-reasoning-1
+#testcase-table-of-x1-reasoning-1
 >x x1
 (1/4) Example 1 gives the example of APES' APSE and RYY?.
 
-#ttc-table-of-x1-reasoning-2
+#testcase-table-of-x1-reasoning-2
 >x x1
 (2/4) The fourth letter of APES/APSE must be E or S, but it also must be a consonant, or the final word would have three consonants and one vowel. So it is S.
 
-#ttc-table-of-x1-reasoning-3
+#testcase-table-of-x1-reasoning-3
 >x x1
 (3/4) Knowing slot 4 is S means slot 1, a consonant, is P.
 
-#ttc-table-of-x1-reasoning-4
+#testcase-table-of-x1-reasoning-4
 >x x1
 (4/4) But then since slot 3 is yellow, it can't be E. That gives us PEAS.
 
-#ttc-table-of-x2-reasoning-1
+#testcase-table-of-x2-reasoning-1
 >x x2
 (1/5) Example 2 is MERE MOOR scanning to R?R?. It notes the two words aren't anagrams, but combined, they anagram EMOR EMOR, twice.
 
-#ttc-table-of-x2-reasoning-2
+#testcase-table-of-x2-reasoning-2
 >x x2
 (2/5) So the final word is an anagram of EMOR. Figuring the "right" anagram from two different words that don't anagram each other requires a bit of counting. So what is the original word?
 
-#ttc-table-of-x2-reasoning-3
+#testcase-table-of-x2-reasoning-3
 >x x2
 (3/5) Since slots 1 and 3 are consonants, and the final word has two vowels and two consonants, so both slots 2 and 4 must be vowels.
 
-#ttc-table-of-x2-reasoning-4
+#testcase-table-of-x2-reasoning-4
 >x x2
 (4/5) Slot 2 is ambiguous as it can be E or O, but slot 4 has to be E. So slot 2 is O.
 
-#ttc-table-of-x2-reasoning-5
+#testcase-table-of-x2-reasoning-5
 >x x2
 (5/5) Slot 1 can't be M, so it is R. ROME. Note that this is a proper name, which should not show up except for optional points.
 
-#ttc-table-of-x3-reasoning-1
+#testcase-table-of-x3-reasoning-1
 >x x3
 (1/5) Example 3 is of the SACRED CEDARS you visited on your trip to Yorpwald, and if, hypothetically, it scanned six question marks. Which seems completely unhelpful. But it is not!
 
-#ttc-table-of-x3-reasoning-2
+#testcase-table-of-x3-reasoning-2
 >x x3
 (2/5) Each ambiguous reading has two possibilities, giving SC/AE/CD/RA/ER/DS.
 
-#ttc-table-of-x3-reasoning-3
+#testcase-table-of-x3-reasoning-3
 >x x3
 (3/5) Here is where there is relatively focused guesswork. S, C and D form a loop, as do A, R and E. There are four possibilities total.
 
-#ttc-table-of-x3-reasoning-4
+#testcase-table-of-x3-reasoning-4
 >x x3
 (4/5) SACRED, SECARD. CADRES, CEDRAS.
 
-#ttc-table-of-x3-reasoning-5
+#testcase-table-of-x3-reasoning-5
 >x x3
 (5/5) Since SACRED is part of the original phrase, you can eliminate it. Two of the possibilities are, in fact, proper names, but CADRES is the only one that's a word.
 
-#ttc-table-of-x4-reasoning-1
+#testcase-table-of-x4-reasoning-1
 >x x4
 (1/6) Example 4 is of a three-word thing object called a LOTS-O-LOOTS STOOL. In this case, the three groupings of five letters may make question marks more ambiguous, but non-question marks may be clearer.
 
-#ttc-table-of-x4-reasoning-2
+#testcase-table-of-x4-reasoning-2
 >x x4
 (2/6) If the reading you get is R??R?, you may be discouraged to see slot 5 can be O, S and L. Slot 2 and 3 can be O or T, making slot 5 a consonant, but since there are two O's, you could have OO to make slot 5 a vowel.
 
-#ttc-table-of-x4-reasoning-3
+#testcase-table-of-x4-reasoning-3
 >x x4
 (3/6) However, you may notice slot 1 is forced to be T, since it's a consonant and not L or S.
 
-#ttc-table-of-x4-reasoning-4
+#testcase-table-of-x4-reasoning-4
 >x x4
 (4/6) Similarly, slot 4 must be L.
 
-#ttc-table-of-x4-reasoning-5
+#testcase-table-of-x4-reasoning-5
 >x x4
 (5/6) That leaves OO for slots 2 and 3, and slot 5 is S. TOOLS is the answer.
 
-#ttc-table-of-x4-reasoning-6
+#testcase-table-of-x4-reasoning-6
 >x x4
 (6/6) This case is here to remind you that sometimes question-marked clues will lead the way, but other times, solid colors on the settler will. Especially for longer words, it's worth writing your logic out.
 
-#ttc-table-of-x5-reasoning-1
+#testcase-table-of-x5-reasoning-1
 >x x5
 (1/8) Example 5 is an ESPRIT STRIPE. The clue is ?R??R?.
 
-#ttc-table-of-x5-reasoning-2
+#testcase-table-of-x5-reasoning-2
 >x x5
 (2/8) Believe it or not, things falls into place quickly if you use some logic-puzzle tricks.
 
-#ttc-table-of-x5-reasoning-3
+#testcase-table-of-x5-reasoning-3
 >x x5
 (3/8) The first letter is E/S, the second P/R, the third P/R, the fourth I/R, the fifth R/S/T, and the sixth is E/T.
 
-#ttc-table-of-x5-reasoning-4
+#testcase-table-of-x5-reasoning-4
 >x x5
 (4/8) The fourth letter is the only one that doesn't eliminate I. Now there are two possibilities for letters 2/3 (P or R) and two for 1/5/6 (E/S, S/T and E/T).
 
-#ttc-table-of-x5-reasoning-5
+#testcase-table-of-x5-reasoning-5
 >x x5
 (5/8) That makes a total of four, and you can probably guess which of SPRITE, EPRIST, ERPIST, and SRPITE is an actual word.
 
-#ttc-table-of-x5-reasoning-6
+#testcase-table-of-x5-reasoning-6
 >x x5
 (6/8) But you also may be aided by red writing that indicates all letters are wrong. In this case, if PRIEST were written on the stripe in red, it would help you eliminate three options.
 
-#ttc-table-of-x5-reasoning-7
+#testcase-table-of-x5-reasoning-7
 >x x5
 (7/8) Maybe it's a can of Sprite, a pixel or a spirit. Either way, you have the answer: SPRITE. One more note, though.
 
-#ttc-table-of-x5-reasoning-8
+#testcase-table-of-x5-reasoning-8
 >x x5
 (8/8) At some point, though, strict logic isn't quite enough. Common sense may eliminate answers with too many consonants in a row, and certain combinations of letters can be removed. It's also possible to use trial-and-error zebra-puzzle logic on many longer words.

@@ -25,7 +25,7 @@
 
 /DEBUG INFO: (Cedrick|Andres|Archie|Blake|Daryl|Geno) hinting\.
 
-#ttc-table-of-towers-anagrams-yonder
+#testcase-table-of-towers-anagrams-yonder
 >xr rodney
 Boy! Yo-Rend-Or-Deny Rodney might be less oppressive if he were YONDER.
 >undo
@@ -36,127 +36,127 @@ Boy! Yo-Rend-Or-Deny Rodney might be less oppressive if he were YONDER.
 Boy! Yo-Rend-Or-Deny Rodney might be less oppressive if he were YONDER.
 >undo
 
-#ttc-table-of-towers-anagrams-gone
+#testcase-table-of-towers-anagrams-gone
 >xr geno
 Boy! Geno might be less oppressive if he were GONE.
 >undo
 
-#ttc-table-of-towers-anagrams-ashen
+#testcase-table-of-towers-anagrams-ashen
 >xr shane
 Boy! Shane might be less oppressive if he were ASHEN.
 >undo
 
-#ttc-table-of-towers-anagrams-stony
+#testcase-table-of-towers-anagrams-stony
 >xr tyson
 Boy! Tyson might be less oppressive if he were STONY.
 >undo
 
-#ttc-table-of-towers-anagrams-awed
+#testcase-table-of-towers-anagrams-awed
 >xr wade
 Boy! Wade might be less oppressive if he were AWED.
 >undo
 
-#ttc-table-of-towers-anagrams-wined
+#testcase-table-of-towers-anagrams-wined
 >xr edwin
 Boy! Edwin might be less oppressive if he were WINED.
 >undo
 
-#ttc-table-of-towers-anagrams-olden
+#testcase-table-of-towers-anagrams-olden
 >xr eldon
 Boy! Eldon might be less oppressive if he were OLDEN.
 >undo
 
-#ttc-table-of-towers-anagrams-godly
+#testcase-table-of-towers-anagrams-godly
 >xr goldy
 Boy! Goldy might be less oppressive if he were GODLY.
 >undo
 
-#ttc-table-of-towers-anagrams-coyer
+#testcase-table-of-towers-anagrams-coyer
 >xr royce
 Boy! Royce might be less oppressive if he were COYER.
 >undo
 
-#ttc-table-of-towers-anagrams-bleak
+#testcase-table-of-towers-anagrams-bleak
 >xr blake
 Boy! Blake might be less oppressive if he were BLEAK.
 >undo
 
-#ttc-table-of-towers-anagrams-bored
+#testcase-table-of-towers-anagrams-bored
 >xr bredo
 Boy! Bredo might be less oppressive if he were BORED.
 >undo
 
-#ttc-table-of-towers-anagrams-lardy
+#testcase-table-of-towers-anagrams-lardy
 >xr daryl
 Boy! Daryl might be less oppressive if he were LARDY.
 >undo
 
-#ttc-table-of-towers-anagrams-weedy
+#testcase-table-of-towers-anagrams-weedy
 >xr dewey
 Boy! Dewey might be less oppressive if he were WEEDY.
 >undo
 
-#ttc-table-of-towers-anagrams-tenser
+#testcase-table-of-towers-anagrams-tenser
 >xr ernest
 Boy! Ernest might be less oppressive if he were TENSER.
 >undo
 
-#ttc-table-of-towers-anagrams-calmer
+#testcase-table-of-towers-anagrams-calmer
 >xr marcel
 Boy! Marcel might be less oppressive if he were CALMER.
 >undo
 
-#ttc-table-of-towers-anagrams-normal
+#testcase-table-of-towers-anagrams-normal
 >xr marlon
 Boy! Marlon might be less oppressive if he were NORMAL.
 >undo
 
-#ttc-table-of-towers-anagrams-eggier
+#testcase-table-of-towers-anagrams-eggier
 >xr reggie
 Boy! Reggie might be less oppressive if he were EGGIER.
 >undo
 
-#ttc-table-of-towers-anagrams-snared
+#testcase-table-of-towers-anagrams-snared
 >xr andres
 Boy! Andres might be less oppressive if he were SNARED.
 >undo
 
-#ttc-table-of-towers-anagrams-warned
+#testcase-table-of-towers-anagrams-warned
 >xr andrew
 Boy! Andrew might be less oppressive if he were WARNED.
 >undo
 
-#ttc-table-of-towers-anagrams-achier
+#testcase-table-of-towers-anagrams-achier
 >xr archie
 Boy! Archie might be less oppressive if he were ACHIER.
 >undo
 
-#ttc-table-of-towers-anagrams-nearby
+#testcase-table-of-towers-anagrams-nearby
 >xr barney
 Boy! Barney might be less oppressive if he were NEARBY.
 >undo
 
-#ttc-table-of-towers-anagrams-cricked
+#testcase-table-of-towers-anagrams-cricked
 >xr cedrick
 Boy! Cedrick might be less oppressive if he were CRICKED.
 >undo
 
-#ttc-table-of-towers-anagrams-timider
+#testcase-table-of-towers-anagrams-timider
 >xr demitri
 Boy! Demitri might be less oppressive if he were TIMIDER.
 >undo
 
-#ttc-table-of-towers-anagrams-learned
+#testcase-table-of-towers-anagrams-learned
 >xr leander
 Boy! Leander might be less oppressive if he were LEARNED.
 >undo
 
-#ttc-table-of-towers-anagrams-pronest
+#testcase-table-of-towers-anagrams-pronest
 >xr preston
 Boy! Preston might be less oppressive if he were PRONEST.
 >undo
 
-#ttc-table-of-towers-anagrams-recreant
+#testcase-table-of-towers-anagrams-recreant
 >xr terrance
 Boy! Terrance might be less oppressive if he were RECREANT.
 >undo
@@ -167,40 +167,40 @@ Boy! Terrance might be less oppressive if he were RECREANT.
 /DEBUG INFO: (Cedrick|Andres|Archie|Blake|Daryl) hinting\.
 
 >score
-Score in a scenario: 1 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >lardy
 
 /DEBUG INFO: (Cedrick|Andres|Archie|Blake) hinting\.
 
 >score
-Score in a scenario: 2 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >bleak
 
 /DEBUG INFO: (Cedrick|Andres|Archie) hinting\.
 
 >score
-Score in a scenario: 3 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >achier
 Your score has just gone up by one point
 /DEBUG INFO: (Cedrick|Andres) hinting\.
 >score
-Score in a scenario: 4 out of 57 total points in the current region, Towers. Lowest score to solve is 27. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >snared
 Your score has just gone up by one point
 DEBUG INFO: Cedrick hinting.
 >score
-Score in a scenario: 5 out of 57 total points in the current region, Towers. Lowest score to solve is 28. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >cricked
 Your score has just gone up by one point
 DEBUG INFO: Yo-Rend-Or-Deny Rodney hinting.
 >score
-Score in a scenario: 6 out of 57 total points in the current region, Towers. Lowest score to solve is 29. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#ttc-table-of-towers-anagrams-talcier
+#testcase-table-of-towers-anagrams-talcier
 >xr article
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 FOR TESTING: WE NEED A Y OR N.
@@ -218,12 +218,12 @@ DEBUG INFO: dreads adders hinting.
 /^Topside Deposit
 
 >score
-Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >xr me
 Even if you could, you might expose yourself to harmful rays and stuff.
 
-#ttc-table-of-towers-anagrams-sadder
+#testcase-table-of-towers-anagrams-sadder
 >xr adders
 Hmm. You bet you could get past if the dreads adders were SADDER.
 
@@ -242,7 +242,7 @@ Your score has just gone up by one point
 You can just go north, though you can hint the tarts in the toaster if you want.
 
 >score
-Score in a scenario: 9 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >get all
 
@@ -254,28 +254,28 @@ Score in a scenario: 9 out of 57 total points in the current region, Towers. Low
 /DEBUG: guardian hint choice is (sweatier wait-seer|Lars Eede) from (Lars Eede and sweatier wait-seer|sweatier wait-seer and Lars Eede)\.
 >undo
 
-#ttc-table-of-towers-anagrams-subtler
+#testcase-table-of-towers-anagrams-subtler
 >xr butlers
 Hmm. You bet you could get past if the bluster butlers were SUBTLER.
 
-#ttc-table-of-towers-anagrams-rusty
+#testcase-table-of-towers-anagrams-rusty
 >xr yurts
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
 After a thoughtful gaze, you reckon the Try Us Yurts could be RUSTY.
 
-#ttc-table-of-towers-anagrams-reined
+#testcase-table-of-towers-anagrams-reined
 >xr nereid
 Hmm. You bet you could get past if the denier nereid were REINED.
 
-#ttc-table-of-towers-anagrams-rinsed
+#testcase-table-of-towers-anagrams-rinsed
 >xr diners
 Hmm. You bet you could get past if the snider diners were RINSED.
 
 >rusty
 Your score has just gone up by one point
 >score
-Score in a scenario: 10 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >rinsed
 DEBUG: guardian hint choice is bluster butlers from bluster butlers.
@@ -289,22 +289,22 @@ DEBUG: guardian hint choice is bluster butlers from bluster butlers.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 11 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >reined
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >rinsed
 Your score has just gone up by one point
 There's an important location in the center of the Wildest Wilteds, northeast of here. You'll want to make a path there.
 
 >score
-Score in a scenario: 13 out of 57 total points in the current region, Towers. Lowest score to solve is 32. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#ttc-table-of-towers-anagrams-creaky
+#testcase-table-of-towers-anagrams-creaky
 >xr keycar
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -314,7 +314,7 @@ After a thoughtful gaze, you reckon the yacker keycar could be CREAKY.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 57 total points in the current region, Towers. Lowest score to solve is 33. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >n
 
@@ -322,18 +322,18 @@ Score in a scenario: 14 out of 57 total points in the current region, Towers. Lo
 
 /DEBUG: guardian hint choice is (promise imposer|traipse pirates) from (promise imposer and traipse pirates|traipse pirates and promise imposer).
 
-#ttc-table-of-towers-anagrams-coiled
+#testcase-table-of-towers-anagrams-coiled
 >xr old ice
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
 After a thoughtful gaze, you reckon the docile old ice could be COILED.
 
-#ttc-table-of-towers-anagrams-pastier
+#testcase-table-of-towers-anagrams-pastier
 >xr pirates
 Hmm. You bet you could get past if the traipse pirates were PASTIER.
 >undo
 
-#ttc-table-of-towers-anagrams-semipro
+#testcase-table-of-towers-anagrams-semipro
 >xr imposer
 Hmm. You bet you could get past if the promise imposer were SEMIPRO.
 >undo
@@ -341,7 +341,7 @@ Hmm. You bet you could get past if the promise imposer were SEMIPRO.
 >coiled
 Your score has just gone up by one point
 >score
-Score in a scenario: 15 out of 57 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >pastier
 by one point
@@ -353,7 +353,7 @@ DEBUG: guardian hint choice is sweatier wait-seer from sweatier wait-seer.
 >semipro
 Your score has just gone up by one point
 >score
-Score in a scenario: 16 out of 57 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >gf strait
 DEBUG: guardian hint choice is alarming grailman from alarming grailman.
@@ -362,7 +362,7 @@ DEBUG: guardian hint choice is alarming grailman from alarming grailman.
 >pastier
 Your score has just gone up by one point
 >score
-Score in a scenario: 17 out of 57 total points in the current region, Towers. Lowest score to solve is 34. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >n
 
@@ -373,7 +373,7 @@ DEBUG INFO: mardier admirer hinting.
 DEBUG INFO: Lars Eede hinting.
 >undo
 
-#ttc-table-of-towers-anagrams-released
+#testcase-table-of-towers-anagrams-released
 >xr lars eede
 Hmm. You bet you could get past if Lars Eede were RELEASED or RESEALED.
 >gs
@@ -382,11 +382,11 @@ Hmm. You bet you could get past if Lars Eede were RELEASED or RESEALED.
 Hmm. You bet you could get past if Elsa Erde were RELEASED or RESEALED.
 >gs
 
-#ttc-table-of-towers-anagrams-married
+#testcase-table-of-towers-anagrams-married
 >xr admirer
 Hmm. You bet you could get past if the mardier admirer were MARRIED.
 
-#ttc-table-of-towers-anagrams-angstier
+#testcase-table-of-towers-anagrams-angstier
 >xr ingrates
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -396,12 +396,12 @@ Hmm. You bet you could get past if the angriest ingrates were ANGSTIER.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 18 out of 57 total points in the current region, Towers. Lowest score to solve is 35. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >w
 
 /^Fringe Finger
 
-#ttc-table-of-towers-anagrams-rustled
+#testcase-table-of-towers-anagrams-rustled
 >xr strudel
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -410,7 +410,7 @@ After a thoughtful gaze, you reckon the strudel could be RUSTLED.
 >rustled
 Your score has just gone up by one point
 >score
-Score in a scenario: 19 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >e
 
@@ -418,12 +418,12 @@ Score in a scenario: 19 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 #while this breaks the H/I pattern it does not add to CURMIN as it makes a meaningful link -- Coastlines to your current path.
 >score
-Score in a scenario: 20 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >married
 Your score has just gone up by one point
 >score
-Score in a scenario: 21 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >n
 
 /^Shaven Havens
@@ -436,11 +436,11 @@ Score in a scenario: 21 out of 57 total points in the current region, Towers. Lo
 #getting rid of the rut made the gradient available, so we hint the atheists.
 DEBUG: guardian hint choice is asset-hit atheists from asset-hit atheists.
 
-#ttc-table-of-towers-anagrams-hastiest
+#testcase-table-of-towers-anagrams-hastiest
 >xr atheists
 Hmm. You bet you could get past if the asset-hit atheists were HASTIEST.
 
-#ttc-table-of-towers-anagrams-weariest
+#testcase-table-of-towers-anagrams-weariest
 >xr sweatier
 Hmm. You bet you could get past if the sweatier wait-seer were WEARIEST.
 
@@ -449,53 +449,53 @@ Your score has just gone up by one point
 DEBUG INFO: sweatier wait-seer hinting.
 
 >score
-Score in a scenario: 22 out of 57 total points in the current region, Towers. Lowest score to solve is 36. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >weariest
 Your score has just gone up by one point
 >score
-Score in a scenario: 23 out of 57 total points in the current region, Towers. Lowest score to solve is 37. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >s
 
 /^Treading Gradient
 
 DEBUG INFO: weeds hinting.
 
-#ttc-table-of-towers-anagrams-nerdiest
+#testcase-table-of-towers-anagrams-nerdiest
 >xr trendies
 Hmm. You bet you could get past if the Resident Trendies were NERDIEST.
 
 >nerdiest
 Your score has just gone up by one point
 >score
-Score in a scenario: 24 out of 57 total points in the current region, Towers. Lowest score to solve is 38. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#ttc-table-of-towers-anagrams-sewed
+#testcase-table-of-towers-anagrams-sewed
 >xr weeds
 After a thoughtful gaze, you reckon the weeds could be SEWED.
 
-#ttc-table-of-towers-anagrams-mined
+#testcase-table-of-towers-anagrams-mined
 >xr denim
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 
 >y
 After a thoughtful gaze, you reckon the mended mini-denim could be MINED.
 
-#ttc-table-of-towers-anagrams-saltier
+#testcase-table-of-towers-anagrams-saltier
 >xr realist tailers
 Hmm. You bet you could get past if the realist tailers were SALTIER.
 
 >saltier
 Your score has just gone up by one point
 >score
-Score in a scenario: 25 out of 57 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >sewed
 Your score has just gone up by one point
 You need to work your way to the east corner of the map.
 >score
-Score in a scenario: 26 out of 57 total points in the current region, Towers. Lowest score to solve is 39. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#ttc-table-of-towers-anagrams-pearly
+#testcase-table-of-towers-anagrams-pearly
 >xr player
 You blink
 >y
@@ -503,35 +503,35 @@ After a thoughtful gaze, you reckon the raves saver could be PEARLY.
 
 >mined
 >score
-Score in a scenario: 27 out of 57 total points in the current region, Towers. Lowest score to solve is 40. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >d
 /^Dire and Arid Den
 
-#ttc-table-of-towers-anagrams-dandier
+#testcase-table-of-towers-anagrams-dandier
 >xr dreadin
 After a thoughtful gaze, you reckon the Dire and Arid Den could be DANDIER.
 
 >score
-Score in a scenario: 27 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >dandier
 /^Treading Gradient
 
 >score
-Score in a scenario: 28 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >e
 
-#ttc-table-of-towers-anagrams-holiest
+#testcase-table-of-towers-anagrams-holiest
 >xr hostile
 Hmm. You bet you could get past if the Hostile-Is-He Lot were HOLIEST.
 >gs
 
-#+ttc-table-of-towers-anagrams-holiest
+#+testcase-table-of-towers-anagrams-holiest
 >xr hostile
 Hmm. You bet you could get past if Lois the Hostile were HOLIEST.
 >gs
 
-#ttc-table-of-towers-anagrams-marginal
+#testcase-table-of-towers-anagrams-marginal
 >xr grailman
 Hmm. You bet you could get past if the alarming grailman were MARGINAL.
 
@@ -539,11 +539,11 @@ Hmm. You bet you could get past if the alarming grailman were MARGINAL.
 The Hostile-is-He Lot sniffs that the grailman probably wasn't even guarding a very, um, virtuous grail.
 Your score has just gone up by one point
 >score
-Score in a scenario: 29 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >holiest
 Your score has just gone up by one point
 >score
-Score in a scenario: 30 out of 57 total points in the current region, Towers. Lowest score to solve is 41. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >n
 /^Actionless Coastlines
 
@@ -552,7 +552,7 @@ Score in a scenario: 30 out of 57 total points in the current region, Towers. Lo
 
 DEBUG INFO: REB-NOK bonker hinting.
 
-#ttc-table-of-towers-anagrams-restful
+#testcase-table-of-towers-anagrams-restful
 >xr fluster
 Hmm. You bet you could get past if the fluster-self rut were RESTFUL.
 
@@ -560,9 +560,9 @@ Hmm. You bet you could get past if the fluster-self rut were RESTFUL.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 57 total points in the current region, Towers. Lowest score to solve is 42. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#ttc-table-of-towers-anagrams-naivest
+#testcase-table-of-towers-anagrams-naivest
 >xr natives
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -579,14 +579,14 @@ Your score has just gone up by one point
 >thisalt
 --you could've also made the natives' site van VAINEST to uproot them.
 >score
-Score in a scenario: 32 out of 57 total points in the current region, Towers. Lowest score to solve is 43. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >w
 
 /^Leveraged Everglade
 
 You need a way past the bonker
 
-#ttc-table-of-towers-anagrams-grandiose
+#testcase-table-of-towers-anagrams-grandiose
 >xr organised
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -595,7 +595,7 @@ After a thoughtful gaze, you reckon the organised ego drains could be GRANDIOSE.
 >grandiose
 Your score has just gone up by one point
 >score
-Score in a scenario: 33 out of 57 total points in the current region, Towers. Lowest score to solve is 44. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >e
 >s
 /^Lost Lots
@@ -605,14 +605,14 @@ You get lost in the gadflies' gasfield a bit. And it's fun for a while, until yo
 /^Dourest Detours
 
 #this is an LLP, but it is not LLPish once you see it, since you may legitimately be stuck.
-#ttc-table-of-towers-anagrams-rousted
+#testcase-table-of-towers-anagrams-rousted
 >xr
 Your x-ray vision seems to enlighten ... well, all around you.
 !You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 After a thoughtful gaze, you reckon the Dourest Detours could be ROUSTED.
 >undo
 
-#ttc-table-of-towers-anagrams-aimless
+#testcase-table-of-towers-anagrams-aimless
 >xr samiels
 Do so anyway?
 >y
@@ -622,20 +622,20 @@ After a thoughtful gaze, you reckon the seismal samiels could be AIMLESS.
 by one point
 
 >score
-Score in a scenario: 34 out of 57 total points in the current region, Towers. Lowest score to solve is 45. Maximum score available is 56.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >undo
 >undo
 >aimless
 Your score has just gone up by one point
 # don't need curmin or score++--we already got it above with the meta-commands before the UNDO!
 >score
-Score in a scenario: 34 out of 57 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >rousted
 Your score has just gone up by one point
 >score
-Score in a scenario: 35 out of 57 total points in the current region, Towers. Lowest score to solve is 46. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#ttc-table-of-towers-anagrams-prosiest
+#testcase-table-of-towers-anagrams-prosiest
 >xr sporties
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -645,13 +645,13 @@ After a thoughtful gaze, you reckon the sporties' ripostes could be PROSIEST.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 36 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >n
 
 /^Danger Garden
 
-#ttc-table-of-towers-anagrams-broken
+#testcase-table-of-towers-anagrams-broken
 >xr bonker
 Hmm. You bet you could get past if the REB-NOK bonker were BROKEN.
 
@@ -660,12 +660,12 @@ Your score has just gone up by one point
 
 DEBUG INFO: grin-set stinger hinting.
 
-#ttc-table-of-towers-anagrams-resting
+#testcase-table-of-towers-anagrams-resting
 >xr stinger
 Hmm. You bet you could get past if the grin-set stinger were RESTING.
 
 >score
-Score in a scenario: 37 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >resting
 Your score has just gone up by one point
@@ -673,7 +673,7 @@ Your score has just gone up by one point
 Go east of here.
 
 >score
-Score in a scenario: 38 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >e
 
@@ -681,11 +681,11 @@ Score in a scenario: 38 out of 57 total points in the current region, Towers. Lo
 
 Dr. Yow can be manipulated, even behind the prison ropins.
 
-#ttc-table-of-towers-anagrams-fussier
+#testcase-table-of-towers-anagrams-fussier
 >xr fissure
 After a thoughtful gaze, you reckon the Fries-Us Fissure could be FUSSIER.
 
-#ttc-table-of-towers-anagrams-unlocked
+#testcase-table-of-towers-anagrams-unlocked
 >xr luck node
 After a thoughtful gaze, you reckon the luck node could be UNLOCKED.
 
@@ -695,7 +695,7 @@ Your score has just gone up by one point
 That duck in the Shaven Havens seemed awfully lonely. Maybe you can bring it home?
 
 >score
-Score in a scenario: 39 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >push retape
 
@@ -713,7 +713,7 @@ by one point
 Hm, the agnostic at the coastlines seems technically inclined but restless.
 
 >score
-Score in a scenario: 40 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >gt copse
 >w
@@ -722,7 +722,7 @@ Score in a scenario: 40 out of 57 total points in the current region, Towers. Lo
 
 DEBUG INFO: diverse deviser hinting.
 
-#ttc-table-of-towers-anagrams-revised
+#testcase-table-of-towers-anagrams-revised
 >xr deviser
 After a thoughtful gaze, you reckon the diverse deviser could be REVISED.
 
@@ -732,11 +732,11 @@ After a thoughtful gaze, you reckon the diverse deviser could be REVISED.
 by one point
 
 >score
-Score in a scenario: 42 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >gt coastlines
 
-#ttc-table-of-towers-anagrams-grained
+#testcase-table-of-towers-anagrams-grained
 >xr dinger
 After a thoughtful gaze, you reckon READING: a Dinger could be GRAINED.
 
@@ -744,14 +744,14 @@ After a thoughtful gaze, you reckon READING: a Dinger could be GRAINED.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 43 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >ask agnostic about doctor yow
 !Your score has just gone up by one point
 
 Dr. Yow is versatile. You need him to be exciting around the agnostic.
 
-#ttc-table-of-towers-anagrams-attentive
+#testcase-table-of-towers-anagrams-attentive
 >xr agnostic
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -765,18 +765,18 @@ You blink a bit. You wonder if this would be the best way to use your x-ray visi
 After a thoughtful gaze, you reckon Staci Ong could be ATTENTIVE.
 >gs
 
-#ttc-table-of-settler-shake-descriptions-atblock
+#testcase-table-of-settler-shake-descriptions-atblock
 >ss
 an aura of tentativeness about Scot
 
 >pearly
 Your score has just gone up by one point
 >score
-Score in a scenario: 44 out of 57 total points in the current region, Towers. Lowest score to solve is 48. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 >attentive
 Your score has just gone up by one point
 >score
-Score in a scenario: 45 out of 57 total points in the current region, Towers. Lowest score to solve is 49. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >rowdy
 Your score has just gone up by one point
@@ -784,31 +784,31 @@ Your score has just gone up by one point
 DEBUG INFO: I ZOMG Gizmo hinting.
 
 >score
-Score in a scenario: 46 out of 57 total points in the current region, Towers. Lowest score to solve is 49. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >gt coastlines
 >give gizmo to agnostic
 
 /DEBUG INFO: (turbos|blaster) hinting\.
 
-#ttc-table-of-towers-anagrams-rewired
+#testcase-table-of-towers-anagrams-rewired
 >xr weirder
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
 After a thoughtful gaze, you reckon the weirder red wire could be REWIRED.
 
-#ttc-table-of-towers-anagrams-robust
+#testcase-table-of-towers-anagrams-robust
 >xr turbos
 After a thoughtful gaze, you reckon the turbos could be ROBUST.
 
-#ttc-table-of-towers-anagrams-stabler
+#testcase-table-of-towers-anagrams-stabler
 >xr blaster
 After a thoughtful gaze, you reckon the blaster could be STABLER.
 
 >stabler
 by one point
 
-#ttc-table-of-towers-hint-request-rejects-blaster
+#testcase-table-of-towers-hint-request-rejects-blaster
 >hint blaster
 You fixed the blaster. Now maybe try the turbos.
 >undo
@@ -817,24 +817,24 @@ You fixed the blaster. Now maybe try the turbos.
 >robust
 by one point
 
-#ttc-table-of-towers-hint-request-rejects-turbos
+#testcase-table-of-towers-hint-request-rejects-turbos
 >hint turbos
 You fixed the turbos. Now maybe try the blaster.
 
 >stabler
 by one point
 
-#+ttc-table-of-towers-hint-request-rejects-turbos
+#+testcase-table-of-towers-hint-request-rejects-turbos
 >hint turbos
 You fixed the turbos. The blaster, too. You can just ENTER BOAT.
 
-#+ttc-table-of-towers-hint-request-rejects-blaster
+#+testcase-table-of-towers-hint-request-rejects-blaster
 >hint blaster
 You fixed the blaster. The turbos, too. You can just ENTER BOAT.
 
 >gonear waters
 
-#ttc-table-of-towers-anagrams-nearest
+#testcase-table-of-towers-anagrams-nearest
 >xr eastern
 After a thoughtful gaze, you reckon the Earnest Eastern Neaters could be NEAREST.
 >undo
@@ -843,21 +843,26 @@ After a thoughtful gaze, you reckon the Earnest Eastern Neaters could be NEAREST
 >rewired
 Your score has just gone up by one point
 >score
-Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >enter boat
 You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines and to the shore on the other side--so hard, they snap in two. Well, it would've been hard to return them to the agnostic anyway. You've made it!
 
 /^Mislit Limits
 
-#ttc-table-of-towers-anagrams-spectacular
+#}}CURMIN=SCORE
+#}}CURMIN++
+#}}CURMAX=SCORE
+#}}CURMAX+=7
+
+#testcase-table-of-towers-anagrams-spectacular
 >xr curst palace
 After a thoughtful gaze, you reckon the Curst Palace could be SPECTACULAR.
 
 >score
-Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#ttc-table-of-towers-anagrams-punier
+#testcase-table-of-towers-anagrams-punier
 >xr unripe
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -869,9 +874,9 @@ After a thoughtful gaze, you reckon the unripe ur-pine could be PUNIER.
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 50 out of 57 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#ttc-table-of-towers-anagrams-antsier
+#testcase-table-of-towers-anagrams-antsier
 >xr retinas
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -880,9 +885,9 @@ After a thoughtful gaze, you reckon the nastier stainer retinas could be ANTSIER
 >antsier
 by one point
 >score
-Score in a scenario: 51 out of 57 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#ttc-table-of-towers-anagrams-present
+#testcase-table-of-towers-anagrams-present
 >xr serpent
 You blink
 >y
@@ -892,13 +897,13 @@ After a thoughtful gaze, you reckon the repents serpent could be PRESENT.
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 52 out of 57 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >in
 
 /^Mesprise Premises
 
-#ttc-table-of-towers-anagrams-triste
+#testcase-table-of-towers-anagrams-triste
 >xr tetris
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -907,9 +912,9 @@ After a thoughtful gaze, you reckon the itster could make the Tetris Sitter TRIS
 >triste
 Your score has just gone up by one point
 >score
-Score in a scenario: 53 out of 57 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#ttc-table-of-towers-anagrams-annoyed
+#testcase-table-of-towers-anagrams-annoyed
 >xr anodyne
 You blink a bit. You wonder if this would be the best way to use your x-ray vision. Do so anyway?
 >y
@@ -920,12 +925,12 @@ You already remember the word ANNOYED--which seems right, just a matter of getti
 >annoyed
 Your score has just gone up by one point
 >score
-Score in a scenario: 54 out of 57 total points in the current region, Towers. Lowest score to solve is 55. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >give pot to sitter
 Your score has just gone up by one point
 >score
-Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >out
 
@@ -937,5 +942,5 @@ Your score has just gone up by one point
 /^Strip of Profits
 
 >score
-, Towers (57/57)
+, Towers ({SCORE}/{MAX})
 

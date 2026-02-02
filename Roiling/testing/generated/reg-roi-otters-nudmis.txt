@@ -42,23 +42,23 @@ Okay, if you say so...
 NOTE: this joke death was an easter egg. I hope it amused you. The death message below is random, and it's probably easier to read the source or win the game than UNDO and retry them.
 >undo
 
-#ttc-table-of-minded-midden-nudges-midden
+#testcase-table-of-minded-midden-nudges-midden
 >middne
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-otters-nudges-ottre
+#testcase-table-of-otters-nudges-ottre
 >otter
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 
-#ttc-table-of-otters-nudges-storet
+#testcase-table-of-otters-nudges-storet
 >storte
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 
-#ttc-table-of-minded-midden-nudges-bare
+#testcase-table-of-minded-midden-nudges-bare
 >baer
 No, you need a couple more letters. Ones that make a word weak enough to control.
 
-#ttc-table-of-otters-spechelp-bleary-barley
+#testcase-table-of-otters-spechelp-bleary-barley
 >bareyl
 The barley rustles in an imaginary wind--but hardly at all.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bleary barley. That's a decent omen.
@@ -69,7 +69,7 @@ The barley rustles in an imaginary wind--but hardly at all.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bleary barley. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-scannotes-bleary-barley
+#testcase-table-of-otters-scannotes-bleary-barley
 >scan bleary barley
 That is a lot of matching for six letters. And you haven't seen anything like the brown before. You're pretty sure. But if you forgot what Elmo said, you can probably guess.
 
@@ -77,7 +77,7 @@ That is a lot of matching for six letters. And you haven't seen anything like th
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 1 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >l
 /^Burnt Brunt
@@ -86,7 +86,7 @@ Score in a scenario: 1 out of 38 total points in the current region, Otters. Low
 >deltaic
 Reorganizing the geography around the Edictal Citadel won't help.
 
-#ttc-table-of-otters-nudges-citadel
+#testcase-table-of-otters-nudges-citadel
 >citadle
 Transform the whole Citadel? No, you couldn't do much with it at full strength. Maybe you can surprise Elvira in there, with help and your powers back. Plus, Elvira checked to make sure you couldn't do anything drastic to the Citadel.
 
@@ -100,11 +100,11 @@ joke death
 >dialect
 No, a particular accent or odd word won't destroy the Edictal Citadel. Elvira checked off on all that.
 
-#ttc-table-of-otters-done-rejects-nude-dune
+#testcase-table-of-otters-done-rejects-nude-dune
 >blarey
 You've dealt with the barley. You can move around a lot more, now.
 
-#ttc-table-of-otters-nudges-ly
+#testcase-table-of-otters-nudges-ly
 >yl
 Yup, that's the idea here in Otters.
 
@@ -112,31 +112,31 @@ Yup, that's the idea here in Otters.
 >increds
 You marvel at the possible power of the cinders and even see red at the thought of giving them up.
 
-#ttc-table-of-minded-midden-nudges-burtn
+#testcase-table-of-minded-midden-nudges-burtn
 >butnr
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-minded-midden-nudges-dune
+#testcase-table-of-minded-midden-nudges-dune
 >duen
 You can't really shift the dune, but you don't need to.
 
-#ttc-table-of-otters-nudges-cinder
+#testcase-table-of-otters-nudges-cinder
 >cindre
 You'll need to change more than one cinder.
 
-#ttc-table-of-minded-midden-nudges-lyier
+#testcase-table-of-minded-midden-nudges-lyier
 >lyire
 Ed's full name, please!
 
-#ttc-table-of-minded-midden-nudges-reedi
+#testcase-table-of-minded-midden-nudges-reedi
 >reeid
 No, you need a couple more letters. Ones that make a word weak enough to control.
 
-#ttc-table-of-minded-midden-nudges-reedy
+#testcase-table-of-minded-midden-nudges-reedy
 >reeyd
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 
-#ttc-table-of-otters-spechelp-cinders
+#testcase-table-of-otters-spechelp-cinders
 >cindesr
 The cinders glow and even warm up for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the cinders. That's a decent omen.
@@ -147,35 +147,35 @@ The cinders glow and even warm up for a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the cinders. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-readables-cinders
+#testcase-table-of-otters-readables-cinders
 >read cinders
 /(Sr. Indec|NRD ICES|IC Nerds)
 
-#ttc-table-of-otters-scannotes-cinders
+#testcase-table-of-otters-scannotes-cinders
 >scan cinders
 Hm, that's weird. Your sci-nerd side says perhaps there are two things you can do with the cinders, though it also sees red at the thought of giving them up entirely.
 
-#ttc-table-of-minded-midden-nudges-steward
+#testcase-table-of-minded-midden-nudges-steward
 >stewadr
 Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?
 
-#ttc-table-of-minded-midden-nudges-asteward
+#testcase-table-of-minded-midden-nudges-asteward
 >astewadr
 Hm, you only managed to deal with adverbs so far, and steward doesn't have an L or Y. Maybe look at him for clues? Remember his name?
 
-#ttc-table-of-minded-midden-nudges-rye
+#testcase-table-of-minded-midden-nudges-rye
 >rey
 The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 
-#ttc-table-of-minded-midden-nudges-lied
+#testcase-table-of-minded-midden-nudges-lied
 >lide
 The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 
-#ttc-table-of-minded-midden-nudges-sandwich
+#testcase-table-of-minded-midden-nudges-sandwich
 >sandwihc
 The sandwich isn't just deli, or rye, or a sandwich. It's deli rye.
 
-#ttc-table-of-otters-spechelp-ed-riley
+#testcase-table-of-otters-spechelp-ed-riley
 >reediyl
 Ed Riley looks askance at his deli rye, as if it had some bad aftertaste. If only he said things less loudly, boomingly, startlingly...
 DEBUG ONLY: You feel a slight psychic push-pull coming from Ed Riley. That's a decent omen.
@@ -210,26 +210,26 @@ Your score has just gone up by one point
 
 >n
 
-#ttc-table-of-shiner-shrine-nudges-remote
+#testcase-table-of-shiner-shrine-nudges-remote
 >remoet
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 >undo
 >s
 
-#ttc-table-of-clarthead-cathedral-nudges-jolti
+#testcase-table-of-clarthead-cathedral-nudges-jolti
 >ojlti
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 >undo
 
 >score
-Score in a scenario: 2 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >w
 /^Disowned Downside
 
-#ttc-table-of-disowned-downside-nudges-parley
+#testcase-table-of-disowned-downside-nudges-parley
 >arpley
 You need to deal with all the players to knock them back a peg.
 
@@ -247,217 +247,217 @@ Yes, yes, I am being pedantic here. But discreet and discrete are different enou
 
 >allrand
 
-#ttc-table-of-disowned-downside-nudges-angri
+#testcase-table-of-disowned-downside-nudges-angri
 >angir
 No, you need a couple more letters. Ones that make a word weak enough to control.
 
-#ttc-table-of-disowned-downside-nudges-angry
+#testcase-table-of-disowned-downside-nudges-angry
 >angyr
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 >undo
 
-#ttc-table-of-disowned-downside-nudges-bossi
+#testcase-table-of-disowned-downside-nudges-bossi
 >bosis
 No, you need a couple more letters. Ones that make a word weak enough to control.
 
-#ttc-table-of-disowned-downside-nudges-bossy
+#testcase-table-of-disowned-downside-nudges-bossy
 >bosys
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 >undo
 
-#ttc-table-of-disowned-downside-nudges-nasti
+#testcase-table-of-disowned-downside-nudges-nasti
 >nasit
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-nasty
+#testcase-table-of-disowned-downside-nudges-nasty
 >nasyt
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-seedi
+#testcase-table-of-disowned-downside-nudges-seedi
 >seeid
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-seedy
+#testcase-table-of-disowned-downside-nudges-seedy
 >seeyd
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-shadi
+#testcase-table-of-disowned-downside-nudges-shadi
 >shaid
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-shady
+#testcase-table-of-disowned-downside-nudges-shady
 >shayd
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-snide
+#testcase-table-of-disowned-downside-nudges-snide
 >snied
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-stark
+#testcase-table-of-disowned-downside-nudges-stark
 >stakr
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-terse
+#testcase-table-of-disowned-downside-nudges-terse
 >teres
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-tacit
+#testcase-table-of-disowned-downside-nudges-tacit
 >tacti
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-catty
+#testcase-table-of-disowned-downside-nudges-catty
 >catyt
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-teari
+#testcase-table-of-disowned-downside-nudges-teari
 >teair
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-teary
+#testcase-table-of-disowned-downside-nudges-teary
 >teayr
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-bleari
+#testcase-table-of-disowned-downside-nudges-bleari
 >bleair
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-bleayr
+#testcase-table-of-disowned-downside-nudges-bleayr
 >bleary
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-ribald
+#testcase-table-of-disowned-downside-nudges-ribald
 >ribadl
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-formal
+#testcase-table-of-disowned-downside-nudges-formal
 >formla
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-coital
+#testcase-table-of-disowned-downside-nudges-coital
 >coitla
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-modest
+#testcase-table-of-disowned-downside-nudges-modest
 >modets
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-shabbi
+#testcase-table-of-disowned-downside-nudges-shabbi
 >shabib
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-shabby
+#testcase-table-of-disowned-downside-nudges-shabby
 >shabyb
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-shoddi
+#testcase-table-of-disowned-downside-nudges-shoddi
 >shodid
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-shoddy
+#testcase-table-of-disowned-downside-nudges-shoddy
 >shodyd
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-silent
+#testcase-table-of-disowned-downside-nudges-silent
 >siletn
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-steami
+#testcase-table-of-disowned-downside-nudges-steami
 >steaim
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-steamy
+#testcase-table-of-disowned-downside-nudges-steamy
 >steaym
 No, you need a couple more letters, but not the usual ones. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-sudden
+#testcase-table-of-disowned-downside-nudges-sudden
 >suddne
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-stupdi
+#testcase-table-of-disowned-downside-nudges-stupdi
 >stupid
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-martial
+#testcase-table-of-disowned-downside-nudges-martial
 >martila
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-sincere
+#testcase-table-of-disowned-downside-nudges-sincere
 >sinceer
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-sobbing
+#testcase-table-of-disowned-downside-nudges-sobbing
 >sobbign
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-tedious
+#testcase-table-of-disowned-downside-nudges-tedious
 >tediosu
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-wearing
+#testcase-table-of-disowned-downside-nudges-wearing
 >wearign
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-desperate
+#testcase-table-of-disowned-downside-nudges-desperate
 >desperaet
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-drawling
+#testcase-table-of-disowned-downside-nudges-drawling
 >drawlign
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-emotional
+#testcase-table-of-disowned-downside-nudges-emotional
 >emotionla
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-reactive
+#testcase-table-of-disowned-downside-nudges-reactive
 >reactiev
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-despairing
+#testcase-table-of-disowned-downside-nudges-despairing
 >despairign
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
 
-#ttc-table-of-disowned-downside-nudges-indiscreet
+#testcase-table-of-disowned-downside-nudges-indiscreet
 >indiscrete
 No, you need a couple more letters. Ones that make a word weak enough to control.
 >undo
@@ -471,23 +471,23 @@ Violence is not the answer! Be clever, here.
 >slap me
 That's kind of a silly way to motivate yourself.
 
-#ttc-table-of-disowned-downside-nudges-downside
+#testcase-table-of-disowned-downside-nudges-downside
 >downsied
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-disowned-downside-nudges-sample
+#testcase-table-of-disowned-downside-nudges-sample
 >sampel
 No need to change the maples. They are the least dreary part of the Downside.
 
-#ttc-table-of-disowned-downside-nudges-maple
+#testcase-table-of-disowned-downside-nudges-maple
 >mapel
 No need to change the maples. They are the least dreary part of the Downside.
 
-#ttc-table-of-otters-readables-sample-maples
+#testcase-table-of-otters-readables-sample-maples
 >read sample maples
 On one, you read: "Formerly the Maiden Median, then the Gent-Fora/Frat-Gone Frontage."
 
-#ttc-table-of-disowned-downside-nudges-gretta
+#testcase-table-of-disowned-downside-nudges-gretta
 >gretat
 Enough people are trying to manipulate Gretta. Deal with them directly.
 
@@ -503,32 +503,32 @@ You feel you're on the right track to expose the players. But that's not quite i
 #here is where we test all the possible mack ideas with ambiguous cheat-scans
 >allrand
 
-#ttc-table-of-otters-scannotes-t-tearily-irately
+#testcase-table-of-otters-scannotes-t-tearily-irately
 >scan ttearily
 Wow! That's a lot of question marks and possibilities. But maybe REALITY can be bent a couple overwrought ways.
 
-#ttc-table-of-otters-scannotes-t-formally
+#testcase-table-of-otters-scannotes-t-formally
 >undo
 >scan tformally
 Two question marks in nine letters--well, seven--might be a little sticky. The parleys splayer players said two things.
 
-#ttc-table-of-otters-scannotes-t-silently
+#testcase-table-of-otters-scannotes-t-silently
 >undo
 >scan tsilently
 Wow! Three things to consider here. This might be tricky.
 
-#ttc-table-of-otters-scannotes-t-steamily
+#testcase-table-of-otters-scannotes-t-steamily
 >undo
 >scan tsteamily
 Well, you have a feeling you know what that question mark should be.
 >undo
 >undo
 
-#ttc-table-of-otters-scannotes-parleys-splayer-players
+#testcase-table-of-otters-scannotes-parleys-splayer-players
 >scan parleys splayer players
 The players certainly do dance around a lot with their talk, so it's no surprise the settler can't pin them down. But maybe all those words can give you more data.
 
-#ttc-table-of-otters-spechelp-parleys-splayer-players
+#testcase-table-of-otters-spechelp-parleys-splayer-players
 >sarpley
 The parleys splayer players slip for a moment but quickly resume their incessant dialogue.
 
@@ -537,11 +537,11 @@ The parleys splayer players slip for a moment but quickly resume their incessant
 The parleys splayer players slip for a moment but quickly resume their incessant dialogue.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-scannotes-yer-all-a-yell'r
+#testcase-table-of-otters-scannotes-yer-all-a-yell'r
 >scan yer all
 Well, you've got to figure that decoding the ambiguous settings will be as complex as the song. Which is to say, not very.
 
-#ttc-table-of-otters-spechelp-yer-all-a-yell'r
+#testcase-table-of-otters-spechelp-yer-all-a-yell'r
 >erlaly
 Yer All a Yell'r changes its beat. Maybe it's a remix even worse than the original! Wait, no, you were sort of on the right track.
 
@@ -550,26 +550,26 @@ Yer All a Yell'r changes its beat. Maybe it's a remix even worse than the origin
 Yer All a Yell'r changes its beat. Maybe it's a remix even worse than the original! Wait, no, you were sort of on the right track.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-disowned-downside-nudges-real
+#testcase-table-of-disowned-downside-nudges-real
 >elra
 No, you need a couple more letters. Ones that make a word weak enough to control.
 
 >sparely
 by one point
 
-#ttc-table-of-otters-done-rejects-parleys-splayer-players
+#testcase-table-of-otters-done-rejects-parleys-splayer-players
 >sparely
 You've already made the parleys splayer players talk a bit slower. Now you need to deal with their arguments.
 
-#ttc-table-of-disowned-downside-nudges-amcks
+#testcase-table-of-disowned-downside-nudges-amcks
 >macsk
 Hm, you probably can't change the macks. They're dead set in their ways. Perhaps you can reframe what they are saying some more.
 
-#ttc-table-of-disowned-downside-nudges-amck
+#testcase-table-of-disowned-downside-nudges-amck
 >makc
 If you messed with one mack, the others would gang up on you. Work on the argument, instead.
 
-#+ttc-table-of-disowned-downside-nudges-parley
+#+testcase-table-of-disowned-downside-nudges-parley
 >arpley
 You needed to deal with all the players to knock them back a peg.
 >undo
@@ -582,21 +582,21 @@ You needed to deal with all the players to knock them back a peg.
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: 3 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >angrily
 Your score has just gone up by one point.
 >score
-Score in a scenario: 4 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >blearily
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: 5 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >au 0
 
-#+ttc-table-of-disowned-downside-nudges-gretta
+#+testcase-table-of-disowned-downside-nudges-gretta
 >gretat
 Enough people are trying to manipulate Gretta. Listen to what she has to say, instead.
 !macks
@@ -608,11 +608,11 @@ Enough people are trying to manipulate Gretta. Listen to what she has to say, in
 #I prefer to say "no" here in the test script, so it's not confused with "north."
 >no
 
-#ttc-table-of-otters-readables-cut-ya-all-cult-laya
+#testcase-table-of-otters-readables-cut-ya-all-cult-laya
 >read laya
 /One of the two designers' names is (Clay Laut|Lucy Lata)\.
 
-#ttc-table-of-otters-spechelp-cut-ya-all-cult-laya
+#testcase-table-of-otters-spechelp-cut-ya-all-cult-laya
 >actualyl
 The jabber from the Cut-Ya-All Cult Laya' turns slightly less inane for a moment.
 
@@ -621,7 +621,7 @@ The jabber from the Cut-Ya-All Cult Laya' turns slightly less inane for a moment
 The jabber from the Cut-Ya-All Cult Laya' turns slightly less inane for a moment.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-scannotes-cut-ya-all-cult-laya
+#testcase-table-of-otters-scannotes-cut-ya-all-cult-laya
 >scan laya
 The words of the Cut-Ya-All Cult Laya' certainly swirl around you, having no full substance, yet perhaps offering a clue of how to cut them down. So it's no surprise the same thing happens with the settler reading.
 
@@ -644,27 +644,27 @@ The eels would be insulted to be referred to as dregs.
 >polo
 No time for games! You don't have your powers back, anyway. Rather than change the water, change what's in it.
 
-#ttc-table-of-loop-pool-nudges-pool
+#testcase-table-of-loop-pool-nudges-pool
 >ploo
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-loop-pool-nudges-allot
+#testcase-table-of-loop-pool-nudges-allot
 >allto
 You don't need to change it, and the eels might not like it if you did.
 
-#ttc-table-of-loop-pool-nudges-wier
+#testcase-table-of-loop-pool-nudges-wier
 >wire
 The wire weir doesn't need to be changed.
 
-#ttc-table-of-loop-pool-nudges-sea
+#testcase-table-of-loop-pool-nudges-sea
 >eas
 The sea cube is unmoved. You may need to concentrate on the whole thing.
 
-#ttc-table-of-loop-pool-nudges-cube
+#testcase-table-of-loop-pool-nudges-cube
 >cueb
 The sea cube is unmoved. You may need to concentrate on the whole thing.
 
-#ttc-table-of-otters-spechelp-sea-cube
+#testcase-table-of-otters-spechelp-sea-cube
 >sea cueb
 The parser had trouble understanding that (multi-word) command. While it's possible there's a more mundane reason, perhaps you were trying to change something, in which case, one word (or a compound word) usually works.
 So here is a one-time general guideline on what to do in this area: while some words are rather long, you probably see how to guess a letter or two even when you've got your powers back.
@@ -683,7 +683,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the sea cube. That's
 The sea cube shakes a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sea cube. That's a decent omen.
 
-#ttc-table-of-otters-spechelp-eels
+#testcase-table-of-otters-spechelp-eels
 >eesl
 The eels swim a bit faster.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the eels. That's a decent omen.
@@ -698,56 +698,56 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the eels. That's a d
 by one point
 
 >score
-Score in a scenario: 6 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >else
 by one point
 
 >score
-Score in a scenario: 7 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-otters-done-rejects-eels
+#testcase-table-of-otters-done-rejects-eels
 >eesl
 The eels have done enough.
 
-#+ttc-table-of-loop-pool-nudges-allot
+#+testcase-table-of-loop-pool-nudges-allot
 >allto
 You already made it there, and you don't need to go back.
 
-#ttc-table-of-otters-scannotes-sullenness-us
+#testcase-table-of-otters-scannotes-sullenness-us
 >scan sullenness us
 The voices seem bummed at your settler's ambiguous readings, unaware (as you are by now) that that can make things easier.
 
-#ttc-table-of-otters-readables-sullenness-us
+#testcase-table-of-otters-readables-sullenness-us
 >read sullenness us
 You focus on the voices swirling around, and a despairing bit of poetry appears in red: LE SUNLESS SUN.
 
 >unless
 by one point
 >score
-Score in a scenario: 8 out of 38 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >misses
 !--you could've dispelled the "Sullenness, Us" voices in Loop Pool after satisfying the eels by saying UNLESS.
 
 >s
 
-#+ttc-table-of-otters-nudges-ly
+#+testcase-table-of-otters-nudges-ly
 >yl
 Yup, that's the idea here in Otters, even with your powers back.
 
-#ttc-table-of-otters-nudges-iq
+#testcase-table-of-otters-nudges-iq
 >qi
 No, it's a combination of what's on both medals.
 
-#ttc-table-of-otters-nudges-lucky
+#testcase-table-of-otters-nudges-lucky
 >lucyk
 No, it's a combination of what's on both medals.
 
-#ttc-table-of-otters-nudges-medal
+#testcase-table-of-otters-nudges-medal
 >medla
 It's what the medals say that makes them special.
 
-#ttc-table-of-otters-nudges-medals
+#testcase-table-of-otters-nudges-medals
 >medasl
 It's what the medals say that makes them special.
 
@@ -755,11 +755,11 @@ It's what the medals say that makes them special.
 
 /^Bran Barn
 
-#ttc-table-of-bran-barn-nudges-barn
+#testcase-table-of-bran-barn-nudges-barn
 >banr
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-otters-spechelp-ghoul-hat
+#testcase-table-of-otters-spechelp-ghoul-hat
 >althouhg
 Mr. Lee shakes his head and adjusts the ghoul hat.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ghoul hat. That's a decent omen.
@@ -770,7 +770,7 @@ Mr. Lee shakes his head and adjusts the ghoul hat.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ghoul hat. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-spechelp-gore-ogre
+#testcase-table-of-otters-spechelp-gore-ogre
 >erog
 The gore ogre lets out a not very logical or convincing roar. Maybe you're onto something, here.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Gore Ogre. That's a decent omen.
@@ -781,7 +781,7 @@ The gore ogre lets out a not very logical or convincing roar. Maybe you're onto 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Gore Ogre. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-bran-barn-nudges-infidel
+#testcase-table-of-bran-barn-nudges-infidel
 >infidle
 The infidel infield is Mr. Lee's, and it expresses things from his perspective. So it doesn't need changing.
 
@@ -790,16 +790,16 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 9 out of 38 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >ergo
 by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 10 out of 38 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-otters-spechelp-vow-here
+#testcase-table-of-otters-spechelp-vow-here
 >howevre
 The vow here quiets down for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the vow here. That's a decent omen.
@@ -810,11 +810,11 @@ The vow here quiets down for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the vow here. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-nudges-vow
+#testcase-table-of-otters-nudges-vow
 >vwo
 The whole vow here.
 
-#ttc-table-of-otters-nudges-here
+#testcase-table-of-otters-nudges-here
 >heer
 The whole vow here.
 
@@ -827,10 +827,10 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 11 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >n
 
-#ttc-table-of-otters-spechelp-atmo-moat
+#testcase-table-of-otters-spechelp-atmo-moat
 >mota
 Hm, that's not it, but it must be elemental. No, elementary.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the atmo-moat. That's a decent omen.
@@ -841,25 +841,25 @@ Hm, that's not it, but it must be elemental. No, elementary.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the atmo-moat. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-scannotes-atmo-moat
+#testcase-table-of-otters-scannotes-atmo-moat
 >scan atmo moat
 You feel sheepish having used the settler, but it's been a long journey.
 
 >atom
 Your score has just gone up by one point
 
-#ttc-table-of-disowned-downside-nudges-enp
+#testcase-table-of-disowned-downside-nudges-enp
 >epn
 You'll need to tackle all of the Pen O' NOPE. It can't be too bad.
 
-#ttc-table-of-otters-scannotes-nope-peon
+#testcase-table-of-otters-scannotes-nope-peon
 >scan nope peon
 You kind of hide the settler from the guardians, because you wonder if you should really need to use it. Nevertheless, they suspect nothing. They're not very good physical guardians. They're more about mental intimidation. You wonder if a particularly route-one word will do the job here.
 
 >scan neon pope
 You kind of hide the settler from the guardians, because you wonder if you should really need to use it. Nevertheless, they suspect nothing. They're not very good physical guardians. They're more about mental intimidation. You wonder if a particularly route-one word will do the job here.
 
-#ttc-table-of-otters-spechelp-pen-o-nope
+#testcase-table-of-otters-spechelp-pen-o-nope
 >epno
 The way west remains blocked, but you feel there has to be a simple way past.
 
@@ -873,9 +873,9 @@ The way west remains blocked, but you feel there has to be a simple way past.
 No past or current world chess champion challenger comes by to help you with your current problem. He has much more complex ones to worry about!
 
 >score
-Score in a scenario: 12 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-otters-readables-pen-o-nope
+#testcase-table-of-otters-readables-pen-o-nope
 >read pen
 The Pen O' NOPE reads NONE, PEPO'.
 
@@ -887,7 +887,7 @@ You're not going to bribe the folks blocking the way west with food. Or, well, w
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >e
 
@@ -906,47 +906,47 @@ You don't need a river or two impeding your progress.
 >green lady
 You remember reading about the Green Lady in the Silver Chair, where she started nice and started acting furiously--no, that's not the word, not quite, it doesn't fit with Legendary. But it must be something like that.
 
-#+ttc-table-of-shiner-shrine-nudges-remote
+#+testcase-table-of-shiner-shrine-nudges-remote
 >remoet
 No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 
-#ttc-table-of-shiner-shrine-nudges-shiner
+#testcase-table-of-shiner-shrine-nudges-shiner
 >shinre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-shiner-shrine-nudges-simply
+#testcase-table-of-shiner-shrine-nudges-simply
 >simpyl
 It's acting simply, but it can't be gotten rid of that simply. At least, nothing happens when you try. Maybe you need to consider more specific ways it's moving.
 
-#ttc-table-of-shiner-shrine-nudges-sly
+#testcase-table-of-shiner-shrine-nudges-sly
 >syl
 The imp's too sly to get tricked by a word THAT short.
 
-#ttc-table-of-shiner-shrine-nudges-imp
+#testcase-table-of-shiner-shrine-nudges-imp
 >ipm
 The imp's too sly to get tricked by a word THAT short.
 
-#ttc-table-of-shiner-shrine-nudges-averts
+#testcase-table-of-shiner-shrine-nudges-averts
 >averst
 You need to focus on HOW the imp averts, vaster.
 
-#ttc-table-of-shiner-shrine-nudges-avert
+#testcase-table-of-shiner-shrine-nudges-avert
 >avetr
 You need to focus on HOW the imp averts, vaster.
 
-#ttc-table-of-otters-nudges-coma
+#testcase-table-of-otters-nudges-coma
 >coam
 The coma camo remains as-is. It's probably made by A-COM, and all their products are quality.
 
-#ttc-table-of-shiner-shrine-nudges-brute
+#testcase-table-of-shiner-shrine-nudges-brute
 >bruet
 No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 
-#ttc-table-of-shiner-shrine-nudges-enraged
+#testcase-table-of-shiner-shrine-nudges-enraged
 >enragde
 No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 
-#ttc-table-of-otters-spechelp-legendary
+#testcase-table-of-otters-spechelp-legendary
 >enragedyl
 The imp looks slightly annoyed for a second. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
@@ -957,7 +957,7 @@ The imp looks slightly annoyed for a second. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-spechelp-motleyer
+#testcase-table-of-otters-spechelp-motleyer
 >remoteyl
 The imp looks slightly annoyed for a second. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
@@ -968,7 +968,7 @@ The imp looks slightly annoyed for a second. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-spechelp-butlery
+#testcase-table-of-otters-spechelp-butlery
 >bruteyl
 The imp looks slightly annoyed for a second. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a decent omen.
@@ -983,7 +983,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the imp. That's a de
 >scan sly imp
 The settler then gets garbled a bit. The imp has more than one way to be active.
 
-#ttc-table-of-otters-readables-coma-camo
+#testcase-table-of-otters-readables-coma-camo
 >read coma camo
 You concentrate and see: "Formerly the Less Nice Silences, then Tapering Anger Pit/Inert Gap."
 
@@ -991,22 +991,22 @@ You concentrate and see: "Formerly the Less Nice Silences, then Tapering Anger P
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >remotely
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 15 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 /^Lamer Realm
 
-#ttc-table-of-lamer-realm-nudges-low
+#testcase-table-of-lamer-realm-nudges-low
 >lwo
 You probably want the owls not to swoop low. And you'll want to take care of them all.
 
-#ttc-table-of-otters-spechelp-owls
+#testcase-table-of-otters-spechelp-owls
 >owsl
 Hmm. The owls still swarm and swirl too fast.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the owls. That's a decent omen.
@@ -1025,33 +1025,33 @@ Actually, you'd like the owls NOT to reach lows like you are. Or not to get ther
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-lamer-realm-nudges-lamer
+#testcase-table-of-lamer-realm-nudges-lamer
 >lamre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-lamer-realm-nudges-ocelot
+#testcase-table-of-lamer-realm-nudges-ocelot
 >ocelto
 The ocelots are sticking together. You don't want or need to pick one off.
 
-#ttc-table-of-lamer-realm-nudges-saturnic
+#testcase-table-of-lamer-realm-nudges-saturnic
 >saturnci
 The curtains are too solid to change.
 
-#ttc-table-of-lamer-realm-nudges-aturnic
+#testcase-table-of-lamer-realm-nudges-aturnic
 >aturnci
 Even one curtain is too solid to change.
 
-#ttc-table-of-lamer-realm-nudges-shades
+#testcase-table-of-lamer-realm-nudges-shades
 >shadse
 You're not here to mess with fashion. Plus, the shades were last game.
 
-#ttc-table-of-lamer-realm-nudges-clipons
+#testcase-table-of-lamer-realm-nudges-clipons
 >cliposn
 The ocelots would still be awkward even if they lost the clip-ons.
 
-#ttc-table-of-otters-spechelp-ocelots
+#testcase-table-of-otters-spechelp-ocelots
 >ocelost
 The ocelots squint at you through their clip-ons.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ocelots. That's a decent omen.
@@ -1062,7 +1062,7 @@ The ocelots squint at you through their clip-ons.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ocelots. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-spechelp-leopard
+#testcase-table-of-otters-spechelp-leopard
 >leopadr
 The leopard almost seems to un-cuff its hands.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the leopard. That's a decent omen.
@@ -1073,7 +1073,7 @@ The leopard almost seems to un-cuff its hands.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the leopard. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-spechelp-badger
+#testcase-table-of-otters-spechelp-badger
 >badgre
 The badger flexes imaginary suit lapels, then quickly goes back to brooding.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the badger. That's a decent omen.
@@ -1084,7 +1084,7 @@ The badger flexes imaginary suit lapels, then quickly goes back to brooding.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the badger. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-spechelp-satyr
+#testcase-table-of-otters-spechelp-satyr
 >satry
 The satyr puts a hand on its chin as if pondering deeper things.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stray satyr. That's a decent omen.
@@ -1124,19 +1124,19 @@ The leopard is plenty powerful as-is, but you need to get it on your side.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 17 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >paroled
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 18 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-otters-scannotes-stray-satyr
+#testcase-table-of-otters-scannotes-stray-satyr
 >scan stray satyr
 The satyr seems physically hard to tame, and the two ambiguous settings seem like resistance -- but there are only five letters.
 
-#ttc-table-of-otters-readables-stray-satyr
+#testcase-table-of-otters-readables-stray-satyr
 >read stray satyr
 You see TSYRA branded in red under the stray satyr's shoulder.
 
@@ -1144,7 +1144,7 @@ You see TSYRA branded in red under the stray satyr's shoulder.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 19 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+testcase-mistake-roiling-preload-pre-load-pre-load
 >preload
@@ -1172,19 +1172,19 @@ You already changed the leopard.
 >l
 /^Blest Belts
 
-#+ttc-table-of-lamer-realm-nudges-shades
+#+testcase-table-of-lamer-realm-nudges-shades
 >shadse
 You're not here to mess with fashion. Plus, the shades were last game.
 
-#ttc-table-of-lamer-realm-nudges-kool
+#testcase-table-of-lamer-realm-nudges-kool
 >kolo
 You're not here to mess with fashion.
 
-#ttc-table-of-lamer-realm-nudges-blest
+#testcase-table-of-lamer-realm-nudges-blest
 >blets
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-lamer-realm-nudges-belt
+#testcase-table-of-lamer-realm-nudges-belt
 >betl
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
@@ -1199,7 +1199,7 @@ The badger already feels second-rate, so you need another way to help it.
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 20 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+testcase-mistake-roiling-b-grade-bgrade
 >b grade
@@ -1217,43 +1217,43 @@ The badger no longer feels second-rate, so it needs no more help.
 >sherwin
 No cryptozookeeper appears.
 
-#+ttc-table-of-clarthead-cathedral-nudges-jolti
+#+testcase-table-of-clarthead-cathedral-nudges-jolti
 >ojlti
 No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 
-#ttc-table-of-clarthead-cathedral-nudges-jolty
+#testcase-table-of-clarthead-cathedral-nudges-jolty
 >ojlty
 No, you need a couple more letters, but not the usual ones. Even with your powers back, you still need to get the adverb right.
 
-#ttc-table-of-clarthead-cathedral-nudges-whiner
+#testcase-table-of-clarthead-cathedral-nudges-whiner
 >whinre
 You can't change who whiners are, but maybe you can make them whine less...effectively.
 
-#ttc-table-of-clarthead-cathedral-nudges-whiners
+#testcase-table-of-clarthead-cathedral-nudges-whiners
 >whinesr
 You can't change who whiners are, but maybe you can make them whine less...effectively.
 
-#ttc-table-of-clarthead-cathedral-nudges-cathedral
+#testcase-table-of-clarthead-cathedral-nudges-cathedral
 >cathedrla
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-clarthead-cathedral-nudges-loathing
+#testcase-table-of-clarthead-cathedral-nudges-loathing
 >loathign
 No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 
-#ttc-table-of-clarthead-cathedral-nudges-stoic
+#testcase-table-of-clarthead-cathedral-nudges-stoic
 >stoci
 Usually, you'd need to add two letters, but here you'd need to add four.
 
-#ttc-table-of-clarthead-cathedral-nudges-stoical
+#testcase-table-of-clarthead-cathedral-nudges-stoical
 >stoicla
 No, you need a couple more letters. Even with your powers back, you still need to get the adverb right.
 
-#+ttc-table-of-otters-nudges-coma
+#+testcase-table-of-otters-nudges-coma
 >coam
 The coma camo remains as-is. It's probably made by A-COM, and all their products are quality.
 
-#ttc-table-of-otters-spechelp-tallyhoing
+#testcase-table-of-otters-spechelp-tallyhoing
 >loathingyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
@@ -1264,7 +1264,7 @@ The whiners manage to shush you more noisily than you've ever been shushed. You 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-spechelp-callosity
+#testcase-table-of-otters-spechelp-callosity
 >stoicalyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
@@ -1275,7 +1275,7 @@ The whiners manage to shush you more noisily than you've ever been shushed. You 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-spechelp-jollity
+#testcase-table-of-otters-spechelp-jollity
 >joltiyl
 The whiners manage to shush you more noisily than you've ever been shushed. You may be on the right track
 DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners. That's a decent omen.
@@ -1290,7 +1290,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the shrewin' whiners
 >scan whiners
 The settler then garbles and changes. The whiners have more than one way of staying loud.
 
-#+ttc-table-of-otters-readables-coma-camo
+#+testcase-table-of-otters-readables-coma-camo
 >read coma camo
 You concentrate and see: "Formerly the Southward Shout Ward, then the Rote-Moan/Near-Moot Anteroom."
 
@@ -1298,19 +1298,19 @@ You concentrate and see: "Formerly the Southward Shout Ward, then the Rote-Moan/
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 21 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >joltily
 Your score has just gone up by one point
 They find another place where rioters roister.
 
 >score
-Score in a scenario: 22 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >s
 /^Perverse Preserve
 
-#ttc-table-of-otters-spechelp-raptor
+#testcase-table-of-otters-spechelp-raptor
 >raptro
 The raptor recoils slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the raptor. That's a decent omen.
@@ -1325,7 +1325,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the raptor. That's a
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 23 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-mistake-roiling-penis
 >penis
@@ -1343,15 +1343,15 @@ You don't need to grow a spine. You've gotten this far.
 >shorten
 Well--not shorten, but break it down...you see red from the effort.
 
-#ttc-table-of-otters-readables-whistle
+#testcase-table-of-otters-readables-whistle
 >read whistle
 You strain your eyes to see that Ed Plye, apparently, made the whistle.
 
-#ttc-table-of-otters-nudges-weltish
+#testcase-table-of-otters-nudges-weltish
 >witlesh
 You can't do anything to the whistle until you have it.
 
-#ttc-table-of-otters-spechelp-weltish-whistle
+#testcase-table-of-otters-spechelp-weltish-whistle
 >epelyd
 Probably best to have the whistle before changing it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the weltish whistle. That's a decent omen.
@@ -1362,35 +1362,35 @@ Probably best to have the whistle before changing it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the weltish whistle. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-perverse-preserve-nudges-preserve
+#testcase-table-of-perverse-preserve-nudges-preserve
 >preserev
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-perverse-preserve-nudges-pine
+#testcase-table-of-perverse-preserve-nudges-pine
 >pien
 So many pines, hard to pick one. Might as well take care of them all.
 
-#ttc-table-of-perverse-preserve-nudges-nail
+#testcase-table-of-perverse-preserve-nudges-nail
 >nali
 So many nails, hard to pick one. Might as well take care of them all.
 
-#ttc-table-of-perverse-preserve-nudges-critters
+#testcase-table-of-perverse-preserve-nudges-critters
 >crittesr
 The CRITTERS-RESTRICT can't be changed by your own will. Elvira made sure of that.
 
-#ttc-table-of-perverse-preserve-nudges-critter
+#testcase-table-of-perverse-preserve-nudges-critter
 >crittre
 The CRITTERS-RESTRICT can't be changed by your own will. Elvira made sure of that.
 
-#ttc-table-of-perverse-preserve-nudges-raccoon
+#testcase-table-of-perverse-preserve-nudges-raccoon
 >raccono
 The corona seems to waver, the "c" in it vanishing and reappearing, as if it isn't really important.
 
-#ttc-table-of-perverse-preserve-nudges-throne
+#testcase-table-of-perverse-preserve-nudges-throne
 >throen
 There's more than one throne, though in this case, you could call up a single animal, and the others will follow.
 
-#ttc-table-of-otters-spechelp-thrones
+#testcase-table-of-otters-spechelp-thrones
 >thronse
 The thrones seem to buzz a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the thrones. That's a decent omen.
@@ -1401,7 +1401,7 @@ The thrones seem to buzz a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the thrones. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-spechelp-nails
+#testcase-table-of-otters-spechelp-nails
 >naisl
 One of the nails seems to bend a bit.
 
@@ -1414,7 +1414,7 @@ Another one of the nails seems to bend a bit.
 Another one of the nails seems to bend a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the nails. That's a decent omen.
 
-#ttc-table-of-otters-spechelp-pines
+#testcase-table-of-otters-spechelp-pines
 >pinse
 The pines rustle as if an animal climbed through them.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pines. That's a decent omen.
@@ -1425,7 +1425,7 @@ The pines rustle as if an animal climbed through them.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pines. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-spechelp-corona
+#testcase-table-of-otters-spechelp-corona
 >coroan
 The corona scurries about for a bit before settling down again.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the corona. That's a decent omen.
@@ -1444,19 +1444,19 @@ The nails are already dead as a doornail.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 24 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >hornets
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 25 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >racoon
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 26 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+testcase-mistake-roiling-slain-as-nil
 >as nil
@@ -1466,7 +1466,7 @@ Not the way to save the animals, surprisingly.
 >shorten
 They're more likely to shorten you with a few stings.
 
-#+ttc-table-of-perverse-preserve-nudges-raccoon
+#+testcase-table-of-perverse-preserve-nudges-raccoon
 >raccono
 No need to tweak the rac(c)oon again. It's fine as is.
 
@@ -1478,21 +1478,21 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 27 out of 38 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-perverse-preserve-nudges-uprate
+#testcase-table-of-perverse-preserve-nudges-uprate
 >upraet
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-perverse-preserve-nudges-uprates
+#testcase-table-of-perverse-preserve-nudges-uprates
 >upratse
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-perverse-preserve-nudges-lit
+#testcase-table-of-perverse-preserve-nudges-lit
 >lti
 It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it.
 
-#ttc-table-of-perverse-preserve-nudges-tail
+#testcase-table-of-perverse-preserve-nudges-tail
 >tali
 It's a nice tail, and the racoon seems proud of it, so it'd be kind of mean to change it.
 
@@ -1505,7 +1505,7 @@ Microbes aren't the problem in Yorpwald.
 >n
 >n
 
-#ttc-table-of-otters-spechelp-asyllabic-lilac-bays
+#testcase-table-of-otters-spechelp-asyllabic-lilac-bays
 >basicalyl
 You almost hear music as the lilac bays rustle.
 
@@ -1517,21 +1517,21 @@ You almost hear music as the lilac bays rustle.
 >basically
 by one point
 >score
-Score in a scenario: 28 out of 38 total points in the current region, Otters. Lowest score to solve is 32. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-otters-done-rejects-asyllabic-lilac-bays
+#testcase-table-of-otters-done-rejects-asyllabic-lilac-bays
 >basicalyl
 The asyllabic lilac bays are quite nice as-is after your brilliant plant-whispering.
 
-#ttc-table-of-minded-midden-nudges-bale
+#testcase-table-of-minded-midden-nudges-bale
 >aleb
 You need to deal with all the bales.
 
-#ttc-table-of-otters-scannotes-blase-bales
+#testcase-table-of-otters-scannotes-blase-bales
 >scan blase bales
 The bales may be blase, but you don't think you'll mind this solution being blase as well, compared to what you faced.
 
-#ttc-table-of-otters-spechelp-blase-bales
+#testcase-table-of-otters-spechelp-blase-bales
 >elsab
 The blase bales seem to darken and shake a bit.
 
@@ -1557,23 +1557,23 @@ The bales can be transformed, but into something less unsightly.
 >sable
 by one point
 >score
-Score in a scenario: 29 out of 38 total points in the current region, Otters. Lowest score to solve is 33. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >w
 
 >actually
 by one point
 >score
-Score in a scenario: 30 out of 38 total points in the current region, Otters. Lowest score to solve is 34. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >w
 /^Reclusion Inclosure
 
-#ttc-table-of-reclusion-inclosure-nudges-inclosure
+#testcase-table-of-reclusion-inclosure-nudges-inclosure
 >inclosuer
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-reclusion-inclosure-nudges-enclosure
+#testcase-table-of-reclusion-inclosure-nudges-enclosure
 >enclosuer
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
@@ -1597,7 +1597,7 @@ You don't know if someone named Cornelius would help or hurt you.
 >rule scion
 /That's what you're trying to stop, here. Besides, (Elmer and Merle|Merle and Elmer) wouldn't trust your word, anyway.
 
-#ttc-table-of-otters-nudges-eelmr
+#testcase-table-of-otters-nudges-eelmr
 >eelmr
 /You can't fully change (Elmer and Merle|Merle and Elmer), but there are ways to shut them up for a bit. Even better, there's a way to get rid of them for good.
 
@@ -1610,13 +1610,13 @@ On the one hand, hooray for trying to fix a gender imbalance. On the other hand,
 >aside
 by one point
 
-#+ttc-table-of-otters-nudges-eelmr
+#+testcase-table-of-otters-nudges-eelmr
 >eelmr
 /You can't fully change (Elmer and Merle|Merle and Elmer), but there's another way to shut them up for a bit. Even better, there's a way to get rid of them for good.
 >honestly
 by one point
 
-#+ttc-table-of-otters-nudges-eelmr
+#+testcase-table-of-otters-nudges-eelmr
 >eelmr
 /You can't fully change (Elmer and Merle|Merle and Elmer), and you've really done all you can to shut them up for a bit. Even better, there's a way to get rid of them for good.
 >undo
@@ -1624,77 +1624,77 @@ by one point
 >undo
 >undo
 
-#ttc-table-of-reclusion-inclosure-nudges-monstery
+#testcase-table-of-reclusion-inclosure-nudges-monstery
 >monsteyr
 You can't change the inclosure. It's what's to the west that needs changing.
 
-#ttc-table-of-reclusion-inclosure-nudges-monastery
+#testcase-table-of-reclusion-inclosure-nudges-monastery
 >monasteyr
 You can't change the inclosure. It's what's to the west that needs changing.
 
-#ttc-table-of-reclusion-inclosure-nudges-sober
+#testcase-table-of-reclusion-inclosure-nudges-sober
 >sobre
 That's just focusing on the trappings of
 being ideas aides
 !and anyway, you pushed
 
-#ttc-table-of-reclusion-inclosure-nudges-bored
+#testcase-table-of-reclusion-inclosure-nudges-bored
 >borde
 That's just focusing on the trappings of
 being ideas aides
 !and anyway, you pushed
 
-#ttc-table-of-reclusion-inclosure-nudges-bore
+#testcase-table-of-reclusion-inclosure-nudges-bore
 >boer
 That's just focusing on the trappings of
 being ideas aides
 !and anyway, you pushed
 
-#ttc-table-of-reclusion-inclosure-nudges-scowl
+#testcase-table-of-reclusion-inclosure-nudges-scowl
 >scolw
 That's just focusing on the trappings of
 being ideas aides
 !and anyway, you pushed
 
-#ttc-table-of-reclusion-inclosure-nudges-cowl
+#testcase-table-of-reclusion-inclosure-nudges-cowl
 >colw
 That's just focusing on the trappings of
 being ideas aides
 !and anyway, you pushed
 
-#ttc-table-of-reclusion-inclosure-nudges-alcoves
+#testcase-table-of-reclusion-inclosure-nudges-alcoves
 >alcovse
 It'll take more to destroy the whole citadel and not just the alcoves or coevals.
 
-#ttc-table-of-reclusion-inclosure-nudges-alcove
+#testcase-table-of-reclusion-inclosure-nudges-alcove
 >alcoev
 It'll take more to destroy the whole citadel and not just the alcove or coeval.
 
-#ttc-table-of-otters-nudges-hydra
+#testcase-table-of-otters-nudges-hydra
 >hydar
 !You try, but that doesn't do anything with, or to, the hydra to the west.
 
-#ttc-table-of-reclusion-inclosure-nudges-laminas
+#testcase-table-of-reclusion-inclosure-nudges-laminas
 >laminsa
 You can't change them, and even if you could, Elvira would probably be alerted.
 
-#ttc-table-of-reclusion-inclosure-nudges-lamina
+#testcase-table-of-reclusion-inclosure-nudges-lamina
 >lamian
 You can't change them, and even if you could, Elvira would probably be alerted.
 
-#ttc-table-of-reclusion-inclosure-nudges-forces
+#testcase-table-of-reclusion-inclosure-nudges-forces
 >forcse
 Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second.
 
-#ttc-table-of-reclusion-inclosure-nudges-forec
+#testcase-table-of-reclusion-inclosure-nudges-forec
 >forec
 Some art is just out there to troll people. The forces fresco is such. Even if you could vandalize it, Elvira might be on you in a second.
 
-#ttc-table-of-reclusion-inclosure-nudges-idea
+#testcase-table-of-reclusion-inclosure-nudges-idea
 >idae
 You might be able to disrupt both of them, not just one.
 
-#ttc-table-of-otters-scannotes-aside-llp
+#testcase-table-of-otters-scannotes-aside-llp
 >scan elmer
 /DEBUG: between (Merle and Elmer|Elmer and Merle) being scanned\.
 Hmm. The two yellows can't mean something like LREME. So it must be that they are ideas aides.
@@ -1704,7 +1704,7 @@ Hmm. The two yellows can't mean something like LREME. So it must be that they ar
 /DEBUG: between (Merle and Elmer|Elmer and Merle) being scanned\.
 Hmm. The two yellows can't mean something like LREME. So it must be that they are ideas aides.
 
-#ttc-table-of-otters-spechelp-aside-llp
+#testcase-table-of-otters-spechelp-aside-llp
 >aseid
 /(Elmer and Merle|Merle and Elmer) rock back and forth a bit.
 /DEBUG ONLY: You feel a slight psychic push-pull coming from between (Elmer and Merle|Merle and Elmer). That's a decent omen.
@@ -1719,9 +1719,9 @@ Hmm. The two yellows can't mean something like LREME. So it must be that they ar
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 31 out of 38 total points in the current region, Otters. Lowest score to solve is 35. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-otters-readables-holy-nest
+#testcase-table-of-otters-readables-holy-nest
 >read holy nest
 /Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY\? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
 >read holy nest
@@ -1735,7 +1735,7 @@ Score in a scenario: 31 out of 38 total points in the current region, Otters. Lo
 >read holy nest
 /Scrawled in red on the holy nest is (ETHYLS\? NO!|EH, SLY\? NOT!|SLOTH YEN\.|THY LENS, O!|YE SOL, NTH\.|ELTYN\? SHO!)
 
-#ttc-table-of-otters-spechelp-holy-nest
+#testcase-table-of-otters-spechelp-holy-nest
 >honestyl
 The holy nest flutters silently.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the holy nest. That's a decent omen.
@@ -1746,18 +1746,18 @@ The holy nest flutters silently.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the holy nest. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#+ttc-table-of-otters-nudges-hydra
+#+testcase-table-of-otters-nudges-hydra
 >w
 >hydar
 You try, but that doesn't do anything with, or to, the hydra to the west.
 
-#+ttc-table-of-reclusion-inclosure-nudges-bored
+#+testcase-table-of-reclusion-inclosure-nudges-bored
 >brode
 That's just focusing on the trappings of
 being ideas aides
 and anyway, you pushed
 
-#ttc-table-of-reclusion-inclosure-nudges-ideas
+#testcase-table-of-reclusion-inclosure-nudges-ideas
 >edsia
 /(Elmer and Merle|Merle and Elmer) aren't the type to get fooled that way again. Maybe there's another way to pull their chain, though.
 >scan elmer
@@ -1769,20 +1769,20 @@ holy nest
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 32 out of 38 total points in the current region, Otters. Lowest score to solve is 36. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 # the cinders are moved to the end to test the above case: do we have a chance to get all the points?
 >rescind
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 33 out of 38 total points in the current region, Otters. Lowest score to solve is 37. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-otters-nudges-cinders
+#testcase-table-of-otters-nudges-cinders
 >cindesr
 The cinders are gone for good.
 
-#+ttc-table-of-reclusion-inclosure-nudges-ideas
+#+testcase-table-of-reclusion-inclosure-nudges-ideas
 >edsia
 /(Elmer and Merle|Merle and Elmer) aren't the type to get fooled that way again. You got them twice, and that's enough.
 #this is outside the table of scannotes, but we need to make sure scanning Elmer/Merle redirects the player.
@@ -1791,27 +1791,27 @@ The cinders are gone for good.
 >scan merle
 /Nothing. But you already found a couple ways to flummox and annoy (Elmer and Merle|Merle and Elmer). Now you need to get rid of them, and the hydra behind them, for good.
 
-#+ttc-table-of-reclusion-inclosure-nudges-idea
+#+testcase-table-of-reclusion-inclosure-nudges-idea
 >idae
 You already pushed them aside.
 
-#ttc-table-of-otters-done-rejects-parrot
+#testcase-table-of-otters-done-rejects-parrot
 >parrto
 The parrot can be changed back into a raptor, but not into anything new.
 
 >raptor
 Your score has just gone up by one point
 
-#ttc-table-of-reclusion-inclosure-nudges-hidings
+#testcase-table-of-reclusion-inclosure-nudges-hidings
 >hidinsg
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-reclusion-inclosure-nudges-hiding
+#testcase-table-of-reclusion-inclosure-nudges-hiding
 >hidign
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
 >score
-Score in a scenario: 34 out of 38 total points in the current region, Otters. Lowest score to solve is 37. Maximum score available is 38.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-mistake-roiling-cue-reds
 >cue reds
@@ -1854,16 +1854,16 @@ No, Elvira won't surrender that easily. Neither should you!
 >suceder
 It's not a misspelling you need, but a logical neologism. Also, it's not clear who the succeeder would be. You should be able to defeat her now you have allies.
 
-#ttc-table-of-otters-readables-educers-us-creed
+#testcase-table-of-otters-readables-educers-us-creed
 >read us creed
 RESCUED! RECUSED-SEDUCER-SECURED!
 For all Elvira's bashing of you as a pedantic anagrammist, she sure liked appropriating the skill at just the right moment to impress people. What a hypocrite!
 
-#ttc-table-of-otters-scannotes-educers-us-creed
+#testcase-table-of-otters-scannotes-educers-us-creed
 >scan us creed
 This one's all over the place. You notice nothing registers over the EDUCERS, US Creed's text, only the four words in the main bit.
 
-#ttc-table-of-otters-spechelp-educers-us-creed
+#testcase-table-of-otters-spechelp-educers-us-creed
 >ceredus
 The EDUCERS, US Creed seems to crumble so very slightly.
 
@@ -1872,11 +1872,11 @@ The EDUCERS, US Creed seems to crumble so very slightly.
 The EDUCERS, US Creed seems to crumble so very slightly.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-reclusion-inclosure-nudges-creed
+#testcase-table-of-reclusion-inclosure-nudges-creed
 >edrec
 It's an Us Creed, not just a creed.
 
-#ttc-table-of-reclusion-inclosure-nudges-educer
+#testcase-table-of-reclusion-inclosure-nudges-educer
 >educre
 It's for many educers, not just one.
 
@@ -1885,14 +1885,14 @@ The EDUCERS, US Creed crumbles as you get a bit creative with your words until n
 First, though, to make her history.
 
 >score
-Score in a scenario: 35 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
-#ttc-table-of-otters-spechelp-medals
+#testcase-table-of-otters-spechelp-medals
 >quickyl
 The medals waver noiselessly. Hm, that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the damsel medals. That's a decent omen.
 
-#+ttc-table-of-otters-spechelp-medals
+#+testcase-table-of-otters-spechelp-medals
 >qiuckyl
 The medals waver noiselessly. Maybe they'd do more if you placed the u right after the q.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the damsel medals. That's a decent omen.
@@ -1903,7 +1903,7 @@ The medals waver noiselessly. Hm, that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the damsel medals. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-otters-scannotes-medals
+#testcase-table-of-otters-scannotes-medals
 >scan medals
 The medals clink back and forth and unwind as you scan them. Maybe that might help you. But since you're an old hat by now, and the questionable slots seem -- well, not as bad as a puzzle near the end could be. The seven slots suggest it's not the medals that need attention but what might be engraved on the medals.
 >x medals
@@ -1915,7 +1915,7 @@ The medals clink together. You feel infused with speed. Even your fats feel fast
 by one point
 
 >score
-Score in a scenario: 36 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 #this is how we get rid of Elvira
 >w
@@ -1941,15 +1941,15 @@ That's what you're trying to stop, here.
 !wouldn't trust your word, anyway.
 #!Besides, (Elmer and Merle|Merle and Elmer) wouldn't trust your word, anyway.
 
-#+ttc-table-of-otters-nudges-hydra
+#+testcase-table-of-otters-nudges-hydra
 >hydar
 The hydra's toast. Elvira is not. Deal with her.
 
-#+ttc-table-of-otters-nudges-weltish
+#+testcase-table-of-otters-nudges-weltish
 >whistel
 You don't see anything happen. Then you note red writing on the whistle which might tell more about it.
 
-#+ttc-table-of-otters-spechelp-weltish-whistle
+#+testcase-table-of-otters-spechelp-weltish-whistle
 >deepyl
 The sound you make is experimental and groovy, in a new age jazz sort of way, but it's not quite right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the weltish whistle. That's a decent omen.
@@ -1967,11 +1967,11 @@ Ed Plye, apparently, made the whistle.
 >aliver
 You don't want to risk anything that would make Elvira more powerful.
 
-#ttc-table-of-otters-done-rejects-medals
+#testcase-table-of-otters-done-rejects-medals
 >ickqlyu
 You try to remember even a part of those solutions to society's big problems that flashed through your mind, but no dice. Not even going outside the box with where you place that q helps.
 
-#+ttc-table-of-otters-done-rejects-medals
+#+testcase-table-of-otters-done-rejects-medals
 >ickquyl
 You try to remember even a part of those solutions to society's big problems that flashed through your mind, but no dice.
 !Not even going
@@ -1981,19 +1981,19 @@ Your score has just gone up by one point
 
 >score
 
-Score in a scenario: 37 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >w
 
-#+ttc-table-of-otters-nudges-weltish
+#+testcase-table-of-otters-nudges-weltish
 >iswelth
 You already figured how to play the whistle.
 
-#ttc-table-of-otters-done-rejects-whistle
+#testcase-table-of-otters-done-rejects-whistle
 >deepyl
 The whistle's already in tune.
 
-#ttc-table-of-rancho-archon-anchor-nudges-crone
+#testcase-table-of-rancho-archon-anchor-nudges-crone
 >croen
 You can't do much with Elvira's "real" name. Or her ex-hydra's. You need to act.
 
@@ -2023,72 +2023,72 @@ You don't need someone to help you climb. You need help fighting Elvira.
 >charon
 The Rancho won't change to the river of the dead just like that, but on the other hand, if you wait around, you'll get to see the river of the dead once Elvira takes action.
 
-#ttc-table-of-rancho-archon-anchor-nudges-archon
+#testcase-table-of-rancho-archon-anchor-nudges-archon
 >rancoh
 It can't be as easy as changing the Rancho. Elvira wouldn't be so careless to allow THAT. You figure you probably need help.
 
-#ttc-table-of-rancho-archon-anchor-nudges-tripod
+#testcase-table-of-rancho-archon-anchor-nudges-tripod
 >tripdo
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
 
-#ttc-table-of-rancho-archon-anchor-nudges-becharm
+#testcase-table-of-rancho-archon-anchor-nudges-becharm
 >bechamr
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
 
-#ttc-table-of-rancho-archon-anchor-nudges-nacht
+#testcase-table-of-rancho-archon-anchor-nudges-nacht
 >nacth
 It's annoying and unswayable, like most chants.
 
-#ttc-table-of-rancho-archon-anchor-nudges-stocked
+#testcase-table-of-rancho-archon-anchor-nudges-stocked
 >stockde
 You can't release any prisoners from the stockade THAT easily. You'd need an army.
 
-#ttc-table-of-rancho-archon-anchor-nudges-vats
+#testcase-table-of-rancho-archon-anchor-nudges-vats
 >vast
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
 
-#ttc-table-of-rancho-archon-anchor-nudges-vat
+#testcase-table-of-rancho-archon-anchor-nudges-vat
 >vta
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
 
-#ttc-table-of-rancho-archon-anchor-nudges-moisture
+#testcase-table-of-rancho-archon-anchor-nudges-moisture
 >moistuer
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
 
-#ttc-table-of-rancho-archon-anchor-nudges-pyre
+#testcase-table-of-rancho-archon-anchor-nudges-pyre
 >pyer
 You can't just muck around with one part of Elvira's army. You need a way to find allies.
 
-#ttc-table-of-rancho-archon-anchor-nudges-stockade
+#testcase-table-of-rancho-archon-anchor-nudges-stockade
 >stockaed
 You can't release any prisoners from the stockade THAT easily. You'd need an army.
 
-#ttc-table-of-rancho-archon-anchor-nudges-warship
+#testcase-table-of-rancho-archon-anchor-nudges-warship
 >warshpi
 You have enough to think about without one more of Elvira's machines.
 
-#ttc-table-of-rancho-archon-anchor-nudges-amulet
+#testcase-table-of-rancho-archon-anchor-nudges-amulet
 >amulte
 Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army.
 
-#ttc-table-of-rancho-archon-anchor-nudges-ultimate
+#testcase-table-of-rancho-archon-anchor-nudges-ultimate
 >ultimaet
 Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army.
 
-#ttc-table-of-rancho-archon-anchor-nudges-shaper
+#testcase-table-of-rancho-archon-anchor-nudges-shaper
 >shapre
 Disable one of Elvira's toys, and there's still the other. Oh, and the army, too. You need your own army.
 
-#ttc-table-of-rancho-archon-anchor-nudges-purple
+#testcase-table-of-rancho-archon-anchor-nudges-purple
 >purpel
 You have enough to think about without one more of Elvira's machines.
 
-#ttc-table-of-rancho-archon-anchor-nudges-oranger
+#testcase-table-of-rancho-archon-anchor-nudges-oranger
 >orangre
 You have enough to think about without one more of Elvira's machines.
 
 >score
-Score in a scenario: 37 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >misses
 !otters

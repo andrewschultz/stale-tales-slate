@@ -44,7 +44,7 @@ It smells a bit stinky here, but more pressingly, it just FEELS stinky
 Your score has just gone up by one point
 /^Austerer Treasure
 
-#ttc-table-of-presto-nowheres-austerer-treasure
+#testcase-table-of-presto-nowheres-austerer-treasure
 >n
 The treasure room has no secret passages, so you can only go back east.
 
@@ -68,7 +68,7 @@ You don't smell anything that'd make you say what you've needed to say in this a
 "This ... this ... this..." you hear, faintly. It feels profane.
 
 >score
-Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >bother
 Well, maybe one or two mild swears would work somewhere around here.
@@ -76,17 +76,17 @@ Well, maybe one or two mild swears would work somewhere around here.
 >phooey
 Your score has just gone up by two points
 >score
-Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >score
-Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >e
 
 >s
 /^Char Arch
 
-#ttc-table-of-presto-nowheres-char-arch
+#testcase-table-of-presto-nowheres-char-arch
 >e
 East or west would be an alpinist tailspin ("CHARGE! Eh, crag.") Try north or south, instead.
 
@@ -103,7 +103,7 @@ There are two unblocked exits: north to Grey Gyre and south.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >drat
 Your score has just gone up by one point
@@ -112,7 +112,7 @@ Your score has just gone up by one point
 Well, maybe one more mild swear would work somewhere around here.
 
 >score
-Score in a scenario: 5 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 
@@ -123,7 +123,7 @@ The plebe perks his ears up, but maybe that was too strong. Perhaps you should u
 #one trip through the maze!
 >n
 
-#ttc-table-of-presto-nowheres-nowt-town
+#testcase-table-of-presto-nowheres-nowt-town
 >n
 Nowt Town holds no secrets. You can only go west or south.
 
@@ -549,7 +549,7 @@ The only way you seem to be able to go is east to another part of the maze.
 #verbcase goto-presto-if-noun-is-nowt-town-or-noun-is-a-mazeroom-or-noun-is-unwary-runway
 GO TO is disabled for Nowt Town and the Volt Maze. Perhaps there's another way to solve it than by walking through.
 
-#ttc-table-of-presto-nowheres-unwary-runway
+#testcase-table-of-presto-nowheres-unwary-runway
 >w
 The unwary runway is a straight north-south shot. And who knows what horrible shocks the walls could give here?
 
@@ -572,7 +572,7 @@ GO TO is disabled for Nowt Town and the Volt Maze, from L to V. Perhaps there's 
 
 >gonear runway
 
-#+ttc-table-of-presto-nowheres-unwary-runway
+#+testcase-table-of-presto-nowheres-unwary-runway
 >w
 Zo Mavelt waves frantically at you NOT to touch the east and west walls. They may be extra shocking here!
 >n
@@ -581,12 +581,12 @@ Zo Mavelt waves frantically at you NOT to touch the east and west walls. They ma
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >e
 /^Marines Seminar Remains
 
-#ttc-table-of-presto-nowheres-marines-seminar-remains
+#testcase-table-of-presto-nowheres-marines-seminar-remains
 >e
 While you're impressed with people who can navigate sport ports, you couldn't do much more than show respect for them, if you need a distraction from your main quest.
 
@@ -606,19 +606,19 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 7 out of 41 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#+ttc-table-of-presto-nowheres-marines-seminar-remains
+#+testcase-table-of-presto-nowheres-marines-seminar-remains
 >e
 While you're impressed with people who can navigate sport ports, you already saluted them. No need to do more.
 
 >w
 
-#ttc-table-of-presto-attacks-walls
+#testcase-table-of-presto-attacks-walls
 >attack walls
 Brute force is ineffective. So, too, are all the swears often used with said brute force. You need to wipe out the whole volt maze, not just these walls.
 
-#ttc-table-of-presto-attacks-lamb
+#testcase-table-of-presto-attacks-lamb
 >attack lamb
 Meanie. There's a better way to help it flee home.
 
@@ -646,7 +646,7 @@ following.)
 >mazeltov
 Your score has just gone up by three points
 >score
-Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >blam
 Your score has just gone up by one point
 
@@ -662,14 +662,14 @@ You don't want to, and can't, go back to or through the volt maze you solved.
 You don't want to, and can't, go back to or through the volt maze you solved.
 
 >score
-Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >s
 
 >s
 /^Dirge Ridge
 
-#ttc-table-of-presto-nowheres-dirge-ridge
+#testcase-table-of-presto-nowheres-dirge-ridge
 >e
 The vile veil seems to almost repel a leaper except where it opens to the north. Note if it were an evil veil, it would probably pull you down the side of the ridge, maybe even to the evil vlei. You couldn't leg such gulches.
 
@@ -682,7 +682,7 @@ The vile veil seems to almost repel a leaper except where it opens to the north.
 >exits
 The only way you seem to be able to go is north to Char Arch.
 
-#ttc-table-of-presto-attacks-leo
+#testcase-table-of-presto-attacks-leo
 >attack leo
 Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. Think. Or, rather, out-think.)
 
@@ -690,9 +690,9 @@ Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. T
 by one point
 
 >score
-Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-presto-attacks-rand
+#testcase-table-of-presto-attacks-rand
 >attack rand
 Neat! Be Beaten! (You'd go to a lit posh hospital where CPR is crisp for that. Think. Or, rather, out-think.)
 
@@ -708,7 +708,7 @@ No, that's too strong for here. You've been doing quite well with the tame stuff
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >bother
 You had your chance for a minor swear or two. And you took it. Yay, you.
@@ -726,12 +726,12 @@ small talk is not very deep or aggressive, and they don't seem to resent you for
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >goodness
 by one point
 >score
-Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #verbcase listen-presto-if-player-is-in-dirge-ridge-if-rand-is-washed-up
 >listen
@@ -753,7 +753,7 @@ Score in a scenario: 15 out of 41 total points in the current region, Presto. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >put dart in popgun
 You put the dart into the PG-on-up popgun.
@@ -772,12 +772,12 @@ The plebe actually looks frightened, because they've had mild swears soften them
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 /^Saps' Pass
 
-#ttc-table-of-presto-nowheres-saps-pass
+#testcase-table-of-presto-nowheres-saps-pass
 >sw
 There's no way around the hogs. You need to get rid of them.
 
@@ -801,7 +801,7 @@ The hogs snicker at HOW you said that swear. But yet ... but yet, they seemed sl
 >bother
 The hogs groan, as if to say, don't try that again. Maybe a different lame swear will set them off.
 
-#ttc-table-of-presto-attacks-hogs
+#testcase-table-of-presto-attacks-hogs
 >attack hogs
 If you were as strong as
 , maybe. But you're not. Maybe you can out-think them.
@@ -811,7 +811,7 @@ Your score has just gone up by one point
 
 /^Phat Path
 
-#+ttc-table-of-presto-nowheres-saps-pass
+#+testcase-table-of-presto-nowheres-saps-pass
 >sw
 It's best to stay on the Phat Path.
 
@@ -820,13 +820,13 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >later
 Your score has just gone up by one point
 But we ain't bored yet, boss!
 >score
-Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >tough
 Your score has just gone up by one point
@@ -834,7 +834,7 @@ Hut! Go!
 Dat was a good dust-up
 
 >score
-Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #verbcase goto-presto-if-noun-is-dirge-ridge-if-leo-is-dismissed
 >gt dirge ridge
@@ -844,7 +844,7 @@ Maybe if
 >trasch
 by one point
 >score
-Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+testcase-outside-saps-pass
 >out
@@ -881,25 +881,25 @@ by one point
 Only one more piece of hardware is needed, and the computer will work.
 
 >score
-Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >skid
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >leaf
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >casserole
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #verbcase smell-presto-if-noun-is-casserole
 >smell casserole
@@ -924,14 +924,14 @@ Only the shack seems to be a safe place to sleep, here.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >keyboard
 Your score has just gone up by one point
 You can now do computery things unimpeded! Hooray!
 
 >score
-Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >disk
 
@@ -953,7 +953,7 @@ No. You can't go out until the job here is done. You don't need to.
 You could leave, but it's time to complete the programming job here and now.
 
 >score
-Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >capslock
 Your score has just gone up by one point
@@ -965,7 +965,7 @@ fits in perfectly
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #verbcase sleep-presto-if-player-is-in-hacks'-shack
 #verbcase sleep-presto-if-player-is-in-hacks'-shack-if-peels-speel-is-in-hacks'-shack
@@ -974,50 +974,50 @@ Score in a scenario: 31 out of 41 total points in the current region, Presto. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >compile
 by one point
 
 >score
-Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >cola
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >mug
 Your score has just gone up by one point
 >score
-Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >avider
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 36 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >derive
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 # we want to check a final test case and put it in the "max" subfile, so in this case, we hold off on TAB until the very end.
 >tab
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >pour cola in mug
 You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
@@ -1031,7 +1031,7 @@ You can't budge until you fix this program, here.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >misses
 !presto
@@ -1048,4 +1048,4 @@ Diver time
 
 >score
 
-Presto (41/41)
+Presto ({MAX}/{MAX})

@@ -24,66 +24,66 @@
 >real hot
 But what emotion would provide heat?
 
-#ttc-table-of-loather-rathole-nudges-hurt
+#testcase-table-of-loather-rathole-nudges-hurt
 >hutr
 No way you could change even one hurt thru on your own. You just need to get by.
 
-#ttc-table-of-loather-rathole-nudges-hurts
+#testcase-table-of-loather-rathole-nudges-hurts
 >hurst
 No way you could change even one hurt thru on your own. You just need to get by.
 
-#ttc-table-of-loather-rathole-nudges-rathole
+#testcase-table-of-loather-rathole-nudges-rathole
 >reahlot
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
-#ttc-table-of-troves-nudges-poverty
+#testcase-table-of-troves-nudges-poverty
 >pevtryo
 There's no shortcut from poverty to the very top, but there's no definable state in between, due to the shrinking Yorpwald middle class. I'll spare the details.
 
-#ttc-table-of-troves-nudges-troev
+#testcase-table-of-troves-nudges-troev
 >tevro
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 
-#ttc-table-of-troves-nudges-storev
+#testcase-table-of-troves-nudges-storev
 >tevros
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 
-#ttc-table-of-troves-nudges-spoil
+#testcase-table-of-troves-nudges-spoil
 >spilo
 You've got the right idea...sort of...but you're not worthy of big thoughts, yet.
 
-#ttc-table-of-troves-nudges-spoiloplis
+#testcase-table-of-troves-nudges-spoiloplis
 >spilospilo
 You've got the right idea...sort of...but you're not worthy of big thoughts, yet.
 
-#ttc-table-of-loather-rathole-nudges-potholes
+#testcase-table-of-loather-rathole-nudges-potholes
 >potholes
 City Hall can't fix potholes, and neither can you. You feel a bit of lost hope as you try. You need to look out for, and look within, yourself, here.
 
-#ttc-table-of-loather-rathole-nudges-pothole
+#testcase-table-of-loather-rathole-nudges-pothole
 >pothole
 City Hall can't fix potholes, and neither can you. You feel a bit of lost hope as you try. You need to look out for, and look within, yourself, here.
 
-#ttc-table-of-troves-nudges-pagepage
+#testcase-table-of-troves-nudges-pagepage
 >pegagepa
 It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
 
-#ttc-table-of-troves-nudges-peg
+#testcase-table-of-troves-nudges-peg
 >gep
 You pause, then note the author's middle initial, which seems annoyingly important.
 
-#ttc-table-of-troves-nudges-egg
+#testcase-table-of-troves-nudges-egg
 >geg
 It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
 
-#ttc-table-of-troves-nudges-pea
+#testcase-table-of-troves-nudges-pea
 >epa
 It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
 
 >score
-Score in a scenario: 0 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-troves-spechelp-pa-egg-pea
+#testcase-table-of-troves-spechelp-pa-egg-pea
 >gaep
 You gloss blankly over Pa, Egg, Pea, but you're not quite doing it right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Pa, Egg, Pea. That's a decent omen.
@@ -94,7 +94,7 @@ You gloss blankly over Pa, Egg, Pea, but you're not quite doing it right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Pa, Egg, Pea. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-scannotes-pa-egg-pea
+#testcase-table-of-troves-scannotes-pa-egg-pea
 >scan pa egg pea
 Man! It's making the settler go crazy. Between the title and the author's name, there's a lot to consider. Maybe it will shake out.
 
@@ -103,13 +103,13 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 1 out of 30 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-troves-done-rejects-pa-egg-pea
+#testcase-table-of-troves-done-rejects-pa-egg-pea
 >gaep
 You probably did what you could. Or not-did.
 
-#ttc-table-of-troves-spechelp-tears-taser
+#testcase-table-of-troves-spechelp-tears-taser
 >staer
 The tears taser makes an odd noise, as if it is recalibrating.
 
@@ -118,15 +118,15 @@ The tears taser makes an odd noise, as if it is recalibrating.
 The tears taser makes an odd noise, as if it is recalibrating.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-scannotes-tears-taser
+#testcase-table-of-troves-scannotes-tears-taser
 >scan taser
 The tears taser whirrs menacingly. Perhaps it recognizes you'll do what it takes to defeat it, or perhaps it looks down on someone who needs that much help. But either way, you've got some info on it now.
 
-#ttc-table-of-loather-rathole-nudges-tear
+#testcase-table-of-loather-rathole-nudges-tear
 >trea
 No, something as powerful as a tears taser will cause more than one tear to be shed.
 
-#ttc-table-of-troves-readables-tears-taser
+#testcase-table-of-troves-readables-tears-taser
 >read tears taser
 RATES is written on the tears taser, in red.
 
@@ -134,9 +134,9 @@ RATES is written on the tears taser, in red.
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 2 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-troves-spechelp-eh-at-heat
+#testcase-table-of-troves-spechelp-eh-at-heat
 >haet
 You feel slightly less cold but mad at yourself for not doing better.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Eh, At Heat. That's a decent omen.
@@ -147,7 +147,7 @@ You feel slightly less cold but mad at yourself for not doing better.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Eh, At Heat. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-scannotes-eh-at-heat
+#testcase-table-of-troves-scannotes-eh-at-heat
 >scan heat
 Well, it's only four letters, and you're not sure whether to feel glad things start easy or to feel like your intelligence is insulted.
 
@@ -155,17 +155,17 @@ Well, it's only four letters, and you're not sure whether to feel glad things st
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 3 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+testcase-mistake-roiling-real-hot
 >real hot
 You already got hot. Now you need to summon a different emotion.
 
-#ttc-table-of-troves-done-rejects-heat
+#testcase-table-of-troves-done-rejects-heat
 >haet
 Don't need to overheat, or overhate.
 
-#ttc-table-of-troves-spechelp-race-acre
+#testcase-table-of-troves-spechelp-race-acre
 >caer
 For a second, things almost seem to matter. Then, back to the normal hopelessness. You must have been on to something, though.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Race Acre. That's a decent omen.
@@ -176,7 +176,7 @@ For a second, things almost seem to matter. Then, back to the normal hopelessnes
 DEBUG ONLY: You feel a slight psychic push-pull coming from Race Acre. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-scannotes-race-acre
+#testcase-table-of-troves-scannotes-race-acre
 >scan race acre
 Eh, two question marks in just four letters? You feel bummed you were given a second short puzzle in a row, then bummed you're (almost) not up to THAT.
 
@@ -190,65 +190,65 @@ Your score has just gone up by one point
 /^Bustle Sublet
 
 >score
-Score in a scenario: 4 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-mistake-roiling-pots
 >pots
 You can't see what you would do with a bunch of pots.
 
-#ttc-table-of-bustle-sublet-nudges-bustle
+#testcase-table-of-bustle-sublet-nudges-bustle
 >subelt
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
-#ttc-table-of-troves-nudges-truffle
+#testcase-table-of-troves-nudges-truffle
 >tuffler
 You can't change the truffle. It can help you change things, though. Or how you see things.
 
-#ttc-table-of-bustle-sublet-nudges-boor
+#testcase-table-of-bustle-sublet-nudges-boor
 >broo
 You can't change a whole suburb. Better to change yourself.
 
-#ttc-table-of-bustle-sublet-nudges-grub
+#testcase-table-of-bustle-sublet-nudges-grub
 >gurb
 You can't change a whole suburb. Better to change yourself.
 
-#ttc-table-of-bustle-sublet-nudges-messhole
+#testcase-table-of-bustle-sublet-nudges-messhole
 >messhoel
 A messhole is a messhole. You need to concentrate on thinking your way out.
 
-#ttc-table-of-bustle-sublet-nudges-asidewalk
+#testcase-table-of-bustle-sublet-nudges-asidewalk
 >asidewalk
 The sidewalk's condition can't be changed. For better or worse.
 
-#ttc-table-of-bustle-sublet-nudges-sidewalk
+#testcase-table-of-bustle-sublet-nudges-sidewalk
 >sidewakl
 The sidewalk's condition can't be changed. For better or worse.
 
-#ttc-table-of-bustle-sublet-nudges-laid
+#testcase-table-of-bustle-sublet-nudges-laid
 >lida
 The sidewalk's condition can't be changed. For better or worse.
 
-#ttc-table-of-bustle-sublet-nudges-askew
+#testcase-table-of-bustle-sublet-nudges-askew
 >weska
 The sidewalk's condition can't be changed. For better or worse.
 
-#ttc-table-of-bustle-sublet-nudges-reastier
+#testcase-table-of-bustle-sublet-nudges-reastier
 >reastire
 The reastier arteries cannot be changed. They cannot even change you positively if you follow them.
 
-#ttc-table-of-bustle-sublet-nudges-artery
+#testcase-table-of-bustle-sublet-nudges-artery
 >arteyr
 The reastier arteries cannot be changed. They cannot even change you positively if you follow them.
 
-#ttc-table-of-bustle-sublet-nudges-sob
+#testcase-table-of-bustle-sublet-nudges-sob
 >sbo
 No, you'll want to zone out the whole verbose distraction.
 
-#ttc-table-of-bustle-sublet-nudges-veer
+#testcase-table-of-bustle-sublet-nudges-veer
 >vere
 No, you'll want to zone out the whole verbose distraction.
 
-#ttc-table-of-troves-spechelp-mussier-misuser
+#testcase-table-of-troves-spechelp-mussier-misuser
 >sumirse
 The mussier misuser looks around a bit, worried someone might be out-thinking them.
 
@@ -257,7 +257,7 @@ The mussier misuser looks around a bit, worried someone might be out-thinking th
 The mussier misuser looks around a bit, worried someone might be out-thinking them.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-spechelp-sob-ever-verbose
+#testcase-table-of-troves-spechelp-sob-ever-verbose
 >obserev
 The sob ever verbose remains that way--mixing up subjects and making you consider things you hadn't before, in an effort to suck up attention from anyone around.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sob ever verbose. That's a decent omen.
@@ -268,12 +268,12 @@ The sob ever verbose remains that way--mixing up subjects and making you conside
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sob ever verbose. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-scannotes-sob-ever-verbose
+#testcase-table-of-troves-scannotes-sob-ever-verbose
 >scan stop post
 Nothing happens until you move the settler away from the post and towards the sob ever verbose.
 The question marks ... hmm. Oh, you get it now.
 
-#ttc-table-of-troves-readables-stop-post
+#testcase-table-of-troves-readables-stop-post
 >read stop post
 POP'S TOTS is written in red on the stop post.
 #redirects to sob ever verbose
@@ -289,9 +289,9 @@ You can't just make things obverse by wanting them to be. But if change comes wi
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 5 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-troves-spechelp-stop-post
+#testcase-table-of-troves-spechelp-stop-post
 >stpo
 The stop post continues its silent defiance. You might need to look at it from a slightly different angle.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stop post. That's a decent omen.
@@ -302,20 +302,20 @@ The stop post continues its silent defiance. You might need to look at it from a
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stop post. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-bustle-sublet-nudges-observe
+#testcase-table-of-bustle-sublet-nudges-observe
 >obserev
 You're already observing by reflex now. No need to tweak things.
 
-#ttc-table-of-troves-scannotes-mussier-misuser
+#testcase-table-of-troves-scannotes-mussier-misuser
 >scan misuser
 Those question marks ... hmm. Oh, you get it now. Not super-sneaky, but the mussier misuser isn't, either, really.
 
 >surmise
 Your score has just gone up by one point
 >score
-Score in a scenario: 6 out of 30 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-troves-scannotes-stop-post
+#testcase-table-of-troves-scannotes-stop-post
 >scan stop post
 ?R??
 Well, that's a bit confusing. You'd think a four-letter word wouldn't have too many possibilities, but maybe STOP and POST are clashing.
@@ -331,9 +331,9 @@ Your score has just gone up by one point
 /^Boarded Roadbed
 
 >score
-Score in a scenario: 7 out of 30 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-troves-scannotes-a-sty-tasty-say
+#testcase-table-of-troves-scannotes-a-sty-tasty-say
 >scan sty
 Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
 >t
@@ -341,7 +341,7 @@ Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
 !Hmm. That's a lot of uncertainty. Or, if you sit and think, maybe it isn't.
 >c
 
-#ttc-table-of-troves-spechelp-a-sty-tasty-say
+#testcase-table-of-troves-spechelp-a-sty-tasty-say
 >tsya
 No. You pause. That can't be it. You need to do something, or nothing, differently.
 DEBUG ONLY: You feel a slight psychic push-pull coming from A Sty: Tasty, Say. That's a decent omen.
@@ -352,16 +352,16 @@ No. You pause. That can't be it. You need to do something, or nothing, different
 DEBUG ONLY: You feel a slight psychic push-pull coming from A Sty: Tasty, Say. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-readables-a-sty-tasty-say
+#testcase-table-of-troves-readables-a-sty-tasty-say
 >read sty
 YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business here before. Whatever.
 
 >stay
 by one point
 >score
-Score in a scenario: 8 out of 30 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-troves-done-rejects-a-sty-tasty-say
+#testcase-table-of-troves-done-rejects-a-sty-tasty-say
 >stya
 You can't over-stay your staying power, or something.
 
@@ -377,11 +377,11 @@ A small orange blob with big eyes, short legs, and no arms falls off to the side
 >senor
 The bee's gender is only relevant to the point of knowing it's a senora.
 
-#ttc-table-of-boarded-roadbed-nudges-stop
+#testcase-table-of-boarded-roadbed-nudges-stop
 >stpo
 The stop post is in the past. No need to p.s. tweaking it.
 
-#ttc-table-of-troves-spechelp-evil-bee
+#testcase-table-of-troves-spechelp-evil-bee
 >belieev
 The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on the right track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the evil bee. That's a decent omen.
@@ -392,7 +392,7 @@ The bee's buzzing goes off-kilter for a bit. You gain a bit of faith you're on t
 DEBUG ONLY: You feel a slight psychic push-pull coming from the evil bee. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-spechelp-snore-so-arena
+#testcase-table-of-troves-spechelp-snore-so-arena
 >reasno
 The SNORE SO ARENA flashes weirdly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the SNORE SO ARENA. That's a decent omen.
@@ -403,34 +403,34 @@ The SNORE SO ARENA flashes weirdly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the SNORE SO ARENA. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-boarded-roadbed-nudges-roadbed
+#testcase-table-of-boarded-roadbed-nudges-roadbed
 >roadbde
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-boarded-roadbed-nudges-live
+#testcase-table-of-boarded-roadbed-nudges-live
 >liev
 The bee's description isn't important. It's how you see the bee that matters.
 
-#ttc-table-of-boarded-roadbed-nudges-bee
+#testcase-table-of-boarded-roadbed-nudges-bee
 >bee
 But it's not just any bee. It's an evil bee!
 
-#ttc-table-of-boarded-roadbed-nudges-snore
+#testcase-table-of-boarded-roadbed-nudges-snore
 >snoer
 Hmm. Nothing at all. It must be a snore.
 
-#ttc-table-of-boarded-roadbed-nudges-arena
+#testcase-table-of-boarded-roadbed-nudges-arena
 >arena
 Nothing happens. You may need to look at the full SNORE SO ARENA.
 
 >believe
 Your score has just gone up by one point
 
-#+ttc-table-of-boarded-roadbed-nudges-bee
+#+testcase-table-of-boarded-roadbed-nudges-bee
 >bee
 But it's not just any bee. It's a vile bee!
 
-#ttc-table-of-troves-scannotes-l-clear-cellar
+#testcase-table-of-troves-scannotes-l-clear-cellar
 >scan l clear cellar
 That question mark is perhaps, um, clear if you think about it.
 
@@ -438,33 +438,33 @@ That question mark is perhaps, um, clear if you think about it.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 10 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+testcase-mistake-roiling-norse
 >norse
 The bee or arena's nationality is not relevant, and besides, it was a snore.
 
-#+ttc-table-of-boarded-roadbed-nudges-snore
+#+testcase-table-of-boarded-roadbed-nudges-snore
 >snoer
 You already managed to REASON with a snore. Nothing else to do.
 
-#+ttc-table-of-boarded-roadbed-nudges-arena
+#+testcase-table-of-boarded-roadbed-nudges-arena
 >arena
 You already managed to REASON your way around the SNORE SO ARENA.
 
-#+ttc-table-of-boarded-roadbed-nudges-bee
+#+testcase-table-of-boarded-roadbed-nudges-bee
 >bee
 But it's not just any bee. It's a live bee! Though, really, you've already given it the business.
 
-#ttc-table-of-troves-done-rejects-evil-bee
+#testcase-table-of-troves-done-rejects-evil-bee
 >belieev
 The bee's already taken enough of your in-my-heartitude.
 
-#ttc-table-of-troves-done-rejects-snore-so-arena
+#testcase-table-of-troves-done-rejects-snore-so-arena
 >reasno
 Drowning something without reason further in reason is unreasonable.
 
-#ttc-table-of-troves-spechelp-l-clear-cellar
+#testcase-table-of-troves-spechelp-l-clear-cellar
 >reclla
 It's...hmm...you remember all the clues, but what order to place them in, now.
 DEBUG ONLY: You feel a slight psychic push-pull coming from L'Clear Cellar. That's a decent omen.
@@ -481,20 +481,20 @@ by one point
 /^Drain Nadir
 
 >score
-Score in a scenario: 11 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >reclla
 That's not something you can say, do or see here.
 
-#ttc-table-of-drain-nadir-nudges-nadir
+#testcase-table-of-drain-nadir-nudges-nadir
 >nadri
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-drain-nadir-nudges-spider
+#testcase-table-of-drain-nadir-nudges-spider
 >spidre
 The diapers, the Ires Pad--the spider only fits in as *a* spider.
 
-#ttc-table-of-drain-nadir-nudges-diaper
+#testcase-table-of-drain-nadir-nudges-diaper
 >daiper
 All the diapers.
 
@@ -506,7 +506,7 @@ Now is not the time to fret solely on past dreams. Fret on the hopeless present 
 >praised
 You would like to be, but you can't just want others to. Change comes from within.
 
-#ttc-table-of-troves-spechelp-diapers
+#testcase-table-of-troves-spechelp-diapers
 >despari
 Staring again at the diapers, you are depressed you couldn't even get being depressed right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the box of diapers. That's a decent omen.
@@ -517,11 +517,11 @@ Staring again at the diapers, you are depressed you couldn't even get being depr
 DEBUG ONLY: You feel a slight psychic push-pull coming from the box of diapers. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-drain-nadir-nudges-ires
+#testcase-table-of-drain-nadir-nudges-ires
 >irse
 It's an IRES PAD, not just ires.
 
-#ttc-table-of-drain-nadir-nudges-pad
+#testcase-table-of-drain-nadir-nudges-pad
 >pda
 It's an IRES PAD, not just a pad.
 
@@ -529,9 +529,9 @@ It's an IRES PAD, not just a pad.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-troves-spechelp-large-regal-lager
+#testcase-table-of-troves-spechelp-large-regal-lager
 >glaer
 No...that is not quite the way to fight the temptation of the wicked brew.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the can of Large Regal Lager. That's a decent omen.
@@ -542,7 +542,7 @@ No...that is not quite the way to fight the temptation of the wicked brew.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the can of Large Regal Lager. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-scannotes-large-regal-lager
+#testcase-table-of-troves-scannotes-large-regal-lager
 >scan large regal lager
 There's only one unstable color for three names in the Large Regal Lager, so that seems like a nice break.
 
@@ -550,7 +550,7 @@ There's only one unstable color for three names in the Large Regal Lager, so tha
 >alger
 What would an Alger hero DO to such foul spirits as the lager, though?
 
-#ttc-table-of-troves-readables-large-regal-lager
+#testcase-table-of-troves-readables-large-regal-lager
 >read lager
 The story on the lager is mostly in black, except where it mentions ERGAL AGLER, who brewed the first batch long ago, in red. I'll spare the details, because the story would kill almost as many brain cells as actually drinking the stuff.
 >read lager
@@ -559,9 +559,9 @@ Your eyes gloss over all but the red name, ERGAL AGLER.
 >glare
 Your score has just gone up by one point
 >score
-Score in a scenario: 13 out of 30 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-drain-nadir-nudges-glare
+#testcase-table-of-drain-nadir-nudges-glare
 >glaer
 You stare into space some more but get distracted.
 
@@ -569,23 +569,23 @@ You stare into space some more but get distracted.
 >snog
 You're too busy for...THAT. You focus on the singer. Probably someone you'd like to...hire to sing a song you wrote.
 
-#ttc-table-of-drain-nadir-nudges-diapers
+#testcase-table-of-drain-nadir-nudges-diapers
 >despari
 You already twisted yourself into and out of knots from despair. Time to move on!
 
-#ttc-table-of-drain-nadir-nudges-song
+#testcase-table-of-drain-nadir-nudges-song
 >sogn
 It's the full song name--I'd Cede.
 
-#ttc-table-of-drain-nadir-nudges-eddie
+#testcase-table-of-drain-nadir-nudges-eddie
 >eddei
 It's the full song name--I'd Cede.
 
-#ttc-table-of-drain-nadir-nudges-cede
+#testcase-table-of-drain-nadir-nudges-cede
 >ceed
 It's the full song name--I'd Cede.
 
-#ttc-table-of-troves-spechelp-id-cede
+#testcase-table-of-troves-spechelp-id-cede
 >decied
 You try to groove to I'd Cede, but that's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from I'd Cede. That's a decent omen.
@@ -602,17 +602,17 @@ Your score has just gone up by one point
 /^Boredom Bedroom
 
 >score
-Score in a scenario: 14 out of 30 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-boredom-bedroom-nudges-shmoe
+#testcase-table-of-boredom-bedroom-nudges-shmoe
 >shmeo
 The people living in them don't want to change. You can't make them. You need to change something for YOU.
 
-#ttc-table-of-boredom-bedroom-nudges-home
+#testcase-table-of-boredom-bedroom-nudges-home
 >hoem
 The people living in them don't want to change. You can't make them. You need to change something for YOU.
 
-#ttc-table-of-boredom-bedroom-nudges-bedroom
+#testcase-table-of-boredom-bedroom-nudges-bedroom
 >bedromo
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
@@ -624,7 +624,7 @@ You are not rich and consequential enough to snap your fingers and watch your ow
 >aled
 Getting drunk will not solve your problems. Besides, you missed your "chance" with the lager in Drain Nadir. You see red at yourself for such thoughts.
 
-#ttc-table-of-troves-spechelp-lobster
+#testcase-table-of-troves-spechelp-lobster
 >bolstre
 That's not quite the way to deserve that lobster.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the BORTLES Lobster. That's a decent omen.
@@ -635,14 +635,14 @@ That's not quite the way to deserve that lobster.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the BORTLES Lobster. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-scannotes-bortles-lobster
+#testcase-table-of-troves-scannotes-bortles-lobster
 >scan bortles lobster
 Whoah! A lot of letters up in the air but a lot of matches, too. Maybe the matches will give you an idea about the uncertain letters.
 
 >master
 by one point
 
-#ttc-table-of-boredom-bedroom-nudges-amrest
+#testcase-table-of-boredom-bedroom-nudges-amrest
 >amrest
 The ME ARTS nourished you spiritually. Time to move on, though you could poke at the lobster.
 >undo
@@ -654,19 +654,19 @@ That's the right sort of emotion, but REPEALS is the wrong verb tense, and REPEA
 >repeals
 That's the right sort of emotion, but REPEALS is the wrong verb tense, and REPEAL is only six letters. There is a better way to forsake the false pleasure of the pleaser leapers!
 
-#ttc-table-of-boredom-bedroom-nudges-leaper
+#testcase-table-of-boredom-bedroom-nudges-leaper
 >leapre
 You'll probably want to deal with all the pleaser leapers at once.
 
-#ttc-table-of-troves-readables-pleaser-leapers
+#testcase-table-of-troves-readables-pleaser-leapers
 >read leapers
 SAP-LEER is the "ironic" name of the company that produced this monstrosity. They may have ironic distance from the time their customers waste, but their customers, alas, don't.
 
-#ttc-table-of-troves-scannotes-pleaser-leapers
+#testcase-table-of-troves-scannotes-pleaser-leapers
 >scan pleaser leapers
 You extract more joy out of knowing you can probably work out the ambiguous entries than from the leapers themselves.
 
-#ttc-table-of-troves-spechelp-pleaser-leapers
+#testcase-table-of-troves-spechelp-pleaser-leapers
 >pleasre
 The leapers almost seem to dance around for a bit.
 
@@ -678,19 +678,19 @@ The leapers almost seem to dance around for a bit.
 >relapse
 Your score has just gone up by one point
 >score
-Score in a scenario: 15 out of 30 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >bolster
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 30 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-boredom-bedroom-nudges-bloters
+#testcase-table-of-boredom-bedroom-nudges-bloters
 >bloters
 The lobster nourished you physically. Time to move on, though you could poke at the ME ARTS.
 
-#ttc-table-of-troves-spechelp-me-arts
+#testcase-table-of-troves-spechelp-me-arts
 >mastre
 That's not quite the way to focus on the ME ARTS.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ME ARTS. That's a decent omen.
@@ -701,7 +701,7 @@ That's not quite the way to focus on the ME ARTS.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ME ARTS. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-scannotes-me-arts
+#testcase-table-of-troves-scannotes-me-arts
 >scan me arts
 Well! There are a lot of clues here, with Mr. East Stream Tamers and all, but this might make for some variety in the puzzle.
 
@@ -715,17 +715,17 @@ Perhaps they know their trade, well, but you need to, too.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 17 out of 30 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#+ttc-table-of-boredom-bedroom-nudges-amrest
+#+testcase-table-of-boredom-bedroom-nudges-amrest
 >amrest
 The ME ARTS nourished you spiritually. The lobster nourished you physically. Time to move on.
 
-#+ttc-table-of-boredom-bedroom-nudges-bloters
+#+testcase-table-of-boredom-bedroom-nudges-bloters
 >bloters
 The ME ARTS nourished you spiritually. The lobster nourished you physically. Time to move on.
 
-#ttc-table-of-troves-spechelp-lead
+#testcase-table-of-troves-spechelp-lead
 >dela
 You reflect that to LEAD, you must also put certain things in order. You know there are only so many ways.
 DEBUG ONLY: You feel a slight psychic push-pull coming from LEAD, All: a Deed. That's a decent omen.
@@ -736,11 +736,11 @@ You reflect that to LEAD, you must also put certain things in order. You know th
 DEBUG ONLY: You feel a slight psychic push-pull coming from LEAD, All: a Deed. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-scannotes-lead
+#testcase-table-of-troves-scannotes-lead
 >scan lead
 Man! Only one stable red at the end. That whole title is certainly odd. Perhaps PART OF LEADING IS BEING ABLE TO THINK WHEN MACHINES CAN'T TELL YOU EVERYTHING. How very inspirational!
 
-#ttc-table-of-troves-readables-lead
+#testcase-table-of-troves-readables-lead
 >read lead
 You can't get settled. Everything seems too general or too specific, and as you read, you hear voices from the past: "What a yutz! He needs to learn to, like...!" They always acted as if it was so simple.
 However, there must be some simple way to focus and move on.
@@ -751,17 +751,17 @@ Your score has just gone up by one point
 /^Browse Bowers
 
 >score
-Score in a scenario: 18 out of 30 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-browse-bowers-nudges-divorce
+#testcase-table-of-browse-bowers-nudges-divorce
 >divorec
 If it was just one divorce, you could blow it off. Or there would not be enough to learn from. But there is so much drivel.
 
-#ttc-table-of-browse-bowers-nudges-magazine
+#testcase-table-of-browse-bowers-nudges-magazine
 >magazien
 It's not just any magazine. It's DIVORCES!
 
-#ttc-table-of-troves-spechelp-divorces
+#testcase-table-of-troves-spechelp-divorces
 >divorcse
 DIVORCES suddenly seems more alluring and more rubbish at once.
 DEBUG ONLY: You feel a slight psychic push-pull coming from DIVORCES Magazine. That's a decent omen.
@@ -772,7 +772,7 @@ DIVORCES suddenly seems more alluring and more rubbish at once.
 DEBUG ONLY: You feel a slight psychic push-pull coming from DIVORCES Magazine. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-readables-divorces
+#testcase-table-of-troves-readables-divorces
 >read divorces
 All sorts of articles that make you see red. This one's about
 /(Rod's Vice|Rev. Disco|VeriDocs|someone who Scored IV)
@@ -788,39 +788,39 @@ A Roiling Original is pretty old school, but it has enough obstacles.
 >eiders
 But what would ducks DO in the big city? They have no ambition. They crave food for survival, but you want more...
 
-#ttc-table-of-browse-bowers-nudges-eder
+#testcase-table-of-browse-bowers-nudges-eder
 >edre
 It's Si Reed's full name.
 
-#ttc-table-of-browse-bowers-nudges-bower
+#testcase-table-of-browse-bowers-nudges-bower
 >obwer
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
-#ttc-table-of-browse-bowers-nudges-bowers
+#testcase-table-of-browse-bowers-nudges-bowers
 >obwers
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
-#ttc-table-of-browse-bowers-nudges-rotunda
+#testcase-table-of-browse-bowers-nudges-rotunda
 >ratundo
 The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here.
 
-#ttc-table-of-browse-bowers-nudges-dour
+#testcase-table-of-browse-bowers-nudges-dour
 >duro
 The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here.
 
-#ttc-table-of-browse-bowers-nudges-tan
+#testcase-table-of-browse-bowers-nudges-tan
 >nta
 The dour tan rotunda is passe and hasn't been knocked down yet, but that's not your job, here.
 
-#ttc-table-of-browse-bowers-nudges-mire
+#testcase-table-of-browse-bowers-nudges-mire
 >mier
 The Miser Emirs' Mires are, well, mired. You need to focus on something else, or you might get mired, too.
 
-#ttc-table-of-browse-bowers-nudges-mires
+#testcase-table-of-browse-bowers-nudges-mires
 >mirse
 The Miser Emirs' Mires are, well, mired. You need to focus on something else, or you might get mired, too.
 
-#ttc-table-of-troves-spechelp-si-reed
+#testcase-table-of-troves-spechelp-si-reed
 >desier
 Si Reed booms encouragement to WANT and BELIEVE more. You're almost THERE!
 DEBUG ONLY: You feel a slight psychic push-pull coming from Si Reed. That's a decent omen.
@@ -831,7 +831,7 @@ Si Reed booms encouragement to WANT and BELIEVE more. You're almost THERE!
 DEBUG ONLY: You feel a slight psychic push-pull coming from Si Reed. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-readables-See-Dir
+#testcase-table-of-troves-readables-See-Dir
 >read see dir
 Nothing catches your eye except an article on RIDEES, captioned in red. Whether that's rid-ees or ride-ees with e's mashed together, you don't have the energy to find out.
 
@@ -843,45 +843,45 @@ Your score has just gone up by one point
 /^Econ-Cone
 
 >score
-Score in a scenario: 20 out of 30 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-mistake-roiling-once
 >once
 Yes! You only need a chance! Once! To get inside! But you're nowhere near enthused enough.
 
-#ttc-table-of-econ-cone-nudges-cone
+#testcase-table-of-econ-cone-nudges-cone
 >coen
 You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like that statue, or the praise floating in the air
 
-#ttc-table-of-econ-cone-nudges-ave
+#testcase-table-of-econ-cone-nudges-ave
 >aev
 No sense changing the Save Aves. You must change yourself.
 
-#ttc-table-of-econ-cone-nudges-aves
+#testcase-table-of-econ-cone-nudges-aves
 >avse
 No sense changing the Save Aves. You must change yourself.
 
-#ttc-table-of-econ-cone-nudges-recent
+#testcase-table-of-econ-cone-nudges-recent
 >recetn
 You think about the econ-cone being the recent center, but theorizing doesn't work. You need to look forward in other ways, to think of more concrete things, like that statue, or the praise floating in the air
 
-#ttc-table-of-econ-cone-nudges-skyline
+#testcase-table-of-econ-cone-nudges-skyline
 >skylien
 You don't want to mess with the skyline. You want to get in the godlings' lodgings!
 
-#ttc-table-of-econ-cone-nudges-godling
+#testcase-table-of-econ-cone-nudges-godling
 >godlign
 The godlings' lodgings are a testament to the immovable power of the rich. They can't be changed so easily. And if you did, Elvira's thugs would surely find and arrest you!
 
-#ttc-table-of-econ-cone-nudges-godlings
+#testcase-table-of-econ-cone-nudges-godlings
 >godlinsg
 The godlings' lodgings are a testament to the immovable power of the rich. They can't be changed so easily. And if you did, Elvira's thugs would surely find and arrest you!
 
-#ttc-table-of-econ-cone-nudges-statue
+#testcase-table-of-econ-cone-nudges-statue
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. Maybe there's a lesson from Trevis Vister himself in here.
 
-#ttc-table-of-troves-spechelp-praise-spirea
+#testcase-table-of-troves-spechelp-praise-spirea
 >aspier
 That's not quite the way to look forward to praise. But it may be a start.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the praise spirea. That's a decent omen.
@@ -892,7 +892,7 @@ That's not quite the way to look forward to praise. But it may be a start.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the praise spirea. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-scannotes-praise-spirea
+#testcase-table-of-troves-scannotes-praise-spirea
 >scan praise spirea
 Odd readings. Maybe the words from the praise spirea will help you in a different way, or maybe there's enough here to figure out, if you're clever.
 
@@ -904,7 +904,7 @@ You redden at the thought of mystical lands that aren't relevant to the here and
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 21 out of 30 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-mistake-roiling-penrod
 >penrod
@@ -918,11 +918,11 @@ There will be time for ritzy, overpriced alcohol once you have made it to the to
 >once
 Yes! You only need a chance! Once! To get inside! You're enthused enough, but you need to strategize.
 
-#ttc-table-of-troves-done-rejects-praise-spirea
+#testcase-table-of-troves-done-rejects-praise-spirea
 >aspier
 You're wanting praise too much, now.
 
-#ttc-table-of-troves-spechelp-rivets
+#testcase-table-of-troves-spechelp-rivets
 >striev
 Staring at the rivets, you get the feeling you've not quite found the right way to try. Or want.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the rivets. That's a decent omen.
@@ -933,13 +933,13 @@ Staring at the rivets, you get the feeling you've not quite found the right way 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the rivets. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-readables-rivets
+#testcase-table-of-troves-readables-rivets
 >read rivets
 /The rivets have two messages in red. One is (RISE, TV|VET, SIR)!
 >read rivets
 /The rivets have two messages in red. One is (RISE, TV|VET, SIR)!
 
-#ttc-table-of-troves-scannotes-rivets
+#testcase-table-of-troves-scannotes-rivets
 >scan rivets
 Hmm, along with the information for scanning Trevis, you might really have something here.
 
@@ -947,33 +947,33 @@ Hmm, along with the information for scanning Trevis, you might really have somet
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 22 out of 30 total points in the current region, Troves. Lowest score to solve is 27. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+testcase-mistake-roiling-once
 >once
 Yes! You only need a chance! Once! To get inside! You're more than enthused enough, but you need to strategize.
 
-#+ttc-table-of-econ-cone-nudges-statue
+#+testcase-table-of-econ-cone-nudges-statue
 >stateu
 The statue can and should be changed for aesthetic purposes, but Trevis Vister's lawyers would be on you for sure. You did what you could, anyway.
 
-#ttc-table-of-troves-done-rejects-rivets
+#testcase-table-of-troves-done-rejects-rivets
 >striev
 You're striving too hard, now.
 
-#ttc-table-of-econ-cone-nudges-ectarian
+#testcase-table-of-econ-cone-nudges-ectarian
 >ectarina
 Plural craniates.
 
-#ttc-table-of-troves-readables-sectarian-craniates
+#testcase-table-of-troves-readables-sectarian-craniates
 >read sectarian craniates
 /You note, written in red, one of the two creators of this piece of work is (Cat Raines|Stan Ciera)\.
 
-#ttc-table-of-troves-scannotes-sectarian-craniates
+#testcase-table-of-troves-scannotes-sectarian-craniates
 >scan sectarian craniates
 Wow. You have even more to think about, now! It's certainly a thoughtful piece of art, whatever it is. You are sure the reading provides you with a good deal of concrete and subjective thoughts to analyze.
 
-#ttc-table-of-troves-spechelp-sectarian-craniates
+#testcase-table-of-troves-spechelp-sectarian-craniates
 >sectarian craniates
 Ideas flash through your mind. Wow! That's what art can do! But ... nothing conclusive, yet.
 
@@ -984,48 +984,48 @@ Ideas flash through your mind. Wow! That's what art can do! But ... nothing conc
 
 >ascertain
 >score
-Score in a scenario: 23 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-troves-done-rejects-sectarian-craniates
+#testcase-table-of-troves-done-rejects-sectarian-craniates
 >craniatse
 Oh, man. You don't want to be contemplating art too much, here. Of course, you want to own expensive artwork. But thinking like this, it might own you.
 
-#+ttc-table-of-econ-cone-nudges-ectarian
+#+testcase-table-of-econ-cone-nudges-ectarian
 >ectarina
 Plural craniates. But you knew that, since you already "appreciated" it.
 
-#ttc-table-of-econ-cone-nudges-edn
+#testcase-table-of-econ-cone-nudges-edn
 >end
 You must deal with the full END PRONER POD.
 
-#ttc-table-of-econ-cone-nudges-proner
+#testcase-table-of-econ-cone-nudges-proner
 >pronre
 You must deal with the full END PRONER POD.
 
-#ttc-table-of-econ-cone-nudges-pod
+#testcase-table-of-econ-cone-nudges-pod
 >pdo
 You must deal with the full END PRONER POD.
 
-#ttc-table-of-troves-readables-end-proner-pod
+#testcase-table-of-troves-readables-end-proner-pod
 >read end proner pod
 It is, apparently, produced by N-E-PROD corporation.
 >x end proner pod
 
-#ttc-table-of-troves-readables-r-cad-card
+#testcase-table-of-troves-readables-r-cad-card
 >read card
 /(Derp on, Epdorn!|Dr. Peno & Ned Orp.)
 >read card
 /(Derp on, Epdorn!|Dr. Peno & Ned Orp.)
 
-#ttc-table-of-econ-cone-nudges-card
+#testcase-table-of-econ-cone-nudges-card
 >cadr
 The card's writing is more important.
 
-#ttc-table-of-econ-cone-nudges-cad
+#testcase-table-of-econ-cone-nudges-cad
 >cda
 The card's writing is more important.
 
-#ttc-table-of-troves-spechelp-end-proner-pod
+#testcase-table-of-troves-spechelp-end-proner-pod
 >erpdon
 The END PRONER POD seems to pulse slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the END PRONER POD. That's a decent omen.
@@ -1042,17 +1042,17 @@ Your score has just gone up by one point
 /^Upscale Capsule
 
 >score
-Score in a scenario: 24 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-mistake-roiling-fren
 >fren
 No dog walks along dragging Sebastian in their mouth.
 
-#ttc-table-of-upscale-capsule-nudges-upscale
+#testcase-table-of-upscale-capsule-nudges-upscale
 >upscael
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-troves-spechelp-red-vees
+#testcase-table-of-troves-spechelp-red-vees
 >deserev
 The red vees seem like they should link together somehow, but you don't have things right.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the red vees. That's a decent omen.
@@ -1063,7 +1063,7 @@ The red vees seem like they should link together somehow, but you don't have thi
 DEBUG ONLY: You feel a slight psychic push-pull coming from the red vees. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-readables-red-vees
+#testcase-table-of-troves-readables-red-vees
 >read red vees
 /Etched into the vees in red are the names of this motivational device's inventors\. One is (Ed Evers|Erv Dees)\.
 >read red vees
@@ -1073,7 +1073,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the red vees. That's
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 25 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #testcase-mistake-roiling-lsat
 >lsat
@@ -1091,47 +1091,47 @@ You don't need Terry Wogan announcing your progress like it's Eurovision.
 >gwano
 Enough with the (redacted) spelling.
 
-#ttc-table-of-upscale-capsule-nudges-shaker
+#testcase-table-of-upscale-capsule-nudges-shaker
 >shakre
 It's, well, St. Al's salt. Which is a relief, that you can simplify things a bit.
 
-#ttc-table-of-upscale-capsule-nudges-fern
+#testcase-table-of-upscale-capsule-nudges-fern
 >fenr
 The fern is mentally, if not physically, unmalleable.
 
-#ttc-table-of-upscale-capsule-nudges-wagon
+#testcase-table-of-upscale-capsule-nudges-wagon
 >wagno
 You really don't need to rearrange the wonga wagon.
 
-#ttc-table-of-upscale-capsule-nudges-cark
+#testcase-table-of-upscale-capsule-nudges-cark
 >cakr
 The cark rack is built to be sturdy. No need to change it.
 
-#ttc-table-of-upscale-capsule-nudges-sked
+#testcase-table-of-upscale-capsule-nudges-sked
 >skde
 The checklist was built to be especially stable and singular of purpose. So, nothing happens.
 
-#ttc-table-of-upscale-capsule-nudges-likeness
+#testcase-table-of-upscale-capsule-nudges-likeness
 >likeness
 It's whoever's in the likeness that matters--Sister Tressi and Marble Blamer Balmer, here.
 
-#ttc-table-of-upscale-capsule-nudges-phasor
+#testcase-table-of-upscale-capsule-nudges-phasor
 >phasro
 You need all that light for late-night work sessions.
 
-#ttc-table-of-upscale-capsule-nudges-pharo
+#testcase-table-of-upscale-capsule-nudges-pharo
 >phaor
 You need all that light for late-night work sessions.
 
-#ttc-table-of-upscale-capsule-nudges-vote
+#testcase-table-of-upscale-capsule-nudges-vote
 >ovet
 The votes vetos stove is just symbolic. The real voter suppression happens in the corridors of power, making it very hard for, well, certain people to vote
 
-#ttc-table-of-upscale-capsule-nudges-vetos
+#testcase-table-of-upscale-capsule-nudges-vetos
 >ovets
 The votes vetos stove is just symbolic. The real voter suppression happens in the corridors of power, making it very hard for, well, certain people to vote
 
-#ttc-table-of-troves-spechelp-salt
+#testcase-table-of-troves-spechelp-salt
 >lats
 You don't quite draw inspiration from the salt, but there can't be that many alts.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the St. Al Salt. That's a decent omen.
@@ -1142,7 +1142,7 @@ You don't quite draw inspiration from the salt, but there can't be that many alt
 DEBUG ONLY: You feel a slight psychic push-pull coming from the St. Al Salt. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-scannotes-salt
+#testcase-table-of-troves-scannotes-salt
 >scan salt
 Hmm. Well, four letters can't be bad. The vowel must be in one of those two places.
 
@@ -1150,15 +1150,15 @@ Hmm. Well, four letters can't be bad. The vowel must be in one of those two plac
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 26 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-troves-readables-creationism-reactionism
+#testcase-table-of-troves-readables-creationism-reactionism
 >read creationism
 /You see one of the two authors' names in red: (Scot Manieri|Cristi Emano)\.
 >read creationism
 /You see one of the two authors' names in red: (Scot Manieri|Cristi Emano)\.
 
-#ttc-table-of-upscale-capsule-nudges-salt
+#testcase-table-of-upscale-capsule-nudges-salt
 >lats
 You've lasted long enough. There are new things to look at, now.
 
@@ -1168,16 +1168,16 @@ You see red slightly as Marble Blamer Balmer fails to look away.
 >x blamer balmer
 A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, Mr. Beal. You can READ who created this marble.
 
-#ttc-table-of-troves-readables-blamer-balmer
+#testcase-table-of-troves-readables-blamer-balmer
 >read blamer balmer
 The likeness was drawn up by Mr. Beal LeBram, whose signature is in red.
 #this is ugly but the only way to test both possibilities
 
-#ttc-table-of-troves-scannotes-marble-blamer-balmer
+#testcase-table-of-troves-scannotes-marble-blamer-balmer
 >scan marble blamer balmer
 Wow! Three names. You don't know if, say, Mr. Beal would be easier but, well, you do what you can
 
-#ttc-table-of-troves-spechelp-marble-blamer-balmer
+#testcase-table-of-troves-spechelp-marble-blamer-balmer
 >rambel
 seems slightly taken aback
 DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Balmer. That's a decent omen.
@@ -1192,11 +1192,11 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Balmer
 >x mr beal
 A stern looking fellow who is big on personal responsibility and as ubiquitous as the Sister Tressi Siters. His big competition is, of course, Balmer. You can READ who created this marble.
 
-#ttc-table-of-troves-readables-blamer-mr-beal
+#testcase-table-of-troves-readables-blamer-mr-beal
 >read mr beal
 The likeness was drawn up by E. R. Lamb, whose signature is in red.
 
-#ttc-table-of-upscale-capsule-nudges-beal
+#testcase-table-of-upscale-capsule-nudges-beal
 >bela
 It's MR. Beal, the Marble Blamer! He seems to stare extra sternly at your fauxx pas.
 
@@ -1208,7 +1208,7 @@ Fortunately, Marble Blamer Mr. Beal doesn't become physically able.
 >bale
 Neither you nor Marble Blamer Mr. Beal turns into hay.
 
-#ttc-table-of-troves-spechelp-marble-blamer-mr-beal
+#testcase-table-of-troves-spechelp-marble-blamer-mr-beal
 >rambel
 seems slightly taken aback
 DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Mr. Beal. That's a decent omen.
@@ -1219,14 +1219,14 @@ seems slightly taken aback
 DEBUG ONLY: You feel a slight psychic push-pull coming from Marble Blamer Mr. Beal. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-scannotes-marble-blamer-mr-beal
+#testcase-table-of-troves-scannotes-marble-blamer-mr-beal
 >scan marble blamer mr beal
 Wow! Three names. You don't know if, say, Balmer would be easier but, well, you do what you can.
 >mbb 1
 
 # okay, end MBB randomization
 
-#ttc-table-of-troves-spechelp-sister-tressi-siters
+#testcase-table-of-troves-spechelp-sister-tressi-siters
 >resits
 Sister Tressi seems a bit more upset than usual.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Sister Tressi Siters. That's a decent omen.
@@ -1237,23 +1237,23 @@ Sister Tressi seems a bit more upset than usual.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Sister Tressi Siters. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-troves-scannotes-sister-tressi-siters
+#testcase-table-of-troves-scannotes-sister-tressi-siters
 >scan sister tressi siters
 Hmm. Sister Tressi seems to be glaring extra, as if the settler's ambiguous settings are what you get for cheating, and she also seems to be saying, well, if life isn't 100% as you'd expect, maybe you'd better learn to think your way around it.
 
-#ttc-table-of-troves-scannotes-trance-nectar
+#testcase-table-of-troves-scannotes-trance-nectar
 >scan trance nectar
 Well of course the final challenge wouldn't have any positive IDs, and the two variable colors seem like a slap in the face. It's not even clear which is the vowel and which is the consonant! Maybe you could start with the first letter...
 
-#ttc-table-of-upscale-capsule-nudges-siter
+#testcase-table-of-upscale-capsule-nudges-siter
 >sitre
 All the siters.
 
-#ttc-table-of-troves-scannotes-creationism-reactionism
+#testcase-table-of-troves-scannotes-creationism-reactionism
 >scan creationism reactionism
 Well, it's a big book, so you probably can't figure out everything you need to do with it. Perhaps some heuristics need to be combined with regular letter logic.
 
-#ttc-table-of-troves-spechelp-creationism-reactionism
+#testcase-table-of-troves-spechelp-creationism-reactionism
 >reactionims
 You seem to need to force yourself to be more whimsical. Which seems contradictory, but hey, figuring Creationism, Reactionism is the toughest optional puzzle in the game.
 
@@ -1266,27 +1266,27 @@ You seem to need to force yourself to be more whimsical. Which seems contradicto
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 27 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >resist
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 28 out of 30 total points in the current region, Troves. Lowest score to solve is 29. Maximum score available is 30.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >romanticise
 >score
-Score in a scenario: 29 out of 30 total points in the current region, Troves. There are no secrets left to find here, so the score to win is 30 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
-#ttc-table-of-upscale-capsule-nudges-marble
+#testcase-table-of-upscale-capsule-nudges-marble
 >marbel
 You already stopped thinking too much about Marble Blamer Balmer. If you try too hard to keep ignoring Marble Blamer Balmer, you'll start thinking about Marble Blamer Balmer, again.
 
-#ttc-table-of-upscale-capsule-nudges-siters
+#testcase-table-of-upscale-capsule-nudges-siters
 >sitesr
 The Sister Tressi Siters are gone. Trying to re-defeat them would be protesting too much.
 
-#ttc-table-of-troves-spechelp-trance-nectar
+#testcase-table-of-troves-spechelp-trance-nectar
 >recatn
 Your willpower is not quite strong enough to give it all up yet. But you must be on the right track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the Trance Nectar. That's a decent omen.
@@ -1303,4 +1303,4 @@ Your score has just gone up by one point
 /^Strip of Profits
 
 >score
-, Troves (30/30)
+, Troves ({SCORE}/{MAX})

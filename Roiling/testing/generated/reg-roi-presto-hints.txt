@@ -21,32 +21,32 @@
 >monty hints
 You haven't gotten any points yet, so you probably want to find what sort of word is used here.
 
-#ttc-table-of-presto-anagrams-umph
+#testcase-table-of-presto-anagrams-umph
 You gulp the crust and can't help thinking UMPH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >umph
 Your score has just gone up by one point
 /^Austerer Treasure
 
-#ttc-table-of-presto-anagrams-pooh
+#testcase-table-of-presto-anagrams-pooh
 You gulp the crust and can't help thinking POOH. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 DEBUG INFO: Ye Hoop hinting.
 
 >score
-Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >phooey
 Your score has just gone up by two points
 Before taking a bite, you wonder if you've visited everywhere you can yet.
 >score
-Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >z
 You are done here in Austerer Treasure. The earring will change when the time is right.
 
 >score
-Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >e
 
@@ -57,7 +57,7 @@ DEBUG INFO: plebe hinting.
 >s
 /^Char Arch
 
-#ttc-table-of-presto-anagrams-rats
+#testcase-table-of-presto-anagrams-rats
 You gulp the crust and can't help thinking RATS. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 DEBUG INFO: tsar star hinting.
@@ -65,18 +65,18 @@ DEBUG INFO: tsar star hinting.
 >rats
 Your score has just gone up by one point
 
-#ttc-table-of-presto-anagrams-drat
+#testcase-table-of-presto-anagrams-drat
 You gulp the crust and can't help thinking DRAT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 DEBUG INFO: dart hinting.
 
 >score
-Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >drat
 Your score has just gone up by one point
 
-#ttc-table-of-presto-hint-request-rejects-dart
+#testcase-table-of-presto-hint-request-rejects-dart
 >hint dart
 It'd be nice to find a weapon for the dart.
 
@@ -85,23 +85,23 @@ Before taking a bite, you wonder if you've visited everywhere you can yet.
 You're all done here for now. The yak can be helped later. You will want to figure a way past the ether to the north.
 
 >score
-Score in a scenario: 5 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 
-#ttc-table-of-presto-anagrams-bleep
+#testcase-table-of-presto-anagrams-bleep
 You gulp the crust and can't help thinking BLEEP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >bleep
 Your score has just gone up by one point
 
-#ttc-table-of-presto-anagrams-mazeltov
+#testcase-table-of-presto-anagrams-mazeltov
 You gulp the crust and can't help thinking MAZEL TOV. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 >n
 DEBUG INFO: Nowt Town hinting.
 !DEBUG INFO: volt maze.
 
-#ttc-table-of-presto-anagrams-wont
+#testcase-table-of-presto-anagrams-wont
 You gulp the crust and can't help thinking WONT. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 >undo
 
@@ -109,16 +109,16 @@ You gulp the crust and can't help thinking WONT. But you are too polite and/or r
 DEBUG INFO: volt maze hinting.
 
 >score
-Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-presto-hint-request-rejects-tsar-star
+#testcase-table-of-presto-hint-request-rejects-tsar-star
 >hint tsar star
 Wearing the tsar star may help you get the authority to get by someone else who knows about decorations. You won't have to do anything to it directly.
 
 >e
 /^Marines Seminar Remains
 
-#ttc-table-of-presto-anagrams-bingo
+#testcase-table-of-presto-anagrams-bingo
 You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 DEBUG INFO: boing-go bin hinting.
@@ -127,7 +127,7 @@ DEBUG INFO: boing-go bin hinting.
 
 DEBUG INFO: boing-go bin hinting.
 
-#+ttc-table-of-presto-anagrams-umph
+#+testcase-table-of-presto-anagrams-umph
 You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >prost
@@ -135,22 +135,22 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 7 out of 41 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >w
 
 >mazeltov
 Your score has just gone up by three points
 >score
-Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >blam
 Your score has just gone up by one point
 
-#+ttc-table-of-presto-anagrams-bingo
+#+testcase-table-of-presto-anagrams-bingo
 You gulp the crust and can't help thinking BINGO. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >score
-Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #check here if you have the gun but not allies
 >bingo
@@ -165,7 +165,7 @@ The ether turns your stomach too much to eat the crust. It's dangerous. You need
 >s
 /^Dirge Ridge
 
-#ttc-table-of-presto-anagrams-ole
+#testcase-table-of-presto-anagrams-ole
 You gulp the crust and can't help thinking OLE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 DEBUG INFO: Leo hinting.
@@ -173,24 +173,24 @@ DEBUG INFO: Leo hinting.
 >ole
 by one point
 
-#ttc-table-of-presto-anagrams-darn
+#testcase-table-of-presto-anagrams-darn
 You gulp the crust and can't help thinking DARN. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 >score
-Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >darn
 Your score has just gone up by one point
 
-#ttc-table-of-presto-anagrams-whassup
+#testcase-table-of-presto-anagrams-whassup
 You gulp the crust and can't help thinking WHASSUP. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 /DEBUG INFO: both (Leo and Rand|Rand and Leo) hinting\.
 
 >score
-Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-settler-shake-descriptions-wzup
+#testcase-table-of-settler-shake-descriptions-wzup
 >ss
 /A few things: the sods gone odes song \(very blurry\), a pair of hands patting (Leo and Rand|Rand and Leo) on the back and the boing-go bin are visible\.
 
@@ -201,17 +201,17 @@ You're done here in Dirge Ridge. Maybe Leo and Rand's combined muscle could help
 
 /You're done here in Dirge Ridge. Maybe (Rand and Leo|Leo and Rand)'s combined muscle could help you somewhere\.
 
-#+ttc-table-of-presto-hint-request-rejects-tsar-star
+#+testcase-table-of-presto-hint-request-rejects-tsar-star
 >hint tsar star
 The tsar star has done its duty.
 
 >score
-Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >goodness
 by one point
 >score
-Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 
@@ -230,25 +230,25 @@ Your score has just gone up by one point
 
 You can just put the dart in the popgun.
 
-#ttc-table-of-presto-hint-request-rejects-boing-go-bin
+#testcase-table-of-presto-hint-request-rejects-boing-go-bin
 >hint boing go bin
 The boing-go bin works fine now.
 
-#+ttc-table-of-presto-hint-request-rejects-dart
+#+testcase-table-of-presto-hint-request-rejects-dart
 >hint dart
 Maybe the dart can fit in the popgun.
 
 >score
-Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >load gun with dart
 You put the dart into the PG-on-up popgun.
 
-#+ttc-table-of-presto-hint-request-rejects-dart
+#+testcase-table-of-presto-hint-request-rejects-dart
 >hint dart
 You're done with the dart, except for firing it at the right time.
 
-#ttc-table-of-presto-anagrams-there
+#testcase-table-of-presto-anagrams-there
 You gulp the crust and can't help thinking THERE. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 DEBUG INFO: ether hinting.
 
@@ -270,13 +270,13 @@ You will want to see what's north.
 You will want to get by the lawl wall.
 
 >score
-Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 /^Saps' Pass
 
-#ttc-table-of-presto-anagrams-gosh
-#ttc-table-of-presto-anagrams-syke
+#testcase-table-of-presto-anagrams-gosh
+#testcase-table-of-presto-anagrams-syke
 /You gulp the crust and can't help thinking (GOSH|SYKE)\. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 ##bingo *2 = no line break ??
@@ -289,9 +289,9 @@ Your score has just gone up by one point
 
 /^Phat Path
 
-#ttc-table-of-presto-anagrams-tough
-#ttc-table-of-presto-anagrams-solong
-#ttc-table-of-presto-anagrams-later
+#testcase-table-of-presto-anagrams-tough
+#testcase-table-of-presto-anagrams-solong
+#testcase-table-of-presto-anagrams-later
 /You gulp the crust and can't help thinking (TOUGH|SO LONG|LATER)\. But you are too polite and/or repressed to say it until you've finished chewing, which takes a while!
 
 DEBUG INFO: harpings phrasing hinting.
@@ -301,18 +301,18 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >so long
 by one point
 
-#ttc-table-of-presto-hint-request-rejects-log-ons-letters
+#testcase-table-of-presto-hint-request-rejects-log-ons-letters
 >hint log ons letters
 /Try either of the other letters. With variety, (Rand and Leo|Leo and Rand) will take the hint\.
 >undo
 >undo
 
-#ttc-table-of-presto-hint-request-rejects-ought-letters
+#testcase-table-of-presto-hint-request-rejects-ought-letters
 >tough
 by one point
 
@@ -325,9 +325,9 @@ by one point
 Your score has just gone up by one point
 But we ain't bored yet, boss!
 >score
-Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-presto-hint-request-rejects-alert-letters
+#testcase-table-of-presto-hint-request-rejects-alert-letters
 >hint alert letters
 /Try either of the other letters. With variety, (Rand and Leo|Leo and Rand) will take the hint\.
 
@@ -341,49 +341,49 @@ Dat was a good dust-up
 You're all done here in the Phat Path. Go north to the shack.
 
 >score
-Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >trasch
 by one point
 >score
-Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 /^Hacks' Shack
 
-#ttc-table-of-presto-anagrams-screen
+#testcase-table-of-presto-anagrams-screen
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SCREEN.
 
 >screen
 by one point
 Only one more piece of hardware is needed, and the computer will work.
 
-#ttc-table-of-presto-anagrams-skid
+#testcase-table-of-presto-anagrams-skid
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a SKID.
 
 >score
-Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >skid
 Your score has just gone up by one point
 
-#ttc-table-of-presto-anagrams-leaf
+#testcase-table-of-presto-anagrams-leaf
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a LEAF.
 
 >score
-Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >leaf
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >casserole
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >get book
 >push skid s
@@ -397,37 +397,37 @@ Score in a scenario: 26 out of 41 total points in the current region, Presto. Lo
 >push skid n
 Your score has just gone up by one point
 
-#ttc-table-of-presto-anagrams-keyboard
+#testcase-table-of-presto-anagrams-keyboard
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a KEYBOARD.
 
 >score
-Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >keyboard
 Your score has just gone up by one point
 You can now do computery things unimpeded! Hooray!
 
-#ttc-table-of-presto-anagrams-disk
+#testcase-table-of-presto-anagrams-disk
 You would rather change the skid back to the disk, then put the disk in the disk drive.
 
 >score
-Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >disk
 
 >put disk in drive a
 
-#ttc-table-of-presto-anagrams-reboot
+#testcase-table-of-presto-anagrams-reboot
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to REBOOT with the E-Robot.
 
 >reboot
 Your score has just gone up by one point
 
-#ttc-table-of-presto-anagrams-capslock
+#testcase-table-of-presto-anagrams-capslock
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a CAPS LOCK key.
 
 >score
-Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >capslock
 Your score has just gone up by one point
@@ -435,81 +435,81 @@ Your score has just gone up by one point
 >put lock on keyboard
 fits in perfectly
 
-#ttc-table-of-presto-anagrams-futon
+#testcase-table-of-presto-anagrams-futon
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a FUTON.
 
 >futon
 Your score has just gone up by one point
 
-#ttc-table-of-presto-anagrams-sleep
+#testcase-table-of-presto-anagrams-sleep
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to SLEEP on the futon.
 
 >score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >sleep
 Your score has just gone up by one point
 
-#ttc-table-of-presto-anagrams-compile
+#testcase-table-of-presto-anagrams-compile
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to learn to COMPILE from the I'm Le Cop polemic.
 
 >score
-Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >compile
 by one point
 
-#ttc-table-of-presto-anagrams-cola
+#testcase-table-of-presto-anagrams-cola
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make COLA.
 
-#ttc-table-of-presto-hint-request-rejects-im-le-cop-polemic
+#testcase-table-of-presto-hint-request-rejects-im-le-cop-polemic
 >hint im le cop polemic
 You got things compiling. No more worries there.
 
 >score
-Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >cola
 Your score has just gone up by one point
 
-#ttc-table-of-presto-anagrams-mug
+#testcase-table-of-presto-anagrams-mug
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a MUG.
 
 >score
-Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >mug
 Your score has just gone up by one point
 >score
-Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >avider
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 36 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >derive
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 # we want to check a final test case and put it in the "max" subfile, so in this case, we hold off on TAB until the very end.
 >tab
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 39 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
-#ttc-table-of-presto-hint-request-rejects-tba-key
+#testcase-table-of-presto-hint-request-rejects-tba-key
 >hint tab key
 The tab key will be useful without any further wizardry.
 
@@ -517,7 +517,7 @@ The tab key will be useful without any further wizardry.
 You drain the ALocalCo cola bottle. It fills the mug, and you take a tiny sip. The liquid level refills after a minute. It tastes like car fuel, which makes you careful--and hopeful for a far clue. You feel more inspired and calmer than if you'd tried Loco-Alca or Loca-Alco, and your mind's clear enough, you finally see the right way to use a co-alloc. A recycling trap door makes a noise, and you pitch the empty cola bottle into it absent-mindedly.
 The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably because it's a bot o' root beer.
 
-#ttc-table-of-presto-anagrams-debug
+#testcase-table-of-presto-anagrams-debug
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to DEBUG the code you compiled.
 
 >debug
@@ -525,11 +525,11 @@ Your score has just gone up by one point
 
 DEBUG INFO: USB hinting.
 
-#ttc-table-of-presto-anagrams-sub
+#testcase-table-of-presto-anagrams-sub
 You gulp the crust, mouthing your favorite profanity (minor or major, I won't judge,) and you wonder how you didn't see you could try to make a BUS or SUB.
 
 >score
-Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >misses
 !presto
@@ -542,4 +542,4 @@ Diver time
 
 >score
 
-Presto (41/41)
+Presto ({MAX}/{MAX})

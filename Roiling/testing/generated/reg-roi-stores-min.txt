@@ -15,20 +15,20 @@
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 1 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 11.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >troves
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 11.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >abstract patcher to strip of profits
 
 >switch patcher
 The patcher shatters in a shower of fourth-wall quantum physics as you switch it.
 >score
-Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 8.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >undo
 >undo
 
@@ -40,13 +40,13 @@ You try to swivel the chapter patcher to Store H, but it won't go that way. Whil
 You point the patcher at Store W. It disintegrates. Hopefully, you somehow made everything okay behind Store W once you're finished here, or maybe it can be saved until after you defeat Elvira.
 
 >score
-Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 10.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >oyster
 >zap balancer barnacle
 You point the patcher at the balancer barnacle you created. It disintegrates. Hopefully, you somehow made everything okay behind the balancer barnacle once you're finished here, or maybe it can be saved until after you defeat Elvira.
 >score
-Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 4. Maximum score available is 10.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >undo
 >undo
 >undo
@@ -54,7 +54,7 @@ Score in a scenario: 3 out of 11 total points in the current region, Stores. Low
 You point the patcher at Store Y. It disintegrates. Hopefully, you somehow made everything okay behind Store Y once you're finished here, or maybe it can be saved until after you defeat Elvira.
 
 >score
-Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 9.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >patch course source
 You point the patcher at the course source you created. It disintegrates. Hopefully, you somehow made everything okay behind the course source once you're finished here, or maybe it can be saved until after you defeat Elvira.
@@ -63,12 +63,12 @@ You point the patcher at the course source you created. It disintegrates. Hopefu
 You point the patcher at the Tastee Estate you created. It disintegrates. Hopefully, you somehow made everything okay behind the Tastee Estate once you're finished here, or maybe it can be saved until after you defeat Elvira.
 # make sure you lose no points/maximum points for blasting a portal
 >score
-Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 9.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >patch store p
 You point the patcher at Store P. It disintegrates. Hopefully, you somehow made everything okay behind Store P once you're finished here, or maybe it can be saved until after you defeat Elvira.
 With a pop, the chapter patcher disintegrates. Perhaps it's done all it could, and you must tackle Elvira by yourself.
 >score
-Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 8.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 >undo
 >undo
 
@@ -80,7 +80,7 @@ Your score has just gone up by one point
 !DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 3. Maximum score available is 9.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >zap solid idols
 The energy beam from the patcher bounces off the solid idols and almost zaps you and the patcher back. Whoever or whatever is behind the solid idols must be very powerful indeed.

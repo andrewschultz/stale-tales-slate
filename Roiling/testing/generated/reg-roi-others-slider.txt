@@ -40,22 +40,22 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point.
 
 >score
-You have 1 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >pears
 Your score has just gone up by one point.
 
 >score
-You have 2 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >grapes
 Your score has just gone up by one point.
 
 >score
-You have 3 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >plums
 Your score has just gone up by one point.
 
 >score
-You have 4 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 #testcase-slider-table-of-others-anagrams-compass
 >smoascp
@@ -85,7 +85,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >score
-You have 5 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 #testcase-slider-table-of-others-anagrams-blueberries
 >ebeblreisur
@@ -109,41 +109,41 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point.
 
 >score
-You have 6 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >blueberries
 Your score has just gone up by one point.
 
 >score
-You have 7 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >cantaloupe
 Your score has just gone up by one point.
 
 >score
-You have 8 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >persimmon
 Take on a token
 Your score has just gone up by one point.
 
 >score
-You have 9 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >maraschino
 Your score has just gone up by one point.
 
 >score
-You have 10 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >pomegranate
 Your score has just gone up by one point.
 
 >score
-You have 11 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >cherries
 Your score has just gone up by one point.
 You worry Curtis won't give you credit for both plain old cherries and maraschino cherries, but he nods as if to say, no problem. Whew!
 
 >score
-You have 12 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >n
 /^Swell Wells
@@ -176,22 +176,22 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point.
 
 >score
-You have 13 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >apples
 Your score has just gone up by one point.
 
 >score
-You have 14 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >mulberries
 Your score has just gone up by one point.
 
 >score
-You have 15 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >gooseberry
 Your score has just gone up by one point.
 
 >score
-You have 16 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 #only really need to test this nag once.
 You may want to go see Curtis for a new reward. Or you can keep getting new fruits.
 
@@ -227,13 +227,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point.
 
 >score
-You have 17 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >tangerines
 Your score has just gone up by one point.
 
 >score
-You have 18 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >s
 
@@ -241,7 +241,7 @@ You have 18 of 47 total points for the post-Elvira Others region, though you onl
 by one point
 
 >score
-You have 19 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >n
 
@@ -284,24 +284,24 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point.
 
 >score
-You have 20 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >blackberries
 Your score has just gone up by one point.
 
 >score
-You have 21 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >watermelon
 Your score has just gone up by one point.
 
 >score
-You have 22 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >pineapple
 Your score has just gone up by one point.
 min-up
 
 >score
-You have 23 of 47 total points for the post-Elvira Others region, though you only need 27 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >e
 >s
@@ -312,7 +312,7 @@ droll dollar
 >dates
 Your score has just gone up by one point.
 >score
-You have 24 of 47 total points for the post-Elvira Others region, though you only need 28 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >score
 
@@ -329,7 +329,7 @@ by one point
 Blam!
 
 >score
-You have 25 of 47 total points for the post-Elvira Others region, though you only need 28 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 #testcase-slider-table-of-others-anagrams-concisions
 >ocisncsnoi
@@ -338,7 +338,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >concisions
 Your score has just gone up by one point.
 >score
-You have 26 of 47 total points for the post-Elvira Others region, though you only need 29 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >n
 
@@ -346,21 +346,21 @@ You have 26 of 47 total points for the post-Elvira Others region, though you onl
 >strawberries
 Your score has just gone up by one point.
 >score
-You have 27 of 47 total points for the post-Elvira Others region, though you only need 30 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 #strawberries = last with minimum at base
 
 >grapefruit
 Your score has just gone up by one point.
 >score
-You have 28 of 47 total points for the post-Elvira Others region, though you only need 31 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >raspberry
 Your score has just gone up by one point.
 >score
-You have 29 of 47 total points for the post-Elvira Others region, though you only need 32 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >breadfruit
 Your score has just gone up by one point.
 >score
-You have 30 of 47 total points for the post-Elvira Others region, though you only need 33 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >e
 >e
 /^Clangier Clearing
@@ -404,41 +404,41 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >olives
 Your score has just gone up by one point.
 >score
-You have 31 of 47 total points for the post-Elvira Others region, though you only need 34 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >cinque
 Your score has just gone up by one point.
 >score
-You have 32 of 47 total points for the post-Elvira Others region, though you only need 35 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >cheap
 Your score has just gone up by one point.
 >score
-You have 33 of 47 total points for the post-Elvira Others region, though you only need 36 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >papayas
 Your score has just gone up by one point.
 >score
-You have 34 of 47 total points for the post-Elvira Others region, though you only need 37 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >among
 Your score has just gone up by one point.
 
 >score
-You have 35 of 47 total points for the post-Elvira Others region, though you only need 38 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >ancienter
 Your score has just gone up by one point.
 >score
-You have 36 of 47 total points for the post-Elvira Others region, though you only need 39 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >solemn
 Your score has just gone up by one point.
 >score
-You have 37 of 47 total points for the post-Elvira Others region, though you only need 40 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >len mo
 Your score has just gone up by one point.
 >score
-You have 38 of 47 total points for the post-Elvira Others region, though you only need 41 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >cripes
 Your score has just gone up by one point.
 >score
-You have 39 of 47 total points for the post-Elvira Others region, though you only need 42 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >w
 
@@ -454,7 +454,7 @@ As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, d
 Your score has just gone up by one point.
 
 >score
-You have 40 of 47 total points for the post-Elvira Others region, though you only need 42 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 #testcase-slider-table-of-others-anagrams-banana
 >anaban
@@ -475,19 +475,19 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >banana
 Your score has just gone up by one point.
 >score
-You have 41 of 47 total points for the post-Elvira Others region, though you only need 43 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >go near
 Your score has just gone up by one point.
 >score
-You have 42 of 47 total points for the post-Elvira Others region, though you only need 44 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >rhubarb
 Your score has just gone up by one point.
 >score
-You have 43 of 47 total points for the post-Elvira Others region, though you only need 45 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >reversed
 Your score has just gone up by one point.
 >score
-You have 44 of 47 total points for the post-Elvira Others region.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region.
 There are no fruits left to find or give back to Curtis.
 
 >u
@@ -513,7 +513,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 >score
 
-You have 45 of 47 total points for the post-Elvira Others region.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region.
 There are no fruits left to find or give back to Curtis.
 
 >review
@@ -521,7 +521,7 @@ by one point
 
 >score
 
-You have 46 of 47 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
 
 >n
 by one point

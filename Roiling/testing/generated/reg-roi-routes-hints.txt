@@ -13,7 +13,7 @@
 /^Same Mesa
 
 >score
-Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >scam
 
@@ -29,7 +29,7 @@ DEBUG INFO: scripture picturers hinting.
 >undo
 
 >score
-Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >inside
 Your score has just gone up by one point
@@ -39,7 +39,7 @@ Your score has just gone up by one point
 The spoon reflects to the list-o-toils.
 
 >score
-Score in a scenario: 1 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >x list o toils
 
@@ -50,11 +50,11 @@ Precise recipes
 
 >out
 
-#ttc-table-of-routes-hint-request-rejects-scripture-picturers
+#testcase-table-of-routes-hint-request-rejects-scripture-picturers
 >hint scripture picturers
 The scripture picturers helped you get in, but they're just there to help other people now. Maybe.
 
-#ttc-table-of-routes-anagrams-past
+#testcase-table-of-routes-anagrams-past
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go PAST.
 
 >past
@@ -62,7 +62,7 @@ Your score has just gone up by one point
 
 /^Idle Deli
 
-#ttc-table-of-routes-anagrams-despite
+#testcase-table-of-routes-anagrams-despite
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go DESPITE.
 
 >despite
@@ -70,13 +70,13 @@ Your score has just gone up by one point
 
 The spoon points you out of the Idle Deli.
 
-#ttc-table-of-routes-hint-request-rejects-seed-pit
+#testcase-table-of-routes-hint-request-rejects-seed-pit
 >hint seed pit
 You got what you needed from the seed pit.
 
 >out
 
-#ttc-table-of-routes-anagrams-across
+#testcase-table-of-routes-anagrams-across
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ACROSS.
 
 >ptf 0
@@ -90,7 +90,7 @@ Hmm, wait. Maybe there's something ACROSS now.
 >across
 Your score has just gone up by one point
 
-#ttc-table-of-routes-anagrams-opposite
+#testcase-table-of-routes-anagrams-opposite
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go OPPOSITE.
 
 /^Adobe Abode
@@ -102,36 +102,36 @@ The spoon points you out of Oscar's.
 
 >out
 
-#ttc-table-of-routes-anagrams-against
+#testcase-table-of-routes-anagrams-against
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go AGAINST.
 
 >against
 Your score has just gone up by one point
 
-#ttc-table-of-routes-anagrams-astride
+#testcase-table-of-routes-anagrams-astride
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ASTRIDE.
 
-#ttc-table-of-routes-hint-request-rejects-sit-a-nag
+#testcase-table-of-routes-hint-request-rejects-sit-a-nag
 >hint sit a nag
 You got Ian Gast to the anti-sag sit-a-nag. Now you need to deal with Ian Gast.
 
 >score
-Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >astride
 Your score has just gone up by one point
 
-#ttc-table-of-routes-anagrams-below
+#testcase-table-of-routes-anagrams-below
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go BELOW.
 
-#ttc-table-of-routes-hint-request-rejects-side-art
+#testcase-table-of-routes-hint-request-rejects-side-art
 >hint side art
 You positioned yourself well to put up with Ian Gast's tirades. Time to try a new direction.
 
 >below
 Your score has just gone up by one point
 
-#ttc-table-of-routes-anagrams-under
+#testcase-table-of-routes-anagrams-under
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go UNDER.
 
 >under
@@ -152,22 +152,22 @@ The spoon reflects back outside.
 
 >out
 
-#ttc-table-of-routes-anagrams-above
+#testcase-table-of-routes-anagrams-above
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ABOVE.
 
 >above
 Your score has just gone up by one point.
 
-#ttc-table-of-routes-anagrams-from
+#testcase-table-of-routes-anagrams-from
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go FROM.
 
 >score
-Score in a scenario: 11 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >from
 Your score has just gone up by one point
 
-#ttc-table-of-routes-anagrams-beneath
+#testcase-table-of-routes-anagrams-beneath
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go BENEATH.
 
 >beneath
@@ -175,40 +175,47 @@ Your score has just gone up by one point
 
 /^Harms Marsh
 
-#ttc-table-of-routes-anagrams-until
+#testcase-table-of-routes-anagrams-until
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go UNTIL.
 
 >score
-Score in a scenario: 13 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-settler-shake-descriptions-darkness
+#testcase-table-of-settler-shake-descriptions-darkness
 >ss
 A couple things: the NULL-IT unit and a weird outline in the darkness (a bit blurry) are visible.
 
 >until
 Your score has just gone up by one point
 
-#ttc-table-of-routes-anagrams-around
+#testcase-table-of-routes-anagrams-around
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go AROUND.
 
 >around
 Your score has just gone up by one point
 
-#ttc-table-of-routes-anagrams-along
+#testcase-table-of-routes-anagrams-along
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ALONG.
 
 >along
 Your score has just gone up by one point
 
-#ttc-table-of-routes-anagrams-amidst
+#testcase-table-of-routes-anagrams-amidst
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go AMIDST.
 
 /^Ripe Pier
 
+>during
+Your score has just gone up by one point
+DEBUG INFO: General LLPish min-up for drudging ruin.
+
+>score
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+
 >amidst
 Your score has just gone up by one point
 
-#ttc-table-of-routes-anagrams-athwart
+#testcase-table-of-routes-anagrams-athwart
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ATHWART.
 
 /^Cripple Clipper
@@ -216,7 +223,7 @@ You angle your spoon a bit, and you realize you, or something, should be, do, se
 >athwart
 Your score has just gone up by one point
 
-#ttc-table-of-routes-anagrams-between
+#testcase-table-of-routes-anagrams-between
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go BETWEEN.
 
 /^Sonancy Canyons
@@ -224,13 +231,13 @@ You angle your spoon a bit, and you realize you, or something, should be, do, se
 >between
 Your score has just gone up by one point
 
-#ttc-table-of-routes-anagrams-through
+#testcase-table-of-routes-anagrams-through
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go THROUGH.
 
 >through
 Your score has just gone up by one point
 
-#ttc-table-of-routes-anagrams-beyond
+#testcase-table-of-routes-anagrams-beyond
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go BEYOND.
 
 >without
@@ -238,7 +245,7 @@ Your score has just gone up by one point
 
 >score
 
-Score in a scenario: 21 out of 22 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 22 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >beyond
 Your score has just gone up by one point
@@ -246,5 +253,5 @@ Your score has just gone up by one point
 /^Strip of Profits
 
 >score
-Routes (22/22)
+Routes ({SCORE}/{MAX})
 

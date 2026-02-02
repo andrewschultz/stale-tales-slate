@@ -13,17 +13,17 @@
 /^Same Mesa
 
 >score
-Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #verbcase listen-routes-if-player-is-in-same-mesa
 >listen
 "Mama sees me as..." Irrelevant stuff.
 
-#ttc-table-of-routes-attacks-scripture-picturers
+#testcase-table-of-routes-attacks-scripture-picturers
 >attack scripture picturers
 A shameful attempt at vandalism.
 
-#ttc-table-of-routes-nowheres-same-mesa
+#testcase-table-of-routes-nowheres-same-mesa
 >n
 You try going north and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa (thank you, I'm here all game,) from the south, after several minutes.
 
@@ -37,7 +37,7 @@ Any direction from the Same Mesa seems as bad or good as any other. Perhaps ther
 There are plenty of ways to go, but they don't seem to lead anywhere. There are three places to enter, though they do seem to shift.
 
 >score
-Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >inside
 Your score has just gone up by one point
@@ -45,9 +45,9 @@ Your score has just gone up by one point
 /^Cleric Circle
 
 >score
-Score in a scenario: 1 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-routes-attacks-brother-horbert
+#testcase-table-of-routes-attacks-brother-horbert
 >attack brother horbert
 Yorpwald's already got a St. Lip-Split.
 
@@ -84,7 +84,7 @@ Your score has just gone up by one point
 
 /^Idle Deli
 
-#ttc-table-of-routes-nowheres-idle-deli
+#testcase-table-of-routes-nowheres-idle-deli
 >n
 Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms.
 
@@ -109,7 +109,7 @@ Your score has just gone up by one point
 
 /^Adobe Abode
 
-#ttc-table-of-routes-nowheres-adobe-abode
+#testcase-table-of-routes-nowheres-adobe-abode
 >e
 This do be a one-room place. You can really only go outside.
 
@@ -143,12 +143,12 @@ You can't run from Ian Gast!
 >listen
 Those tirades from Ian Gast.
 
-#ttc-table-of-routes-attacks-gast
+#testcase-table-of-routes-attacks-gast
 >attack gast
 You don't have a weapon big enough to take Ian Gast. One won't appear in your super purse. Anyway, he's not evil, just whiny.
 
 >score
-Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >astride
 Your score has just gone up by one point
@@ -197,7 +197,7 @@ You don't know if you should go anywhere. With A Bev' O' Be Ova' lying around, m
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: 11 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #verbcase listen-routes-if-player-is-in-same-mesa-if-gast-is-moot
 >listen
@@ -210,7 +210,7 @@ Your score has just gone up by one point
 >listen
 You hear people far away crying "The Bean has landed!"
 
-#ttc-table-of-routes-attacks-the-bean
+#testcase-table-of-routes-attacks-the-bean
 >attack the bean
 It's like a dense metal or something. It's more likely it would make something else crack.
 
@@ -219,7 +219,7 @@ Your score has just gone up by one point
 
 /^Harms Marsh
 
-#ttc-table-of-routes-nowheres-harms-marsh
+#testcase-table-of-routes-nowheres-harms-marsh
 >n
 Far into a rift? No. You can't see far enough to rely on directions, here. You'd likely wind up in Smasher Marshes or Shamers' Marshes, far from No-Lag Logan.
 
@@ -231,17 +231,17 @@ Far into a rift? No. You can't see far enough to rely on directions, here. You'd
 >exits
 Looks like you will need to figure a way to move forward without directions. You've been doing well so far.
 
-#ttc-table-of-goto-sectioning--1-routes
+#testcase-table-of-goto-sectioning--1-routes
 >gt mesa
 Brother Horbert would be sad to see you return, unsuccessful.
 
 >score
-Score in a scenario: 13 out of 22 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >until
 Your score has just gone up by one point
 
-#+ttc-table-of-routes-nowheres-harms-marsh
+#+testcase-table-of-routes-nowheres-harms-marsh
 >n
 Far into a rift? No. You can't rely on directions, here.
 
@@ -255,7 +255,7 @@ Your score has just gone up by one point
 
 >w
 
-#ttc-table-of-routes-nowheres-ripe-pier
+#testcase-table-of-routes-nowheres-ripe-pier
 You've lost all sense of direction here, but you still somehow need to figure how to get on that boat.
 
 #verbcase listen-routes-if-player-is-in-ripe-pier
@@ -266,11 +266,11 @@ Someone calling out "'Tis mad!" You see red.
 >smell
 Ugh! The mists smell, as kids in Yorpwald say for slang purposes, staim'd. You see red at how useless and impractical such ridiculous slang is. Which, of course, makes it actually useful here.
 
-#ttc-table-of-goto-sectioning-harms-marsh-2--
+#testcase-table-of-goto-sectioning-harms-marsh-2--
 >gt marsh
 You already muddled your way out of Harms Marsh. You may be lost now, but walking back would be worse.
 
-#+ttc-table-of-goto-sectioning--1-routes
+#+testcase-table-of-goto-sectioning--1-routes
 >gt mesa
 Brother Horbert would be sad to see you return, unsuccessful.
 
@@ -282,12 +282,19 @@ You've lost all sense of direction here, but you still somehow need to figure ho
 >exits
 Looks like you will need to figure a way to move forward without directions. You've been doing well so far.
 
+>during
+Your score has just gone up by one point
+DEBUG INFO: General LLPish min-up for drudging ruin.
+
+>score
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+
 >amidst
 Your score has just gone up by one point
 
 /^Cripple Clipper
 
-#ttc-table-of-routes-nowheres-cripple-clipper
+#testcase-table-of-routes-nowheres-cripple-clipper
 >d
 Locked ol' deck. No bowel on below.
 
@@ -302,15 +309,15 @@ This is no dreamboat.
 >bother
 Siphon no pish on-ship.
 
-#ttc-table-of-goto-sectioning-ripe-pier-3--
+#testcase-table-of-goto-sectioning-ripe-pier-3--
 >gt pier
 You have no idea how to turn the Cripple Clipper around, and you don't want to.
 
-#+ttc-table-of-goto-sectioning-harms-marsh-2--
+#+testcase-table-of-goto-sectioning-harms-marsh-2--
 >gt marsh
 You already muddled your way out of Harms Marsh. You may be lost now, but sailing back would be worse.
 
-#+ttc-table-of-goto-sectioning--1-routes
+#+testcase-table-of-goto-sectioning--1-routes
 >gt mesa
 You're not going back across the water. You're closer to the end of your quest.
 
@@ -327,7 +334,7 @@ Your score has just gone up by one point
 
 /^Sonancy Canyons
 
-#ttc-table-of-routes-nowheres-sonancy-canyons
+#testcase-table-of-routes-nowheres-sonancy-canyons
 >n
 You might run into the spheric ciphers. You still don't have your sense of direction back.
 
@@ -339,11 +346,11 @@ An over-cheery voice: "Thou wit!"
 >listen hog
 Squealing. It could be calmer
 
-#ttc-table-of-goto-sectioning-cripple-clipper-4--
+#testcase-table-of-goto-sectioning-cripple-clipper-4--
 >gt cripple clipper
 The Sonancy Canyons lead to your destiny.
 
-#+ttc-table-of-goto-sectioning-ripe-pier-3--
+#+testcase-table-of-goto-sectioning-ripe-pier-3--
 >gt pier
 It's time to go forward, not backwards.
 
@@ -391,7 +398,7 @@ The raptest patters are gone, and you can fully focus on the final step.
 
 >score
 
-Score in a scenario: 21 out of 22 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 22 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
 >beyond
 Your score has just gone up by one point
@@ -399,5 +406,5 @@ Your score has just gone up by one point
 /^Strip of Profits
 
 >score
-Routes (22/22)
+Routes ({SCORE}/{MAX})
 

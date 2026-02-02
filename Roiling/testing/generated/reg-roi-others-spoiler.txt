@@ -25,19 +25,19 @@ You don't want to change. Well, not in that way.
 >gx curtis
 If Curtis had any materials, he wouldn't hide them from you.
 
-#ttc-table-of-others-anagrams-grapes
+#testcase-table-of-others-anagrams-grapes
 >gx pagers
 You have a vision of fruit: GRAPES. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-limes
+#testcase-table-of-others-anagrams-limes
 >gx slime
 You have a vision of fruit: LIMES. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-pears
+#testcase-table-of-others-anagrams-pears
 >gx spear
 You have a vision of fruit: PEARS. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-plums
+#testcase-table-of-others-anagrams-plums
 >gx lumps
 You have a vision of fruit: PLUMS. The aftertaste of arugula finally dissipates.
 
@@ -45,31 +45,31 @@ You have a vision of fruit: PLUMS. The aftertaste of arugula finally dissipates.
 Your score has just gone up by one point.
 
 >score
-You have 1 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >pears
 Your score has just gone up by one point.
 
 >score
-You have 2 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >grapes
 Your score has just gone up by one point.
 
 >score
-You have 3 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >plums
 Your score has just gone up by one point.
 
-#ttc-table-of-others-anagrams-compass
+#testcase-table-of-others-anagrams-compass
 >gx moss cap
 Whoah! You suddenly see a COMPASS spinning around. The aftertaste of arugula finally dissipates.
 
 >score
-You have 4 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >son 1
 Giving you the coin.
 
-#ttc-table-of-others-anagrams-icon
+#testcase-table-of-others-anagrams-icon
 >gx coin
 You see the coin could become an ICON. The aftertaste of arugula finally dissipates.
 >undo
@@ -83,7 +83,7 @@ Nothing happens. Maybe try to see through something else.
 >son 3
 Giving you the coins.
 
-#ttc-table-of-others-anagrams-sonic-icons
+#testcase-table-of-others-anagrams-sonic-icons
 >gx coins
 You focus, hoping for one word, and ... you get a two-fer! SONIC ICONS! The aftertaste of arugula finally dissipates.
 >undo
@@ -114,55 +114,55 @@ Your score has just gone up by one point.
 
 >x ruts circuits
 
-#ttc-table-of-others-anagrams-dates
+#testcase-table-of-others-anagrams-dates
 >gx sated stead
 You have a vision of fruit: DATES. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-cherries
+#testcase-table-of-others-anagrams-cherries
 >gx hire recs
 You have a vision of fruit: CHERRIES. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-blueberries
+#testcase-table-of-others-anagrams-blueberries
 >gx eerie blurbs
 You have a vision of fruit: BLUEBERRIES. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-cantaloupe
+#testcase-table-of-others-anagrams-cantaloupe
 >gx peanut cola
 You have a vision of fruit: CANTALOUPE. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-maraschino
+#testcase-table-of-others-anagrams-maraschino
 >gx harmonicas
 You have a vision of fruit: MARASCHINO. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-persimmon
+#testcase-table-of-others-anagrams-persimmon
 >gx omen prism
 You have a vision of fruit: PERSIMMON. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-pomegranate
+#testcase-table-of-others-anagrams-pomegranate
 >gx magenta rope
 You have a vision of fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
 
-#+ttc-table-of-others-anagrams-pomegranate
+#+testcase-table-of-others-anagrams-pomegranate
 >gx megaton pear
 You blink and wind up refocusing on the magenta rope.
 You have a vision of fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
 
-#+ttc-table-of-others-anagrams-pomegranate
+#+testcase-table-of-others-anagrams-pomegranate
 >gx rampage note
 You blink and wind up refocusing on the magenta rope.
 You have a vision of fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
 
-#+ttc-table-of-others-anagrams-pomegranate
+#+testcase-table-of-others-anagrams-pomegranate
 >gx mopeage rant
 You blink and wind up refocusing on the magenta rope.
 You have a vision of fruit: POMEGRANATE. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-tamarind
+#testcase-table-of-others-anagrams-tamarind
 >gx mad train
 You have a vision of fruit: TAMARIND. The aftertaste of arugula finally dissipates.
 
 >score
-You have 5 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 #only three points here to test the reject case of going east to the clearing without a token
 
@@ -170,66 +170,66 @@ You have 5 of 47 total points for the post-Elvira Others region, though you only
 Your score has just gone up by one point.
 
 >score
-You have 6 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >blueberries
 Your score has just gone up by one point.
 
 >score
-You have 7 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >cantaloupe
 Your score has just gone up by one point.
 
 >score
-You have 8 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >persimmon
 Take on a token
 Your score has just gone up by one point.
 
 >score
-You have 9 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >maraschino
 Your score has just gone up by one point.
 
 >score
-You have 10 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >pomegranate
 Your score has just gone up by one point.
 
 >score
-You have 11 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >cherries
 Your score has just gone up by one point.
 You worry Curtis won't give you credit for both plain old cherries and maraschino cherries, but he nods as if to say, no problem. Whew!
 
 >score
-You have 12 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >n
 /^Swell Wells
 
-#ttc-table-of-others-anagrams-apples
+#testcase-table-of-others-anagrams-apples
 >gx elp psa
 You have a vision of fruit: APPLES. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-apricot
+#testcase-table-of-others-anagrams-apricot
 >gx riot cap
 You have a vision of fruit: APRICOT. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-coconuts
+#testcase-table-of-others-anagrams-coconuts
 >gx stucco
 You have a vision of fruit: COCONUTS. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-gooseberry
+#testcase-table-of-others-anagrams-gooseberry
 >gx sorer bogey
 You have a vision of fruit: GOOSEBERRY. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-mulberries
+#testcase-table-of-others-anagrams-mulberries
 >gx miser ruble
 You have a vision of fruit: MULBERRIES. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-tangerines
+#testcase-table-of-others-anagrams-tangerines
 >gx green stain
 You have a vision of fruit: TANGERINES. The aftertaste of arugula finally dissipates.
 
@@ -240,22 +240,22 @@ Nothing happens. Maybe try to see through something else.
 Your score has just gone up by one point.
 
 >score
-You have 13 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >apples
 Your score has just gone up by one point.
 
 >score
-You have 14 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >mulberries
 Your score has just gone up by one point.
 
 >score
-You have 15 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >gooseberry
 Your score has just gone up by one point.
 
 >score
-You have 16 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 #only really need to test this nag once.
 You may want to go see Curtis for a new reward. Or you can keep getting new fruits.
 
@@ -279,13 +279,13 @@ Nothing happens. Maybe try to see through something else.
 Your score has just gone up by one point.
 
 >score
-You have 17 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >tangerines
 Your score has just gone up by one point.
 
 >score
-You have 18 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >s
 
@@ -293,46 +293,46 @@ You have 18 of 47 total points for the post-Elvira Others region, though you onl
 by one point
 
 >score
-You have 19 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >n
 
 >w
 /^Filed Field
 
-#ttc-table-of-others-anagrams-blackberries
+#testcase-table-of-others-anagrams-blackberries
 >gx barber sickle
 You have a vision of fruit: BLACKBERRIES. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-breadfruit
+#testcase-table-of-others-anagrams-breadfruit
 >gx buried raft
 You have a vision of fruit: BREADFRUIT. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-cranberries
+#testcase-table-of-others-anagrams-cranberries
 >gx briar screen
 You have a vision of fruit: CRANBERRIES. The aftertaste of arugula finally dissipates.
 
-#+ttc-table-of-others-anagrams-cranberries
+#+testcase-table-of-others-anagrams-cranberries
 >gx barren cries
 You have a vision of fruit: CRANBERRIES. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-grapefruit
+#testcase-table-of-others-anagrams-grapefruit
 >gx rapt figure
 You have a vision of fruit: GRAPEFRUIT. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-pineapple
+#testcase-table-of-others-anagrams-pineapple
 >gx pipe panel lie pen app
 You have a vision of fruit: PINEAPPLE. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-raspberry
+#testcase-table-of-others-anagrams-raspberry
 >gx pryer bars
 You have a vision of fruit: RASPBERRY. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-strawberries
+#testcase-table-of-others-anagrams-strawberries
 >gx barriers west
 You have a vision of fruit: STRAWBERRIES. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-watermelon
+#testcase-table-of-others-anagrams-watermelon
 >gx mean trowel
 You have a vision of fruit: WATERMELON. The aftertaste of arugula finally dissipates.
 
@@ -340,24 +340,24 @@ You have a vision of fruit: WATERMELON. The aftertaste of arugula finally dissip
 Your score has just gone up by one point.
 
 >score
-You have 20 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >blackberries
 Your score has just gone up by one point.
 
 >score
-You have 21 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >watermelon
 Your score has just gone up by one point.
 
 >score
-You have 22 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >pineapple
 Your score has just gone up by one point.
 min-up
 
 >score
-You have 23 of 47 total points for the post-Elvira Others region, though you only need 27 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >e
 >s
@@ -368,7 +368,7 @@ droll dollar
 >dates
 Your score has just gone up by one point.
 >score
-You have 24 of 47 total points for the post-Elvira Others region, though you only need 28 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >score
 
@@ -380,12 +380,12 @@ by one point
 Blam!
 
 >score
-You have 25 of 47 total points for the post-Elvira Others region, though you only need 28 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >concisions
 Your score has just gone up by one point.
 >score
-You have 26 of 47 total points for the post-Elvira Others region, though you only need 29 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >n
 
@@ -393,21 +393,21 @@ You have 26 of 47 total points for the post-Elvira Others region, though you onl
 >strawberries
 Your score has just gone up by one point.
 >score
-You have 27 of 47 total points for the post-Elvira Others region, though you only need 30 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 #strawberries = last with minimum at base
 
 >grapefruit
 Your score has just gone up by one point.
 >score
-You have 28 of 47 total points for the post-Elvira Others region, though you only need 31 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >raspberry
 Your score has just gone up by one point.
 >score
-You have 29 of 47 total points for the post-Elvira Others region, though you only need 32 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >breadfruit
 Your score has just gone up by one point.
 >score
-You have 30 of 47 total points for the post-Elvira Others region, though you only need 33 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >e
 >e
 /^Clangier Clearing
@@ -415,80 +415,80 @@ You have 30 of 47 total points for the post-Elvira Others region, though you onl
 >gx len craig
 Nothing, despite all Len Craig has to sell.
 
-#ttc-table-of-others-anagrams-olives
+#testcase-table-of-others-anagrams-olives
 >gx voiles
 You have a vision of fruit: OLIVES. The aftertaste of arugula finally dissipates
 
-#ttc-table-of-others-anagrams-among
+#testcase-table-of-others-anagrams-among
 >gx ammo gang
 You feel a need to be AMONG. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-ancienter
+#testcase-table-of-others-anagrams-ancienter
 >gx nectarine
 You feel a need to make the nectarine ANCIENTER. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-cheap
+#testcase-table-of-others-anagrams-cheap
 >gx peach
 You feel a need to call the peach CHEAP. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-cinque
+#testcase-table-of-others-anagrams-cinque
 >gx quince
 You feel a need to order CINQUE. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-cripes
+#testcase-table-of-others-anagrams-cripes
 >gx prices precis
 You feel a need to lash out and say CRIPES. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-mo-len
+#testcase-table-of-others-anagrams-mo-len
 >gx melon
 You feel a need to haggle with MO LEN. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-papayas
+#testcase-table-of-others-anagrams-papayas
 >gx auction caution
 You have a vision of fruit: PAPAYAS. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-solemn
+#testcase-table-of-others-anagrams-solemn
 >gx lemons
 You feel an urge to look SOLEMN. The aftertaste of arugula finally dissipates.
 
 >olives
 Your score has just gone up by one point.
 >score
-You have 31 of 47 total points for the post-Elvira Others region, though you only need 34 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >cinque
 Your score has just gone up by one point.
 >score
-You have 32 of 47 total points for the post-Elvira Others region, though you only need 35 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >cheap
 Your score has just gone up by one point.
 >score
-You have 33 of 47 total points for the post-Elvira Others region, though you only need 36 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >papayas
 Your score has just gone up by one point.
 >score
-You have 34 of 47 total points for the post-Elvira Others region, though you only need 37 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >among
 Your score has just gone up by one point.
 
 >score
-You have 35 of 47 total points for the post-Elvira Others region, though you only need 38 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >ancienter
 Your score has just gone up by one point.
 >score
-You have 36 of 47 total points for the post-Elvira Others region, though you only need 39 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >solemn
 Your score has just gone up by one point.
 >score
-You have 37 of 47 total points for the post-Elvira Others region, though you only need 40 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >len mo
 Your score has just gone up by one point.
 >score
-You have 38 of 47 total points for the post-Elvira Others region, though you only need 41 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >cripes
 Your score has just gone up by one point.
 >score
-You have 39 of 47 total points for the post-Elvira Others region, though you only need 42 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
 >gx nectarine
 You've already changed the nectarine.
@@ -499,15 +499,15 @@ You've already changed the nectarine.
 >d
 /^Scape Space
 
-#ttc-table-of-others-anagrams-banana
+#testcase-table-of-others-anagrams-banana
 >gx a banna'
 You have a vision of fruit: BANANA. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-go-near
+#testcase-table-of-others-anagrams-go-near
 >gx orange
 You see how to get the orange: first, GO NEAR. The aftertaste of arugula finally dissipates.
 
-#ttc-table-of-others-anagrams-rhubarb
+#testcase-table-of-others-anagrams-rhubarb
 >gx a brr hub
 You have a vision of fruit: RHUBARB. The aftertaste of arugula finally dissipates.
 
@@ -520,28 +520,28 @@ As you perform the toll-toss, you think you hear tots' LOLs. The box opens up, d
 Your score has just gone up by one point.
 
 >score
-You have 40 of 47 total points for the post-Elvira Others region, though you only need 42 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 
-#ttc-table-of-others-anagrams-reversed
+#testcase-table-of-others-anagrams-reversed
 >gx dr severe
 One look at Dr. Severe, and you realize Dr. Severe can just be REVERSED. The aftertaste of arugula finally dissipates.
 
 >banana
 Your score has just gone up by one point.
 >score
-You have 41 of 47 total points for the post-Elvira Others region, though you only need 43 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >go near
 Your score has just gone up by one point.
 >score
-You have 42 of 47 total points for the post-Elvira Others region, though you only need 44 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >rhubarb
 Your score has just gone up by one point.
 >score
-You have 43 of 47 total points for the post-Elvira Others region, though you only need 45 to win.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
 >reversed
 Your score has just gone up by one point.
 >score
-You have 44 of 47 total points for the post-Elvira Others region.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region.
 There are no fruits left to find or give back to Curtis.
 
 >u
@@ -551,15 +551,15 @@ There are no fruits left to find or give back to Curtis.
 >n
 PERP
 
-#ttc-table-of-others-anagrams-review
+#testcase-table-of-others-anagrams-review
 >gx viewer
 No. You don't want to use the arugula on the viewer. It's got to be pretty simple.
 
-#ttc-table-of-others-anagrams-research
+#testcase-table-of-others-anagrams-research
 >gx searcher
 No. You don't want to use the arugula on the searcher. It's got to be pretty simple.
 
-#ttc-table-of-others-anagrams-prep
+#testcase-table-of-others-anagrams-prep
 >gx fleeing feeling
 No. You don't want to use the arugula on the fleeing feeling. It's got to be pretty simple.
 
@@ -567,7 +567,7 @@ No. You don't want to use the arugula on the fleeing feeling. It's got to be pre
 by one point
 >score
 
-You have 45 of 47 total points for the post-Elvira Others region.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region.
 There are no fruits left to find or give back to Curtis.
 
 >review
@@ -575,7 +575,7 @@ by one point
 
 >score
 
-You have 46 of 47 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
+You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
 
 >n
 

@@ -11,34 +11,34 @@
 
 * go weird places
 
-#ttc-table-of-general-nudges-terry
+#testcase-table-of-general-nudges-terry
 >ryter
 !You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.
 
-#ttc-table-of-general-nudges-lalw
+#testcase-table-of-general-nudges-lalw
 >llaw
 You don't need to, and can't, do anything drastic to the walls when inside. That'd be kind of dangerous, anyway.
 [NOTE: this was the right idea, though what you tried to switch can't be anagrammed. Trying stuff is encouraged, though generally, you'll get a response saying nothing meaningful happens if you try to change scenery that doesn't need it.]
 
-#ttc-table-of-general-nudges-walls
+#testcase-table-of-general-nudges-walls
 >llaws
 You don't need to, and can't, do anything drastic to the walls when inside. That'd be kind of dangerous, anyway.
 
-#ttc-table-of-general-nudges-elvira
+#testcase-table-of-general-nudges-elvira
 >alvire
 Changing Elvira is impossible, and you certainly don't want to summon her.
 
 # must be done before using the TS command
 
-#ttc-table-of-general-nudges-paces
+#testcase-table-of-general-nudges-paces
 >epcas
 Meta-commands don't have any easter eggs, sadly.
 
-#ttc-table-of-general-nudges-pedanto
+#testcase-table-of-general-nudges-pedanto
 >pedanto
 You don't need to change the pedanto-notepad, except maybe by filling it up with ideas. But to do that, you need to take it, first. And you do.
 
-#+ttc-table-of-general-nudges-pedanto
+#+testcase-table-of-general-nudges-pedanto
 >pedanto
 !But to do that
 
@@ -56,331 +56,331 @@ It's going to get evil enough even without a high-ranking COBRA officer.
 It's going to get evil enough even without a high-ranking COBRA officer.
 !you found a great guess
 
-#ttc-table-of-general-nudges-yorpwald
+#testcase-table-of-general-nudges-yorpwald
 >yalpdrow
 You can't just unjumble Yorpwald with just one word. You need to deal with individual things.
 
-#ttc-table-of-general-nudges-settler
+#testcase-table-of-general-nudges-settler
 >ettlers
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#ttc-table-of-general-nudges-which
+#testcase-table-of-general-nudges-which
 >whihc
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 !this was the right idea, though what you tried
 
-#ttc-table-of-general-nudges-whichs
+#testcase-table-of-general-nudges-whichs
 >whicsh
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#ttc-table-of-general-nudges-mark
+#testcase-table-of-general-nudges-mark
 >kram
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#ttc-table-of-general-nudges-recoded
+#testcase-table-of-general-nudges-recoded
 >recodde
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#ttc-table-of-general-nudges-backside
+#testcase-table-of-general-nudges-backside
 >backside
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#ttc-table-of-general-nudges-decla
+#testcase-table-of-general-nudges-decla
 >decal
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#ttc-table-of-general-nudges-buntot
+#testcase-table-of-general-nudges-buntot
 >button
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#ttc-table-of-general-nudges-receptor
+#testcase-table-of-general-nudges-receptor
 >receptor
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#ttc-table-of-general-nudges-receptors
+#testcase-table-of-general-nudges-receptors
 >receptors
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#ttc-table-of-general-nudges-output
+#testcase-table-of-general-nudges-output
 >outptu
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#ttc-table-of-general-nudges-displya
+#testcase-table-of-general-nudges-displya
 >displya
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#ttc-table-of-general-nudges-equals
+#testcase-table-of-general-nudges-equals
 >quales
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 !q without the u
 
-#+ttc-table-of-general-nudges-equals
+#+testcase-table-of-general-nudges-equals
 >qaules
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place. Also, even if you could do anything, you'd need the u right after the q, probably. You'll need to do odd stuff, but nothing too odd.
 
-#ttc-table-of-general-nudges-logo
+#testcase-table-of-general-nudges-logo
 >gool
 You won't gain anything trying to magic the settler, or parts of it, about. All its technical tools and features are already in place.
 
-#ttc-table-of-general-nudges-souht
+#testcase-table-of-general-nudges-souht
 >suoth
 This game almost never requires you to mess with cardinal directions.
 
-#ttc-table-of-general-nudges-ewts
+#testcase-table-of-general-nudges-ewts
 >ewst
 This game almost never requires you to mess with cardinal directions.
 
-#ttc-table-of-general-nudges-norht
+#testcase-table-of-general-nudges-norht
 >ronth
 This game almost never requires you to mess with cardinal directions.
 
-#ttc-table-of-general-nudges-eats
+#testcase-table-of-general-nudges-eats
 >esta
 This game almost never requires you to mess with cardinal directions.
 
-#ttc-table-of-general-nudges-down
+#testcase-table-of-general-nudges-down
 >donw
 This game doesn't usually require you to mess with directions you can go.
 
-#ttc-table-of-general-nudges-southwets
+#testcase-table-of-general-nudges-southwets
 >southwets
 This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
 
-#ttc-table-of-general-nudges-northwest
+#testcase-table-of-general-nudges-northwest
 >northwets
 This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
 
-#ttc-table-of-general-nudges-northeast
+#testcase-table-of-general-nudges-northeast
 >northeats
 This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
 
-#ttc-table-of-general-nudges-southeast
+#testcase-table-of-general-nudges-southeast
 >southeats
 This game doesn't require you to mess with diagonal directions, so I hope that's a relief.
 
-#ttc-table-of-general-nudges-gadget
+#testcase-table-of-general-nudges-gadget
 >gagdet
 That was soooo last game! Not that Shuffling Around was lame. I mean, I wrote it, and all. Just, I got even better at writing since then, and I wrote in newer awesomer adventures.
 
-#ttc-table-of-general-nudges-xyyzz
+#testcase-table-of-general-nudges-xyyzz
 >xyyzz
 A hollow voice booms, "Lo! Of..."
 
-#ttc-table-of-general-nudges-plugh
+#testcase-table-of-general-nudges-plugh
 >pluhg
 A hollow voice booms, "Lo! Of..."
 
-#ttc-table-of-general-nudges-plover
+#testcase-table-of-general-nudges-plover
 >plovre
 A hollow voice booms, "Lo! Of..."
 
-#ttc-table-of-general-nudges-iths
+#testcase-table-of-general-nudges-iths
 >iths
 I'm not fooled. Shame on you!
 
-#ttc-table-of-general-nudges-kcuf
+#testcase-table-of-general-nudges-kcuf
 >kcuf
 I'm not fooled. Shame on you!
 
-#ttc-table-of-general-nudges-mand
+#testcase-table-of-general-nudges-mand
 >mand
 I'm not fooled. Shame on you!
 
-#ttc-table-of-general-nudges-lelh
+#testcase-table-of-general-nudges-lelh
 >lleh
 I'm not fooled. Shame on you!
 
-#ttc-table-of-general-nudges-parc
+#testcase-table-of-general-nudges-parc
 >parc
 I'm not fooled. Shame on you!
 
-#ttc-table-of-general-nudges-heck
+#testcase-table-of-general-nudges-heck
 >hcek
 I'm not fooled. Shame on you!
 
-#ttc-table-of-general-nudges-teach
+#testcase-table-of-general-nudges-teach
 >echat
 Aw, man, a third option for the settler wouldn't be fair. Trust me, it's powerful enough as-is.
 
-#ttc-table-of-general-nudges-igns
+#testcase-table-of-general-nudges-igns
 >ings
 You don't need to mess around with the sign on the settler, or any sign, except maybe one place, which you'll know when you see it.
 
-#ttc-table-of-general-nudges-slider
+#testcase-table-of-general-nudges-slider
 >idlers
 You can just switch the slider if you want to manipulate it.
 
-#ttc-table-of-general-nudges-purse
+#testcase-table-of-general-nudges-purse
 >pruse
 The purse is just fine as it is.
 
-#ttc-table-of-general-nudges-sacep
+#testcase-table-of-general-nudges-sacep
 >aspec
 You don't want to mess with the space-capes. They work.
 
 >purloin treatise
 
-#ttc-table-of-general-nudges-treatise
+#testcase-table-of-general-nudges-treatise
 >treaties
 The treatise is there as help to discover the satchel. It has only sentimental value, now.
 
 >abstract treatise to ll
 
-#+ttc-table-of-general-nudges-treatise
+#+testcase-table-of-general-nudges-treatise
 >treaties
 The treatise was there as help to discover the satchel. It has only sentimental value, now.
 
 >purloin gird grid
 
-#ttc-table-of-general-nudges-gird
+#testcase-table-of-general-nudges-gird
 >drig
 The grid already contains pretty much everything Elmo was able to find out.
 
-#ttc-table-of-general-nudges-writing
+#testcase-table-of-general-nudges-writing
 >writign
 Red writing is a just clue of what to change.
 
-#ttc-table-of-general-nudges-redwriting
+#testcase-table-of-general-nudges-redwriting
 >redwritign
 Red writing is a just clue of what to change.
 
-#ttc-table-of-general-nudges-edr
+#testcase-table-of-general-nudges-edr
 >erd
 Red writing is a just clue of what to change.
 
-#ttc-table-of-general-nudges-warning
+#testcase-table-of-general-nudges-warning
 >warning
 You can't change warnings. Warnings are there to protect you. Even offer hints if you read them.
 
-#ttc-table-of-general-nudges-curses
+#testcase-table-of-general-nudges-curses
 >cusser
 I'm not fooled. Shame on you!
 
-#ttc-table-of-general-nudges-bother
+#testcase-table-of-general-nudges-bother
 >obther
 I'm not fooled. Shame on you!
 
-#ttc-table-of-general-nudges-bastard
+#testcase-table-of-general-nudges-bastard
 >astarbd
 I'm not fooled. Shame on you!
 
 >abstract elmo to ll
 
-#ttc-table-of-general-nudges-parse
+#testcase-table-of-general-nudges-parse
 >pesar
 There's no in-between for the PARSE and SPARE commands for the settler.
 
-#ttc-table-of-general-nudges-verb
+#testcase-table-of-general-nudges-verb
 >ervb
 There's no secret verb or verbs to find trying that.
 
-#ttc-table-of-general-nudges-verbs
+#testcase-table-of-general-nudges-verbs
 >ervbs
 There's no secret verb or verbs to find trying that.
 
-#ttc-table-of-general-nudges-think
+#testcase-table-of-general-nudges-think
 >knith
 Whenever you just try to too hard to think, things always get jumbled.
 
-#ttc-table-of-general-nudges-score
+#testcase-table-of-general-nudges-score
 >cores
 There's no way to scramble your score. And scoring another point won't help you solve things, anyway.
 
-#ttc-table-of-general-nudges-poss
+#testcase-table-of-general-nudges-poss
 >opss
 You can't jumble the possible scores any other way.
 
-#ttc-table-of-general-nudges-listen
+#testcase-table-of-general-nudges-listen
 >istlen
 Trying to change how you listen gives no intels.
 
-#ttc-table-of-general-nudges-about
+#testcase-table-of-general-nudges-about
 >abotu
 The "about" section has no easter eggs.
 
-#ttc-table-of-general-nudges-credit
+#testcase-table-of-general-nudges-credit
 >credti
 The "credits" section has no easter eggs.
 
-#ttc-table-of-general-nudges-credits
+#testcase-table-of-general-nudges-credits
 >credtis
 The "credits" section has no easter eggs.
 
-#ttc-table-of-general-nudges-history
+#testcase-table-of-general-nudges-history
 >histoyr
 The "history" section has no easter eggs.
 
-#ttc-table-of-general-nudges-hush
+#testcase-table-of-general-nudges-hush
 >huhs
 Meta-commands don't have any easter eggs, sadly.
 
-#ttc-table-of-general-nudges-spaceson
+#testcase-table-of-general-nudges-spaceson
 >spacenos
 Meta-commands don't have any easter eggs, sadly.
 
-#ttc-table-of-general-nudges-spaceon
+#testcase-table-of-general-nudges-spaceon
 >spacoen
 Meta-commands don't have any easter eggs, sadly.
 
-#ttc-table-of-general-nudges-spaces
+#testcase-table-of-general-nudges-spaces
 >spaces
 Meta-commands don't have any easter eggs, sadly.
 
-#ttc-table-of-general-nudges-son
+#testcase-table-of-general-nudges-son
 >sno
 Meta-commands don't have any easter eggs, sadly.
 
-#ttc-table-of-general-nudges-hitn
+#testcase-table-of-general-nudges-hitn
 >hitn
 Meta-commands don't have any easter eggs, sadly.
 
-#ttc-table-of-general-nudges-hints
+#testcase-table-of-general-nudges-hints
 >hitns
 Meta-commands don't have any easter eggs, sadly.
 
-#ttc-table-of-general-nudges-access
+#testcase-table-of-general-nudges-access
 >accses
 Meta-commands don't have any easter eggs, sadly.
 
-#ttc-table-of-general-nudges-exits
+#testcase-table-of-general-nudges-exits
 >extis
 Meta-commands don't have any easter eggs, sadly.
 
-#ttc-table-of-general-nudges-exit
+#testcase-table-of-general-nudges-exit
 >exti
 Meta-commands don't have any easter eggs, sadly.
 
-#ttc-table-of-general-nudges-opts
+#testcase-table-of-general-nudges-opts
 >opst
 Meta-commands don't have any easter eggs, sadly.
 
-#ttc-table-of-general-nudges-options
+#testcase-table-of-general-nudges-options
 >optiosn
 Meta-commands don't have any easter eggs, sadly.
 
-#ttc-table-of-general-nudges-version
+#testcase-table-of-general-nudges-version
 >versino
 Meta-commands don't have any easter eggs, sadly.
 
-#ttc-table-of-general-nudges-something
+#testcase-table-of-general-nudges-something
 >semithong
 SOMETHING never anagrams to anything, so you'll want to tinker with whatever that SOMETHING is on or near or supporting.
 
 >ts
 
-#+ttc-table-of-general-nudges-terry
+#+testcase-table-of-general-nudges-terry
 >ryter
 You don't have any special tricks with RETRYing. Just do so if you're in a store and stuck.
 
-#ttc-table-of-general-nudges-ground
+#testcase-table-of-general-nudges-ground
 >groudn
 Changing the ground beneath your feet is too dangerous a proposition.
 
-#ttc-table-of-general-nudges-jump
+#testcase-table-of-general-nudges-jump
 >jupm
 You consider the costs and benefits of collapsing in an impressively uncoordinated heap, then decide against doing so.
 
-#ttc-table-of-general-nudges-point
+#testcase-table-of-general-nudges-point
 >poitn
 There's no secret cheat between NO TIP and OPT IN.
 
@@ -388,7 +388,7 @@ There's no secret cheat between NO TIP and OPT IN.
 
 >averse
 
-#ttc-table-of-general-nudges-resave
+#testcase-table-of-general-nudges-resave
 >resaev
 Alas, there is nothing between RESAVE and AVERSE to load a special game state.
 

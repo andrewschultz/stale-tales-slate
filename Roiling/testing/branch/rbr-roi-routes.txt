@@ -5,12 +5,12 @@
 #--vtc.py checks for verb cases
 #--rbr.py v to verify nothing slipped
 
-file=reg-roi-routes-max.txt,max,maximum walkthrough
-file=reg-roi-routes-min.txt,min,minimum walkthrough
-file=reg-roi-routes-nudmis.txt,nudges/nud/nu/mis,walkthrough with all nudges
-file=reg-roi-routes-slider.txt,sli,walkthrough with slider readings
-file=reg-roi-routes-hints.txt,hints/hin/spoi,walkthrough with hints
-file=reg-roi-routes-verbs.txt,verbs,walkthrough testing verbs
+file=reg-roi-routes-max.txt,abbr=max,desc=maximum walkthrough
+file=reg-roi-routes-min.txt,abbr=min,desc=minimum walkthrough
+file=reg-roi-routes-nudmis.txt,abbr=nudges/nud/nu/mis,desc=walkthrough with all nudges
+file=reg-roi-routes-slider.txt,abbr=sli,desc=walkthrough with slider readings
+file=reg-roi-routes-hints.txt,abbr=hints/hin/spoi,desc=walkthrough with hints
+file=reg-roi-routes-verbs.txt,abbr=verbs,desc=walkthrough testing verbs
 
 }}MAX=22
 }}CURMAX=22
@@ -79,11 +79,11 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >listen
 "Mama sees me as..." Irrelevant stuff.
 \\
-#ttc-table-of-routes-attacks-scripture-picturers
+#testcase-table-of-routes-attacks-scripture-picturers
 >attack scripture picturers
 A shameful attempt at vandalism.
 \\
-#ttc-table-of-routes-nowheres-same-mesa
+#testcase-table-of-routes-nowheres-same-mesa
 >n
 You try going north and looking for that poison stripe--but it's invisible and makes you wind up taking turns unconsciously. You arrive back at... the Same Mesa (thank you, I'm here all game,) from the south, after several minutes.
 \\
@@ -178,93 +178,93 @@ The anti-sag sit-a-nag is plenty solid and will stay that way, independent of yo
 >gas
 The anti-sag sit-a-nag is plenty solid and will stay that way, independent of your efforts.
 \\
-#ttc-table-of-same-mesa-nudges-poison
+#testcase-table-of-same-mesa-nudges-poison
 >posoni
 The poison stripe is too incorporeal to do bend to your will.
 \\
-#ttc-table-of-same-mesa-nudges-stripe
+#testcase-table-of-same-mesa-nudges-stripe
 >estirp
 The poison stripe is too incorporeal to do bend to your will.
 \\
-#ttc-table-of-same-mesa-nudges-poisonstripe
+#testcase-table-of-same-mesa-nudges-poisonstripe
 >posoniestirp
 The poison stripe is too incorporeal to do bend to your will.
 \\
-#ttc-table-of-same-mesa-nudges-die
+#testcase-table-of-same-mesa-nudges-die
 >edi
 Nothing happens. You twiddle both words for a moment, then realize it's probably them, combined
 \\
-#ttc-table-of-same-mesa-nudges-sin
+#testcase-table-of-same-mesa-nudges-sin
 >ins
 Nothing happens. You twiddle both words for a moment, then realize it's probably them, combined
 \\
-#ttc-table-of-same-mesa-nudges-lairage
+#testcase-table-of-same-mesa-nudges-lairage
 >lairaeg
 Lairage regalia is already tailored to the resident's style. So it's not yours to change, but maybe noting what's on it will help you get in.
 \\
-#ttc-table-of-same-mesa-nudges-pat
+#testcase-table-of-same-mesa-nudges-pat
 >tpa
 Hm, it's Pat'S.
 \\
-#ttc-table-of-same-mesa-nudges-orcas
+#testcase-table-of-same-mesa-nudges-orcas
 >acros
 Hm, it's Oscar'S.
 >ascors
 You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close.
 \\
-#ttc-table-of-same-mesa-nudges-ings
+#testcase-table-of-same-mesa-nudges-ings
 >sgin
 It's what's on the board you need to fix.
 \\
-#ttc-table-of-same-mesa-nudges-board
+#testcase-table-of-same-mesa-nudges-board
 >bodar
 It's what's on the board you need to fix.
 \\
-#ttc-table-of-same-mesa-nudges-adsorbing
+#testcase-table-of-same-mesa-nudges-adsorbing
 >signboadr
 It's what's on the board you need to fix.
 \\
-#ttc-table-of-same-mesa-nudges-worst
+#testcase-table-of-same-mesa-nudges-worst
 >strow
 If you change the ad from the worst, maybe you won't make it better. Maybe you'll make something else even worse. So, focus on the whole.
 \\
-#ttc-table-of-same-mesa-nudges-scripture
+#testcase-table-of-same-mesa-nudges-scripture
 >scripture
 It's more likely that scripture can change you, or help you see something a bit simpler to say
 \\
-#ttc-table-of-same-mesa-nudges-cripture
+#testcase-table-of-same-mesa-nudges-cripture
 >cripture
 It's more likely that scripture can change you, or help you see something a bit simpler to say
 \\
-#ttc-table-of-same-mesa-nudges-picture
+#testcase-table-of-same-mesa-nudges-picture
 >picture
 It's more likely that scripture can change you, or help you see something a bit simpler to say
 \\
-#ttc-table-of-same-mesa-nudges-pictures
+#testcase-table-of-same-mesa-nudges-pictures
 >pictures
 It's more likely that scripture can change you, or help you see something a bit simpler to say
 \\
-#ttc-table-of-same-mesa-nudges-mesa
+#testcase-table-of-same-mesa-nudges-mesa
 >esma
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 \\
-#ttc-table-of-routes-nudges-rouet
+#testcase-table-of-routes-nudges-rouet
 >utreo
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 \\
-#ttc-table-of-routes-nudges-storeu
+#testcase-table-of-routes-nudges-storeu
 >utreos
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 \\
-#ttc-table-of-same-mesa-nudges-satin
+#testcase-table-of-same-mesa-nudges-satin
 >atsin
 The church's name is not as important as its mission.
 \\
-#ttc-table-of-routes-scannotes-anti-sag-sit-a-nag
+#testcase-table-of-routes-scannotes-anti-sag-sit-a-nag
 >scan anti sag sit a nag
 Hmm! Maybe the weird name for the (not) bench can help you sort things out.
 \\
-#ttc-table-of-routes-spechelp-anti-sag-sit-a-nag
+#testcase-table-of-routes-spechelp-anti-sag-sit-a-nag
 >agastni
 You hang around the anti-sag sit-a-nag, hoping for something to happen, but nothing happens. Though it seems like it should.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the anti-sag sit-a-nag. That's a decent omen.
@@ -275,7 +275,7 @@ You hang around the anti-sag sit-a-nag, hoping for something to happen, but noth
 DEBUG ONLY: You feel a slight psychic push-pull coming from the anti-sag sit-a-nag. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-routes-spechelp-side-art
+#testcase-table-of-routes-spechelp-side-art
 >astried
 There's something in the side art, but you're not sure if you need to figure it out just right now.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the side art. That's a decent omen.
@@ -286,15 +286,15 @@ There's something in the side art, but you're not sure if you need to figure it 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the side art. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-routes-scannotes-lairage-regalia
+#testcase-table-of-routes-scannotes-lairage-regalia
 >scan lairage regalia
 OSCAR'S SOS ARC doesn't leave many possibilities. And only one ambiguous reading means you might be able to use standard logic.
 \\
-#ttc-table-of-routes-scannotes-adsorbing-signboard
+#testcase-table-of-routes-scannotes-adsorbing-signboard
 >scan adsorbing signboard
 While signboard is nine letters, the text on it suggests a four-letter solution. If only you could figure where the vowel was, it'd be a slam-dunk.
 \\
-#ttc-table-of-routes-spechelp-worst-ad
+#testcase-table-of-routes-spechelp-worst-ad
 >towarsd
 The ad seems slightly nearer, for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the worst ad. That's a decent omen.
@@ -305,11 +305,11 @@ The ad seems slightly nearer, for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the worst ad. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-routes-readables-worst-ad
+#testcase-table-of-routes-readables-worst-ad
 >read worst ad
 "WARTS DO SOW, DRAT" is written below RADWOST but not in red. Hmm.
 \\
-#ttc-table-of-routes-scannotes-worst-ad
+#testcase-table-of-routes-scannotes-worst-ad
 >scan worst ad
 Hm! The worst ad seems like it should be simple, but maybe you need to READ the whole ad to see where the weird reading is coming from.
 
@@ -327,7 +327,7 @@ DEBUG INFO: scripture picturers hinting.
 {$SCOS}
 
 @nud
-#ttc-table-of-routes-spechelp-scripture-picturers
+#testcase-table-of-routes-spechelp-scripture-picturers
 >insied
 You feel you're not quite ready to enter the Cleric Circle, thinking like that. Well, not precisely like that. Your thoughts are close, but jumbled.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the scripture picturers. That's a decent omen.
@@ -364,8 +364,8 @@ The art is more complex than that. You need to make an anagram for the whole sid
 You get astride the anti-sag sit-a-nag for a while, but it's pointless with nobody around. Maybe later.
 !by one point
 \\
-#ttc-table-of-routes-prefigurings-side-art
-#ttc-table-of-notepad-entries-flips
+#testcase-table-of-routes-prefigurings-side-art
+#testcase-table-of-notepad-entries-flips
 >pad flips
 [NOTE: you can abbreviate this with PF in the future.]
 You can sit ASTRIDE the anti-sag sit-a-nag once you have a reason to.
@@ -376,7 +376,7 @@ You can sit ASTRIDE the anti-sag sit-a-nag once you have a reason to.
 You hear loud footsteps and hide under the anti-sag sit-a-nag in fear. A giant walks by but can't see anyone and runs off, complaining how there's nobody to complain to. Maybe if you had a reason to talk to the giant, or a purpose here, you might listen a bit better. Maybe if you could find a way to visit the Cleric Circle and find inner peace.
 You add the information to your pedanto-notepad under FLIPS.
 \\
-#ttc-table-of-routes-prefigurings-sit-a-nag
+#testcase-table-of-routes-prefigurings-sit-a-nag
 >pf
 You can lean AGAINST the anti-sag sit-a-nag once you feel less fear and more purpose.
 
@@ -409,7 +409,7 @@ Your score has just gone up by one point
 }}SCORE++
 
 @max
-#ttc-table-of-region-initial-scoring-commentary-routes-1
+#testcase-table-of-region-initial-scoring-commentary-routes-1
 Well, that was different from the standard directions. But there can't be too many other ways to go.
 
 /^Cleric Circle
@@ -421,7 +421,7 @@ The spoon reflects to the list-o-toils.
 {$SCOS}
 
 @verbs
-#ttc-table-of-routes-attacks-brother-horbert
+#testcase-table-of-routes-attacks-brother-horbert
 >attack brother horbert
 Yorpwald's already got a St. Lip-Split.
 \\
@@ -449,7 +449,7 @@ You can only go back out to the Same Mesa.
 The spoon reflects back outside.
 
 @max
-#ttc-table-of-notepad-entries-reagents
+#testcase-table-of-notepad-entries-reagents
 >pad reagents
 You need three reagents to help Brother Horbert:
 
@@ -458,23 +458,23 @@ You need three reagents to help Brother Horbert:
 Mum Ray's Summary!
 
 @max
-#ttc-table-of-mum-ray-summary-pages-1
+#testcase-table-of-mum-ray-summary-pages-1
 >x summary
 The story starts with Rev. Ali being violently opposed to Elvira. He dropped by the Same Mesa, and many people followed him. He was constantly yelling how she was too exciting, and the way to fight back was not to get swept up in her newness and be happy enough, you guess.
 \\
-#ttc-table-of-mum-ray-summary-pages-2
+#testcase-table-of-mum-ray-summary-pages-2
 >x summary
 People listened to Rev. Ali, and his austerity helped prevent hearing about Elvira's latest charm offensive. But he got more and more severe, restricting where people could go, and even directions how to get there. If people knew where they wanted to go, and it was really important, they'd get there.
 \\
-#ttc-table-of-mum-ray-summary-pages-3
+#testcase-table-of-mum-ray-summary-pages-3
 >x summary
 Then Elvira dropped by. Rev. Ali took the time to admit he was wrong! In doing so, he informed the residents of the Same Mesa that they would do well to follow his lead. Terrified, they accepted. Elvira's excitement had matured, and he didn't realize how good she was at pointing out people's faults. It would help to improve them.
 \\
-#ttc-table-of-mum-ray-summary-pages-4
+#testcase-table-of-mum-ray-summary-pages-4
 >x summary
 Rev. Ali left, but with one final "character-building" challenge. The roads out of the Same Mesa would lead nowhere until someone found a new clever way out beyond them. And if nobody found the way out--well, there were some wise guys who were all about thinking for yourself. Maybe they were not as good at it as they claimed to be.
 \\
-#ttc-table-of-mum-ray-summary-pages-5
+#testcase-table-of-mum-ray-summary-pages-5
 >x summary
 It was rumored Rev. Ali moved on to a new community to "help." His legacy remains, though. People are not willing even to visit Pat's and Oscar's. Why should they? The Same Mesa is a mix of countermanding and warnings about what you can't do, and how you can't even get the basics right, like cardinal directions. Someone needs to break through, somehow.
 
@@ -483,7 +483,7 @@ It was rumored Rev. Ali moved on to a new community to "help." His legacy remain
 >noops
 The snoop spoon isn't as complicated as assembly language.
 \\
-#ttc-table-of-routes-nudges-spoon
+#testcase-table-of-routes-nudges-spoon
 >ospon
 Instead of bending the spoon, use it to help your magic powers if need be.
 \\
@@ -493,99 +493,99 @@ Your heart is in the right place, but telling the mantle to cool it won't do muc
 >let man
 Your heart is in the right place, but telling the mantle to cool it won't do much good.
 \\
-#ttc-table-of-same-mesa-nudges-circle
+#testcase-table-of-same-mesa-nudges-circle
 >circel
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-routes-nudges-mum
+#testcase-table-of-routes-nudges-mum
 >mmu
 That document is the stone truth! It doesn't need revisionism or embellishment.
 \\
-#ttc-table-of-routes-nudges-rays
+#testcase-table-of-routes-nudges-rays
 >rysa
 That document is the stone truth! It doesn't need revisionism or embellishment.
 \\
-#ttc-table-of-routes-nudges-summary
+#testcase-table-of-routes-nudges-summary
 >mmurays
 That document is the stone truth! It doesn't need revisionism or embellishment.
 \\
-#ttc-table-of-routes-nudges-ray
+#testcase-table-of-routes-nudges-ray
 >ayr
 That document is the stone truth! It doesn't need revisionism or embellishment.
 \\
-#ttc-table-of-routes-nudges-ummary
+#testcase-table-of-routes-nudges-ummary
 >ummary
 That document is the stone truth! It doesn't need revisionism or embellishment.
 \\
-#ttc-table-of-cleric-circle-nudges-chant
+#testcase-table-of-cleric-circle-nudges-chant
 >nchat
 The chant doesn't change. Chants are good at that.
 \\
-#ttc-table-of-cleric-circle-nudges-chants
+#testcase-table-of-cleric-circle-nudges-chants
 >nchats
 The chant doesn't change. Chants are good at that.
 \\
-#ttc-table-of-cleric-circle-nudges-litany
+#testcase-table-of-cleric-circle-nudges-litany
 >linyta
 The chant doesn't change. Chants are good at that.
 \\
-#ttc-table-of-routes-nudges-reagent
+#testcase-table-of-routes-nudges-reagent
 >regenta
 Maybe you can use your powers to get what's on the list, but you don't need to use them on it.
 \\
-#ttc-table-of-cleric-circle-nudges-cleric
+#testcase-table-of-cleric-circle-nudges-cleric
 >cicler
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 \\
-#ttc-table-of-cleric-circle-nudges-list
+#testcase-table-of-cleric-circle-nudges-list
 >ilst
 Maybe you can use your powers to get what's on the list, but you don't need to use them on it.
 \\
-#ttc-table-of-cleric-circle-nudges-toils
+#testcase-table-of-cleric-circle-nudges-toils
 >ostil
 Maybe you can use your powers to get what's on the list, but you don't need to use them on it.
 \\
-#ttc-table-of-cleric-circle-nudges-kyries
+#testcase-table-of-cleric-circle-nudges-kyries
 >kyrise
 You can't change the music, but you don't need to.
 \\
-#ttc-table-of-cleric-circle-nudges-kyrie
+#testcase-table-of-cleric-circle-nudges-kyrie
 >kyrei
 You can't change the music, but you don't need to.
 \\
-#ttc-table-of-cleric-circle-nudges-grano
+#testcase-table-of-cleric-circle-nudges-grano
 >grano
 You can't change the music, but you don't need to.
 \\
-#ttc-table-of-cleric-circle-nudges-granos
+#testcase-table-of-cleric-circle-nudges-granos
 >granos
 You can't change the music, but you don't need to.
 \\
-#ttc-table-of-cleric-circle-nudges-poisno
+#testcase-table-of-cleric-circle-nudges-poisno
 >poisno
 The oopsin' priest can't be changed that easily. You'll have to search around for better ways to poke at things
 \\
-#ttc-table-of-cleric-circle-nudges-striep
+#testcase-table-of-cleric-circle-nudges-striep
 >striep
 The oopsin' priest can't be changed that easily. You'll have to search around for better ways to poke at things
 \\
-#+ttc-table-of-routes-nudges-reagent
+#+testcase-table-of-routes-nudges-reagent
 >regenta
 Maybe you can use your powers to get what's on the list, but you don't need to use them on it.
 \\
-#ttc-table-of-cleric-circle-nudges-rebroth
+#testcase-table-of-cleric-circle-nudges-rebroth
 >rebroth
 It's not Brother Horbert who needs changing but the Same Mesa.
 \\
-#ttc-table-of-cleric-circle-nudges-pews
+#testcase-table-of-cleric-circle-nudges-pews
 >pwes
 No vandalizing church property.
 \\
-#ttc-table-of-cleric-circle-nudges-pew
+#testcase-table-of-cleric-circle-nudges-pew
 >pwe
 No vandalizing church property.
 \\
-#ttc-table-of-cleric-circle-nudges-lament
+#testcase-table-of-cleric-circle-nudges-lament
 >letman
 You can't change stuff like that by brute force. But you don't need to.
 
@@ -597,19 +597,19 @@ Precise recipes
 >opposite
 Hm. The list doesn't seem to be what you need to stand opposite from. If it were, maybe Brother Horbert could and would have.
 \\
-#ttc-table-of-routes-nudges-boko
+#testcase-table-of-routes-nudges-boko
 >boko
 Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
 \\
-#ttc-table-of-routes-nudges-runedbook
+#testcase-table-of-routes-nudges-runedbook
 >obokduren
 Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
 \\
-#ttc-table-of-routes-nudges-pipesoot
+#testcase-table-of-routes-nudges-pipesoot
 >pipesoto
 Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
 \\
-#ttc-table-of-routes-nudges-stupor
+#testcase-table-of-routes-nudges-stupor
 >suptro
 Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sneak around to get that.
 
@@ -620,7 +620,7 @@ Nothing happens. I mean, less than nothing. Perhaps you need to find a way to sn
 !The only way to exit is
 
 @hints
-#ttc-table-of-routes-hint-request-rejects-scripture-picturers
+#testcase-table-of-routes-hint-request-rejects-scripture-picturers
 >hint scripture picturers
 The scripture picturers helped you get in, but they're just there to help other people now. Maybe.
 
@@ -644,13 +644,13 @@ by one point
 !by one point
 >pf
 \\
-#ttc-table-of-routes-prefigurings-worst-ad
+#testcase-table-of-routes-prefigurings-worst-ad
 You can go TOWARDS the worst ad once things are a bit more settled.
 \\
-#ttc-table-of-routes-prefigurings-lairage-regalia
+#testcase-table-of-routes-prefigurings-lairage-regalia
 You can go ACROSS the lairage regalia to Oscar's SOS Arc once things are a bit more settled.
 \\
-#ttc-table-of-routes-prefigurings-adsorbing-signboard
+#testcase-table-of-routes-prefigurings-adsorbing-signboard
 You can go PAST the adsorbing signboard to Pat's Stap once things are a bit more settled.
 >undo
 >undo
@@ -659,31 +659,31 @@ You can go PAST the adsorbing signboard to Pat's Stap once things are a bit more
 >undo
 
 @spoi
-#ttc-table-of-routes-anagrams-past
+#testcase-table-of-routes-anagrams-past
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go PAST.
 
 @nud
-#+ttc-table-of-same-mesa-nudges-die
+#+testcase-table-of-same-mesa-nudges-die
 >edi
 The words themselves do nothing. You found the way in.
 \\
-#+ttc-table-of-same-mesa-nudges-sin
+#+testcase-table-of-same-mesa-nudges-sin
 >ins
 The words themselves do nothing. You found the way in.
 \\
-#ttc-table-of-same-mesa-nudges-uhh
+#testcase-table-of-same-mesa-nudges-uhh
 >uhh
 Perhaps it's better and simpler to focus on the proper names instead.
 \\
-#ttc-table-of-same-mesa-nudges-tut
+#testcase-table-of-same-mesa-nudges-tut
 >ttu
 Perhaps it's better and simpler to focus on the proper names instead.
 \\
-#ttc-table-of-same-mesa-nudges-resto
+#testcase-table-of-same-mesa-nudges-resto
 >resot
 Perhaps it's better and simpler to focus on the proper names instead.
 \\
-#ttc-table-of-routes-spechelp-adsorbing-signboard
+#testcase-table-of-routes-spechelp-adsorbing-signboard
 >pats
 You struggle a bit. The signboard should be pretty simple, being PAT'S. It'll come to you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the adsorbing signboard. That's a decent omen.
@@ -747,7 +747,7 @@ Your score has just gone up by one point
 /^Idle Deli
 
 @verbs
-#ttc-table-of-routes-nowheres-idle-deli
+#testcase-table-of-routes-nowheres-idle-deli
 >n
 Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it also lacks washrooms.
 \\
@@ -756,7 +756,7 @@ Nowhere to go but out. Yup, not only does this restaurant lack ambiance, but it 
 You can only go back out to the Same Mesa.
 
 @spoi
-#ttc-table-of-routes-anagrams-despite
+#testcase-table-of-routes-anagrams-despite
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go DESPITE.
 
 @nud
@@ -780,32 +780,32 @@ Concerned parents won't be able to help you here.
 >lied
 There has been no false advertising.
 \\
-#ttc-table-of-idle-deli-nudges-idle
+#testcase-table-of-idle-deli-nudges-idle
 >elid
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 \\
-#ttc-table-of-idle-deli-nudges-seed
+#testcase-table-of-idle-deli-nudges-seed
 >edes
 The whole seed pit.
 \\
-#ttc-table-of-idle-deli-nudges-pit
+#testcase-table-of-idle-deli-nudges-pit
 >ipt
 The whole seed pit.
 \\
-#ttc-table-of-idle-deli-nudges-putcries
+#testcase-table-of-idle-deli-nudges-putcries
 >picturse
 The pictures aren't here, and they're not what you need to deal with, anyway.
 \\
-#ttc-table-of-idle-deli-nudges-pta
+#testcase-table-of-idle-deli-nudges-pta
 >tpa
 You don't need to do anything with Pat, but maybe you can get by him to that seed pit.
 \\
-#ttc-table-of-idle-deli-nudges-carvings
+#testcase-table-of-idle-deli-nudges-carvings
 >cravinsg
 It's not the carvings that need changing.
 !You got
 \\
-#ttc-table-of-idle-deli-nudges-carving
+#testcase-table-of-idle-deli-nudges-carving
 >cravign
 It's not the carvings that need changing.
 !You got
@@ -842,7 +842,7 @@ Pat doesn't need consolation for his lost business.
 >apts
 Pat's is a local small business, not nameless, faceless real estate.
 \\
-#ttc-table-of-routes-spechelp-seed-pit
+#testcase-table-of-routes-spechelp-seed-pit
 >despiet
 The seed pit seems to bubble slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the seed pit. That's a decent omen.
@@ -853,7 +853,7 @@ The seed pit seems to bubble slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the seed pit. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-routes-readables-cravings-carvings
+#testcase-table-of-routes-readables-cravings-carvings
 >read cravings carvings
 When you squint the right way, "SPEED IT? SIT. DEEP." is written in red.
 
@@ -875,7 +875,7 @@ Your score has just gone up by one point
 The spoon points you out of the Idle Deli.
 
 @hints
-#ttc-table-of-routes-hint-request-rejects-seed-pit
+#testcase-table-of-routes-hint-request-rejects-seed-pit
 >hint seed pit
 You got what you needed from the seed pit.
 
@@ -884,7 +884,7 @@ You got what you needed from the seed pit.
 >tap
 You have Pat's attention, already, and you don't really need it now that you got the stupor sprout.
 \\
-#ttc-table-of-routes-done-rejects-stupor-sprout
+#testcase-table-of-routes-done-rejects-stupor-sprout
 >despiet
 That'd be a double negative, to re-enter the seed pit. Your argument would be so won, it's lost.
 >despite
@@ -901,27 +901,27 @@ Actually, Pat's advice may not be apt.
 Alas, the stupor sprout has nothing in common with madeleine.
 
 @nud
-#+ttc-table-of-idle-deli-nudges-carvings
+#+testcase-table-of-idle-deli-nudges-carvings
 >cravinsg
 It's not the carvings that need changing. You got the stupor sprout from the seed pit, and that's what's important.
 \\
-#+ttc-table-of-idle-deli-nudges-carving
+#+testcase-table-of-idle-deli-nudges-carving
 >cravign
 It's not the carvings that need changing. You got the stupor sprout from the seed pit, and that's what's important.
 \\
-#+ttc-table-of-routes-nudges-stupor
+#+testcase-table-of-routes-nudges-stupor
 >surpot
 Brother Horbert will work his magic with that.
 \\
-#ttc-table-of-routes-nudges-reagents
+#testcase-table-of-routes-nudges-reagents
 >reagenst
 Brother Horbert will do his magic on the reagents at the right time.
 \\
-#+ttc-table-of-routes-nudges-reagent
+#+testcase-table-of-routes-nudges-reagent
 >reagetn
 Brother Horbert will do his magic on the reagents at the right time.
 \\
-#+ttc-table-of-idle-deli-nudges-pta
+#+testcase-table-of-idle-deli-nudges-pta
 >tpa
 You don't need to do anything with Pat, especially now you got the stupor sprout.
 
@@ -942,15 +942,15 @@ You read what the settler says--and you realize you already took care of the cra
 You read what the settler says--and you realize you already took care of the resto store or something closely related.
 
 @spoi
-#ttc-table-of-routes-anagrams-across
+#testcase-table-of-routes-anagrams-across
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ACROSS.
 
 @nud
-#+ttc-table-of-same-mesa-nudges-resto
+#+testcase-table-of-same-mesa-nudges-resto
 >resot
 You did well enough to focus on the proper names instead.
 \\
-#ttc-table-of-routes-spechelp-lairage-regalia
+#testcase-table-of-routes-spechelp-lairage-regalia
 >acrsso
 You twist and tilt your head but can't figure out how to interpret the regalia. But you must be close.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lairage regalia. That's a decent omen.
@@ -961,11 +961,11 @@ You twist and tilt your head but can't figure out how to interpret the regalia. 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the lairage regalia. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-same-mesa-nudges-sos
+#testcase-table-of-same-mesa-nudges-sos
 >sso
 You need to figure out what the whole SOS ARC in the lairage regalia can become.
 \\
-#ttc-table-of-same-mesa-nudges-arc
+#testcase-table-of-same-mesa-nudges-arc
 >acr
 You need to figure out what the whole SOS ARC in the lairage regalia can become.
 \\
@@ -997,13 +997,13 @@ Hmm, wait. Maybe there's something ACROSS now.
 Your score has just gone up by one point
 
 @spoi
-#ttc-table-of-routes-anagrams-opposite
+#testcase-table-of-routes-anagrams-opposite
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go OPPOSITE.
 
 /^Adobe Abode
 
 @verbs
-#ttc-table-of-routes-nowheres-adobe-abode
+#testcase-table-of-routes-nowheres-adobe-abode
 >e
 This do be a one-room place. You can really only go outside.
 \\
@@ -1016,27 +1016,27 @@ You can only go back out to the Same Mesa.
 >orcas
 But the whales would be beached. Besides, it's the pipe soot you want
 \\
-#ttc-table-of-adobe-abode-nudges-trashy
+#testcase-table-of-adobe-abode-nudges-trashy
 >trasyh
 It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats. Maybe it's the pipe soot you want.
 \\
-#ttc-table-of-adobe-abode-nudges-ashtray
+#testcase-table-of-adobe-abode-nudges-ashtray
 >atrasyh
 It's one solid ashtray. You try aha's to do something, but you wind up all, yah, rats. Maybe it's the pipe soot you want.
 \\
-#ttc-table-of-adobe-abode-nudges-adobe
+#testcase-table-of-adobe-abode-nudges-adobe
 >edoba
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 \\
-#ttc-table-of-routes-nudges-pipe
+#testcase-table-of-routes-nudges-pipe
 >eppi
 Brother Horbert will work his magic with that.
 \\
-#ttc-table-of-routes-nudges-soot
+#testcase-table-of-routes-nudges-soot
 >toos
 Brother Horbert will work his magic with that.
 \\
-#ttc-table-of-adobe-abode-nudges-oscar
+#testcase-table-of-adobe-abode-nudges-oscar
 >ocras
 You don't need to do anything with Oscar, but maybe you can sneak the pipe soot away.
 
@@ -1050,7 +1050,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >poopiest
 This is the wrong area for adjectives, clean or unclean. And Oscar's abode is, well, dingy enough.
 \\
-#ttc-table-of-routes-spechelp-pipe-soot
+#testcase-table-of-routes-spechelp-pipe-soot
 >opposiet
 The soot smells a bit stronger than before for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That's a decent omen.
@@ -1061,7 +1061,7 @@ The soot smells a bit stronger than before for a moment.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pipe soot. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-routes-readables-trashy-ashtray
+#testcase-table-of-routes-readables-trashy-ashtray
 >read ashtray
 #OK-APOSTROPHE
 /On this side is (PEST OP, OI|PO' SPITE, O)\. You can read the other side if you want\.
@@ -1098,7 +1098,7 @@ pipe soot
 >orcas
 Besides, you got the pipe soot
 \\
-#ttc-table-of-routes-done-rejects-pipe-soot
+#testcase-table-of-routes-done-rejects-pipe-soot
 >pipesoto
 Brother Horbert will work his magic with that.
 
@@ -1114,7 +1114,7 @@ You read what the settler says--and you realize you already took care of the Uhh
 !The only way to exit is
 
 @spoi
-#ttc-table-of-routes-anagrams-against
+#testcase-table-of-routes-anagrams-against
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go AGAINST.
 
 @nud
@@ -1122,44 +1122,44 @@ You angle your spoon a bit, and you realize you, or something, should be, do, se
 >poopiest
 This is the wrong area for adjectives, clean or unclean. And the pipe soot is icky enough as-is.
 \\
-#+ttc-table-of-same-mesa-nudges-uhh
+#+testcase-table-of-same-mesa-nudges-uhh
 >uhh
 You did well enough to focus on the proper names instead.
 \\
-#+ttc-table-of-same-mesa-nudges-tut
+#+testcase-table-of-same-mesa-nudges-tut
 >ttu
 You did well enough to focus on the proper names instead.
 \\
-#+ttc-table-of-same-mesa-nudges-sos
+#+testcase-table-of-same-mesa-nudges-sos
 >oss
 You already figured how to get into Oscar's. There's nothing else to do.
 \\
-#ttc-table-of-routes-done-rejects-lairage-regalia
+#testcase-table-of-routes-done-rejects-lairage-regalia
 >acrsso
 You twist your mind a bit, but no, there's probably only one way to enter.
 \\
-#ttc-table-of-routes-done-rejects-adsorbing-signboard
+#testcase-table-of-routes-done-rejects-adsorbing-signboard
 >pats
 No, you don't see any other way around the signboard to enter. You don't need one, either.
 \\
-#ttc-table-of-routes-done-rejects-scripture-picturers
+#testcase-table-of-routes-done-rejects-scripture-picturers
 >inseid
 The picturers were pretty strict about what they suggested. Not much else you can do with them.
 \\
-#+ttc-table-of-same-mesa-nudges-orcas
+#+testcase-table-of-same-mesa-nudges-orcas
 >ocras
 No, you found the way in, with the extra s.
 \\
-#+ttc-table-of-same-mesa-nudges-lairage
+#+testcase-table-of-same-mesa-nudges-lairage
 >lairaeg
 Lairage regalia is already tailored to the resident's style. So it's not yours to change, and you don't need to, now you've visited Oscar.
 \\
-#ttc-table-of-same-mesa-nudges-bench
+#testcase-table-of-same-mesa-nudges-bench
 >enchb
 The anti-sag sit-a-nag is too sturdy. You can't do anything with it, but you may be able to do something with or around it.
 
 @max
-#+ttc-table-of-routes-prefigurings-sit-a-nag
+#+testcase-table-of-routes-prefigurings-sit-a-nag
 >againts
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !NOTE: you may have misspelled
@@ -1174,11 +1174,11 @@ You sort of already figured what to do, though it wasn't the right time, then. I
 You can lean AGAINST the anti-sag sit-a-nag now you feel less fear and more purpose.
 
 @nud
-#ttc-table-of-same-mesa-nudges-anti
+#testcase-table-of-same-mesa-nudges-anti
 >anit
 The whole anti-sag sit-a-nag.
 \\
-#ttc-table-of-same-mesa-nudges-sag
+#testcase-table-of-same-mesa-nudges-sag
 >sga
 The whole anti-sag sit-a-nag.
 
@@ -1187,7 +1187,7 @@ The whole anti-sag sit-a-nag.
 Your score has just gone up by one point
 
 @spoi
-#ttc-table-of-routes-anagrams-astride
+#testcase-table-of-routes-anagrams-astride
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ASTRIDE.
 
 @max
@@ -1196,7 +1196,7 @@ You angle your spoon a bit, and you realize you, or something, should be, do, se
 They're not very good tirades, but maybe you could position yourself better to listen to them.
 
 @hints
-#ttc-table-of-routes-hint-request-rejects-sit-a-nag
+#testcase-table-of-routes-hint-request-rejects-sit-a-nag
 >hint sit a nag
 You got Ian Gast to the anti-sag sit-a-nag. Now you need to deal with Ian Gast.
 
@@ -1212,7 +1212,7 @@ You can't run from Ian Gast!
 >listen
 Those tirades from Ian Gast.
 \\
-#ttc-table-of-routes-attacks-gast
+#testcase-table-of-routes-attacks-gast
 >attack gast
 You don't have a weapon big enough to take Ian Gast. One won't appear in your super purse. Anyway, he's not evil, just whiny.
 
@@ -1232,7 +1232,7 @@ A Roiling Original is not violent enough for tags with gats.
 Ian Gast already came alone and does not deserve to be changed into an animal.
 
 @nud
-#ttc-table-of-same-mesa-nudges-gast
+#testcase-table-of-same-mesa-nudges-gast
 >gsta
 You can't change Ian Gast permanently. You just have to work around him.
 \\
@@ -1240,15 +1240,15 @@ You can't change Ian Gast permanently. You just have to work around him.
 >staider
 Ian Gast fails to calm down. Perhaps you just need to position yourself correctly and play along. You see red, a bit
 \\
-#ttc-table-of-routes-done-rejects-gast
+#testcase-table-of-routes-done-rejects-gast
 >againts
 You already leaned on the anti-sag sit-a-nag right. You look around it and wonder if the side art could stop Ian Gast's tirades.
 \\
-#ttc-table-of-same-mesa-nudges-ides
+#testcase-table-of-same-mesa-nudges-ides
 >idse
 It's the whole side art you need to deal with.
 \\
-#ttc-table-of-same-mesa-nudges-tra
+#testcase-table-of-same-mesa-nudges-tra
 >tra
 It's the whole side art you need to deal with.
 \\
@@ -1256,12 +1256,12 @@ It's the whole side art you need to deal with.
 >under
 You can't hide from Ian Gast like that, right now.
 \\
-#ttc-table-of-same-mesa-nudges-tirade
+#testcase-table-of-same-mesa-nudges-tirade
 >tiraed
 There's more than one tirade
 
 @max
-#+ttc-table-of-routes-prefigurings-side-art
+#+testcase-table-of-routes-prefigurings-side-art
 >astried
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from
@@ -1279,15 +1279,15 @@ Ian Gast fails to calm down. Perhaps you just need to position yourself correctl
 Your score has just gone up by one point
 
 @spoi
-#ttc-table-of-routes-anagrams-below
+#testcase-table-of-routes-anagrams-below
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go BELOW.
 
 @nud
-#+ttc-table-of-same-mesa-nudges-ides
+#+testcase-table-of-same-mesa-nudges-ides
 >idse
 It's the whole side art you needed to deal with.
 \\
-#+ttc-table-of-same-mesa-nudges-tra
+#+testcase-table-of-same-mesa-nudges-tra
 >tra
 It's the whole side art you needed to deal with.
 
@@ -1297,7 +1297,7 @@ It's the whole side art you needed to deal with.
 You can only hear it. You can't help hearing it. But maybe if you LISTEN, it could provide a clue.
 
 @hints
-#ttc-table-of-routes-hint-request-rejects-side-art
+#testcase-table-of-routes-hint-request-rejects-side-art
 >hint side art
 You positioned yourself well to put up with Ian Gast's tirades. Time to try a new direction.
 
@@ -1317,19 +1317,19 @@ The art is more complex than that. You need to make an anagram for the whole sid
 >staider
 You already did your best with the tirades and side art.
 \\
-#ttc-table-of-routes-done-rejects-side-art
+#testcase-table-of-routes-done-rejects-side-art
 >astried
 You got on the anti-sag sit-a-nag right. Time to start ducking.
 \\
-#+ttc-table-of-routes-done-rejects-gast
+#+testcase-table-of-routes-done-rejects-gast
 >againts
 The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 \\
-#+ttc-table-of-same-mesa-nudges-tirade
+#+testcase-table-of-same-mesa-nudges-tirade
 >atired
 You've sort of dealt with the (first) tirades, but there's still more than one, and you need another way to deal
 \\
-#+ttc-table-of-routes-done-rejects-gast
+#+testcase-table-of-routes-done-rejects-gast
 >againts
 The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 
@@ -1339,7 +1339,7 @@ The anti-sag sit-a-nag itself isn't as important as what's happening around it.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#ttc-table-of-routes-spechelp-woe-bow-bell
+#testcase-table-of-routes-spechelp-woe-bow-bell
 >belwo
 You seem like you should be able to find shelter from the WOE BOW BELL, but you may need to mix things up a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the WOE BOW BELL. That's a decent omen.
@@ -1350,15 +1350,15 @@ You seem like you should be able to find shelter from the WOE BOW BELL, but you 
 DEBUG ONLY: You feel a slight psychic push-pull coming from the WOE BOW BELL. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-same-mesa-nudges-woe
+#testcase-table-of-same-mesa-nudges-woe
 >weo
 It seems best to deal with the whole WOE BOW BELL.
 \\
-#ttc-table-of-same-mesa-nudges-bow
+#testcase-table-of-same-mesa-nudges-bow
 >bwo
 It seems best to deal with the whole WOE BOW BELL.
 \\
-#ttc-table-of-same-mesa-nudges-bell
+#testcase-table-of-same-mesa-nudges-bell
 >bell
 It seems best to deal with the whole WOE BOW BELL.
 \\
@@ -1389,7 +1389,7 @@ Through the WOE BOW BELL's resonance, you think you could hear something if you 
 Your score has just gone up by one point
 
 @spoi
-#ttc-table-of-routes-anagrams-under
+#testcase-table-of-routes-anagrams-under
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go UNDER.
 
 @max
@@ -1406,11 +1406,11 @@ Ian Gast is banging on about Rude 'N Nuder, now.
 >below
 You already tried this preposition. There must be others.
 \\
-#ttc-table-of-routes-done-rejects-rude-n-nuder
+#testcase-table-of-routes-done-rejects-rude-n-nuder
 >belwo
 You don't want the WOE BOW BELL to come back.
 \\
-#ttc-table-of-same-mesa-nudges-giatn
+#testcase-table-of-same-mesa-nudges-giatn
 >igtan
 Ian Gast is too old and set in his ways. You may just need to listen to him from one more angle.
 >gs
@@ -1424,7 +1424,7 @@ Nia Gast is too old and set in her ways. You may just need to listen to her from
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#ttc-table-of-routes-spechelp-rude-n-nuder
+#testcase-table-of-routes-spechelp-rude-n-nuder
 >undre
 The pages of Rude 'N Nuder flutter a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Rude 'N Nuder. That's a decent omen.
@@ -1435,11 +1435,11 @@ The pages of Rude 'N Nuder flutter a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from Rude 'N Nuder. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-routes-scannotes-rude-n-nuder
+#testcase-table-of-routes-scannotes-rude-n-nuder
 >scan rude n nuder
 Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad.
 \\
-#ttc-table-of-same-mesa-nudges-rude
+#testcase-table-of-same-mesa-nudges-rude
 >urde
 That's not quite the book's whole title.
 
@@ -1464,7 +1464,7 @@ Nothing (significant) like that is in the immediate vicinity or region.
 Nothing (significant) like that is in the immediate vicinity or region.
 
 @nud
-#ttc-table-of-routes-done-rejects-anti-sag-sit-a-nag
+#testcase-table-of-routes-done-rejects-anti-sag-sit-a-nag
 >sitagna
 The anti-sag sit-a-nag isn't important with Ian Gast gone.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from the anti-sag sit-a-nag. That's a decent omen.
@@ -1473,19 +1473,19 @@ The anti-sag sit-a-nag isn't important with Ian Gast gone.
 >satired
 Don't be mean. Ian Gast isn't and wasn't the enemy. Move on.
 \\
-#ttc-table-of-routes-done-rejects-u-nerd-endur-redun
+#testcase-table-of-routes-done-rejects-u-nerd-endur-redun
 >undre
 You don't need to do anything fancy with U NERD ENDUR REDUN. Brother Horbert will do that.
 \\
-#+ttc-table-of-routes-nudges-boko
+#+testcase-table-of-routes-nudges-boko
 >obok
 Brother Horbert will work his magic with that.
 \\
-#+ttc-table-of-routes-nudges-runedbook
+#+testcase-table-of-routes-nudges-runedbook
 >obokduren
 Brother Horbert will work his magic with that.
 \\
-#+ttc-table-of-routes-nudges-pipesoot
+#+testcase-table-of-routes-nudges-pipesoot
 >pipesoto
 Brother Horbert will work his magic with that.
 
@@ -1500,7 +1500,7 @@ Your score has just gone up by one point
 DEBUG INFO: General LLPish min-up for worst ad.
 
 @nud
-#ttc-table-of-same-mesa-nudges-towards
+#testcase-table-of-same-mesa-nudges-towards
 >towarsd
 You search around for the worst ad some more, but you can't find it, or anything else you could do to or with it.
 
@@ -1510,14 +1510,14 @@ You search around for the worst ad some more, but you can't find it, or anything
 The spoon reflects back outside.
 
 @max
-#ttc-table-of-notepad-entries-no-lag-logan
+#testcase-table-of-notepad-entries-no-lag-logan
 >pad logan
 No-Lag Logan may have left behind a ship that can get you out of here. It is beyond an un-road.
 
 >out
 
 @spoi
-#ttc-table-of-routes-anagrams-above
+#testcase-table-of-routes-anagrams-above
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ABOVE.
 
 @nud
@@ -1525,23 +1525,23 @@ You angle your spoon a bit, and you realize you, or something, should be, do, se
 >along
 You aren't far enough along to, err, look along
 \\
-#ttc-table-of-same-mesa-nudges-bev
+#testcase-table-of-same-mesa-nudges-bev
 >bve
 The whole beverage name must be where it's at.
 \\
-#ttc-table-of-same-mesa-nudges-ova
+#testcase-table-of-same-mesa-nudges-ova
 >oav
 The whole beverage name must be where it's at.
 \\
-#ttc-table-of-routes-scannotes-a-bev-o-be-ova
+#testcase-table-of-routes-scannotes-a-bev-o-be-ova
 >scan be ova
 That's a lot of questions for such a small bottle, but it can't be too hard.
 \\
-#ttc-table-of-routes-readables-a-bev-o-be-ova
+#testcase-table-of-routes-readables-a-bev-o-be-ova
 >read be ova
 The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at people gaining fame the easy way, instead of by saving imaginary worlds and stuff.
 \\
-#ttc-table-of-routes-nudges-along
+#testcase-table-of-routes-nudges-along
 >alogn
 You suspect you have a little way to go before finding clues of No-Lag Logan.
 
@@ -1564,18 +1564,18 @@ You don't know if you should go anywhere. With A Bev' O' Be Ova' lying around, m
 Your score has just gone up by one point.
 
 @spoi
-#ttc-table-of-routes-anagrams-from
+#testcase-table-of-routes-anagrams-from
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go FROM.
 
 >score
 {$SCOS}
 
 @nud
-#ttc-table-of-routes-scannotes-morf-form
+#testcase-table-of-routes-scannotes-morf-form
 >scan morf form
 Well, you shouldn't be surprised the settler gives weird readings for something that changes so much. But with only four letters, how hard can it be?
 \\
-#ttc-table-of-routes-spechelp-morf-form
+#testcase-table-of-routes-spechelp-morf-form
 >frmo
 The MORF-FORM rocks in the air, as if it's about to fall.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the MORF-FORM. That's a decent omen.
@@ -1601,7 +1601,7 @@ Nice to have silence with Ian Gast gone.
 Your score has just gone up by one point
 
 @spoi
-#ttc-table-of-routes-anagrams-beneath
+#testcase-table-of-routes-anagrams-beneath
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go BENEATH.
 
 @verbs
@@ -1619,15 +1619,15 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >under
 You already went UNDER. You need something new. Something slightly different.
 \\
-#ttc-table-of-routes-done-rejects-the-bean
+#testcase-table-of-routes-done-rejects-the-bean
 >ofmr
 The MORF-FORM has, uh, morphed enough. Deal with THE BEAN.
 \\
-#ttc-table-of-same-mesa-nudges-bean
+#testcase-table-of-same-mesa-nudges-bean
 >bena
 THE BEAN has too much gravitas to be just a bean.
 \\
-#ttc-table-of-routes-spechelp-the-bean
+#testcase-table-of-routes-spechelp-the-bean
 >beneaht
 THE BEAN rolls back and forth a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from THE BEAN. That's a decent omen.
@@ -1645,7 +1645,7 @@ joke death
 >undo
 
 @verbs
-#ttc-table-of-routes-attacks-the-bean
+#testcase-table-of-routes-attacks-the-bean
 >attack the bean
 It's like a dense metal or something. It's more likely it would make something else crack.
 
@@ -1661,7 +1661,7 @@ DEBUG INFO: Taking away a max point. Max-score now {CURMAX}.
 /^Harms Marsh
 
 @verbs
-#ttc-table-of-routes-nowheres-harms-marsh
+#testcase-table-of-routes-nowheres-harms-marsh
 >n
 Far into a rift? No. You can't see far enough to rely on directions, here. You'd likely wind up in Smasher Marshes or Shamers' Marshes, far from No-Lag Logan.
 \\
@@ -1674,15 +1674,15 @@ Far into a rift? No. You can't see far enough to rely on directions, here. You'd
 Looks like you will need to figure a way to move forward without directions. You've been doing well so far.
 
 @spoi
-#ttc-table-of-routes-anagrams-until
+#testcase-table-of-routes-anagrams-until
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go UNTIL.
 
 @nud
-#ttc-table-of-harms-marsh-nudges-null
+#testcase-table-of-harms-marsh-nudges-null
 >null
 The whole NULL-IT UNIT.
 \\
-#ttc-table-of-harms-marsh-nudges-unit
+#testcase-table-of-harms-marsh-nudges-unit
 >unti
 The whole NULL-IT UNIT.
 # above the proper name has unit lower-cased, but we want to tell the anagram
@@ -1695,44 +1695,44 @@ Helicopters can't make it underground.
 >along
 There must be some passages, but you can't see anywhere to go along, yet. You need to do more looking.
 \\
-#ttc-table-of-harms-marsh-nudges-marsh
+#testcase-table-of-harms-marsh-nudges-marsh
 >marhs
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-harms-marsh-nudges-harm
+#testcase-table-of-harms-marsh-nudges-harm
 >hamr
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-harms-marsh-nudges-darknses
+#testcase-table-of-harms-marsh-nudges-darknses
 >darknses
 The darkness has always been there and always will be. You need to find a way to say it was dark.
 \\
-#ttc-table-of-harms-marsh-nudges-dakr
+#testcase-table-of-harms-marsh-nudges-dakr
 >dakr
 The darkness has always been there and always will be. You need to find a way to say it was dark
 \\
-#ttc-table-of-harms-marsh-nudges-sheol
+#testcase-table-of-harms-marsh-nudges-sheol
 >shelo
 You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice you wrote in your notepad may help
 \\
-#ttc-table-of-harms-marsh-nudges-hole
+#testcase-table-of-harms-marsh-nudges-hole
 >hoel
 You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice you wrote in your notepad may help
 
 @verbs
-#ttc-table-of-goto-sectioning--1-routes
+#testcase-table-of-goto-sectioning-routes-1
 >gt mesa
-Brother Horbert would be sad to see you return, unsuccessful.
+Brother Horbert would be sad to see you return, unsuccessful. And you can't, anyway.
 
 >score
 {$SCOS}
 
 @nud
-#ttc-table-of-routes-scannotes-null-it-unit
+#testcase-table-of-routes-scannotes-null-it-unit
 >scan null it unit
 The NULL-IT unit seems to leave things double-unlit. But with one ambiguous reading, how bad can it be?
 \\
-#ttc-table-of-routes-spechelp-null-it-unit
+#testcase-table-of-routes-spechelp-null-it-unit
 >litun
 You feel it's quite near the right time for the NULL-IT unit to shut down, for the darkness to lift. And you must be on the right track.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the NULL-IT unit. That's a decent omen.
@@ -1749,7 +1749,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the NULL-IT unit. Th
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @hints
-#ttc-table-of-settler-shake-descriptions-darkness
+#testcase-table-of-settler-shake-descriptions-darkness
 >ss
 A couple things: the NULL-IT unit and a weird outline in the darkness (a bit blurry) are visible.
 
@@ -1768,45 +1768,45 @@ Your score has just gone up by one point
 Nothing (significant) like that is in the immediate vicinity or region.
 
 @verbs
-#+ttc-table-of-routes-nowheres-harms-marsh
+#+testcase-table-of-routes-nowheres-harms-marsh
 >n
 Far into a rift? No. You can't rely on directions, here.
 
 @spoi
-#ttc-table-of-routes-anagrams-around
+#testcase-table-of-routes-anagrams-around
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go AROUND.
 
 @nud
-#ttc-table-of-routes-done-rejects-un-road
+#testcase-table-of-routes-done-rejects-un-road
 >urdano
 You thought you saw an un-road for a second, but ... not quite.
 \\
-#ttc-table-of-routes-scannotes-odd-run-on-aura
+#testcase-table-of-routes-scannotes-odd-run-on-aura
 >scan odd run on aura
 With only one ambiguous setting, the light should soon go on for you to figure where and how to go.
 \\
-#ttc-table-of-harms-marsh-nudges-aura
+#testcase-table-of-harms-marsh-nudges-aura
 >auar
 The whole odd run on aura.
 \\
-#ttc-table-of-harms-marsh-nudges-run
+#testcase-table-of-harms-marsh-nudges-run
 >rnu
 The whole odd run on aura.
 \\
-#ttc-table-of-harms-marsh-nudges-odd
+#testcase-table-of-harms-marsh-nudges-odd
 >odd
 The whole odd run on aura.
 \\
-#ttc-table-of-routes-done-rejects-odd-run-on-aura
+#testcase-table-of-routes-done-rejects-odd-run-on-aura
 #??this wasn't flagged by nuch/hch
 >untli
 The underground is already lit. Un-unlit.
 \\
-#ttc-table-of-harms-marsh-nudges-pyrites
+#testcase-table-of-harms-marsh-nudges-pyrites
 >pyrites
 not something you
 \\
-#ttc-table-of-routes-spechelp-odd-run-on-aura
+#testcase-table-of-routes-spechelp-odd-run-on-aura
 >aroudn
 You thought you saw an un-road for a second, but ... not quite.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the odd run on aura. That's a decent omen.
@@ -1827,7 +1827,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @spoi
-#ttc-table-of-routes-anagrams-along
+#testcase-table-of-routes-anagrams-along
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ALONG.
 
 @max
@@ -1842,17 +1842,17 @@ The pyrites look pretty, but you're not here for a treasure hunt. You're here to
 The un-road must lead to No-Lag Logan. But how to follow it?
 
 @nud
-#+ttc-table-of-harms-marsh-nudges-pyrites
+#+testcase-table-of-harms-marsh-nudges-pyrites
 >pyrites
 The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Lag Logan.
 \\
-#ttc-table-of-harms-marsh-nudges-pyrite
+#testcase-table-of-harms-marsh-nudges-pyrite
 >pyrite
 The pyrites seem to glow, momentarily forming an arrow as if to say, get on with it and stop worrying about treasure. You do still need to nag ol' No-Lag Logan.
 \\
 #remember "all" bugs the Inform compiler
 \\
-#ttc-table-of-routes-spechelp-noon-gag
+#testcase-table-of-routes-spechelp-noon-gag
 >alogn
 You think of how to find a way to No-Lag Logan's boat.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the all noon gag. That's a decent omen.
@@ -1863,7 +1863,7 @@ You think of how to find a way to No-Lag Logan's boat.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the all noon gag. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-routes-scannotes-noon-gag
+#testcase-table-of-routes-scannotes-noon-gag
 >scan noon gag
 Only one letter for sure, but five letters overall. Maybe a well-placed guess will knock this out.
 
@@ -1877,7 +1877,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @spoi
-#ttc-table-of-routes-anagrams-amidst
+#testcase-table-of-routes-anagrams-amidst
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go AMIDST.
 
 /^Ripe Pier
@@ -1885,7 +1885,7 @@ You angle your spoon a bit, and you realize you, or something, should be, do, se
 @verbs
 >w
 \\
-#ttc-table-of-routes-nowheres-ripe-pier
+#testcase-table-of-routes-nowheres-ripe-pier
 You've lost all sense of direction here, but you still somehow need to figure how to get on that boat.
 \\
 #verbcase listen-routes-if-player-is-in-ripe-pier
@@ -1896,13 +1896,13 @@ Someone calling out "'Tis mad!" You see red.
 >smell
 Ugh! The mists smell, as kids in Yorpwald say for slang purposes, staim'd. You see red at how useless and impractical such ridiculous slang is. Which, of course, makes it actually useful here.
 \\
-#ttc-table-of-goto-sectioning-harms-marsh-2--
+#testcase-table-of-goto-sectioning-routes-2-harms-marsh
 >gt marsh
 You already muddled your way out of Harms Marsh. You may be lost now, but walking back would be worse.
 \\
-#+ttc-table-of-goto-sectioning--1-routes
+#+testcase-table-of-goto-sectioning-routes-1
 >gt mesa
-Brother Horbert would be sad to see you return, unsuccessful.
+Brother Horbert would be sad to see you return, unsuccessful. And you can't, anyway.
 \\
 #testcase-outside-ripe-pier
 >out
@@ -1913,32 +1913,32 @@ You've lost all sense of direction here, but you still somehow need to figure ho
 Looks like you will need to figure a way to move forward without directions. You've been doing well so far.
 
 @nud
-#ttc-table-of-ripe-pier-nudges-pier
+#testcase-table-of-ripe-pier-nudges-pier
 >pire
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-ripe-pier-nudges-mist
+#testcase-table-of-ripe-pier-nudges-mist
 >mits
 You'll have to deal with the whole data-dim mists.
 \\
-#ttc-table-of-ripe-pier-nudges-mists
+#testcase-table-of-ripe-pier-nudges-mists
 >mitss
 You'll have to deal with the whole data-dim mists.
 \\
-#ttc-table-of-ripe-pier-nudges-data
+#testcase-table-of-ripe-pier-nudges-data
 >atad
 You'll have to deal with the whole data-dim mists.
 \\
-#ttc-table-of-ripe-pier-nudges-dim
+#testcase-table-of-ripe-pier-nudges-dim
 >mid
 You'll have to deal with the whole data-dim mists.
 \\
-#ttc-table-of-routes-readables-admits-mist-ad
+#testcase-table-of-routes-readables-admits-mist-ad
 >read mist ad
 #OK-APOSTROPHE
 /(IT'S MAD|DAT'S 'IM|T\. D\. ASIM|MS\. DITA|SAD TIM)
 \\
-#ttc-table-of-routes-spechelp-data-dim-mists
+#testcase-table-of-routes-spechelp-data-dim-mists
 >amidts
 Hmm, you almost see a way past the data-dim mists.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the data-dim mists. That's a decent omen.
@@ -1949,13 +1949,21 @@ Hmm, you almost see a way past the data-dim mists.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the data-dim mists. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-routes-scannotes-admits-mist-ad
+#testcase-table-of-routes-scannotes-admits-mist-ad
 >scan admits mist ad
 Like most ads, it doesn't pose any great logical problems.
 \\
-#ttc-table-of-routes-scannotes-data-dim-mists
+#testcase-table-of-routes-scannotes-data-dim-mists
 >scan data dim mists
 Well! The data isn't dim from the settler. There's a lot to work with, here.
+\\
+#testcase-table-of-ripe-pier-nudges-drudging
+>drudgign
+You need to consider the drudging ruin as a whole.
+\\
+#testcase-table-of-ripe-pier-nudges-ruin
+>runi
+You need to consider the drudging ruin as a whole.
 
 @mis
 #testcase-mistake-roiling-ta-da-tada
@@ -1968,19 +1976,48 @@ This is the wrong region for that sort of flash of insight.
 #testcase-slider-table-of-routes-anagrams-amidst
 >madits
 Your settler begins to make noises: a low hum, but nothing really piercing.
+\\
+#testcase-slider-table-of-routes-anagrams-during
+>udirgn
+Your settler begins to make noises: a low hum, but nothing really piercing.
+
+@nud
+#testcase-table-of-routes-spechelp-drudging-ruin
+>durign
+You feel vibes from the drudging ruin.
+\\
+#testcase-misspellings-table-of-routes-spechelp-drudging-ruin
+>durding
+You feel vibes from the drudging ruin.
+DEBUG ONLY: You feel a slight psychic push-pull coming from the drudging ruin. That's a decent omen.
+[NOTE: you may have misspelled things, though. Too many or few of one letter.]
+\\
+#testcase-table-of-routes-scannotes-drudging-ruin
+>nud
+What word could start an epic? The settler seems to give some great clues to start.
+
+@!min
+>during
+}}SCORE++
+}}CURMIN++
+Your score has just gone up by one point
+DEBUG INFO: General LLPish min-up for drudging ruin.
+
+>score
+{$SCOS}
 
 >amidst
 }}SCORE++
 Your score has just gone up by one point
 
 @spoi
-#ttc-table-of-routes-anagrams-athwart
+#testcase-table-of-routes-anagrams-athwart
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ATHWART.
 
 /^Cripple Clipper
 
 @verbs
-#ttc-table-of-routes-nowheres-cripple-clipper
+#testcase-table-of-routes-nowheres-cripple-clipper
 >d
 Locked ol' deck. No bowel on below.
 \\
@@ -1995,15 +2032,15 @@ This is no dreamboat.
 >bother
 Siphon no pish on-ship.
 \\
-#ttc-table-of-goto-sectioning-ripe-pier-3--
+#testcase-table-of-goto-sectioning-routes-3-ripe-pier
 >gt pier
 You have no idea how to turn the Cripple Clipper around, and you don't want to.
 \\
-#+ttc-table-of-goto-sectioning-harms-marsh-2--
+#+testcase-table-of-goto-sectioning-routes-2-harms-marsh
 >gt marsh
 You already muddled your way out of Harms Marsh. You may be lost now, but sailing back would be worse.
 \\
-#+ttc-table-of-goto-sectioning--1-routes
+#+testcase-table-of-goto-sectioning-routes-1
 >gt mesa
 You're not going back across the water. You're closer to the end of your quest.
 \\
@@ -2016,15 +2053,15 @@ Floats would make you the, uh, last of, unless you are St. Olaf or So Flat. Drow
 Looks like you will need to figure a way to move forward without directions. You've been doing well so far.
 
 @nud
-#ttc-table-of-cripple-clipper-nudges-mess
+#testcase-table-of-cripple-clipper-nudges-mess
 >mess
 The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
 \\
-#ttc-table-of-cripple-clipper-nudges-spume
+#testcase-table-of-cripple-clipper-nudges-spume
 >spuem
 The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
 \\
-#ttc-table-of-cripple-clipper-nudges-spumes
+#testcase-table-of-cripple-clipper-nudges-spumes
 >spumse
 The mess-up spumes are too chaotic. You'll need to work your way around them another way besides focusing on them.
 \\
@@ -2039,23 +2076,23 @@ Now you found the bad oar and you're aboard, you know you need to go abroad, but
 >feer
 Fearing or pretending fake fear won't help, here.
 \\
-#ttc-table-of-cripple-clipper-nudges-clipper
+#testcase-table-of-cripple-clipper-nudges-clipper
 >clippre
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-cripple-clipper-nudges-reef
+#testcase-table-of-cripple-clipper-nudges-reef
 >refe
 The reef is not changed. Perhaps you can deal with what's on it.
 \\
-#ttc-table-of-cripple-clipper-nudges-sketchin
+#testcase-table-of-cripple-clipper-nudges-sketchin
 >sketchni
 No need to alter them. Worth looking at, though.
 \\
-#ttc-table-of-cripple-clipper-nudges-sketchins
+#testcase-table-of-cripple-clipper-nudges-sketchins
 >sketchisn
 No need to alter them. Worth looking at, though.
 \\
-#ttc-table-of-routes-spechelp-thickness-sketchins
+#testcase-table-of-routes-spechelp-thickness-sketchins
 >athwatr
 Your craft rocks and makes negligible forward progress. Still, it's a start.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the thickness sketchins. That's a decent omen.
@@ -2066,7 +2103,7 @@ Your craft rocks and makes negligible forward progress. Still, it's a start.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the thickness sketchins. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-routes-scannotes-thickness-sketchins
+#testcase-table-of-routes-scannotes-thickness-sketchins
 >scan thickness sketchins
 Those three sentences are certainly tangled, but ... well, they do give a lot of data. Perhaps the question marks are not tough to decipher at all.
 
@@ -2080,13 +2117,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 @spoi
-#ttc-table-of-routes-anagrams-between
+#testcase-table-of-routes-anagrams-between
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go BETWEEN.
 
 /^Sonancy Canyons
 
 @verbs
-#ttc-table-of-routes-nowheres-sonancy-canyons
+#testcase-table-of-routes-nowheres-sonancy-canyons
 >n
 You might run into the spheric ciphers. You still don't have your sense of direction back.
 \\
@@ -2098,11 +2135,11 @@ An over-cheery voice: "Thou wit!"
 >listen hog
 Squealing. It could be calmer
 \\
-#ttc-table-of-goto-sectioning-cripple-clipper-4--
+#testcase-table-of-goto-sectioning-routes-4-cripple-clipper
 >gt cripple clipper
 The Sonancy Canyons lead to your destiny.
 \\
-#+ttc-table-of-goto-sectioning-ripe-pier-3--
+#+testcase-table-of-goto-sectioning-routes-3-ripe-pier
 >gt pier
 It's time to go forward, not backwards.
 \\
@@ -2120,7 +2157,7 @@ Looks like you will need to figure a way to move forward without directions. You
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 @nud
-#ttc-table-of-routes-spechelp-hurt-hog
+#testcase-table-of-routes-spechelp-hurt-hog
 >throuhg
 The hog grunts.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the hurt hog. That's a decent omen.
@@ -2137,7 +2174,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the hurt hog. That's
 That could work later, but the hog and ewe don't trust you to go by yet.
 !by one point
 \\
-#ttc-table-of-routes-prefigurings-hurt-hog
+#testcase-table-of-routes-prefigurings-hurt-hog
 >pf
 You can go THROUGH once you've managed to deal with the bent ewe.
 
@@ -2154,23 +2191,23 @@ No alcohol appears, and worse, Spinal Tap's "Back from the Dead" doesn't start p
 >spatter
 No violence!
 \\
-#ttc-table-of-sonancy-canyons-nudges-canyon
+#testcase-table-of-sonancy-canyons-nudges-canyon
 >canyno
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-sonancy-canyons-nudges-canyons
+#testcase-table-of-sonancy-canyons-nudges-canyons
 >canyosn
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 \\
-#ttc-table-of-sonancy-canyons-nudges-patter
+#testcase-table-of-sonancy-canyons-nudges-patter
 >pattre
 It's more the content of the patters that you could deal with, if you wanted.
 \\
-#ttc-table-of-sonancy-canyons-nudges-patters
+#testcase-table-of-sonancy-canyons-nudges-patters
 >pattesr
 It's more the content of the patters that you could deal with, if you wanted.
 \\
-#ttc-table-of-routes-spechelp-bent-ewe
+#testcase-table-of-routes-spechelp-bent-ewe
 >betwene
 The bent ewe stretches a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bent ewe. That's a decent omen.
@@ -2181,11 +2218,11 @@ The bent ewe stretches a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the bent ewe. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-sonancy-canyons-nudges-spheric
+#testcase-table-of-sonancy-canyons-nudges-spheric
 >spherci
 The ciphers cannot be dispelled.
 \\
-#ttc-table-of-sonancy-canyons-nudges-cipher
+#testcase-table-of-sonancy-canyons-nudges-cipher
 >ciphre
 The ciphers cannot be dispelled.
 \\
@@ -2193,7 +2230,7 @@ The ciphers cannot be dispelled.
 That could work later, but the hog and ewe don't trust you to go by yet.
 !by one point
 \\
-#+ttc-table-of-routes-spechelp-hurt-hog
+#+testcase-table-of-routes-spechelp-hurt-hog
 >throuhg
 You sort of already figured what to do, though it wasn't the right time, then. If you've forgotten, PAD FLIPS will remind you.
 \\
@@ -2238,7 +2275,7 @@ The raptest patters are gone, and you can fully focus on the hog and the ewe.
 Your score has just gone up by one point
 
 @spoi
-#ttc-table-of-routes-anagrams-through
+#testcase-table-of-routes-anagrams-through
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go THROUGH.
 
 @verbs
@@ -2255,7 +2292,7 @@ The raptest patters are gone, and you can fully focus on the hurt hog.
 >undo
 
 @nud
-#ttc-table-of-routes-done-rejects-bent-ewe
+#testcase-table-of-routes-done-rejects-bent-ewe
 >betwene
 The bent ewe and hurt hog seem to be at peace. Maybe you can move on. Maybe the hurt hog thinks it's okay.
 
@@ -2264,7 +2301,7 @@ The bent ewe and hurt hog seem to be at peace. Maybe you can move on. Maybe the 
 Your score has just gone up by one point
 
 @spoi
-#ttc-table-of-routes-anagrams-beyond
+#testcase-table-of-routes-anagrams-beyond
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go BEYOND.
 
 @max
@@ -2287,7 +2324,7 @@ This will dispel the poison stripe. However, the raptest patters can be dealt wi
 >undo
 
 @nud
-#ttc-table-of-routes-spechelp-raptest-patters
+#testcase-table-of-routes-spechelp-raptest-patters
 >withotu
 The raptest patters subside a bit, but ... suddenly you miss them, in an old way. Maybe you can get rid of them for good, though you probably don't need to.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the raptest patters. That's a decent omen.
@@ -2338,7 +2375,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >spatter
 !No violence!
 \\
-#ttc-table-of-routes-spechelp-yob-den
+#testcase-table-of-routes-spechelp-yob-den
 >beyodn
 Some different noises from the yob den.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the yob den. That's a decent omen.

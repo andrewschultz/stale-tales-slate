@@ -13,7 +13,7 @@
 #prime the UNDO command later
 >z
 
-#ttc-table-of-ordeal-reload-nudges-ordeal
+#testcase-table-of-ordeal-reload-nudges-ordeal
 >ordela
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 
@@ -52,7 +52,7 @@ Hug? Ugh. Guh.
 >embrace
 Hug? Ugh. Guh.
 
-#ttc-table-of-dusty-study-nudges-study
+#testcase-table-of-dusty-study-nudges-study
 >stuyd
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
@@ -72,27 +72,27 @@ You'd stink as a host, trying that.
 >rood
 No need to surprise a guest like that. Just open the door.
 
-#ttc-table-of-ordeal-reload-nudges-manse
+#testcase-table-of-ordeal-reload-nudges-manse
 >manes
 Trying to change the current region you're in all at once would be risky, or useless, or maybe both.
 
-#ttc-table-of-dusty-study-nudges-chair
+#testcase-table-of-dusty-study-nudges-chair
 >chari
 The chair is built too sturdily to be changed into anything else. You made sure of that when you bought it, for practical reasons. You can't make it more or less hi-arc, either. But it's still soft enough to be relaxing.
 
-#ttc-table-of-dusty-study-nudges-rich
+#testcase-table-of-dusty-study-nudges-rich
 >rihc
 The chair may be an unnecessary luxury, but you shouldn't feel bad about that.
 
-#ttc-table-of-dusty-study-nudges-niche
+#testcase-table-of-dusty-study-nudges-niche
 >niceh
 It's not any old niche. It's your niche. And by your niche, I mean you see it as "my niche."
 
-#ttc-table-of-ordeal-reload-nudges-ban
+#testcase-table-of-ordeal-reload-nudges-ban
 >anb
 You need to work on the entire MEET-BANS beams net.
 
-#ttc-table-of-ordeal-reload-nudges-beam
+#testcase-table-of-ordeal-reload-nudges-beam
 >emba
 You need to work on the entire MEET-BANS beams net.
 
@@ -104,7 +104,7 @@ Taking the pedanto-notepad uncovered some sad ads on the chair.
 >consult zozimus
 You can CONSULT PAD ABOUT X, CONSULT ABOUT X, or PAD X.
 
-#ttc-table-of-dusty-study-nudges-sad
+#testcase-table-of-dusty-study-nudges-sad
 >sda
 The ads have probably gone through enough word-twisting.
 
@@ -129,7 +129,7 @@ Bleats might be too abstract to help you.
 >think
 You begin a deep think, all about Elvira's rise to prominence and how she assured everyone that she could do wordplay if she were bored, and she was sure it was the best you could do, but really, there was no CREATIVITY at the heart of it, just calculation--and that tagged gadget to give clues was a bit TOO convenient. It passes the time, feeling upset.
 
-#ttc-table-of-dusty-study-nudges-rove
+#testcase-table-of-dusty-study-nudges-rove
 >roev
 That's not a way to sneak around and avoid the knock at the door.
 
@@ -163,21 +163,21 @@ You need a light source.
 >laredo
 If you want a Western game situated on the US/Mexico border, this isn't for you.
 
-#ttc-table-of-dusty-study-nudges-dark
+#testcase-table-of-dusty-study-nudges-dark
 >dakr
 You punch your fist as you realize DARK has no anagrams...right into the palm.
 >dakr
 Oh no, not again. Concentrate on the palm.
 
-#ttc-table-of-dusty-study-nudges-darkness
+#testcase-table-of-dusty-study-nudges-darkness
 >darkness
 Oh no, not again. Concentrate on the palm.
 
-#+ttc-table-of-dusty-study-nudges-rove
+#+testcase-table-of-dusty-study-nudges-rove
 >roev
 That's not a way to sneak around and avoid any future knock at the door.
 
-#ttc-table-of-ordeal-reload-spechelp-palm
+#testcase-table-of-ordeal-reload-spechelp-palm
 >lapm
 You think you feel the palm shake a bit, but nothing terribly magical happens.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the palm. That's a decent omen.
@@ -194,9 +194,9 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the palm. That's a d
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: 1 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#ttc-table-of-ordeal-reload-spechelp-latches
+#testcase-table-of-ordeal-reload-spechelp-latches
 >satchle
 You think you feel static through the latches. But they remain the same. Maybe there's some easy way to change them.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the latches. That's a decent omen.
@@ -211,63 +211,63 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the latches. That's 
 >chalets
 You don't need a safe home, right now. You need adventure. Oh, and you don't have to switch that many letters, either.
 
-#ttc-table-of-dusty-study-nudges-latch
+#testcase-table-of-dusty-study-nudges-latch
 >lathc
 Not one latch. All of them.
 
 >satchel
 Your score has just gone up by one point.
 
-#ttc-table-of-dusty-study-nudges-notice
+#testcase-table-of-dusty-study-nudges-notice
 >notiec
 You can flip everything on the diorama except the notice.
 
-#ttc-table-of-dusty-study-nudges-diorama
+#testcase-table-of-dusty-study-nudges-diorama
 >dioraam
 Gateman Nat Egam assured you you couldn't change it by accident when he gave it to you. The stuff hanging from it, though...
 >x dope
 The dope op-ed is broken into several pages. It's by Elvira, and it's apparently tackling you on your own ground. The pages are labeled nitro-intro, questin' inquest, MoneyCo and Economy, Shatter-Threats, I Trash His Art, and By Li'l Billy.
 
-#ttc-table-of-dusty-study-nudges-gape
+#testcase-table-of-dusty-study-nudges-gape
 >gaep
 You feel like you physically want to crumple up the page, but you just stare blankly at it.
 
-#ttc-table-of-dusty-study-nudges-nitro
+#testcase-table-of-dusty-study-nudges-nitro
 >nitor
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 
-#ttc-table-of-dusty-study-nudges-questin
+#testcase-table-of-dusty-study-nudges-questin
 >questni
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 !q without the u
 
-#+ttc-table-of-dusty-study-nudges-questin
+#+testcase-table-of-dusty-study-nudges-questin
 >eqistun
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh. Also, even if you could do anything, you'd need the u right after the q, probably. You'll need to do odd stuff, but nothing too odd.
 
-#ttc-table-of-dusty-study-nudges-moneyco
+#testcase-table-of-dusty-study-nudges-moneyco
 >moneyoc
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 
-#ttc-table-of-dusty-study-nudges-shatter
+#testcase-table-of-dusty-study-nudges-shatter
 >shattre
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 
-#ttc-table-of-dusty-study-nudges-itrash
+#testcase-table-of-dusty-study-nudges-itrash
 >itrahs
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 
-#ttc-table-of-dusty-study-nudges-herarts
+#testcase-table-of-dusty-study-nudges-herarts
 >gs
 >herarst
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 >gs
 
-#ttc-table-of-dusty-study-nudges-billy
+#testcase-table-of-dusty-study-nudges-billy
 >bilyl
 You try and twist Elvira's words or poke holes where they're wrong...and you can't. Sheesh.
 
-#ttc-table-of-dusty-study-nudges-oped
+#testcase-table-of-dusty-study-nudges-oped
 >opde
 You're not going to change this--deed. Or Elvira's opinion. Better to change Yorpwald.
 
@@ -290,15 +290,15 @@ Just type c/t or cheat/teach to turn cheat mode on or off. Note: settler is curr
 
 >c
 
-#ttc-table-of-ordeal-reload-scannotes-tables
+#testcase-table-of-ordeal-reload-scannotes-tables
 >scan tables
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
 
-#ttc-table-of-ordeal-reload-scannotes-niche
+#testcase-table-of-ordeal-reload-scannotes-niche
 >scan niche
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
 
-#ttc-table-of-ordeal-reload-scannotes-meet-bans-beams-net
+#testcase-table-of-ordeal-reload-scannotes-meet-bans-beams-net
 >scan beams net
 Oh dear. This is tricky. Three question marks out of eight. Maybe you can actually figure what they mean logically, or maybe you can figure what sort of thing would be below ground in a study, and then maybe you can use that to figure what the question marks mean.
 
@@ -306,7 +306,7 @@ Oh dear. This is tricky. Three question marks out of eight. Maybe you can actual
 >palm
 Maybe you could, but you will need the light. You won't need the landscaping.
 
-#ttc-table-of-ordeal-reload-done-rejects-lamp
+#testcase-table-of-ordeal-reload-done-rejects-lamp
 >lapm
 If you mess with the lamp, at least you wouldn't see those idiots outside once they got in. But you couldn't run from them, either.
 
@@ -325,7 +325,7 @@ Yep. It's probably part of Elvira's reject-and-retreat, insinuating something wi
 >pedo
 Don't dwell on it. It's lies.
 
-#ttc-table-of-ordeal-reload-spechelp-meet-bans
+#testcase-table-of-ordeal-reload-spechelp-meet-bans
 >basemetn
 The laser part of the MEET-BANS beams net fizzes slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the MEET-BANS beams net. That's a decent omen.
@@ -376,23 +376,23 @@ Hm, you're pretty sure the beams guard something below. What's the best name for
 >bestname
 Hm, you're pretty sure the beams guard something below. What's the best name for a room that's below? (You note the first and third squares on your settler turn purple as you think of the best name.)
 
-#ttc-table-of-ordeal-reload-nudges-beams
+#testcase-table-of-ordeal-reload-nudges-beams
 >beasm
 You need to work on the entire MEET-BANS beams net.
 
-#ttc-table-of-ordeal-reload-nudges-ten
+#testcase-table-of-ordeal-reload-nudges-ten
 >tne
 You need to work on the entire MEET-BANS beams net.
 
-#ttc-table-of-ordeal-reload-nudges-bans
+#testcase-table-of-ordeal-reload-nudges-bans
 >bsna
 You need to work on the entire MEET-BANS beams net.
 
-#ttc-table-of-ordeal-reload-nudges-meet
+#testcase-table-of-ordeal-reload-nudges-meet
 >teme
 You need to work on the entire MEET-BANS beams net.
 
-#ttc-table-of-ordeal-reload-readables-meet-bans
+#testcase-table-of-ordeal-reload-readables-meet-bans
 >read meet bans
 Some of the wooden beams are painted red. You could them. There are ten total, and it makes you see a bit red, too.
 
@@ -413,7 +413,7 @@ by one point
 >teem
 You want to reduce the MEET-BANS beams net, not make more.
 
-#+ttc-table-of-ordeal-reload-nudges-bans
+#+testcase-table-of-ordeal-reload-nudges-bans
 >bsna
 You need to work on the entire MEET-BANS beams net.
 
@@ -424,7 +424,7 @@ You need to work on the entire MEET-BANS beams net.
 >basement
 by two points
 
-#ttc-table-of-ordeal-reload-nudges-tenbeams
+#testcase-table-of-ordeal-reload-nudges-tenbeams
 >bemesant
 Passage up is unimpeded. The MEET-BANS beams net is in the past.
 
@@ -439,7 +439,7 @@ Passage up is unimpeded. The MEET-BANS beams net is in the past.
 You realize a basement is the sort of thing that would be below, even if, once you get there, it's called something different.
 Your score has just gone up by two points
 >score
-Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 # here we test knocking out the tables from the Farming Framing
 >d
@@ -450,7 +450,7 @@ by one point
 
 >in
 
-#ttc-table-of-ordeal-reload-spechelp-tables
+#testcase-table-of-ordeal-reload-spechelp-tables
 >elstab
 The tables seem to shift a bit.
 
@@ -471,13 +471,13 @@ Dusty Study
 >basement zozimus
 You can just go DOWN with the MEET-BANS beams net gone.
 
-#+ttc-table-of-ordeal-reload-nudges-tenbeams
+#+testcase-table-of-ordeal-reload-nudges-tenbeams
 >basemetn
 Passage down is unimpeded. The MEET-BANS beams net is in the past.
 >d
 /^Largely All-Grey Gallery
 
-#ttc-table-of-ordeal-reload-spechelp-stria
+#testcase-table-of-ordeal-reload-spechelp-stria
 >stari
 "Rats, I..." you think as you see red. That's not quite it.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the stria. That's a decent omen.
@@ -492,7 +492,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the stria. That's a 
 >undo
 >undo
 
-#+ttc-table-of-ordeal-reload-spechelp-tables
+#+testcase-table-of-ordeal-reload-spechelp-tables
 >stabel
 The tables seem to shift a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tables. That's a decent omen.
@@ -503,25 +503,25 @@ The tables seem to shift a bit.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the tables. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-ordeal-reload-nudges-table
+#testcase-table-of-ordeal-reload-nudges-table
 >tabel
 A bleat: "tableS!"
 
-#ttc-table-of-dusty-study-nudges-subpoena
+#testcase-table-of-dusty-study-nudges-subpoena
 >subpoean
 Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting.
 
 >stable
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
 
 >score
-Score in a scenario: 5 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 9. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#ttc-table-of-ordeal-reload-nudges-stable
+#testcase-table-of-ordeal-reload-nudges-stable
 >stabel
 You probably just want to go IN to the stable.
 
-#ttc-table-of-ordeal-reload-spechelp-niche
+#testcase-table-of-ordeal-reload-spechelp-niche
 >chimnye
 Hm, no, the niche--my niche--won't unfold that way.
 DEBUG ONLY: You feel a slight psychic push-pull coming from MY NICHE. That's a decent omen.
@@ -532,37 +532,37 @@ Hm, no, the niche--my niche--won't unfold that way.
 DEBUG ONLY: You feel a slight psychic push-pull coming from MY NICHE. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-dusty-study-nudges-ceiling
+#testcase-table-of-dusty-study-nudges-ceiling
 >ceilign
 You wouldn't want to collapse the whole ceiling, but maybe the words MY NICHE could be changed.
 
 >chimney
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 10.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
 
 >score
-Score in a scenario: 6 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 10. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#+ttc-table-of-dusty-study-nudges-ceiling
+#+testcase-table-of-dusty-study-nudges-ceiling
 >ceilign
 You already built the chimney. If the ceiling caved, you'd be buried.
 
-#ttc-table-of-ordeal-reload-done-rejects-chimney
+#testcase-table-of-ordeal-reload-done-rejects-chimney
 >chimnye
 You probably just want to go UP the chimney.
 
-#ttc-table-of-dusty-study-nudges-isolani
+#testcase-table-of-dusty-study-nudges-isolani
 >isolain
 You don't need to rearrange the isolani liaison. It's all that protects you from the outside world.
 
-#ttc-table-of-dusty-study-nudges-pin
+#testcase-table-of-dusty-study-nudges-pin
 >pni
 It's one big giant pin.
 
-#ttc-table-of-dusty-study-nudges-giant
+#testcase-table-of-dusty-study-nudges-giant
 >giatn
 It's one big giant pin.
 
-#ttc-table-of-ordeal-reload-spechelp-giant-pin
+#testcase-table-of-ordeal-reload-spechelp-giant-pin
 >paintign
 The pin wobbles.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the giant pin. That's a decent omen.
@@ -573,45 +573,45 @@ The pin wobbles.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the giant pin. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-ordeal-reload-readables-giant-pin
+#testcase-table-of-ordeal-reload-readables-giant-pin
 >read giant pin
 GNAT. I NIP is nonsensically written in red on the giant pin.
 
-#ttc-table-of-dusty-study-nudges-bowling
+#testcase-table-of-dusty-study-nudges-bowling
 >bowlign
 It's more that it's a giant pin and not, like, a safety pin.
 
-#ttc-table-of-dusty-study-nudges-bowlingpin
+#testcase-table-of-dusty-study-nudges-bowlingpin
 >bowlingpni
 It's more that it's a giant pin and not, like, a safety pin.
 
-#ttc-table-of-dusty-study-nudges-bookshelf
+#testcase-table-of-dusty-study-nudges-bookshelf
 >bookshefl
 The bookshelf is too massively immovable. If you could magick it, all those books would probably create an avalanche, anyway.
 
-#ttc-table-of-dusty-study-nudges-books
+#testcase-table-of-dusty-study-nudges-books
 >boosk
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
 
-#ttc-table-of-dusty-study-nudges-book
+#testcase-table-of-dusty-study-nudges-book
 >boko
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
 
-#ttc-table-of-dusty-study-nudges-shelf
+#testcase-table-of-dusty-study-nudges-shelf
 >shefl
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
 
 >painting
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
 
 >score
-Score in a scenario: 7 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 11. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#ttc-table-of-dusty-study-nudges-abstract
+#testcase-table-of-dusty-study-nudges-abstract
 >abstratc
 That is probably overthinking the painting's abstract-ness. It's really just good for examining.
 
-#ttc-table-of-ordeal-reload-done-rejects-painting
+#testcase-table-of-ordeal-reload-done-rejects-painting
 >paintign
 The painting really goes better with the study than the giant pin.
 
@@ -625,7 +625,7 @@ You don't need a safe home, right now. You need adventure.
 You don't need a safe home, right now. You need adventure.
 !that many letters
 
-#ttc-table-of-ordeal-reload-done-rejects-letters-settler
+#testcase-table-of-ordeal-reload-done-rejects-letters-settler
 >satchle
 Tinkering with the satchel, wherever it's gone, would not be helpful. The super purse is big enough, and you don't want to do anything that might damage the letters settler.
 
@@ -651,7 +651,7 @@ The settler is pretty powerful, but it can't build bridges.
 >in
 /^Farming Framing
 
-#ttc-table-of-ordeal-reload-spechelp-sitar
+#testcase-table-of-ordeal-reload-spechelp-sitar
 >stari
 You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you think, seeing red.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sitar. That's a decent omen.
@@ -662,7 +662,7 @@ You hear a sad-sax noise from the sitar. Well, a sitar version. "Rats, I..." you
 DEBUG ONLY: You feel a slight psychic push-pull coming from the sitar. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-ordeal-reload-readables-sitar
+#testcase-table-of-ordeal-reload-readables-sitar
 >read sitar
 Oh, right. You bought it from Trisa Israt.
 
@@ -670,25 +670,25 @@ Oh, right. You bought it from Trisa Israt.
 >astir
 You need to change that to something else, then it'll be astir.
 
-#ttc-table-of-farming-framing-nudges-framing
+#testcase-table-of-farming-framing-nudges-framing
 >framign
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-farming-framing-nudges-ridging
+#testcase-table-of-farming-framing-nudges-ridging
 >ridgign
 If you collapsed the girding ridging, which you can't, the shouty youths would hear something and be after you.
 
 >stair
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 12.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
 
 >score
-Score in a scenario: 8 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 12. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 #+testcase-mistake-roiling-astir
 >astir
 You don't need a moving stair.
 
-#ttc-table-of-ordeal-reload-done-rejects-stair
+#testcase-table-of-ordeal-reload-done-rejects-stair
 >stari
 The stair helps you get around more easily, so it doesn't need to be changed back.
 
@@ -698,27 +698,27 @@ The stair helps you get around more easily, so it doesn't need to be changed bac
 >u
 /^Highest Heights
 
-#ttc-table-of-highest-heights-nudges-highest
+#testcase-table-of-highest-heights-nudges-highest
 >highets
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-highest-heights-nudges-height
+#testcase-table-of-highest-heights-nudges-height
 >heigth
 You don't need to riff on any location names to win the game, unless there's not that much else to see.
 
-#ttc-table-of-ordeal-reload-nudges-closets
+#testcase-table-of-ordeal-reload-nudges-closets
 >closest
 The closets are there to warp space a bit. You don't need to mess with them.
 
-#ttc-table-of-ordeal-reload-nudges-closet
+#testcase-table-of-ordeal-reload-nudges-closet
 >closte
 The closets are there to warp space a bit. You don't need to mess with them.
 
-#ttc-table-of-ordeal-reload-scannotes-pram
+#testcase-table-of-ordeal-reload-scannotes-pram
 >scan pram
 You fiddle with the cheat button and note that nothing happens to the reds and yellows
 
-#ttc-table-of-ordeal-reload-spechelp-pram
+#testcase-table-of-ordeal-reload-spechelp-pram
 >rapm
 The pram creaks back and forth slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pram. That's a decent omen.
@@ -730,19 +730,19 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pram. That's a d
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >ramp
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 13.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
 
 >score
-Score in a scenario: 9 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 13. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#ttc-table-of-ordeal-reload-done-rejects-ramp
+#testcase-table-of-ordeal-reload-done-rejects-ramp
 >rapm
 The ramp is useful now. Best keep it.
 
 >gt study
 /^Dusty Study
 
-#ttc-table-of-ordeal-reload-spechelp-pavement
+#testcase-table-of-ordeal-reload-spechelp-pavement
 >event mpa
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pavement. That's a decent omen.
@@ -756,7 +756,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pavement. That's
 >event map
 The pavement unfolds into a small map which, you remember, describes your first trip through Yorpwald.
 
-#ttc-table-of-ordeal-reload-spechelp-platform
+#testcase-table-of-ordeal-reload-spechelp-platform
 >farm plto
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the platform. That's a decent omen.
@@ -770,7 +770,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the platform. That's
 >farm plot
 The platform becomes a farm plot.
 
-#ttc-table-of-ordeal-reload-spechelp-pedestal
+#testcase-table-of-ordeal-reload-spechelp-pedestal
 >steel pda
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the pedestal. That's a decent omen.
@@ -784,7 +784,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pedestal. That's
 >steel pad
 The pedestal becomes a steel pad.
 
-#ttc-table-of-ordeal-reload-spechelp-crabgrass
+#testcase-table-of-ordeal-reload-spechelp-crabgrass
 >brass crga
 Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it out. Or you can examine the diorama.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the crabgrass. That's a decent omen.
@@ -802,7 +802,7 @@ Hmm. Nah. That's not quite it. Your skills are a bit rusty, but you'll figure it
 >brass crag
 The crabgrass dries out and becomes a brass crag.
 
-#ttc-table-of-ordeal-reload-spechelp-event-map
+#testcase-table-of-ordeal-reload-spechelp-event-map
 >pavemetn
 You know what to change the event map back to: the pavement. There's no third option.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from the event map. That's a decent omen.
@@ -816,7 +816,7 @@ You know what to change the event map back to: the pavement. There's no third op
 >pavement
 The event map folds back into a thoroughly more dull pavement. Reading the notice briefly, you see that things won't be this flexible out in the real world.
 
-#ttc-table-of-ordeal-reload-spechelp-brass-crag
+#testcase-table-of-ordeal-reload-spechelp-brass-crag
 >crabgrssa
 You know what to change the brass crag back to: the crabgrass. There's no third option.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from the brass crag. That's a decent omen.
@@ -831,7 +831,7 @@ You know what to change the brass crag back to: the crabgrass. There's no third 
 The brass crag becomes slightly less lifeless crabgrass, again.
 !Reading the notice briefly, you see that things won't be this flexible out in the real world.
 
-#ttc-table-of-ordeal-reload-spechelp-farm-plot
+#testcase-table-of-ordeal-reload-spechelp-farm-plot
 >platfomr
 You know what to change the farm plot back to: the platform. There's no third option.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from the farm plot. That's a decent omen.
@@ -845,7 +845,7 @@ You know what to change the farm plot back to: the platform. There's no third op
 >platform
 The farm plot switches back to a platform.
 
-#ttc-table-of-ordeal-reload-spechelp-steel-pad
+#testcase-table-of-ordeal-reload-spechelp-steel-pad
 >pedestla
 You know what to change the steel pad back to: the pedestal. There's no third option.
 !DEBUG ONLY: You feel a slight psychic push-pull coming from the steel pad. That's a decent omen.
@@ -862,23 +862,23 @@ The steel pad intertwines into a marginally artistic pedestal.
 >d
 /^Largely All-Grey Gallery
 
-#ttc-table-of-largely-all-grey-gallery-nudges-gallery
+#testcase-table-of-largely-all-grey-gallery-nudges-gallery
 >galleyr
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
-#ttc-table-of-largely-all-grey-gallery-nudges-all
+#testcase-table-of-largely-all-grey-gallery-nudges-all
 >all
 You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant, so that's one less thing to worry about, I hope.
 
-#ttc-table-of-largely-all-grey-gallery-nudges-grey
+#testcase-table-of-largely-all-grey-gallery-nudges-grey
 >grye
 You should never need to riff on part of a location name, though you may get a last lousy point from doing so if you're observant.
 
-#ttc-table-of-largely-all-grey-gallery-nudges-evac
+#testcase-table-of-largely-all-grey-gallery-nudges-evac
 >evca
 The evac-cave is your way out. It'd be a bad idea to change it.
 
-#ttc-table-of-largely-all-grey-gallery-nudges-bni
+#testcase-table-of-largely-all-grey-gallery-nudges-bni
 >bin
 No, all the bins.
 
@@ -887,7 +887,7 @@ No, all the bins.
 Surely a stair is more handy right now than music.
 !What could it
 
-#ttc-table-of-ordeal-reload-spechelp-ISBN-bins
+#testcase-table-of-ordeal-reload-spechelp-ISBN-bins
 >snbi
 The ISBN bins creak slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the ISBN bins. That's a decent omen.
@@ -908,13 +908,13 @@ Now, now! A Roiling Original is strictly about logic! Nothing frivolous, if you 
 in Manor! You've found all the secrets here. You can just exit the gallery now, but it'd be a good idea to examine the settler, first.
 
 >score
-Score in a scenario: 10 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#+ttc-table-of-largely-all-grey-gallery-nudges-bni
+#+testcase-table-of-largely-all-grey-gallery-nudges-bni
 >bin
 You already fixed the bins.
 
-#ttc-table-of-ordeal-reload-done-rejects-ISBN-bins
+#testcase-table-of-ordeal-reload-done-rejects-ISBN-bins
 >snbi
 The ISBN bins are secure. Best not tinker.
 
@@ -929,7 +929,7 @@ Now, now! A Roiling Original is strictly about logic! Nothing frivolous, if you 
 
 >in
 
-#ttc-table-of-ordeal-reload-spechelp-rifle
+#testcase-table-of-ordeal-reload-spechelp-rifle
 >flire
 Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at you.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the rifle. That's a decent omen.
@@ -940,7 +940,7 @@ Elmo bobbles the rifle slightly, and you think he may've nodded encouragement at
 DEBUG ONLY: You feel a slight psychic push-pull coming from the rifle. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-ordeal-reload-readables-rifle
+#testcase-table-of-ordeal-reload-readables-rifle
 >read rifle
 It's kind of tricky to read red writing on a red gun, but it appears to be an Irelf-Efril rifle.
 
@@ -962,31 +962,31 @@ You can't change Elmo into an animal. Your powers don't work that way. But maybe
 >z
 >z
 
-#ttc-table-of-largely-all-grey-gallery-nudges-high
+#testcase-table-of-largely-all-grey-gallery-nudges-high
 >hihg
 The high sign is a clue. Bad idea to change it.
 
-#ttc-table-of-largely-all-grey-gallery-nudges-highsign
+#testcase-table-of-largely-all-grey-gallery-nudges-highsign
 >highsing
 The high sign is a clue. Bad idea to change it.
 
-#ttc-table-of-largely-all-grey-gallery-nudges-sign
+#testcase-table-of-largely-all-grey-gallery-nudges-sign
 >sgin
 The high sign is a clue. Bad idea to change it.
 
-#ttc-table-of-largely-all-grey-gallery-nudges-arifle
+#testcase-table-of-largely-all-grey-gallery-nudges-arifle
 >arifel
 Just the rifle, well, not THE rifle, or JUST, rifle, but RIFLE.
 
-#ttc-table-of-largely-all-grey-gallery-nudges-hostage
+#testcase-table-of-largely-all-grey-gallery-nudges-hostage
 >hostaeg
 It's not you that needs changing but the rifle.
 
-#ttc-table-of-largely-all-grey-gallery-nudges-elmo
+#testcase-table-of-largely-all-grey-gallery-nudges-elmo
 >elom
 Changing Elmo won't work. It's his rifle.
 
-#ttc-table-of-largely-all-grey-gallery-nudges-ugn
+#testcase-table-of-largely-all-grey-gallery-nudges-ugn
 >ung
 It's not a gun but a rifle.
 
@@ -998,13 +998,13 @@ It's a rifle, not a gun. Besides, you don't need a gnu-sance.
 by one point
 
 >score
-Score in a scenario: 11 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#+ttc-table-of-largely-all-grey-gallery-nudges-elmo
+#+testcase-table-of-largely-all-grey-gallery-nudges-elmo
 >elom
 Changing Elmo won't work. It's his rifle that needed changing.
 
-#ttc-table-of-largely-all-grey-gallery-nudges-flier
+#testcase-table-of-largely-all-grey-gallery-nudges-flier
 >flire
 Better to pump Elmo for information.
 
@@ -1018,7 +1018,7 @@ You nod. "No clues counsel."
 
 /^Carven Cavern
 
-#ttc-table-of-ordeal-reload-spechelp-respect-specter
+#testcase-table-of-ordeal-reload-spechelp-respect-specter
 >eecsprt
 The respect specter shrugs respectfully. "A deferred success."
 
@@ -1027,19 +1027,19 @@ The respect specter shrugs respectfully. "A deferred success."
 The respect specter shrugs respectfully. "A deferred success."
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-carven-cavern-nudges-cavern
+#testcase-table-of-carven-cavern-nudges-cavern
 >cavenr
 You don't need to riff on any location names to win the game, unless there's not that much else to see. You may get a last lousy point from doing so in one place, if you're observant, though.
 
-#ttc-table-of-carven-cavern-nudges-terrain
+#testcase-table-of-carven-cavern-nudges-terrain
 >terrani
 Hm... "retrain terrain" is a bit circular, as anagrams go. The plaster psalter and palest pastel plates probably hold the key to leaving.
 
-#ttc-table-of-carven-cavern-nudges-plate
+#testcase-table-of-carven-cavern-nudges-plate
 >plaet
 You have no idea which plate to focus on, so maybe you should focus on the plates.
 
-#ttc-table-of-carven-cavern-nudges-tapler
+#testcase-table-of-carven-cavern-nudges-tapler
 >taplre
 What you need is singular, but you sense it's all the plaster that matters.
 
@@ -1051,7 +1051,7 @@ Ok, the Carven Cavern IS pretty craven as anagrams go, but you need to find a wa
 >trainer
 You're on your own. Perhaps you'd be better off scanning the plaster and twiddling the plates to get on with things.
 
-#ttc-table-of-ordeal-reload-spechelp-plates
+#testcase-table-of-ordeal-reload-spechelp-plates
 >stapel
 The plates shine slightly and rattle.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the palest pastel plates. That's a decent omen.
@@ -1062,11 +1062,11 @@ The plates shine slightly and rattle.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the palest pastel plates. That's a decent omen.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-ordeal-reload-readables-pastel-plates
+#testcase-table-of-ordeal-reload-readables-pastel-plates
 >read pastel plates
 EPSTAL is written as an author's signature.
 
-#ttc-table-of-ordeal-reload-scannotes-palest-pastel-plates
+#testcase-table-of-ordeal-reload-scannotes-palest-pastel-plates
 >scan plates
 Hmm, maybe the question mark isn't as vague as you're worried it is.
 
@@ -1090,17 +1090,17 @@ You're on your own. Perhaps you'd be better off twiddling the plates to get on w
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#+ttc-table-of-carven-cavern-nudges-terrain
+#+testcase-table-of-carven-cavern-nudges-terrain
 >terrani
 Hm... "retrain terrain" is a bit circular, as anagrams go. The plaster psalter and staple probably hold the key to leaving.
 
-#ttc-table-of-ordeal-reload-done-rejects-staple
+#testcase-table-of-ordeal-reload-done-rejects-staple
 >stapel
 Those plates were a mess, and now they're a tidy staple. It's better that way.
 
-#ttc-table-of-ordeal-reload-spechelp-plaster
+#testcase-table-of-ordeal-reload-spechelp-plaster
 >staplre
 The plaster crackles and shines slightly.
 DEBUG ONLY: You feel a slight psychic push-pull coming from the plaster psalter. That's a decent omen.
@@ -1115,21 +1115,21 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the plaster psalter.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#+ttc-table-of-carven-cavern-nudges-terrain
+#+testcase-table-of-carven-cavern-nudges-terrain
 >terrani
 Hm... "retrain terrain" is a bit circular, as anagrams go. The stapler and staple probably hold the key to leaving.
 
-#ttc-table-of-carven-cavern-nudges-aperture
+#testcase-table-of-carven-cavern-nudges-aperture
 >apertuer
 Nothing happens. You probably don't need to anagram the apertured departure, which is a relief, since it's nine letters long, and that's a lot. Maybe a more manual solution works.
 
-#ttc-table-of-carven-cavern-nudges-apertured
+#testcase-table-of-carven-cavern-nudges-apertured
 >apertuerd
 Nothing happens. You probably don't need to anagram the apertured departure, which is a relief, since it's nine letters long, and that's a lot. Maybe a more manual solution works.
 
-#ttc-table-of-ordeal-reload-done-rejects-stapler
+#testcase-table-of-ordeal-reload-done-rejects-stapler
 >staplre
 The plaster was cracking anyway, before you made it a shiny stapler. You don't need to change it again.
 
@@ -1142,13 +1142,13 @@ You're on your own. Perhaps you'd be better off making use of the staple to get 
 >staple aperture
 
 >score
-Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
-#+ttc-table-of-carven-cavern-nudges-aperture
+#+testcase-table-of-carven-cavern-nudges-aperture
 >apertuer
 Nothing happens. You probably did what you needed.
 
-#ttc-table-of-ordeal-reload-scannotes-respect-specter
+#testcase-table-of-ordeal-reload-scannotes-respect-specter
 >t
 >scan respect specter
 "With cheat off, you'll know what's a vowel and what's a consonant for sure. This may help nail down ambiguous readings from cheat mode."
@@ -1177,8 +1177,9 @@ You're not sure how it was able to detect your mental spelling, but you're a bit
 The Respect Specter coughs.
 >y
 by one point
+
 >score
-Score in a scenario: 15 out of 15 total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
+Score in a scenario: {MAX} out of {MAX} total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
 
 >in
 /^Strip of Profits

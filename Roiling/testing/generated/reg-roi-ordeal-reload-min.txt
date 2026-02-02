@@ -27,7 +27,7 @@ Whoah! Bangish bashing at the isolani liaison!
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: 1 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >satchel
 Your score has just gone up by one point.
@@ -36,7 +36,7 @@ Your score has just gone up by one point.
 You realize a basement is the sort of thing that would be below, even if, once you get there, it's called something different.
 Your score has just gone up by two points
 >score
-Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >d
 /^Largely All-Grey Gallery
@@ -49,7 +49,7 @@ Score in a scenario: 4 out of 15 total points in the current region, Ordeal Relo
 by one point
 
 >score
-Score in a scenario: 5 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >3
 Elmo checks you for a second. "You sure you know how to use the settler?"
@@ -61,20 +61,20 @@ You nod. "No clues counsel."
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 6 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 9.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >stapler
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 7 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 9.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >put staple in stapler
 
 >staple aperture
 
 >score
-Score in a scenario: 8 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 9.
+Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
 
 >in
 /^Strip of Profits

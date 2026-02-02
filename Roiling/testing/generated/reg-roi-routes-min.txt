@@ -13,7 +13,7 @@
 /^Same Mesa
 
 >score
-Score in a scenario: 0 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >inside
 Your score has just gone up by one point
@@ -21,7 +21,7 @@ Your score has just gone up by one point
 /^Cleric Circle
 
 >score
-Score in a scenario: 1 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >x list o toils
 
@@ -54,7 +54,7 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 6 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >astride
 Your score has just gone up by one point
@@ -75,7 +75,7 @@ Your score has just gone up by one point
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: 10 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 22.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >from
 Your score has just gone up by one point
@@ -84,12 +84,12 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 #Note: because there are so many MAX test cases above, and ABSTRACT X TO Y hacks give their own problems, this will count as the test case #testcase-postrule-table-of-routes-anagrams-post-the-bean-beneath-rule
-DEBUG INFO: Taking away a max point. Max-score now 21.
+DEBUG INFO: Taking away a max point. Max-score now {CURMAX}.
 
 /^Harms Marsh
 
 >score
-Score in a scenario: 12 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 21.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >until
 Your score has just gone up by one point
@@ -101,6 +101,9 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 /^Ripe Pier
+
+>score
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >amidst
 Your score has just gone up by one point
@@ -120,7 +123,7 @@ Your score has just gone up by one point
 
 >score
 
-Score in a scenario: 19 out of 22 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 21.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >without
 >score
@@ -143,5 +146,5 @@ This will dispel the poison stripe. However, the raptest patters can be dealt wi
 /^Strip of Profits
 
 >score
-Routes (20/22)
+Routes ({SCORE}/{MAX})
 

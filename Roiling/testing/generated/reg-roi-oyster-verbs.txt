@@ -13,7 +13,7 @@
 
 >posf
 
-#ttc-table-of-oyster-nowheres-posh-hops-shop
+#testcase-table-of-oyster-nowheres-posh-hops-shop
 >e
 You just got here, so direction means nothing. So you can only really go out, but those LOLstr trolls will just coax you back inside. Unless you can out-cool them
 
@@ -47,9 +47,9 @@ The jukebox notches technos (though a mere six remixes) with an anti-bore iron b
 The jukebox notches technos (though a mere six remixes) with an anti-bore iron beat. Rap is par, too. The pesty types would be upset if something happened.
 
 >score
-Score in a scenario: 0 out of 45 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-oyster-attacks-lolstr-trolls
+#testcase-table-of-oyster-attacks-lolstr-trolls
 >attack lolstr trolls
 "I'd beat..." you think, before you realize you've been BAITED. You think bouncers, one scrub. That cools you down.
 
@@ -57,19 +57,19 @@ Score in a scenario: 0 out of 45 total points in the current region, Oyster. Low
 by one point
 
 >score
-Score in a scenario: 1 out of 45 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >spit
 by one point
 
 >score
-Score in a scenario: 2 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >unset
 by one point
 
 >score
-Score in a scenario: 3 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #+verbcase listen-oyster-if-player-is-in-posh-hops-shop
 >listen
@@ -80,11 +80,11 @@ by one point
 
 /^Olde Lode
 
-#ttc-table-of-oyster-nowheres-olde-lode
+#testcase-table-of-oyster-nowheres-olde-lode
 >e
 Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The clam isn't that complex, even if you once again can't use directions.
 
-#ttc-table-of-goto-sectioning-posh-hops-shop-1--
+#testcase-table-of-goto-sectioning-oyster-1-posh-hops-shop
 >gt shop
 The LOLstr trolls would not welcome you back.
 
@@ -97,7 +97,7 @@ Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The clam isn't
 As in the Posh Hops Shop, it's not about any one direction but getting past an obstacle.
 
 >score
-Score in a scenario: 4 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #verbcase listen-oyster-if-noun-is-clam
 >listen
@@ -107,13 +107,13 @@ You hear the clam snapping.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 5 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#+ttc-table-of-oyster-nowheres-olde-lode
+#+testcase-table-of-oyster-nowheres-olde-lode
 >e
 Something seems to tell you "Lo! Lo! Deed!" It can't be too hard. The urn isn't that complex, even if you once again can't use directions.
 
-#ttc-table-of-oyster-attacks-urn
+#testcase-table-of-oyster-attacks-urn
 >attack urn
 Your irrational anger turns to irrational greed when you get close enough to smack it.
 
@@ -122,7 +122,7 @@ Your score has just gone up by one point
 
 /^Disease Seaside
 
-#ttc-table-of-oyster-nowheres-disease-seaside
+#testcase-table-of-oyster-nowheres-disease-seaside
 >e
 The matterless streamlets, err, don't matter. They might even lead to a not-safer seafront.
 You need to cross to the north for more action.
@@ -135,19 +135,19 @@ Say, spare sea spray.
 >listen
 You hear voices from the sabot boats talking about great accomplishments. The frat raft makes unpleasant, disturbing noises.
 
-#ttc-table-of-oyster-attacks-sabot-boats
+#testcase-table-of-oyster-attacks-sabot-boats
 >attack sabot boats
 O, bats!
 
-#ttc-table-of-oyster-attacks-frat-raft
+#testcase-table-of-oyster-attacks-frat-raft
 >attack frat raft
 Yes, the stupid oars don't seem to move themselves, but that's no reason to get upset! Think!
 
-#ttc-table-of-goto-sectioning-olde-lode-2--
+#testcase-table-of-goto-sectioning-oyster-2-olde-lode
 >gt lode
 You don't want to go back near that urn.
 
-#+ttc-table-of-goto-sectioning-posh-hops-shop-1--
+#+testcase-table-of-goto-sectioning-oyster-1-posh-hops-shop
 >gt shop
 The LOLstr trolls would not welcome you back, and it'd take too long to get there.
 
@@ -161,7 +161,7 @@ You need to cross to the north for more action.
 Yet again, no directions here. You need to get on or past the boats, and swimming north won't cut it.
 
 >score
-Score in a scenario: 6 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >boast
 Your score has just gone up by one point
@@ -169,9 +169,9 @@ Your score has just gone up by one point
 /^Fighter Freight
 
 >score
-Score in a scenario: 7 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-oyster-nowheres-fighter-freight
+#testcase-table-of-oyster-nowheres-fighter-freight
 >e
 Directions aren't what matters here. You just need some sort of action to get off the boat.
 
@@ -187,7 +187,7 @@ You catch a whiff of Apple Ale. Yes, you remember the red label quite clearly.
 >listen
 /("A\.\.\. 'elp!"|"Pal! Pal! Ee!")
 
-#ttc-table-of-goto-sectioning-disease-seaside-3--
+#testcase-table-of-goto-sectioning-oyster-3-disease-seaside
 >gt seaside
 No sense crossing back. There's more on the other side of the shore.
 
@@ -204,17 +204,19 @@ You can't help but listen to the carps' and pikes' immature, nasty jibes.
 >listen trout
 Whimpering slightly.
 
-#ttc-table-of-goto-sectioning-fighter-freight-4--
+#testcase-table-of-goto-sectioning-oyster-4-fighter-freight
 >gt freight
 You don't really want to revisit the crays.
 
-#+ttc-table-of-goto-sectioning-disease-seaside-3--
+#+testcase-table-of-goto-sectioning-oyster-3-disease-seaside
 >gt seaside
 No sense crossing back. There's more on this side of the shore.
 
-#+ttc-table-of-goto-sectioning-olde-lode-2--
+#+testcase-table-of-goto-sectioning-oyster-2-olde-lode
 >gt lode
 You don't want to go back near that urn, and it'd be hard, being on the other side of the shore.
+
+#+testcase-table-of-goto-sectioning-oyster-1-posh-hops-shop
 >gt shop
 The LOLstr trolls would not welcome you back, and it'd take too long to get there.
 
@@ -227,13 +229,13 @@ You have more than one way to leave: north, east and west. So you'll need to spe
 There are three unblocked exits: north, east and west.
 
 >score
-Score in a scenario: 8 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-oyster-attacks-carps
+#testcase-table-of-oyster-attacks-carps
 >attack carps
 Brutality's the idea here, but you need a more specific verb.
 
-#ttc-table-of-oyster-attacks-pikes
+#testcase-table-of-oyster-attacks-pikes
 >attack pikes
 Brutality's the idea here, but you need a more specific verb.
 
@@ -248,9 +250,9 @@ A cry. "Eh ... a runt..." you turn red on hearing it.
 by one point
 
 >score
-Score in a scenario: 10 out of 45 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-oyster-attacks-hunter-hunt-area
+#testcase-table-of-oyster-attacks-hunter-hunt-area
 >attack hunter hunt area
 As you kick at the area, a vision of a red hate urn, replete with frowns and scowls, pops up for a second or two before disappearing.
 
@@ -261,9 +263,9 @@ As you kick at the area, a vision of a red hate urn, replete with frowns and sco
 by one point
 
 >score
-Score in a scenario: 11 out of 45 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-oyster-nowheres-hardest-trashed-dearths
+#testcase-table-of-oyster-nowheres-hardest-trashed-dearths
 >e
 Trying to follow a direction without purpose, you would probably run into one of the spark parks and get zapped. You need something to follow.
 
@@ -278,14 +280,14 @@ The eeks shouldn't be too hard to find. Still go back west?
 The only way you seem to be able to go is west to Anger Range.
 
 >score
-Score in a scenario: 11 out of 45 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >scan
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 12 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #verbcase goto-oyster-if-location-of-player-is-hardest-trashed-dearths
 >gt anger range
@@ -300,7 +302,7 @@ Your score has just gone up by one point
 
 /^Lean Lane
 
-#ttc-table-of-oyster-nowheres-lean-lane
+#testcase-table-of-oyster-nowheres-lean-lane
 >e
 Though you are a guest, probably best not to go poking around. You can go back west.
 
@@ -316,7 +318,7 @@ Antiseptic spice taint.
 >listen tuna
 Aunt Tuna is humming something tuneless as she goes about her business.
 
-#ttc-table-of-oyster-attacks-trout
+#testcase-table-of-oyster-attacks-trout
 >attack trout
 A Roiling Original's kind of topsy turvy, but not like THAT.
 
@@ -331,7 +333,7 @@ The only way to exit is west, so let's go that way.
 The only way you seem to be able to go is west to Anger Range.
 
 >score
-Score in a scenario: 13 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #verbcase goto-oyster-if-noun-is-hardest-trashed-dearths
 >gt dearths
@@ -341,22 +343,22 @@ Now you've visited Lean Lane, you don't want to hang around the Hardest Trashed 
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >tend
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 15 out of 45 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >tutor
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 45 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-oyster-attacks-paw-r-wrap
+#testcase-table-of-oyster-attacks-paw-r-wrap
 >attack paw r wrap
 Alas, the Paw-R-Wrap is nor Wap-R-Wrap.
 
@@ -364,13 +366,13 @@ Alas, the Paw-R-Wrap is nor Wap-R-Wrap.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 17 out of 45 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >w
 >n
 /^Lapsin' Plains
 
-#ttc-table-of-oyster-nowheres-lapsin-plains
+#testcase-table-of-oyster-nowheres-lapsin-plains
 >e
 With the sloppy polyps on most all sides, you can only go back south or, once the span pans are neutralized, inside.
 
@@ -388,23 +390,23 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 18 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >trace
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 19 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-oyster-attacks-knob
+#testcase-table-of-oyster-attacks-knob
 >attack knob
 Yes, but how?
 
-#ttc-table-of-oyster-attacks-skis
+#testcase-table-of-oyster-attacks-skis
 >attack skis
 You give them a whack, and it hurts much more than it should. You wonder if love, not hate, is the answer.
 
-#ttc-table-of-oyster-attacks-span-pans
+#testcase-table-of-oyster-attacks-span-pans
 >attack span pans
 Well, you need to do something to the pans.
 
@@ -412,24 +414,24 @@ Well, you need to do something to the pans.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 20 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >kiss
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 21 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >bonk
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 22 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >snap
 Your score has just gone up by one point
 
-#+ttc-table-of-oyster-nowheres-lapsin-plains
+#+testcase-table-of-oyster-nowheres-lapsin-plains
 >e
 With the sloppy polyps on most all sides, you can only go back south or inside.
 
@@ -438,7 +440,7 @@ With the sloppy polyps on most all sides, you can only go back south or inside.
 There are two unblocked exits: south to Anger Range and inside.
 
 >score
-Score in a scenario: 23 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >in
 
@@ -458,34 +460,34 @@ The only way you seem to be able to go is outside to Lapsin' Plains.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 24 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >drop
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 25 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >sweat
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 26 out of 45 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >shape
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 27 out of 45 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >clean
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 28 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >out
 
@@ -494,7 +496,7 @@ Score in a scenario: 28 out of 45 total points in the current region, Oyster. Lo
 >w
 /^Sclerous Closures
 
-#ttc-table-of-oyster-nowheres-sclerous-closures
+#testcase-table-of-oyster-nowheres-sclerous-closures
 >w
 You can only go north to the Horned Hedron, once the sardine is gone, or east back to Anger Range. The Handsome Sand Home blocks you west and south.
 
@@ -518,7 +520,7 @@ The only way you seem to be able to go is east to Anger Range.
 >warp
 Your score has just gone up by one point
 
-#+ttc-table-of-oyster-nowheres-sclerous-closures
+#+testcase-table-of-oyster-nowheres-sclerous-closures
 >w
 You can only go north to the Horned Hedron or east back to Anger Range. The Handsome Sand Home blocks you west and south.
 
@@ -535,24 +537,24 @@ You have more than one way to leave: north and east. So you'll need to specify w
 There are two unblocked exits: north and east to Anger Range.
 
 >score
-Score in a scenario: 29 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >search
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 30 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >enlarge
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 31 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >n
 /^Horned Hedron
 
-#ttc-table-of-oyster-nowheres-horned-hedron
+#testcase-table-of-oyster-nowheres-horned-hedron
 >e
 The main exit is south, though an area west is in disrepair. You can also go IN past the ol' trap once you disarm it, though you probably don't need the walleyes watching you try.
 
@@ -572,7 +574,7 @@ There are two unblocked exits: south to Sclerous Closures and west.
 >w
 /^Rascal Craals
 
-#ttc-table-of-oyster-nowheres-rascal-craals
+#testcase-table-of-oyster-nowheres-rascal-craals
 >w
 The round bay boundary blocks you from going any way but back east.
 
@@ -594,11 +596,11 @@ The only way you seem to be able to go is east to Horned Hedron.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 32 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >e
 
-#+ttc-table-of-oyster-nowheres-horned-hedron
+#+testcase-table-of-oyster-nowheres-horned-hedron
 >e
 The main exit is south, though you can go back west to the Rascal Craals. You can also go IN past the ol' trap once you disarm it, though you probably don't need the walleyes watching you try.
 
@@ -611,13 +613,13 @@ The main exit is south, though you can go back west to the Rascal Craals. You ca
 by one point
 
 >score
-Score in a scenario: 33 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >assuage
 by one point
 
 >score
-Score in a scenario: 34 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >ask haunter about ruby
 by one point
@@ -626,9 +628,9 @@ ascal Craals
 orned Hedron
 
 >score
-Score in a scenario: 35 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#+ttc-table-of-oyster-nowheres-horned-hedron
+#+testcase-table-of-oyster-nowheres-horned-hedron
 >e
 The main exit is south, and you daren't go west now the Use-Saga Sausage took care of things. You can also go IN past the ol' trap once you disarm it.
 
@@ -648,7 +650,7 @@ The Rascal Craals are inaccessible now that the Use-Saga Sausage has torn throug
 >patrol
 Your score has just gone up by one point
 
-#+ttc-table-of-oyster-nowheres-horned-hedron
+#+testcase-table-of-oyster-nowheres-horned-hedron
 >e
 The main exit is south, and you daren't go west now the Use-Saga Sausage took care of things. You can also go IN through the portal.
 
@@ -662,13 +664,13 @@ You have more than one way to leave: south, west and inside. So you'll need to s
 There are three unblocked exits: south to Sclerous Closures, west to Rascal Craals and inside.
 
 >score
-Score in a scenario: 36 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 # prime GT END DEN for later. Oh, and poke the table of nowheres, too!
 >in
 /^End Den
 
-#ttc-table-of-oyster-nowheres-end-den
+#testcase-table-of-oyster-nowheres-end-den
 >e
 You're disoriented here, but you can go back OUT to get to the Horned Hedron.
 
@@ -707,7 +709,7 @@ Mindless babble about mutually favorable transactions. Perhaps you can find one 
 >listen dialer
 You hear a hum from the dialer.
 
-#ttc-table-of-oyster-attacks-yapper
+#testcase-table-of-oyster-attacks-yapper
 >attack yapper
 Without scissors, it'd be tricky. Why, that papery yapper looks tough enough to take out multiple rock creatures!
 
@@ -715,19 +717,19 @@ Without scissors, it'd be tricky. Why, that papery yapper looks tough enough to 
 by one point
 
 >score
-Score in a scenario: 37 out of 45 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >prepay
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 38 out of 45 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-oyster-attacks-dialer
+#testcase-table-of-oyster-attacks-dialer
 >attack dialer
 That would only sabotage communications here. You need to sabotage the supplier.
 
-#ttc-table-of-oyster-nowheres-tenfold-teflond-den-loft
+#testcase-table-of-oyster-nowheres-tenfold-teflond-den-loft
 >e
 While you can go back outside, you can just finish things here, or maybe you can look around to get more points.
 
@@ -736,9 +738,9 @@ While you can go back outside, you can just finish things here, or maybe you can
 /^Plasm Lamps
 
 >score
-Score in a scenario: 39 out of 45 total points in the current region, Oyster. Lowest score to solve is 43. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-oyster-nowheres-plasm-lamps
+#testcase-table-of-oyster-nowheres-plasm-lamps
 >e
 It's you against the ant! There's no running, but it can't be too hard to defeat.
 
@@ -750,9 +752,9 @@ Aw, c'mon, the ant should be no problem.
 by one point
 
 >score
-Score in a scenario: 40 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
-#ttc-table-of-oyster-attacks-ant
+#testcase-table-of-oyster-attacks-ant
 >attack ant
 You poke at the ant, which keeps it at bay. You need something more simple, violent and direct.
 
@@ -760,7 +762,7 @@ You poke at the ant, which keeps it at bay. You need something more simple, viol
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 41 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 #verbcase goto-oyster-if-noun-is-plasm-lamps
 >gt plasm lamps
@@ -778,22 +780,22 @@ Your score has just gone up by one point
 The dialer is quiet. Your orders to DERAIL must've put it out of commission. Maybe you could fix it.
 
 >score
-Score in a scenario: 42 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >spin
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 43 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 45.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
 
 >revel
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 44 out of 45 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 45 points.
+Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. There are no secrets left to find here, so the score to win is {CURMAX} points.
 
-#+ttc-table-of-oyster-nowheres-tenfold-teflond-den-loft
+#+testcase-table-of-oyster-nowheres-tenfold-teflond-den-loft
 >e
 While you can go back outside, you can just finish things here, as you've done everything else you can.
 
@@ -803,5 +805,5 @@ Your score has just gone up by one point
 /^Strip of Profits
 
 >score
-Oyster (45/45)
+Oyster ({SCORE}/{MAX})
 
