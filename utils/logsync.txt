@@ -171,6 +171,7 @@ yob den>beyond
 # note that "all" is clipped in the table_shorten function
 all noon gag>along
 un road>around
+drudging ruin>during
 admits mist ad>amidst
 data dim mists>amidst
 ####cripple clipper

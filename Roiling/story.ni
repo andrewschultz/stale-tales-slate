@@ -206,10 +206,11 @@ Troves is an unsolved region. regnud of Troves is table of troves nudges. regana
 13/30=Creationism Reactionism
 ]
 
-Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 22. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of routes scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint request rejects. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs. matched item responses table of routes is table of routes matched item responses. readable table of routes is table of routes readables. unmatched topic responses table of routes is table of routes unmatched topic responses. ask x about x table of routes is table of routes ask x about x. misses-rule of routes is routes-misses rule. preeftable of routes is table of routes prefigurings. altroutes of routes is the routes-alt rule. parse-rule of routes is routes-parse rule.
+Routes is an unsolved region. regnud of Routes is table of routes nudges. regana of Routes is table of routes anagrams. reg-hint-rule of Routes is routes-hinting rule. goto-check of Routes is goto-routes rule. max-score of Routes is 23. min-score of Routes is 20. listen-rule of routes is listen-routes rule. smell-rule of routes is smell-routes rule. sleep-rule of routes is sleep-routes rule. swear-rule of routes is swear-routes rule. spechelp of routes is table of routes spechelp. scannotes of routes is table of routes scannotes. attack-table of routes is table of routes attacks. loc-scan-rule of routes is scan-routes-loc rule. hint-done-note table of routes is table of routes hint request rejects. nowhere-table of routes is table of routes nowheres. done reject table of routes is table of routes done rejects. [randomization rule of routes is randomize-routes rule.] hintobjstable of routes is table of routes hintobjs. matched item responses table of routes is table of routes matched item responses. readable table of routes is table of routes readables. unmatched topic responses table of routes is table of routes unmatched topic responses. ask x about x table of routes is table of routes ask x about x. misses-rule of routes is routes-misses rule. preeftable of routes is table of routes prefigurings. altroutes of routes is the routes-alt rule. parse-rule of routes is routes-parse rule.
 [LLP list:
 1/21=worst ad in Same Mesa
-2/22=without in Sonancy Canyons
+2/22=drudging ruin in Ripe Pier
+3/23=without in Sonancy Canyons
 ]
 
 Presto is an unsolved region. regnud of Presto is table of presto nudges. regana of Presto is table of presto anagrams. reg-hint-rule of Presto is presto-hinting rule. goto-check of Presto is goto-presto rule. max-score of presto is 41. min-score of presto is 28. listen-rule of presto is listen-presto rule. smell-rule of presto is smell-presto rule. sleep-rule of presto is sleep-presto rule. swear-rule of presto is swear-presto rule. spechelp of presto is table of presto spechelp. scannotes of presto is table of presto scannotes. attack-table of presto is table of presto attacks. loc-scan-rule of presto is scan-presto-loc rule. hint-done-note table of presto is table of presto hint request rejects. nowhere-table of presto is table of presto nowheres. done reject table of presto is table of presto done rejects. randomization rule of presto is randomize-presto rule. hintobjstable of presto is table of presto hintobjs. matched item responses table of presto is table of presto matched item responses. readable table of presto is table of presto readables. unmatched topic responses table of presto is table of presto unmatched topic responses. ask x about x table of presto is table of presto ask x about x. misses-rule of presto is presto-misses rule. preeftable of presto is table of presto prefigurings. altroutes of presto is the presto-alt rule. parse-rule of presto is presto-parse rule.
@@ -11119,11 +11120,20 @@ a-text of un road is "YRYYRR". b-text of un road is "YRYYRP". parse-text of un r
 
 book Ripe Pier
 
-Ripe Pier is a room in Routes. "You're at a shore. An admits-mist ad advertises what are, apparently, data-dim mists behind. You just can't see, anyway. It looks dangerous to enter without a plan. But something must be behind. Perhaps No-Lag Logan's boat!". roomnud of ripe pier is table of ripe pier nudges.
+Ripe Pier is a room in Routes. "You're at a shore. [if drudging ruin is in ripe pier]A drudging ruin in the background is just, well, there. But much more prominent is[else]There's[end if] an admits-mist ad advertising what are, apparently, data-dim mists behind. You just can't see, anyway. It looks dangerous to enter without a plan. But something must be behind. Perhaps No-Lag Logan's boat!". roomnud of ripe pier is table of ripe pier nudges.
 
 after looking in Ripe Pier:
 	set the pronoun it to admits mist ad;
 	continue the action;
+
+chapter bonus point drudging ruin
+
+the drudging ruin is LLPish vanishing scenery in Ripe Pier. description of drudging ruin is "It looks plain, storyless. It will be forgotten whether you can help it or not, with a tale imagined or otherwise. But that is up to you.". bore-check is the bore-drudging-ruin rule. bore-text is "The ruin is not worth visiting in detail. Perhaps there is a way to give it full peace with just one word. But it will not impede your quest either way."
+
+this is the bore-drudging-ruin rule:
+	if current action is entering, say "No. Onward." instead;
+
+a-text of drudging ruin is "RYRYRR". b-text of drudging ruin is "?Y?YRR". parse-text of drudging ruin is "x[sp]U[sp]R[sp]I[sp]x[sp]G". drudging ruin is parse-spoilable.
 
 chapter two ways out
 
@@ -22530,6 +22540,7 @@ this is the stores-misses rule:
 	if store W is in stores, say "[2drm of strip of profits][b]TOWERS[r] were in Store W.";
 
 this is the routes-misses rule:
+	if drudging ruin is in Ripe Pier, say "[2drm of Ripe Pier]you could've said [b]DURING[r] to start a tale about the drudging ruin.";
 	if worst ad is in Same Mesa, say "[2drm of same mesa]you could've tried to go [b]TOWARDS[r] the worst ad.";
 	if raptest patters are in Sonancy Canyons, say "[2drm of sonancy canyons]you could've done [b]WITHOUT[r] the content of the raptest patters.";
 

@@ -493,8 +493,12 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "dim"	130097088	--	--	"[all-dim]."
 "data"	128514743	--	--	"[all-dim]."
 "mists"	404725949	--	--	"[all-dim]."
+"ruin"	304329964	--	--	"[whole-drudru]."
+"drudging"	411587546	--	--	"[whole-drudru]."
 
 to say all-dim: say "You'll have to deal with the whole data-dim mists"
+
+to say whole-drudru: say "You need to consider the drudging ruin as a whole"
 
 chapter cripple clipper
 

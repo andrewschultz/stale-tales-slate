@@ -84,7 +84,7 @@ Routes (min)
 inside/against/astride/below/under/past/despite/across/opposite/above/from/beneath/until/around/along/amidst/athwart/between/through/beyond
 Routes (max)
 inside/against/astride/below/under/past/despite/across/opposite/above/from/beneath/until/around/along/amidst/athwart/between/through/beyond
-towards/without
+towards/during/without
 Presto (min)
 wont
 umph/pooh/drat/rats/ole/darn/whassup/bleep/bingo/there/syke/later/tough/capslock/mug/leaf/skid/cola/futon/keyboard/screen/reboot/sleep/compile/debug/sub

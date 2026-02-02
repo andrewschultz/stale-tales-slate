@@ -701,6 +701,11 @@ Just go <b>ALONG</b>.
 Well, it's also DA MIST, if you listen to Sad Tim. Some of his babbling leaves you red-eyed.
 One is thinking of DA MIST helps you feel more familiar, and you can go...
 <b>AMIDST</b>.
+#testcase-invisiclues-table-of-routes-anagrams-during
+?Can I do anything with/to the drudging ruin?
+Yes. But it's not necessary.
+You need a temporal preposition.
+<b>DURING</b>.
 >>CRIPPLE CLIPPER
 #testcase-invisiclues-table-of-routes-anagrams-athwart
 ?How do I need to go?

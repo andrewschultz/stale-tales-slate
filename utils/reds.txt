@@ -68,6 +68,8 @@ around,YRY?RR=oddrun=onaura
 along,??Y??=allno=ongag
 along,nogal,logan
 #ripe pier
+#qver of drudging ruin
+during,?Y?YRR=drudgi=ngruin
 #qver of data dim mists
 amidst,Y??RRR=datadi=mmists
 amidst,staimd
