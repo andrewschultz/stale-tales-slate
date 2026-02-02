@@ -15,6 +15,7 @@ from collections import defaultdict
 word_hash = defaultdict(list)
 
 write_to_file = False
+open_file_after = False
 
 nudge_out_file = "c:/writing/dict/hv.txt"
 
@@ -49,7 +50,8 @@ sts_hash = {
 rev_word = sorted(sts_hash, key=sts_hash.get, reverse = True)
 
 def usage():
-    print("Entering a number allows hash reverse-lookup. That is the only option so far.")
+    print("Entering a number allows hash reverse-lookup.")
+    print("fn/nf and f/o/of specify writing to the file.")
     sys.exit()
 
 def letters_only(my_word):
@@ -130,21 +132,33 @@ def pick_reverse_word(hash_to_see, max_letters = 8, cur_word = ""):
     return
 
 cmd_count = 1
+out_string = ''
 
 while cmd_count < len(sys.argv):
     arg = sys.argv[cmd_count]
     if arg.isdigit():
         pick_reverse_word(int(arg))
-    elif arg == 'f':
+    elif arg in ( 'f', 'fo', 'of' ):
         write_to_file = True
-    elif len(arg) > 3:
+        open_file_after = True
+    elif arg in ( 'fn', 'nf' ):
+        write_to_file = True
+        open_file_after = False
+    elif len(arg) > 3 or '`' in arg:
+        if '`' in arg:
+            arg = arg.replace('`', '')
         for x in arg.split(","):
             print(x, word_hash_match(x))
-            if write_to_file:
-                f = open(nudge_out_file, "a")
-                this_line = '"{}"\t{}\t--\t--\t"some text"\n'.format(x,word_hash_match(x))
-                f.write(this_line)
-                f.close()
+            out_string += '"{}"\t{}\t--\t--\t"some text"\n'.format(x,word_hash_match(x))
     else:
         usage()
     cmd_count += 1
+
+if out_string and write_to_file:
+    print("Appending to", nudge_out_file)
+    f = open(nudge_out_file, "a")
+    f.write(out_string)
+    f.close()
+
+if open_file_after:
+    mt.post_open(nudge_out_file)
