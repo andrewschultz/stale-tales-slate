@@ -52,7 +52,7 @@ by one point
 >undo
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 0 out of 45 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 45.
 
 #testcase-prerule-table-of-oyster-anagrams-pre-trolls-stroll-rule
 >stroll
@@ -133,19 +133,19 @@ Your score has just gone up by one point
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 2 out of 45 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
 >spit
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 3 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
 >unset
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 4 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
 #general death cases
 >inset
@@ -169,7 +169,7 @@ by one point
 --Another way to break the jukebox was to REMAP the perma-amper.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 5 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
 >calm clam
 by one point
@@ -183,7 +183,7 @@ Your score has just gone up by one point
 It's--well, beautiful, like you could take it and forget all about this quest.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 6 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
 >run
 Your score has just gone up by one point
@@ -194,7 +194,7 @@ Your score has just gone up by one point
 You can't cross Saccade Cascade on your own. One of the sabot boats would hit you. Or, if you went underwater, you'd fear strident tridents.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 7 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
 #testcase-prerule-table-of-oyster-anagrams-pre-oars-soar-rule
 >soar
@@ -235,7 +235,7 @@ Your score has just gone up by one point
 /^Fighter Freight
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 8 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
 >leap
 Your score has just gone up by one point
@@ -243,7 +243,7 @@ Your score has just gone up by one point
 /^Anger Range
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 9 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
 #testcase-prerule-table-of-oyster-anagrams-pre-tutor-trout-rule
 >tutor
@@ -293,7 +293,7 @@ you could've tried to SLANDER the snarled darnels.
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 11 out of 45 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 42.
 
 >misses
 !you could've tried to SLANDER the snarled darnels.
@@ -309,10 +309,10 @@ by one point
 If you listen or look the right way, you could figure where the eeks are coming from.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 12 out of 45 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 42.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 12 out of 45 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 42.
 
 >scan cans
 by one point
@@ -323,7 +323,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 13 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 42.
 
 >seek eeks
 by one point
@@ -340,7 +340,7 @@ Your score has just gone up by one point
 /^Lean Lane
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 14 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 41.
 
 >eat tea
 by one point
@@ -354,7 +354,7 @@ Your score has just gone up by one point
 It might be valuable if it weren't cut jaggedly in half. Where could the other half be?
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 15 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 41.
 
 >tend dent
 by one point
@@ -369,7 +369,7 @@ DEBUG INFO: min-up codepath
 At the moment, "it" means the raw red drawer, "him" means the trout, "her" means Aunt Tuna and "them" means the wipes.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 16 out of 45 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 41.
 
 >tutor trout
 by one point
@@ -384,7 +384,7 @@ Paw-R-Wrap has been a great commercial success in Yorpwald, appealing to two dem
 As for this piece of wrap, it's about two feet in diameter, all twisted up and thick enough to be covering something. But you don't have time to pop each bubble individually.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 17 out of 45 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 41.
 
 #testcase-prerule-table-of-oyster-anagrams-pre-warp-wrap-rule
 >warp
@@ -404,7 +404,7 @@ by one point
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 18 out of 45 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 41.
 
 >w
 >n
@@ -418,7 +418,7 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 19 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 #testcase-prerule-table-of-oyster-anagrams-pre-crate-react-rule
 >react
@@ -452,7 +452,7 @@ by one point
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 20 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 #+testcase-prerule-table-of-oyster-anagrams-pre-kiss-skis-rule
 >kiss
@@ -466,7 +466,7 @@ You would, but you would probably get hit with the crate. You need to anticipate
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 21 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 >kiss skis
 by one point
@@ -476,7 +476,7 @@ by one point
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 22 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 >bonk knob
 by one point
@@ -486,13 +486,13 @@ by one point
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 23 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 >snap
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 24 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 >in
 
@@ -513,7 +513,7 @@ It'd take strength and effort to move or pick through.
 Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 25 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 >drop prod
 Your score has just gone up by one point
@@ -523,14 +523,14 @@ Your score has just gone up by one point
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 26 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 >sweat
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 27 out of 45 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 41.
 
 #testcase-postrule-table-of-oyster-anagrams-post-sweat-waste-rule
 >x heaps
@@ -548,7 +548,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 28 out of 45 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 41.
 
 >abstract wipes to lean lane
 
@@ -581,7 +581,7 @@ DEBUG INFO: min-up codepath
 Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 29 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 >out
 
@@ -629,7 +629,7 @@ Nothing (significant) like that is in the immediate vicinity or region.
 You can SEARCH the arches now you've chased the sandier sardine away.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 30 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 >search arches
 by one point
@@ -644,7 +644,7 @@ You hope to have peered deeper for a vision, but it's too small. All you can mak
 >undo
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 31 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 >x gleaner
 !You see a map of all the paths in the Horned Hedron.
@@ -682,7 +682,7 @@ You may wish to re-examine the gleaner now it's changed.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 32 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 >n
 /^Horned Hedron
@@ -726,7 +726,7 @@ Your score has just gone up by one
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 33 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 #testcase-postrule-table-of-oyster-anagrams-post-bury-ruby-rule
 >x thin hint
@@ -754,7 +754,7 @@ It's a seven-foot tall sausage--or, rather, a stick figure of several sausages t
 At the moment, "it" means the Use-Saga Sausage, "him" means the Use-Saga Sausage, "her" means the Use-Saga Sausage and "them" means the weaselly walleyes.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 34 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 >assuage sausage
 by one point
@@ -764,7 +764,7 @@ by one point
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 35 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 >ask haunter about ruby
 by one point
@@ -773,7 +773,7 @@ ascal Craals
 orned Hedron
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 36 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 >patrol
 Your score has just gone up by one point
@@ -783,7 +783,7 @@ Your score has just gone up by one point
 Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 37 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 >in
 /^End Den
@@ -830,7 +830,7 @@ Your score has just gone up by one
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 38 out of 45 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 41.
 
 >prepay
 Your score has just gone up by one point
@@ -846,7 +846,7 @@ Nothing (significant) like that is in the immediate vicinity or region.
 You're quite glad you found it, even if you're not sure how or why to pull it, yet.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 39 out of 45 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 40.
 
 # note: the code says "if wipes are not moot" so you might think BANISH LANCE is more sensible, but in this case, I just want to make sure the code paths work.
 >banish wipes
@@ -878,7 +878,7 @@ by one point
 #testcase-postrule-table-of-oyster-anagrams-post-trample-ramplet-rule
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 40 out of 45 total points in the current region, Oyster. Lowest score to solve is 43. Maximum score available is 40.
 
 #let's test the special case where we TAN without PSALMing.
 #testcase-postrule-table-of-oyster-anagrams-post-tan-ant-rule
@@ -887,7 +887,7 @@ Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oy
 And yet... you feel you missed a style point. Perhaps the proper display before thwacking the ant, suitable to the locale.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 41 out of 45 total points in the current region, Oyster. Lowest score to solve is 43. Maximum score available is 39.
 >undo
 >undo
 
@@ -895,7 +895,7 @@ Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oy
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 41 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 40.
 
 >tan ant
 by one point
@@ -909,7 +909,7 @@ Your score has just gone up by one point
 Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 42 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 40.
 
 >derail
 Your score has just gone up by one point
@@ -923,7 +923,7 @@ PS'in.
 repaired dialer
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 43 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 40.
 
 #testcase-prerule-table-of-oyster-anagrams-pre-dialer-redial-rule
 >redial
@@ -947,7 +947,7 @@ Your score has just gone up by one
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 44 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 40.
 
 >au 0
 >redial dialer
@@ -961,7 +961,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. There are no secrets left to find here, so the score to win is {CURMAX} points.
+Score in a scenario: 45 out of 45 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 40 points.
 
 >redial
 Your score has just gone up by one point

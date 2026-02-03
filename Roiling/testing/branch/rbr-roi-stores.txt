@@ -12,16 +12,16 @@ file=reg-roi-stores-slider.txt,abbr=sli,desc=walkthrough with slider readings
 file=reg-roi-stores-hints.txt,abbr=hints/hin,desc=walkthrough with hints
 file=reg-roi-stores-verbs.txt,abbr=verbs,desc=walkthrough testing verbs
 
-}}MAX=11
-}}CURMAX=11
-}}SCORE=0
-}}CURMIN=3
+}#MAX=11
+}#CURMAX=11
+}#SCORE=0
+}#CURMIN=3
 
-}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
-}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. There are no secrets left to find here, so the score to win is {CURMAX} points.
-}$SCODONE=Score in a scenario: 11 out of 11 total points in the current region, Stores. You have access to all the sub-areas.
+}$SCOS=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Stores. Lowest score to solve is {#CURMIN}. Maximum score available is {#CURMAX}.
+}$SCOMAX=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Stores. There are no secrets left to find here, so the score to win is {#CURMAX} points.
+}$SCODONE=Score in a scenario: {#CURMAX} out of {#CURMAX} total points in the current region, Stores. You have access to all the sub-areas.
 
-}$MINUP=DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {CURMIN}.
+}$MINUP=DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {#CURMIN}.
 
 ## *FILE
 

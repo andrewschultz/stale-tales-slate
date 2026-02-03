@@ -14,7 +14,7 @@
 >posf
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 0 out of 45 total points in the current region, Oyster. Lowest score to solve is 29. Maximum score available is 45.
 
 >slon
 
@@ -55,19 +55,19 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 2 out of 45 total points in the current region, Oyster. Lowest score to solve is 30. Maximum score available is 42.
 
 >spit
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 3 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
 >unset
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 4 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
 >stroll
 by one point
@@ -75,7 +75,7 @@ by one point
 /^Olde Lode
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 5 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
 #testcase-slider-table-of-oyster-anagrams-calm
 >acml
@@ -85,7 +85,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 6 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
 #testcase-slider-table-of-oyster-anagrams-run
 >nru
@@ -97,7 +97,7 @@ Your score has just gone up by one point
 /^Disease Seaside
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 7 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
 #testcase-slider-table-of-oyster-anagrams-fart
 >aftr
@@ -117,7 +117,7 @@ Your score has just gone up by one point
 /^Fighter Freight
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 8 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
 #testcase-slider-table-of-oyster-anagrams-leap
 >elpa
@@ -129,7 +129,7 @@ Your score has just gone up by one point
 /^Anger Range
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 9 out of 45 total points in the current region, Oyster. Lowest score to solve is 31. Maximum score available is 42.
 
 #testcase-slider-table-of-oyster-anagrams-spike
 >pskei
@@ -150,7 +150,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 11 out of 45 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 42.
 
 >e
 /^Hardest Trashed Dearths
@@ -163,7 +163,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 12 out of 45 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 42.
 
 #testcase-slider-table-of-oyster-anagrams-seek
 >eske
@@ -174,14 +174,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 12 out of 45 total points in the current region, Oyster. Lowest score to solve is 32. Maximum score available is 42.
 
 >scan
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 13 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 42.
 
 >seek
 Your score has just gone up by one point
@@ -189,7 +189,7 @@ Your score has just gone up by one point
 /^Lean Lane
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 14 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 41.
 
 #testcase-slider-table-of-oyster-anagrams-tend
 >etdn
@@ -203,14 +203,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 15 out of 45 total points in the current region, Oyster. Lowest score to solve is 33. Maximum score available is 41.
 
 >tend
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 16 out of 45 total points in the current region, Oyster. Lowest score to solve is 34. Maximum score available is 41.
 
 #testcase-slider-table-of-oyster-anagrams-tutor
 >utort
@@ -224,13 +224,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 17 out of 45 total points in the current region, Oyster. Lowest score to solve is 35. Maximum score available is 41.
 
 >swipe
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 18 out of 45 total points in the current region, Oyster. Lowest score to solve is 36. Maximum score available is 41.
 
 >w
 >n
@@ -261,13 +261,13 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 19 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 >trace
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 20 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 #testcase-slider-table-of-oyster-anagrams-react
 >ercta
@@ -277,25 +277,25 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 21 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 >kiss
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 22 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 >bonk
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 23 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 >snap
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 24 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 >in
 
@@ -309,7 +309,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 25 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 #testcase-slider-table-of-oyster-anagrams-drop
 >rdpo
@@ -319,7 +319,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 26 out of 45 total points in the current region, Oyster. Lowest score to solve is 37. Maximum score available is 41.
 
 #testcase-slider-table-of-oyster-anagrams-sweat
 >wsate
@@ -330,7 +330,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 27 out of 45 total points in the current region, Oyster. Lowest score to solve is 38. Maximum score available is 41.
 
 #testcase-slider-table-of-oyster-anagrams-shape
 >hspea
@@ -341,7 +341,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 28 out of 45 total points in the current region, Oyster. Lowest score to solve is 39. Maximum score available is 41.
 
 #testcase-slider-table-of-oyster-anagrams-clean
 >lcane
@@ -352,7 +352,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 29 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 >out
 
@@ -373,13 +373,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 30 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 >search
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 31 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 #testcase-slider-table-of-oyster-anagrams-enlarge
 >neergal
@@ -389,7 +389,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 32 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 #testcase-slider-table-of-oyster-anagrams-reangle
 >ereglna
@@ -409,7 +409,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 33 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 >e
 
@@ -426,7 +426,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 34 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 #testcase-slider-table-of-oyster-anagrams-assuage
 >saagseu
@@ -436,7 +436,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 35 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 >ask haunter about ruby
 by one point
@@ -445,7 +445,7 @@ ascal Craals
 orned Hedron
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 36 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 #testcase-slider-table-of-oyster-anagrams-patrol
 >aprtlo
@@ -455,7 +455,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 37 out of 45 total points in the current region, Oyster. Lowest score to solve is 40. Maximum score available is 41.
 
 >x gleaner
 
@@ -471,13 +471,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 38 out of 45 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 41.
 
 >prepay
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 39 out of 45 total points in the current region, Oyster. Lowest score to solve is 41. Maximum score available is 40.
 
 #testcase-slider-table-of-oyster-anagrams-trample
 >rtmalep
@@ -488,7 +488,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 /^Plasm Lamps
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 40 out of 45 total points in the current region, Oyster. Lowest score to solve is 43. Maximum score available is 40.
 
 #testcase-slider-table-of-oyster-anagrams-psalm
 >splma
@@ -502,13 +502,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 41 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 40.
 
 >tan
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 42 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 40.
 
 #testcase-slider-table-of-oyster-anagrams-revel
 >erlve
@@ -522,7 +522,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 43 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 40.
 
 #testcase-slider-table-of-oyster-anagrams-spin
 >psni
@@ -532,7 +532,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 44 out of 45 total points in the current region, Oyster. Lowest score to solve is 44. Maximum score available is 40.
 
 #testcase-slider-table-of-oyster-anagrams-redial
 >eridla
@@ -543,7 +543,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. There are no secrets left to find here, so the score to win is {CURMAX} points.
+Score in a scenario: 45 out of 45 total points in the current region, Oyster. There are no secrets left to find here, so the score to win is 40 points.
 
 >redial
 Your score has just gone up by one point

@@ -22,15 +22,15 @@ ALSO-IGNORE:c,t
 
 * ordeal-reload-thru
 
-}}MAX=15
-}}CURMAX=15
-}}SCORE=0
-}}CURMIN=8
+}#MAX=15
+}#CURMAX=15
+}#SCORE=0
+}#CURMIN=8
 
-}$SCOS=Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
-}$SCOMAX=Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. There are no secrets left to find here, so the score to win is {$CURMAX} points.
-}$MINUP=DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
-}$SCOMISS=Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. There are no secrets left to find here, so the score to win is {$CURMIN} points--you missed some extra stuff you can't go back for.
+}$SCOS=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {#CURMIN}. Maximum score available is {#CURMAX}.
+}$SCOMAX=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Ordeal Reload. There are no secrets left to find here, so the score to win is {#CURMAX} points.
+}$MINUP=DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {#CURMIN}.
+}$SCOMISS=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Ordeal Reload. There are no secrets left to find here, so the score to win is {#CURMIN} points--you missed some extra stuff you can't go back for.
 
 >au 2
 >posf

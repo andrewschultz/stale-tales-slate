@@ -24,14 +24,14 @@ file=reg-roi-others-verbs.txt,abbr=verbs,desc=walkthrough testing verbs
 
 ALSO-IGNORE:t,c
 
-}}MAX=47
-}}CURMAX=47
-}}SCORE=0
-}}CURMIN=26
+}#MAX=47
+}#CURMAX=47
+}#SCORE=0
+}#CURMIN=26
 
-}$SCOS=You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, though you only need {$CURMIN} to win.
-}$SCONOFIND=You have {$SCORE} of {$MAX} total points for the post-Elvira Others region.\nThere are no fruits left to find or give back to Curtis.
-}$SCOVERYLAST=You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
+}$SCOS=You have {#SCORE} of {#MAX} total points for the post-Elvira Others region, though you only need {#CURMIN} to win.
+}$SCONOFIND=You have {#SCORE} of {#MAX} total points for the post-Elvira Others region.\nThere are no fruits left to find or give back to Curtis.
+}$SCOVERYLAST=You have {#SCORE} of {#MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win. There are no fruits left to find or give back to Curtis.
 
 ## *FILE
 
@@ -3132,7 +3132,7 @@ by one point
 
 @min
 # let's check "here/valence enclave" conditional text in the score
-You have {$SCORE} of {$MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win.
+You have {#SCORE} of {#MAX} total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win.
 You can't get the maximum score, since you used the arugula and missed a chance for something obscure with the sonic icons.
 >s
 >score

@@ -81,7 +81,7 @@ It's good to be on anagramming terms with the book's title, but maybe you would 
 It's good to be on anagramming terms with the book's title, but maybe you would be better off feeling in tune with the author, because the author does seem to have a personal anecdote for every general principle.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 0 out of 30 total points in the current region, Troves. Lowest score to solve is 17. Maximum score available is 30.
 
 #testcase-table-of-troves-spechelp-pa-egg-pea
 >gaep
@@ -103,7 +103,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 1 out of 30 total points in the current region, Troves. Lowest score to solve is 18. Maximum score available is 30.
 
 #testcase-table-of-troves-done-rejects-pa-egg-pea
 >gaep
@@ -134,7 +134,7 @@ RATES is written on the tears taser, in red.
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 2 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
 
 #testcase-table-of-troves-spechelp-eh-at-heat
 >haet
@@ -155,7 +155,7 @@ Well, it's only four letters, and you're not sure whether to feel glad things st
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 3 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 30.
 
 #+testcase-mistake-roiling-real-hot
 >real hot
@@ -190,7 +190,7 @@ Your score has just gone up by one point
 /^Bustle Sublet
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 4 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 29.
 
 #testcase-mistake-roiling-pots
 >pots
@@ -289,7 +289,7 @@ You can't just make things obverse by wanting them to be. But if change comes wi
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 5 out of 30 total points in the current region, Troves. Lowest score to solve is 19. Maximum score available is 29.
 
 #testcase-table-of-troves-spechelp-stop-post
 >stpo
@@ -313,7 +313,7 @@ Those question marks ... hmm. Oh, you get it now. Not super-sneaky, but the muss
 >surmise
 Your score has just gone up by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 6 out of 30 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 29.
 
 #testcase-table-of-troves-scannotes-stop-post
 >scan stop post
@@ -331,7 +331,7 @@ Your score has just gone up by one point
 /^Boarded Roadbed
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 7 out of 30 total points in the current region, Troves. Lowest score to solve is 20. Maximum score available is 28.
 
 #testcase-table-of-troves-scannotes-a-sty-tasty-say
 >scan sty
@@ -359,7 +359,7 @@ YAY STATS is nonsensically scrawled in red. Or maybe YAYS TATS was the business 
 >stay
 by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 8 out of 30 total points in the current region, Troves. Lowest score to solve is 21. Maximum score available is 28.
 
 #testcase-table-of-troves-done-rejects-a-sty-tasty-say
 >stya
@@ -438,7 +438,7 @@ That question mark is perhaps, um, clear if you think about it.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 10 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 28.
 
 #+testcase-mistake-roiling-norse
 >norse
@@ -481,7 +481,7 @@ by one point
 /^Drain Nadir
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 11 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 26.
 
 >reclla
 That's not something you can say, do or see here.
@@ -529,7 +529,7 @@ It's an IRES PAD, not just a pad.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 12 out of 30 total points in the current region, Troves. Lowest score to solve is 22. Maximum score available is 26.
 
 #testcase-table-of-troves-spechelp-large-regal-lager
 >glaer
@@ -559,7 +559,7 @@ Your eyes gloss over all but the red name, ERGAL AGLER.
 >glare
 Your score has just gone up by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 13 out of 30 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 26.
 
 #testcase-table-of-drain-nadir-nudges-glare
 >glaer
@@ -602,7 +602,7 @@ Your score has just gone up by one point
 /^Boredom Bedroom
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 14 out of 30 total points in the current region, Troves. Lowest score to solve is 23. Maximum score available is 25.
 
 #testcase-table-of-boredom-bedroom-nudges-shmoe
 >shmeo
@@ -678,13 +678,13 @@ The leapers almost seem to dance around for a bit.
 >relapse
 Your score has just gone up by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 15 out of 30 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 25.
 
 >bolster
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 16 out of 30 total points in the current region, Troves. Lowest score to solve is 24. Maximum score available is 25.
 
 #testcase-table-of-boredom-bedroom-nudges-bloters
 >bloters
@@ -715,7 +715,7 @@ Perhaps they know their trade, well, but you need to, too.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 17 out of 30 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 25.
 
 #+testcase-table-of-boredom-bedroom-nudges-amrest
 >amrest
@@ -751,7 +751,7 @@ Your score has just gone up by one point
 /^Browse Bowers
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 18 out of 30 total points in the current region, Troves. Lowest score to solve is 25. Maximum score available is 23.
 
 #testcase-table-of-browse-bowers-nudges-divorce
 >divorec
@@ -843,7 +843,7 @@ Your score has just gone up by one point
 /^Econ-Cone
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 20 out of 30 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 22.
 
 #testcase-mistake-roiling-once
 >once
@@ -904,7 +904,7 @@ You redden at the thought of mystical lands that aren't relevant to the here and
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 21 out of 30 total points in the current region, Troves. Lowest score to solve is 26. Maximum score available is 22.
 
 #testcase-mistake-roiling-penrod
 >penrod
@@ -947,7 +947,7 @@ Hmm, along with the information for scanning Trevis, you might really have somet
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 22 out of 30 total points in the current region, Troves. Lowest score to solve is 27. Maximum score available is 22.
 
 #+testcase-mistake-roiling-once
 >once
@@ -984,7 +984,7 @@ Ideas flash through your mind. Wow! That's what art can do! But ... nothing conc
 
 >ascertain
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 23 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 22.
 
 #testcase-table-of-troves-done-rejects-sectarian-craniates
 >craniatse
@@ -1042,7 +1042,7 @@ Your score has just gone up by one point
 /^Upscale Capsule
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 24 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 20.
 
 #testcase-mistake-roiling-fren
 >fren
@@ -1073,7 +1073,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the red vees. That's
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 25 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 20.
 
 #testcase-mistake-roiling-lsat
 >lsat
@@ -1150,7 +1150,7 @@ Hmm. Well, four letters can't be bad. The vowel must be in one of those two plac
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 26 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 20.
 
 #testcase-table-of-troves-readables-creationism-reactionism
 >read creationism
@@ -1266,17 +1266,17 @@ You seem to need to force yourself to be more whimsical. Which seems contradicto
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 27 out of 30 total points in the current region, Troves. Lowest score to solve is 28. Maximum score available is 20.
 
 >resist
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 28 out of 30 total points in the current region, Troves. Lowest score to solve is 29. Maximum score available is 20.
 
 >romanticise
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. There are no secrets left to find here, so the score to win is {CURMAX} points.
+Score in a scenario: 29 out of 30 total points in the current region, Troves. There are no secrets left to find here, so the score to win is 20 points.
 
 #testcase-table-of-upscale-capsule-nudges-marble
 >marbel

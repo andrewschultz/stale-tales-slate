@@ -14,14 +14,14 @@ file=reg-roi-presto-slider.txt,abbr=sli,desc=walkthrough with slider readings
 file=reg-roi-presto-hints.txt,abbr=hints/hin/spoi,desc=walkthrough with hints
 file=reg-roi-presto-verbs.txt,abbr=verbs,desc=walkthrough testing verbs
 
-}}MAX=41
-}}CURMAX=41
-}}SCORE=0
-}}CURMIN=28
+}#MAX=41
+}#CURMAX=41
+}#SCORE=0
+}#CURMIN=28
 
-}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
-}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. There are no secrets left to find here, so the score to win is {CURMAX} points.
-}$SCOSOLV=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto.
+}$SCOS=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Presto. Lowest score to solve is {#CURMIN}. Maximum score available is {#CURMAX}.
+}$SCOMAX=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Presto. There are no secrets left to find here, so the score to win is {#CURMAX} points.
+}$SCOSOLV=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Presto.
 
 ALSO-IGNORE:t
 

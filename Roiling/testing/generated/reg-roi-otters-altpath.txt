@@ -20,7 +20,7 @@
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 1 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 38.
 
 >l
 /^Burnt Brunt
@@ -32,7 +32,7 @@ They crackle with energy and possibilities as you take them. Perhaps there is mo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 2 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >w
 /^Disowned Downside
@@ -41,18 +41,18 @@ Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ot
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 3 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >angrily
 Your score has just gone up by one point.
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 4 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >blearily
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 5 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 >au 0
 
 >1
@@ -100,13 +100,13 @@ You also feel there's something more to do here, if you want, but isn't critical
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 6 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >else
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 7 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >misses
 !--you could've said ALTHOUGH to dissolve the ghoul hat, then said ERGO to get rid of the Gore Ogre and gain Mr. Lee's trust.
@@ -131,7 +131,7 @@ min-up
 >unless
 by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 8 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 >misses
 !--you could've dispelled the "Sullenness, Us" voices in Loop Pool after satisfying the eels by saying UNLESS.
 
@@ -146,34 +146,34 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 9 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >ergo
 by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 10 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >however
 by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 11 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 >n
 
 >atom
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 12 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >open
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 13 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >e
 
@@ -199,13 +199,13 @@ by one point
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 14 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >remotely
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 15 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >thisalt
 --you could've made the imp act BRUTELY, and the whiners could've spoken
@@ -217,7 +217,7 @@ Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ot
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 16 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >garbed
 by one point
@@ -263,19 +263,19 @@ PAROLED
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 17 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >paroled
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 18 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >artsy
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 19 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >l
 /^Blest Belts
@@ -284,7 +284,7 @@ Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ot
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 20 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >s
 >s
@@ -311,14 +311,14 @@ They find another place where rioters roister.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 21 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >joltily
 Your score has just gone up by one point
 They find another place where rioters roister.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 22 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >thisalt
 --you could've made the imp act BRUTELY, and the whiners could've spoken STOICALLY.
@@ -330,7 +330,7 @@ Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ot
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 23 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >snipe
 !min-up
@@ -383,7 +383,7 @@ min-up
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 24 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >hornet
 by one point
@@ -393,13 +393,13 @@ by one point
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 25 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >racoon
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 26 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >misses
 --you could've turned the pines in Perverse Preserve into a snipe.
@@ -415,7 +415,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 27 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >n
 >n
@@ -423,19 +423,19 @@ Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ot
 >basically
 by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 28 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >sable
 by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 29 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >w
 
 >actually
 by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 30 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >w
 /^Reclusion Inclosure
@@ -444,40 +444,40 @@ Score in a scenario: {SCORE} out of {MAX} total points in the current region, Ot
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 31 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >honestly
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 32 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 # the cinders are moved to the end to test the above case: do we have a chance to get all the points?
 >rescind
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 33 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
 
 >raptor
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 34 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 35.
 
 >decurse
 The EDUCERS, US Creed crumbles as you get a bit creative with your words until nothing's left. You think back at how you thought up the word which doesn't quite appear in a dictionary, but maybe it could. This sort of thing is useful for fighting back, or trying to identify feelings or views you can't quite express. They're out there in good times and bad. Maybe how you found this will provide a blueprint many, many years later (you hope it's many years) once Elvira's long since history.
 First, though, to make her history.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
+Score in a scenario: 35 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 35 points.
 
 >quickly
 The medals clink together. You feel infused with speed. Even your fats feel fast.
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
+Score in a scenario: 36 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 35 points.
 
 #this is how we get rid of Elvira
 >w
@@ -493,12 +493,12 @@ Your score has just gone up by one point
 
 >score
 
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
+Score in a scenario: 37 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 35 points.
 
 >w
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
+Score in a scenario: 37 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 35 points.
 
 >misses
 !otters

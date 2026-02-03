@@ -27,7 +27,7 @@ Whoah! Bangish bashing at the isolani liaison!
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 1 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
 >satchel
 Your score has just gone up by one point.
@@ -57,13 +57,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 You realize a basement is the sort of thing that would be below, even if, once you get there, it's called something different.
 Your score has just gone up by two points
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
 >stable
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 5 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 9. Maximum score available is 15.
 
 >in
 
@@ -81,25 +81,25 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >undo
 
 >chimney
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 10.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 6 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 10. Maximum score available is 15.
 
 >painting
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 7 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 11. Maximum score available is 15.
 
 >in
 /^Farming Framing
 
 >stair
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 12.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 8 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 12. Maximum score available is 15.
 
 >in
 /^Dusty Study
@@ -112,10 +112,10 @@ Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, 
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >ramp
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 13.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 9 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 13. Maximum score available is 15.
 
 >d
 /^Largely All-Grey Gallery
@@ -169,7 +169,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 in Manor! You've found all the secrets here. You can just exit the gallery now, but it'd be a good idea to examine the settler, first.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 10 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 >x settler
 
@@ -183,7 +183,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 11 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 >3
 Elmo checks you for a second. "You sure you know how to use the settler?"
@@ -207,20 +207,20 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
 
 >stapler
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
 
 >put staple in stapler
 
 >staple aperture
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
 
 >scepter
 The Respect Specter coughs.

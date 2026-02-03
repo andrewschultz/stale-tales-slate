@@ -57,23 +57,23 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 1 out of 11 total points in the current region, Stores. Lowest score to solve is 4. Maximum score available is 11.
 
 >nestor
 Your score has just gone up by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 5. Maximum score available is 11.
 
 >tokers
 Your score has just gone up by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 6. Maximum score available is 11.
 
 >enter steaming
 /^Cruelest Lectures
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
 #testcase-slider-table-of-stores-anagrams-outside
 >uostdei
@@ -84,45 +84,45 @@ Your score has just gone up by one point
 !DEBUG INFO: min-up codepath
 #this is because we already added the min-point listening to the lecturer. Once you're in Cruelest Lecturers, you need the point scoring activity to get out.
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 4 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
 >routes
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 5 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
 >troves
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 6 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
 >towers
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 7 out of 11 total points in the current region, Stores. Lowest score to solve is 8. Maximum score available is 10.
 
 >oyster
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 8 out of 11 total points in the current region, Stores. Lowest score to solve is 9. Maximum score available is 9.
 
 >others
 Your score has just gone up by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 9.
 
 >presto
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. There are no secrets left to find here, so the score to win is {CURMAX} points.
+Score in a scenario: 10 out of 11 total points in the current region, Stores. There are no secrets left to find here, so the score to win is 9 points.
 
 >otters
 Your score has just gone up by one point
 !DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 11 out of 11 total points in the current region, Stores. You have access to all the sub-areas.
+Score in a scenario: 9 out of 9 total points in the current region, Stores. You have access to all the sub-areas.
 

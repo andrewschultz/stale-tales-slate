@@ -274,7 +274,7 @@ You don't need to break anything up, medieval or otherwise. You're trying to bri
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 1 out of 11 total points in the current region, Stores. Lowest score to solve is 4. Maximum score available is 11.
 
 #testcase-table-of-stores-done-rejects-store-b
 >sorbte
@@ -316,7 +316,7 @@ They are who they are. You should maybe try to get their friend back.
 >nestor
 Your score has just gone up by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 2 out of 11 total points in the current region, Stores. Lowest score to solve is 5. Maximum score available is 11.
 
 #+testcase-mistake-roiling-stoner
 >stoner
@@ -340,7 +340,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store K. That's a de
 >tokers
 Your score has just gone up by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 6. Maximum score available is 11.
 
 #+testcase-table-of-strip-of-profits-nudges-toker
 >tokre
@@ -368,7 +368,7 @@ The hubs bush is too sturdy. You can't escape the Strip of Profits.
 /^Cruelest Lectures
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 3 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
 #testcase-mistake-roiling-hear-bs-hear-b-s
 >hear bs
@@ -489,7 +489,7 @@ Your score has just gone up by one point
 !DEBUG INFO: min-up codepath
 #this is because we already added the min-point listening to the lecturer. Once you're in Cruelest Lecturers, you need the point scoring activity to get out.
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 4 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
 #testcase-mistake-roiling-tortes
 >tortes
@@ -510,7 +510,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store U. That's a de
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 5 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
 #testcase-table-of-stores-done-rejects-course-source
 >routse
@@ -543,7 +543,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store V. That's a de
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 6 out of 11 total points in the current region, Stores. Lowest score to solve is 7. Maximum score available is 11.
 
 #testcase-table-of-stores-done-rejects-tastee-estate
 >trovse
@@ -578,7 +578,7 @@ WESTOR is the name of the company that built this. They used the SET-ROW method.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 7 out of 11 total points in the current region, Stores. Lowest score to solve is 8. Maximum score available is 10.
 
 #testcase-table-of-stores-done-rejects-truster-turrets
 >towesr
@@ -615,7 +615,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store Y. That's a de
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 8 out of 11 total points in the current region, Stores. Lowest score to solve is 9. Maximum score available is 9.
 
 #testcase-table-of-stores-done-rejects-balancer-barnacle
 >oystre
@@ -652,7 +652,7 @@ E. S. Roth.
 >others
 Your score has just gone up by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 9.
 
 #testcase-table-of-stores-done-rejects-throes-hoster
 >othesr
@@ -675,7 +675,7 @@ I guess it's a trope that something with a trope might help you with the general
 
 >presto
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Stores. There are no secrets left to find here, so the score to win is {CURMAX} points.
+Score in a scenario: 10 out of 11 total points in the current region, Stores. There are no secrets left to find here, so the score to win is 9 points.
 
 #testcase-table-of-strip-of-profits-nudges-odorant
 >odoratn
@@ -701,7 +701,7 @@ Your score has just gone up by one point
 !DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 11 out of 11 total points in the current region, Stores. You have access to all the sub-areas.
+Score in a scenario: 9 out of 9 total points in the current region, Stores. You have access to all the sub-areas.
 
 #testcase-table-of-stores-done-rejects-solid-idols
 >ottesr

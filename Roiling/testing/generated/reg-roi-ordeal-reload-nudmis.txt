@@ -194,7 +194,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the palm. That's a d
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 1 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
 #testcase-table-of-ordeal-reload-spechelp-latches
 >satchle
@@ -439,7 +439,7 @@ Passage up is unimpeded. The MEET-BANS beams net is in the past.
 You realize a basement is the sort of thing that would be below, even if, once you get there, it's called something different.
 Your score has just gone up by two points
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
 # here we test knocking out the tables from the Farming Framing
 >d
@@ -512,10 +512,10 @@ A bleat: "tableS!"
 Subpoenas are subpoenas. The law is the law. You don't know any lawyers good enough to wiggle out with THEIR form of word-twisting.
 
 >stable
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 5 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 9. Maximum score available is 15.
 
 #testcase-table-of-ordeal-reload-nudges-stable
 >stabel
@@ -537,10 +537,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from MY NICHE. That's a d
 You wouldn't want to collapse the whole ceiling, but maybe the words MY NICHE could be changed.
 
 >chimney
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 10.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 6 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 10. Maximum score available is 15.
 
 #+testcase-table-of-dusty-study-nudges-ceiling
 >ceilign
@@ -602,10 +602,10 @@ The books could use some changing. But you're better off making Yorpwald itself 
 The books could use some changing. But you're better off making Yorpwald itself safe for art, good or bad, first.
 
 >painting
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 7 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 11. Maximum score available is 15.
 
 #testcase-table-of-dusty-study-nudges-abstract
 >abstratc
@@ -679,10 +679,10 @@ You don't need to riff on any location names to win the game, unless there's not
 If you collapsed the girding ridging, which you can't, the shouty youths would hear something and be after you.
 
 >stair
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 12.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 8 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 12. Maximum score available is 15.
 
 #+testcase-mistake-roiling-astir
 >astir
@@ -730,10 +730,10 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the pram. That's a d
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >ramp
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 13.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 9 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 13. Maximum score available is 15.
 
 #testcase-table-of-ordeal-reload-done-rejects-ramp
 >rapm
@@ -908,7 +908,7 @@ Now, now! A Roiling Original is strictly about logic! Nothing frivolous, if you 
 in Manor! You've found all the secrets here. You can just exit the gallery now, but it'd be a good idea to examine the settler, first.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 10 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 #+testcase-table-of-largely-all-grey-gallery-nudges-bni
 >bin
@@ -998,7 +998,7 @@ It's a rifle, not a gun. Besides, you don't need a gnu-sance.
 by one point
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 11 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 #+testcase-table-of-largely-all-grey-gallery-nudges-elmo
 >elom
@@ -1090,7 +1090,7 @@ You're on your own. Perhaps you'd be better off twiddling the plates to get on w
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
 
 #+testcase-table-of-carven-cavern-nudges-terrain
 >terrani
@@ -1115,7 +1115,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the plaster psalter.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
 
 #+testcase-table-of-carven-cavern-nudges-terrain
 >terrani
@@ -1142,7 +1142,7 @@ You're on your own. Perhaps you'd be better off making use of the staple to get 
 >staple aperture
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
 
 #+testcase-table-of-carven-cavern-nudges-aperture
 >apertuer

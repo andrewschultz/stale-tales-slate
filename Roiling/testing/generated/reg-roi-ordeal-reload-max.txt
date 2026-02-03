@@ -112,7 +112,7 @@ You wrote some notes about the Tagged Gadget from Shuffling Around in here, abou
 FOURTH WALL NOTE: if you solved whatever is behind Store P, U, V, W, or Y in an early release, you can type the final command to bypass that area, though each area has been substantially upgraded since release 3. Also, the final command changed between versions for some areas, because they were (hopefully) improved, so you can use either. The game will warn you if you used an old one.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 1 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
 >satchel
 Your score has just gone up by one point.
@@ -191,7 +191,7 @@ Shortcut command to turn slider on.
 You realize a basement is the sort of thing that would be below, even if, once you get there, it's called something different.
 Your score has just gone up by two points
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 4 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
 # here we test a huge loop for a different warning message
 >chimney
@@ -242,10 +242,10 @@ It leads up to the Farming Framing.
 >undo
 
 >stable
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 9.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 5 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 9. Maximum score available is 15.
 
 #testcase-postrule-table-of-ordeal-reload-anagrams-post-tables-stable-rule
 >in
@@ -253,10 +253,10 @@ Farming Framing
 >undo
 
 >chimney
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 10.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 6 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 10. Maximum score available is 15.
 
 #testcase-postrule-table-of-ordeal-reload-anagrams-post-my-niche-chimney-rule
 >u
@@ -264,10 +264,10 @@ Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, 
 >undo
 
 >painting
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 11.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 7 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 11. Maximum score available is 15.
 
 >in
 /^Farming Framing
@@ -280,10 +280,10 @@ Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, 
 To put spaces in letters settler readings, type SPACEON or SON. NOSPACE or NOS reverses this.
 
 >stair
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 12.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 8 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 12. Maximum score available is 15.
 
 >in
 /^Dusty Study
@@ -292,10 +292,10 @@ Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, 
 /^Highest Heights
 
 >ramp
-DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now {$CURMIN}.
+DEBUG INFO: min-up codepath--point likely added in carry out fliptoing rule on LLPish item. Min-score now 13.
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 9 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 13. Maximum score available is 15.
 
 #testcase-postrule-table-of-ordeal-reload-anagrams-post-pram-ramp-rule
 >in
@@ -320,7 +320,7 @@ You look at your settler and realize you didn't really EXAMINE it. Maybe you sho
 !Hands up
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 10 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 >x settler
 
@@ -348,7 +348,7 @@ by one point
 Lo, a guide! Dialogue!
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 11 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 >2
 DEBUG INFO: current quip = showset-quip.
@@ -436,13 +436,13 @@ You can use the command XTRA TRAX (or XTRA or TRAX) to toggle tracking the right
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
 
 >stapler
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
 
 #testcase-postrule-table-of-ordeal-reload-anagrams-post-psalter-stapler-rule
 >x departure
@@ -453,7 +453,7 @@ The apertured departure is currently not wide enough to enter.
 >staple aperture
 
 >score
-Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Ordeal Reload. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
+Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
 
 #testcase-table-of-notepad-entries-asking
 >pad asking

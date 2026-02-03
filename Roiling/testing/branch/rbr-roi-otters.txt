@@ -18,8 +18,8 @@ file=reg-roi-otters-verbs.txt,abbr=verbs,desc=walkthrough testing verbs
 }}SCORE=0
 }}CURMIN=25
 
-}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
-}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {CURMAX} points.
+}$SCOS=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is {#CURMAX}.
+}$SCOMAX=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {#CURMAX} points.
 
 ALSO-IGNORE:t
 

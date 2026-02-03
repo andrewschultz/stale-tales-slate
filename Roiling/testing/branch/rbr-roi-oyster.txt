@@ -12,14 +12,14 @@ file=reg-roi-oyster-slider.txt,abbr=sli,desc=walkthrough with slider readings
 file=reg-roi-oyster-hints.txt,abbr=hints/hin,desc=walkthrough with hints
 file=reg-roi-oyster-verbs.txt,abbr=verbs,desc=walkthrough testing verbs
 
-}}MAX=45
-}}CURMAX=45
-}}SCORE=0
-}}CURMIN=29
+}#MAX=45
+}#CURMAX=45
+}#SCORE=0
+}#CURMIN=29
 
-}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
-}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster. There are no secrets left to find here, so the score to win is {CURMAX} points.
-}$SCOSOLV=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Oyster.
+}$SCOS=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Oyster. Lowest score to solve is {#CURMIN}. Maximum score available is {#CURMAX}.
+}$SCOMAX=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Oyster. There are no secrets left to find here, so the score to win is {#CURMAX} points.
+}$SCOSOLV=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Oyster.
 
 ALSO-IGNORE:t,c
 

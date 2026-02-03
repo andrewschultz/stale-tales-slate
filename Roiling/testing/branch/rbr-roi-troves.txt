@@ -15,13 +15,13 @@ file=reg-roi-troves-slider.txt,abbr=sli/slider,desc=walkthrough with slider read
 file=reg-roi-troves-hints.txt,abbr=hints/hin/spoi/pad,desc=walkthrough with hints
 file=reg-roi-troves-verbs.txt,abbr=verbs,desc=walkthrough testing verbs
 
-}}MAX=30
-}}CURMAX=30
-}}SCORE=0
-}}CURMIN=17
+}#MAX=30
+}#CURMAX=30
+}#SCORE=0
+}#CURMIN=17
 
-}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
-}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves. There are no secrets left to find here, so the score to win is {CURMAX} points.
+}$SCOS=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Troves. Lowest score to solve is {#CURMIN}. Maximum score available is {#CURMAX}.
+}$SCOMAX=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Troves. There are no secrets left to find here, so the score to win is {#CURMAX} points.
 }$SCOSOLV=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Troves.
 
 ALSO-IGNORE:mbb *,t,c

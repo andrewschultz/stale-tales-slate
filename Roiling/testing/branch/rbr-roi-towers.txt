@@ -15,13 +15,13 @@ file=reg-roi-towers-slider.txt,abbr=sli,desc=walkthrough with slider readings
 file=reg-roi-towers-hints.txt,abbr=hints/hin/spoi,desc=walkthrough with hints
 file=reg-roi-towers-verbs.txt,abbr=verbs,desc=walkthrough testing verbs
 
-}}MAX=57
-}}CURMAX=57
-}}SCORE=0
-}}CURMIN=26
+}#MAX=57
+}#CURMAX=57
+}#SCORE=0
+}#CURMIN=26
 
-}$SCOS=Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. Lowest score to solve is {$CURMIN}. Maximum score available is {$CURMAX}.
-}$SCOMAX=Score in a scenario: {$SCORE} out of {$MAX} total points in the current region, Towers. There are no secrets left to find here, so the score to win is {$CURMAX} points.
+}$SCOS=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Towers. Lowest score to solve is {#CURMIN}. Maximum score available is {#CURMAX}.
+}$SCOMAX=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Towers. There are no secrets left to find here, so the score to win is {#CURMAX} points.
 
 ALSO-IGNORE:cheat,t,c
 

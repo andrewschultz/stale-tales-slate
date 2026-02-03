@@ -39,7 +39,7 @@ Your score has just gone up by one point
 /^Austerer Treasure
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 1 out of 41 total points in the current region, Presto. Lowest score to solve is 28. Maximum score available is 41.
 
 #testcase-slider-table-of-presto-anagrams-phooey
 >oophye
@@ -52,10 +52,10 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >phooey
 Your score has just gone up by two points
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 40.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 40.
 
 >e
 
@@ -74,13 +74,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 5 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 40.
 
 >drat
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 40.
 
 >n
 
@@ -88,7 +88,7 @@ Score in a scenario: {SCORE} out of {MAX} total points in the current region, Pr
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 7 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 40.
 
 >e
 /^Marines Seminar Remains
@@ -108,7 +108,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 8 out of 41 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 40.
 
 >w
 
@@ -119,12 +119,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >mazeltov
 Your score has just gone up by three points
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 38.
 >blam
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 38.
 
 >s
 
@@ -139,7 +139,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 38.
 
 #testcase-slider-table-of-presto-anagrams-darn
 >adnr
@@ -153,7 +153,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 38.
 
 #testcase-slider-table-of-presto-anagrams-whassup
 >sahwups
@@ -163,12 +163,12 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 38.
 
 >goodness
 by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 38.
 
 >n
 
@@ -178,7 +178,7 @@ Score in a scenario: {SCORE} out of {MAX} total points in the current region, Pr
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 18 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 37.
 
 >load gun with dart
 You put the dart into the PG-on-up popgun.
@@ -191,7 +191,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 37.
 
 >n
 /^Saps' Pass
@@ -233,13 +233,13 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 37.
 
 >later
 Your score has just gone up by one point
 But we ain't bored yet, boss!
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 37.
 
 >tough
 Your score has just gone up by one point
@@ -247,7 +247,7 @@ Hut! Go!
 Dat was a good dust-up
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 37.
 
 #testcase-slider-table-of-presto-anagrams-trasch
 >rtsahc
@@ -256,7 +256,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >trasch
 by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 37.
 
 >n
 /^Hacks' Shack
@@ -270,7 +270,7 @@ by one point
 Only one more piece of hardware is needed, and the computer will work.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 37.
 
 #testcase-slider-table-of-presto-anagrams-skid
 >ksdi
@@ -320,13 +320,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 37.
 
 >leaf
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 37.
 
 #note the regular code path is usurped to remind the player of what they already know
 #testcase-slider-table-of-presto-anagrams-disk
@@ -338,7 +338,7 @@ No, skid <=> disk is about it. There's no tricky third way.
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 37.
 
 >get book
 >push skid s
@@ -353,7 +353,7 @@ Score in a scenario: {SCORE} out of {MAX} total points in the current region, Pr
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 37.
 
 #testcase-slider-table-of-presto-anagrams-keyboard
 >ekbyaodr
@@ -364,7 +364,7 @@ Your score has just gone up by one point
 You can now do computery things unimpeded! Hooray!
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 37.
 
 #testcase-slider-table-of-presto-anagrams-tab
 >abt
@@ -382,7 +382,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 37.
 
 >capslock
 Your score has just gone up by one point
@@ -394,7 +394,7 @@ fits in perfectly
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 37.
 
 #testcase-slider-table-of-presto-anagrams-sleep
 >eespl
@@ -404,7 +404,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 37.
 
 #testcase-slider-table-of-presto-anagrams-compile
 >ocpmlei
@@ -414,44 +414,44 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 33.
 
 >cola
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 36 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 33.
 
 >mug
 Your score has just gone up by one point
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 33.
 
 >avider
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 33.
 
 >derive
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 39 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 33.
 
 >romsticks
 by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 40 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 33.
 
 # we want to check a final test case and put it in the "max" subfile, so in this case, we hold off on TAB until the very end.
 >tab
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. There are no secrets left to find here, so the score to win is {CURMAX} points.
+Score in a scenario: 41 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 33 points.
 
 #testcase-slider-table-of-presto-anagrams-debug
 >edugb
@@ -465,7 +465,7 @@ The Be-Troo E-Robot, from under the labs slab, clicks reprovingly. Probably beca
 Your score has just gone up by one point
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Presto. There are no secrets left to find here, so the score to win is {CURMAX} points.
+Score in a scenario: 42 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 33 points.
 
 >misses
 !presto
