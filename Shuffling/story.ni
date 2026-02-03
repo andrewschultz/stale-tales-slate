@@ -2856,115 +2856,6 @@ to say verb-list:
 	if "angle" is padded, say "[2da][b]ANGLE[r] lets you see what can be changed, while [b]GLEAN[r] gives you more general hints about your direction.";
 	verbsplain "xx";
 
-table of notepad entries
-short	known	verify	topic (topic)	blurb
-"access"	true	false	"access"	"[b]ACCESS[r] toggles screen reader accessibility."
-"advice"	false	--	"advice"	"--Nothing over eight words. Maybe one two-word deal.[line break]--Red Bull Burdell is much bigger and stronger than you. Traditional fighting won't work."
-"angle"	false	--	"angle"	"Lets you see what can be changed."
-"board"	false	--	"broad/board"	"[if location of player is Notices Section]It's got notes on needing two simple 7-letter portmanteaux[how-many-notices][else]You're past the bit about the introductory puzzles[end if]."
-"certify"	false	--	"c/cer/cert/certify"	"1 beep = 1 word, buzz = already changed, silence = nothing.[line break]red/green = right/wrong letters."
-"flips"	false	--	"flips"	"[what-can-flip]"
-"glean"	false	--	"glean"	"Lets you glimpse what you need to do."
-"lecture"	true	--	"lecture"	"An hour-long pre-lunch lecture by some fellow named Curt Lee netted you three pages of doodles. You remember him saying how [b]ONE WORD[r] could open a [b]NEW DOOR[r] in this age of technological innovation if you picked the right one, and that's more magic than real magic, if real magic existed, which it doesn't.[paragraph break]But hey, at least lunch was nice."
-"lube"	false	--	"phial" or "lube"	"Worth looking into. Though you probably just want to [b]ANGLE[r] and [b]GLEAN[r]."
-"macros"	false	--	"macros"	"[tell-macros][run paragraph on]"
-"notepad"	true	false	"notepad/pad/note" or "note pad"	"You keep the date you started using your notebooks on the inner front cover. This one's from three years ago."
-"opt in/no tip"	false	false	"opt in" or "opt/notip/optin/tip" or "no tip"	"[b]OPT IN[r] gives you more detail when you are on the right track. [b]NO TIP[r] gives you less detail but lets you know you have the right anagram."
-"options"	true	false	"options/option" or "post opts" or "ops"	"[opts-list]"
-"poss"	false	--	"poss"	"[b]POSS[r] toggles if you see the possible minimum and maximum scores on solving a region. It's a small spoiler/clue for last lousy points."
-"random dialogue"	false	true	"random/dialogue" or "random dialogue" or "uhhs/hush"	"[b]UHHS[r] turns on random dialogue, [b]HUSH[r] turns it off."
-"rectify"	false	--	"r/rec/rect/rectify"	"green dot = 1st letter. Red dot = last letter. Blue = the rest."
-"recuse"	false	--	"recuse"	"If you secured, [b]RECUSE[r] will come in handy once you've solved two quests, to skip a third."
-"Red Bull Burdell"	false	--	"red bull burdell" or "red bull" or "red/bull burdell" or "red/bull/burdell" 	"The nemesis to be defeated here in Yorpwald. He is too physically strong. Perhaps anagramming magic can help."
-"red"	false	--	"red/reds/redness"	"Any words that are red, or make you see red, or make people turn red, are all wrong, just like Red Bull Burdell. This is handy to know--what do you need to mess with? And how shouldn't it be messed with?" [note: this comes second, because otherwise it trumps "red bull burdell"]
-"retry"	false	--	"terry" or "retry"	"[b]RETRY[r] gets Terry to send you [if Trips Strip is visited]back [end if]to the Trips Strip[if Trips Strip is unvisited], wherever that is[end if]."
-"secure"	false	--	"secure"	"Having [b]SECURE[r] activated will make the gadget less useful on any one puzzle but will let you skip a chunk of your quest later. [b]SECURE[r] will be locked once you visit certain places. The button will flash when you need to choose."
-"spaces"	false	false	"space/spaces"	"[b]SPACES[r] toggles whether you have an extra space in raw gadget results. [b]SPACE[r](S) [b]ON[r]/[b]SON[r] forces it on, while [b]NO SPACE[r](S)/[b]NOS[r] forces it off."
-"stores"	false	--	"store/stores/malls/shop/shops/lots/mall"	"--[if scented descent is fungible]Forest[found-status of forest][else]Store F[end if][line break]--[if posted depots are fungible]Sortie[found-status of sortie][else]Store I[end if][line break]--[if trade tread is fungible]Metros[found-status of metros][else]Store M[end if][line break]--[if resort is fungible]Resort[found-status of resort][else]Store R[reso-maybe][end if]"
-"talking"	true	--	"talking"	"[b]ASK[r] for other people, or just say the word/s otherwise. Specific topics or in-game things are suggested, but default dialogues may give hints."
-"the goat"	false	--	"goat/toga"	"Certify = [rcn][gc][rc][rc] and Rectify = [rcn][bc][gc][bc]."
-"to do"	false	--	"todo" or "to do"	"What's on tap right now: [if number of padded flippable not flipped-yet things is 0]nothing[else][list of padded not inflexible not flipped-yet things][end if]."
-"verbs"	true	false	"verbs/verb"	"[verb-list]"
-"warts"	false	--	"warts"	"'No, too stupid a fad. I put soot on warts.' But what is it that's too stupid?"
-"writing"	false	--	"writing"	"If something has writing on it, you need to [b]READ[r] or [b]EXAMINE[r] something instead of [b]X WRITING[r]."
-"xx"	false	true	"xx"	"You can [b]XX[r] after you eat the saltine in order to see what an item should be. This has one use, and benign items do not waste it."
-
-pf-warn is a truth state that varies.
-
-to preef-l (flipper - a thing):
-	if flipper is unfigured:
-		say "[line break][i](That's worth noting in your notepad for later, so you do[one of][or], once again[stopping], under [b]FLIPS[r].)[r][if ignore-line-break is true][run paragraph on][end if]";
-		now ignore-line-break is false;
-	now flipper is prefigured;
-	choose row with short of "flips" in table of notepad entries;
-	now known entry is true;
-
-to preef (flipper - a thing):
-	if flipper is unfigured:
-		say "[i](That's worth noting in your notepad for later, so you do[one of][or], once again[stopping], under [b]FLIPS[r].)[r][if ignore-line-break is true][run paragraph on][else][line break][end if]";
-		now ignore-line-break is false;
-	now flipper is prefigured;
-	choose row with short of "flips" in table of notepad entries;
-	now known entry is true;
-
-table of preflip clues [this must have a regular item first due to a small bug in 6g]
-preflip	pretodo
-gateman	"nametag -> gateman" [Ordeal Loader]
-tenibac	"cabinet -> Bactine" [stores]
-ogled lodge	"Store R -> Resort"
-silver	"[if livers are not moot]livers[else]sliver[end if] -> [b]SILVER[r]" [forest]
-drapes	"spread -> [if red asp is in Emptiness Sepiments][b]RED ASP[r] -> [end if]drapes"
-r2	"room -> moor" [sortie]
-hallway	"[if hay is part of scraped wall]wall -> [b]HAYWALL[r][else][b]WALL[r] -> haywall[end if] -> hallway"
-missile	"smilies -> missile"
-soil	"oils -> soil"
-silo	"oils -> silo"
-sword	"words -> sword" [metros]
-keycard	"dry cake -> keycard"
-beast	"beats -> beast"
-store p	"Store P -> [b]PRESTO[r] in [aro]"
-store u	"Store U -> [b]ROUTES[r] in [aro]"
-store v	"Store V -> [b]TROVES[r] in [aro]"
-store w	"Store W -> [b]TOWERS[r] in [aro]"
-store y	"Store Y -> [b]OYSTER[r] in [aro]"
-
-to say what-can-flip:
-	if pf-warn is false:
-		if word number 1 in the player's command is not "pf":
-			say "[i][bracket]Note: you can abbreviate this with [b]PF[r] in the future.[close bracket][r][line break]";
-			now pf-warn is true;
-	if number of prefigured things is 0:
-		say "You have nothing else you figured in advance.[no line break]";
-		continue the action;
-	say "Stuff you figured, but you couldn't use it right away: ";
-	repeat with pft running through prefigured things:
-		let got-one be false;
-		repeat through table of preflip clues:
-			if pft is preflip entry:
-				say "[line break][pretodo entry].";
-				now got-one is true;
-				break;
-		if got-one is false:
-			d "We need an entry in table of preflip clues for [pft].";
-			say "[line break]You remember you need to think [pft] at some time.";
-
-to say tell-macros:
-	if marcos-trumped is true:
-		say "[b]CR[r]/[b]RC[r] (something) = C (something) + R(something).";
-	if h-short-told is true:
-		say "[b]ANGLE[r]=[b]AN[r] to see changeable items, [b]GLEAN[r]=[b]GL[r] to see the story ahead."
-
-to say how-many-notices:
-	if gateman is in Notices Section:
-		if getaway is in Notices Section:
-			say ", both of which you got";
-		else:
-			say ", of which you've got one--the nametag/gateman";
-	else:
-		say ", which you need to figure out. The nametag seems to change to someone who can help you with whatever the gateway should become";
-
-[how to include a topic IN WORDS]
-
 chapter pfing
 
 pfing is an action applying to nothing.
@@ -3286,13 +3177,6 @@ to been-check (subdir - a direction):
 	choose row dirs-missed in table of busiest subsite rejects;
 	say "[line break][cue-passage entry][line break]";
 	now subdir is subsite-fled;
-
-table of busiest subsite rejects
-cue-passage
-"For all the lectures about new and exciting possibilities everyone should know about, you'd like one for your own."
-"Your eye catches the side passage, which looks more interesting than the standard ways out. Maybe you could give it [if vacate caveat is examined or odd side passage is examined]another [else]a [end if]look."
-"You feel sort of cornered by all the main passages. Sneaking off anywhere would be kind of fun."
-"The standard, usual directions don't seem to cut it. But there has to be somewhere else."
 
 check exiting in Busiest Subsite: try going outside instead;
 
@@ -4581,29 +4465,6 @@ to decide which number is stos-down:
 	if store i is moot, increment temp;
 	if store m is moot, increment temp;
 	decide on temp;
-
-table of iconmaps
-icon-rule	icon-text
-forest-unsolved rule	"Near Store F, you see yourself walking past innumerable trees, wearing a disguise through a sort of archway, and finally creating some sort of explosion somewhere very cold"
-sortie-unsolved rule	"Near Store I, you see yourself making food, entering a sacred area behind a secret passage, and creating some sort of fireworks that seem to land on a castle without harming it"
-metros-unsolved rule	"Near Store M, you see yourself picking up several hours and taking a light source into a very deep place underground. You seem to have a hand over one ear in each picture"
-resort-ready rule	"Near Store R, you see yourself hopping from one island to another, climbing a plateau, dispersing an angry crowd before quaking in fear, and finally, enjoying doing nothing"
-
-this is the forest-unsolved rule:
-	if forest is unsolved, the rule succeeds;
-	the rule fails;
-
-this is the sortie-unsolved rule:
-	if sortie is unsolved, the rule succeeds;
-	the rule fails;
-
-this is the metros-unsolved rule:
-	if metros is unsolved, the rule succeeds;
-	the rule fails;
-
-this is the resort-ready rule:
-	if metros is unsolved or sortie is unsolved or forest is unsolved, the rule fails;
-	the rule succeeds;
 
 icon-index is a number that varies. icon-index is 1.
 
@@ -9623,12 +9484,6 @@ to reject-msg (rejitm - a thing):
 	d "[rejitm] could use a message in [done reject table of mrlp].";
 	say "Nothing at all seems to happen this time. You've probably done what you can.";
 
-table of warpcmds
-warp-cmd (indexed text)	mystore	myport	myreg	warp-result
-"logoi"	store f	scented descent	forest	"You convince the powers that be that you remember all the words from Store F and the forest."
-"sooth"	store i	posted depots	sortie	"You convince the powers that be that, in sooth, you really did run through Store I and the sortie earlier."
-"say bs"	store m	trade tread	metros	"You convince the powers that be that the idea you didn't solve Store M and the Metros is nonsense."
-
 definition: a thing (called x) is takeable:
 	if x is not fungible, decide no;
 	if x is part of something, decide no;
@@ -9823,7 +9678,7 @@ check scaning location (this is the air scan rule):
 
 before scaning (this is the take gadget if you can rule):
 	if gadget is moot:
-		say "But you got rid of the gadget! You'll have to restrt to get it again." instead;
+		say "But you got rid of the gadget! You'll have to restart to get it again." instead;
 	if player is in Potshot Hotspot and burdell is in Potshot Hotspot: [yeah, could be its own rule, but I'd have to shuffle the rules and blah blah blah]
 		if show hows tag is not part of the gadget, say "You disabled it, remember?" instead;
 		if gadget is in Potshot Hotspot, say "You can't reach the gadget, but you remember six reds, then [bcn][rc][gc][bc][bc][bc]." instead;
@@ -10045,17 +9900,6 @@ to note-spaces:
 			now son-nos is true;
 			pad-rec-q "spaces";
 
-table of kibitzes
-kib	helpy
-whiff of stew	"Four entries. Whiff and smell are five letters. The reading must rely on what the smell is."
-aroma of teas	"Four entries. Aroma and smell are five letters. The reading must rely on what the smell is."
-attics	"Hmm. You thought the attics would be more appropriate for the doll house, but maybe the gadget detects you can change back, too."
-motto	"Since Motto is only five letters, you wonder what's up, but it's labeled [b]A MOTTO[r]."
-tall trio	"You scanned each of the tall trio, and the readout didn't change."
-reading	"[read-drain] the drainage."
-drainage	"[read-drain] a reading."
-cabinet	"Odd, though--when you scanned the bumpy bits, you saw the gadget change readings[if current action is cring or gadget is cert]. The second entry, in particular, from red to green[end if][if current action is cring]. That was for certifying, but you saw changes when rectifying, too[end if][if current action is cring or gadget is rect]. The green entry, from the third slot to the fifth[end if]."
-
 to say read-drain: say "Hmm, you may need a lot to figure this. Maybe if you're stuck, you can combine this with"
 
 to say rgbtext of (sca - a thing):
@@ -10255,203 +10099,7 @@ after objasking about (this is the post-rec talking rule):
 	if noun is gateman and second noun is saltine, pad-rec "xx";
 	continue the action;
 
-table of matched thing responses [tsb]
-asked-person	subject-thing	npc-text
-gateman	redness	"[one of]'Red writing, like Red Bull Burdell, is totally wrong in many ways. So many, it can be a help.'[paragraph break]He shows you some calculations that any such writing can be expected to eliminate 60% of your possible choices, because 1 minus 1/x to the x is 1/e, more if there's a duplicate letter--the Inclusion-Exclusion Principle applies here, and you nod as he mentions the exact numbers aren't important, but every clue helps.[ask-red][or]'Hm. To keep it simple, red is wrong. And that helps you eliminate wrong guesses.'[stopping]"
-gateman	board	"'Good idea to take notes on it. But I can tell you about other stuff. Like [if player has gadget]your gadget[else]the gadget in the cabinet[end if]. Or even how it works.'"
-gateman	doll house	"[if attics are off-stage]'A nice warm-up puzzle, but if you're in a hurry, I'll respect that too. Not the doll house that needs changing.'[else]'You don't need to take it with or anything. Nice job with it, though.'[end if]"
-gateman	static	"'[if attics are off-stage]If it's kind of annoying, you can get rid of it. Or you should be able to. But you don't have to.[else if attics are fungible]Good job getting rid of it.[else]Err...I know you're in a hurry, but can if you could change it back to the attics before you get going, my ears would thank you.[end if]'"
-gateman	attics	"'[if attics are off-stage]Yes. Do--whatever it is--to make them appear. I hope you haven't lost your powers.[else if attics are fungible]They're more appropriate to the doll house, definitely.[else]I kind of prefer [']em to the static. You wouldn't mind switching them back?[end if]'"
-gateman	blue lube	"[about-lube]"
-gateman	phail phial	"[about-lube]"
-gateman	prep paper	"'No, I'm not sure how we all know this. There's a lot of high-level magic theory. And if we knew the details and had your powers, maybe one of us could try. But--well, it's a start.'"
-gateman	Red Bull Burdell	"[one of]'Like he was thought up by a demonic comedian. Made a desireable age disagreeable. Seemed a poseur when he uprose from abuser to saboteur. He'd make a poignant nag point, acting like a rowdy pal. Heard his cleats in the castle as he did something called 'Leveling up.' Maximizing stuff called hit points and magic points. Things went awry before we were wary.' You sense there's more, if you can bear it.[or]'Rum toil became turmoil. We let the ploy draw us in...then Prowl Day made the world pay. Against Raw Rori, a warrior, the devil lived. We ignored eroding. He humbled Bud Helm. We have lost LOTS because of him. Mega-sad damages. He beat us all. Rooftops of troops on Fort Oops. Profs too. Auctioned Education. I cautioned...' His eyes grow mistened. 'Ten dimes say it's end times. We've waited for an upturn to turn up...'[or]'The time for talk is over.'[stopping][one of][line break][rbb][or][stopping]" [desireable is that way to make a corny anagram, so keep it]
-gateman	tip	"[tip-dialogue]"
-gateman	pit	"[tip-dialogue]"
-gateman	tin foil info lit	"'Sane Sean. Hmph. Either he's dumb enough to believe Red Bull Burdell's a good guy, or he's a deep undercover double agent.'"
-gateman	Bud Helm	"'Yeah, we were surprised the bum held Bud Helm.  Bud Helm bled, hum? He's a broken man, now.'"
-gateman	Raw Rori	"'Pure strength. That won't get the job done here.'"
-gateman	pen	"[one of]'How thoughtful! Nobody's asked me for my autograph for a long time! Wait, we don't have time for that nonsense.'[or]You probably know more about the pen than he does.[stopping]"
-gateman	dope tan notepad	"'Good choice, taking notes.'"
-gateman	new land	"'I can't tell you everything about it. But you'll see for yourself.'"
-gateman	nametag	"'Oh, did you have problems with it? Sorry. I'd have helped, but I was--I mean, I wasn't [i]at all[r].' He rolls his eyes."
-gateman	yourself	"[your-job][run paragraph on]"
-gateman	gateman	"'Once I solved one of those hero mills with more hills...' he blinks. 'I'm not important. You are. And what you can do.'"
-gateman	arrow	"'That's just to show [b]SECURE[r]/[b]RECUSE[r] is linked to whether you can change between [b]RECTIFY[r] and [b]CERTIFY[r].'"
-gateman	knot	"'It's good and tight. Case it gets joggled while you adventure. If the gadget isn't tagged, it loses its magic because, well...'"
-gateman	examples	"'Hm, [b]LEMON[r] and [b]MELON[r] have three letters in common, and they're all green. The two that switch are red. So that's not bad. [b]PASTE[r] and [b]TAPES[r], on the other hand...the green T and red S on the left map to the first last letters on the right, and the P and E are green and red and map to the first and last letters on the left.'"
-gateman	disclaimer	"'Necessary legalese. But really, use the gadget as often or little as you want or need. Nobody will judge.'"
-gateman	Recent Center	"'The Recent Center is a fancy name for a screen. It will light up when you scan something relevant, and that data will stay.'"
-gateman	handle	"You can't imagine anything tricky about the handle, so you decide not to ask."
-gateman	goat	"[goat-toga]"
-gateman	toga	"[goat-toga]"
-gateman	reed	"[reed-deer]"
-gateman	deer	"[reed-deer]"
-gateman	getaway	"[oma-gate]"
-gateman	gadget	"'[one of]Powerful. Not as a weapon. Won't be many fights. But you can [b]SCAN[r] an object with it, and it won't break down from over-use. Use it as much or as little as you want. There's concrete problems, then there's how many hints make your quest most fun, and that's up to you[or]It can [b]SCAN[r] other things[stopping]. Ask about a specific button if you're interested. Not your only source of clues, either. There's also the color red.'"
-gateman	s-r	"'Could make things tougher at first, but then easier, maybe. Switch it, and you can only [b]CERTIFY[r] or [b]RECTIFY[r], but not both. Later, though, you can [b]RECUSE[r] yourself later from one of the three areas to conquer. It'll warn you, too, by flashing before it locks. Magic fields might do that, midway through an adventure or so.'[pad-sec]"
-gateman	noise bag	"'Cities gotta have noise but there's one just constantly has it. Burdell's behind it, too, claiming he couldn't have leveled up without that techno-piffle and people get used to it if they try. Actually calls it music. He's got a lieutenant to enforce it.'" [!! HACK ... NOISE BAG comes before NOISE]
-gateman	saltine	"'Miniscule, but more than mini-clues. The next item that baffles you, eat that and [b]XX[r] ... not just [b]X[r] or [b]EXAMINE[r], and it'll make sense. Oh, apologies in advance: good flavors and good magic don't mix.'"
-gateman	cabinet	"'[if lube-asked is false][lubeit]It's kind of picky and defensive. Might not give you everything [']til I tell it.' He goes over to the cabinet, pats it on its top, and returns. 'Now you should be able to get everything from there.[else]Everything in there's yours.[end if]'"
-peasant	hay	"'Not very useful for building something unless you want it to be destroyed quickly. Can't think of any reason I'd need that. Straw, on the other hand...'"
-peasant	poem	"'I try my best at it.'"
-peasant	straw	"'Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though.'"
-peasant	Woeful Pat	"'He's better than I am at poetry, I'm sure. I'm not educated enough to know why. Frustrates me sometimes.'"
-peasant	Mean Old	"'Used to be much nicer, I'd say!'"
-woeful pat	woeful pat	"[flatter-pat]'Of course it would be absorbing to learn about my life and struggles and views,' he drones airily. 'Suffice it to say I deserve also to be known as [b]SANE PAT[r], for all the accusations leveled against me. But you will find right now my poetry is even more profound! It has an [b]ANAPEST[r] beat.'"
-woeful pat	Mean Old	"'He does not censor my art. He cannot be that bad!'"
-woeful pat	peasant	"'There is one who tries his best. But he is too...obvious.'"
-woeful pat	anapest	"[if anapest-clued is false][anapest-clue][run paragraph on][else][one of]'A mere creative writing teacher could educate you as to the pedantic details of writing doggerel that mimics my epic's flow!'[or]You didn't REALLY want the anapest explanation again, did you?[ana-true][stopping][end if]"
-deadbeat	beats	"'They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, [if bastion-evac is true]dude[else]you square, yo[end if].'"
-deadbeat	nerds	"The deadbeat starts shaking as he rattles off how the nerds east of the Underside have forgotten their roots."
-deadbeat	faeries	"The deadbeat doesn't believe in magic, now. But he did as a kid."
-deadbeat	red bull burdell	"'He is oppressive, man, but he is just a symptom of disparity and malaise.'"
-deadbeat	poses posse	"[if poses posse are moot]'You showed them, dude!'[else]The deadbeat starts up some nonsense pseudo-sociological mumblings.[end if]"
-deadbeat	lost corn	"[if bastion-evac is false]'Hey, Man, like, how do we know you don't, like, like the Man, man? Hey? Hey?'[else if lost corn is fungible]'Oh, yeah, it's yours, man, I guess. It's real corn, not that genetically modified stuff from,' he sees red for a sentence, '[first custom style]SLORNTCO[r] or that nasty dried stuff from [first custom style]ST ROLCNO[r].'[else]'Whoah. You must've like did something with that corn. Biosustainibility, man.'"
-deadbeat	termite emitter	"[if player does not have emitter]'What? Do you know something?' he looks furtively around, more convinced than ever you're with The Man, man.[else if bastion-evac is false]'Whoah. No fingerprints, no proof it's mine.' He clearly doesn't trust you, yet.[else][try-flies][no line break][end if]"
-faeries	drainage	"'Perhaps you can turn something in this city into a flower. We are out of ideas. How can drainage become a flower?'"
-faeries	gardenia	"[if drainage is in Undesired Underside]You don't have a gardenia, yet. But you can find or make one.[else][faery-flower][end if]"
-faeries	heaths	"[if player has begonias or player has noise bag]The faeries have been generous enough.[else][faery-flower][end if]"
-faeries	begonias	"[if player has sheath or player has heaths]The faeries have been generous enough.[else][faery-flower][end if]"
-faeries	sheath	"[if player has sheath]'It is up to you to use it. We cannot help further.'[else]The faeries wonder aloud what sort of magic could conjure a sheath.[end if]"
-faeries	noise bag	"[if player has noise bag]'It is up to you to use it. We cannot help further.'[else]The faeries wonder aloud what sort of magic could conjure a noise bag.[end if]"
-faeries	merchandise	"[faery-flower]"
-faeries	beats	"'It is terrible! Our hearing is even more delicate than a clumsy human's. We can do no decent long-term magic with it around.'"
-faeries	brocade	"[if player has brocade]'Do with it what you need.'[else if brocade is moot]'You have disposed of it! We hope it was useful.'[else]'It is free. But useless to us.'[end if]"
-faeries	clover	"'Just weeds! Not useful for our sophisticated magic. Maybe useful for mere human magic, though.'"
-faeries	tomato	"'[if player has tomato]Such a putrid plant! Keep it away from us[else]Even humans and monsters must find it revolting[end if]!'"
-faeries	tulip	"'For human flower magic, not bad at all! We guess.'"
-faeries	deadbeat	"The fairies buzz and give superior sniffs."
-faeries	nerds	"The fairies buzz and give superior sniffs."
-nerds	beats	"'Anyone can be smart enough to build noise canceling homes to get rid of the beats!'"
-nerds	controls	"[if player does not have controls]The nerds might be experts on technical stuff, but they'd be over your head.[else]'Oh! These are simple controls! You don't even need to know about induction and charges and anything. Just slap them in where there's something missing. Pf, barely worth the time to [b]ASK NERDS[r] about.'[end if]"
-nerds	deadbeat	"The nerds aren't big on social stuff. They're more about the technical stuff, about showing answers to questions you have. And questions you don't know you have yet."
-nerds	faeries	"The nerds assure you science is better than magic."
-nerds	red bull burdell	"'Sometimes Yorpwald is so dumb it deserves a thousand years of his rule. Not that he deserves to rule for a thousand years. We need someone smart enough to [b]ASK NERDS[r] the right thing to help dethrone him!'"
-nerds	tracks	"'We wouldn't touch it, that's for sure. I mean, even if we could see where it went.'"
-nerds	Tulip	"[if player has tulip]'It's not going to burn out for a long time.'[else]'We've got plenty of light here. You can have it, if you know what to ask us about. And if the tulip would help.'[end if]"
-poses posse	dry cake	"Someone puts their hand to their lips. Someone else shakes their head. You don't DESERVE that cake, according to them."
-protest	kilns	"'If we were artsy, we'd use [']em. But we're not. Take some magic to MAKE us artsy.'"
-
-to say tip-dialogue:
-	say "'Well, one of rectify or certify is overall better than the other. Would you like to know which[one of][or], again[stopping]?'";
-	if the player dir-consents:
-		say "[line break]'Without getting too mathy, you can expect one of the letters to [b]CERTIFY[r] correctly if there are no repeats, but a bit more with repeats--one and a half, in an eight-letter word with a repeat. [b]RECTIFY[r], you're always guaranteed the first and last right. So it's a bit more help if you [b]SECURE[r] later. But how much challenge you want is up to you. Either can work with any red writing you might see.'";
-		pad-rec-lump "certify";
-		pad-rec "rectify";
-	else:
-		say "'There's no wrong setting, really.'[no line break]"
-
-to say pad-sec:
-	pad-rec-q "secure";
-	pad-rec "recuse";
-
-to say rbb: pad-rec "Red Bull Burdell".
-
-to say lubeit: now lube-asked is true.
-
-to say ana-true: now anapest-clued is true.
-
-the Memo Tote Tome is a boring thing in Esoteric Coteries. bore-text is "Maybe you could [b]EXAMINE[r] or [b]READ[r] the book, but you can't do much else with it.". initial appearance of Memo Tote Tome is "A Memo Tote Tome lies here. Perhaps it has some simple information useful to you amidst all the weird stuff the nerds use it for.". description of memo tote tome is "You should never see this, because the check rules should prevent it.".
-
-check reading the Memo Tote Tome: say "Too dense. Really, only examining the Tome briefly [if memo tote tome is examined]could be[else]might've been[end if] worth trying." instead;
-
-check examining the Memo Tote Tome:
-	say "Even the author names are pretentious and important sounding. Think they're worth remembering?";
-	if the player yes-consents:
-		say "All in red: [rcn]Srs. Ek and Rensskad-Knessard";
-		now Memo Tote Tome is examined;
-	else:
-		say "Hm, yes. The nerds may give less cryptic hints, eventually.";
-	the rule succeeds;
-
-to say rose-sore: if player does not have gardenia, say "[one of]. It will probably be tougher than getting a sore and changing it to a rose[or][stopping]"
-
-table of unmatched topic responses
-default-talker	gen-blah
-Red Bull Burdell	"'Ego? Tut!' you mumble, but it has nothing on action."
-banshee	"'I strip spirit!' it wails, then, 'Rather be breather!'"
-beast	"It cares not for conversation, only noise."
-beats	"Dude! They're clearly busy bringing sexy back. You text adventurers don't know how to act."
-deadbeat	"He mumbles something about [if bastion-evac is false]chillin['] with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn[else if corn is fungible]how you haven't put that lost corn to good use yet[else]whatever you did with that corn better work[end if], and he also complains about [if Esoteric Coteries are visited]those nerds you saw[else]nerds down southish, for some reason[end if]."
-faeries	"[if fairy-worthy is false]'You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!' they exclaim[rose-sore].[else]'We are grateful! You are an exceptional human! Thank you so much! [sure-you]! Now go and save the city.'[paragraph break]Hm, they didn't really seem to be listening to you, but fair enough, that's something."
-gateman	"[one of]'Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The [if getaway is fungible]getaway[else]gateway[end if]! General advice! No time to scold clods asking about--whatever you just mumbled about.'[or]Nat Egam pauses. 'There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the getaway gateway[unless player has tagged gadget] once you have the tagged gadget[end if]. Oh, about the gadget: you'll learn by doing.'[stopping]"
-gy	"The men passing through seem too in a hurry to talk, but you doubt they know much."
-line of no life	"You could never get everyone's attention at once."
-liches	"They are too busy moaning to each other."
-nerds	"[one of]'Hm, should we even talk to an outsider about that?'[paragraph break]'Well, if they found their way in, they can't be THAT dumb!'[paragraph break]'Well, they'll have to find the right thing to [b]ASK NERDS[r] like us about if they want us to stop talking about them like they're not here.'[paragraph break]'Maybe they're a lateral thinker. Who knows several ways to get through things.'[paragraph break]'GROAN! Nice Ignorance.'[paragraph break][one of]They don't seem to want to tell you what to ask them, out of principle, but if you keep nagging them, they may let some cryptic knowledge slip[or]They seem to be having fun feeling smarter than you, which is actually kind of good, as maybe the discussions will make more sense this time around[stopping].[paragraph break]'If they don't know what to ask nerds about, they deserve ED'S SNARK!' Ed, indistinguishable otherwise from the rest, leaps, pleased with what elapsed.[or]More annoying banter. Perhaps you could disperse them with the right item. They'd deserve it.[or]Laugh-tons onslaught as you haven't figured what to ask nerds.[or]They form a grin ring, but you close your eyes a bit and girn! They compare your response to K. Sanders.[or]A hundred-nerd DUH follow your latest ask-nerds attempt.[or]'Maroon! A moron! You might as well ask dorks like Karkdoss about something that inconsequential!'[or]An argument on the virtues of code versus Frisbee golf follows, and how nobody would ask geeks like Kaergess for help getting better at either.[or]The nerds jokingly offer to send Sark in your place, maybe to find a left-handed veeblefitzer. You see red at the backhanded insult.[or]Apparently you haven't seen the light for what to ask nerds about. 'We can wait here a thousand years!' one laughs. They debate on what's worse, dumb people in power or out.[or]One nerd tells you you should be sent to the red planet of [first custom style]SKASDREN[r] for asking so many nagging questions.[or]One nerd calculates eight factorial over two factorial, that's 20160, and eventually you'll see the light.[or]A few nerds wonder if anyone has been as snerk'd as you in their presence. You see red, slightly.[or]One nerd jokingly refers you to DR. KASSEN.[or]'[']K, Ren's sad,' one nerd remarks, red-faced.[or]One nerd dumps out his shoe. 'Erks! Sand!' He looks red-faced at such a public display.[or]Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.[cycling]" [bold-ok]
-night thing	"'NYURGH! HUNGRY!' Easier to argue a grue away."
-peasant	"'I don't know much about that, that's sure. But I know from hay, being an abler baler.'"
-riot	"[riot-trio-blather]"
-protest	"[riot-trio-blather]"
-poses posse	"You get a few pinched, strained smiles, but no actual words. What would they say? 'TALKERS STALKER?!'"
-woeful pat	"[pat-wants-quiet]."
-wolves	"Now is not the time for a heroic lecture, or even a heroic attempt at peace. Now is a time for violence and gore. You have the equipment."
-yourself	"'Self, what should I do now?' 'Self, don't start talking in the third person.' 'Self will make a point of it, self.'"
-
-table of unmatched thing responses
-asked-person	npc-text
-deadbeat	"He mumbles 'Mt. Rose Rots Me Moster' and giggles stupidly. You probably won't learn much from him except about instruments of subversion."
-faeries	"They possess wisdom humans never will, but they don't much want to help you with the physical realm, beyond flowers."
-gateman	"'Can't say anything about that. You'll have to find out for yourself later.'"
-nerds	"The nerds look at each other, wondering why you would ask about that, really. They are sure you have something important to ask them. Maybe somewhere you can't get to or through. They could figure it out if in your shoes.[paragraph break]Hmm. Apparently, when you [b]ASK NERDS[r], you need to come correct[one of]. All the same, you're a bit annoyed, and you wonder if you can maybe play a mean trick on them to get that tulip, instead[or][cycling]."
-yourself	"You start a small mental conversation to take stock of your surroundings and what you might like to do."
-
-to say riot-trio-blather: say "You're not going to reason with them. Maybe reason about them, though.[no line break]"
-
-Bud Helm is a useless person. "You should not see Bud Helm.". description of Bud Helm is "He has been condemned to obscurity."
-
-Raw Rori is a useless person. "You should not see Raw Rori.". description of Raw Rori is "Condemned to obscurity."
-
-does the player mean objasking generically the deadbeat: it is unlikely.
-does the player mean objasking about the deadbeat: it is unlikely.
-
-to say roo: pad-rec "advice".
-
-to say ask-red: pad-rec "red"
-
-Check talking to (this is the can only talk to talkables rule):
-	if noun is not a person, say "For the most part, whn you [b]TALK TO[r], only people can respond. And it's best to [b]ASK[r] them [b]ABOUT[r] something specific. But you really don't have to talk much at all." instead;
-	say "You ask about any old thing ([b]ASK X ABOUT Y[r] is the preferred syntax...)[paragraph break]";
-	try asking noun about "small talk" instead;
-
-table of matched topic responses
-asked-person	topic	npc-text
-gateman	"next guy"	"'Optimistic, aren't we?'"
-gateman	"gato"	"[goat-toga]"
-gateman	"sane/sean" or "sane sean"	"The gateman shakes his head slowly and shrugs. Sane Sean would probably be a lot funnier if Yorpwald weren't in trouble."
-gateman	"general advice" or "advice" or "general"	"'Well, you figured a few things out. Probably want to focus more on changing stuff than weird actions. One thing, though. The things you need to change? Nothing too complex. Nothing over eight letters. Okay, maybe one two-word thing with nine. Red Bull Burdell often babbled about getting eighteen intelligence and wisdom from all that leveling up, but he never got a decent vocabulary. The philistine. Also, there will be clues--clues that seem all wrong, deliberately wrong, but their wrongness will stand out and help you.'[roo]"
-gateman	"scold/clods"	"'Like I said, no time for that. Time to fix things!'"
-gateman	"xyzzy"	"'Fool! That magic word has no place alongside your magic abilities.'"
-gateman	"world"	"'Well, it wasn't a very SPECIAL world. In fact it was one of those hero mills. I remember more hills than anything else. Figure it had to break down for the next guy to save it.'"
-gateman	"yorpwald"	"'It's been shuffled, nearly f-flushed! You can rescue it from physical, economic and moral malaise. You will need to travel through Old Warpy to get there. The stuff [if number of things in cabinet > 0]in[else]from[end if] the cabinet should help. Ask me about it. I'm a hero emeritus, and stuff.'"
-gateman	"old warpy" or "old/warpy"	"'Once you step in, it'll take you somewhere far away. But it's perfectly harmless and not too bumpy. Like beyond that gateway getaway. Terry's in there, too, and he flips the switch so you can [b]RETRY[r] if you get stuck somewhere.'"
-gateman	"terry"	"'He's reliable.'"
-gateman	"lupine/lineup" or "lupine lineup"	"'Distant rumblings from somewhere beyond a very quiet place. Sadly, violence may be necessary.'"
-gateman	"noble" or "ol' ben" or "noble ol' ben" or "ben"	"'He used to be fair and just. But he saw Red Bull Burdell [']leveling up,['] whatever that is. Red Bull bragged about how he'd multiplied his gold and achieved eighteen charisma, or something, before changing Noble Ol['] Ben.'"
-gateman	"quest" or "purpose/goal" or "my purpose/goal"	"[one of]'Three major problems past the gateway. Noise is one. A lupine lineup. Noble Ol['] Ben: gone. Lorn. No longer.'[paragraph break]'And I think I know who's behind it: RED BULL BURDELL!'[or]He mentions 'Noise is one, lupine lineup, Noble Ol['] Ben gone, lorn, no longer.' Then he motions to the gateway. 'You'll see when you get there, I think.'[stopping]"
-gateman	"certify" or "certifying"	"'Tells you what letters are right for what something should be. Red is wrong, green is right. Probably not as powerful as rectifying, but gets you some stuff right away. Also--there's some clues out there that're just plain red. They're all wrong.'[prcer]"
-gateman	"rectify" or "rectifying"	"'Gives you the first and last letters of what something should be.'[prrec]"
-woeful pat	"beat/rhythm/meter"	"[flatter-pat][anapest-clue][run paragraph on]"
-woeful pat	"st paean" or "paean"	"[flatter-pat]'It will be my best reading yet. Even better than this[if player does not have flier]. Here you go. Have this flier, just to make sure[give-flier][end if].'"
-deadbeat	"slorntco"	"'Organized capital is so repressive, dude.'"
-nerds	"darkness"	"[nerd-dark]"
-nerds	"dorks"	"They snicker knowingly. They assure you Karkdoss is the worst, if you want to ask dorks for any help."
-nerds	"karkdoss"	"They snicker knowingly. You wonder if there is a Karkdoss, and if so, if they really think you should ask dorks."
-
-to say prcer: pad-rec "certify".
-
-to say prrec: pad-rec "rectify".
-
-to say give-flier: now player has expo flier.
-
-to say try-flies:
-	if flies-in-emitter is false:
-		say "'Dude! So you got it back from the night thing!' He takes the emitter, stuffs it in one of the more grungy-looking tents, and gives it back. 'Sorry there aren't any termites. But now these angst gnats inside may be handy later. We probably like infected them with social discontent when they bit us.'[no line break]";
-		now flies-in-emitter is true;
-		now termite emitter is angstgnatted;
-	else:
-		say "'Man, I've done enough work today. I don't want to catch any more angst gnats. Even for you.'[no line break]";
+book talktoing
 
 talktoing is an action applying to one thing.
 
@@ -10523,37 +10171,6 @@ to say can-go of (d - a direction):
 	say "[d][if droom is visited] to [droom][end if]"
 
 to say inside-ambig: if noun is inside, say " or clear way [b]INSIDE[r]"
-
-table of nowheres [tnw]
-theloc	thereject
-Rested Desert	"The size of the desert, um, deters you. You're steer'd back to the [if OR DO door is off-stage]odor[else]door[end if][if bugle-played is true or blot is not off-stage]. The one you can probably go through[end if]."
-Thickest Thickets	"[one of]You hit a snag, and the [if toga is in Thickest Thickets]toga[else]hole in the thickets[end if] nags you. Or seems to[or]You see a snipe among some pines and lose your spine[or]You're feeling negative to vegetation, so you can't see a way through[or]A stick crawling with ticks gives you pause[or]I won't let snag-tangles get at you that way[cycling][if goat is in Thickest Thickets] (you can go [b]IN[r]--there are no specific directions here)[end if][one of]. Plus, if you could go anywhere unseen, you might regret winding up in the Tuffest Tuffets[or][stopping]."
-Notices Section	"You hear tectonic noises, then an evil voice whispering 'Once it's...' You sense running away wouldn't work. You should probably explicitly [b]ENTER[r] the gateway[if gateman is in Notices Section][else], though it'd be nice to have some help first[end if]."
-Flesh Shelf	"It's too steep down every way except back east."
-Gnarliest Triangles	"You don't need an alert sign to know running into the walls any direction but west would cause a real sting."
-Emptiness Sepiments	"The scoffer coffers and scoffin['] coffins are impenetrable. But even if they weren't, there are probably slayer layers, or worse, behind."
-Ghouls Slough	"Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog[if player has maps]. Hey, those maps might be useful to look at, though[end if]."
-Frost Forts	"[if vowels are in Frost Forts]The gnash hangs would, err, shnag you[else]The werewolves will catch you easily[end if]."
-Trap Part	"[dmb]You can only go north to the kitchen or east[or-room]." [see before going in trap part for the other text]
-The Nick	"You're trapped. If only the nick could be changed to something more to your taste."
-Kitchen	"[dmb]You can only go [can-go of south] or [can-go of east]."
-roomroom	"[dmb]You can only go [can-go of west] or [can-go of north]."
-Stiller Trellis	"[dmb]You can only go [can-go of west] or [can-go of south][if the room east of Trellis is Sacred Cedars and scraped wall is not in Stiller Trellis and trel-priv is not moot] or, since you opened the hallway, east[end if]."
-moor	"The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came, back to the [b]ROOM[r]."
-Sacred Cedars	"There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads."
-Undesired Underside	"A hotel is west, a camp is north, [the ingress] leads east, and some sort of terminal is south. But there are no special exits[inside-ambig]."
-Roarings Garrison	"There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits[inside-ambig]."
-Bile Libe	"Perhaps there is a I-Be-Libel Lie Bible somewhere in the recesses here, but it and those beats would be too much at once. You probably just want to go back east."
-Fo Real Florae	"The faeries wouldn't take kindly to snooping. The only safe way out is back west."
-The Ol Hotel	"You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city."
-Esoteric Coteries	"The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher."
-Elm Train Terminal	"The tracks lead down east, and the city is back north."
-Bassy Abyss	"You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp headache. It's [one of]an aligns signal, and it must be encompassing the whole abyss[or]that aligns signal, again[stopping]. It turns you back to face the [b-b]."
-Astral Altars	"[one of][flare-to]As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms 'THE FERAL FLARE MUST PROTECT ONE LIKE YOU FROM INFIDELS!'[paragraph break]Unfortunately, it's also protecting you from leaving, so you'll probably need a bit more magic.[or]No, the feral flare is pretty much any which way. Looks like you'll need to do something with the tiles and stile, instead.[stopping]"
-Leis Isle	"[if woodland-revealed is true]No, you already saw the woodland was faked[else][woodrev]You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd[lei-down][end if]."
-Rived Drive	"You'd probably get lost that way. Besides, the vague commotion to the east, past the rising [p-s], seems worth seeing."
-Potshot Hotspot	"The only way you'll want to [if red bull burdell is not moot]try to [end if]go is east."
-Means Manse	"[one of]You suddenly have ye taxin['] any-exit anxiety. Like you're in the middle of an exitstential crisis.[or]I best sit, be, you think.[or]Sit, ex-adventurer.[or]Where would you go? Texis, perhaps.[or]Seeing exits just makes you want to...[or]Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.[stopping]"
 
 chapter nowhere auxiliary stuff
 
@@ -10769,23 +10386,6 @@ to decide which number is player-rank:
 	let temp-rank be 4;
 	increase temp-rank by number of passed-up regions;
 	decide on temp-rank.
-
-table of ranks
-show-at-end-rule	rank-name	to-achieve
-a rule	"(ow,) me, a nervy every(wo)man"	"only in Busiest Subsite"
---	"reduced deducer"	"in Rested Desert or Thickest Thickets"
---	"stunted student"	"in Notices Section"
---	"benigner beginner"	"Trips Strip visited, [sol-by of 0]"
---	"solider soldier"	"[sol-by of 1]"
---	"a mature amateur"	"[sol-by of 2]"
---	"new hero now here"	"[sol-by of 3]"
---	"a smart gamin['] anagrammist"	"win the game"
-
-to say sol-by of (nu - a number): say "[nu in words] of Stores F/I/M solved yet"
-
-to say decide-rank:
-	choose row player-rank in table of ranks;
-	say "[rank-name entry]";
 
 understand "scores" as requesting the score when player is not in Self ID Fields.
 
@@ -11100,25 +10700,6 @@ check reading (this is the reading is almost examining rule):
 
 to say if-map: if noun is maps, say " (even with the maps)"
 
-table of readables
-to-read	the-red
-toga	"[first custom style]A GOT-TA GO[r] ... hmm, not the very best ever." [ordeal loader] [bold-ok]
-gateway	"'E. g., man, TA!' is written in red, beneath the WARMUP/UM, WARP text. [if board is examined]The red text is just like [first custom style]A TAN GEM[r] and such on the broad board[else]Maybe it's significant that the writing's red, and that can help you[end if][if mega ant is off-stage and gateman is off-stage]. There's also a helpful ENTERING TOO SOON WILL NOT KILL YOU message, which is nice[end if]." [bold-ok]
-acne bit cabinet	"Here is one of several writings in red in the cabinet: [one of][first custom style]I C BEATN[r].[or][first custom style]IN, BE, ACT!!![or][first custom style]C N-E BAIT??[or][first custom style]CIT-E BAN!!![or]Numbers for a [first custom style]NITECAB.[or][first custom style]ABE [']N TIC![or][first custom style]TEN ABC, I!!![in random order][r]" [bold-ok]
-store i	"Red writing:[paragraph break][first custom style]RISE TO RITES, O! OR TIES.[line break]RISE TO TIES OR RITES, O![r]" [stores] [bold-ok]
-roadsign	"The sign appears to say, in all red, [one of][first custom style]E FORTS/OSTFER[or][first custom style]TRESFO/S EFTRO[cycling][r] before a gust of wind picks it up and flips it around." [bold-ok]
-great grate	"The grate seems to be made by [hktn]. It's not steel, but it's still too thick. The redness of [hktn] surprises you a bit." [sortie]
-tall trio	"The names are Al, Tri, and Lot. [one of]If you [b]READ[r] again, maybe one of the six combinations will make you see red[or][first custom style]AL/LOT/TRI[r] makes you see red, for whatever reason[stopping]." [bold-ok]
-spearman	"The spearman's name, in red, is [first custom style]MR. SANE PA[r]. [one of]There are three additional bits of writing that may help you, too[or]You also read, in red, one of three lines: [first custom style][one of]MEAN RAPS[r][or]MS. P. ARENA[r]--crossed out, but red[or]AMEN, RASP[r][in random order][stopping]." [bold-ok]
-scraped wall	"[if scraped wall is hayfilled]You can no longer see where it says [end if]HALLWAY UNDER (UN-)UN-CONSTRUCTION." [bold-ok]
-a reading	"On one of several pages, you see: [one of][first custom style]AID ANGER[r] is written[or]conspiracy theories from [first custom style]EDGAR IAN[r][or]silly musings on being [first custom style]IN A GRADE[r][or]a horror story: [first custom style]DINER, AAG[r][or]conspiracy theories from [first custom style]NIA EDGAR[r][or]an exhortation to [first custom style]RIDE AGAN[r] (sic) on the next-to-last page[or]an order that this all should be [b]RED AGAIN[r] (sic) on the last page[stopping]. The nonsense makes you see red." [metros] [bold-ok]
-neon pig	"Apparently the neon pig is a creation of one [first custom style]INPENGO[r]."
-controls	"You [if controls are in gin nope opening]remember[else]notice[end if] that it's underwritten (in red) by [first custom style]ORTON LSC[r], whoever they are."
-tiles	"The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out [first custom style]LEST I[r]. But with the effort, your eyes water, and you see red a bit." [resort]
-u lock	"Red writing shows the U-Lock brand is [first custom style]OLD THOSE[r]." [bold-ok]
-
-to say hktn: say "[first custom style]HECK TIN[r]"
-
 volume endgame
 
 book final question options (see what missed)
@@ -11157,12 +10738,6 @@ to say alt-sols:
 			if firsty is false:
 				say " or ";
 				now firsty is true;
-
-table of tulip acquisition methods
-chosen	sol
-false	"[b]ASK NERDS ABOUT DARKNESS[r]"
-false	"[b]OPEN NOISE BAG[r] in the Esoteric Coteries after getting the begonias"
-false	"[b]SHOW EMITTER TO DEADBEAT[r] after using it in [bastion], then using it again in the Esoteric Coteries"
 
 chapter warning player who bypassed regions
 
