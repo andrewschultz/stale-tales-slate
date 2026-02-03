@@ -15985,7 +15985,7 @@ a-text of yacker keycar is "RRYYRO". b-text of yacker keycar is "RRYYRO". parse-
 
 book Loftier Trefoil
 
-Loftier Trefoil is an innie room in Towers. "This opt-outs['] outpost is slightly classier than servant taverns. Still, you can't afford to stay, and you can't leave it with Rodney around. It has other rooms, but since this isn't an RPG, the cellar below and rooms upstairs are off-limits.". roomnud of Loftier Trefoil is table of Loftier Trefoil nudges.
+Loftier Trefoil is an innie room in Towers. "This opt-outs['] outpost is slightly classier than servant taverns. Still, you can't afford to stay, and you can't leave it with Rodney around. It has other rooms, but since this isn't an RPG, the cellar below and rooms upstairs are off-limits[if recital article is in Trefoil]. A recital article is also nailed to a wall here[end if].". roomnud of Loftier Trefoil is table of Loftier Trefoil nudges.
 
 exits-text of Loftier Trefoil is "You probably aren't going anywhere until Rodney does, first.".
 
@@ -22513,8 +22513,8 @@ this is the stores-misses rule:
 	if store W is in stores, say "[2drm of strip of profits][b]TOWERS[r] were in Store W.";
 
 this is the routes-misses rule:
-	if drudging ruin is in Ripe Pier, say "[2drm of Ripe Pier]you could've said [b]DURING[r] to start a tale about the drudging ruin.";
 	if worst ad is in Same Mesa, say "[2drm of same mesa]you could've tried to go [b]TOWARDS[r] the worst ad.";
+	if drudging ruin is in Ripe Pier, say "[2drm of Ripe Pier]you could've said [b]DURING[r] to start a tale about the drudging ruin.";
 	if raptest patters are in Sonancy Canyons, say "[2drm of sonancy canyons]you could've done [b]WITHOUT[r] the content of the raptest patters.";
 
 this is the troves-misses rule:
@@ -22602,7 +22602,7 @@ this is the towers-misses rule:
 	if recital article is not moot, say "[2drm of trefoil]you could've made the recital article [b]TALCIER[r].";
 	if number of pinko picaros > 0:
 		repeat with pk running through pinko picaros:
-			say "[2drm of trefoil][pk][one of], whom you left in the Loftier Trefoil,[or], also left,[stopping] could've been [vul of pk in upper case].";
+			say "[2drm of trefoil][pk][one of], whom you left in the Loftier Trefoil,[or], also left,[stopping] could've been [b][vul of pk in upper case][r].";
 	towers-miss-track scope copse;
 	if yurts are in Scope Copse, say "[2drm of scope copse]the yurts in the Scope Copse could've become [b]RUSTY[r].";
 	towers-miss-track saltbed;
@@ -22629,7 +22629,8 @@ this is the towers-misses rule:
 		if top opt pot is not moot, say "[2drm of mesprise premises]you could've given the Tetris Sitter the top opt pot, to complete Ornate Atoner Renato's quest.";
 
 to towers-miss-track (rm - a room):
-	if location of keycar is rm, say "[2drm of rm]the yacker keycar could've been made [b]CREAKY[r]."; [this is possible since the keycar appearing relies on clearing all guardians, not just necessary ones. It cannot appear in Coastlines.]
+	if keycar is off-stage, say "You managed to clear the guardians in Towers efficiently enough that the yacker keycar never appeared. [one of]It would have appeared in the first room where all guardians were eliminated. [b]MISSED[r] again for a spoiler[or]You could have made it [b]CREAKY[r][stopping].";
+	if location of keycar is rm, say "[2drm of rm]the yacker keycar could've been made [b]CREAKY[r]."; [this is possible since the keycar appearing relies on clearing all guardians in a room, not just necessary ones. It cannot appear in Coastlines.]
 
 this is the otters-misses rule:
 	if rescind-cinders is false, say "[2drm of minded midden]you could've tried to[if cinders are not moot] [b]DISCERN[r] (any item) for a spoiler hint or even, for a bonus point,[end if] [b]RESCIND[r] the cinders.";
