@@ -166,7 +166,7 @@ Your score has just gone up by one point
 /^Harms Marsh
 
 >score
-Score in a scenario: 13 out of 23 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+Score in a scenario: 13 out of 23 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 23.
 
 #testcase-slider-table-of-routes-anagrams-until
 >nuilt
@@ -204,7 +204,7 @@ Your score has just gone up by one point
 DEBUG INFO: General LLPish min-up for drudging ruin.
 
 >score
-Score in a scenario: 17 out of 23 total points in the current region, Routes. Lowest score to solve is 22. Maximum score available is 22.
+Score in a scenario: 17 out of 23 total points in the current region, Routes. Lowest score to solve is 22. Maximum score available is 23.
 
 >amidst
 Your score has just gone up by one point
@@ -251,7 +251,7 @@ Your score has just gone up by one point
 
 >score
 
-Score in a scenario: 22 out of 23 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 22 points.
+Score in a scenario: 22 out of 23 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 23 points.
 
 #testcase-slider-table-of-routes-anagrams-beyond
 >eboydn

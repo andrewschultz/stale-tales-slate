@@ -236,7 +236,7 @@ Looks like you will need to figure a way to move forward without directions. You
 Brother Horbert would be sad to see you return, unsuccessful. And you can't, anyway.
 
 >score
-Score in a scenario: 13 out of 23 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+Score in a scenario: 13 out of 23 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 23.
 
 >until
 Your score has just gone up by one point
@@ -287,7 +287,7 @@ Your score has just gone up by one point
 DEBUG INFO: General LLPish min-up for drudging ruin.
 
 >score
-Score in a scenario: 17 out of 23 total points in the current region, Routes. Lowest score to solve is 22. Maximum score available is 22.
+Score in a scenario: 17 out of 23 total points in the current region, Routes. Lowest score to solve is 22. Maximum score available is 23.
 
 >amidst
 Your score has just gone up by one point
@@ -398,7 +398,7 @@ The raptest patters are gone, and you can fully focus on the final step.
 
 >score
 
-Score in a scenario: 22 out of 23 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 22 points.
+Score in a scenario: 22 out of 23 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 23 points.
 
 >beyond
 Your score has just gone up by one point

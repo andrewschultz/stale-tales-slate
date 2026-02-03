@@ -1993,7 +1993,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the drudging ruin. T
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
 #testcase-table-of-routes-scannotes-drudging-ruin
->nud
+>scan drudging ruin
 What word could start an epic? The settler seems to give some great clues to start.
 
 @!min
@@ -2013,6 +2013,9 @@ Your score has just gone up by one point
 @spoi
 #testcase-table-of-routes-anagrams-athwart
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go ATHWART.
+
+@min
+}}CURMAX--
 
 /^Cripple Clipper
 

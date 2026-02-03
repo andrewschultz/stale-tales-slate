@@ -1078,7 +1078,7 @@ You can't change the Sheol Holes. There are too many. You can only hope to work 
 You can't change the Sheol Holes. There are too many. You can only hope to work past them. Or, well, some other preposition. Brother Horbert's advice you wrote in your notepad may help
 
 >score
-Score in a scenario: 13 out of 23 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
+Score in a scenario: 13 out of 23 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 23.
 
 #testcase-table-of-routes-scannotes-null-it-unit
 >scan null it unit
@@ -1243,7 +1243,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the drudging ruin. T
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 #testcase-table-of-routes-scannotes-drudging-ruin
->nud
+>scan drudging ruin
 What word could start an epic? The settler seems to give some great clues to start.
 
 >during
@@ -1251,7 +1251,7 @@ Your score has just gone up by one point
 DEBUG INFO: General LLPish min-up for drudging ruin.
 
 >score
-Score in a scenario: 17 out of 23 total points in the current region, Routes. Lowest score to solve is 22. Maximum score available is 22.
+Score in a scenario: 17 out of 23 total points in the current region, Routes. Lowest score to solve is 22. Maximum score available is 23.
 
 >amidst
 Your score has just gone up by one point
@@ -1418,7 +1418,7 @@ Your score has just gone up by one point
 
 >score
 
-Score in a scenario: 22 out of 23 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 22 points.
+Score in a scenario: 22 out of 23 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 23 points.
 
 #+testcase-mistake-roiling-tapster
 >tapster
