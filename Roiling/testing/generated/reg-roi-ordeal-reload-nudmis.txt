@@ -1090,7 +1090,7 @@ You're on your own. Perhaps you'd be better off twiddling the plates to get on w
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
+Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 #+testcase-table-of-carven-cavern-nudges-terrain
 >terrani
@@ -1115,7 +1115,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from the plaster psalter.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
+Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 #+testcase-table-of-carven-cavern-nudges-terrain
 >terrani
@@ -1142,7 +1142,7 @@ You're on your own. Perhaps you'd be better off making use of the staple to get 
 >staple aperture
 
 >score
-Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
+Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 #+testcase-table-of-carven-cavern-nudges-aperture
 >apertuer
@@ -1179,7 +1179,7 @@ The Respect Specter coughs.
 by one point
 
 >score
-Score in a scenario: {MAX} out of {MAX} total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
+Score in a scenario: 15 out of 15 total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
 
 >in
 /^Strip of Profits

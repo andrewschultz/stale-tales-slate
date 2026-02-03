@@ -69,10 +69,10 @@ Your score has just gone up by two points
 #testcase-table-of-region-initial-scoring-commentary-presto-2
 Gee! Such good clean fun! But--how many clean swears are there? Golly! If you run into compound words...
 >score
-Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 40.
+Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
 >score
-Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 40.
+Score in a scenario: 3 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
 >e
 
@@ -96,13 +96,13 @@ Your score has just gone up by one point
 You are also wearing a tsar star.
 
 >score
-Score in a scenario: 5 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 40.
+Score in a scenario: 4 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
 >drat
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 40.
+Score in a scenario: 5 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
 >n
 
@@ -110,7 +110,7 @@ Score in a scenario: 6 out of 41 total points in the current region, Presto. Low
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 7 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 40.
+Score in a scenario: 6 out of 41 total points in the current region, Presto. Lowest score to solve is 29. Maximum score available is 41.
 
 >e
 /^Marines Seminar Remains
@@ -129,7 +129,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 8 out of 41 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 40.
+Score in a scenario: 7 out of 41 total points in the current region, Presto. Lowest score to solve is 30. Maximum score available is 41.
 
 >w
 
@@ -166,7 +166,7 @@ by three points
 >mazeltov
 Your score has just gone up by three points
 >score
-Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 38.
+Score in a scenario: 10 out of 41 total points in the current region, Presto. Lowest score to solve is 32. Maximum score available is 41.
 >blam
 Your score has just gone up by one point
 
@@ -177,7 +177,7 @@ It's trickier to see through than moist-o-mist. Anyone or anything could be wait
 Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
-Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 38.
+Score in a scenario: 11 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
 #testcase-prerule-table-of-presto-anagrams-pre-ether-there-rule
 >there
@@ -203,7 +203,7 @@ Rand is Leo's mirror image, loutish and muscular and taller than you. He looks o
 Rand is Leo's mirror image, loutish and muscular and taller than you.
 
 >score
-Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 38.
+Score in a scenario: 12 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
 >darn
 Your score has just gone up by one point
@@ -213,7 +213,7 @@ Your score has just gone up by one point
 /^At the moment, "it" means Rand, "him" means Rand, "her" means the lamb and "them" means both (Leo and Rand|Rand and Leo)\.$
 
 >score
-Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 38.
+Score in a scenario: 13 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
 >whassup
 Your score has just gone up by one point
@@ -227,12 +227,12 @@ Rand is Leo's mirror image, loutish and muscular and taller than you.
 Leo is Rand's mirror image--violent, not evil. A naughty anythug on a gay hunt
 
 >score
-Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 38.
+Score in a scenario: 14 out of 41 total points in the current region, Presto. Lowest score to solve is 33. Maximum score available is 41.
 
 >goodness
 by one point
 >score
-Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 38.
+Score in a scenario: 15 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
 >n
 
@@ -278,7 +278,7 @@ Your score has just gone up by one point
 !(taking the popgun first while you mess with the boing-go bin)
 
 >score
-Score in a scenario: 18 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 37.
+Score in a scenario: 16 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
 >load gun with dart
 You put the dart into the PG-on-up popgun.
@@ -291,7 +291,7 @@ Your score has just gone up by one point
 Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
-Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 37.
+Score in a scenario: 17 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
 >n
 /^Saps' Pass
@@ -303,7 +303,7 @@ Score in a scenario: 19 out of 41 total points in the current region, Presto. Lo
 Your score has just gone up by one point
 /^Phat Path
 >score
-Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 37.
+Score in a scenario: 18 out of 41 total points in the current region, Presto. Lowest score to solve is 34. Maximum score available is 41.
 
 #testcase-prerule-table-of-presto-anagrams-pre-hogs-not-keys-rule
 >thisalt
@@ -326,7 +326,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 37.
+Score in a scenario: 19 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
 
 # all 6 combos to get through
 >tough
@@ -409,7 +409,7 @@ Dat was a good dust-up
 Your score has just gone up by one point
 But we ain't bored yet, boss!
 >score
-Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 37.
+Score in a scenario: 20 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
 
 >tough
 Your score has just gone up by one point
@@ -417,12 +417,12 @@ Hut! Go!
 Dat was a good dust-up
 
 >score
-Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 37.
+Score in a scenario: 21 out of 41 total points in the current region, Presto. Lowest score to solve is 35. Maximum score available is 41.
 
 >trasch
 by one point
 >score
-Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 37.
+Score in a scenario: 22 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >n
 /^Hacks' Shack
@@ -456,7 +456,7 @@ Only one more piece of hardware is needed, and the computer will work.
 You realize you might trip over the screen if you leave on the floor. Fortunately, the labs slab is just the place to hoist the computer screen so it's useful! And you do.
 
 >score
-Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 37.
+Score in a scenario: 23 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >get polemic
 You take it. You don't need to, but it'd be nice to have handy.
@@ -488,13 +488,13 @@ Your score has just gone up by one point
 You make a note you can flip the disk back based on the lossless compression algorithm, etc., and how you don't need to know the deep math cold to be able to use it, or even remember the basics. You can just make it a SKID, as long as the disk isn't in a disk drive.
 
 >score
-Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 37.
+Score in a scenario: 24 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 >leaf
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 37.
+Score in a scenario: 25 out of 41 total points in the current region, Presto. Lowest score to solve is 36. Maximum score available is 41.
 
 #testcase-prerule-table-of-presto-anagrams-pre-reboot-rule
 >reboot
@@ -513,7 +513,7 @@ You may need sleep later, but not now. Besides, you have nowhere to sleep.
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 37.
+Score in a scenario: 26 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >get book
 >push skid s
@@ -535,7 +535,7 @@ That stupid SHATTER-THREATS law might pick you up out here. Anyway, the yak on t
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 37.
+Score in a scenario: 27 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >keyboard
 Your score has just gone up by one point
@@ -546,7 +546,7 @@ You can now do computery things unimpeded! Hooray!
 Nothing (significant) like that is in the immediate vicinity or region.
 
 >score
-Score in a scenario: 30 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 37.
+Score in a scenario: 28 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >put keyboard on slab
 It already is!
@@ -608,7 +608,7 @@ Your score has just gone up by one point
 You check where it's hidden. It looks to be sleeping after helping you reboot.
 
 >score
-Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 37.
+Score in a scenario: 29 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >capslock
 Your score has just gone up by one point
@@ -639,7 +639,7 @@ You can SLEEP once you've gotten a good start on your coding task.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 37.
+Score in a scenario: 31 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >compile
 !by one point
@@ -656,7 +656,7 @@ That stupid NEED IF-DEFINE and that peels speel, still.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 37.
+Score in a scenario: 32 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >compile
 by one point
@@ -684,24 +684,24 @@ You weren't ready to DEBUG yet.
 >undo
 
 >score
-Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 33.
+Score in a scenario: 33 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >cola
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 36 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 33.
+Score in a scenario: 34 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >mug
 Your score has just gone up by one point
 >score
-Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 33.
+Score in a scenario: 35 out of 41 total points in the current region, Presto. Lowest score to solve is 37. Maximum score available is 41.
 
 >avider
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 33.
+Score in a scenario: 36 out of 41 total points in the current region, Presto. Lowest score to solve is 38. Maximum score available is 41.
 
 >au 0
 >purloin usb
@@ -719,7 +719,7 @@ DEBUG INFO: min-up codepath
 You imagine it can't be too hard to open up the disk drive and put them in.
 
 >score
-Score in a scenario: 40 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 33.
+Score in a scenario: 37 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
 
 #+testcase-prerule-table-of-presto-anagrams-pre-bub-dude-egg-rule
 >debug
@@ -738,7 +738,7 @@ Your score has just gone up by one point
 It's an ordinary USB. Or it would be, around anyone but you.
 
 >score
-Score in a scenario: 42 out of 41 total points in the current region, Presto. Lowest score to solve is 41. Maximum score available is 33.
+Score in a scenario: 38 out of 41 total points in the current region, Presto. Lowest score to solve is 39. Maximum score available is 41.
 
 >misses
 !presto
@@ -759,13 +759,13 @@ by one point
 DEBUG INFO: min-up codepath
 Well, flipping Drive E didn't help speed up your programming, but hooray for generally satisfying your curiosity!
 >score
-Score in a scenario: 43 out of 41 total points in the current region, Presto. Lowest score to solve is 42. Maximum score available is 33.
+Score in a scenario: 39 out of 41 total points in the current region, Presto. Lowest score to solve is 40. Maximum score available is 41.
 
 >tab
 by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 44 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 33 points.
+Score in a scenario: 40 out of 41 total points in the current region, Presto. There are no secrets left to find here, so the score to win is 41 points.
 
 >bus
 Your score has just gone up by one point
@@ -788,4 +788,4 @@ You could also have made the USB into a BUS.
 
 >score
 
-Presto ({MAX}/{MAX})
+Presto (41/41)

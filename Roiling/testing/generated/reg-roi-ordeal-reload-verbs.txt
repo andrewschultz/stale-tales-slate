@@ -307,13 +307,13 @@ There's too much of it, and it's too hardened.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
+Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 >stapler
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
+Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 #testcase-table-of-ordeal-reload-attacks-apertured-departure
 >attack apertured departure
@@ -334,7 +334,7 @@ You can't fit through the departure yet.
 >staple aperture
 
 >score
-Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
+Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 # Carven Cavern has several "check going" rules to make sure you are directed to the apertured departure
 >au 0
@@ -351,7 +351,7 @@ The Respect Specter coughs.
 by one point
 
 >score
-Score in a scenario: {MAX} out of {MAX} total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
+Score in a scenario: 15 out of 15 total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
 
 #+testcase-exits-carven-cavern
 >exits

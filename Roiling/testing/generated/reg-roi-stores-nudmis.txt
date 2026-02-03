@@ -578,7 +578,7 @@ WESTOR is the name of the company that built this. They used the SET-ROW method.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 7 out of 11 total points in the current region, Stores. Lowest score to solve is 8. Maximum score available is 10.
+Score in a scenario: 7 out of 11 total points in the current region, Stores. Lowest score to solve is 8. Maximum score available is 11.
 
 #testcase-table-of-stores-done-rejects-truster-turrets
 >towesr
@@ -615,7 +615,7 @@ DEBUG ONLY: You feel a slight psychic push-pull coming from Store Y. That's a de
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 8 out of 11 total points in the current region, Stores. Lowest score to solve is 9. Maximum score available is 9.
+Score in a scenario: 8 out of 11 total points in the current region, Stores. Lowest score to solve is 9. Maximum score available is 11.
 
 #testcase-table-of-stores-done-rejects-balancer-barnacle
 >oystre
@@ -652,7 +652,7 @@ E. S. Roth.
 >others
 Your score has just gone up by one point
 >score
-Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 9.
+Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 11.
 
 #testcase-table-of-stores-done-rejects-throes-hoster
 >othesr
@@ -675,7 +675,7 @@ I guess it's a trope that something with a trope might help you with the general
 
 >presto
 >score
-Score in a scenario: 10 out of 11 total points in the current region, Stores. There are no secrets left to find here, so the score to win is 9 points.
+Score in a scenario: 10 out of 11 total points in the current region, Stores. There are no secrets left to find here, so the score to win is 11 points.
 
 #testcase-table-of-strip-of-profits-nudges-odorant
 >odoratn
@@ -701,7 +701,7 @@ Your score has just gone up by one point
 !DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 9 out of 9 total points in the current region, Stores. You have access to all the sub-areas.
+Score in a scenario: 11 out of 11 total points in the current region, Stores. You have access to all the sub-areas.
 
 #testcase-table-of-stores-done-rejects-solid-idols
 >ottesr

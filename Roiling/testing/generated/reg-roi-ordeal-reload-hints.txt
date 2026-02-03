@@ -116,20 +116,20 @@ You nod. "No clues counsel."
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
+Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 >stapler
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
+Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 >put staple in stapler
 
 >staple aperture
 
 >score
-Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
+Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 >scepter
 The Respect Specter coughs.
@@ -137,7 +137,7 @@ The Respect Specter coughs.
 by one point
 
 >score
-Score in a scenario: {MAX} out of {MAX} total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
+Score in a scenario: 15 out of 15 total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
 
 >in
 /^Strip of Profits

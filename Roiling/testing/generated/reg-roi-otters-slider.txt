@@ -26,7 +26,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 1 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 38.
+Score in a scenario: 1 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
 
 >l
 /^Burnt Brunt
@@ -47,7 +47,7 @@ They crackle with energy and possibilities as you take them. Perhaps there is mo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 2 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 2 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
 
 >w
 /^Disowned Downside
@@ -230,18 +230,18 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: 3 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 3 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
 
 >angrily
 Your score has just gone up by one point.
 >score
-Score in a scenario: 4 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 4 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
 
 >blearily
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: 5 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 5 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
 >au 0
 
 >1
@@ -285,13 +285,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 by one point
 
 >score
-Score in a scenario: 6 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 6 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
 
 >else
 by one point
 
 >score
-Score in a scenario: 7 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 7 out of 38 total points in the current region, Otters. Lowest score to solve is 25. Maximum score available is 38.
 
 #testcase-slider-table-of-otters-anagrams-unless
 >slnsue
@@ -300,7 +300,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >unless
 by one point
 >score
-Score in a scenario: 8 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 8 out of 38 total points in the current region, Otters. Lowest score to solve is 26. Maximum score available is 38.
 >misses
 !--you could've dispelled the "Sullenness, Us" voices in Loop Pool after satisfying the eels by saying UNLESS.
 
@@ -315,14 +315,14 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 9 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 9 out of 38 total points in the current region, Otters. Lowest score to solve is 27. Maximum score available is 38.
 
 >ergo
 by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 10 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 10 out of 38 total points in the current region, Otters. Lowest score to solve is 28. Maximum score available is 38.
 
 #testcase-slider-table-of-otters-anagrams-however
 >ewohrve
@@ -333,7 +333,7 @@ by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 11 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 11 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
 >n
 
 #testcase-slider-table-of-otters-anagrams-atom
@@ -348,13 +348,13 @@ Your score has just gone up by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >score
-Score in a scenario: 12 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 12 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
 
 >open
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 13 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
 
 >e
 
@@ -377,13 +377,13 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 14 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 14 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
 
 >remotely
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 15 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 15 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
 
 >n
 /^Lamer Realm
@@ -396,7 +396,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 16 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 16 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
 
 #testcase-slider-table-of-otters-anagrams-paroled
 >aporedl
@@ -418,19 +418,19 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 17 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 17 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
 
 >paroled
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 18 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 18 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
 
 >artsy
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 19 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 19 out of 38 total points in the current region, Otters. Lowest score to solve is 29. Maximum score available is 38.
 
 >l
 /^Blest Belts
@@ -439,7 +439,7 @@ Score in a scenario: 19 out of 38 total points in the current region, Otters. Lo
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 20 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 20 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
 
 >s
 >s
@@ -463,14 +463,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 21 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 21 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
 
 >joltily
 Your score has just gone up by one point
 They find another place where rioters roister.
 
 >score
-Score in a scenario: 22 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 22 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
 
 >s
 /^Perverse Preserve
@@ -479,7 +479,7 @@ Score in a scenario: 22 out of 38 total points in the current region, Otters. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 23 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 23 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
 
 #testcase-slider-table-of-otters-anagrams-parrot
 >rrpato
@@ -517,19 +517,19 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 24 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 24 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
 
 >hornets
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 25 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 25 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
 
 >racoon
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 26 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 26 out of 38 total points in the current region, Otters. Lowest score to solve is 30. Maximum score available is 38.
 
 >l
 /^Uprates Pasture
@@ -539,7 +539,7 @@ Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 27 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 27 out of 38 total points in the current region, Otters. Lowest score to solve is 31. Maximum score available is 38.
 
 >n
 >n
@@ -551,7 +551,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >basically
 by one point
 >score
-Score in a scenario: 28 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 28 out of 38 total points in the current region, Otters. Lowest score to solve is 32. Maximum score available is 38.
 
 #testcase-slider-table-of-otters-anagrams-sable
 >asleb
@@ -560,14 +560,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 >sable
 by one point
 >score
-Score in a scenario: 29 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 29 out of 38 total points in the current region, Otters. Lowest score to solve is 33. Maximum score available is 38.
 
 >w
 
 >actually
 by one point
 >score
-Score in a scenario: 30 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 30 out of 38 total points in the current region, Otters. Lowest score to solve is 34. Maximum score available is 38.
 
 >w
 /^Reclusion Inclosure
@@ -580,7 +580,7 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 31 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 31 out of 38 total points in the current region, Otters. Lowest score to solve is 35. Maximum score available is 38.
 
 #testcase-slider-table-of-otters-anagrams-honestly
 >ohentsyl
@@ -590,14 +590,14 @@ Your settler begins to make noises: a low hum, but nothing really piercing.
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 32 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 32 out of 38 total points in the current region, Otters. Lowest score to solve is 36. Maximum score available is 38.
 
 # the cinders are moved to the end to test the above case: do we have a chance to get all the points?
 >rescind
 Your score has just gone up by one point
 DEBUG INFO: min-up codepath
 >score
-Score in a scenario: 33 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 37.
+Score in a scenario: 33 out of 38 total points in the current region, Otters. Lowest score to solve is 37. Maximum score available is 38.
 
 >raptor
 Your score has just gone up by one point
@@ -607,14 +607,14 @@ Your score has just gone up by one point
 Your settler begins to make noises: a low hum, but nothing really piercing.
 
 >score
-Score in a scenario: 34 out of 38 total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is 35.
+Score in a scenario: 34 out of 38 total points in the current region, Otters. Lowest score to solve is 37. Maximum score available is 38.
 
 >decurse
 The EDUCERS, US Creed crumbles as you get a bit creative with your words until nothing's left. You think back at how you thought up the word which doesn't quite appear in a dictionary, but maybe it could. This sort of thing is useful for fighting back, or trying to identify feelings or views you can't quite express. They're out there in good times and bad. Maybe how you found this will provide a blueprint many, many years later (you hope it's many years) once Elvira's long since history.
 First, though, to make her history.
 
 >score
-Score in a scenario: 35 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 35 points.
+Score in a scenario: 35 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
 
 #testcase-slider-table-of-otters-anagrams-quickly
 >uqcilyk
@@ -625,7 +625,7 @@ The medals clink together. You feel infused with speed. Even your fats feel fast
 by one point
 
 >score
-Score in a scenario: 36 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 35 points.
+Score in a scenario: 36 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
 
 #this is how we get rid of Elvira
 >w
@@ -645,12 +645,12 @@ Your score has just gone up by one point
 
 >score
 
-Score in a scenario: 37 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 35 points.
+Score in a scenario: 37 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
 
 >w
 
 >score
-Score in a scenario: 37 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 35 points.
+Score in a scenario: 37 out of 38 total points in the current region, Otters. There are no secrets left to find here, so the score to win is 38 points.
 
 >misses
 !otters
@@ -663,4 +663,6 @@ Elmo and Gretta are waiting for you back at the Means Manse
 Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
 
 >score
+!Otters
+!Ordeal Reload
 You need to figure how to change and get through store H.

@@ -5759,7 +5759,7 @@ This will restore the Curst Palace, but you can also figure what to do with that
 /^Strip of Profits
 
 >score
-, Towers ({SCORE}/{MAX})
+, Towers ({#SCORE}/{#MAX})
 
 @mis
 #this can't be easily tested elsewhere without cheating e.g. gonear limits, spectacular

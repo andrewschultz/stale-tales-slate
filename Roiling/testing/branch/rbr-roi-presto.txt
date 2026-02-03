@@ -4176,5 +4176,4 @@ You could also have made the USB into a BUS.
 
 >score
 
-@!min
-Presto ({MAX}/{MAX})
+Presto ({#SCORE}/{#MAX})

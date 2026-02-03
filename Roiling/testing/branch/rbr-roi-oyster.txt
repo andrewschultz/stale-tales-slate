@@ -3996,5 +3996,5 @@ Casper Spacer himself shakes your hand. "No hunter! On the run! None hurt!" He h
 You feel slightly dafter, having farted to no good purpose
 
 >score
-Oyster ({SCORE}/{MAX})
+Oyster ({#SCORE}/{#MAX})
 

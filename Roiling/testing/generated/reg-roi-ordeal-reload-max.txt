@@ -436,13 +436,13 @@ You can use the command XTRA TRAX (or XTRA or TRAX) to toggle tracking the right
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
+Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 >stapler
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
+Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 #testcase-postrule-table-of-ordeal-reload-anagrams-post-psalter-stapler-rule
 >x departure
@@ -453,7 +453,7 @@ The apertured departure is currently not wide enough to enter.
 >staple aperture
 
 >score
-Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
+Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
 
 #testcase-table-of-notepad-entries-asking
 >pad asking

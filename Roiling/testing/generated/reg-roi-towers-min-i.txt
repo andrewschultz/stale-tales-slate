@@ -39,13 +39,13 @@ Your score has just gone up by one point
 /^Topside Deposit
 
 >score
-Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 53.
+Score in a scenario: 4 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 53.
 
 >sadder
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 9 out of 57 total points in the current region, Towers. Lowest score to solve is 30. Maximum score available is 53.
+Score in a scenario: 5 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 53.
 
 >get all
 
@@ -73,21 +73,21 @@ Hmm. You bet you could get past if the denier nereid were REINED.
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 11 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 52.
+Score in a scenario: 6 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 
 >rinsed
 Your score has just gone up by one point
 >score
-Score in a scenario: 21 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 52.
+Score in a scenario: 7 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 >e
 >restful
 Your score has just gone up by one point
 >score
-Score in a scenario: 22 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 52.
+Score in a scenario: 8 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 >saltier
 Your score has just gone up by one point
 >score
-Score in a scenario: 23 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 52.
+Score in a scenario: 9 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 >e
 >w
 >n
@@ -95,31 +95,31 @@ Score in a scenario: 23 out of 57 total points in the current region, Towers. Lo
 >sewed
 Your score has just gone up by one point
 >score
-Score in a scenario: 24 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 52.
+Score in a scenario: 10 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 >weariest
 Your score has just gone up by one point
 >score
-Score in a scenario: 25 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 52.
+Score in a scenario: 11 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 >n
 >hastiest
 Your score has just gone up by one point
 >score
-Score in a scenario: 26 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 52.
+Score in a scenario: 12 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 >released
 Your score has just gone up by one point
 >score
-Score in a scenario: 27 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 52.
+Score in a scenario: 13 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 >e
 >holiest
 Your score has just gone up by one point
 >score
-Score in a scenario: 28 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 52.
+Score in a scenario: 14 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 >w
 >w
 >married
 Your score has just gone up by one point
 >score
-Score in a scenario: 29 out of 57 total points in the current region, Towers. Lowest score to solve is 31. Maximum score available is 52.
+Score in a scenario: 15 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 >n
 >s
 >e
@@ -133,13 +133,13 @@ Score in a scenario: 29 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 52.
+Score in a scenario: 16 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 
 >resting
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 56 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 52.
+Score in a scenario: 17 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 
 >e
 
@@ -149,7 +149,7 @@ Score in a scenario: 56 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 57 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 52.
+Score in a scenario: 18 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 
 >push retape
 
@@ -163,7 +163,7 @@ Score in a scenario: 57 out of 57 total points in the current region, Towers. Lo
 by one point
 
 >score
-Score in a scenario: 58 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 52.
+Score in a scenario: 19 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 
 >gt copse
 >w
@@ -176,7 +176,7 @@ Score in a scenario: 58 out of 57 total points in the current region, Towers. Lo
 by one point
 
 >score
-Score in a scenario: 60 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 52.
+Score in a scenario: 21 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 
 >gt coastlines
 
@@ -184,7 +184,7 @@ Score in a scenario: 60 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 61 out of 57 total points in the current region, Towers. Lowest score to solve is 47. Maximum score available is 52.
+Score in a scenario: 22 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 52.
 
 >ask agnostic about doctor yow
 !Your score has just gone up by one point
@@ -193,7 +193,7 @@ Score in a scenario: 61 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 64 out of 57 total points in the current region, Towers. Lowest score to solve is 49. Maximum score available is 51.
+Score in a scenario: 23 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 51.
 
 >gt coastlines
 >give gizmo to agnostic
@@ -215,7 +215,7 @@ You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines
 #}}CURMAX+=7
 
 >score
-Score in a scenario: 67 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 52.
+Score in a scenario: 25 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 51.
 
 >au 0
 
@@ -227,5 +227,5 @@ This will restore the Curst Palace, but you can also figure what to do with that
 /^Strip of Profits
 
 >score
-, Towers ({SCORE}/{MAX})
+, Towers (26/57)
 

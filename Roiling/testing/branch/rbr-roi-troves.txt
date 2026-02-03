@@ -2394,4 +2394,4 @@ This will escape Upscale Capsule, but you could do a bit more if you want. Stay 
 /^Strip of Profits
 
 >score
-, Troves ({SCORE}/{MAX})
+, Troves ({#SCORE}/{#MAX})

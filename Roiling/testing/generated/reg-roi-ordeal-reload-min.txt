@@ -49,7 +49,7 @@ Score in a scenario: 4 out of 15 total points in the current region, Ordeal Relo
 by one point
 
 >score
-Score in a scenario: 11 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 15.
+Score in a scenario: 5 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 15.
 
 >3
 Elmo checks you for a second. "You sure you know how to use the settler?"
@@ -61,20 +61,20 @@ You nod. "No clues counsel."
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 12 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
+Score in a scenario: 6 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 9.
 
 >stapler
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 13 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
+Score in a scenario: 7 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 9.
 
 >put staple in stapler
 
 >staple aperture
 
 >score
-Score in a scenario: 14 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 14. Maximum score available is 9.
+Score in a scenario: 8 out of 15 total points in the current region, Ordeal Reload. Lowest score to solve is 8. Maximum score available is 9.
 
 >in
 /^Strip of Profits

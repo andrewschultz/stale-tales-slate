@@ -2186,7 +2186,7 @@ by one point
 }}CURMIN++
 \\
 >score
-Score in a scenario: {MAX} out of {MAX} total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
+Score in a scenario: {#MAX} out of {#MAX} total points in the current region, Ordeal Reload. You should go IN to the Strip of Profits, now.
 
 @verbs
 #+testcase-exits-carven-cavern

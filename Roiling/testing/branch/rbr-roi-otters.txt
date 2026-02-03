@@ -13,12 +13,12 @@ file=reg-roi-otters-slider.txt,abbr=sli,desc=walkthrough with slider readings
 file=reg-roi-otters-hints.txt,abbr=hints/hin/spoi,desc=walkthrough with hints
 file=reg-roi-otters-verbs.txt,abbr=verbs,desc=walkthrough testing verbs
 
-}}MAX=38
-}}CURMAX=38
-}}SCORE=0
-}}CURMIN=25
+}#MAX=38
+}#CURMAX=38
+}#SCORE=0
+}#CURMIN=25
 
-}$SCOS=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Otters. Lowest score to solve is {$CURMIN}. Maximum score available is {#CURMAX}.
+}$SCOS=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Otters. Lowest score to solve is {#CURMIN}. Maximum score available is {#CURMAX}.
 }$SCOMAX=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Otters. There are no secrets left to find here, so the score to win is {#CURMAX} points.
 
 ALSO-IGNORE:t
@@ -4120,4 +4120,6 @@ Elmo and Gretta are waiting for you back at the Means Manse
 Well, those stores you took care of are gone, and so is the megaton magneto-montage. But Store H remains.
 
 >score
+!Otters
+!Ordeal Reload
 You need to figure how to change and get through store H.

@@ -58,27 +58,27 @@ Score in a scenario: 6 out of 11 total points in the current region, Stores. Low
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 7 out of 11 total points in the current region, Stores. Lowest score to solve is 8. Maximum score available is 10.
+Score in a scenario: 7 out of 11 total points in the current region, Stores. Lowest score to solve is 8. Maximum score available is 11.
 
 >oyster
 Your score has just gone up by one point
 
 >score
-Score in a scenario: 8 out of 11 total points in the current region, Stores. Lowest score to solve is 9. Maximum score available is 9.
+Score in a scenario: 8 out of 11 total points in the current region, Stores. Lowest score to solve is 9. Maximum score available is 11.
 
 >others
 Your score has just gone up by one point
 >score
-Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 9.
+Score in a scenario: 9 out of 11 total points in the current region, Stores. Lowest score to solve is 10. Maximum score available is 11.
 
 >presto
 >score
-Score in a scenario: 10 out of 11 total points in the current region, Stores. There are no secrets left to find here, so the score to win is 9 points.
+Score in a scenario: 10 out of 11 total points in the current region, Stores. There are no secrets left to find here, so the score to win is 11 points.
 
 >otters
 Your score has just gone up by one point
 !DEBUG INFO: min-up codepath
 
 >score
-Score in a scenario: 9 out of 9 total points in the current region, Stores. You have access to all the sub-areas.
+Score in a scenario: 11 out of 11 total points in the current region, Stores. You have access to all the sub-areas.
 

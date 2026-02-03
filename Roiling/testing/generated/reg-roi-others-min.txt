@@ -140,13 +140,13 @@ scru-it
 Your score has just gone up by one point.
 
 >score
-You have 18 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have 17 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
 
 >tangerines
 Your score has just gone up by one point.
 
 >score
-You have 19 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have 18 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
 
 >s
 
@@ -154,7 +154,7 @@ You have 19 of 47 total points for the post-Elvira Others region, though you onl
 by one point
 
 >score
-You have 20 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have 19 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
 
 >n
 
@@ -165,17 +165,17 @@ You have 20 of 47 total points for the post-Elvira Others region, though you onl
 Your score has just gone up by one point.
 
 >score
-You have 22 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have 20 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
 >blackberries
 Your score has just gone up by one point.
 
 >score
-You have 23 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have 21 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
 >watermelon
 Your score has just gone up by one point.
 
 >score
-You have 24 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
+You have 22 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
 
 >e
 >s
@@ -193,7 +193,7 @@ by one point
 Blam!
 
 >score
-You have 27 of 47 total points for the post-Elvira Others region, though you only need 28 to win.
+You have 23 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
 
 >n
 
@@ -211,7 +211,7 @@ Your score has just gone up by one point.
 # with the icons in the slot, you can no longer get CONCISIONS
 
 >score
-You have 44 of 47 total points for the post-Elvira Others region, though you only need 42 to win.
+You have 24 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
 
 # here we just want to make sure you are notified you cannot get the maximum score, which is otherwise achievable until you win
 >eat arugula
@@ -220,7 +220,7 @@ Not very tasty, but your vision seems clearer. "La! A guru!" you think to yourse
 >guru dr severe
 One look at Dr. Severe, and you realize Dr. Severe can just be REVERSED. The aftertaste of arugula finally dissipates.
 >score
-You have 48 of 47 total points for the post-Elvira Others region, though you only need 47 to win.
+You have 24 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
 You can't get the maximum score, since you used the arugula
 
 >u
@@ -234,7 +234,7 @@ PERP
 by one point
 >score
 
-You have 49 of 47 total points for the post-Elvira Others region, though you only need 47 to win.
+You have 25 of 47 total points for the post-Elvira Others region, though you only need 26 to win.
 
 >review
 by one point
@@ -242,11 +242,11 @@ by one point
 >score
 
 # let's check "here/valence enclave" conditional text in the score
-You have 50 of 47 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win.
+You have 26 of 47 total points for the post-Elvira Others region, and you should be able to go north from here to the Valence Enclave to win.
 You can't get the maximum score, since you used the arugula and missed a chance for something obscure with the sonic icons.
 >s
 >score
-You have 50 of 47 total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave to win.
+You have 26 of 47 total points for the post-Elvira Others region, and you should be able to go north from Gates Stage to the Valence Enclave to win.
 You can't get the maximum score, since you used the arugula and missed a chance for something obscure with the sonic icons.
 >n
 
