@@ -13,7 +13,7 @@
 /^Same Mesa
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 0 out of 23 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 23.
 
 #verbcase listen-routes-if-player-is-in-same-mesa
 >listen
@@ -37,7 +37,7 @@ Any direction from the Same Mesa seems as bad or good as any other. Perhaps ther
 There are plenty of ways to go, but they don't seem to lead anywhere. There are three places to enter, though they do seem to shift.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 0 out of 23 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 23.
 
 >inside
 Your score has just gone up by one point
@@ -45,7 +45,7 @@ Your score has just gone up by one point
 /^Cleric Circle
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 1 out of 23 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 23.
 
 #testcase-table-of-routes-attacks-brother-horbert
 >attack brother horbert
@@ -148,7 +148,7 @@ Those tirades from Ian Gast.
 You don't have a weapon big enough to take Ian Gast. One won't appear in your super purse. Anyway, he's not evil, just whiny.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 6 out of 23 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 23.
 
 >astride
 Your score has just gone up by one point
@@ -197,7 +197,7 @@ You don't know if you should go anywhere. With A Bev' O' Be Ova' lying around, m
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 11 out of 23 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 23.
 
 #verbcase listen-routes-if-player-is-in-same-mesa-if-gast-is-moot
 >listen
@@ -231,12 +231,12 @@ Far into a rift? No. You can't see far enough to rely on directions, here. You'd
 >exits
 Looks like you will need to figure a way to move forward without directions. You've been doing well so far.
 
-#testcase-table-of-goto-sectioning--1-routes
+#testcase-table-of-goto-sectioning-routes-1
 >gt mesa
-Brother Horbert would be sad to see you return, unsuccessful.
+Brother Horbert would be sad to see you return, unsuccessful. And you can't, anyway.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 13 out of 23 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
 
 >until
 Your score has just gone up by one point
@@ -266,13 +266,13 @@ Someone calling out "'Tis mad!" You see red.
 >smell
 Ugh! The mists smell, as kids in Yorpwald say for slang purposes, staim'd. You see red at how useless and impractical such ridiculous slang is. Which, of course, makes it actually useful here.
 
-#testcase-table-of-goto-sectioning-harms-marsh-2--
+#testcase-table-of-goto-sectioning-routes-2-harms-marsh
 >gt marsh
 You already muddled your way out of Harms Marsh. You may be lost now, but walking back would be worse.
 
-#+testcase-table-of-goto-sectioning--1-routes
+#+testcase-table-of-goto-sectioning-routes-1
 >gt mesa
-Brother Horbert would be sad to see you return, unsuccessful.
+Brother Horbert would be sad to see you return, unsuccessful. And you can't, anyway.
 
 #testcase-outside-ripe-pier
 >out
@@ -287,7 +287,7 @@ Your score has just gone up by one point
 DEBUG INFO: General LLPish min-up for drudging ruin.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 17 out of 23 total points in the current region, Routes. Lowest score to solve is 22. Maximum score available is 22.
 
 >amidst
 Your score has just gone up by one point
@@ -309,15 +309,15 @@ This is no dreamboat.
 >bother
 Siphon no pish on-ship.
 
-#testcase-table-of-goto-sectioning-ripe-pier-3--
+#testcase-table-of-goto-sectioning-routes-3-ripe-pier
 >gt pier
 You have no idea how to turn the Cripple Clipper around, and you don't want to.
 
-#+testcase-table-of-goto-sectioning-harms-marsh-2--
+#+testcase-table-of-goto-sectioning-routes-2-harms-marsh
 >gt marsh
 You already muddled your way out of Harms Marsh. You may be lost now, but sailing back would be worse.
 
-#+testcase-table-of-goto-sectioning--1-routes
+#+testcase-table-of-goto-sectioning-routes-1
 >gt mesa
 You're not going back across the water. You're closer to the end of your quest.
 
@@ -346,11 +346,11 @@ An over-cheery voice: "Thou wit!"
 >listen hog
 Squealing. It could be calmer
 
-#testcase-table-of-goto-sectioning-cripple-clipper-4--
+#testcase-table-of-goto-sectioning-routes-4-cripple-clipper
 >gt cripple clipper
 The Sonancy Canyons lead to your destiny.
 
-#+testcase-table-of-goto-sectioning-ripe-pier-3--
+#+testcase-table-of-goto-sectioning-routes-3-ripe-pier
 >gt pier
 It's time to go forward, not backwards.
 
@@ -398,7 +398,7 @@ The raptest patters are gone, and you can fully focus on the final step.
 
 >score
 
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. There are no secrets left to find here, so the score to win is {CURMAX} points.
+Score in a scenario: 22 out of 23 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 22 points.
 
 >beyond
 Your score has just gone up by one point
@@ -406,5 +406,5 @@ Your score has just gone up by one point
 /^Strip of Profits
 
 >score
-Routes ({SCORE}/{MAX})
+Routes (23/23)
 

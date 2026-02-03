@@ -13,10 +13,10 @@
 /^Same Mesa
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 0 out of 23 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 23.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 0 out of 23 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 23.
 
 #testcase-prerule-table-of-routes-anagrams-pre-side-art-astride-rule
 >astride
@@ -51,7 +51,7 @@ Well, that was different from the standard directions. But there can't be too ma
 /^Cleric Circle
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 1 out of 23 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 23.
 
 >x list o toils
 
@@ -224,7 +224,7 @@ Your score has just gone up by one point
 They're not very good tirades, but maybe you could position yourself better to listen to them.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 6 out of 23 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 23.
 
 #+testcase-table-of-routes-prefigurings-side-art
 >astried
@@ -277,7 +277,7 @@ No-Lag Logan may have left behind a ship that can get you out of here. It is bey
 Your score has just gone up by one point.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 11 out of 23 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 23.
 
 >from
 Your score has just gone up by one point
@@ -288,7 +288,7 @@ Your score has just gone up by one point
 /^Harms Marsh
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 13 out of 23 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
 
 >until
 Your score has just gone up by one point
@@ -320,7 +320,7 @@ Your score has just gone up by one point
 DEBUG INFO: General LLPish min-up for drudging ruin.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 17 out of 23 total points in the current region, Routes. Lowest score to solve is 22. Maximum score available is 22.
 
 >amidst
 Your score has just gone up by one point
@@ -370,7 +370,7 @@ Your score has just gone up by one point
 
 >score
 
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. There are no secrets left to find here, so the score to win is {CURMAX} points.
+Score in a scenario: 22 out of 23 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 22 points.
 
 >beyond
 Your score has just gone up by one point
@@ -378,5 +378,5 @@ Your score has just gone up by one point
 /^Strip of Profits
 
 >score
-Routes ({SCORE}/{MAX})
+Routes (23/23)
 

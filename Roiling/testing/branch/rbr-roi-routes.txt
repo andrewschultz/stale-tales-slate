@@ -12,14 +12,14 @@ file=reg-roi-routes-slider.txt,abbr=sli,desc=walkthrough with slider readings
 file=reg-roi-routes-hints.txt,abbr=hints/hin/spoi,desc=walkthrough with hints
 file=reg-roi-routes-verbs.txt,abbr=verbs,desc=walkthrough testing verbs
 
-}}MAX=22
-}}CURMAX=22
-}}SCORE=0
-}}CURMIN=20
+}#MAX=23
+}#CURMAX=23
+}#SCORE=0
+}#CURMIN=20
 
-}$SCOS=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
-}$SCOMAX=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. There are no secrets left to find here, so the score to win is {CURMAX} points.
-}$SCOSOLV=Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes.
+}$SCOS=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Routes. Lowest score to solve is {#CURMIN}. Maximum score available is {#CURMAX}.
+}$SCOMAX=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Routes. There are no secrets left to find here, so the score to win is {#CURMAX} points.
+}$SCOSOLV=Score in a scenario: {#SCORE} out of {#MAX} total points in the current region, Routes.
 
 ALSO-IGNORE:t,c
 
@@ -1656,7 +1656,7 @@ Your score has just gone up by one point
 @min
 #Note: because there are so many MAX test cases above, and ABSTRACT X TO Y hacks give their own problems, this will count as the test case #testcase-postrule-table-of-routes-anagrams-post-the-bean-beneath-rule
 }}CURMAX--
-DEBUG INFO: Taking away a max point. Max-score now {CURMAX}.
+DEBUG INFO: Taking away a max point. Max-score now {#CURMAX}.
 
 /^Harms Marsh
 
@@ -2404,5 +2404,5 @@ This will dispel the poison stripe. However, the raptest patters can be dealt wi
 /^Strip of Profits
 
 >score
-Routes ({SCORE}/{MAX})
+Routes ({#SCORE}/{#MAX})
 

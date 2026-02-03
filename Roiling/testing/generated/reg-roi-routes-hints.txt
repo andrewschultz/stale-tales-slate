@@ -13,7 +13,7 @@
 /^Same Mesa
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 0 out of 23 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 23.
 
 >scam
 
@@ -29,7 +29,7 @@ DEBUG INFO: scripture picturers hinting.
 >undo
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 0 out of 23 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 23.
 
 >inside
 Your score has just gone up by one point
@@ -39,7 +39,7 @@ Your score has just gone up by one point
 The spoon reflects to the list-o-toils.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 1 out of 23 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 23.
 
 >x list o toils
 
@@ -116,7 +116,7 @@ You angle your spoon a bit, and you realize you, or something, should be, do, se
 You got Ian Gast to the anti-sag sit-a-nag. Now you need to deal with Ian Gast.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 6 out of 23 total points in the current region, Routes. Lowest score to solve is 20. Maximum score available is 23.
 
 >astride
 Your score has just gone up by one point
@@ -162,7 +162,7 @@ Your score has just gone up by one point.
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go FROM.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 11 out of 23 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 23.
 
 >from
 Your score has just gone up by one point
@@ -179,7 +179,7 @@ Your score has just gone up by one point
 You angle your spoon a bit, and you realize you, or something, should be, do, see or go UNTIL.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 13 out of 23 total points in the current region, Routes. Lowest score to solve is 21. Maximum score available is 22.
 
 #testcase-table-of-settler-shake-descriptions-darkness
 >ss
@@ -210,7 +210,7 @@ Your score has just gone up by one point
 DEBUG INFO: General LLPish min-up for drudging ruin.
 
 >score
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. Lowest score to solve is {CURMIN}. Maximum score available is {CURMAX}.
+Score in a scenario: 17 out of 23 total points in the current region, Routes. Lowest score to solve is 22. Maximum score available is 22.
 
 >amidst
 Your score has just gone up by one point
@@ -245,7 +245,7 @@ Your score has just gone up by one point
 
 >score
 
-Score in a scenario: {SCORE} out of {MAX} total points in the current region, Routes. There are no secrets left to find here, so the score to win is {CURMAX} points.
+Score in a scenario: 22 out of 23 total points in the current region, Routes. There are no secrets left to find here, so the score to win is 22 points.
 
 >beyond
 Your score has just gone up by one point
@@ -253,5 +253,5 @@ Your score has just gone up by one point
 /^Strip of Profits
 
 >score
-Routes ({SCORE}/{MAX})
+Routes (23/23)
 
