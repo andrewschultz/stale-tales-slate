@@ -1,8 +1,6 @@
 ## reg-sa-resort-hints.txt
 ## GENERATOR FILE: rbr-sa-resort.txt
 
-## walkthrough with hints
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
@@ -35,11 +33,11 @@ You watch as the tiles shrink from a large land mass to a smaller one.
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the tiles for a few seconds.
 
-#ttc-table-of-resort-anagrams-tiles
+#testcase-table-of-resort-anagrams-tiles
 >xx stile
 As your vision blurs, the stile seems to stand over a small islet.
 
-#+ttc-table-of-resort-anagrams-tiles
+#+testcase-table-of-resort-anagrams-tiles
 >xx tiles
 As your vision blurs, the tiles' blue, green and brown re-form to make an islet.
 
@@ -53,7 +51,7 @@ Unfortunately, it's also protecting you from leaving, so you'll probably need a 
 >exits
 There seem to be no barriers but also nowhere you'd really want to go.
 
-#ttc-table-of-nowheres-astral-altars
+#testcase-table-of-nowheres-astral-altars
 >w
 As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms "THE FERAL FLARE MUST PROTECT ONE LIKE YOU FROM INFIDELS!"
 Unfortunately, it's also protecting you from leaving, so you'll probably need a bit more magic.
@@ -91,20 +89,20 @@ You step into the woodland and somehow bang your head! You see the word DOWNLOAD
 >exits
 You can't leave the Leis Isle without transport.
 
-#ttc-table-of-resort-anagrams-rock
+#testcase-table-of-resort-anagrams-rock
 >xx rock
 Your vision blurs a bit, and instead you see cork.
 
-#ttc-table-of-resort-anagrams-swing
+#testcase-table-of-resort-anagrams-swing
 >xx swing
 Your vision blurs a bit, and instead you see wings.
 
-#ttc-table-of-resort-anagrams-l2
+#testcase-table-of-resort-anagrams-l2
 >xx leis
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs as you recall people you thought you trusted telling you lies.
 
-#ttc-table-of-nowheres-leis-isle
+#testcase-table-of-nowheres-leis-isle
 >w
 You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd.
 
@@ -113,7 +111,7 @@ by one point
 >score
 You currently have 2 out of 15 total points for the Resort region. Your minimum possible score on solving is 11, and the maximum is 15
 
-#+ttc-table-of-nowheres-leis-isle
+#+testcase-table-of-nowheres-leis-isle
 >w
 No, you already saw the woodland was faked.
 !but then, the leis were fake, too.
@@ -121,7 +119,7 @@ No, you already saw the woodland was faked.
 >wings
 by one point
 
-#+ttc-table-of-resort-anagrams-rock
+#+testcase-table-of-resort-anagrams-rock
 >xx rock
 Your vision blurs a bit, and instead you see cork.
 >undo
@@ -135,7 +133,7 @@ You see yourself either swimming or flying east.
 >score
 You currently have 3 out of 15 total points for the Resort region. Your minimum possible score on solving is 11, and the maximum is 15
 
-#+ttc-table-of-resort-anagrams-swing
+#+testcase-table-of-resort-anagrams-swing
 >xx swing
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 
@@ -164,7 +162,7 @@ You see the poles to the east bend at an angle.
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the poles, the tool shed, the spore and the sprig for a few seconds.
 
-#ttc-table-of-nowheres-rived-drive
+#testcase-table-of-nowheres-rived-drive
 >n
 You'd probably get lost that way. Besides, the vague commotion to the east, past the rising poles, seems worth seeing.
 
@@ -173,19 +171,19 @@ Gotta keep going forward.
 >gt isle
 Gotta keep going forward.
 
-#ttc-table-of-resort-anagrams-sprig
+#testcase-table-of-resort-anagrams-sprig
 >xx sprig
 Your vision blurs a bit, and instead you see grips.
 
-#ttc-table-of-resort-anagrams-poles
+#testcase-table-of-resort-anagrams-poles
 >xx poles
 Your vision blurs a bit, and instead you see a slope.
 
-#ttc-table-of-resort-anagrams-spore
+#testcase-table-of-resort-anagrams-spore
 >xx spore
 Your vision blurs a bit, and instead you see ropes.
 
-#ttc-table-of-resort-anagrams-tool-shed
+#testcase-table-of-resort-anagrams-tool-shed
 >xx toolshed
 Your vision blurs a bit, and instead you see toeholds.
 
@@ -204,7 +202,7 @@ by one point
 You see two visions: one, the tool shed being destroyed, and another, you wearing the sprig, modified and the spore, modified. In each, you climb east.
 
 >score
-You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
+You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
 
 >ropes
 by one point
@@ -221,7 +219,7 @@ by one point
 >ropes
 by one point
 
-#+ttc-table-of-resort-anagrams-tool-shed
+#+testcase-table-of-resort-anagrams-tool-shed
 >xx toolshed
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 >undo
@@ -231,11 +229,11 @@ Some aftertaste from the saltine doesn't feel great. You wonder if this is the b
 >toeholds
 Your score has just gone up by two points.
 
-#+ttc-table-of-resort-anagrams-sprig
+#+testcase-table-of-resort-anagrams-sprig
 >xx sprig
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 
-#+ttc-table-of-resort-anagrams-sprig
+#+testcase-table-of-resort-anagrams-sprig
 >xx spore
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 
@@ -244,19 +242,19 @@ You see yourself climbing east without much trouble.
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the spore (faint) and the sprig (faint) for a few seconds.
 
 >score
-You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
+You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
 
 >ropes
 Your score has just gone up by one point.
 
 >score
-You currently have 8 out of 15 total points for the Resort region. Your minimum possible score on solving is 13, and the maximum is 15
+You currently have 8 out of 15 total points for the Resort region. Your minimum possible score on solving is 13, and the maximum is 13
 
 >grips
 Your score has just gone up by one point.
 
 >score
-You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
+You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 13
 
 >angle
 You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
@@ -267,18 +265,18 @@ You stare into the blue lube for a bit, then look around. Nothing looks differen
 
 You see the riot, happier now, discussing art and wearing dirty smocks.
 
-#ttc-table-of-resort-anagrams-riot
+#testcase-table-of-resort-anagrams-riot
 >xx riot
 Your vision blurs a bit, and instead you see a trio.
 
-#ttc-table-of-nowheres-potshot-hotspot
+#testcase-table-of-nowheres-potshot-hotspot
 >n
 The only way you'll want to try to go is east.
 
 >w
 No going back now.
 
-#+ttc-table-of-nowheres-potshot-hotspot
+#+testcase-table-of-nowheres-potshot-hotspot
 >e
 That rabble seems mad at you. You'd better disperse them first.
 
@@ -302,9 +300,9 @@ You see the trio, happier now, discussing art and wearing dirty smocks.
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the chain links and the protest for a few seconds.
 
 >score
-You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
+You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 11
 
-#ttc-table-of-resort-anagrams-protest
+#testcase-table-of-resort-anagrams-protest
 >xx protest
 You see the trio stopping their protest to get to work as potters.
 
@@ -312,9 +310,9 @@ You see the trio stopping their protest to get to work as potters.
 Your score has just gone up by one point.
 
 >score
-You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
+You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 11
 
-#ttc-table-of-resort-anagrams-chain-links
+#testcase-table-of-resort-anagrams-chain-links
 >xx chain links
 Your vision blurs a bit, and instead you see some china and also kilns, to bake clay in, or something.
 
@@ -324,7 +322,7 @@ Your score has just gone up by one point.
 >score
 You currently have 12 out of 15 total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#+ttc-table-of-resort-anagrams-chain-links
+#+testcase-table-of-resort-anagrams-chain-links
 >xx chain links
 Your vision blurs a bit, and instead you see kilns, to bake clay in, or something.
 
@@ -381,7 +379,7 @@ Go somewhere? Just the opposite. Those exits are repelling you to do stay in the
 >angle
 It's glowing all around here. The X-ITES exits are glowing a bit differently, but everything's glowing. There must be more than one way to take care of business here.
 
-#ttc-table-of-nowheres-means-manse
+#testcase-table-of-nowheres-means-manse
 >n
 You suddenly have ye taxin' any-exit anxiety. Like you're in the middle of an exitstential crisis.
 >n
@@ -393,7 +391,7 @@ Where would you go? Texis, perhaps
 >n
 Seeing exits just makes you want to...
 
-#+ttc-table-of-nowheres-means-manse
+#+testcase-table-of-nowheres-means-manse
 >n
 Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
 

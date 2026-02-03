@@ -3,23 +3,22 @@
 # this covers maximum points, minimum points and nudges.
 #
 
-file=reg-sa-resort-max.txt,max,maximum walkthrough
-file=reg-sa-resort-min.txt,min,minimum walkthrough
-file=reg-sa-resort-nudmis.txt,nudges/nud/nu/mis/mi,walkthrough with all nudges and mistakes
-file=reg-sa-resort-hints.txt,hints/hin/sal/gle/gt/gn,walkthrough with hints
-file=reg-sa-resort-detail.txt,ask/scan/pad,walkthrough with ask/scan/pad detail
+file=reg-sa-resort-max.txt,abbr=max,desc=maximum walkthrough
+file=reg-sa-resort-min.txt,abbr=min,desc=minimum walkthrough
+file=reg-sa-resort-nudmis.txt,abbr=nudges/nud/nu/mis/mi,desc=walkthrough with all nudges and mistakes
+file=reg-sa-resort-hints.txt,abbr=hints/hin/sal/gle/gt/gn,desc=walkthrough with hints
+file=reg-sa-resort-detail.txt,abbr=ask/scan/pad,desc=walkthrough with ask/scan/pad detail
 
 ##--stable-file: this eventually says that the project is stable, and I shouldn't change the main/minimal file unless I really need to.
-#--strict-file: this says that the project requires strict section marking e.g. @all instead of ==t1.
 
-}}MAX=15
-}}CURMAX=15
-}}SCORE=0
-}}CURMIN=10
+}#MAX=15
+}#CURMAX=15
+}#SCORE=0
+}#CURMIN=10
 
-}$SCOS=You currently have {SCORE} out of {MAX} total points for the Resort region. Your minimum possible score on solving is {CURMIN}, and the maximum is {CURMAX}
-}$SFIXMAX=You currently have {SCORE} out of {MAX} total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
-}$SFIXNOMAX=You currently have {SCORE} out of {MAX} total points for the Resort region. Your final possible score is fixed. You missed something you can't go back for.
+}$SCOS=You currently have {#SCORE} out of {#MAX} total points for the Resort region. Your minimum possible score on solving is {#CURMIN}, and the maximum is {#CURMAX}
+}$SFIXMAX=You currently have {#SCORE} out of {#MAX} total points for the Resort region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+}$SFIXNOMAX=You currently have {#SCORE} out of {#MAX} total points for the Resort region. Your final possible score is fixed. You missed something you can't go back for.
 
 ## *FILE
 ## *FORK
@@ -56,7 +55,7 @@ Your score has just gone up by one point
 You see yourself exploring the ogled lodge you created.
 
 @nud
-#ttc-table-of-stores-done-rejects-ogled-lodge
+#testcase-table-of-stores-done-rejects-ogled-lodge
 >resotr
 You already made passage to the ogled lodge. It's good enough. Why change it?
 
@@ -78,32 +77,32 @@ Light isn't the problem here. It's not having anywhere to go.
 That's bad spelling, and it won't shrink your problems.
 
 @nud
-#ttc-table-of-astral-altars-nudges-astral
+#testcase-table-of-astral-altars-nudges-astral
 >astrla
 While there doesn't seem to be much to do here, you don't need to do anything to the location name. The stile and tiles may be more useful.
 \\
-#ttc-table-of-astral-altars-nudges-altar
+#testcase-table-of-astral-altars-nudges-altar
 >altra
 While there doesn't seem to be much to do here, you don't need to do anything to the location name. The stile and tiles may be more useful.
 \\
-#ttc-table-of-resort-nudges-resort
+#testcase-table-of-resort-nudges-resort
 >resotr
 You don't want to change a region drastically while you're in it.
 \\
-#ttc-table-of-leis-isle-nudges-islet
+#testcase-table-of-leis-isle-nudges-islet
 >tilse
 The tiles rattle as if to shift but settle down.
 \\
-#ttc-table-of-astral-altars-nudges-tile
+#testcase-table-of-astral-altars-nudges-tile
 >tiel
 You need to deal with all the tiles.
 \\
-#ttc-table-of-astral-altars-nudges-flare
+#testcase-table-of-astral-altars-nudges-flare
 >s
 >flaer
 The feral flare crackles menacingly. You doubt you can change it for the better.
 \\
-#ttc-table-of-resort-spechelp-tiles
+#testcase-table-of-resort-spechelp-tiles
 >islte
 The tiles rattle as if to shift but settle down.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tiles. Keep at it.
@@ -114,20 +113,20 @@ The tiles rattle as if to shift but settle down.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tiles. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-readables-tiles
+#testcase-table-of-readables-tiles
 >read tiles
 The tiles blur a bit as you (de)-focus just right. You see subtleties in the blues and brown that seem to spell out LEST I. But with the effort, your eyes water, and you see red a bit.
 \\
-#+ttc-table-of-astral-altars-nudges-altar
+#+testcase-table-of-astral-altars-nudges-altar
 >altra
 While you're sort of trapped here, you don't need to do anything to the location name. The stile and tiles may be more useful.
 
 @hin
-#ttc-table-of-resort-anagrams-tiles
+#testcase-table-of-resort-anagrams-tiles
 >xx stile
 As your vision blurs, the stile seems to stand over a small islet.
 \\
-#+ttc-table-of-resort-anagrams-tiles
+#+testcase-table-of-resort-anagrams-tiles
 >xx tiles
 As your vision blurs, the tiles' blue, green and brown re-form to make an islet.
 
@@ -159,7 +158,7 @@ Unfortunately, it's also protecting you from leaving, so you'll probably need a 
 >exits
 There seem to be no barriers but also nowhere you'd really want to go.
 \\
-#ttc-table-of-nowheres-astral-altars
+#testcase-table-of-nowheres-astral-altars
 >w
 As you step away from the altars, a weird barrier blocks you. It's very tarsal. Then a voice in your head booms "THE FERAL FLARE MUST PROTECT ONE LIKE YOU FROM INFIDELS!"
 Unfortunately, it's also protecting you from leaving, so you'll probably need a bit more magic.
@@ -206,21 +205,21 @@ You step into the woodland and somehow bang your head! You see the word DOWNLOAD
 You can't leave the Leis Isle without transport.
 
 @hin
-#ttc-table-of-resort-anagrams-rock
+#testcase-table-of-resort-anagrams-rock
 >xx rock
 Your vision blurs a bit, and instead you see cork.
 \\
-#ttc-table-of-resort-anagrams-swing
+#testcase-table-of-resort-anagrams-swing
 >xx swing
 Your vision blurs a bit, and instead you see wings.
 \\
-#ttc-table-of-resort-anagrams-l2
+#testcase-table-of-resort-anagrams-l2
 >xx leis
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs as you recall people you thought you trusted telling you lies.
 
 @gn
-#ttc-table-of-nowheres-leis-isle
+#testcase-table-of-nowheres-leis-isle
 >w
 You step into the woodland and somehow bang your head! You see the word DOWNLOAD blinking in front of you. Odd, very odd.
 
@@ -239,19 +238,19 @@ But then, since the leis were fake, you shouldn't be surprised the woodland is, 
 >undo
 
 @nud
-#ttc-table-of-leis-isle-nudges-woodland
+#testcase-table-of-leis-isle-nudges-woodland
 >wooldand
 The woodland can't be the way out. The isle is too small. There's enough outside the woodland to look at, anyway.
 \\
-#ttc-table-of-leis-isle-nudges-and
+#testcase-table-of-leis-isle-nudges-and
 >adn
 The sand and sands and sands are just--well, sand. They won't help you get off the island.
 \\
-#ttc-table-of-leis-isle-nudges-sands
+#testcase-table-of-leis-isle-nudges-sands
 >sansd
 The sand and sands and sands are just--well, sand. They won't help you get off the island.
 \\
-#ttc-table-of-resort-spechelp-l2
+#testcase-table-of-resort-spechelp-l2
 >lesi
 You feel about to reveal an uncomfortable untruth, yet you also feel a bit of relief.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the leis. Keep at it.
@@ -262,27 +261,27 @@ You feel about to reveal an uncomfortable untruth, yet you also feel a bit of re
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the leis. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-leis-isle-nudges-lie
+#testcase-table-of-leis-isle-nudges-lie
 >eil
 Perhaps you can deal with the leis, or maybe you can use something else to escape the isle.
 \\
-#ttc-table-of-leis-isle-nudges-sand
+#testcase-table-of-leis-isle-nudges-sand
 >sadn
 The sand and sands and sands are just--well, sand. They won't help you get off the island.
 \\
-#+ttc-table-of-leis-isle-nudges-islet
+#+testcase-table-of-leis-isle-nudges-islet
 >tilse
 That's how you got here, twiddling items in the Astral Altars. But you have new things to play with so you can leave.
 \\
-#ttc-table-of-leis-isle-nudges-eter
+#testcase-table-of-leis-isle-nudges-eter
 >eter
 The tree sits there, but the swing rocks a bit.
 \\
-#ttc-table-of-leis-isle-nudges-oflat
+#testcase-table-of-leis-isle-nudges-oflat
 >aftol
 You notice writing on the rock and swing similar to what you just said. Or tried to say. Also, no need to make anything lo-fat here.
 \\
-#ttc-table-of-resort-spechelp-rock
+#testcase-table-of-resort-spechelp-rock
 >crko
 Hmm, a rock, but only so much you can do with it.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the rock. Keep at it.
@@ -356,18 +355,18 @@ by one point
 You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
 
 @gn
-#+ttc-table-of-nowheres-leis-isle
+#+testcase-table-of-nowheres-leis-isle
 >w
 No, you already saw the woodland was faked.
 !but then, the leis were fake, too.
 
 @nud
 #note that there is no renudge for leis because before L2 is moot, we go to the table of spechelp. But for lei, we are always in the table of nudges.
-#ttc-table-of-leis-isle-nudges-leis
+#testcase-table-of-leis-isle-nudges-leis
 >isel
 You already noticed the leis. Use something on the isle to escape it.
 \\
-#+ttc-table-of-leis-isle-nudges-lie
+#+testcase-table-of-leis-isle-nudges-lie
 >iel
 You already noticed the leis. Use something on the isle to escape it.
 
@@ -391,7 +390,7 @@ by one point
 >wings
 by one point
 \\
-#+ttc-table-of-resort-anagrams-rock
+#+testcase-table-of-resort-anagrams-rock
 >xx rock
 Your vision blurs a bit, and instead you see cork.
 >undo
@@ -411,15 +410,15 @@ You see yourself either swimming or flying east.
 {$SCOS}
 
 @nud
-#ttc-table-of-resort-done-rejects-cork
+#testcase-table-of-resort-done-rejects-cork
 >crko
 Your head swims then sinks as you realize the cork can't become much else.
 \\
-#+ttc-table-of-leis-isle-nudges-oflat
+#+testcase-table-of-leis-isle-nudges-oflat
 >aftol
 You have a way off this island to the east, though you can make the other for fun, too. Also, no need to make anything lo-fat here.
 \\
-#ttc-table-of-resort-spechelp-swing
+#testcase-table-of-resort-spechelp-swing
 >winsg
 The swing goes slightly airborne.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the swing. Keep at it.
@@ -431,7 +430,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
-#+ttc-table-of-resort-anagrams-swing
+#+testcase-table-of-resort-anagrams-swing
 >xx swing
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 
@@ -449,15 +448,15 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @nud
-#ttc-table-of-resort-done-rejects-wings
+#testcase-table-of-resort-done-rejects-wings
 >winsg
 The wings should be able to propel you enough.
 \\
-#+ttc-table-of-leis-isle-nudges-oflat
+#+testcase-table-of-leis-isle-nudges-oflat
 >aftol
 You can just use either the cork or the wings to leave to the east.
 \\
-#+ttc-table-of-leis-isle-nudges-eter
+#+testcase-table-of-leis-isle-nudges-eter
 >eter
 The tree sits there.
 
@@ -505,7 +504,7 @@ You see the poles to the east bend at an angle.
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the poles, the tool shed, the spore and the sprig for a few seconds.
 
 @gn
-#ttc-table-of-nowheres-rived-drive
+#testcase-table-of-nowheres-rived-drive
 >n
 You'd probably get lost that way. Besides, the vague commotion to the east, past the rising poles, seems worth seeing.
 
@@ -529,47 +528,47 @@ You don't need a musical score for this adventure.
 But you just got by a lot of water. No need to go back in.
 
 @nud
-#ttc-table-of-rived-drive-nudges-blow
+#testcase-table-of-rived-drive-nudges-blow
 >blwo
 You don't need to make any blow bowl more chaotic.
 \\
-#ttc-table-of-rived-drive-nudges-drive
+#testcase-table-of-rived-drive-nudges-drive
 >driev
 There is too much lying around here to mess with the Rived Drive's name.
 \\
-#ttc-table-of-rived-drive-nudges-tool
+#testcase-table-of-rived-drive-nudges-tool
 >loto
 Hm, no, the whole tool shed.
 \\
-#ttc-table-of-rived-drive-nudges-shed
+#testcase-table-of-rived-drive-nudges-shed
 >shde
 Hm, no, the whole tool shed.
 \\
-#ttc-table-of-rived-drive-nudges-ashed
+#testcase-table-of-rived-drive-nudges-ashed
 >asdeh
 A shed may provide shade, but you need a way up.
 \\
-#ttc-table-of-rived-drive-nudges-window
+#testcase-table-of-rived-drive-nudges-window
 >windwo
 They remain still. Maybe the toolshed itself.
 \\
-#ttc-table-of-rived-drive-nudges-windows
+#testcase-table-of-rived-drive-nudges-windows
 >windwos
 They remain still. Maybe the toolshed itself.
 \\
-#ttc-table-of-rived-drive-nudges-ulock
+#testcase-table-of-rived-drive-nudges-ulock
 >ulokc
 Nope. That lock's secure.
 \\
-#ttc-table-of-rived-drive-nudges-lock
+#testcase-table-of-rived-drive-nudges-lock
 >lokc
 Nope. That lock's secure.
 \\
-#ttc-table-of-rived-drive-nudges-pole
+#testcase-table-of-rived-drive-nudges-pole
 >pelo
 Only changing one pole would still leave a vertical barrier.
 \\
-#ttc-table-of-resort-spechelp-poles
+#testcase-table-of-resort-spechelp-poles
 >polse
 The poles start to bend at an angle--or maybe that's the light.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the poles. Keep at it.
@@ -586,19 +585,19 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 There's not much of that left in this game, and more of it won't help you up the poles. The spore can be something sturdier. You see red wondering what.
 
 @hin
-#ttc-table-of-resort-anagrams-sprig
+#testcase-table-of-resort-anagrams-sprig
 >xx sprig
 Your vision blurs a bit, and instead you see grips.
 \\
-#ttc-table-of-resort-anagrams-poles
+#testcase-table-of-resort-anagrams-poles
 >xx poles
 Your vision blurs a bit, and instead you see a slope.
 \\
-#ttc-table-of-resort-anagrams-spore
+#testcase-table-of-resort-anagrams-spore
 >xx spore
 Your vision blurs a bit, and instead you see ropes.
 \\
-#ttc-table-of-resort-anagrams-tool-shed
+#testcase-table-of-resort-anagrams-tool-shed
 >xx toolshed
 Your vision blurs a bit, and instead you see toeholds.
 
@@ -690,7 +689,7 @@ You see two visions: one, the tool shed being destroyed, and another, you wearin
 {$SCOS}
 
 @nud
-#ttc-table-of-resort-done-rejects-slope
+#testcase-table-of-resort-done-rejects-slope
 >pelso
 You wouldn't want to make the slope crumble away.
 
@@ -708,7 +707,7 @@ Almost. But you don't need to create holes.
 You wonder if YOU are the poser, for not being able to figure what to do.
 
 @nud
-#ttc-table-of-resort-spechelp-tool-shed
+#testcase-table-of-resort-spechelp-tool-shed
 >toeholsd
 You hear an unseen hinge neigh as if in defiance. You may be getting somewhere, here.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tool shed. Keep at it.
@@ -719,7 +718,7 @@ You hear an unseen hinge neigh as if in defiance. You may be getting somewhere, 
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tool shed. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-readables-u-lock
+#testcase-table-of-readables-u-lock
 >read u lock
 Red writing shows the U-Lock brand is OLD THOSE.
 
@@ -754,7 +753,7 @@ by one point
 >ropes
 by one point
 \\
-#+ttc-table-of-resort-anagrams-tool-shed
+#+testcase-table-of-resort-anagrams-tool-shed
 >xx toolshed
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 >undo
@@ -789,11 +788,11 @@ Your score has just gone up by two points.
 }}SCORE+=2
 
 @hin
-#+ttc-table-of-resort-anagrams-sprig
+#+testcase-table-of-resort-anagrams-sprig
 >xx sprig
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 \\
-#+ttc-table-of-resort-anagrams-sprig
+#+testcase-table-of-resort-anagrams-sprig
 >xx spore
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 
@@ -806,11 +805,11 @@ You stare into the blue lube for a bit, then look around. You notice weird hazes
 {$SCOS}
 
 @nud
-#ttc-table-of-resort-done-rejects-toeholds
+#testcase-table-of-resort-done-rejects-toeholds
 >toeholsd
 The toeholds could be handy for getting up and out of here.
 \\
-#ttc-table-of-resort-spechelp-spore
+#testcase-table-of-resort-spechelp-spore
 >respo
 You briefly wonder what the spore could grow into, given time. Time you don't have. Maye something circular, or something long and stringy.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the spore. Keep at it.
@@ -844,15 +843,15 @@ You mutter a small epithet at where Red Bull Burdell could be. No, he's not arou
 No, you had it.
 
 @nud
-#ttc-table-of-resort-done-rejects-ropes
+#testcase-table-of-resort-done-rejects-ropes
 >respo
 The ropes are useful for climbing, which you need to do to get east.
 \\
-#ttc-table-of-rived-drive-nudges-rope
+#testcase-table-of-rived-drive-nudges-rope
 >repo
 Those are already useful.
 \\
-#ttc-table-of-resort-spechelp-sprig
+#testcase-table-of-resort-spechelp-sprig
 >grisp
 The sprig seems to grow less fragile for a moment.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sprig. Keep at it.
@@ -888,11 +887,11 @@ Those are no longer part of a puzzle.
 Grumbling about prigs, or showing those prigs, won't help now. You should probably use the grips to climb instead.
 
 @nud
-#ttc-table-of-resort-done-rejects-grips
+#testcase-table-of-resort-done-rejects-grips
 >grisp
 You can't get ahold of anything that would be more useful than the grips.
 \\
-#ttc-table-of-rived-drive-nudges-grip
+#testcase-table-of-rived-drive-nudges-grip
 >pirg
 Those are already useful.
 
@@ -908,19 +907,19 @@ You stare into the blue lube for a bit, then look around. Nothing looks differen
 You see the riot, happier now, discussing art and wearing dirty smocks.
 
 @hin
-#ttc-table-of-resort-anagrams-riot
+#testcase-table-of-resort-anagrams-riot
 >xx riot
 Your vision blurs a bit, and instead you see a trio.
 
 @gn
-#ttc-table-of-nowheres-potshot-hotspot
+#testcase-table-of-nowheres-potshot-hotspot
 >n
 The only way you'll want to try to go is east.
 \\
 >w
 No going back now.
 \\
-#+ttc-table-of-nowheres-potshot-hotspot
+#+testcase-table-of-nowheres-potshot-hotspot
 >e
 That rabble seems mad at you. You'd better disperse them first.
 \\
@@ -934,7 +933,7 @@ That rabble seems mad at you. You'd better disperse them first.
 The only way you seem to be able to go is east.
 
 @ask
-#ttc-table-of-unmatched-topic-responses-riot
+#testcase-table-of-unmatched-topic-responses-riot
 >ask riot about spore
 You're not going to reason with them. Maybe reason about them, though.
 
@@ -957,43 +956,43 @@ I am RED BULL BURDELL!
 {$SCOS}
 
 @nud
-#ttc-table-of-potshot-hotspot-nudges-frust
+#testcase-table-of-potshot-hotspot-nudges-frust
 >fruts
 The frust turfs are unchangeable.
 \\
-#ttc-table-of-potshot-hotspot-nudges-turf
+#testcase-table-of-potshot-hotspot-nudges-turf
 >tufr
 The frust turfs are unchangeable.
 \\
-#ttc-table-of-potshot-hotspot-nudges-hotsopt
+#testcase-table-of-potshot-hotspot-nudges-hotsopt
 >hotspto
 Placating the people here is your best bet for making this place less of a hotspot.
 \\
-#ttc-table-of-potshot-hotspot-nudges-rioters
+#testcase-table-of-potshot-hotspot-nudges-rioters
 >riotesr
 Perhaps it's best to keep it simple and cut down the riot.
 \\
-#ttc-table-of-potshot-hotspot-nudges-rioter
+#testcase-table-of-potshot-hotspot-nudges-rioter
 >riotre
 Perhaps it's best to keep it simple and cut down the riot.
 \\
-#ttc-table-of-potshot-hotspot-nudges-people
+#testcase-table-of-potshot-hotspot-nudges-people
 >peopel
 Perhaps it's best to keep it simple and cut down the riot.
 \\
-#ttc-table-of-potshot-hotspot-nudges-horde
+#testcase-table-of-potshot-hotspot-nudges-horde
 >hored
 Perhaps it's best to keep it simple and cut down the riot.
 \\
-#ttc-table-of-potshot-hotspot-nudges-uprisers
+#testcase-table-of-potshot-hotspot-nudges-uprisers
 >uprisesr
 Perhaps it's best to keep it simple and cut down the riot.
 \\
-#ttc-table-of-potshot-hotspot-nudges-clay
+#testcase-table-of-potshot-hotspot-nudges-clay
 >clya
 No, the clay is a clue to what the protest really wants to do.
 \\
-#ttc-table-of-resort-spechelp-riot
+#testcase-table-of-resort-spechelp-riot
 >troi
 The riot's still a crowd, and a big one, too.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the riot. Keep at it.
@@ -1042,7 +1041,7 @@ You see the trio, happier now, discussing art and wearing dirty smocks.
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the chain links and the protest for a few seconds.
 
 @ask
-#ttc-table-of-unmatched-topic-responses-protest
+#testcase-table-of-unmatched-topic-responses-protest
 >ask protest about abcde
 You're not going to reason with them. Maybe reason about them, though.
 
@@ -1055,15 +1054,15 @@ A bunch of ovular links hooked together. Out of the hands of rioters, it'll caus
 {$SCOS}
 
 @nud
-#ttc-table-of-resort-done-rejects-protest
+#testcase-table-of-resort-done-rejects-protest
 >troi
 You can deal with three people. But you'll have to change their motivations.
 \\
-#+ttc-table-of-potshot-hotspot-nudges-clay
+#+testcase-table-of-potshot-hotspot-nudges-clay
 >clya
 No, the clay is a clue to what the trio really wants to do.
 \\
-#ttc-table-of-potshot-hotspot-nudges-protesters
+#testcase-table-of-potshot-hotspot-nudges-protesters
 >ersprotest
 They're just a simple protest.
 \\
@@ -1077,7 +1076,7 @@ They're not bad people. But even bad people don't deserve to vanish like that! M
 >undo
 >undo
 \\
-#ttc-table-of-resort-spechelp-protest
+#testcase-table-of-resort-spechelp-protest
 >pottesr
 The protesters mumble at you for trying to exert mind control. You've struck a nerve.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the trio. Keep at it.
@@ -1102,7 +1101,7 @@ No, you see 'em, you just need a better way to disperse 'em.
 No, the clay is a clue to what the protest really wants to do.
 
 @hin
-#ttc-table-of-resort-anagrams-protest
+#testcase-table-of-resort-anagrams-protest
 >xx protest
 You see the trio stopping their protest to get to work as potters.
 
@@ -1119,7 +1118,7 @@ DEBUG INFO: Cert-text: P--TE--.
 >kilns
 by one point
 \\
-#ttc-table-of-matched-thing-responses-protest-kilns
+#testcase-table-of-matched-thing-responses-protest-kilns
 >ask protest about kilns
 "If we were artsy, we'd use 'em. But we're not. Take some magic to MAKE us artsy."
 >undo
@@ -1133,23 +1132,23 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @nud
-#ttc-table-of-potshot-hotspot-nudges-potter
+#testcase-table-of-potshot-hotspot-nudges-potter
 >pottre
 Picking one person out of a crowd never works.
 \\
-#ttc-table-of-resort-done-rejects-potters
+#testcase-table-of-resort-done-rejects-potters
 >pottesr
 You've changed the potters enough. Now you need to give them something interesting to do besides protest.
 \\
-#ttc-table-of-potshot-hotspot-nudges-three
+#testcase-table-of-potshot-hotspot-nudges-three
 >ethre
 The trio remains unmoved. Perhaps you can get the potters something to work with?
 \\
-#ttc-table-of-potshot-hotspot-nudges-chainlinks
+#testcase-table-of-potshot-hotspot-nudges-chainlinks
 >chainliskn
 You're overthinking it. Or you hope you are. It's both a chain, and links.
 \\
-#ttc-table-of-resort-spechelp-chain-links
+#testcase-table-of-resort-spechelp-chain-links
 >ainch
 The links rattle slightly. Perhaps they are chaining others' creativity as well as your own.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the chain links. Keep at it.
@@ -1166,7 +1165,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 You don't have the ability to dish out an achin', but you see red from wanting to do so.
 
 @hin
-#ttc-table-of-resort-anagrams-chain-links
+#testcase-table-of-resort-anagrams-chain-links
 >xx chain links
 Your vision blurs a bit, and instead you see some china and also kilns, to bake clay in, or something.
 
@@ -1184,7 +1183,7 @@ Your score has just gone up by one point.
 {$SFIXMAX}
 
 @hin
-#+ttc-table-of-resort-anagrams-chain-links
+#+testcase-table-of-resort-anagrams-chain-links
 >xx chain links
 Your vision blurs a bit, and instead you see kilns, to bake clay in, or something.
 
@@ -1226,7 +1225,7 @@ DEBUG INFO: Rect-text: K---S.
 DEBUG INFO: Cert-text: -I--S.
 
 @nud
-#ttc-table-of-potshot-hotspot-nudges-link
+#testcase-table-of-potshot-hotspot-nudges-link
 >ilnk
 There are many links, though strictly speaking, you could get by with assuming there was one.
 
@@ -1273,59 +1272,59 @@ You couldn't slink behind the kilns even if they were here.
 You don't know him that well. No riffing on his initials!
 
 @nud
-#+ttc-table-of-potshot-hotspot-nudges-hotsopt
+#+testcase-table-of-potshot-hotspot-nudges-hotsopt
 >hotspto
 Finding Red Bull Burdell's weakness is your best bet for making this place less of a hotspot.
 \\
-#ttc-table-of-potshot-hotspot-nudges-red
+#testcase-table-of-potshot-hotspot-nudges-red
 >rde
 Burdell's laugh echoes. "You think you can change ME?!"
 \\
-#ttc-table-of-potshot-hotspot-nudges-bull
+#testcase-table-of-potshot-hotspot-nudges-bull
 >bllu
 Burdell's laugh echoes. "You think you can change ME?!"
 \\
-#ttc-table-of-potshot-hotspot-nudges-burdell
+#testcase-table-of-potshot-hotspot-nudges-burdell
 >burdlle
 Burdell's laugh echoes. "You think you can change ME?!"
 \\
-#ttc-table-of-potshot-hotspot-nudges-boot
+#testcase-table-of-potshot-hotspot-nudges-boot
 >boto
 The boot is already a little--modified. You can see its toe. Maybe that is a weakness.
 \\
-#ttc-table-of-potshot-hotspot-nudges-toe
+#testcase-table-of-potshot-hotspot-nudges-toe
 >teo
 But what to do with Red Bull Burdell's toe now that he's yelling GET OUT?
 \\
-#ttc-table-of-potshot-hotspot-nudges-scar
+#testcase-table-of-potshot-hotspot-nudges-scar
 >scar
 No time for cosmetic changes.
 \\
-#ttc-table-of-potshot-hotspot-nudges-crass
+#testcase-table-of-potshot-hotspot-nudges-crass
 >crssa
 No time for cosmetic changes.
 \\
-#ttc-table-of-potshot-hotspot-nudges-cutlery
+#testcase-table-of-potshot-hotspot-nudges-cutlery
 >cutleyr
 Red Bull Burdell laughs at your puny attempt. There's no weakness in the cutlery--maybe somewhere, or something, else?
 \\
-#ttc-table-of-potshot-hotspot-nudges-tshirt
+#testcase-table-of-potshot-hotspot-nudges-tshirt
 >tshirt
 You slur out a few consonants--maybe you should work with something closer, lower down.
 \\
-#ttc-table-of-potshot-hotspot-nudges-rage
+#testcase-table-of-potshot-hotspot-nudges-rage
 >raeg
 No, the rage gear is too strong.
 \\
-#ttc-table-of-potshot-hotspot-nudges-shirt
+#testcase-table-of-potshot-hotspot-nudges-shirt
 >shtir
 You slur out a few consonants--maybe you should work with something closer, lower down.
 \\
-#ttc-table-of-potshot-hotspot-nudges-tugtoe
+#testcase-table-of-potshot-hotspot-nudges-tugtoe
 >getotu
 Red Bull Burdell snickers, but a bit uneasily, at--whatever you just said.
 \\
-#+ttc-table-of-potshot-hotspot-nudges-hotsopt
+#+testcase-table-of-potshot-hotspot-nudges-hotsopt
 >hotspto
 Finding Red Bull Burdell's weakness is your best bet for making this place less of a hotspot.
 
@@ -1334,7 +1333,7 @@ Finding Red Bull Burdell's weakness is your best bet for making this place less 
 You squint at Red Bull Burdell, trying to notice what he could become, but all you notice is his infected toe as he yells "GET OUT." Maybe you could pull it...no, not pull...well, there are only six possibilities...
 
 @ask
-#ttc-table-of-unmatched-topic-responses-red-bull-burdell
+#testcase-table-of-unmatched-topic-responses-red-bull-burdell
 >ask red bull burdell about abcdef
 "Ego? Tut!"
 
@@ -1378,19 +1377,19 @@ Your tester, Red Bull Burdell, is vanquished. Let's keep it that way.
 On the other hand, if you're volunteering to test my other games, I could always use the help.
 
 @nud
-#+ttc-table-of-potshot-hotspot-nudges-hotsopt
+#+testcase-table-of-potshot-hotspot-nudges-hotsopt
 >hotspto
 You don't want to make this place a hotspot again.
 \\
-#ttc-table-of-potshot-hotspot-nudges-setter
+#testcase-table-of-potshot-hotspot-nudges-setter
 >settre
 It's Setter Street now. Seems like an appropriate tribute to a hero like you.
 \\
-#ttc-table-of-potshot-hotspot-nudges-manor
+#testcase-table-of-potshot-hotspot-nudges-manor
 >romna
 You don't need to change the manors. You just need to be able to get there.
 \\
-#ttc-table-of-potshot-hotspot-nudges-ransom
+#testcase-table-of-potshot-hotspot-nudges-ransom
 >ransmo
 You don't need to change the manors. You just need to be able to get there.
 
@@ -1416,31 +1415,31 @@ Go somewhere? Just the opposite. Those exits are repelling you to do stay in the
 It's glowing all around here. The X-ITES exits are glowing a bit differently, but everything's glowing. There must be more than one way to take care of business here.
 
 @nud
-#ttc-table-of-means-manse-nudges-manse
+#testcase-table-of-means-manse-nudges-manse
 >mesna
 You'd like to feel more welcome in the Means Manse, but that's not quite how to switch things up. You could also find a way to ignore the exits.
 \\
-#ttc-table-of-means-manse-nudges-extis
+#testcase-table-of-means-manse-nudges-extis
 >extis
 You'd like to do nothing and ignore the exits, but not quite like that. Maybe switch things up a bit or work on the whole Means Manse.
 \\
-#ttc-table-of-means-manse-nudges-marble
+#testcase-table-of-means-manse-nudges-marble
 >marbel
 No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
 \\
-#ttc-table-of-means-manse-nudges-spire
+#testcase-table-of-means-manse-nudges-spire
 >spier
 No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
 \\
-#ttc-table-of-means-manse-nudges-toaster
+#testcase-table-of-means-manse-nudges-toaster
 >toastre
 No more fancy anagrams. Well, maybe one more, based on the whole big picture here. The Means Manse. Those exits.
 \\
-#ttc-table-of-means-manse-nudges-exti
+#testcase-table-of-means-manse-nudges-exti
 >tixe
 You need to act on the exits in their entirety. Or the Means Manse.
 \\
-#ttc-table-of-means-manse-nudges-mean
+#testcase-table-of-means-manse-nudges-mean
 >emna
 You need to act on the Means Manse in its entirety. Or the exits.
 
@@ -1465,7 +1464,7 @@ Even if they wouldn't, well, the Means Manse is for you and you alone. You earne
 You're not even up for THAT, now. You just want to BE.
 
 @gn
-#ttc-table-of-nowheres-means-manse
+#testcase-table-of-nowheres-means-manse
 >n
 You suddenly have ye taxin' any-exit anxiety. Like you're in the middle of an exitstential crisis.
 >n
@@ -1477,7 +1476,7 @@ Where would you go? Texis, perhaps
 >n
 Seeing exits just makes you want to...
 \\
-#+ttc-table-of-nowheres-means-manse
+#+testcase-table-of-nowheres-means-manse
 >n
 Aww, c'mon, this one's just switching TWO WHOLE LETTERS. You had other tougher ones to MAKE it here! There are alternate solutions based on Means Manse, but ... maybe you're overthinking.
 \\
@@ -1518,7 +1517,7 @@ by one point
 My Adieu to You: Made It!
 
 @max
-#ttc-table-of-ranks-8
+#testcase-table-of-ranks-8
 #APOSTROPHE-OK
 Final rank: a smart gamin' anagrammist.
 \\

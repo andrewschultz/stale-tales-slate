@@ -54,7 +54,7 @@ You won't get anywhere with a long walk.
 >gt subsite
 Goodness, no.
 
-#ttc-table-of-nowheres-rested-desert
+#testcase-table-of-nowheres-rested-desert
 >n
 The size of the desert, um, deters you. You're steer'd back to the odor.
 !The one you can probably go through.
@@ -67,7 +67,7 @@ by one point
 >score
 You currently have 1 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 8
 
-#+ttc-table-of-nowheres-rested-desert
+#+testcase-table-of-nowheres-rested-desert
 >n
 The size of the desert, um, deters you. You're steer'd back to the door.
 !The one you can probably go through.
@@ -99,7 +99,7 @@ You won't get anywhere with a long walk, but you should be able to go IN the doo
 >score
 You currently have 3 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 8
 
-#+ttc-table-of-nowheres-rested-desert
+#+testcase-table-of-nowheres-rested-desert
 >n
 The size of the desert, um, deters you. You're steer'd back to the door. The one you can probably go through.
 
@@ -108,7 +108,7 @@ The size of the desert, um, deters you. You're steer'd back to the door. The one
 
 /DEBUG: (reed|toga) being objhinted\.
 
-#ttc-table-of-nowheres-thickest-thickets
+#testcase-table-of-nowheres-thickest-thickets
 >n
 You hit a snag, and the toga nags you. Or seems to.
 
@@ -143,7 +143,7 @@ Your score has just gone up by one point.
 
 You can just go IN, now.
 
-#+ttc-table-of-nowheres-thickest-thickets
+#+testcase-table-of-nowheres-thickest-thickets
 >w
 !You hit a snag, and the toga nags you
 you can go IN--there are no specific directions here
@@ -152,7 +152,7 @@ you can go IN--there are no specific directions here
 Your score has just gone up by one point.
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 7
 
 >in
 /^Notices Section
@@ -173,13 +173,13 @@ You hear tectonic noises, then an evil voice whispering "Once it's..." You sense
 Sooner or later, you're probably going to want to ENTER the getaway gateway.
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 5
 
-#ttc-table-of-nowheres-notices-section
+#testcase-table-of-nowheres-notices-section
 >w
 You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. You should probably explicitly ENTER the gateway, though it'd be nice to have some help first.
 
-#ttc-table-of-ordeal-loader-anagrams-static
+#testcase-table-of-ordeal-loader-anagrams-static
 >xx static
 You stop and think. The static doesn't seem as important as that gateway. Do so anyway?
 Your vision blurs a bit, and instead the static seems to form attics near the doll house.
@@ -197,19 +197,19 @@ Goodness, no.
 You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. You should probably explicitly ENTER the gateway, though it'd be nice to have some help first.
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 5
 
 >attics
 Your score has just gone up by one point.
 
-#ttc-table-of-ordeal-loader-anagrams-attics
+#testcase-table-of-ordeal-loader-anagrams-attics
 >xx attics
 After some thought, that seems like it'd be a waste, since you know what they were. You can probably change things back, if you want.
 
 >score
 You currently have 7 out of 8 total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-ordeal-loader-anagrams-nametag
+#testcase-table-of-ordeal-loader-anagrams-nametag
 >xx nametag
 You pause a bit. Maybe there's something on the broad board that'd help you decide what to do with the nametag. Or what not to do.
 
@@ -244,7 +244,7 @@ You hear tectonic noises, then an evil voice whispering "Once it's..." You sense
 >score
 You currently have 8 out of 8 total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
 
-#ttc-table-of-ordeal-loader-anagrams-acne-bit-cabinet
+#testcase-table-of-ordeal-loader-anagrams-acne-bit-cabinet
 >xx cabinet
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs a bit, and instead you see some Bactine.

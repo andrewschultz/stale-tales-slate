@@ -31,11 +31,11 @@ You see yourself giving something reddish to some weird monster before it runs o
 
 DEBUG: drainage being objhinted.
 
-#ttc-table-of-metros-anagrams-drainage
+#testcase-table-of-metros-anagrams-drainage
 >xx drainage
 Your vision blurs a bit, and instead you see a gardenia.
 
-#ttc-table-of-metros-anagrams-beats
+#testcase-table-of-metros-anagrams-beats
 >xx beats
 Your vision blurs a bit, and instead you see a beast.
 
@@ -61,11 +61,11 @@ You currently have 1 out of 18 total points for the Metros region. Your minimum 
 
 /^Roarings Garrison
 
-#ttc-table-of-nowheres-roarings-garrison
+#testcase-table-of-nowheres-roarings-garrison
 >in
 There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits or clear way INSIDE.
 
-#ttc-table-of-metros-anagrams-lost-corn
+#testcase-table-of-metros-anagrams-lost-corn
 >xx lost corn
 The dead beat deadbeat eyes you warily. You probably can't take the corn until you pleased the deadbeat, but yay for looking ahead.
 Your vision blurs a bit, and instead you see controls.
@@ -89,11 +89,11 @@ There are four unblocked exits: north, south to Undesired Underside, east and we
 
 DEBUG: motto being objhinted.
 
-#ttc-table-of-metros-anagrams-motto
+#testcase-table-of-metros-anagrams-motto
 >xx motto
 You thought you saw a tomato whiz by "a motto," there.
 
-#ttc-table-of-nowheres-bile-libe
+#testcase-table-of-nowheres-bile-libe
 >w
 Perhaps there is a I-Be-Libel Lie Bible somewhere in the recesses here, but it and those beats would be too much at once. You probably just want to go back east.
 
@@ -134,7 +134,7 @@ The only way to exit is east, so let's go that way.
 >exits
 The only way you seem to be able to go is east to Undesired Underside.
 
-#ttc-table-of-nowheres-the-ol-hotel
+#testcase-table-of-nowheres-the-ol-hotel
 >s
 You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city.
 
@@ -170,7 +170,7 @@ The only way you seem to be able to go is south to Roarings Garrison.
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the antlers (faint) and the dry cake for a few seconds.
 
-#ttc-table-of-metros-anagrams-antlers
+#testcase-table-of-metros-anagrams-antlers
 >xx antlers
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 You take care not to drop any crackers on the rug. A large RENTAL sign seems to obscure the antlers for a moment.
@@ -197,7 +197,7 @@ You see yourself taking a free sample of some cloth.
 >gt bastion
 You wouldn't be welcome.
 
-#+ttc-table-of-metros-anagrams-lost-corn
+#+testcase-table-of-metros-anagrams-lost-corn
 >xx lost corn
 !The dead beat deadbeat eyes you
 Your vision blurs a bit, and instead you see controls.
@@ -208,7 +208,7 @@ Your score has just gone up by one point.
 >score
 You currently have 6 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-metros-anagrams-dry-cake
+#testcase-table-of-metros-anagrams-dry-cake
 >xx cake
 Your vision blurs a bit, and instead you see a keycard.
 
@@ -217,7 +217,7 @@ Your vision blurs a bit, and instead you see a keycard.
 >score
 You currently have 7 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-metros-anagrams-clover
+#testcase-table-of-metros-anagrams-clover
 >xx clover
 Your vision blurs a bit, and instead you see Velcro.
 
@@ -247,28 +247,28 @@ The only way to exit is west, so let's go that way.
 >exits
 The only way you seem to be able to go is west to Roarings Garrison.
 
-#ttc-table-of-nowheres-fo-real-florae
+#testcase-table-of-nowheres-fo-real-florae
 >n
 The faeries wouldn't take kindly to snooping. The only safe way out is back west.
 
-#ttc-table-of-metros-anagrams-begonias
+#testcase-table-of-metros-anagrams-begonias
 >xx begonias
 The faeries buzz, perturbed. You really shouldn't do anything until you've traded for merchandise.
 !Your vision blurs
 
-#ttc-table-of-metros-anagrams-heaths
+#testcase-table-of-metros-anagrams-heaths
 >xx heaths
 The faeries buzz, perturbed. You really shouldn't do anything until you've traded for merchandise.
 !Your vision blurs
 
 >give gardenia to faeries
 
-#+ttc-table-of-metros-anagrams-begonias
+#+testcase-table-of-metros-anagrams-begonias
 >xx begonias
 You should take the begonias if you want to work on them.
 !Your vision blurs
 
-#+ttc-table-of-metros-anagrams-heaths
+#+testcase-table-of-metros-anagrams-heaths
 >xx heaths
 You should take the heaths if you want to work on them.
 !Your vision blurs
@@ -297,11 +297,11 @@ DEBUG: heaths being objhinted.
 
 >undo
 
-#+ttc-table-of-metros-anagrams-begonias
+#+testcase-table-of-metros-anagrams-begonias
 >xx begonias
 #Your vision blurs a bit, and instead you see a noise bag.
 
-#+ttc-table-of-metros-anagrams-heaths
+#+testcase-table-of-metros-anagrams-heaths
 >xx heaths
 Your vision blurs a bit, and instead you see a sheath.
 
@@ -323,7 +323,7 @@ You currently have 9 out of 18 total points for the Metros region. You have foun
 
 >w
 
-#ttc-table-of-metros-anagrams-words
+#testcase-table-of-metros-anagrams-words
 >xx words
 Your vision blurs a bit, and instead you see a sword.
 
@@ -334,7 +334,7 @@ You currently have 10 out of 18 total points for the Metros region. You have fou
 
 >e
 
-#ttc-table-of-metros-anagrams-brocade
+#testcase-table-of-metros-anagrams-brocade
 >xx brocade
 Your vision blurs a bit, and instead you see a barcode.
 
@@ -379,7 +379,7 @@ The only way to exit is west, so let's go that way.
 >exits
 The only way you seem to be able to go is west to Undesired Underside.
 
-#ttc-table-of-nowheres-esoteric-coteries
+#testcase-table-of-nowheres-esoteric-coteries
 >e
 The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher.
 
@@ -396,7 +396,7 @@ You currently have 12 out of 18 total points for the Metros region. You have fou
 >gt coteries
 You got something from the nerds. They've probably had enough of you.
 
-#ttc-table-of-nowheres-undesired-underside
+#testcase-table-of-nowheres-undesired-underside
 >in
 A hotel is west, a camp is north, the signers' ingress leads east, and some sort of terminal is south. But there are no special exits or clear way INSIDE.
 
@@ -419,11 +419,11 @@ The only way to exit is north, so let's go that way.
 >exits
 The only way you seem to be able to go is north to Undesired Underside.
 
-#ttc-table-of-metros-anagrams-neon-pig
+#testcase-table-of-metros-anagrams-neon-pig
 >xx neon pig
 Your vision blurs a bit, and instead you see an opening where the pig is.
 
-#ttc-table-of-nowheres-elm-train-terminal
+#testcase-table-of-nowheres-elm-train-terminal
 >e
 There may be a rail lair that way, but it's behind a live rail in the darkness. You'd touch it before you got there.
 >s
@@ -472,7 +472,7 @@ You stare into the blue lube for a bit, then look around. The blue glow pulses w
 >gt underside
 No going back now. You came here to defeat the beats.
 
-#ttc-table-of-nowheres-bassy-abyss
+#testcase-table-of-nowheres-bassy-abyss
 >n
 You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp headache. It's an aligns signal, and it must be encompassing the whole abyss. It turns you back to face the beats.
 
@@ -485,7 +485,7 @@ You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp
 >exits
 There's no way out or back. But you should have what you need to defeat the beats.
 
-#ttc-table-of-metros-anagrams-siren
+#testcase-table-of-metros-anagrams-siren
 >xx siren
 Your vision blurs a bit, and instead you see some resin.
 

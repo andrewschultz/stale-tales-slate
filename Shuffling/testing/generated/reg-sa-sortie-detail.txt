@@ -61,7 +61,7 @@ In the fridge, you see some grist and a cake pan. Hm, mostly instant-meal stuff,
 >open fridge
 You reopen and peer on. The grist and cake pan are still in the fridge.
 
-#ttc-table-of-kibitzes-tall-trio
+#testcase-table-of-kibitzes-tall-trio
 >rc tall trio
 The gadget beeps once. A series of lights comes across: GRRRRRRR.
 You scanned each of the tall trio, and the readout didn't change.
@@ -258,7 +258,7 @@ Your gadget's not near anything, but it's registering RBBG.
 Your score has just gone up by one point.
 
 # ask early before you get the flier in other ways, but undo, so pat still mistrusts you
-#ttc-table-of-matched-topic-responses-woeful-pat-st-paean
+#testcase-table-of-matched-topic-responses-woeful-pat-st-paean
 >ask pat about st paean
 "It will be my best reading yet. Even better than this. Here you go. Have this flier, just to make sure."
 >undo
@@ -269,7 +269,7 @@ Your score has just gone up by one point.
 Perhaps if you asked Pat about himself or the beats or the poetry, he might let you scan him.
 You decide against rectifying as well, since certifying didn't turn up anything just now.
 
-#ttc-table-of-matched-thing-responses-woeful-pat-woeful-pat
+#testcase-table-of-matched-thing-responses-woeful-pat-woeful-pat
 >ask pat about pat
 "Of course it would be absorbing to learn about my life and struggles and views," he drones airily.
 
@@ -293,15 +293,15 @@ You currently have 15 out of 27 total points for the Sortie region. You have fou
 >mroo
 The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
 
-#ttc-table-of-matched-topic-responses-woeful-pat-beat-rhythm-meter
+#testcase-table-of-matched-topic-responses-woeful-pat-beat-rhythm-meter
 >ask woeful pat about rhythm
 "I noticed you nodding your head to the beat. You probably don't even know it's called ANAPEST. But the proper meter of my poem is but the surface of its multifaceted splendor!"
 
-#ttc-table-of-unmatched-topic-responses-woeful-pat
+#testcase-table-of-unmatched-topic-responses-woeful-pat
 >ask woeful pat about xxxxx
 He holds up his hand for silence. He is too busy reciting his poem. Maybe you have to ask about the right things, like the poem's RHYTHM or METER. Or, well, him.
 
-#+ttc-table-of-matched-topic-responses-woeful-pat-st-paean
+#+testcase-table-of-matched-topic-responses-woeful-pat-st-paean
 >ask woeful pat about paean
 "It will be my best reading yet. Even better than this."
 !Here you go.
@@ -309,15 +309,15 @@ He holds up his hand for silence. He is too busy reciting his poem. Maybe you ha
 >ask woeful pat about paean
 "It will be my best reading yet. Even better than this."
 
-#ttc-table-of-matched-thing-responses-woeful-pat-peasant
+#testcase-table-of-matched-thing-responses-woeful-pat-peasant
 >ask woeful pat about peasant
 "There is one who tries his best. But he is too...obvious."
 
-#ttc-table-of-matched-thing-responses-woeful-pat-anapest
+#testcase-table-of-matched-thing-responses-woeful-pat-anapest
 >ask woeful pat about anapest
 "A mere creative writing teacher could educate you as to the pedantic details of writing doggerel that mimics my epic's flow!"
 
-#ttc-table-of-matched-thing-responses-woeful-pat-mean-old
+#testcase-table-of-matched-thing-responses-woeful-pat-mean-old
 >ask woeful pat about mean old
 "He does not censor my art. He cannot be that bad!"
 
@@ -349,33 +349,33 @@ Your score has just gone up by one point.
 Your gadget's not near anything, but it's registering RGGR.
 Your gadget's not near anything, but it's registering RBBG.
 
-#ttc-table-of-matched-thing-responses-peasant-mean-old
+#testcase-table-of-matched-thing-responses-peasant-mean-old
 >ask peasant about mean old
 "Used to be much nicer, I'd say!"
 
-#ttc-table-of-matched-thing-responses-peasant-poem
+#testcase-table-of-matched-thing-responses-peasant-poem
 >ask peasant about poem
 "I try my best at it."
 
 >ask peasant about peasant
 "I don't know much about that, that's sure. But I know from hay, being an abler baler."
 
-#ttc-table-of-matched-thing-responses-peasant-straw
+#testcase-table-of-matched-thing-responses-peasant-straw
 >ask peasant about straw
 "Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though."
 
-#ttc-table-of-matched-thing-responses-peasant-hay
+#testcase-table-of-matched-thing-responses-peasant-hay
 >ask peasant about hay
 "Not very useful for building something unless you want it to be destroyed quickly. Can't think of any reason I'd need that. Straw, on the other hand..."
 
 >ask peasant about straw
 "Good, sturdy stuff. I could use some to repair my hut. Can't imagine anyone would want what I have, though."
 
-#ttc-table-of-matched-thing-responses-peasant-woeful-pat
+#testcase-table-of-matched-thing-responses-peasant-woeful-pat
 >ask peasant about woeful pat
 "He's better than I am at poetry, I'm sure. I'm not educated enough to know why. Frustrates me sometimes."
 
-#ttc-table-of-unmatched-topic-responses-peasant
+#testcase-table-of-unmatched-topic-responses-peasant
 >ask peasant about aabbcc
 "I don't know much about that, that's sure. But I know from hay, being an abler baler."
 

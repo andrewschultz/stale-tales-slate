@@ -46,29 +46,29 @@ DEBUG: Store F being objhinted.
 >xc
 >eat saltine
 
-#ttc-table-of-stores-anagrams-acne-bit-cabinet
+#testcase-table-of-stores-anagrams-acne-bit-cabinet
 >xx cabinet
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs a bit, and instead you see some Bactine.
 
-#ttc-table-of-stores-anagrams-store-b
+#testcase-table-of-stores-anagrams-store-b
 >xx store b
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs a bit, and instead you see sorbet.
 
-#ttc-table-of-stores-anagrams-store-f
+#testcase-table-of-stores-anagrams-store-f
 >xx store f
 Your vision blurs a bit, and instead you see a forest.
 
-#ttc-table-of-stores-anagrams-store-i
+#testcase-table-of-stores-anagrams-store-i
 >xx store i
 Your vision blurs a bit, and instead you see a sortie.
 
-#ttc-table-of-stores-anagrams-store-m
+#testcase-table-of-stores-anagrams-store-m
 >xx store m
 Your vision blurs a bit, and instead you see metros.
 
-#ttc-table-of-stores-anagrams-store-r
+#testcase-table-of-stores-anagrams-store-r
 >xx store r
 Your vision blurs a bit, and instead you see a resort.
 

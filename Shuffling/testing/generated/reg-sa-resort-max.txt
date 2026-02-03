@@ -1,8 +1,6 @@
 ## reg-sa-resort-max.txt
 ## GENERATOR FILE: rbr-sa-resort.txt
 
-## maximum walkthrough
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
@@ -110,7 +108,7 @@ Those are no longer part of a puzzle.
 by one point
 
 >score
-You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
+You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
 
 >ropes
 by one point
@@ -123,7 +121,7 @@ by one point
 by two points
 
 >score
-You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
+You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 13
 
 >undo
 >undo
@@ -134,19 +132,19 @@ You currently have 9 out of 15 total points for the Resort region. Your minimum 
 Your score has just gone up by two points.
 
 >score
-You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
+You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
 
 >ropes
 Your score has just gone up by one point.
 
 >score
-You currently have 8 out of 15 total points for the Resort region. Your minimum possible score on solving is 13, and the maximum is 15
+You currently have 8 out of 15 total points for the Resort region. Your minimum possible score on solving is 13, and the maximum is 13
 
 >grips
 Your score has just gone up by one point.
 
 >score
-You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
+You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 13
 
 #+testcase-postrule-table-of-resort-anagrams-post-ropes-grips-rule
 >hint ropes
@@ -176,13 +174,13 @@ Your score has just gone up by one point.
 A bunch of ovular links hooked together. Out of the hands of rioters, it'll cause less achin'. But they're still more violent things than you'd like, this near the Means Manse.
 
 >score
-You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
+You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 11
 
 >potters
 Your score has just gone up by one point.
 
 >score
-You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
+You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 11
 
 >china
 Your score has just gone up by one point.
@@ -232,7 +230,7 @@ You currently have 14 out of 15 total points for the Resort region. You have fou
 by one point
 My Adieu to You: Made It!
 
-#ttc-table-of-ranks-8
+#testcase-table-of-ranks-8
 Final rank: a smart gamin' anagrammist.
 
 >missed

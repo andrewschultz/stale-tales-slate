@@ -18,15 +18,15 @@
 >laredo
 If you want a Western game situated on the US/Mexico border, this isn't for you.
 
-#ttc-table-of-ordeal-loader-nudges-ordeal
+#testcase-table-of-ordeal-loader-nudges-ordeal
 >ordela
 You don't want to change a region drastically while you're in it.
 
-#ttc-table-of-busiest-subsite-nudges-oafs
+#testcase-table-of-busiest-subsite-nudges-oafs
 >oasf
 The Oafs' Sofa is there, and there's nothing you can do about it.
 
-#ttc-table-of-busiest-subsite-nudges-oaf
+#testcase-table-of-busiest-subsite-nudges-oaf
 >ofa
 The Oafs' Sofa is there, and there's nothing you can do about it.
 
@@ -64,7 +64,7 @@ You take a passive-aggressive stab at the person, now gone, who mocked you when 
 >pone
 The meals here are much more highfalutin' than that!
 
-#ttc-table-of-busiest-subsite-nudges-eopn
+#testcase-table-of-busiest-subsite-nudges-eopn
 >eopn
 The passage looks unblocked already, so you don't need to look for any other possibilities.
 
@@ -118,47 +118,47 @@ That's not something you can say, do or see here. For a list of common verbs, ty
 >rc xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 
-#ttc-table-of-busiest-subsite-nudges-busiest
+#testcase-table-of-busiest-subsite-nudges-busiest
 >busiets
 You may need to change a room later, but you'll have a hint device to do so.
 
-#ttc-table-of-busiest-subsite-nudges-noentry
+#testcase-table-of-busiest-subsite-nudges-noentry
 >noentyr
 You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter...
 
-#ttc-table-of-busiest-subsite-nudges-slim
+#testcase-table-of-busiest-subsite-nudges-slim
 >slmi
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
 
-#ttc-table-of-busiest-subsite-nudges-neat
+#testcase-table-of-busiest-subsite-nudges-neat
 >neta
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
 
-#ttc-table-of-busiest-subsite-nudges-name
+#testcase-table-of-busiest-subsite-nudges-name
 >naem
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
 
-#ttc-table-of-busiest-subsite-nudges-list
+#testcase-table-of-busiest-subsite-nudges-list
 >lits
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
 
-#ttc-table-of-busiest-subsite-nudges-elevator
+#testcase-table-of-busiest-subsite-nudges-elevator
 >elevatro
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 
-#ttc-table-of-busiest-subsite-nudges-terraces
+#testcase-table-of-busiest-subsite-nudges-terraces
 >terracse
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 
-#ttc-table-of-busiest-subsite-nudges-terrace
+#testcase-table-of-busiest-subsite-nudges-terrace
 >terraec
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 
-#ttc-table-of-busiest-subsite-nudges-caveat
+#testcase-table-of-busiest-subsite-nudges-caveat
 >acevta
 Vandalizing the vacate caveat is probably more trouble than it's worth.
 
-#ttc-table-of-busiest-subsite-nudges-banner
+#testcase-table-of-busiest-subsite-nudges-banner
 >bannre
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 
@@ -169,7 +169,7 @@ A voice in your head tells you that sort of mental wandering is what got you can
 >bruhs
 No, you don't need to mix up the shrub and brush. That's not where you'll find passage out.
 
-#ttc-table-of-rested-desert-nudges-rested
+#testcase-table-of-rested-desert-nudges-rested
 >restde
 You may need to change a room later, but you'll have a hint device to do so.
 
@@ -177,15 +177,15 @@ You may need to change a room later, but you'll have a hint device to do so.
 >deters
 No! You're trying to make progress here.
 
-#ttc-table-of-rested-desert-nudges-breeze
+#testcase-table-of-rested-desert-nudges-breeze
 >breeez
 You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
 
-#ttc-table-of-rested-desert-nudges-smlel
+#testcase-table-of-rested-desert-nudges-smlel
 >smlle
 You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
 
-#ttc-table-of-ordeal-loader-spechelp-odor
+#testcase-table-of-ordeal-loader-spechelp-odor
 >doro
 The odor doesn't seem too complex. You pause. You can figure what it should be.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the odor. Keep at it.
@@ -214,19 +214,19 @@ No, you don't need to mix up the shrub and brush. The door seems a more likely c
 >rood
 You already changed the odor, and this game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
-#ttc-table-of-ordeal-loader-done-rejects-or-do-door
+#testcase-table-of-ordeal-loader-done-rejects-or-do-door
 >doro
 The door is probably the way out. Best not change it into something else.
 
-#ttc-table-of-rested-desert-nudges-musical
+#testcase-table-of-rested-desert-nudges-musical
 >musicla
 It's a pretty complex chord.
 
-#ttc-table-of-rested-desert-nudges-chord
+#testcase-table-of-rested-desert-nudges-chord
 >chodr
 It's a pretty complex chord.
 
-#ttc-table-of-ordeal-loader-spechelp-bulge
+#testcase-table-of-ordeal-loader-spechelp-bulge
 >bugel
 The bulge swells and makes a squeal, like it's trying to make music.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bulge. Keep at it.
@@ -240,15 +240,15 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >bugle
 Your score has just gone up by one point.
 
-#ttc-table-of-ordeal-loader-done-rejects-bugle
+#testcase-table-of-ordeal-loader-done-rejects-bugle
 >bugel
 The bugle emits a sad "don't change me back" noise.
 
-#ttc-table-of-rested-desert-nudges-horn
+#testcase-table-of-rested-desert-nudges-horn
 >honr
 No, the bugle is a bugle, not just a horn. It's been changed enough.
 
-#ttc-table-of-ordeal-loader-spechelp-bolt
+#testcase-table-of-ordeal-loader-spechelp-bolt
 >blto
 You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bolt. Keep at it.
@@ -276,11 +276,11 @@ There's enough earth around here, and this game's not in German.
 >rede
 You probably don't want medieval-style advice. You don't need it. HINT should work better.
 
-#ttc-table-of-thickest-thickets-nudges-thickets
+#testcase-table-of-thickest-thickets-nudges-thickets
 >thicktes
 You may need to change a room later, but you'll have a hint device to do so.
 
-#ttc-table-of-thickest-thickets-nudges-thicket
+#testcase-table-of-thickest-thickets-nudges-thicket
 >thickte
 You may need to change a room later, but you'll have a hint device to do so.
 
@@ -290,11 +290,11 @@ While ents are definitely organic, they wouldn't feel quite natural here. Someth
 >ents
 While ents are definitely organic, they wouldn't feel quite natural here. Something else, though, maybe. Plus, that's a big thing to summon when you're still getting your powers.
 
-#ttc-table-of-thickest-thickets-nudges-net
+#testcase-table-of-thickest-thickets-nudges-net
 >nte
 There's something you can do with all the nets, if you think about it.
 
-#ttc-table-of-ordeal-loader-spechelp-sent-nets
+#testcase-table-of-ordeal-loader-spechelp-sent-nets
 >etns
 The sent nets rustle slightly.
 
@@ -306,7 +306,7 @@ The sent nets rustle slightly.
 >nest
 by one point
 
-#ttc-table-of-ordeal-loader-done-rejects-nest
+#testcase-table-of-ordeal-loader-done-rejects-nest
 >ntse
 The nest just looks right here, now that you summoned it.
 
@@ -316,11 +316,11 @@ That's a bit too magical for here and now. The nest is nice enough.
 >ents
 That's a bit too magical for here and now. The nest is nice enough.
 
-#ttc-table-of-thickest-thickets-nudges-shrub
+#testcase-table-of-thickest-thickets-nudges-shrub
 >shrbu
 The shrub and brush waver, then point towards the toga.
 
-#ttc-table-of-ordeal-loader-spechelp-reed
+#testcase-table-of-ordeal-loader-spechelp-reed
 >eder
 The reed blows in an unseen breeze.
 
@@ -329,7 +329,7 @@ The reed blows in an unseen breeze.
 The reed blows in an unseen breeze.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-ordeal-loader-spechelp-toga
+#testcase-table-of-ordeal-loader-spechelp-toga
 >gota
 The toga blows in an unseen breeze, exposing what's written on it a bit more.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the toga. Keep at it.
@@ -340,7 +340,7 @@ The toga blows in an unseen breeze, exposing what's written on it a bit more.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the toga. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-readables-toga
+#testcase-table-of-readables-toga
 >read toga
 A GOT-TA GO ... hmm, not the very best ever.
 
@@ -359,17 +359,17 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 7
 
-#ttc-table-of-ordeal-loader-done-rejects-deer
+#testcase-table-of-ordeal-loader-done-rejects-deer
 >rdee
 The deer is very peaceful. You dere-n't disturb it.
 
-#ttc-table-of-ordeal-loader-done-rejects-goat
+#testcase-table-of-ordeal-loader-done-rejects-goat
 >gota
 The goat is happy as-is. No need to go tag a ...
 
-#+ttc-table-of-thickest-thickets-nudges-shrub
+#+testcase-table-of-thickest-thickets-nudges-shrub
 >shrbu
 The remains of the shrub and brush waver, then point towards the opening in the thickets.
 
@@ -377,9 +377,9 @@ The remains of the shrub and brush waver, then point towards the opening in the 
 /^Notices Section
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 5
 
-#ttc-table-of-readables-gateway
+#testcase-table-of-readables-gateway
 >read gateway
 "E. g., man, TA!" is written in red, beneath the WARMUP/UM, WARP text.
 Maybe it's significant that the writing's red, and that can help you
@@ -408,11 +408,11 @@ There's enough information here.
 >tastic
 Are you saying this game is only two-thirds fantastic so far? Oh, I guess that's nice enough.
 
-#ttc-table-of-notices-section-nudges-notices
+#testcase-table-of-notices-section-nudges-notices
 >noticse
 You don't need to change this place, though the cabinet holds a hint device to tell you when to act on your location.
 
-#ttc-table-of-ordeal-loader-spechelp-static
+#testcase-table-of-ordeal-loader-spechelp-static
 >attisc
 You think a bit, and the static seems like a bad extension to the doll house.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the static. Keep at it.
@@ -424,7 +424,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 5
 
 >attics
 Your score has just gone up by one point.
@@ -436,7 +436,7 @@ You currently have 7 out of 8 total points for the Ordeal Loader region. You hav
 >tastic
 Are you saying this game is only two-thirds fantastic so far? Oh, I guess that's nice enough.
 
-#ttc-table-of-ordeal-loader-spechelp-attics
+#testcase-table-of-ordeal-loader-spechelp-attics
 >attisc
 Hm, you can't think of anything to do with the attics but change them back.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the attics. Keep at it.
@@ -447,35 +447,35 @@ Hm, you can't think of anything to do with the attics but change them back.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the attics. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-notices-section-nudges-doll
+#testcase-table-of-notices-section-nudges-doll
 >dlol
 The attics shake slightly.
 
-#ttc-table-of-notices-section-nudges-house
+#testcase-table-of-notices-section-nudges-house
 >houes
 The attics shake slightly.
 
-#ttc-table-of-notices-section-nudges-gateway
+#testcase-table-of-notices-section-nudges-gateway
 >gatewya
 Nothing changes. Maybe you just need to walk through it, if and when you're prepared.
 
-#ttc-table-of-notices-section-nudges-borda
+#testcase-table-of-notices-section-nudges-borda
 >borad
 The broad board is just there to read.
 
-#ttc-table-of-notices-section-nudges-tmis
+#testcase-table-of-notices-section-nudges-tmis
 >tims
 The TMIs are there to help you.
 
-#ttc-table-of-notices-section-nudges-tmi
+#testcase-table-of-notices-section-nudges-tmi
 >tim
 The TMIs are there to help you.
 
-#ttc-table-of-notices-section-nudges-newland
+#testcase-table-of-notices-section-nudges-newland
 >newladn
 You will have to change the new land one item at a time.
 
-#ttc-table-of-ordeal-loader-spechelp-nametag
+#testcase-table-of-ordeal-loader-spechelp-nametag
 >gatemna
 The nametag peels infinitesimally.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
@@ -504,31 +504,31 @@ You currently have 8 out of 8 total points for the Ordeal Loader region. You mig
 >almond
 "Don't try anything too nutty!" booms Nat Egam.
 
-#ttc-table-of-ordeal-loader-done-rejects-gateman
+#testcase-table-of-ordeal-loader-done-rejects-gateman
 >gatemna
 Don't scramble the gateman. He's here to help.
 
-#ttc-table-of-notices-section-nudges-warpy
+#testcase-table-of-notices-section-nudges-warpy
 >waryp
 You can't change Old Warpy. You have to just trust it.
 
-#ttc-table-of-notices-section-nudges-old
+#testcase-table-of-notices-section-nudges-old
 >odl
 You can't change Old Warpy. You have to just trust it.
 
-#ttc-table-of-notices-section-nudges-oldman
+#testcase-table-of-notices-section-nudges-oldman
 >oldmna
 He's too old to change. At least, in his present form.
 
-#ttc-table-of-notices-section-nudges-dollhouse
+#testcase-table-of-notices-section-nudges-dollhouse
 >dollhoues
 Thinking that doesn't do much, but the attics seem to glow a bit.
 
-#ttc-table-of-notices-section-nudges-attic
+#testcase-table-of-notices-section-nudges-attic
 >attci
 You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back.
 
-#ttc-table-of-notices-section-nudges-warmup
+#testcase-table-of-notices-section-nudges-warmup
 >warmpu
 You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you.
 
@@ -553,7 +553,7 @@ You've got enough practical help. You don't need anything supernatural.
 >beatnic
 The cabinet deserves a better fate than THAT.
 
-#ttc-table-of-ordeal-loader-spechelp-acne-bit-cabinet
+#testcase-table-of-ordeal-loader-spechelp-acne-bit-cabinet
 >cbitean
 The cabinet wobbles a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the acne-bit cabinet. Keep at it.
@@ -564,7 +564,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 The cabinet wobbles a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the acne-bit cabinet. Keep at it.
 
-#ttc-table-of-readables-acne-bit-cabinet
+#testcase-table-of-readables-acne-bit-cabinet
 >read cabinet
 Here is one of several writings in red in the cabinet:
 /(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
@@ -587,7 +587,7 @@ Here is one of several writings in red in the cabinet:
 Here is one of several writings in red in the cabinet:
 /(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
 
-#+ttc-table-of-notices-section-nudges-notices
+#+testcase-table-of-notices-section-nudges-notices
 >noticse
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
@@ -602,7 +602,7 @@ The saltine's there to help you. Changing it might work against you.
 >stealin
 You're the good guy, here. You don't need to steal.
 
-#ttc-table-of-notices-section-nudges-notice
+#testcase-table-of-notices-section-nudges-notice
 >notiec
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 

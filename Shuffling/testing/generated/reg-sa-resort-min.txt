@@ -1,8 +1,6 @@
 ## reg-sa-resort-min.txt
 ## GENERATOR FILE: rbr-sa-resort.txt
 
-## minimum walkthrough
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
@@ -38,14 +36,14 @@ by one point
 Your score has just gone up by one point.
 
 >score
-You currently have 2 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 15
+You currently have 3 out of 15 total points for the Resort region. Your minimum possible score on solving is 11, and the maximum is 15
 
 >take leis
 >score
-You currently have 2 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 14
+You currently have 4 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 14
 >e
 >score
-You currently have 2 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 13
+You currently have 4 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
 >undo
 >undo
 >undo
@@ -56,13 +54,13 @@ You currently have 2 out of 15 total points for the Resort region. Your minimum 
 /^Rived Drive
 
 >score
-You currently have 2 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 13
+You currently have 4 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
 
 >slope
 by one point
 
 >score
-You currently have 3 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 13
+You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
 
 >grips
 by one point
@@ -78,32 +76,32 @@ by one point
 Your score has just gone up by two points.
 
 >score
-You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 13
+You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
 
 >e
 
 /^Potshot Hotspot
 
 >score
-You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 11
+You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 11
 
 >trio
 Your score has just gone up by one point.
 
 >score
-You currently have 6 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 11
+You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 11
 
 >potters
 Your score has just gone up by one point.
 
 >score
-You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 10, and the maximum is 11
+You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 11
 
 >kilns
 Your score has just gone up by one point.
 
 >score
-You currently have 8 out of 15 total points for the Resort region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 13 out of 15 total points for the Resort region. Your final possible score is fixed. You missed something you can't go back for.
 
 >get out
 !Your score has just
@@ -114,7 +112,7 @@ by one point
 Your score has just gone up by one point.
 
 >score
-You currently have 9 out of 15 total points for the Resort region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 14 out of 15 total points for the Resort region. Your final possible score is fixed. You missed something you can't go back for.
 
 >e
 /^Means Manse

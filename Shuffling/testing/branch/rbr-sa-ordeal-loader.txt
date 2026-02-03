@@ -5,23 +5,23 @@
 # hch.py to check help-stuff, mist.py to check mistakes, nuch.py to check nudges
 #
 
-file=reg-sa-ordeal-loader-max.txt,max,maximum walkthrough
-file=reg-sa-ordeal-loader-min.txt,min,minimum walkthrough
-file=reg-sa-ordeal-loader-nudmis.txt,nudges/nud/nu/mis/mi,walkthrough with all nudges and mistakes
-file=reg-sa-ordeal-loader-hints.txt,hints/hin/sal/gle/gt/gn,walkthrough with hints
-file=reg-sa-ordeal-loader-detail.txt,ask/scan/pad,walkthrough with ask/scan/pad detail
+file=reg-sa-ordeal-loader-max.txt,abbr=max,desc=maximum walkthrough
+file=reg-sa-ordeal-loader-min.txt,abbr=min,desc=minimum walkthrough
+file=reg-sa-ordeal-loader-nudmis.txt,abbr=nudges/nud/nu/mis/mi,desc=walkthrough with all nudges and mistakes
+file=reg-sa-ordeal-loader-hints.txt,abbr=hints/hin/sal/gle/gt/gn,desc=walkthrough with hints
+file=reg-sa-ordeal-loader-detail.txt,abbr=ask/scan/pad,desc=walkthrough with ask/scan/pad detail
 
 ## *FILE
 ## *FORK
 
-}}MAX=8
-}}CURMAX=8
-}}SCORE=0
-}}CURMIN=4
+}#MAX=8
+}#CURMAX=8
+}#SCORE=0
+}#CURMIN=4
 
-}$SCOS=You currently have {SCORE} out of {MAX} total points for the Ordeal Loader region. Your minimum possible score on solving is {CURMIN}, and the maximum is {CURMAX}
-}$SFIXMAX=You currently have {SCORE} out of {MAX} total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
-}$SFIXNOMAX=You currently have {SCORE} out of {MAX} total points for the Ordeal Loader region. Your final possible score is fixed. You missed something you can't go back for.
+}$SCOS=You currently have {#SCORE} out of {#MAX} total points for the Ordeal Loader region. Your minimum possible score on solving is {#CURMIN}, and the maximum is {#CURMAX}
+}$SFIXMAX=You currently have {#SCORE} out of {#MAX} total points for the Ordeal Loader region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+}$SFIXNOMAX=You currently have {#SCORE} out of {#MAX} total points for the Ordeal Loader region. Your final possible score is fixed. You missed something you can't go back for.
 
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
@@ -37,7 +37,7 @@ file=reg-sa-ordeal-loader-detail.txt,ask/scan/pad,walkthrough with ask/scan/pad 
 >au 2
 
 @max
-#ttc-table-of-busiest-subsite-rejects-1
+#testcase-table-of-busiest-subsite-rejects-1
 >e
 That way's an hour or two of listening to an under-action denunciator. You sure?
 You sort of procrastinate the lecture, thinking it'd be fun to just ditch.
@@ -48,7 +48,7 @@ That way's an hour or two of listening to an under-action denunciator. You sure?
 You sort of procrastinate the lecture, thinking it'd be fun to just ditch.
 !For all the lectures about new and exciting possibilities everyone should know about, you'd like one for your own.
 \\
-#ttc-table-of-busiest-subsite-rejects-2
+#testcase-table-of-busiest-subsite-rejects-2
 >n
 That way's a costlier cloister of rooms than recent firees deserve. The measure-a-resume event will be there, but not for another couple hours. You don't really want to deal with agents or headhunters now, anyway, but the name list catches your eye.
 Your eye catches the side passage, which looks more interesting than the standard ways out. Maybe you could give it a look.
@@ -57,7 +57,7 @@ Your eye catches the side passage, which looks more interesting than the standar
 That way's a costlier cloister of rooms than recent firees deserve. The measure-a-resume event will be there, but not for another couple hours. You don't really want to deal with agents or headhunters now, anyway, but the name list catches your eye.
 !Your eye catches the side passage, which looks more interesting than the standard ways out. Maybe you could give it a look.
 \\
-#ttc-table-of-busiest-subsite-rejects-3
+#testcase-table-of-busiest-subsite-rejects-3
 >s
 You already spent too much time in the overlate elevator.
 You feel sort of cornered by all the main passages. Sneaking off anywhere would be kind of fun.
@@ -65,7 +65,7 @@ You feel sort of cornered by all the main passages. Sneaking off anywhere would 
 You already spent too much time in the overlate elevator.
 !You feel sort of cornered by all the main passages. Sneaking off anywhere would be kind of fun.
 \\
-#ttc-table-of-busiest-subsite-rejects-4
+#testcase-table-of-busiest-subsite-rejects-4
 >w
 The Caterers' Terraces are west. You see someone sweating over a bizarre brazier, hear how this next lecture will "Prep us for supper," and promptly lose your will to do anything for a minute.
 The standard, usual directions don't seem to cut it. But there has to be somewhere else.
@@ -98,15 +98,15 @@ You're not in the area where the magic happens, yet. The cardinal directions, in
 !NOTE: the plus sign means you can HINT again for something more spoilery. (-) means the end of a list of hints.
 
 @nud
-#ttc-table-of-ordeal-loader-nudges-ordeal
+#testcase-table-of-ordeal-loader-nudges-ordeal
 >ordela
 You don't want to change a region drastically while you're in it.
 \\
-#ttc-table-of-busiest-subsite-nudges-oafs
+#testcase-table-of-busiest-subsite-nudges-oafs
 >oasf
 The Oafs' Sofa is there, and there's nothing you can do about it.
 \\
-#ttc-table-of-busiest-subsite-nudges-oaf
+#testcase-table-of-busiest-subsite-nudges-oaf
 >ofa
 The Oafs' Sofa is there, and there's nothing you can do about it.
 \\
@@ -145,7 +145,7 @@ You take a passive-aggressive stab at the person, now gone, who mocked you when 
 >pone
 The meals here are much more highfalutin' than that!
 \\
-#ttc-table-of-busiest-subsite-nudges-eopn
+#testcase-table-of-busiest-subsite-nudges-eopn
 >eopn
 The passage looks unblocked already, so you don't need to look for any other possibilities.
 
@@ -154,7 +154,7 @@ The passage looks unblocked already, so you don't need to look for any other pos
 >gateman
 The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.
 (That's worth noting in your notepad for later, so you do, under FLIPS.)
-#ttc-table-of-preflip-clues-gateman
+#testcase-table-of-preflip-clues-gateman
 >pf
 nametag -> gateman
 
@@ -209,52 +209,52 @@ That's not something you can say, do or see here. For a list of common verbs, ty
 >rc xyz
 That's not something you can say, do or see here. For a list of common verbs, type VERBS.
 \\
-#ttc-table-of-busiest-subsite-nudges-busiest
+#testcase-table-of-busiest-subsite-nudges-busiest
 >busiets
 You may need to change a room later, but you'll have a hint device to do so.
 \\
-#ttc-table-of-busiest-subsite-nudges-noentry
+#testcase-table-of-busiest-subsite-nudges-noentry
 >noentyr
 You notice the NO ENTRY sign is misspelled, and you wonder what else--eh, nothing. Still, it might be fun to enter...
 \\
-#ttc-table-of-busiest-subsite-nudges-slim
+#testcase-table-of-busiest-subsite-nudges-slim
 >slmi
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
 \\
-#ttc-table-of-busiest-subsite-nudges-neat
+#testcase-table-of-busiest-subsite-nudges-neat
 >neta
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
 \\
-#ttc-table-of-busiest-subsite-nudges-name
+#testcase-table-of-busiest-subsite-nudges-name
 >naem
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
 \\
-#ttc-table-of-busiest-subsite-nudges-list
+#testcase-table-of-busiest-subsite-nudges-list
 >lits
 You could get in trouble for mucking with a list of potential job competitors. You're not sure if you're ready for a new job, yet.
 \\
-#ttc-table-of-busiest-subsite-nudges-elevator
+#testcase-table-of-busiest-subsite-nudges-elevator
 >elevatro
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 \\
-#ttc-table-of-busiest-subsite-nudges-terraces
+#testcase-table-of-busiest-subsite-nudges-terraces
 >terracse
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 \\
-#ttc-table-of-busiest-subsite-nudges-terrace
+#testcase-table-of-busiest-subsite-nudges-terrace
 >terraec
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 \\
-#ttc-table-of-busiest-subsite-nudges-caveat
+#testcase-table-of-busiest-subsite-nudges-caveat
 >acevta
 Vandalizing the vacate caveat is probably more trouble than it's worth.
 \\
-#ttc-table-of-busiest-subsite-nudges-banner
+#testcase-table-of-busiest-subsite-nudges-banner
 >bannre
 A voice in your head tells you that sort of mental wandering is what got you canned in the first place. Maybe it'd disappear if you could somehow, well, leave.
 
 @max
-#ttc-table-of-ranks-1
+#testcase-table-of-ranks-1
 >score
 You haven't solved any regions yet. You have the rank of (ow,) me, a nervy every(wo)man.
 
@@ -288,11 +288,11 @@ You'd just get even more lost.
 You won't get anywhere with a long walk.
 
 @ask
-#ttc-table-of-unmatched-topic-responses-yourself
+#testcase-table-of-unmatched-topic-responses-yourself
 >ask me about abcd
 If only learning were so easy.
 \\
-#ttc-table-of-unmatched-thing-responses-yourself
+#testcase-table-of-unmatched-thing-responses-yourself
 >ask me about me
 You start a small mental conversation to take stock of your surroundings and what you might like to do.
 
@@ -306,7 +306,7 @@ Stuff you figured, but you couldn't use it right away:
 nametag -> gateman
 
 @nud
-#ttc-table-of-rested-desert-nudges-rested
+#testcase-table-of-rested-desert-nudges-rested
 >restde
 You may need to change a room later, but you'll have a hint device to do so.
 \\
@@ -314,15 +314,15 @@ You may need to change a room later, but you'll have a hint device to do so.
 >deters
 No! You're trying to make progress here.
 \\
-#ttc-table-of-rested-desert-nudges-breeze
+#testcase-table-of-rested-desert-nudges-breeze
 >breeez
 You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
 \\
-#ttc-table-of-rested-desert-nudges-smlel
+#testcase-table-of-rested-desert-nudges-smlel
 >smlle
 You try to think of it that way, but--nope, it's an odor. Not a very complex one, but an odor.
 \\
-#ttc-table-of-ordeal-loader-spechelp-odor
+#testcase-table-of-ordeal-loader-spechelp-odor
 >doro
 The odor doesn't seem too complex. You pause. You can figure what it should be.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the odor. Keep at it.
@@ -343,7 +343,7 @@ This game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywher
 Goodness, no.
 
 @gn
-#ttc-table-of-nowheres-rested-desert
+#testcase-table-of-nowheres-rested-desert
 >n
 The size of the desert, um, deters you. You're steer'd back to the odor.
 !The one you can probably go through.
@@ -372,11 +372,11 @@ It seems to hold the OR DO door in place.
 No, you don't need to mix up the shrub and brush. The door seems a more likely candidate.
 
 @max
-#ttc-table-of-ranks-2
+#testcase-table-of-ranks-2
 You haven't solved any regions yet. You have the rank of reduced deducer.
 
 @gn
-#+ttc-table-of-nowheres-rested-desert
+#+testcase-table-of-nowheres-rested-desert
 >n
 The size of the desert, um, deters you. You're steer'd back to the door.
 !The one you can probably go through.
@@ -396,19 +396,19 @@ You won't get anywhere with a long walk, but there's got to be a way to get thro
 You already changed the odor, and this game is religion-neutral or tries to be. Plus, a rood wouldn't lead anywhere.
 
 @nud
-#ttc-table-of-ordeal-loader-done-rejects-or-do-door
+#testcase-table-of-ordeal-loader-done-rejects-or-do-door
 >doro
 The door is probably the way out. Best not change it into something else.
 \\
-#ttc-table-of-rested-desert-nudges-musical
+#testcase-table-of-rested-desert-nudges-musical
 >musicla
 It's a pretty complex chord.
 \\
-#ttc-table-of-rested-desert-nudges-chord
+#testcase-table-of-rested-desert-nudges-chord
 >chodr
 It's a pretty complex chord.
 \\
-#ttc-table-of-ordeal-loader-spechelp-bulge
+#testcase-table-of-ordeal-loader-spechelp-bulge
 >bugel
 The bulge swells and makes a squeal, like it's trying to make music.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bulge. Keep at it.
@@ -480,15 +480,15 @@ you could've changed the bolt into a BLOT.
 >undo
 
 @nud
-#ttc-table-of-ordeal-loader-done-rejects-bugle
+#testcase-table-of-ordeal-loader-done-rejects-bugle
 >bugel
 The bugle emits a sad "don't change me back" noise.
 \\
-#ttc-table-of-rested-desert-nudges-horn
+#testcase-table-of-rested-desert-nudges-horn
 >honr
 No, the bugle is a bugle, not just a horn. It's been changed enough.
 \\
-#ttc-table-of-ordeal-loader-spechelp-bolt
+#testcase-table-of-ordeal-loader-spechelp-bolt
 >blto
 You think back to a combination lock you had with, well, forty cubed possibilities. Only, hmm--twenty-four, here.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bolt. Keep at it.
@@ -523,7 +523,7 @@ You won't get anywhere with a long walk, but you should be able to go IN the doo
 {$SCOS}
 
 @gn
-#+ttc-table-of-nowheres-rested-desert
+#+testcase-table-of-nowheres-rested-desert
 >n
 The size of the desert, um, deters you. You're steer'd back to the door. The one you can probably go through.
 
@@ -546,16 +546,16 @@ You probably don't want medieval-style advice. You don't need it. HINT should wo
 /DEBUG: (reed|toga) being objhinted\.
 
 @nud
-#ttc-table-of-thickest-thickets-nudges-thickets
+#testcase-table-of-thickest-thickets-nudges-thickets
 >thicktes
 You may need to change a room later, but you'll have a hint device to do so.
 \\
-#ttc-table-of-thickest-thickets-nudges-thicket
+#testcase-table-of-thickest-thickets-nudges-thicket
 >thickte
 You may need to change a room later, but you'll have a hint device to do so.
 
 @gn
-#ttc-table-of-nowheres-thickest-thickets
+#testcase-table-of-nowheres-thickest-thickets
 >n
 You hit a snag, and the toga nags you. Or seems to.
 
@@ -578,11 +578,11 @@ While ents are definitely organic, they wouldn't feel quite natural here. Someth
 While ents are definitely organic, they wouldn't feel quite natural here. Something else, though, maybe. Plus, that's a big thing to summon when you're still getting your powers.
 
 @nud
-#ttc-table-of-thickest-thickets-nudges-net
+#testcase-table-of-thickest-thickets-nudges-net
 >nte
 There's something you can do with all the nets, if you think about it.
 \\
-#ttc-table-of-ordeal-loader-spechelp-sent-nets
+#testcase-table-of-ordeal-loader-spechelp-sent-nets
 >etns
 The sent nets rustle slightly.
 \\
@@ -609,7 +609,7 @@ by one point
 }}SCORE++
 
 @nud
-#ttc-table-of-ordeal-loader-done-rejects-nest
+#testcase-table-of-ordeal-loader-done-rejects-nest
 >ntse
 The nest just looks right here, now that you summoned it.
 
@@ -621,11 +621,11 @@ That's a bit too magical for here and now. The nest is nice enough.
 That's a bit too magical for here and now. The nest is nice enough.
 
 @nud
-#ttc-table-of-thickest-thickets-nudges-shrub
+#testcase-table-of-thickest-thickets-nudges-shrub
 >shrbu
 The shrub and brush waver, then point towards the toga.
 \\
-#ttc-table-of-ordeal-loader-spechelp-reed
+#testcase-table-of-ordeal-loader-spechelp-reed
 >eder
 The reed blows in an unseen breeze.
 \\
@@ -634,7 +634,7 @@ The reed blows in an unseen breeze.
 The reed blows in an unseen breeze.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-ordeal-loader-spechelp-toga
+#testcase-table-of-ordeal-loader-spechelp-toga
 >gota
 The toga blows in an unseen breeze, exposing what's written on it a bit more.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the toga. Keep at it.
@@ -645,7 +645,7 @@ The toga blows in an unseen breeze, exposing what's written on it a bit more.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the toga. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-readables-toga
+#testcase-table-of-readables-toga
 >read toga
 A GOT-TA GO ... hmm, not the very best ever.
 \\
@@ -698,7 +698,7 @@ Your score has just gone up by one point.
 You can just go IN, now.
 
 @gn
-#+ttc-table-of-nowheres-thickest-thickets
+#+testcase-table-of-nowheres-thickest-thickets
 >w
 !You hit a snag, and the toga nags you
 you can go IN--there are no specific directions here
@@ -717,15 +717,15 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @nud
-#ttc-table-of-ordeal-loader-done-rejects-deer
+#testcase-table-of-ordeal-loader-done-rejects-deer
 >rdee
 The deer is very peaceful. You dere-n't disturb it.
 \\
-#ttc-table-of-ordeal-loader-done-rejects-goat
+#testcase-table-of-ordeal-loader-done-rejects-goat
 >gota
 The goat is happy as-is. No need to go tag a ...
 \\
-#+ttc-table-of-thickest-thickets-nudges-shrub
+#+testcase-table-of-thickest-thickets-nudges-shrub
 >shrbu
 The remains of the shrub and brush waver, then point towards the opening in the thickets.
 
@@ -756,22 +756,22 @@ Sooner or later, you're probably going to want to ENTER the getaway gateway.
 {$SCOS}
 
 @max
-#ttc-table-of-ranks-3
+#testcase-table-of-ranks-3
 You haven't solved any regions yet. You have the rank of stunted student.
 
 @gn
-#ttc-table-of-nowheres-notices-section
+#testcase-table-of-nowheres-notices-section
 >w
 You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. You should probably explicitly ENTER the gateway, though it'd be nice to have some help first.
 
 @hin
-#ttc-table-of-ordeal-loader-anagrams-static
+#testcase-table-of-ordeal-loader-anagrams-static
 >xx static
 You stop and think. The static doesn't seem as important as that gateway. Do so anyway?
 Your vision blurs a bit, and instead the static seems to form attics near the doll house.
 
 @nud
-#ttc-table-of-readables-gateway
+#testcase-table-of-readables-gateway
 >read gateway
 "E. g., man, TA!" is written in red, beneath the WARMUP/UM, WARP text.
 Maybe it's significant that the writing's red, and that can help you
@@ -804,7 +804,7 @@ There's enough information here.
 Are you saying this game is only two-thirds fantastic so far? Oh, I guess that's nice enough.
 
 @nud
-#ttc-table-of-notices-section-nudges-notices
+#testcase-table-of-notices-section-nudges-notices
 >noticse
 You don't need to change this place, though the cabinet holds a hint device to tell you when to act on your location.
 
@@ -823,7 +823,7 @@ Goodness, no.
 You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. You should probably explicitly ENTER the gateway, though it'd be nice to have some help first.
 
 @nud
-#ttc-table-of-ordeal-loader-spechelp-static
+#testcase-table-of-ordeal-loader-spechelp-static
 >attisc
 You think a bit, and the static seems like a bad extension to the doll house.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the static. Keep at it.
@@ -855,7 +855,7 @@ Your score has just gone up by one point.
 }}CURMIN++
 
 @hin
-#ttc-table-of-ordeal-loader-anagrams-attics
+#testcase-table-of-ordeal-loader-anagrams-attics
 >xx attics
 After some thought, that seems like it'd be a waste, since you know what they were. You can probably change things back, if you want.
 
@@ -872,7 +872,7 @@ Are you saying this game is only two-thirds fantastic so far? Oh, I guess that's
 
 @scan
 #gadget test: attics to static
-#ttc-table-of-kibitzes-attics
+#testcase-table-of-kibitzes-attics
 >rc attics
 You get to scanning, twiddling from certify to rectify and back.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBBBRG (R = red, G = green, B = blue).
@@ -884,7 +884,7 @@ Hmm. You thought the attics would be more appropriate for the doll house, but ma
 #this is so we don't have the gadget later when we TAKE GADGET
 
 @nud
-#ttc-table-of-ordeal-loader-spechelp-attics
+#testcase-table-of-ordeal-loader-spechelp-attics
 >attisc
 Hm, you can't think of anything to do with the attics but change them back.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the attics. Keep at it.
@@ -895,35 +895,35 @@ Hm, you can't think of anything to do with the attics but change them back.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the attics. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 \\
-#ttc-table-of-notices-section-nudges-doll
+#testcase-table-of-notices-section-nudges-doll
 >dlol
 The attics shake slightly.
 \\
-#ttc-table-of-notices-section-nudges-house
+#testcase-table-of-notices-section-nudges-house
 >houes
 The attics shake slightly.
 \\
-#ttc-table-of-notices-section-nudges-gateway
+#testcase-table-of-notices-section-nudges-gateway
 >gatewya
 Nothing changes. Maybe you just need to walk through it, if and when you're prepared.
 \\
-#ttc-table-of-notices-section-nudges-borda
+#testcase-table-of-notices-section-nudges-borda
 >borad
 The broad board is just there to read.
 \\
-#ttc-table-of-notices-section-nudges-tmis
+#testcase-table-of-notices-section-nudges-tmis
 >tims
 The TMIs are there to help you.
 \\
-#ttc-table-of-notices-section-nudges-tmi
+#testcase-table-of-notices-section-nudges-tmi
 >tim
 The TMIs are there to help you.
 \\
-#ttc-table-of-notices-section-nudges-newland
+#testcase-table-of-notices-section-nudges-newland
 >newladn
 You will have to change the new land one item at a time.
 \\
-#ttc-table-of-ordeal-loader-spechelp-nametag
+#testcase-table-of-ordeal-loader-spechelp-nametag
 >gatemna
 The nametag peels infinitesimally.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the magenta nametag. Keep at it.
@@ -940,7 +940,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 Very good. Very close. But here's a meta-nag: what kind of man? What would he work with?
 
 @hin
-#ttc-table-of-ordeal-loader-anagrams-nametag
+#testcase-table-of-ordeal-loader-anagrams-nametag
 >xx nametag
 You pause a bit. Maybe there's something on the broad board that'd help you decide what to do with the nametag. Or what not to do.
 \\
@@ -991,10 +991,10 @@ The gateman pauses again, then asks if you had that bugle. It's something he'd b
 
 @!min
 >score
-You currently have {MAX} out of {MAX} total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
+You currently have {#MAX} out of {#MAX} total points for the Ordeal Loader region. You might want to ask the gateman a few more questions and get the tagged gadget, but you don't really have anything critical remaining to do here.
 
 @hin
-#ttc-table-of-ordeal-loader-anagrams-acne-bit-cabinet
+#testcase-table-of-ordeal-loader-anagrams-acne-bit-cabinet
 >xx cabinet
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs a bit, and instead you see some Bactine.
@@ -1009,7 +1009,7 @@ You have nothing else you figured in advance.
 >bactine
 "Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
 (That's worth noting in your notepad for later, so you do, once again, under FLIPS.)
-#ttc-table-of-preflip-clues-tenibac
+#testcase-table-of-preflip-clues-tenibac
 >pf
 Stuff you figured, but you couldn't use it right away:
 cabinet -> Bactine
@@ -1023,31 +1023,31 @@ cabinet -> Bactine
 >almond
 "Don't try anything too nutty!" booms Nat Egam.
 \\
-#ttc-table-of-ordeal-loader-done-rejects-gateman
+#testcase-table-of-ordeal-loader-done-rejects-gateman
 >gatemna
 Don't scramble the gateman. He's here to help.
 \\
-#ttc-table-of-notices-section-nudges-warpy
+#testcase-table-of-notices-section-nudges-warpy
 >waryp
 You can't change Old Warpy. You have to just trust it.
 \\
-#ttc-table-of-notices-section-nudges-old
+#testcase-table-of-notices-section-nudges-old
 >odl
 You can't change Old Warpy. You have to just trust it.
 \\
-#ttc-table-of-notices-section-nudges-oldman
+#testcase-table-of-notices-section-nudges-oldman
 >oldmna
 He's too old to change. At least, in his present form.
 \\
-#ttc-table-of-notices-section-nudges-dollhouse
+#testcase-table-of-notices-section-nudges-dollhouse
 >dollhoues
 Thinking that doesn't do much, but the attics seem to glow a bit.
 \\
-#ttc-table-of-notices-section-nudges-attic
+#testcase-table-of-notices-section-nudges-attic
 >attci
 You feel nothing from either attic. Perhaps you need to consider both the attics--though really, you don't see why you'd want to bring the static back.
 \\
-#ttc-table-of-notices-section-nudges-warmup
+#testcase-table-of-notices-section-nudges-warmup
 >warmpu
 You can't change what's in the gateway. You just have to trust whatever is(n't) in there won't harm you.
 
@@ -1057,13 +1057,13 @@ Nat Egam nods. "Take good care of it. Well, it's hard to break, so don't feel yo
 
 @!min
 >score
-You currently have {MAX} out of {MAX} total points for the Ordeal Loader region. You might want to ask the gateman a few more questions, but you don't really have anything critical remaining to do here.
+You currently have {#MAX} out of {#MAX} total points for the Ordeal Loader region. You might want to ask the gateman a few more questions, but you don't really have anything critical remaining to do here.
 
 @ask
 >get phial
 !Taken
 \\
-#ttc-table-of-matched-thing-responses-gateman-blue-lube
+#testcase-table-of-matched-thing-responses-gateman-blue-lube
 >ask gateman about blue lube
 "Cabinet not letting you have it, eh? The phial with the lube can grease your way to a solution." He coughs. "Sorry."
 "If you ANGLE the lube just right so it reflects a light source, you can see what you can change. If you GLEAN, you see what you should be doing. How your story unfolds." He walks over to the cabinet, pats it, and says a few words. "You can take the phial now."
@@ -1123,7 +1123,7 @@ You've got enough practical help. You don't need anything supernatural.
 The cabinet deserves a better fate than THAT.
 
 @nud
-#ttc-table-of-ordeal-loader-spechelp-acne-bit-cabinet
+#testcase-table-of-ordeal-loader-spechelp-acne-bit-cabinet
 >cbitean
 The cabinet wobbles a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the acne-bit cabinet. Keep at it.
@@ -1134,7 +1134,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 The cabinet wobbles a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the acne-bit cabinet. Keep at it.
 \\
-#ttc-table-of-readables-acne-bit-cabinet
+#testcase-table-of-readables-acne-bit-cabinet
 >read cabinet
 Here is one of several writings in red in the cabinet:
 /(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
@@ -1157,7 +1157,7 @@ Here is one of several writings in red in the cabinet:
 Here is one of several writings in red in the cabinet:
 /(I C BEATN\.|IN, BE, ACT!!!|C N-E BAIT??|CIT-E BAN!!!|Numbers for a NITECAB\.|ABE 'N TIC!|TEN ABC, I!!!)
 \\
-#+ttc-table-of-notices-section-nudges-notices
+#+testcase-table-of-notices-section-nudges-notices
 >noticse
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
@@ -1172,7 +1172,7 @@ The saltine's there to help you. Changing it might work against you.
 >stealin
 You're the good guy, here. You don't need to steal.
 \\
-#ttc-table-of-notices-section-nudges-notice
+#testcase-table-of-notices-section-nudges-notice
 >notiec
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
@@ -1182,195 +1182,195 @@ Unless a room has no way out, or your gadget spontaneously gives a reading, you 
 "Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
 
 @ask
-#ttc-table-of-unmatched-thing-responses-gateman
+#testcase-table-of-unmatched-thing-responses-gateman
 >ask gateman about sofa
 You'd know more about that than he would.
 \\
-#ttc-table-of-matched-topic-responses-gateman-xyzzy
+#testcase-table-of-matched-topic-responses-gateman-xyzzy
 >ask gateman about xyzzy
 "Fool! That magic word has no place alongside your magic abilities."
 \\
-#ttc-table-of-matched-topic-responses-gateman-next-guy
+#testcase-table-of-matched-topic-responses-gateman-next-guy
 >ask gateman about next guy
 "Optimistic, aren't we?"
 \\
-#ttc-table-of-matched-topic-responses-gateman-sane-sean
+#testcase-table-of-matched-topic-responses-gateman-sane-sean
 >ask gateman about sane sean
 The gateman shakes his head slowly and shrugs. Sane Sean would probably be a lot funnier if Yorpwald weren't in trouble.
 \\
-#ttc-table-of-matched-topic-responses-gateman-general-advice
+#testcase-table-of-matched-topic-responses-gateman-general-advice
 >ask gateman about advice
 "Well, you figured a few things out. Probably want to focus more on changing stuff than weird actions. One thing, though. The things you need to change? Nothing too complex. Nothing over eight letters. Okay, maybe one two-word thing with nine. Red Bull Burdell often babbled about getting eighteen intelligence and wisdom from all that leveling up, but he never got a decent vocabulary. The philistine. Also, there will be clues--clues that seem all wrong, deliberately wrong, but their wrongness will stand out and help you."
 \\
-#ttc-table-of-matched-topic-responses-gateman-scold-clods
+#testcase-table-of-matched-topic-responses-gateman-scold-clods
 >ask gateman about clods
 "Like I said, no time for that. Time to fix things!"
 \\
-#ttc-table-of-matched-topic-responses-gateman-world
+#testcase-table-of-matched-topic-responses-gateman-world
 >ask gateman about world
 "Well, it wasn't a very SPECIAL world. In fact it was one of those hero mills. I remember more hills than anything else. Figure it had to break down for the next guy to save it."
 \\
-#ttc-table-of-matched-topic-responses-gateman-yorpwald
+#testcase-table-of-matched-topic-responses-gateman-yorpwald
 >ask gateman about yorpwald
 "It's been shuffled, nearly f-flushed! You can rescue it from physical, economic and moral malaise. You will need to travel through Old Warpy to get there. The stuff in the cabinet should help. Ask me about it. I'm a hero emeritus, and stuff."
 \\
-#ttc-table-of-matched-topic-responses-gateman-old-warpy
+#testcase-table-of-matched-topic-responses-gateman-old-warpy
 >ask gateman about old warpy
 "Once you step in, it'll take you somewhere far away. But it's perfectly harmless and not too bumpy. Like beyond that gateway getaway. Terry's in there, too, and he flips the switch so you can RETRY if you get stuck somewhere."
 \\
-#ttc-table-of-matched-topic-responses-gateman-terry
+#testcase-table-of-matched-topic-responses-gateman-terry
 >ask gateman about terry
 "He's reliable."
 \\
-#ttc-table-of-matched-topic-responses-gateman-lupine-lineup
+#testcase-table-of-matched-topic-responses-gateman-lupine-lineup
 >ask gateman about lupine lineup
 Distant rumblings from somewhere beyond a very quiet place. Sadly, violence may be necessary."
 \\
-#ttc-table-of-matched-topic-responses-gateman-noble
+#testcase-table-of-matched-topic-responses-gateman-noble
 >ask gateman about noble
 #APOSTROPHE-OK
 "He used to be fair and just. But he saw Red Bull Burdell 'leveling up,' whatever that is. Red Bull bragged about how he'd multiplied his gold and achieved eighteen charisma, or something, before changing Noble Ol' Ben."
 \\
-#ttc-table-of-matched-topic-responses-gateman-quest
+#testcase-table-of-matched-topic-responses-gateman-quest
 >ask gateman about quest
 "Three major problems past the gateway. Noise is one. A lupine lineup. Noble Ol' Ben: gone. Lorn. No longer."
 "And I think I know who's behind it: RED BULL BURDELL!"
 \\
-#+ttc-table-of-matched-topic-responses-gateman-quest
+#+testcase-table-of-matched-topic-responses-gateman-quest
 >ask gateman about quest
 He mentions "Noise is one, lupine lineup, Noble Ol' Ben gone, lorn, no longer." Then he motions to the gateway. "You'll see when you get there, I think."
 \\
-#ttc-table-of-unmatched-topic-responses-gateman
+#testcase-table-of-unmatched-topic-responses-gateman
 >ask gateman about blozhko
 "Eh?! There's all sorts of things to ask me about! That goat back there! Your quest! Your purpose! The getaway! General advice! No time to scold clods asking about--whatever you just mumbled about."
 \\
-#+ttc-table-of-unmatched-topic-responses-gateman
+#+testcase-table-of-unmatched-topic-responses-gateman
 >ask gateman about blozhko
 Nat Egam pauses. "There's so much in the world we all want to understand. But unfortunately, we only have time for the questy stuff. So ask me about that goat, your quest, your purpose, general advice. Or--well, just go through the getaway gateway. Oh, about the gadget: you'll learn by doing."
 \\
-#ttc-table-of-matched-thing-responses-gateman-redness
+#testcase-table-of-matched-thing-responses-gateman-redness
 >ask gateman about redness
 "Red writing, like Red Bull Burdell, is totally wrong in many ways. So many, it can be a help."
 He shows you some calculations that any such writing can be expected to eliminate 60% of your possible choices, because 1 minus 1/x to the x is 1/e, more if there's a duplicate letter--the Inclusion-Exclusion Principle applies here, and you nod as he mentions the exact numbers aren't important, but every clue helps.
 \\
 (You record the information about red in your notepad.)
 \\
-#ttc-table-of-matched-thing-responses-gateman-board
+#testcase-table-of-matched-thing-responses-gateman-board
 >ask gateman about board
 "Good idea to take notes on it. But I can tell you about other stuff. Like your gadget. Or even how it works."
 \\
-#ttc-table-of-matched-thing-responses-gateman-doll-house
+#testcase-table-of-matched-thing-responses-gateman-doll-house
 >ask gateman about doll house
 "You don't need to take it with or anything. Nice job with it, though."
 \\
-#ttc-table-of-matched-thing-responses-gateman-static
+#testcase-table-of-matched-thing-responses-gateman-static
 >ask gateman about static
 "Good job getting rid of it."
 \\
-#ttc-table-of-matched-thing-responses-gateman-attics
+#testcase-table-of-matched-thing-responses-gateman-attics
 >ask gateman about attics
 "They're more appropriate to the doll house, definitely."
 \\
 >ask gateman about blue lube
 "You can just take it. The phial with the lube can grease your way to a solution." He coughs. "Sorry."
 \\
-#ttc-table-of-matched-thing-responses-gateman-phail-phial
+#testcase-table-of-matched-thing-responses-gateman-phail-phial
 >ask gateman about phail phial
 "Good, good, you got the phial. Remember to ANGLE to see into things or GLEAN to see around as need be."
 \\
-#ttc-table-of-matched-thing-responses-gateman-prep-paper
+#testcase-table-of-matched-thing-responses-gateman-prep-paper
 >ask gateman about prep paper
 "No, I'm not sure how we all know this. There's a lot of high-level magic theory. And if we knew the details and had your powers, maybe one of us could try. But--well, it's a start."
 \\
-#ttc-table-of-matched-thing-responses-gateman-red-bull-burdell
+#testcase-table-of-matched-thing-responses-gateman-red-bull-burdell
 >ask gateman about red bull burdell
 "Like he was thought up by a demonic comedian. Made a desireable age disagreeable. Seemed a poseur when he uprose from abuser to saboteur. He'd make a poignant nag point, acting like a rowdy pal. Heard his cleats in the castle as he did something called "Leveling up." Maximizing stuff called hit points and magic points. Things went awry before we were wary." You sense there's more, if you can bear it.
 \\
-#+ttc-table-of-matched-thing-responses-gateman-red-bull-burdell
+#+testcase-table-of-matched-thing-responses-gateman-red-bull-burdell
 >ask gateman about red bull burdell
 "Rum toil became turmoil. We let the ploy draw us in...then Prowl Day made the world pay. Against Raw Rori, a warrior, the devil lived. We ignored eroding. He humbled Bud Helm. We have lost LOTS because of him. Mega-sad damages. He beat us all. Rooftops of troops on Fort Oops. Profs too. Auctioned Education. I cautioned..." His eyes grow mistened. "Ten dimes say it's end times. We've waited for an upturn to turn up..."
 \\
-#+ttc-table-of-matched-thing-responses-gateman-red-bull-burdell
+#+testcase-table-of-matched-thing-responses-gateman-red-bull-burdell
 >ask gateman about red bull burdell
 "The time for talk is over."
 \\
-#ttc-table-of-matched-thing-responses-gateman-tip
+#testcase-table-of-matched-thing-responses-gateman-tip
 >ask gateman about tip
 "Scan something. Even if it doesn't give any readings. Like that doll house. Or even me. Then come back and ask for details. You're an adventurer...do a little experimenting. The gadget won't explode, trust me." It shouldn't be too hard to humor him.
 \\
 >scan me
 too awesome
 \\
-#+ttc-table-of-matched-thing-responses-gateman-tip
+#+testcase-table-of-matched-thing-responses-gateman-tip
 >ask gateman about tip
 "Well, one of rectify or certify is overall better than the other. Would you like to know which?"
 "Without getting too mathy, you can expect one of the letters to CERTIFY correctly if there are no repeats, but a bit more with repeats--one and a half, in an eight-letter word with a repeat. RECTIFY, you're always guaranteed the first and last right. So it's a bit more help if you SECURE later. But how much challenge you want is up to you. Either can work with any red writing you might see."
 \\
-#ttc-table-of-matched-thing-responses-gateman-tin-foil-info-lit
+#testcase-table-of-matched-thing-responses-gateman-tin-foil-info-lit
 >ask gateman about tinfoil info lit
 "Sane Sean. Hmph. Either he's dumb enough to believe Red Bull Burdell's a good guy, or he's a deep undercover double agent."
 \\
-#ttc-table-of-matched-thing-responses-gateman-bud-helm
+#testcase-table-of-matched-thing-responses-gateman-bud-helm
 >ask gateman about bud helm
 "Yeah, we were surprised the bum held Bud Helm.  Bud Helm bled, hum? He's a broken man, now."
 \\
-#ttc-table-of-matched-thing-responses-gateman-raw-rori
+#testcase-table-of-matched-thing-responses-gateman-raw-rori
 >ask gateman about raw rori
 "Pure strength. That won't get the job done here."
 \\
-#ttc-table-of-matched-thing-responses-gateman-pen
+#testcase-table-of-matched-thing-responses-gateman-pen
 >ask gateman about pen
 "How thoughtful! Nobody's asked me for my autograph for a long time! Wait, we don't have time for that nonsense."
 \\
-#ttc-table-of-matched-thing-responses-gateman-dope-tan-notepad
+#testcase-table-of-matched-thing-responses-gateman-dope-tan-notepad
 >ask gateman about dope tan notepad
 "Good choice, taking notes."
 \\
-#ttc-table-of-matched-thing-responses-gateman-new-land
+#testcase-table-of-matched-thing-responses-gateman-new-land
 >ask gateman about new land
 "I can't tell you everything about it. But you'll see for yourself."
 \\
-#ttc-table-of-matched-thing-responses-gateman-nametag
+#testcase-table-of-matched-thing-responses-gateman-nametag
 >ask gateman about nametag
 "Oh, did you have problems with it? Sorry. I'd have helped, but I was--I mean, I wasn't at all." He rolls his eyes.
 \\
-#ttc-table-of-matched-thing-responses-gateman-yourself
+#testcase-table-of-matched-thing-responses-gateman-yourself
 >ask gateman about me
 "We need someone to free us from the marauding tyranny of Red Bull Burdell! He has made a plowyard out of Yorpwald! Force alone cannot undo him!"
 \\
-#ttc-table-of-matched-thing-responses-gateman-gateman
+#testcase-table-of-matched-thing-responses-gateman-gateman
 >ask gateman about gateman
 "Once I solved one of those hero mills with more hills..." he blinks. "I'm not important. You are. And what you can do."
 \\
-#ttc-table-of-matched-thing-responses-gateman-arrow
+#testcase-table-of-matched-thing-responses-gateman-arrow
 >ask gateman about arrow
 "That's just to show SECURE/RECUSE is linked to whether you can change between RECTIFY and CERTIFY."
 \\
-#ttc-table-of-matched-thing-responses-gateman-knot
+#testcase-table-of-matched-thing-responses-gateman-knot
 >ask gateman about knot
 "It's good and tight. Case it gets joggled while you adventure. If the gadget isn't tagged, it loses its magic because, well..."
 \\
-#ttc-table-of-matched-thing-responses-gateman-examples
+#testcase-table-of-matched-thing-responses-gateman-examples
 >ask gateman about examples
 "Hm, LEMON and MELON have three letters in common, and they're all green. The two that switch are red. So that's not bad. PASTE and TAPES, on the other hand...the green T and red S on the left map to the first last letters on the right, and the P and E are green and red and map to the first and last letters on the left."
 \\
-#ttc-table-of-matched-thing-responses-gateman-disclaimer
+#testcase-table-of-matched-thing-responses-gateman-disclaimer
 >ask gateman about disclaimer
 "Necessary legalese. But really, use the gadget as often or little as you want or need. Nobody will judge."
 \\
-#ttc-table-of-matched-thing-responses-gateman-recent-center
+#testcase-table-of-matched-thing-responses-gateman-recent-center
 >ask gateman about recent center
 "The Recent Center is a fancy name for a screen. It will light up when you scan something relevant, and that data will stay."
 \\
-#ttc-table-of-matched-thing-responses-gateman-handle
+#testcase-table-of-matched-thing-responses-gateman-handle
 >ask gateman about handle
 You can't imagine anything tricky about the handle, so you decide not to ask.
 \\
-#ttc-table-of-matched-thing-responses-gateman-goat
+#testcase-table-of-matched-thing-responses-gateman-goat
 >ask gateman about goat
 "Hm, yes, good job with the goat. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Red-Red in Certify mode and Red-Blue-Green-Blue in Rectify."
 \\
-#ttc-table-of-matched-thing-responses-gateman-toga
+#testcase-table-of-matched-thing-responses-gateman-toga
 >ask gateman about toga
 You don't wish to dwell too much on past accomplishments. It's probably better to PAD GOAT for the important information.
 \\
@@ -1383,52 +1383,52 @@ You don't wish to dwell too much on past accomplishments. It's probably better t
 >ask gateman about thorn
 "Can't say anything about that. You'll have to find out for yourself later."
 \\
-#ttc-table-of-matched-thing-responses-gateman-getaway
+#testcase-table-of-matched-thing-responses-gateman-getaway
 >ask gateman about getaway
 "It's safe. Don't worry! Get going through there!"
 \\
-#ttc-table-of-matched-thing-responses-gateman-gadget
+#testcase-table-of-matched-thing-responses-gateman-gadget
 >ask gateman about gadget
 "Powerful. Not as a weapon. Won't be many fights. But you can SCAN an object with it, and it won't break down from over-use. Use it as much or as little as you want. There's concrete problems, then there's how many hints make your quest most fun, and that's up to you. Ask about a specific button if you're interested. Not your only source of clues, either. There's also the color red."
 \\
-#ttc-table-of-matched-thing-responses-gateman-s-r
+#testcase-table-of-matched-thing-responses-gateman-s-r
 >ask gateman about secure button
 "Could make things tougher at first, but then easier, maybe. Switch it, and you can only CERTIFY or RECTIFY, but not both. Later, though, you can RECUSE yourself later from one of the three areas to conquer. It'll warn you, too, by flashing before it locks. Magic fields might do that, midway through an adventure or so."
 \\
-#ttc-table-of-matched-thing-responses-gateman-noise-bag
+#testcase-table-of-matched-thing-responses-gateman-noise-bag
 >ask gateman about noise bag
 "Cities gotta have noise but there's one just constantly has it. Burdell's behind it, too, claiming he couldn't have leveled up without that techno-piffle and people get used to it if they try. Actually calls it music. He's got a lieutenant to enforce it."
 \\
-#ttc-table-of-matched-thing-responses-gateman-saltine
+#testcase-table-of-matched-thing-responses-gateman-saltine
 >ask gateman about saltine
 "Miniscule, but more than mini-clues. The next item that baffles you, eat that and XX ... not just X or EXAMINE, and it'll make sense. Oh, apologies in advance: good flavors and good magic don't mix."
 \\
-#ttc-table-of-matched-thing-responses-gateman-cabinet
+#testcase-table-of-matched-thing-responses-gateman-cabinet
 >ask gateman about cabinet
 "Everything in there's yours."
 \\
-#ttc-table-of-matched-thing-responses-gateman-reed
+#testcase-table-of-matched-thing-responses-gateman-reed
 >ask gateman about reed
 "Hm, yes, good job with the deer. It'll be safe and happy. Oh, for the record, the gadget would've said Red-Green-Green-Red in Certify mode and Red-Blue-Blue-Green in Rectify."
 \\
-#ttc-table-of-matched-thing-responses-gateman-deer
+#testcase-table-of-matched-thing-responses-gateman-deer
 >ask gateman about reed
 You don't wish to dwell too much on past accomplishments. It's probably better to PAD DEER for the important information.
 \\
-#ttc-table-of-matched-thing-responses-gateman-pit
+#testcase-table-of-matched-thing-responses-gateman-pit
 >ask gateman about pit
 "Well, one of rectify or certify is overall better than the other. Would you like to know which, again?"
 "Without getting too mathy, you can expect one of the letters to CERTIFY correctly if there are no repeats, but a bit more with repeats--one and a half, in an eight-letter word with a repeat. RECTIFY, you're always guaranteed the first and last right. So it's a bit more help if you SECURE later. But how much challenge you want is up to you. Either can work with any red writing you might see."
 \\
-#ttc-table-of-matched-topic-responses-gateman-certify
+#testcase-table-of-matched-topic-responses-gateman-certify
 >ask gateman about certify
 "Tells you what letters are right for what something should be. Red is wrong, green is right. Probably not as powerful as rectifying, but gets you some stuff right away. Also--there's some clues out there that're just plain red. They're all wrong."
 \\
-#ttc-table-of-matched-topic-responses-gateman-rectify
+#testcase-table-of-matched-topic-responses-gateman-rectify
 >ask gateman about rectify
 "Gives you the first and last letters of what something should be."
 \\
-#ttc-table-of-matched-topic-responses-gateman-gato
+#testcase-table-of-matched-topic-responses-gateman-gato
 >ask gateman about gato
 You don't wish to dwell too much on past accomplishments. It's probably better to PAD GOAT for the important information.
 
@@ -1448,7 +1448,7 @@ you could've changed the bulge into a BUGLE.
 [NOTE: Shuffling Around is configured to create an auto-save dialogue after each region you solve. This can be switched off with AVERSE or switched back on with RESAVE. You can also abort saving with no penalty. This nag will not reappear.]
 <debug mode skips game-saving dialogue so test runs are continued>
 \\
-#ttc-table-of-ranks-4
+#testcase-table-of-ranks-4
 >score
 You have the rank of benigner beginner.
 \\

@@ -42,31 +42,31 @@ You currently have 2 out of 27 total points for the Sortie region. Your minimum 
 Your score has just gone up by one point.
 
 >score
-You currently have 3 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 5 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >hotsauce
 Your score has just gone up by one point.
 
 >score
-You currently have 4 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 6 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >parmesan
 Your score has just gone up by one point.
 
 >score
-You currently have 5 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 7 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >steak
 Your score has just gone up by one point.
 
 >score
-You currently have 6 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 8 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >lettuce
 Your score has just gone up by one point.
 
 >score
-You currently have 7 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 9 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >put steak on tortilla
 Hm, a good start. The tortilla's not plain any more.
@@ -79,13 +79,13 @@ You got it! A full-blown taco! You can't help but pick it up and admire it! It's
 Your score has just gone up by one point.
 
 >score
-You currently have 8 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 10 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >coat
 Your score has just gone up by one point.
 
 >score
-You currently have 9 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 11 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >e
 
@@ -98,13 +98,13 @@ You currently have 9 out of 27 total points for the Sortie region. Your minimum 
 Your score has just gone up by one point.
 
 >score
-You currently have 10 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 12 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >straw
 Your score has just gone up by one point.
 
 >score
-You currently have 11 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 13 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >put straw in sack
 
@@ -112,13 +112,13 @@ You currently have 11 out of 27 total points for the Sortie region. Your minimum
 Your score has just gone up by one point.
 
 >score
-You currently have 12 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 14 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >moor
 Your score has just gone up by one point.
 
 >score
-You currently have 13 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 15 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >mroo
 The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
@@ -147,14 +147,14 @@ The moor sways a bit. You do some brief mental calculation. There's no third pla
 Your score has just gone up by one point.
 
 >score
-You currently have 14 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 16 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >give straw to peasant
 #notana
 Your score has just gone up by one point.
 
 >score
-You currently have 15 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 17 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >room
 "The room's smoother," you muse...
@@ -171,13 +171,13 @@ You currently have 15 out of 27 total points for the Sortie region. Your minimum
 Your score has just gone up by one point.
 
 >score
-You currently have 16 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 18 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >hallway
 Your score has just gone up by one point.
 
 >score
-You currently have 17 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 19 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >e
 /^Sacred Cedars
@@ -202,7 +202,7 @@ Gainly laying the cask under the spout, you pour in some oils.
 Your score has just gone up by one point.
 
 >score
-You currently have 18 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 20 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >fold paper
 (the poem)
@@ -212,19 +212,19 @@ You fold the paper, and it looks sort of like a paper plane.
 Your score has just gone up by one point.
 
 >score
-You currently have 19 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 21 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >soil
 Your score has just gone up by one point.
 
 >score
-You currently have 20 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 22 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >black door
 Your score has just gone up by one point.
 
 >score
-You currently have 21 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 23 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >room
 
@@ -248,7 +248,7 @@ You hear a creaking above as you exit. You see the trellis's archings crashing o
 Your score has just gone up by one point.
 
 >score
-You currently have 22 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 24 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >put panel in silo
 The panel fits into that rectangle handily and even starts to glow. Two buttons appear on it--one says HOOTS, the other TREES. "Panel fits. Final step," you muse.
@@ -263,13 +263,13 @@ You schlep the missile through the door. You hear some mechanics and whizzing. A
 Your score has just gone up by one point.
 
 >score
-You currently have 23 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 25 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >shoot
 Your score has just gone up by one point.
 
 >score
-You currently have 24 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
+You currently have 26 out of 27 total points for the Sortie region. Your minimum possible score on solving is 27, and the maximum is 27
 
 >push steer
 "AMUSING GUNS! AIM!" The silo makes some ominous VVTT-KLK-BRRW noises and tilts slightly in the direction of what you assume and hope is Mean Old Mondale-Doleman's palace.
@@ -284,5 +284,5 @@ You currently have 24 out of 27 total points for the Sortie region. Your minimum
 Your score has just gone up by one point.
 
 >score
-You have scored 25 out of 27 total points for the Sortie region.
+You have scored 27 out of 27 total points for the Sortie region.
 Won now: the Ordeal Loader and Sortie regions.

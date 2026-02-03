@@ -5,20 +5,20 @@
 # the nudmis file also covers two alternate ways through the metros.
 #
 
-file=reg-sa-metros-max.txt,max,maximum walkthrough
-file=reg-sa-metros-min.txt,min,minimum walkthrough
-file=reg-sa-metros-nudmis.txt,nudges/nud/nu/mis/mi,walkthrough with all nudges and mistakes
-file=reg-sa-metros-hints.txt,hints/hin/sal/gle/gt/gn,walkthrough with hints
-file=reg-sa-metros-detail.txt,ask/scan/pad,walkthrough with ask/scan/pad detail
+file=reg-sa-metros-max.txt,abbr=max,desc=maximum walkthrough
+file=reg-sa-metros-min.txt,abbr=min,desc=minimum walkthrough
+file=reg-sa-metros-nudmis.txt,abbr=nudges/nud/nu/mis/mi,desc=walkthrough with all nudges and mistakes
+file=reg-sa-metros-hints.txt,abbr=hints/hin/sal/gle/gt/gn,desc=walkthrough with hints
+file=reg-sa-metros-detail.txt,abbr=ask/scan/pad,desc=walkthrough with ask/scan/pad detail
 
-}}MAX=18
-}}CURMAX=18
-}}SCORE=0
-}}CURMIN=17
+}#MAX=18
+}#CURMAX=18
+}#SCORE=0
+}#CURMIN=17
 
-}$SCOS=You currently have {SCORE} out of {MAX} total points for the Metros region. Your minimum possible score on solving is {CURMIN}, and the maximum is {CURMAX}
-}$SFIXMAX=You currently have {SCORE} out of {MAX} total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
-}$SFIXNOMAX=You currently have {SCORE} out of {MAX} total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
+}$SCOS=You currently have {#SCORE} out of {#MAX} total points for the Metros region. Your minimum possible score on solving is {#CURMIN}, and the maximum is {#CURMAX}
+}$SFIXMAX=You currently have {#SCORE} out of {#MAX} total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
+}$SFIXNOMAX=You currently have {#SCORE} out of {#MAX} total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 ## *FILE
 ## *FORK
@@ -45,7 +45,7 @@ file=reg-sa-metros-detail.txt,ask/scan/pad,walkthrough with ask/scan/pad detail
 Your score has just gone up by one point
 
 @nud
-#ttc-table-of-stores-done-rejects-trade-tread
+#testcase-table-of-stores-done-rejects-trade-tread
 >metrso
 The trade tread doesn't need to be changed. What's behind it, does.
 
@@ -63,11 +63,11 @@ You see yourself giving something reddish to some weird monster before it runs o
 @hin
 DEBUG: drainage being objhinted.
 \\
-#ttc-table-of-metros-anagrams-drainage
+#testcase-table-of-metros-anagrams-drainage
 >xx drainage
 Your vision blurs a bit, and instead you see a gardenia.
 \\
-#ttc-table-of-metros-anagrams-beats
+#testcase-table-of-metros-anagrams-beats
 >xx beats
 Your vision blurs a bit, and instead you see a beast.
 
@@ -102,12 +102,12 @@ Reverse psychology won't work on the signers' ingress, here.
 >resigns
 Reverse psychology won't work on the signers' ingress, here.
 \\
-#ttc-table-of-undesired-underside-nudges-theol
+#testcase-table-of-undesired-underside-nudges-theol
 >hotle
 You can't change the hotel, but you could have a look around.
 
 @nud
-#ttc-table-of-undesired-underside-nudges-etch
+#testcase-table-of-undesired-underside-nudges-etch
 >ethc
 The tech-etch is pretty securely, um, etched on.
 \\
@@ -115,27 +115,27 @@ The tech-etch is pretty securely, um, etched on.
 >bates
 You don't need to deal with a knife-wielding psycho so near a hotel, which is close enough to a motel.
 \\
-#ttc-table-of-undesired-underside-nudges-titling
+#testcase-table-of-undesired-underside-nudges-titling
 >titlign
 No, the tilting titling is unstable enough.
 \\
-#ttc-table-of-undesired-underside-nudges-friend
+#testcase-table-of-undesired-underside-nudges-friend
 >friedn
 You don't have the skill to hack the friend finder.
 \\
-#ttc-table-of-undesired-underside-nudges-signer
+#testcase-table-of-undesired-underside-nudges-signer
 >signre
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
 \\
-#ttc-table-of-undesired-underside-nudges-signers
+#testcase-table-of-undesired-underside-nudges-signers
 >signesr
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
 \\
-#ttc-table-of-undesired-underside-nudges-cramped
+#testcase-table-of-undesired-underside-nudges-cramped
 >crampde
 You can't do much with or to the camp, here or north.
 \\
-#ttc-table-of-undesired-underside-nudges-camp
+#testcase-table-of-undesired-underside-nudges-camp
 >capm
 You can't do much with or to the camp, here or north.
 \\
@@ -150,39 +150,39 @@ The senors you want to see are behind the signers' ingress.
 >senor
 The senors you want to see are behind the signers' ingress.
 \\
-#ttc-table-of-undesired-underside-nudges-undesired
+#testcase-table-of-undesired-underside-nudges-undesired
 >undesirde
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#ttc-table-of-metros-nudges-metros
+#testcase-table-of-metros-nudges-metros
 >mersto
 You don't want to change a region drastically while you're in it.
 \\
-#ttc-table-of-metros-nudges-metro
+#testcase-table-of-metros-nudges-metro
 >merto
 You don't want to change a region drastically while you're in it.
 \\
-#ttc-table-of-undesired-underside-nudges-metallic
+#testcase-table-of-undesired-underside-nudges-metallic
 >metallci
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
 \\
-#ttc-table-of-undesired-underside-nudges-optical
+#testcase-table-of-undesired-underside-nudges-optical
 >opticla
 Changing the beam is way out of your league.
 \\
-#ttc-table-of-undesired-underside-nudges-beam
+#testcase-table-of-undesired-underside-nudges-beam
 >bema
 Changing the beam is way out of your league.
 \\
-#ttc-table-of-undesired-underside-nudges-special
+#testcase-table-of-undesired-underside-nudges-special
 >specila
 That's not the way to get to the special place. You need special ID
 \\
-#ttc-table-of-undesired-underside-nudges-building
+#testcase-table-of-undesired-underside-nudges-building
 >buildign
 You can't change the hotel,
 \\
-#ttc-table-of-metros-spechelp-drainage
+#testcase-table-of-metros-spechelp-drainage
 >gardenai
 The drainage bubbles a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the drainage. Keep at it.
@@ -199,12 +199,12 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 A reading (well, a bunch of papers) has blown in since last time you were here. It's soggy from the drainage where it landed.
 
 @nud
-#ttc-table-of-undesired-underside-nudges-reading
+#testcase-table-of-undesired-underside-nudges-reading
 >readign
 It's *A* reading you need to worry about.
 \\
 \\
-#ttc-table-of-readables-a-reading
+#testcase-table-of-readables-a-reading
 >read reading
 On one of several pages, you see: AID ANGER is written. The nonsense makes you see red.
 \\
@@ -246,13 +246,13 @@ You can't see anything like that here. If you're trying to view the room, L or L
 >e
 A reading (well, a bunch of papers) has blown in since last time you were here. It's soggy from the drainage where it landed.
 \\
-#ttc-table-of-kibitzes-drainage
+#testcase-table-of-kibitzes-drainage
 >rc drainage
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBBBGB (R = red, G = green, B = blue).
 The gadget beeps once. A series of lights comes across: RRRRRRRR (R = red, G = green).
 Hmm, you may need a lot to figure this. Maybe if you're stuck, you can combine this with a reading.
 \\
-#ttc-table-of-kibitzes-reading
+#testcase-table-of-kibitzes-reading
 >rc a reading
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBBBG.
 The gadget beeps once. A series of lights comes across: RRRRRRRR.
@@ -282,13 +282,13 @@ DEBUG INFO: Cert-text: --------.
 >beast
 That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair.
 \\
-#ttc-table-of-preflip-clues-beast
+#testcase-table-of-preflip-clues-beast
 >pf
 Stuff you figured, but you couldn't use it right away:
 beats -> beast
 
 @ask
-#ttc-table-of-unmatched-topic-responses-beats
+#testcase-table-of-unmatched-topic-responses-beats
 >ask beats about aabbccdd
 Dude! They're clearly busy bringing sexy back. You text adventurers don't know how to act.
 
@@ -297,7 +297,7 @@ Dude! They're clearly busy bringing sexy back. You text adventurers don't know h
 ##balance undos
 >gonear florae
 \\
-#ttc-table-of-unmatched-topic-responses-faeries
+#testcase-table-of-unmatched-topic-responses-faeries
 >ask faeries about xyzzy
 "You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!" they exclaim. It will probably be tougher than getting a sore and changing it to a rose.
 >abstract gardenia to underside
@@ -308,7 +308,7 @@ Dude! They're clearly busy bringing sexy back. You text adventurers don't know h
 >undo
 >banish gardenia
 \\
-#ttc-table-of-matched-thing-responses-faeries-gardenia
+#testcase-table-of-matched-thing-responses-faeries-gardenia
 >ask faeries about gardenia
 You don't have a gardenia, yet. But you can find or make one.
 >undo
@@ -328,19 +328,19 @@ The/a reading blows away once the gardenias appear.
 {$SCOS}
 
 @nud
-#ttc-table-of-metros-done-rejects-gardenia
+#testcase-table-of-metros-done-rejects-gardenia
 >gardenai
 The flowers are fine as-is.
 \\
-#ttc-table-of-undesired-underside-nudges-sensor
+#testcase-table-of-undesired-underside-nudges-sensor
 >sensro
 You don't have the skill to hack the friend finder.
 \\
-#ttc-table-of-undesired-underside-nudges-door
+#testcase-table-of-undesired-underside-nudges-door
 >doro
 The signers' ingress looks forbidding, but it looks hooked up to the friend finder too. Maybe put something on the friend finder.
 \\
-#+ttc-table-of-undesired-underside-nudges-theol
+#+testcase-table-of-undesired-underside-nudges-theol
 >theol
 You can't change the hotel, but you could have another look around.
 
@@ -349,12 +349,12 @@ You can't change the hotel, but you could have another look around.
 /^Roarings Garrison
 
 @gn
-#ttc-table-of-nowheres-roarings-garrison
+#testcase-table-of-nowheres-roarings-garrison
 >in
 There's a residence north, a library west, a flower shop east, and a seedier area south. But there are no special exits or clear way INSIDE.
 
 @hin
-#ttc-table-of-metros-anagrams-lost-corn
+#testcase-table-of-metros-anagrams-lost-corn
 >xx lost corn
 The dead beat deadbeat eyes you warily. You probably can't take the corn until you pleased the deadbeat, but yay for looking ahead.
 Your vision blurs a bit, and instead you see controls.
@@ -373,27 +373,27 @@ The noisome Moonies pretend to be all about nature, but as for actually understa
 Medical procedures aren't necessary here. The noise is too distracting anyway.
 
 @nud
-#ttc-table-of-roarings-garrison-nudges-roarings
+#testcase-table-of-roarings-garrison-nudges-roarings
 >roarinsg
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#ttc-table-of-roarings-garrison-nudges-roaring
+#testcase-table-of-roarings-garrison-nudges-roaring
 >roarign
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#ttc-table-of-roarings-garrison-nudges-reedings
+#testcase-table-of-roarings-garrison-nudges-reedings
 >reedinsg
 The designer reedings are a general affront to good aesthetics, but you have other more important things to switch up here.
 \\
-#ttc-table-of-roarings-garrison-nudges-reeding
+#testcase-table-of-roarings-garrison-nudges-reeding
 >reedign
 The designer reedings are a general affront to good aesthetics, but you have other more important things to switch up here.
 \\
-#ttc-table-of-roarings-garrison-nudges-cordoned
+#testcase-table-of-roarings-garrison-nudges-cordoned
 >cordonde
 You should probably just go north to look at the condo instead.
 \\
-#ttc-table-of-roarings-garrison-nudges-condo
+#testcase-table-of-roarings-garrison-nudges-condo
 >conod
 You should probably just go north to look at the condo instead.
 \\
@@ -422,42 +422,42 @@ You have more than one way to leave: north, south, east and west. So you'll need
 There are four unblocked exits: north, south to Undesired Underside, east and west.
 
 @ask
-#ttc-table-of-unmatched-topic-responses-deadbeat
+#testcase-table-of-unmatched-topic-responses-deadbeat
 >ask deadbeat about blozhko
 He mumbles something about chillin' with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn, and he also complains about nerds down southish, for some reason.
 \\
-#ttc-table-of-unmatched-thing-responses-deadbeat
+#testcase-table-of-unmatched-thing-responses-deadbeat
 >ask deadbeat about deadbeat
 He mumbles "Mt. Rose Rots Me Moster" and giggles stupidly. You probably won't learn much from him except about instruments of subversion.
 \\
 >ask deadbeat about beats
 "They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, you square, yo."
 \\
-#ttc-table-of-matched-topic-responses-deadbeat-slorntco
+#testcase-table-of-matched-topic-responses-deadbeat-slorntco
 >ask deadbeat about slorntco
 "Organized capital is so repressive, dude."
 \\
-#ttc-table-of-matched-thing-responses-deadbeat-nerds
+#testcase-table-of-matched-thing-responses-deadbeat-nerds
 >ask deadbeat about nerds
 The deadbeat starts shaking as he rattles off how the nerds east of the Underside have forgotten their roots.
 \\
-#ttc-table-of-matched-thing-responses-deadbeat-faeries
+#testcase-table-of-matched-thing-responses-deadbeat-faeries
 >ask deadbeat about faeries
 The deadbeat doesn't believe in magic, now. But he did as a kid.
 \\
-#ttc-table-of-matched-thing-responses-deadbeat-red-bull-burdell
+#testcase-table-of-matched-thing-responses-deadbeat-red-bull-burdell
 >ask deadbeat about red bull burdell
 "He is oppressive, man, but he is just a symptom of disparity and malaise."
 \\
-#ttc-table-of-matched-thing-responses-deadbeat-poses-posse
+#testcase-table-of-matched-thing-responses-deadbeat-poses-posse
 >ask deadbeat about poses posse
 The deadbeat starts up some nonsense pseudo-sociological mumblings.
 \\
-#ttc-table-of-matched-thing-responses-deadbeat-lost-corn
+#testcase-table-of-matched-thing-responses-deadbeat-lost-corn
 >ask deadbeat about lost corn
 "Hey, Man, like, how do we know you don't, like, like the Man, man? Hey? Hey?"
 \\
-#ttc-table-of-matched-thing-responses-deadbeat-termite-emitter
+#testcase-table-of-matched-thing-responses-deadbeat-termite-emitter
 >ask deadbeat about termite emitter
 "What? Do you know something?" he looks furtively around, more convinced than ever you're with The Man, man.
 
@@ -467,12 +467,12 @@ The deadbeat starts up some nonsense pseudo-sociological mumblings.
 @hin
 DEBUG: motto being objhinted.
 \\
-#ttc-table-of-metros-anagrams-motto
+#testcase-table-of-metros-anagrams-motto
 >xx motto
 You thought you saw a tomato whiz by "a motto," there.
 
 @scan
-#ttc-table-of-kibitzes-motto
+#testcase-table-of-kibitzes-motto
 >rc motto
 The gadget beeps once. A series of lights comes across: RRRRGG.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRGBB.
@@ -487,37 +487,37 @@ DEBUG INFO: Rect-text: T----O.
 DEBUG INFO: Cert-text: ----TO.
 
 @gn
-#ttc-table-of-nowheres-bile-libe
+#testcase-table-of-nowheres-bile-libe
 >w
 Perhaps there is a I-Be-Libel Lie Bible somewhere in the recesses here, but it and those beats would be too much at once. You probably just want to go back east.
 
 @nud
-#ttc-table-of-bile-libe-nudges-bile
+#testcase-table-of-bile-libe-nudges-bile
 >ible
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#ttc-table-of-bile-libe-nudges-librayr
+#testcase-table-of-bile-libe-nudges-librayr
 >librayr
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#ttc-table-of-bile-libe-nudges-motto
+#testcase-table-of-bile-libe-nudges-motto
 >motot
 It's labeled A MOTTO. So you probably have to respect the creative license, such as it is, of whoever wrote it.
 \\
-#ttc-table-of-bile-libe-nudges-plaque
+#testcase-table-of-bile-libe-nudges-plaque
 >laqupe
 It's more, it's A MOTTO.
 !u right after the q
 \\
-#+ttc-table-of-bile-libe-nudges-plaque
+#+testcase-table-of-bile-libe-nudges-plaque
 >plaqeu
 It's more, it's A MOTTO. Also, even if you could do anything, you'd need the u right after the q, probably. You'll need to do odd stuff, but nothing too odd.
 \\
-#ttc-table-of-bile-libe-nudges-potaot
+#testcase-table-of-bile-libe-nudges-potaot
 >potaot
 The author twisted words enough. Perhaps you could concentrate on the motto.
 \\
-#ttc-table-of-metros-spechelp-motto
+#testcase-table-of-metros-spechelp-motto
 >tomaot
 Hm, you maybe could bend the/a motto a bit differently.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the motto. Keep at it.
@@ -546,7 +546,7 @@ DEBUG INFO: Cert-text: -----.
 >sword
 The words become a sword, too large and terrifying to carry. The talk resumes as the sword disappears. You'll probably need something to put the sword, or the words, in.
 \\
-#ttc-table-of-preflip-clues-sword
+#testcase-table-of-preflip-clues-sword
 >pf
 words -> sword
 
@@ -568,7 +568,7 @@ Your score has just gone up by one point.
 {$SCOS}
 
 @nud
-#ttc-table-of-metros-done-rejects-tomato
+#testcase-table-of-metros-done-rejects-tomato
 >tomaot
 It's pretty gross, but you can't really change it. Maybe it can gross someone, or something, else out.
 
@@ -577,26 +577,26 @@ It's pretty gross, but you can't really change it. Maybe it can gross someone, o
 @ask
 >e
 \\
-#ttc-table-of-matched-thing-responses-faeries-tomato
+#testcase-table-of-matched-thing-responses-faeries-tomato
 >ask faeries about tomato
 "Such a putrid plant! Keep it away from us!"
 \\
-#ttc-table-of-matched-thing-responses-faeries-clover
+#testcase-table-of-matched-thing-responses-faeries-clover
 >ask faeries about clover
 "Just weeds! Not useful for our sophisticated magic. Maybe useful for mere human magic, though."
 \\
-#ttc-table-of-matched-thing-responses-faeries-heaths
+#testcase-table-of-matched-thing-responses-faeries-heaths
 >ask faeries about heaths
 "We trade in flowers! Flowers we have for flowers we want! What do you have?"
 \\
-#ttc-table-of-matched-thing-responses-faeries-merchandise
+#testcase-table-of-matched-thing-responses-faeries-merchandise
 >ask faeries about merchandise
 \\
-#ttc-table-of-matched-thing-responses-faeries-nerds
+#testcase-table-of-matched-thing-responses-faeries-nerds
 >ask faeries about nerds
 The fairies buzz and give superior sniffs.
 \\
-#ttc-table-of-matched-thing-responses-faeries-deadbeat
+#testcase-table-of-matched-thing-responses-faeries-deadbeat
 >ask faeries about deadbeat
 The fairies buzz and give superior sniffs.
 >w
@@ -623,12 +623,12 @@ The only way to exit is east, so let's go that way.
 The only way you seem to be able to go is east to Undesired Underside.
 
 @ask
-#ttc-table-of-unmatched-topic-responses-night-thing
+#testcase-table-of-unmatched-topic-responses-night-thing
 >ask night thing about abcd
 "NYURGH! HUNGRY!" Easier to argue a grue away.
 
 @gn
-#ttc-table-of-nowheres-the-ol-hotel
+#testcase-table-of-nowheres-the-ol-hotel
 >s
 You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way to fix it, or the city.
 
@@ -637,35 +637,35 @@ You don't want to find that L'Hôte Helot is The Hell, Too. Better to find a way 
 >smatters
 The mattress is in bad enough shape as it is. It should be easy enough to sift through once the night thing is gone.
 \\
-#ttc-table-of-the-ol-hotel-nudges-thelo
+#testcase-table-of-the-ol-hotel-nudges-thelo
 >helot
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#ttc-table-of-the-ol-hotel-nudges-thing
+#testcase-table-of-the-ol-hotel-nudges-thing
 >thign
 The night thing is twisted beyond redemption.
 \\
-#ttc-table-of-the-ol-hotel-nudges-potato
+#testcase-table-of-the-ol-hotel-nudges-potato
 >potaot
 The night thing would probably still be big and terrifying even if it changed its form. You need to find a way to get rid of it.
 \\
-#ttc-table-of-the-ol-hotel-nudges-lucre
+#testcase-table-of-the-ol-hotel-nudges-lucre
 >lucer
 You're a wordplayer, not a doctor, sadly. But that ulcer was the night thing's own fault, anyway.
 \\
-#ttc-table-of-the-ol-hotel-nudges-bottel
+#testcase-table-of-the-ol-hotel-nudges-bottel
 >bottel
 It doesn't bend, but maybe it's a clue what the night thing likes to eat.
 \\
-#ttc-table-of-the-ol-hotel-nudges-ketchup
+#testcase-table-of-the-ol-hotel-nudges-ketchup
 >ketchpu
 It doesn't bend, but maybe it's a clue what the night thing likes to eat.
 \\
-#ttc-table-of-the-ol-hotel-nudges-catsup
+#testcase-table-of-the-ol-hotel-nudges-catsup
 >catsup
 You think of how to make the ketchup slightly classier. It doesn't bend, but maybe it's a clue what the night thing likes to eat.
 \\
-#ttc-table-of-the-ol-hotel-nudges-mattress
+#testcase-table-of-the-ol-hotel-nudges-mattress
 >mattrses
 Nothing to change the mattress to, even if you could move the night thing off.
 
@@ -685,23 +685,23 @@ The mattress is in bad enough shape as it is. It should be easy enough to sift t
 {$SCOS}
 
 @nud
-#ttc-table-of-the-ol-hotel-nudges-bump
+#testcase-table-of-the-ol-hotel-nudges-bump
 >bupm
 Just search the bump instead.
 \\
-#+ttc-table-of-the-ol-hotel-nudges-mattress
+#+testcase-table-of-the-ol-hotel-nudges-mattress
 >mattrses
 Nothing to change the mattress to, but something might be inside it.
 >x mattress
 \\
-#+ttc-table-of-the-ol-hotel-nudges-mattress
+#+testcase-table-of-the-ol-hotel-nudges-mattress
 >mattrsse
 Nothing to change the mattress to, and you already looted it
 
 >x mattress
 
 @nud
-#ttc-table-of-the-ol-hotel-nudges-emitter
+#testcase-table-of-the-ol-hotel-nudges-emitter
 >emittre
 Whatever icky stuff is/was in there might come out. Eww.
 \\
@@ -712,7 +712,7 @@ The mattress is in bad enough shape as it is. You got what you needed from it.
 >e
 
 @nud
-#+ttc-table-of-undesired-underside-nudges-theol
+#+testcase-table-of-undesired-underside-nudges-theol
 >theol
 You can't change the hotel, and you got rid of the night thing, anyway.
 
@@ -720,69 +720,69 @@ You can't change the hotel, and you got rid of the night thing, anyway.
 /^Roarings Garrison
 
 @nud
-#ttc-table-of-roarings-garrison-nudges-library
+#testcase-table-of-roarings-garrison-nudges-library
 >librayr
 The library could use renovation, but that's out of the scope of your quest, now.
 \\
-#ttc-table-of-roarings-garrison-nudges-redtents
+#testcase-table-of-roarings-garrison-nudges-redtents
 >redtenst
 Not nice. It's the only home the deadbeats have.
 \\
-#ttc-table-of-roarings-garrison-nudges-harps
+#testcase-table-of-roarings-garrison-nudges-harps
 >harsp
 The harps are kind of annoying, but they've got nothing on the beats.
 \\
-#ttc-table-of-roarings-garrison-nudges-harp
+#testcase-table-of-roarings-garrison-nudges-harp
 >hapr
 The harps are kind of annoying, but they've got nothing on the beats.
 \\
-#ttc-table-of-metros-nudges-lost
+#testcase-table-of-metros-nudges-lost
 >ltso
 It's not just that it's lost, it's CORN.
 !Perhaps you can
 \\
-#ttc-table-of-metros-nudges-corn
+#testcase-table-of-metros-nudges-corn
 >conr
 It's not just that it's corn, it's LOST too.
 !Perhaps you can
 \\
-#ttc-table-of-roarings-garrison-nudges-tent
+#testcase-table-of-roarings-garrison-nudges-tent
 >tetn
 As anti-personal property as the beatniks/moonies are, that'd still annoy them.
 \\
-#ttc-table-of-roarings-garrison-nudges-tents
+#testcase-table-of-roarings-garrison-nudges-tents
 >tenst
 As anti-personal property as the beatniks/moonies are, that'd still annoy them.
 \\
-#ttc-table-of-roarings-garrison-nudges-deadbeat
+#testcase-table-of-roarings-garrison-nudges-deadbeat
 >deadbeta
 The deadbeat may mumble about change, but changing oneself? Not so fast.
 \\
-#ttc-table-of-roarings-garrison-nudges-dead
+#testcase-table-of-roarings-garrison-nudges-dead
 >deda
 The deadbeat may mumble about change, but changing oneself? Not so fast.
 \\
-#ttc-table-of-roarings-garrison-nudges-beat
+#testcase-table-of-roarings-garrison-nudges-beat
 >beta
 The deadbeat may mumble about change, but changing oneself? Not so fast.
 \\
-#ttc-table-of-metros-nudges-buttosn
+#testcase-table-of-metros-nudges-buttosn
 >buttosn
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
 \\
-#ttc-table-of-metros-nudges-yellow
+#testcase-table-of-metros-nudges-yellow
 >yellwo
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
 \\
-#ttc-table-of-metros-nudges-kernels
+#testcase-table-of-metros-nudges-kernels
 >kernesl
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
 \\
-#ttc-table-of-metros-nudges-kernel
+#testcase-table-of-metros-nudges-kernel
 >kernle
 The buttons and kernels don't need pushing. Or they won't until they're a part of something useful.
 \\
-#ttc-table-of-metros-spechelp-lost-corn
+#testcase-table-of-metros-spechelp-lost-corn
 >controsl
 You thought you heard electronic beeping from the corn.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the lost corn. Keep at it.
@@ -803,19 +803,19 @@ In other words, you probably need to gain the deadbeat's trust before taking any
 /^Obtains/Boastin' Bastion
 
 @nud
-#ttc-table-of-obtains-boastin-bastion-nudges-boastin
+#testcase-table-of-obtains-boastin-bastion-nudges-boastin
 >boastni
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#ttc-table-of-obtains-boastin-bastion-nudges-obtain
+#testcase-table-of-obtains-boastin-bastion-nudges-obtain
 >obtani
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#ttc-table-of-obtains-boastin-bastion-nudges-poses
+#testcase-table-of-obtains-boastin-bastion-nudges-poses
 >essop
 You can't change who they are. They probably can't, either. It's sad.
 \\
-#ttc-table-of-obtains-boastin-bastion-nudges-pose
+#testcase-table-of-obtains-boastin-bastion-nudges-pose
 >poes
 You can't change who they are. They probably can't, either. It's sad.
 \\
@@ -833,11 +833,11 @@ The poses posse doesn't need or want a handout.
 >spose
 Trying to s'pose might irk the poses posse, but not enough for them to leave. You need a more serious annoyance.
 \\
-#ttc-table-of-obtains-boastin-bastion-nudges-rental
+#testcase-table-of-obtains-boastin-bastion-nudges-rental
 >rentla
 One antler seems to twitch a bit and pull towards you. Curious--it doesn't look completely relevant, but it'd be funny to see something happen to the antlers.
 \\
-#ttc-table-of-metros-spechelp-antlers
+#testcase-table-of-metros-spechelp-antlers
 >rentlas
 You could've sworn you the thing grew eyelids! And the eyes moved, begging you for any excuse it doesn't belong here!
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the antlers. Keep at it.
@@ -862,11 +862,11 @@ The only way to exit is south, so let's go that way.
 The only way you seem to be able to go is south to Roarings Garrison.
 
 @ask
-#ttc-table-of-matched-thing-responses-poses-posse-dry-cake
+#testcase-table-of-matched-thing-responses-poses-posse-dry-cake
 >ask poses posse about dry cake
 Someone puts their hand to their lips. Someone else shakes their head. You don't DESERVE that cake, according to them.
 \\
-#ttc-table-of-unmatched-topic-responses-poses-posse
+#testcase-table-of-unmatched-topic-responses-poses-posse
 >ask poses posse about abcd
 You get a few pinched, strained smiles, but no actual words. What would they say? "TALKERS STALKER?!"
 
@@ -892,7 +892,7 @@ DEBUG INFO: Rect-text: K-----D.
 DEBUG INFO: Cert-text: --YCA--.
 
 @hin
-#ttc-table-of-metros-anagrams-antlers
+#testcase-table-of-metros-anagrams-antlers
 >xx antlers
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 You take care not to drop any crackers on the rug. A large RENTAL sign seems to obscure the antlers for a moment.
@@ -911,27 +911,27 @@ Your score has just gone up by one point.
 You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
 
 @nud
-#+ttc-table-of-obtains-boastin-bastion-nudges-rental
+#+testcase-table-of-obtains-boastin-bastion-nudges-rental
 >rentla
 No point bringing those tacky antlers back, or thinking about them any more
 \\
-#ttc-table-of-obtains-boastin-bastion-nudges-candelabra
+#testcase-table-of-obtains-boastin-bastion-nudges-candelabra
 >candelabar
 Interior decorating is not your strength.
 \\
-#ttc-table-of-obtains-boastin-bastion-nudges-carpets
+#testcase-table-of-obtains-boastin-bastion-nudges-carpets
 >carpest
 Interior decorating is not your strength.
 \\
-#ttc-table-of-obtains-boastin-bastion-nudges-carpet
+#testcase-table-of-obtains-boastin-bastion-nudges-carpet
 >carpte
 Interior decorating is not your strength.
 \\
-#ttc-table-of-obtains-boastin-bastion-nudges-caek
+#testcase-table-of-obtains-boastin-bastion-nudges-caek
 >caek
 It isn't just any cake. It's dry cake.
 \\
-#ttc-table-of-obtains-boastin-bastion-nudges-dry
+#testcase-table-of-obtains-boastin-bastion-nudges-dry
 >dyr
 It isn't just any cake. It's dry cake.
 
@@ -944,7 +944,7 @@ So, though you never know when a keycard is handy, Ix-nay on the agic-may 'til t
 >keycard
 This would create quite a (negative) scene with people still in the bastion.
 \\
-#ttc-table-of-preflip-clues-keycard
+#testcase-table-of-preflip-clues-keycard
 >pf
 dry cake -> keycard
 
@@ -969,7 +969,7 @@ You see yourself taking a free sample of some cloth.
 >s
 
 @ask
-#ttc-table-of-matched-thing-responses-deadbeat-beats
+#testcase-table-of-matched-thing-responses-deadbeat-beats
 >ask deadbeat about beats
 "They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, dude."
 
@@ -1006,7 +1006,7 @@ DEBUG INFO: Rect-text: C------S.
 DEBUG INFO: Cert-text: -O-T-O--.
 
 @hin
-#+ttc-table-of-metros-anagrams-lost-corn
+#+testcase-table-of-metros-anagrams-lost-corn
 >xx lost corn
 !The dead beat deadbeat eyes you
 Your vision blurs a bit, and instead you see controls.
@@ -1022,15 +1022,15 @@ Your score has just gone up by one point.
 {$SFIXMAX}
 
 @nud
-#ttc-table-of-metros-done-rejects-controls
+#testcase-table-of-metros-done-rejects-controls
 >controsl
 The controls stay as they are.
 \\
-#ttc-table-of-metros-nudges-control
+#testcase-table-of-metros-nudges-control
 >contrlo
 You've already changed the lost corn into the controls, and you don't need to do more.
 \\
-#ttc-table-of-metros-spechelp-dry-cake
+#testcase-table-of-metros-spechelp-dry-cake
 >keycadr
 You feel like you can almost identify what the cake can become.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the dry cake. Keep at it.
@@ -1042,7 +1042,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
-#ttc-table-of-metros-anagrams-dry-cake
+#testcase-table-of-metros-anagrams-dry-cake
 >xx cake
 Your vision blurs a bit, and instead you see a keycard.
 
@@ -1056,19 +1056,19 @@ Your vision blurs a bit, and instead you see a keycard.
 {$SFIXMAX}
 
 @nud
-#ttc-table-of-metros-done-rejects-keycard
+#testcase-table-of-metros-done-rejects-keycard
 >keycadr
 The keycard remains stiff. Looks like it's as it should be.
 \\
-#ttc-table-of-metros-nudges-leavse
+#testcase-table-of-metros-nudges-leavse
 >leavse
 It's the whole clover you need to change.
 \\
-#ttc-table-of-metros-nudges-fuzzy
+#testcase-table-of-metros-nudges-fuzzy
 >fuzyz
 The fuzziness seems to be part of the clover. It might be, even if you're able to change the clover.
 \\
-#ttc-table-of-metros-spechelp-clover
+#testcase-table-of-metros-spechelp-clover
 >velcor
 The clover seems overcome with fuzz for a moment--but no, you missed a little something.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the fuzzy clover. Keep at it.
@@ -1080,7 +1080,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
-#ttc-table-of-metros-anagrams-clover
+#testcase-table-of-metros-anagrams-clover
 >xx clover
 Your vision blurs a bit, and instead you see Velcro.
 
@@ -1099,27 +1099,27 @@ Your vision blurs a bit, and instead you see Velcro.
 No matter how hard you try to convince yourself they are lovely, you're not smitten with them. They're just ugly. But they could stick really well on the right surface.
 
 @nud
-#ttc-table-of-metros-done-rejects-velcro
+#testcase-table-of-metros-done-rejects-velcro
 >velcor
 The Velcro remains tangled.
 \\
-#ttc-table-of-metros-nudges-string
+#testcase-table-of-metros-nudges-string
 >strign
 No need to mess with the string joining the Velcro mittens.
 \\
-#ttc-table-of-metros-nudges-glove
+#testcase-table-of-metros-nudges-glove
 >gloev
 The mittens are as comfortable as they're going to be.
 \\
-#ttc-table-of-metros-nudges-gloves
+#testcase-table-of-metros-nudges-gloves
 >glovse
 The mittens are as comfortable as they're going to be.
 \\
-#ttc-table-of-metros-nudges-mitten
+#testcase-table-of-metros-nudges-mitten
 >mittne
 The mittens are as comfortable as they're going to be.
 \\
-#ttc-table-of-metros-nudges-mittens
+#testcase-table-of-metros-nudges-mittens
 >mittesn
 The mittens are as comfortable as they're going to be.
 
@@ -1165,19 +1165,19 @@ DEBUG INFO: Rect-text: N------G.
 DEBUG INFO: Cert-text: ------A-.
 
 @ask
-#+ttc-table-of-matched-thing-responses-faeries-tomato
+#+testcase-table-of-matched-thing-responses-faeries-tomato
 >ask faeries about tomato
 "Even humans and monsters must find it revolting!"
 \\
-#ttc-table-of-unmatched-thing-responses-faeries
+#testcase-table-of-unmatched-thing-responses-faeries
 >ask faeries about counter
 They possess wisdom humans never will, but they don't much want to help you with the physical realm, beyond flowers.
 \\
-#ttc-table-of-matched-thing-responses-faeries-drainage
+#testcase-table-of-matched-thing-responses-faeries-drainage
 >ask faeries about drainage
 "Perhaps you can turn something in this city into a flower. We are out of ideas. How can drainage become a flower?"
 \\
-#ttc-table-of-matched-thing-responses-faeries-beats
+#testcase-table-of-matched-thing-responses-faeries-beats
 >ask faeries about beats
 "It is terrible! Our hearing is even more delicate than a clumsy human's. We can do no decent long-term magic with it around."
 \\
@@ -1185,13 +1185,13 @@ They possess wisdom humans never will, but they don't much want to help you with
 The faeries buzz around for a bit, peeved at your boldness. "Well, maybe you will do something for us some day."
 The FREE TO FREELOADERS torn cue by the brocade vanishes as you take it. Nice magic touch, that.
 \\
-#+ttc-table-of-matched-thing-responses-faeries-gardenia
+#+testcase-table-of-matched-thing-responses-faeries-gardenia
 >ask faeries about gardenia
 They see your gardenia and snatch it away before you can offer properly. "Yes! Yes!" They're visibly impressed. "Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need."
 >undo
 >undo
 \\
-#+ttc-table-of-matched-thing-responses-faeries-gardenia
+#+testcase-table-of-matched-thing-responses-faeries-gardenia
 >ask faeries about gardenia
 They see your gardenia and snatch it away before you can offer properly. "Yes! Yes!" They're visibly impressed. "Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one. And take the brocade, too. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need."
 \\
@@ -1231,61 +1231,61 @@ The faeries have very magic and very demoralizing anti-vandalism spells.
 >bates
 You don't need to deal with a knife-wielding psycho on top of all this.
 \\
-#ttc-table-of-fo-real-florae-nudges-florae
+#testcase-table-of-fo-real-florae-nudges-florae
 >florea
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#ttc-table-of-fo-real-florae-nudges-real
+#testcase-table-of-fo-real-florae-nudges-real
 >rela
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#ttc-table-of-fo-real-florae-nudges-fare
+#testcase-table-of-fo-real-florae-nudges-fare
 >faer
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#ttc-table-of-fo-real-florae-nudges-heath
+#testcase-table-of-fo-real-florae-nudges-heath
 >heaht
 Probably best not to do stuff to even one heath while the faeries have them
 \\
-#ttc-table-of-fo-real-florae-nudges-begonia
+#testcase-table-of-fo-real-florae-nudges-begonia
 >begonai
 Probably best not to do stuff to even one begonia while the faeries have them.
 \\
-#ttc-table-of-fo-real-florae-nudges-fairies
+#testcase-table-of-fo-real-florae-nudges-fairies
 >fairise
 They could CERTAINLY out-magic you back, even if anagramming could have an effect on them. With a little extra for your misspelling.
 \\
-#ttc-table-of-fo-real-florae-nudges-fairy
+#testcase-table-of-fo-real-florae-nudges-fairy
 >faiyr
 If you mangled one of them, the rest of the fairies would mangle you back worse.
 \\
-#ttc-table-of-fo-real-florae-nudges-faery
+#testcase-table-of-fo-real-florae-nudges-faery
 >faeyr
 If you mangled one of them, the rest of the fairies would mangle you back worse.
 \\
-#ttc-table-of-fo-real-florae-nudges-stems
+#testcase-table-of-fo-real-florae-nudges-stems
 >stesm
 Deal with the whole flower, not just the stems.
 \\
-#ttc-table-of-fo-real-florae-nudges-trounce
+#testcase-table-of-fo-real-florae-nudges-trounce
 >trounec
 You don't need to do anything to the counter, and it's probably protected by a spell, anyway.
 \\
-#ttc-table-of-fo-real-florae-nudges-faeries
+#testcase-table-of-fo-real-florae-nudges-faeries
 >faerise
 They could CERTAINLY out-magic you back, even if anagramming could have an effect on them.
 !With a little extra for your misspelling
 \\
-#ttc-table-of-fo-real-florae-nudges-tonr
+#testcase-table-of-fo-real-florae-nudges-tonr
 >tron
 The torn cue is just there to direct you to the brocade.
 \\
-#ttc-table-of-fo-real-florae-nudges-cue
+#testcase-table-of-fo-real-florae-nudges-cue
 >ceu
 The torn cue is just there to direct you to the brocade.
 
 @gn
-#ttc-table-of-nowheres-fo-real-florae
+#testcase-table-of-nowheres-fo-real-florae
 >n
 The faeries wouldn't take kindly to snooping. The only safe way out is back west.
 
@@ -1299,12 +1299,12 @@ The heaths are (still) merchandise. You don't want to find out what faeries do t
 The begonias are (still) merchandise. You don't want to find out what faeries do to vandals, or shoplifters, or combinations thereof.
 
 @hin
-#ttc-table-of-metros-anagrams-begonias
+#testcase-table-of-metros-anagrams-begonias
 >xx begonias
 The faeries buzz, perturbed. You really shouldn't do anything until you've traded for merchandise.
 !Your vision blurs
 \\
-#ttc-table-of-metros-anagrams-heaths
+#testcase-table-of-metros-anagrams-heaths
 >xx heaths
 The faeries buzz, perturbed. You really shouldn't do anything until you've traded for merchandise.
 !Your vision blurs
@@ -1312,19 +1312,19 @@ The faeries buzz, perturbed. You really shouldn't do anything until you've trade
 >give gardenia to faeries
 
 @hin
-#+ttc-table-of-metros-anagrams-begonias
+#+testcase-table-of-metros-anagrams-begonias
 >xx begonias
 You should take the begonias if you want to work on them.
 !Your vision blurs
 \\
-#+ttc-table-of-metros-anagrams-heaths
+#+testcase-table-of-metros-anagrams-heaths
 >xx heaths
 You should take the heaths if you want to work on them.
 !Your vision blurs
 
 @nud
 ##balance undos
-#ttc-table-of-metros-spechelp-begonias
+#testcase-table-of-metros-spechelp-begonias
 >noise bga
 The begonias seem quiet. Almost too quiet. But surely you can find something to do with them.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the begonias. Keep at it.
@@ -1338,7 +1338,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >noise bag
 by one point
 \\
-#ttc-table-of-metros-done-rejects-noise-bag
+#testcase-table-of-metros-done-rejects-noise-bag
 >noisebga
 The noise bag rumbles ominously. Best not change it into something worse.
 >undo
@@ -1390,7 +1390,7 @@ You already took the begonias.
 >undo
 
 @ask
-#+ttc-table-of-matched-thing-responses-faeries-heaths
+#+testcase-table-of-matched-thing-responses-faeries-heaths
 >ask faeries about heaths
 "We have faith in you! You will make the city safe to grow flowers again!"
 
@@ -1409,11 +1409,11 @@ DEBUG: heaths being objhinted.
 >undo
 
 @nud
-#+ttc-table-of-fo-real-florae-nudges-heath
+#+testcase-table-of-fo-real-florae-nudges-heath
 >heaht
 They are multiple heaths--so you should try to change just one.
 \\
-#ttc-table-of-metros-spechelp-heaths
+#testcase-table-of-metros-spechelp-heaths
 >sheaht
 You stare at the heaths, picturing them in the circle and wondering which is the "starter."
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the heaths. Keep at it.
@@ -1425,11 +1425,11 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
-#+ttc-table-of-metros-anagrams-begonias
+#+testcase-table-of-metros-anagrams-begonias
 >xx begonias
 #Your vision blurs a bit, and instead you see a noise bag.
 \\
-#+ttc-table-of-metros-anagrams-heaths
+#+testcase-table-of-metros-anagrams-heaths
 >xx heaths
 Your vision blurs a bit, and instead you see a sheath.
 
@@ -1449,7 +1449,7 @@ You've transformed your flower, but you need to use your new item in the Bile Li
 >undo
 
 @nud
-#ttc-table-of-metros-done-rejects-sheath
+#testcase-table-of-metros-done-rejects-sheath
 >sheaht
 The sheath remains still.
 
@@ -1459,19 +1459,19 @@ The sheath remains still.
 You are also wearing a sheath.
 
 @ask
-#ttc-table-of-matched-thing-responses-faeries-begonias
+#testcase-table-of-matched-thing-responses-faeries-begonias
 >ask faeries about begonias
 The faeries have been generous enough.
 \\
-#ttc-table-of-matched-thing-responses-faeries-sheath
+#testcase-table-of-matched-thing-responses-faeries-sheath
 >ask faeries about sheath
 "It is up to you to use it. We cannot help further."
 \\
-#ttc-table-of-matched-thing-responses-faeries-noise-bag
+#testcase-table-of-matched-thing-responses-faeries-noise-bag
 >ask faeries about noise bag
 The faeries wonder aloud what sort of magic could conjure a noise bag.
 \\
-#ttc-table-of-matched-thing-responses-faeries-tulip
+#testcase-table-of-matched-thing-responses-faeries-tulip
 >ask faeries about tulip
 "For human flower magic, not bad at all! We guess."
 
@@ -1485,7 +1485,7 @@ The faeries wonder aloud what sort of magic could conjure a noise bag.
 "It is the least we can do for you! Thank you for helping us!"
 
 @ask
-#ttc-table-of-matched-thing-responses-faeries-brocade
+#testcase-table-of-matched-thing-responses-faeries-brocade
 >ask faeries about brocade
 "Do with it what you need."
 >barcode
@@ -1507,11 +1507,11 @@ You turn your back and focus so the faeries can't see you mangle their gift. Or 
 >w
 
 @nud
-#ttc-table-of-metros-nudges-word
+#testcase-table-of-metros-nudges-word
 >odrw
 You'd need to do something to all the words.
 \\
-#ttc-table-of-metros-spechelp-words
+#testcase-table-of-metros-spechelp-words
 >swodr
 The words seem to whizz around the air a bit, but they aren't tempered into something that can really do damage.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the words. Keep at it.
@@ -1523,7 +1523,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
-#ttc-table-of-metros-anagrams-words
+#testcase-table-of-metros-anagrams-words
 >xx words
 Your vision blurs a bit, and instead you see a sword.
 
@@ -1537,14 +1537,14 @@ Your vision blurs a bit, and instead you see a sword.
 {$SFIXMAX}
 
 @nud
-#ttc-table-of-metros-done-rejects-sword
+#testcase-table-of-metros-done-rejects-sword
 >swodr
 Meddling with the sword right now, you're worried it might poke you.
 
 >e
 
 @nud
-#ttc-table-of-metros-spechelp-brocade
+#testcase-table-of-metros-spechelp-brocade
 >barcoed
 The brocade design seems simple, yet complex, and perhaps you don't have to change a lot.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the brocade. Keep at it.
@@ -1557,7 +1557,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
-#ttc-table-of-metros-anagrams-brocade
+#testcase-table-of-metros-anagrams-brocade
 >xx brocade
 Your vision blurs a bit, and instead you see a barcode.
 
@@ -1580,22 +1580,22 @@ DEBUG INFO: Cert-text: B--C-DE.
 {$SFIXMAX}
 
 @nud
-#ttc-table-of-metros-done-rejects-barcode
+#testcase-table-of-metros-done-rejects-barcode
 >barcoed
 The barcode does not shift.
 \\
-#ttc-table-of-metros-nudges-ganst
+#testcase-table-of-metros-nudges-ganst
 >ganst
 You don't get rid of angst with just a word.
 \\
-#ttc-table-of-metros-nudges-gnat
+#testcase-table-of-metros-nudges-gnat
 >gnat
 There are multiple gnats, but that's not how to use them. Just SWITCH the termite emitter.
 
 >s
 
 @nud
-#ttc-table-of-metros-nudges-beats
+#testcase-table-of-metros-nudges-beats
 >ebtas
 The beats shift up for a second.
 
@@ -1664,11 +1664,11 @@ The only way to exit is west, so let's go that way.
 The only way you seem to be able to go is west to Undesired Underside.
 
 @ask
-#ttc-table-of-unmatched-thing-responses-nerds
+#testcase-table-of-unmatched-thing-responses-nerds
 >ask nerds about deadbeat
 The nerds aren't big on social stuff. They're more about the technical stuff, about showing answers to questions you have. And questions you don't know you have yet.
 \\
-#ttc-table-of-unmatched-topic-responses-nerds
+#testcase-table-of-unmatched-topic-responses-nerds
 >ask nerds about xyzzy
 "Hm, should we even talk to an outsider about that?"
 "Well, if they found their way in, they can't be THAT dumb!"
@@ -1723,44 +1723,44 @@ One nerd dumps out his shoe. "Erks! Sand!" He looks red-faced at such a public d
 >ask about xyzzy
 Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.
 \\
-#ttc-table-of-matched-topic-responses-nerds-dorks
+#testcase-table-of-matched-topic-responses-nerds-dorks
 >ask nerds about dorks
 They snicker knowingly. They assure you Karkdoss is the worst, if you want to ask dorks for any help.
 \\
-#ttc-table-of-matched-topic-responses-nerds-karkdoss
+#testcase-table-of-matched-topic-responses-nerds-karkdoss
 >ask nerds about karkdoss
 They snicker knowingly. You wonder if there is a Karkdoss, and if so, if they really think you should ask dorks.
 \\
-#ttc-table-of-matched-thing-responses-nerds-beats
+#testcase-table-of-matched-thing-responses-nerds-beats
 >ask nerds about beats
 "Anyone can be smart enough to build noise canceling homes to get rid of the beats!"
 \\
-#ttc-table-of-matched-thing-responses-nerds-controls
+#testcase-table-of-matched-thing-responses-nerds-controls
 >ask nerds about controls
 "Oh! These are simple controls! You don't even need to know about induction and charges and anything. Just slap them in where there's something missing. Pf, barely worth the time to ASK NERDS about."
 \\
-#ttc-table-of-matched-thing-responses-nerds-deadbeat
+#testcase-table-of-matched-thing-responses-nerds-deadbeat
 >ask nerds about deadbeat
 The nerds aren't big on social stuff. They're more about the technical stuff, about showing answers to questions you have. And questions you don't know you have yet.
 \\
-#ttc-table-of-matched-thing-responses-nerds-faeries
+#testcase-table-of-matched-thing-responses-nerds-faeries
 >ask nerds about faeries
 The nerds assure you science is better than magic.
 \\
-#ttc-table-of-matched-thing-responses-nerds-red-bull-burdell
+#testcase-table-of-matched-thing-responses-nerds-red-bull-burdell
 >ask nerds about red bull burdell
 "Sometimes Yorpwald is so dumb it deserves a thousand years of his rule. Not that he deserves to rule for a thousand years. We need someone smart enough to ASK NERDS the right thing to help dethrone him!"
 \\
-#ttc-table-of-matched-thing-responses-nerds-tracks
+#testcase-table-of-matched-thing-responses-nerds-tracks
 >ask nerds about tracks
 "We wouldn't touch it, that's for sure. I mean, even if we could see where it went."
 \\
-#ttc-table-of-matched-thing-responses-nerds-tulip
+#testcase-table-of-matched-thing-responses-nerds-tulip
 >ask nerds about tulip
 "We've got plenty of light here. You can have it, if you know what to ask us about. And if the tulip would help."
 
 @gn
-#ttc-table-of-nowheres-esoteric-coteries
+#testcase-table-of-nowheres-esoteric-coteries
 >e
 The Earliest Ateliers are not for you to visit. You're more an adventurer than a researcher.
 
@@ -1778,13 +1778,13 @@ The lit-up tulip is useful for providing light for all-night sessions of playing
 The lit-up tulip is useful for providing light for all-night sessions of playing great text adventure games or whatever, but it can't give you the energy to stay awake.
 
 @nud
-#ttc-table-of-esoteric-coteries-nudges-utensil
+#testcase-table-of-esoteric-coteries-nudges-utensil
 >utensli
 The lit-up tulip will stay lit. No need to futz with its brand name.
 \\
 >w
 \\
-#+ttc-table-of-undesired-underside-nudges-friend
+#+testcase-table-of-undesired-underside-nudges-friend
 >friedn
 You don't need to futz further with the friend finder.
 \\
@@ -1792,73 +1792,73 @@ You don't need to futz further with the friend finder.
 >resign
 The ingress already did. You got by.
 \\
-#+ttc-table-of-undesired-underside-nudges-special
+#+testcase-table-of-undesired-underside-nudges-special
 >specila
 You don't need to perform any tricks, now you've gotten to the Esoteric Coteries.
 \\
 >e
 \\
-#ttc-table-of-esoteric-coteries-nudges-esoteric
+#testcase-table-of-esoteric-coteries-nudges-esoteric
 >esoterci
 You don't need to explore the coteries. Maybe the nerds could help you another way, though.
 \\
-#ttc-table-of-esoteric-coteries-nudges-coterie
+#testcase-table-of-esoteric-coteries-nudges-coterie
 >coterei
 You don't need to explore the coteries. Maybe the nerds could help you another way, though.
 \\
-#ttc-table-of-esoteric-coteries-nudges-anticool
+#testcase-table-of-esoteric-coteries-nudges-anticool
 >anticolo
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#+ttc-table-of-metros-nudges-beats
+#+testcase-table-of-metros-nudges-beats
 >beats
 The beats are still ringing in your head, yeah, and it's hard not to think about them, even though they're not here.
 \\
-#ttc-table-of-metros-nudges-tulip
+#testcase-table-of-metros-nudges-tulip
 >uptli
 The nerds would gang up on you and take it back, if anything worked directly on the tulip, which it won't. The nerds might be able to help you with part of your quest, though.
 \\
-#ttc-table-of-esoteric-coteries-nudges-nerd
+#testcase-table-of-esoteric-coteries-nudges-nerd
 >nedr
 The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds.
 \\
-#ttc-table-of-esoteric-coteries-nudges-nerds
+#testcase-table-of-esoteric-coteries-nudges-nerds
 >nersd
 The nerds are a little obnoxious, but they've had people trying to change them all their life. You may be better off ASKing the nerds.
 \\
-#ttc-table-of-esoteric-coteries-nudges-dorks
+#testcase-table-of-esoteric-coteries-nudges-dorks
 >dorsk
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
 \\
-#ttc-table-of-esoteric-coteries-nudges-geeks
+#testcase-table-of-esoteric-coteries-nudges-geeks
 >geesk
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
 \\
-#ttc-table-of-esoteric-coteries-nudges-dork
+#testcase-table-of-esoteric-coteries-nudges-dork
 >dokr
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
 \\
-#ttc-table-of-esoteric-coteries-nudges-geek
+#testcase-table-of-esoteric-coteries-nudges-geek
 >geke
 Nah, they know what's what. They're not dorks or geeks but nerds. You can ask them about stuff, and they'll know more.
 \\
-#ttc-table-of-esoteric-coteries-nudges-asknerds
+#testcase-table-of-esoteric-coteries-nudges-asknerds
 >asknersd
 The nerds look at you, then remark they can't decipher THAT. But maybe if you rearranged things a bit...
 \\
-#ttc-table-of-esoteric-coteries-nudges-asknerd
+#testcase-table-of-esoteric-coteries-nudges-asknerd
 >asknedr
 "You can ask us all!" one nerd blurts. "We can pool our collective knowledge in a data cloud and stuff or something!"
 \\
-#ttc-table-of-esoteric-coteries-nudges-memo
+#testcase-table-of-esoteric-coteries-nudges-memo
 >meom
 Oh no. You'd change it for the worse. And the nerds would be mad.
 \\
-#ttc-table-of-esoteric-coteries-nudges-tote
+#testcase-table-of-esoteric-coteries-nudges-tote
 >toet
 Oh no. You'd change it for the worse. And the nerds would be mad.
 \\
-#ttc-table-of-esoteric-coteries-nudges-tome
+#testcase-table-of-esoteric-coteries-nudges-tome
 >toem
 Oh no. You'd change it for the worse. And the nerds would be mad.
 
@@ -1884,14 +1884,14 @@ DEBUG INFO: Cert-text: -------S.
 >switch emitter
 by one point
 \\
-#ttc-table-of-tulip-acquisition-methods-1
+#testcase-table-of-tulip-acquisition-methods-1
 >alts
 --the other ways to get the tulip are to ASK NERDS ABOUT DARKNESS or OPEN NOISE BAG in the Esoteric Coteries after getting the begonias.
 >undo
 >undo
 
 @ask
-#ttc-table-of-matched-topic-responses-nerds-darkness
+#testcase-table-of-matched-topic-responses-nerds-darkness
 
 >ask nerds about darkness
 }}SCORE++
@@ -1913,7 +1913,7 @@ The signers' ingress is reinforced. The nerds made sure it was protected against
 You got something from the nerds. They've probably had enough of you.
 
 @gn
-#ttc-table-of-nowheres-undesired-underside
+#testcase-table-of-nowheres-undesired-underside
 >in
 A hotel is west, a camp is north, the signers' ingress leads east, and some sort of terminal is south. But there are no special exits or clear way INSIDE.
 
@@ -1929,11 +1929,11 @@ A hotel is west, a camp is north, the signers' ingress leads east, and some sort
 No need to put the sensor to sleep now you got what you want.
 
 @nud
-#+ttc-table-of-undesired-underside-nudges-metallic
+#+testcase-table-of-undesired-underside-nudges-metallic
 >metallci
 You got to the Esoteric Coteries. You don't need any tricks like that.
 \\
-#+ttc-table-of-undesired-underside-nudges-signer
+#+testcase-table-of-undesired-underside-nudges-signer
 >signre
 You got to the Esoteric Coteries. You don't need any tricks like that.
 
@@ -1956,7 +1956,7 @@ The only way to exit is north, so let's go that way.
 The only way you seem to be able to go is north to Undesired Underside.
 
 @nud
-#ttc-table-of-elm-train-terminal-nudges-cafe
+#testcase-table-of-elm-train-terminal-nudges-cafe
 >caef
 The cafe face can't transform into anything.
 \\
@@ -2019,71 +2019,71 @@ The number of liars the rails would create would be shocking.
 >lira
 But you're nowhere near Turkey or Lebanon or Syria. Or Italy or Israel, which don't use lira any more anyway. Plus, you don't need money.
 \\
-#ttc-table-of-elm-train-terminal-nudges-tramline
+#testcase-table-of-elm-train-terminal-nudges-tramline
 >tramline
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#+ttc-table-of-metros-nudges-tulip
+#+testcase-table-of-metros-nudges-tulip
 >ulipt
 The tulip is handy as-is. It gives light. You can't ask for much more.
 \\
-#ttc-table-of-elm-train-terminal-nudges-lairs
+#testcase-table-of-elm-train-terminal-nudges-lairs
 >laisr
 You need to fix the rails electronically.
 \\
-#ttc-table-of-elm-train-terminal-nudges-lair
+#testcase-table-of-elm-train-terminal-nudges-lair
 >lari
 You need to fix the rails electronically.
 \\
-#ttc-table-of-elm-train-terminal-nudges-track
+#testcase-table-of-elm-train-terminal-nudges-track
 >trakc
 You need to fix the rails electronically.
 \\
-#ttc-table-of-elm-train-terminal-nudges-tracks
+#testcase-table-of-elm-train-terminal-nudges-tracks
 >tracsk
 You need to fix the rails electronically.
 \\
-#ttc-table-of-elm-train-terminal-nudges-psa
+#testcase-table-of-elm-train-terminal-nudges-psa
 >aps
 Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road.
 \\
-#ttc-table-of-elm-train-terminal-nudges-pass
+#testcase-table-of-elm-train-terminal-nudges-pass
 >apss
 Vandalism! Hmph. Yes, Yorpwald should be safe for civil disobedience. But that's down the road.
 \\
-#ttc-table-of-elm-train-terminal-nudges-art
+#testcase-table-of-elm-train-terminal-nudges-art
 >art
 There aren't many ways to look at THIS art, and none are constructive, you sense.
 \\
-#ttc-table-of-elm-train-terminal-nudges-faded
+#testcase-table-of-elm-train-terminal-nudges-faded
 >fadde
 The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
 \\
-#ttc-table-of-elm-train-terminal-nudges-fad
+#testcase-table-of-elm-train-terminal-nudges-fad
 >adf
 The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
 \\
-#ttc-table-of-elm-train-terminal-nudges-deda
+#testcase-table-of-elm-train-terminal-nudges-deda
 >edad
 The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
 \\
-#ttc-table-of-elm-train-terminal-nudges-fadedad
+#testcase-table-of-elm-train-terminal-nudges-fadedad
 >fadedda
 The ad and the PSA are just silly. What's to the east is quite possibly evil, so you need to find your way there
 \\
-#ttc-table-of-elm-train-terminal-nudges-none
+#testcase-table-of-elm-train-terminal-nudges-none
 >noen
 It's not just that it's neon, it's that it's a pig.
 \\
-#ttc-table-of-elm-train-terminal-nudges-pgi
+#testcase-table-of-elm-train-terminal-nudges-pgi
 >pgi
 It's not just that it's a pig, it's that it's neon.
 \\
-#ttc-table-of-readables-neon-pig
+#testcase-table-of-readables-neon-pig
 >read neon pig
 Apparently the neon pig is a creation of one INPENGO.
 \\
-#ttc-table-of-metros-spechelp-neon-pig
+#testcase-table-of-metros-spechelp-neon-pig
 >openign
 The neon pig blinks as if in last-ditch defiance.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the neon pig. Keep at it.
@@ -2095,12 +2095,12 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
-#ttc-table-of-metros-anagrams-neon-pig
+#testcase-table-of-metros-anagrams-neon-pig
 >xx neon pig
 Your vision blurs a bit, and instead you see an opening where the pig is.
 
 @gn
-#ttc-table-of-nowheres-elm-train-terminal
+#testcase-table-of-nowheres-elm-train-terminal
 >e
 There may be a rail lair that way, but it's behind a live rail in the darkness. You'd touch it before you got there.
 >s
@@ -2129,7 +2129,7 @@ DEBUG INFO: Cert-text: ---N--G.
 {$SFIXMAX}
 
 @nud
-#ttc-table-of-readables-controls
+#testcase-table-of-readables-controls
 >read controls
 You notice that it's underwritten (in red) by ORTON LSC, whoever they are.
 \\
@@ -2137,19 +2137,19 @@ You notice that it's underwritten (in red) by ORTON LSC, whoever they are.
 >tar
 That'd be neat, make the wall sticky so you could climb and deal with that opening you made...but you might get stuck to it, too. Need something clingy but less gooey.
 \\
-#ttc-table-of-elm-train-terminal-nudges-nope
+#testcase-table-of-elm-train-terminal-nudges-nope
 >noep
 You already transformed the neon pig to the gin-nope opening. Might be better to see if anything fits there.
 \\
-#ttc-table-of-metros-done-rejects-gin-nope-opening
+#testcase-table-of-metros-done-rejects-gin-nope-opening
 >openign
 You don't need to close up the opening. Maybe put something there.
 \\
-#ttc-table-of-elm-train-terminal-nudges-gin
+#testcase-table-of-elm-train-terminal-nudges-gin
 >gni
 You already transformed the neon pig to the gin-nope opening. Might be better to see if anything fits there.
 \\
-#ttc-table-of-elm-train-terminal-nudges-recess
+#testcase-table-of-elm-train-terminal-nudges-recess
 >recses
 You've already made nothing out of something, and instead of reversing that, you may need to put something in the opening.
 
@@ -2187,18 +2187,18 @@ You see yourself (finally) walking east from Elm Train Terminal now that you hav
 {$SFIXMAX}
 
 @nud
-#+ttc-table-of-readables-controls
+#+testcase-table-of-readables-controls
 >read controls
 The opening isn't really an opening any more, what with the controls fitting in nicely.
 \\
-#+ttc-table-of-elm-train-terminal-nudges-gin
+#+testcase-table-of-elm-train-terminal-nudges-gin
 >gni
 You already transformed the neon pig to the gin-nope opening. And you put the controls in. Better not do any more.
 \\
 >openign
 You don't need to close up the opening. The controls are in, and they fill it well enough.
 \\
-#+ttc-table-of-elm-train-terminal-nudges-recess
+#+testcase-table-of-elm-train-terminal-nudges-recess
 >recses
 You've already made nothing out of something, and instead of reversing that, you did what you needed.
 
@@ -2234,7 +2234,7 @@ You stare into the blue lube for a bit, then look around. The blue glow pulses w
 No going back now. You came here to defeat the beats.
 
 @gn
-#ttc-table-of-nowheres-bassy-abyss
+#testcase-table-of-nowheres-bassy-abyss
 >n
 You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp headache. It's an aligns signal, and it must be encompassing the whole abyss. It turns you back to face the beats.
 \\
@@ -2248,11 +2248,11 @@ You try to flee, but there's no way back to Elm Train Terminal. You feel a sharp
 There's no way out or back. But you should have what you need to defeat the beats.
 
 @nud
-#ttc-table-of-bassy-abyss-nudges-aligns
+#testcase-table-of-bassy-abyss-nudges-aligns
 >aligsn
 No use messing with the aligns signal when you need to focus on the beats.
 \\
-#ttc-table-of-bassy-abyss-nudges-align
+#testcase-table-of-bassy-abyss-nudges-align
 >aling
 No use messing with the aligns signal when you need to focus on the beats.
 \\
@@ -2273,15 +2273,15 @@ You don't need the siren's volume or the beats' volume to have risen. Oh, no.
 >bates
 You don't need to deal with a knife-wielding psycho along with the beats.
 \\
-#ttc-table-of-bassy-abyss-nudges-bassy
+#testcase-table-of-bassy-abyss-nudges-bassy
 >bassy
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 \\
-#ttc-table-of-metros-nudges-beta
+#testcase-table-of-metros-nudges-beta
 >ebta
 This racket isn't just one beat.
 \\
-#ttc-table-of-metros-spechelp-siren
+#testcase-table-of-metros-spechelp-siren
 >resni
 The siren continues to blind you--like it's throwing dust in your eyes.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the siren. Keep at it.
@@ -2293,7 +2293,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 @hin
-#ttc-table-of-metros-anagrams-siren
+#testcase-table-of-metros-anagrams-siren
 >xx siren
 Your vision blurs a bit, and instead you see some resin.
 
@@ -2345,15 +2345,15 @@ You can't see anything like that here. If you're trying to view the room, L or L
 Time for that after you get your hands dirty and slay the final enemy, here.
 
 @nud
-#ttc-table-of-bassy-abyss-nudges-resin
+#testcase-table-of-bassy-abyss-nudges-resin
 >resni
 The dust is dust now.
 \\
-#ttc-table-of-metros-done-rejects-resin
+#testcase-table-of-metros-done-rejects-resin
 >resni
 The dust is dust now.
 \\
-#ttc-table-of-metros-spechelp-beats
+#testcase-table-of-metros-spechelp-beats
 >betsa
 The beats shift up for a second.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the beats. Keep at it.
@@ -2379,23 +2379,23 @@ The blue glow pulses with the beast's roars.
 {$SFIXMAX}
 
 @nud
-#ttc-table-of-metros-done-rejects-beast
+#testcase-table-of-metros-done-rejects-beast
 >betsa
 You've changed the beats to something tangible, physically beatable.
 \\
-#+ttc-table-of-bassy-abyss-nudges-aligns
+#+testcase-table-of-bassy-abyss-nudges-aligns
 >aligsn
 No use messing with the aligns signal when you need to focus on the beast.
 
 @ask
-#ttc-table-of-unmatched-topic-responses-beast
+#testcase-table-of-unmatched-topic-responses-beast
 >ask beast about abcd
 It cares not for conversation, only noise.
 
 >take sword
 
 @nud
-#ttc-table-of-metros-nudges-hilt
+#testcase-table-of-metros-nudges-hilt
 >ilth
 The hilt serves a purpose, and besides, there's not much to change it to.
 
@@ -2413,8 +2413,8 @@ The hilt serves a purpose, and besides, there's not much to change it to.
 While the other regions are linear, the Metros has five paths based on the flowers you choose from Fo' Real Florae Fare, Lo (two ways) and how you get the tulip (three ways). One way of getting the tulip requires a specific flower.
 You could have gotten the begonias from Fo' Real Florae Fare, Lo.
 \\
-#ttc-table-of-tulip-acquisition-methods-2
-#ttc-table-of-tulip-acquisition-methods-3
+#testcase-table-of-tulip-acquisition-methods-2
+#testcase-table-of-tulip-acquisition-methods-3
 --the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it in Obtains/Boastin' Bastion, then using it again in the Esoteric Coteries.
 
 >attack beast
@@ -2423,7 +2423,7 @@ You could have gotten the begonias from Fo' Real Florae Fare, Lo.
 /^Trips Strip
 
 >score
-You have scored {SCORE} out of {MAX} total points for the Metros region.
+You have scored {#SCORE} out of {#MAX} total points for the Metros region.
 Won now: the Ordeal Loader and Metros regions.
 
 @nud
@@ -2446,11 +2446,11 @@ I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store
 I'm sorry, Mario (or Moira,) but the kitchen is in another castle. I mean, store.
 
 @nud
-#ttc-table-of-metros-nudges-noise
+#testcase-table-of-metros-nudges-noise
 >noies
 Even if you could do anything, that'd rip the noise bag open.
 \\
-#ttc-table-of-metros-nudges-bag
+#testcase-table-of-metros-nudges-bag
 >bga
 Even if you could do anything, that'd rip the noise bag open.
 

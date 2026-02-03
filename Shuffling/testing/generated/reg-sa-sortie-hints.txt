@@ -49,7 +49,7 @@ You're already here. Or there. The precise grammar's neither here nor there.
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the dial for a few seconds.
 
-#ttc-table-of-nowheres-trap-part
+#testcase-table-of-nowheres-trap-part
 >w
 You can't get your bearings long enough to lurch at or through an exit. You're getting hit with a lot of G's.
 Maybe if you could figure out which directions the exits should be, you could figure the number to set the dial to.
@@ -70,13 +70,13 @@ You currently have 1 out of 27 total points for the Sortie region. Your minimum 
 
 You see yourself patting your stomach.
 
-#ttc-table-of-sortie-anagrams-t-n
+#testcase-table-of-sortie-anagrams-t-n
 DEBUG: great grate being objhinted.
 >xx great grate
 You let your eyes wander.
 Your vision swirls, and you see a kitchen.
 
-#ttc-table-of-nowheres-the-nick
+#testcase-table-of-nowheres-the-nick
 >e
 You're trapped. If only the nick could be changed to something more to your taste.
 
@@ -122,33 +122,33 @@ You reopen and peer on. The grist and cake pan are still in the fridge.
 >xx
 Nothing really sticks out. You may have to XX something specific.
 
-#ttc-table-of-sortie-anagrams-grist
+#testcase-table-of-sortie-anagrams-grist
 >xx grist
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs a bit, and instead you see grits.
 
-#ttc-table-of-sortie-anagrams-cake-pan
+#testcase-table-of-sortie-anagrams-cake-pan
 >xx cake pan
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs a bit, and instead you see a pancake.
 
-#ttc-table-of-sortie-anagrams-cathouse
+#testcase-table-of-sortie-anagrams-cathouse
 >xx cathouse
 Your vision blurs a bit, and instead you see large packet of HOTSAUCE.
 
-#ttc-table-of-sortie-anagrams-tall-trio
+#testcase-table-of-sortie-anagrams-tall-trio
 >xx tall trio
 Your vision blurs a bit, and instead you see a tortilla.
 
-#ttc-table-of-sortie-anagrams-cult-tee
+#testcase-table-of-sortie-anagrams-cult-tee
 >xx cult tee
 Your vision blurs a bit, and instead you see a head of lettuce.
 
-#ttc-table-of-sortie-anagrams-skate
+#testcase-table-of-sortie-anagrams-skate
 >xx skate
 Your vision blurs a bit, and instead you see cut-up steak.
 
-#ttc-table-of-sortie-anagrams-spearman
+#testcase-table-of-sortie-anagrams-spearman
 >xx spearman
 Your vision blurs a bit, and instead you see a pile of grated Parmesan cheese.
 
@@ -174,14 +174,14 @@ by one point
 You see yourself making a meal, then dressing up to go out. Funny, though. The meal disappears without you eating it. You can't see what it becomes.
 >undo
 
-#ttc-table-of-nowheres-kitchen
+#testcase-table-of-nowheres-kitchen
 >w
 Mum, dud mud blocks your way west. You can only go south to Trap Part or east
 !to Stiller Trellis.
 #trap part has no test case
 >s
 
-#+ttc-table-of-nowheres-trap-part
+#+testcase-table-of-nowheres-trap-part
 >w
 Mum, dud mud blocks your way west. You can only go north to the kitchen or east.
 >undo
@@ -270,7 +270,7 @@ DEBUG: taco being objhinted.
 >score
 You currently have 10 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-sortie-anagrams-taco
+#testcase-table-of-sortie-anagrams-taco
 >xx taco
 Your vision blurs a bit, and instead you see a coat.
 
@@ -295,7 +295,7 @@ You currently have 11 out of 27 total points for the Sortie region. You have fou
 
 DEBUG: warts being objhinted.
 
-#+ttc-table-of-nowheres-kitchen
+#+testcase-table-of-nowheres-kitchen
 >w
 >w
 Mum, dud mud blocks your way west. You can only go south to Trap Part or east to Stiller Trellis.
@@ -304,7 +304,7 @@ Mum, dud mud blocks your way west. You can only go south to Trap Part or east to
 >s
 /^Room
 
-#ttc-table-of-sortie-anagrams-cask
+#testcase-table-of-sortie-anagrams-cask
 >xx cask
 Your vision blurs a bit, and instead you see a sack.
 
@@ -317,7 +317,7 @@ Your score has just gone up by one point.
 >cask
 !by one point
 
-#+ttc-table-of-sortie-anagrams-cask
+#+testcase-table-of-sortie-anagrams-cask
 >xx cask
 You already changed the cask to a sack, and if you need to do so again, you won't forget.
 >undo
@@ -326,13 +326,13 @@ You already changed the cask to a sack, and if you need to do so again, you won'
 >score
 You currently have 12 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-sortie-anagrams-sack
+#testcase-table-of-sortie-anagrams-sack
 >xx sack
 After some thought, that seems like it'd be a waste, since you know what it was. It may be worth changing the sack back, depending on what you want to carry, though.
 
 You see your face clear again, pleased you reversed the warts.
 
-#ttc-table-of-sortie-anagrams-warts
+#testcase-table-of-sortie-anagrams-warts
 >xx warts
 You can't see them, but you remember the palindrome "No, too stupid a fad. I put soot on ..."
 
@@ -352,7 +352,7 @@ You stare into the blue lube for a bit, then look around. The whole room seems l
 
 You see yourself smiling at your feet with pride!
 
-#ttc-table-of-sortie-anagrams-hoses
+#testcase-table-of-sortie-anagrams-hoses
 >xx hoses
 Your vision blurs a bit, and instead you see shoes.
 
@@ -370,7 +370,7 @@ There's nothing else, here, than the general glow.
 >score
 You currently have 14 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-sortie-anagrams-m2
+#testcase-table-of-sortie-anagrams-m2
 >xx
 Your vision swirls, and you see a moor.
 
@@ -401,7 +401,7 @@ Your score has just gone up by one point.
 
 You see a rough but friendly fellow scaring Pat away.
 
-#ttc-table-of-sortie-anagrams-anapest
+#testcase-table-of-sortie-anagrams-anapest
 DEBUG: anapest being objhinted.
 >xx
 Your vision blurs a bit, and instead you see a peasant.
@@ -418,7 +418,7 @@ You don't need to walk anywhere else. You can only go back to the ROOM.
 >angle
 You stare into the blue lube for a bit, then look around. The whole moor seems lit up, and the glow pulses with the anapest beat of the poem. You notice a weird haze around the roadblock for a few seconds.
 
-#ttc-table-of-nowheres-moor
+#testcase-table-of-nowheres-moor
 >s
 The rime-mire all round is too dangerous, but nothing's stopping you from leaving (opposite) the way you came, back to the ROOM.
 
@@ -451,7 +451,7 @@ The moor sways a bit. You do some brief mental calculation. There's no third pla
 >peasant
 Your score has just gone up by one point.
 
-#ttc-table-of-sortie-anagrams-r2
+#testcase-table-of-sortie-anagrams-r2
 >xx
 You have a very non-magical vision of the room you were in before you jumped to the moor.
 DEBUG: peasant being objhinted.
@@ -493,14 +493,14 @@ You see the haywall vanishing.
 DEBUG: scraped wall being objhinted.
 You stuffed the hay in the wall. What does the gadget offer? (+)
 
-#ttc-table-of-nowheres-stiller-trellis
+#testcase-table-of-nowheres-stiller-trellis
 >n
 Mum, dud mud blocks your way north. You can only go west to Kitchen or south to Room.
 
 >score
 You currently have 18 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-sortie-anagrams-scraped-wall
+#testcase-table-of-sortie-anagrams-scraped-wall
 >xx haywall
 You imagine the scraped wall, already being a haywall, becomes a haywall.
 
@@ -509,7 +509,7 @@ Your score has just gone up by one point.
 
 You see yourself building a huge structure in the moor without saying anything.
 
-#+ttc-table-of-nowheres-stiller-trellis
+#+testcase-table-of-nowheres-stiller-trellis
 >n
 Mum, dud mud blocks your way north. You can only go west to Kitchen or south to Room or, since you opened the hallway, east.
 
@@ -539,18 +539,18 @@ The only way to exit is west, so let's go that way.
 >exits
 The only way you seem to be able to go is west to Stiller Trellis.
 
-#ttc-table-of-nowheres-sacred-cedars
+#testcase-table-of-nowheres-sacred-cedars
 >n
 There is no other way except back west. Anyway, you might find scared cadres you aren't equipped to deal with, or scarce dreads.
 
-#+ttc-table-of-sortie-anagrams-sack
+#+testcase-table-of-sortie-anagrams-sack
 >xx sack
 After some thought, that seems like it'd be a waste, since you know what it was. It may be worth changing the sack back, depending on what you want to carry, though.
 
 >cask
 The sack stiffens, rises and becomes less blobby. It's the cask again, nice and upright.
 
-#+ttc-table-of-sortie-anagrams-cask
+#+testcase-table-of-sortie-anagrams-cask
 >xx cask
 You already changed the cask to a sack, and you don't see any reason to do so again.
 
@@ -566,19 +566,19 @@ You can't pour the oils anywhere in this enclosed area. Try going back to the mo
 
 >s
 
-#ttc-table-of-nowheres-roomroom
+#testcase-table-of-nowheres-roomroom
 >s
 Mum, dud mud blocks your way south. You can only go west to Trap Part or north to Stiller Trellis.
 
-#ttc-table-of-sortie-anagrams-oils
+#testcase-table-of-sortie-anagrams-oils
 >xx oils
 Your vision blurs a bit, and instead you see soil, then a silo.
 
-#ttc-table-of-sortie-anagrams-smilies
+#testcase-table-of-sortie-anagrams-smilies
 >xx smilies
 Your vision blurs a bit, and instead you see a missile.
 
-#ttc-table-of-sortie-anagrams-poem
+#testcase-table-of-sortie-anagrams-poem
 >xx poem
 you see the smilies flying off the page, then the poem folding and becoming a panel.
 
@@ -590,7 +590,7 @@ you see the smilies flying off the page, then the poem folding and becoming a pa
 >missile
 Your score has just gone up by one point.
 
-#+ttc-table-of-sortie-anagrams-poem
+#+testcase-table-of-sortie-anagrams-poem
 >xx poem
 you see the poem folding and becoming a panel.
 
@@ -601,7 +601,7 @@ You currently have 20 out of 27 total points for the Sortie region. You have fou
 (the poem)
 You fold the paper, and it looks sort of like a paper plane.
 
-#+ttc-table-of-sortie-anagrams-poem
+#+testcase-table-of-sortie-anagrams-poem
 >xx poem
 You imagine a panel of experts critiquing the poem, before it was folded. Hm. You don't need THAT sort of panel.
 
@@ -623,7 +623,7 @@ Your score has just gone up by one point.
 >score
 You currently have 22 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-sortie-anagrams-roadblock
+#testcase-table-of-sortie-anagrams-roadblock
 >xx roadblock
 Your vision blurs a bit, and instead you see a black door.
 
@@ -658,7 +658,7 @@ You hear a creaking above as you exit. You see the trellis's archings crashing o
 
 /^Crashing Archings
 
-#+ttc-table-of-nowheres-stiller-trellis
+#+testcase-table-of-nowheres-stiller-trellis
 >n
 Mum, dud mud blocks your way north. You can only go west to Kitchen or south to Room.
 
@@ -678,7 +678,7 @@ You can't go back there.
 
 >moor
 
-#ttc-table-of-sortie-anagrams-oils2
+#testcase-table-of-sortie-anagrams-oils2
 >xx oils
 Your vision blurs a bit, and instead you see a silo.
 
@@ -704,11 +704,11 @@ You schlep the missile through the door. You hear some mechanics and whizzing. A
 
 You see yourself pointing at one of the buttons before it changes. Then you push it and hear a roar.
 
-#ttc-table-of-sortie-anagrams-trees-button
+#testcase-table-of-sortie-anagrams-trees-button
 >xx trees
 Your vision blurs a bit, and instead you see a steer button.
 
-#ttc-table-of-sortie-anagrams-hoots-button
+#testcase-table-of-sortie-anagrams-hoots-button
 >xx hoots
 Your vision blurs a bit, and instead you see a shoot button.
 

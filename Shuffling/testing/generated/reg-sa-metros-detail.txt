@@ -25,13 +25,13 @@ You can't see anything like that here. If you're trying to view the room, L or L
 >e
 A reading (well, a bunch of papers) has blown in since last time you were here. It's soggy from the drainage where it landed.
 
-#ttc-table-of-kibitzes-drainage
+#testcase-table-of-kibitzes-drainage
 >rc drainage
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRBBBGB (R = red, G = green, B = blue).
 The gadget beeps once. A series of lights comes across: RRRRRRRR (R = red, G = green).
 Hmm, you may need a lot to figure this. Maybe if you're stuck, you can combine this with a reading.
 
-#ttc-table-of-kibitzes-reading
+#testcase-table-of-kibitzes-reading
 >rc a reading
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: RBBBBBBG.
 The gadget beeps once. A series of lights comes across: RRRRRRRR.
@@ -56,14 +56,14 @@ DEBUG INFO: Cert-text: --------.
 >undo
 >undo
 
-#ttc-table-of-unmatched-topic-responses-beats
+#testcase-table-of-unmatched-topic-responses-beats
 >ask beats about aabbccdd
 Dude! They're clearly busy bringing sexy back. You text adventurers don't know how to act.
 
 #first, take care of stuff that breaks our test pattern e.g. clue the drainage
 >gonear florae
 
-#ttc-table-of-unmatched-topic-responses-faeries
+#testcase-table-of-unmatched-topic-responses-faeries
 >ask faeries about xyzzy
 "You must bring a powerful flower up! For our magic garden-and-a-third! There must be one in the garbage in this city! All we can make with the beats pounding are freesias, and we are getting sick of those!" they exclaim. It will probably be tougher than getting a sore and changing it to a rose.
 >abstract gardenia to underside
@@ -74,7 +74,7 @@ Dude! They're clearly busy bringing sexy back. You text adventurers don't know h
 >undo
 >banish gardenia
 
-#ttc-table-of-matched-thing-responses-faeries-gardenia
+#testcase-table-of-matched-thing-responses-faeries-gardenia
 >ask faeries about gardenia
 You don't have a gardenia, yet. But you can find or make one.
 >undo
@@ -94,49 +94,49 @@ You currently have 1 out of 18 total points for the Metros region. Your minimum 
 
 #mostly skipping the garrison right now to get the tomato from the bile libe
 
-#ttc-table-of-unmatched-topic-responses-deadbeat
+#testcase-table-of-unmatched-topic-responses-deadbeat
 >ask deadbeat about blozhko
 He mumbles something about chillin' with his ill chin and how you're probably down with the man's anthems and aligned with those yuppies to the north, glancing furtively at the lost corn, and he also complains about nerds down southish, for some reason.
 
-#ttc-table-of-unmatched-thing-responses-deadbeat
+#testcase-table-of-unmatched-thing-responses-deadbeat
 >ask deadbeat about deadbeat
 He mumbles "Mt. Rose Rots Me Moster" and giggles stupidly. You probably won't learn much from him except about instruments of subversion.
 
 >ask deadbeat about beats
 "They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, you square, yo."
 
-#ttc-table-of-matched-topic-responses-deadbeat-slorntco
+#testcase-table-of-matched-topic-responses-deadbeat-slorntco
 >ask deadbeat about slorntco
 "Organized capital is so repressive, dude."
 
-#ttc-table-of-matched-thing-responses-deadbeat-nerds
+#testcase-table-of-matched-thing-responses-deadbeat-nerds
 >ask deadbeat about nerds
 The deadbeat starts shaking as he rattles off how the nerds east of the Underside have forgotten their roots.
 
-#ttc-table-of-matched-thing-responses-deadbeat-faeries
+#testcase-table-of-matched-thing-responses-deadbeat-faeries
 >ask deadbeat about faeries
 The deadbeat doesn't believe in magic, now. But he did as a kid.
 
-#ttc-table-of-matched-thing-responses-deadbeat-red-bull-burdell
+#testcase-table-of-matched-thing-responses-deadbeat-red-bull-burdell
 >ask deadbeat about red bull burdell
 "He is oppressive, man, but he is just a symptom of disparity and malaise."
 
-#ttc-table-of-matched-thing-responses-deadbeat-poses-posse
+#testcase-table-of-matched-thing-responses-deadbeat-poses-posse
 >ask deadbeat about poses posse
 The deadbeat starts up some nonsense pseudo-sociological mumblings.
 
-#ttc-table-of-matched-thing-responses-deadbeat-lost-corn
+#testcase-table-of-matched-thing-responses-deadbeat-lost-corn
 >ask deadbeat about lost corn
 "Hey, Man, like, how do we know you don't, like, like the Man, man? Hey? Hey?"
 
-#ttc-table-of-matched-thing-responses-deadbeat-termite-emitter
+#testcase-table-of-matched-thing-responses-deadbeat-termite-emitter
 >ask deadbeat about termite emitter
 "What? Do you know something?" he looks furtively around, more convinced than ever you're with The Man, man.
 
 >w
 /^Bile Libe
 
-#ttc-table-of-kibitzes-motto
+#testcase-table-of-kibitzes-motto
 >rc motto
 The gadget beeps once. A series of lights comes across: RRRRGG.
 Most of the screen goes blue. Then a green dot and red dot bounce left and right across the gadget screen until they stabilize: BBRGBB.
@@ -168,26 +168,26 @@ You currently have 2 out of 18 total points for the Metros region. Your minimum 
 
 >e
 
-#ttc-table-of-matched-thing-responses-faeries-tomato
+#testcase-table-of-matched-thing-responses-faeries-tomato
 >ask faeries about tomato
 "Such a putrid plant! Keep it away from us!"
 
-#ttc-table-of-matched-thing-responses-faeries-clover
+#testcase-table-of-matched-thing-responses-faeries-clover
 >ask faeries about clover
 "Just weeds! Not useful for our sophisticated magic. Maybe useful for mere human magic, though."
 
-#ttc-table-of-matched-thing-responses-faeries-heaths
+#testcase-table-of-matched-thing-responses-faeries-heaths
 >ask faeries about heaths
 "We trade in flowers! Flowers we have for flowers we want! What do you have?"
 
-#ttc-table-of-matched-thing-responses-faeries-merchandise
+#testcase-table-of-matched-thing-responses-faeries-merchandise
 >ask faeries about merchandise
 
-#ttc-table-of-matched-thing-responses-faeries-nerds
+#testcase-table-of-matched-thing-responses-faeries-nerds
 >ask faeries about nerds
 The fairies buzz and give superior sniffs.
 
-#ttc-table-of-matched-thing-responses-faeries-deadbeat
+#testcase-table-of-matched-thing-responses-faeries-deadbeat
 >ask faeries about deadbeat
 The fairies buzz and give superior sniffs.
 >w
@@ -196,7 +196,7 @@ The fairies buzz and give superior sniffs.
 >w
 /^The Ol' Hotel
 
-#ttc-table-of-unmatched-topic-responses-night-thing
+#testcase-table-of-unmatched-topic-responses-night-thing
 >ask night thing about abcd
 "NYURGH! HUNGRY!" Easier to argue a grue away.
 
@@ -216,11 +216,11 @@ You currently have 3 out of 18 total points for the Metros region. Your minimum 
 >n
 /^Obtains/Boastin' Bastion
 
-#ttc-table-of-matched-thing-responses-poses-posse-dry-cake
+#testcase-table-of-matched-thing-responses-poses-posse-dry-cake
 >ask poses posse about dry cake
 Someone puts their hand to their lips. Someone else shakes their head. You don't DESERVE that cake, according to them.
 
-#ttc-table-of-unmatched-topic-responses-poses-posse
+#testcase-table-of-unmatched-topic-responses-poses-posse
 >ask poses posse about abcd
 You get a few pinched, strained smiles, but no actual words. What would they say? "TALKERS STALKER?!"
 
@@ -255,7 +255,7 @@ You take care not to let the cake tear as you pick it up.
 
 >s
 
-#ttc-table-of-matched-thing-responses-deadbeat-beats
+#testcase-table-of-matched-thing-responses-deadbeat-beats
 >ask deadbeat about beats
 "They're nice and all for being an excuse not to work but they're lame and all because it's hard to concentrate for maximized angst. I'm tired of them, dude."
 
@@ -310,19 +310,19 @@ You notice the gadget beeps twice. Hmm. A series of lights comes across: RRRRRRG
 DEBUG INFO: Rect-text: N------G.
 DEBUG INFO: Cert-text: ------A-.
 
-#+ttc-table-of-matched-thing-responses-faeries-tomato
+#+testcase-table-of-matched-thing-responses-faeries-tomato
 >ask faeries about tomato
 "Even humans and monsters must find it revolting!"
 
-#ttc-table-of-unmatched-thing-responses-faeries
+#testcase-table-of-unmatched-thing-responses-faeries
 >ask faeries about counter
 They possess wisdom humans never will, but they don't much want to help you with the physical realm, beyond flowers.
 
-#ttc-table-of-matched-thing-responses-faeries-drainage
+#testcase-table-of-matched-thing-responses-faeries-drainage
 >ask faeries about drainage
 "Perhaps you can turn something in this city into a flower. We are out of ideas. How can drainage become a flower?"
 
-#ttc-table-of-matched-thing-responses-faeries-beats
+#testcase-table-of-matched-thing-responses-faeries-beats
 >ask faeries about beats
 "It is terrible! Our hearing is even more delicate than a clumsy human's. We can do no decent long-term magic with it around."
 
@@ -330,13 +330,13 @@ They possess wisdom humans never will, but they don't much want to help you with
 The faeries buzz around for a bit, peeved at your boldness. "Well, maybe you will do something for us some day."
 The FREE TO FREELOADERS torn cue by the brocade vanishes as you take it. Nice magic touch, that.
 
-#+ttc-table-of-matched-thing-responses-faeries-gardenia
+#+testcase-table-of-matched-thing-responses-faeries-gardenia
 >ask faeries about gardenia
 They see your gardenia and snatch it away before you can offer properly. "Yes! Yes!" They're visibly impressed. "Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need."
 >undo
 >undo
 
-#+ttc-table-of-matched-thing-responses-faeries-gardenia
+#+testcase-table-of-matched-thing-responses-faeries-gardenia
 >ask faeries about gardenia
 They see your gardenia and snatch it away before you can offer properly. "Yes! Yes!" They're visibly impressed. "Flower up! Powerful pure flow! For all floral! Perhaps you are the word smyth who will fulfill the sword myth! We offer a flower of your choice. But only one. And take the brocade, too. Our flowers, or what you make of them, cannot provoke or participate in violence, but they may be able to contain the weapon you need."
 
@@ -358,7 +358,7 @@ The FREE TO FREEDOM FIGHTERS torn cue by the brocade vanishes as you take it. Ni
 
 >give gardenia to faeries
 
-#+ttc-table-of-matched-thing-responses-faeries-heaths
+#+testcase-table-of-matched-thing-responses-faeries-heaths
 >ask faeries about heaths
 "We have faith in you! You will make the city safe to grow flowers again!"
 
@@ -367,19 +367,19 @@ The FREE TO FREEDOM FIGHTERS torn cue by the brocade vanishes as you take it. Ni
 >sheath
 Your score has just gone up by one point.
 
-#ttc-table-of-matched-thing-responses-faeries-begonias
+#testcase-table-of-matched-thing-responses-faeries-begonias
 >ask faeries about begonias
 The faeries have been generous enough.
 
-#ttc-table-of-matched-thing-responses-faeries-sheath
+#testcase-table-of-matched-thing-responses-faeries-sheath
 >ask faeries about sheath
 "It is up to you to use it. We cannot help further."
 
-#ttc-table-of-matched-thing-responses-faeries-noise-bag
+#testcase-table-of-matched-thing-responses-faeries-noise-bag
 >ask faeries about noise bag
 The faeries wonder aloud what sort of magic could conjure a noise bag.
 
-#ttc-table-of-matched-thing-responses-faeries-tulip
+#testcase-table-of-matched-thing-responses-faeries-tulip
 >ask faeries about tulip
 "For human flower magic, not bad at all! We guess."
 
@@ -389,7 +389,7 @@ You currently have 9 out of 18 total points for the Metros region. You have foun
 >take brocade
 "It is the least we can do for you! Thank you for helping us!"
 
-#ttc-table-of-matched-thing-responses-faeries-brocade
+#testcase-table-of-matched-thing-responses-faeries-brocade
 >ask faeries about brocade
 "Do with it what you need."
 >barcode
@@ -437,11 +437,11 @@ The signers' ingress slides open as you go east.
 The signers' ingress slides shut quietly and efficiently.
 /^Esoteric Coteries
 
-#ttc-table-of-unmatched-thing-responses-nerds
+#testcase-table-of-unmatched-thing-responses-nerds
 >ask nerds about deadbeat
 The nerds aren't big on social stuff. They're more about the technical stuff, about showing answers to questions you have. And questions you don't know you have yet.
 
-#ttc-table-of-unmatched-topic-responses-nerds
+#testcase-table-of-unmatched-topic-responses-nerds
 >ask nerds about xyzzy
 "Hm, should we even talk to an outsider about that?"
 "Well, if they found their way in, they can't be THAT dumb!"
@@ -496,39 +496,39 @@ One nerd dumps out his shoe. "Erks! Sand!" He looks red-faced at such a public d
 >ask about xyzzy
 Duhs won't shut down. Still, the nerds seem to be having fun, so they won't mind if you start over asking about stuff.
 
-#ttc-table-of-matched-topic-responses-nerds-dorks
+#testcase-table-of-matched-topic-responses-nerds-dorks
 >ask nerds about dorks
 They snicker knowingly. They assure you Karkdoss is the worst, if you want to ask dorks for any help.
 
-#ttc-table-of-matched-topic-responses-nerds-karkdoss
+#testcase-table-of-matched-topic-responses-nerds-karkdoss
 >ask nerds about karkdoss
 They snicker knowingly. You wonder if there is a Karkdoss, and if so, if they really think you should ask dorks.
 
-#ttc-table-of-matched-thing-responses-nerds-beats
+#testcase-table-of-matched-thing-responses-nerds-beats
 >ask nerds about beats
 "Anyone can be smart enough to build noise canceling homes to get rid of the beats!"
 
-#ttc-table-of-matched-thing-responses-nerds-controls
+#testcase-table-of-matched-thing-responses-nerds-controls
 >ask nerds about controls
 "Oh! These are simple controls! You don't even need to know about induction and charges and anything. Just slap them in where there's something missing. Pf, barely worth the time to ASK NERDS about."
 
-#ttc-table-of-matched-thing-responses-nerds-deadbeat
+#testcase-table-of-matched-thing-responses-nerds-deadbeat
 >ask nerds about deadbeat
 The nerds aren't big on social stuff. They're more about the technical stuff, about showing answers to questions you have. And questions you don't know you have yet.
 
-#ttc-table-of-matched-thing-responses-nerds-faeries
+#testcase-table-of-matched-thing-responses-nerds-faeries
 >ask nerds about faeries
 The nerds assure you science is better than magic.
 
-#ttc-table-of-matched-thing-responses-nerds-red-bull-burdell
+#testcase-table-of-matched-thing-responses-nerds-red-bull-burdell
 >ask nerds about red bull burdell
 "Sometimes Yorpwald is so dumb it deserves a thousand years of his rule. Not that he deserves to rule for a thousand years. We need someone smart enough to ASK NERDS the right thing to help dethrone him!"
 
-#ttc-table-of-matched-thing-responses-nerds-tracks
+#testcase-table-of-matched-thing-responses-nerds-tracks
 >ask nerds about tracks
 "We wouldn't touch it, that's for sure. I mean, even if we could see where it went."
 
-#ttc-table-of-matched-thing-responses-nerds-tulip
+#testcase-table-of-matched-thing-responses-nerds-tulip
 >ask nerds about tulip
 "We've got plenty of light here. You can have it, if you know what to ask us about. And if the tulip would help."
 
@@ -545,7 +545,7 @@ As the nerds ask other questions, the gadget lights up, and you notice RRGRRRGR,
 DEBUG INFO: Rect-text: D------S.
 DEBUG INFO: Cert-text: -------S.
 
-#ttc-table-of-matched-topic-responses-nerds-darkness
+#testcase-table-of-matched-topic-responses-nerds-darkness
 
 >ask nerds about darkness
 "What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats."
@@ -617,7 +617,7 @@ You currently have 16 out of 18 total points for the Metros region. You have fou
 >score
 You currently have 17 out of 18 total points for the Metros region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-unmatched-topic-responses-beast
+#testcase-table-of-unmatched-topic-responses-beast
 >ask beast about abcd
 It cares not for conversation, only noise.
 

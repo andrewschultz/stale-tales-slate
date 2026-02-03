@@ -92,13 +92,13 @@ Your score has just gone up by one point.
 /^Emptiness Sepiments
 
 >score
-You currently have 8 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+You currently have 9 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
 
 >chisel
 Your score has just gone up by one point.
 
 >score
-You currently have 9 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+You currently have 10 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
 
 >s
 >w
@@ -120,13 +120,13 @@ Your score has just gone up by one point.
 LIVERS.
 
 >score
-You currently have 10 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+You currently have 12 out of 17 total points for the Forest region. Your minimum possible score on solving is 17, and the maximum is 17
 
 >sliver
 Your score has just gone up by one point.
 
 >score
-You currently have 11 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+You currently have 13 out of 17 total points for the Forest region. Your minimum possible score on solving is 17, and the maximum is 17
 
 >e
 >n
@@ -135,7 +135,7 @@ You currently have 11 out of 17 total points for the Forest region. Your minimum
 by one point
 
 >score
-You currently have 12 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+You currently have 14 out of 17 total points for the Forest region. Your minimum possible score on solving is 17, and the maximum is 17
 
 >n
 The drapes are too thick.
@@ -150,7 +150,7 @@ You don't know what's
 Your score has just gone up by one point.
 
 >score
-You currently have 13 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
+You currently have 15 out of 17 total points for the Forest region. Your minimum possible score on solving is 17, and the maximum is 17
 
 >put silver in shotgun
 
@@ -158,7 +158,7 @@ You currently have 13 out of 17 total points for the Forest region. Your minimum
 /^Ghouls' Slough
 
 >score
-You currently have 13 out of 17 total points for the Forest region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 15 out of 17 total points for the Forest region. Your final possible score is fixed. You missed something you can't go back for.
 
 >x maps
 /^Frost Forts
@@ -167,7 +167,7 @@ You currently have 13 out of 17 total points for the Forest region. Your final p
 Your score has just gone up by one point.
 
 >score
-You currently have 14 out of 17 total points for the Forest region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 16 out of 17 total points for the Forest region. Your final possible score is fixed. You missed something you can't go back for.
 
 >misses
 /====FOREST
@@ -182,4 +182,4 @@ Your score has just gone up by one point.
 
 >score
 
-You have scored 15 out of 17 total points for the Forest region.
+You have scored 17 out of 17 total points for the Forest region.

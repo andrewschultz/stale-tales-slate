@@ -224,7 +224,7 @@ Thankfully, the dispossessed straw fell into a pretty tidy heap, so it can be co
 >moor
 You see a flash and get a glimpse of the moor, but your movement's gummed up quickly by the ooze below. Best to find something better to put on your feet.
 
-#ttc-table-of-preflip-clues-r2
+#testcase-table-of-preflip-clues-r2
 >pf
 room -> moor
 
@@ -309,7 +309,7 @@ You currently have 17 out of 27 total points for the Sortie region. You have fou
 >hallway
 Hm, that's possible, but you can't make the hallway until you add something to the wall.
 
-#ttc-table-of-preflip-clues-hallway
+#testcase-table-of-preflip-clues-hallway
 >pf
 WALL -> haywall -> hallway
 
@@ -351,8 +351,8 @@ This is not a good place to put soil. Somewhere more wide open, where you can po
 >silo
 This is not a good place to put a silo. Somewhere more wide open, where you can pour the oils, too?
 
-#ttc-table-of-preflip-clues-soil
-#ttc-table-of-preflip-clues-silo
+#testcase-table-of-preflip-clues-soil
+#testcase-table-of-preflip-clues-silo
 >pf
 oils -> soil
 oils -> silo
@@ -367,7 +367,7 @@ The cask is already full of oils.
 >missile
 Good idea, but not in here. There'd be more room for that outside where you found the poem.
 
-#ttc-table-of-preflip-clues-missile
+#testcase-table-of-preflip-clues-missile
 >pf
 smilies -> missile
 

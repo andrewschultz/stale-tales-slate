@@ -15,19 +15,19 @@
 >ts
 /^Trips Strip
 
-#ttc-table-of-iconmaps-1
+#testcase-table-of-iconmaps-1
 >x tepid
 /Near Store (F|I|M|R),
 
-#ttc-table-of-iconmaps-2
+#testcase-table-of-iconmaps-2
 >x tepid
 /Near Store (F|I|M|R),
 
-#ttc-table-of-iconmaps-3
+#testcase-table-of-iconmaps-3
 >x tepid
 /Near Store (F|I|M|R),
 
-#ttc-table-of-iconmaps-4
+#testcase-table-of-iconmaps-4
 >x tepid
 /Near Store (F|I|M|R),
 
@@ -35,7 +35,7 @@
 >resort
 That seems like it should work, but you sense you have not done enough yet. But maybe, soon, you will.
 
-#ttc-table-of-preflip-clues-ogled-lodge
+#testcase-table-of-preflip-clues-ogled-lodge
 >pf
 Store R -> Resort
 
@@ -67,27 +67,27 @@ You currently have 3 out of 6 total points for the Stores region. Your minimum p
 
 >presto
 Your magic is not advanced enough to change Store P! Well, not this game!
-#ttc-table-of-preflip-clues-store-p
+#testcase-table-of-preflip-clues-store-p
 >pf
 Store P -> PRESTO in A Roiling Original
 >routes
 Hm, that seems right, but it doesn't work this game!
-#ttc-table-of-preflip-clues-store-u
+#testcase-table-of-preflip-clues-store-u
 >pf
 Store U -> ROUTES in A Roiling Original
 >troves
 Nice try, but that's next game! You do not need riches to beat Red Bull Burdell.
-#ttc-table-of-preflip-clues-store-v
+#testcase-table-of-preflip-clues-store-v
 >pf
 Store V -> TROVES in A Roiling Original
 >towers
 That should work--but it doesn't! Maybe the towers would be too big to tackle in the game in a series, anyway.
-#ttc-table-of-preflip-clues-store-w
+#testcase-table-of-preflip-clues-store-w
 >pf
 Store W -> TOWERS in A Roiling Original
 >oyster
 Nice try, but that's next game!
-#ttc-table-of-preflip-clues-store-y
+#testcase-table-of-preflip-clues-store-y
 >pf
 Store Y -> OYSTER in A Roiling Original
 
@@ -114,30 +114,30 @@ You currently have 5 out of 6 total points for the Stores region. You have found
 >x bits
 You can't see anything like that here. If you're trying to view the room, L or LOOK should work.
 
-#ttc-table-of-warpcmds-logoi
+#testcase-table-of-warpcmds-logoi
 >logoi
 You convince the powers that be that you remember all the words from Store F and the forest.
 You watch the scented descent crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!
 
-#ttc-table-of-ranks-5
+#testcase-table-of-ranks-5
 >score
 You have the rank of solider soldier.
 
-#ttc-table-of-warpcmds-sooth
+#testcase-table-of-warpcmds-sooth
 >sooth
 You convince the powers that be that, in sooth, you really did run through Store I and the sortie earlier.
 You watch the posted depots crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!
 
-#ttc-table-of-ranks-6
+#testcase-table-of-ranks-6
 >score
 You have the rank of a mature amateur.
 
-#ttc-table-of-warpcmds-say-bs
+#testcase-table-of-warpcmds-say-bs
 >say bs
 You convince the powers that be that the idea you didn't solve Store M and the Metros is nonsense.
 You watch the trade tread crackle, fizzle, and disappear. You've now solved that area, by an entirely different magic than your main power. Hooray!
 
-#ttc-table-of-ranks-7
+#testcase-table-of-ranks-7
 >score
 You have the rank of new hero now here.
 

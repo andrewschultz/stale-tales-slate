@@ -173,7 +173,7 @@ You currently have 13 out of 17 total points for the Forest region. You have fou
 >xx spread
 Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
 
-#ttc-table-of-preflip-clues-drapes
+#testcase-table-of-preflip-clues-drapes
 >pf
 spread -> drapes
 >undo
@@ -192,7 +192,7 @@ The drapes are too thick.
 >silver
 The sliver wobbles but stays firm. Maybe it has a purpose before you turn it into silver.
 
-#ttc-table-of-preflip-clues-silver
+#testcase-table-of-preflip-clues-silver
 >pf
 sliver -> SILVER
 

@@ -27,7 +27,7 @@ You currently have 1 out of 8 total points for the Ordeal Loader region. Your mi
 by one point
 
 >score
-You currently have 2 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 8
+You currently have 3 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 5, and the maximum is 8
 
 >open door
 /^Thickest Thickets
@@ -39,13 +39,13 @@ Your score has just gone up by one point.
 /^Notices Section
 
 >score
-You currently have 3 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 5
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 5
 
 >score
-You currently have 3 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 5
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 5
 
 >score
-You currently have 3 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 5
+You currently have 7 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 8, and the maximum is 5
 
 >gateman
 Your score has just gone up by one point.

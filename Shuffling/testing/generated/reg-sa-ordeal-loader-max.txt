@@ -14,7 +14,7 @@
 
 >au 2
 
-#ttc-table-of-busiest-subsite-rejects-1
+#testcase-table-of-busiest-subsite-rejects-1
 >e
 That way's an hour or two of listening to an under-action denunciator. You sure?
 You sort of procrastinate the lecture, thinking it'd be fun to just ditch.
@@ -25,7 +25,7 @@ That way's an hour or two of listening to an under-action denunciator. You sure?
 You sort of procrastinate the lecture, thinking it'd be fun to just ditch.
 !For all the lectures about new and exciting possibilities everyone should know about, you'd like one for your own.
 
-#ttc-table-of-busiest-subsite-rejects-2
+#testcase-table-of-busiest-subsite-rejects-2
 >n
 That way's a costlier cloister of rooms than recent firees deserve. The measure-a-resume event will be there, but not for another couple hours. You don't really want to deal with agents or headhunters now, anyway, but the name list catches your eye.
 Your eye catches the side passage, which looks more interesting than the standard ways out. Maybe you could give it a look.
@@ -34,7 +34,7 @@ Your eye catches the side passage, which looks more interesting than the standar
 That way's a costlier cloister of rooms than recent firees deserve. The measure-a-resume event will be there, but not for another couple hours. You don't really want to deal with agents or headhunters now, anyway, but the name list catches your eye.
 !Your eye catches the side passage, which looks more interesting than the standard ways out. Maybe you could give it a look.
 
-#ttc-table-of-busiest-subsite-rejects-3
+#testcase-table-of-busiest-subsite-rejects-3
 >s
 You already spent too much time in the overlate elevator.
 You feel sort of cornered by all the main passages. Sneaking off anywhere would be kind of fun.
@@ -42,7 +42,7 @@ You feel sort of cornered by all the main passages. Sneaking off anywhere would 
 You already spent too much time in the overlate elevator.
 !You feel sort of cornered by all the main passages. Sneaking off anywhere would be kind of fun.
 
-#ttc-table-of-busiest-subsite-rejects-4
+#testcase-table-of-busiest-subsite-rejects-4
 >w
 The Caterers' Terraces are west. You see someone sweating over a bizarre brazier, hear how this next lecture will "Prep us for supper," and promptly lose your will to do anything for a minute.
 The standard, usual directions don't seem to cut it. But there has to be somewhere else.
@@ -55,11 +55,11 @@ The Caterers' Terraces are west. You see someone sweating over a bizarre brazier
 >gateman
 The nametag seems to try to rip itself from your clothes for a moment, but it settles back down. Maybe the time isn't right.
 (That's worth noting in your notepad for later, so you do, under FLIPS.)
-#ttc-table-of-preflip-clues-gateman
+#testcase-table-of-preflip-clues-gateman
 >pf
 nametag -> gateman
 
-#ttc-table-of-ranks-1
+#testcase-table-of-ranks-1
 >score
 You haven't solved any regions yet. You have the rank of (ow,) me, a nervy every(wo)man.
 
@@ -79,7 +79,7 @@ It seems to hold the OR DO door in place.
 >score
 You currently have 1 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 4, and the maximum is 8
 
-#ttc-table-of-ranks-2
+#testcase-table-of-ranks-2
 You haven't solved any regions yet. You have the rank of reduced deducer.
 
 >blot
@@ -155,7 +155,7 @@ by one point
 by one point
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 7
 
 >undo
 >undo
@@ -170,22 +170,22 @@ Your score has just gone up by one point.
 #testcase-postrule-table-of-ordeal-loader-anagrams-post-reed-deer-rule
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 7
 
 >in
 /^Notices Section
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 5
 
-#ttc-table-of-ranks-3
+#testcase-table-of-ranks-3
 You haven't solved any regions yet. You have the rank of stunted student.
 
 >enter gateway
 mega-ant
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 5
 
 >attics
 Your score has just gone up by one point.
@@ -220,7 +220,7 @@ You have nothing else you figured in advance.
 >bactine
 "Hey, that's a good idea," says the gateman. "The cabinet's still recovering from its wounds back when Red Bull Burdell almost destroyed it. But it'll be seeing you again. When it does, I think Bactine will work." He pauses. "Oh. There probably won't be many brand names like that to worry about, unless they're even more ubiquitous. Like, say, Xerox."
 (That's worth noting in your notepad for later, so you do, once again, under FLIPS.)
-#ttc-table-of-preflip-clues-tenibac
+#testcase-table-of-preflip-clues-tenibac
 >pf
 Stuff you figured, but you couldn't use it right away:
 cabinet -> Bactine
@@ -244,7 +244,7 @@ You currently have 8 out of 8 total points for the Ordeal Loader region. You mig
 [NOTE: Shuffling Around is configured to create an auto-save dialogue after each region you solve. This can be switched off with AVERSE or switched back on with RESAVE. You can also abort saving with no penalty. This nag will not reappear.]
 <debug mode skips game-saving dialogue so test runs are continued>
 
-#ttc-table-of-ranks-4
+#testcase-table-of-ranks-4
 >score
 You have the rank of benigner beginner.
 

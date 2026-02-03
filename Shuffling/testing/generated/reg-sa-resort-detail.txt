@@ -1,8 +1,6 @@
 ## reg-sa-resort-detail.txt
 ## GENERATOR FILE: rbr-sa-resort.txt
 
-## walkthrough with ask/scan/pad detail
-
 ** game: /home/andrew/prt/debug-shuffling.ulx
 ** interpreter: /home/andrew/prt/glulxe -q
 ** checkclass: /home/andrew/prt/extracc.py
@@ -122,31 +120,31 @@ DEBUG INFO: Cert-text: -----.
 by one point
 
 >score
-You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
+You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
 
 >toeholds
 Your score has just gone up by two points.
 
 >score
-You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
+You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
 
 >ropes
 Your score has just gone up by one point.
 
 >score
-You currently have 8 out of 15 total points for the Resort region. Your minimum possible score on solving is 13, and the maximum is 15
+You currently have 8 out of 15 total points for the Resort region. Your minimum possible score on solving is 13, and the maximum is 13
 
 >grips
 Your score has just gone up by one point.
 
 >score
-You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
+You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 13
 
 >e
 
 /^Potshot Hotspot
 
-#ttc-table-of-unmatched-topic-responses-riot
+#testcase-table-of-unmatched-topic-responses-riot
 >ask riot about spore
 You're not going to reason with them. Maybe reason about them, though.
 
@@ -161,12 +159,12 @@ DEBUG INFO: Cert-text: ----.
 >trio
 Your score has just gone up by one point.
 
-#ttc-table-of-unmatched-topic-responses-protest
+#testcase-table-of-unmatched-topic-responses-protest
 >ask protest about abcde
 You're not going to reason with them. Maybe reason about them, though.
 
 >score
-You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
+You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 11
 
 #gadget test: protest to potters
 >rc protest
@@ -179,7 +177,7 @@ DEBUG INFO: Cert-text: P--TE--.
 >kilns
 by one point
 
-#ttc-table-of-matched-thing-responses-protest-kilns
+#testcase-table-of-matched-thing-responses-protest-kilns
 >ask protest about kilns
 "If we were artsy, we'd use 'em. But we're not. Take some magic to MAKE us artsy."
 >undo
@@ -189,7 +187,7 @@ by one point
 Your score has just gone up by one point.
 
 >score
-You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
+You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 11
 
 >china
 Your score has just gone up by one point.
@@ -214,7 +212,7 @@ You currently have 13 out of 15 total points for the Resort region. You have fou
 >get out
 !Your score has just
 
-#ttc-table-of-unmatched-topic-responses-red-bull-burdell
+#testcase-table-of-unmatched-topic-responses-red-bull-burdell
 >ask red bull burdell about abcdef
 "Ego? Tut!"
 

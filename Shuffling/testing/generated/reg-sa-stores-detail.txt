@@ -98,7 +98,7 @@ by one point
 >score
 You currently have 4 out of 6 total points for the Stores region. Your minimum possible score on solving is 5, and the maximum is 6
 
-#ttc-table-of-kibitzes-cabinet
+#testcase-table-of-kibitzes-cabinet
 >c cabinet
 You notice the gadget beeps twice. Hmm. A series of lights comes across: RGRRRRR.
 Odd, though--when you scanned the bumpy bits, you saw the gadget change readings. The second entry, in particular, from red to green.

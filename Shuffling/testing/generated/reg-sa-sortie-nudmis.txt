@@ -16,7 +16,7 @@ by one point
 
 >poss
 
-#ttc-table-of-stores-done-rejects-posted-depots
+#testcase-table-of-stores-done-rejects-posted-depots
 >sortei
 The posted depots doen't need to be changed. What's behind them, does.
 
@@ -28,47 +28,47 @@ The posted depots doen't need to be changed. What's behind them, does.
 >turn zozimus
 You can probably TURN the dial to a number, e.g. 99.
 
-#ttc-table-of-trap-part-nudges-part
+#testcase-table-of-trap-part-nudges-part
 >patr
 You need to manipulate something in the room to stop the spinning.
 
-#ttc-table-of-trap-part-nudges-sortie
+#testcase-table-of-trap-part-nudges-sortie
 >tosrie
 You don't want to change a region drastically while you're in it.
 
-#ttc-table-of-trap-part-nudges-centrifuge
+#testcase-table-of-trap-part-nudges-centrifuge
 >centrifueg
 You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it.
 
-#ttc-table-of-trap-part-nudges-frenetic
+#testcase-table-of-trap-part-nudges-frenetic
 >frenetic
 You're dizzy enough looking around without trying to focus on anything. The dial in the middle of the room seems to control it.
 
-#ttc-table-of-trap-part-nudges-exitsnw
+#testcase-table-of-trap-part-nudges-exitsnw
 >xeitsnw
 The room seems almost ready to start to slow down. Maybe the exits aren't quite that way.
 
-#ttc-table-of-trap-part-nudges-exitssw
+#testcase-table-of-trap-part-nudges-exitssw
 >xeitssw
 The room seems to spin faster, as if you are totally on the wrong track.
 
-#ttc-table-of-trap-part-nudges-exitsse
+#testcase-table-of-trap-part-nudges-exitsse
 >xeitsse
 The room seems almost ready to start to slow down. Maybe the exits aren't quite that way.
 
-#ttc-table-of-trap-part-nudges-exits
+#testcase-table-of-trap-part-nudges-exits
 >extis
 You can't do much to the exits when you don't even know which way they are.
 
-#ttc-table-of-trap-part-nudges-dial
+#testcase-table-of-trap-part-nudges-dial
 >dila
 Messing up the dial would leave you trapped here.
 
-#ttc-table-of-trap-part-nudges-sextien
+#testcase-table-of-trap-part-nudges-sextien
 >esxtien
 The spinning seems to slow a bit.
 
-#ttc-table-of-sortie-nudges-mud
+#testcase-table-of-sortie-nudges-mud
 >mdu
 The mud is just there. You can't change it.
 
@@ -91,7 +91,7 @@ You can probably just SWITCH something with two text settings.
 >score
 You currently have 1 out of 27 total points for the Sortie region. Your minimum possible score on solving is 25, and the maximum is 27
 
-#+ttc-table-of-trap-part-nudges-part
+#+testcase-table-of-trap-part-nudges-part
 >patr
 You don't want to go back to how the Trap Part was.
 
@@ -102,27 +102,27 @@ You don't need to deal with the dial, now.
 >n
 /^The Nick
 
-#ttc-table-of-readables-great-grate
+#testcase-table-of-readables-great-grate
 >read great grate
 The grate seems to be made by HECK TIN. It's not steel, but it's still too thick. The redness of HECK TIN surprises you a bit.
 
-#ttc-table-of-the-nick-nudges-graffiti
+#testcase-table-of-the-nick-nudges-graffiti
 >graffiit
 The graffiti's etched in solidly. But it seems like a decent clue, if you just want to read it.
 
-#ttc-table-of-the-nick-nudges-greta
+#testcase-table-of-the-nick-nudges-greta
 >greta
 The grate remains impassive.
 
-#ttc-table-of-the-nick-nudges-nick
+#testcase-table-of-the-nick-nudges-nick
 >nikc
 Maybe there is a way out of the nick. Not of nick, but the nick. It's probably too much to think yourself in K.C.
 
-#ttc-table-of-sortie-nudges-sixteen
+#testcase-table-of-sortie-nudges-sixteen
 >ixsteen
 You don't need to re-stop the centrifuge.
 
-#ttc-table-of-sortie-spechelp-t-n
+#testcase-table-of-sortie-spechelp-t-n
 >kitchne
 The nick blurs a little but snaps back to normal.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
@@ -158,7 +158,7 @@ I think you have the wrong food group. Besides, it wouldn't be nice to wipe the 
 >pears
 I think you have the wrong food group. The spearman is cheesy. Plus, he wouldn't be a spearman without his spear.
 
-#ttc-table-of-kitchen-nudges-rendin
+#testcase-table-of-kitchen-nudges-rendin
 >rendni
 You don't need to change the red inn. It will support your cooking efforts.
 
@@ -166,15 +166,15 @@ You don't need to change the red inn. It will support your cooking efforts.
 >thicken
 This would be the place, but you're not hungry for anything TOO fatty right now
 
-#ttc-table-of-kitchen-nudges-ditties
+#testcase-table-of-kitchen-nudges-ditties
 >dittise
 Don't let the songs distract you from your mission.
 
-#ttc-table-of-kitchen-nudges-grief
+#testcase-table-of-kitchen-nudges-grief
 >grife
 The fridge has taken enough abuse and can't be changed for the better, but maybe you can fix something inside it.
 
-#ttc-table-of-kitchen-nudges-spear
+#testcase-table-of-kitchen-nudges-spear
 >spera
 The spearman is what's important.
 
@@ -182,44 +182,44 @@ The spearman is what's important.
 /^Trap Part
 A round den, unadorned. A lid lies where once the dial laid. Exits lie north and east, and they've been behaving since you fixed that dial!
 
-#ttc-table-of-trap-part-nudges-aroundden
+#testcase-table-of-trap-part-nudges-aroundden
 >aroundden
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
-#+ttc-table-of-trap-part-nudges-dial
+#+testcase-table-of-trap-part-nudges-dial
 >dila
 The dial did its part for you.
 
-#ttc-table-of-sortie-nudges-kitchen
+#testcase-table-of-sortie-nudges-kitchen
 >ketchin
 You can just walk to the kitchen. There's no need to revisit the nick, and there's no third location between them.
 
 >n
 
-#ttc-table-of-kitchen-nudges-kitchne
+#testcase-table-of-kitchen-nudges-kitchne
 >ketchin
 Nothing happens. Well, you didn't really want to go back to the nick, and there's probably no third room to look for between the two. Maybe you need to escape this bunker from another room.
 
 >x fridge
 While its brand is (of course) DEF-RIG, it's not exactly top-of-the-line, but it seems to work. A manila animal forms a lamina over it. The grist and cake pan are still in the fridge, too, you remember. Written in dust (which you rub off and copy to your notepad) you see NO, TOO STUPID A FAD. I PUT SOOT ON WARTS.
 
-#ttc-table-of-kitchen-nudges-lamina
+#testcase-table-of-kitchen-nudges-lamina
 >lamian
 It actually looks pretty nice on the fridge.
 
-#ttc-table-of-kitchen-nudges-pan
+#testcase-table-of-kitchen-nudges-pan
 >pna
 It's not a cake, and it's not quite a pan--it's a cake pan.
 
-#ttc-table-of-kitchen-nudges-cake
+#testcase-table-of-kitchen-nudges-cake
 >caek
 It's not a cake, and it's not quite a pan--it's a cake pan.
 
-#ttc-table-of-kitchen-nudges-fridge
+#testcase-table-of-kitchen-nudges-fridge
 >frideg
 The fridge has taken enough abuse and can't be changed for the better, but maybe you can fix something inside it.
 
-#ttc-table-of-sortie-spechelp-grist
+#testcase-table-of-sortie-spechelp-grist
 >grtis
 The grist looks a bit less bland.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the grist. Keep at it.
@@ -236,15 +236,15 @@ Your score has just gone up by one point.
 >score
 You currently have 3 out of 27 total points for the Sortie region. Your minimum possible score on solving is 26, and the maximum is 27
 
-#ttc-table-of-sortie-done-rejects-grits
+#testcase-table-of-sortie-done-rejects-grits
 >grist
 Best not to get too crazy with food preparation.
 
-#+ttc-table-of-kitchen-nudges-grief
+#+testcase-table-of-kitchen-nudges-grief
 >grife
 The fridge has taken enough abuse and can't be changed for the better, but maybe you can fix something else inside it.
 
-#ttc-table-of-sortie-spechelp-cake-pan
+#testcase-table-of-sortie-spechelp-cake-pan
 >pancaek
 It's a cake pan, backwards and forwards.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cake pan. Keep at it.
@@ -261,15 +261,15 @@ Your score has just gone up by one point.
 >score
 You currently have 4 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#+ttc-table-of-kitchen-nudges-grief
+#+testcase-table-of-kitchen-nudges-grief
 >grife
 The fridge has taken enough abuse and can't be changed for the better.
 
-#ttc-table-of-sortie-done-rejects-pancake
+#testcase-table-of-sortie-done-rejects-pancake
 >pancaek
 Best not to get too crazy with food preparation.
 
-#ttc-table-of-sortie-spechelp-tall-trio
+#testcase-table-of-sortie-spechelp-tall-trio
 >tortilal
 The tall trio seem to look interested for a minute.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tall trio. Keep at it.
@@ -280,7 +280,7 @@ The tall trio seem to look interested for a minute.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the tall trio. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-readables-tall-trio
+#testcase-table-of-readables-tall-trio
 >read tall trio
 The names are Al, Tri, and Lot. If you READ again, maybe one of the six combinations will make you see red.
 >read tall trio
@@ -292,23 +292,23 @@ Your score has just gone up by one point.
 >score
 You currently have 5 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-sortie-done-rejects-tortilla
+#testcase-table-of-sortie-done-rejects-tortilla
 >tortilal
 Best not to get too crazy with food preparation.
 
-#ttc-table-of-kitchen-nudges-perfume
+#testcase-table-of-kitchen-nudges-perfume
 >perfuem
 It's the full name brand that really catches your eye.
 
-#ttc-table-of-kitchen-nudges-bottle
+#testcase-table-of-kitchen-nudges-bottle
 >bottel
 It's the full name brand that really catches your eye.
 
-#ttc-table-of-kitchen-nudges-act
+#testcase-table-of-kitchen-nudges-act
 >atc
 It's the full name brand that really catches your eye.
 
-#ttc-table-of-kitchen-nudges-houes
+#testcase-table-of-kitchen-nudges-houes
 >houes
 It's the full name brand that really catches your eye.
 
@@ -316,7 +316,7 @@ It's the full name brand that really catches your eye.
 >soutache
 The CATHOUSE doesn't need a decorative trimming.
 
-#ttc-table-of-sortie-spechelp-cathouse
+#testcase-table-of-sortie-spechelp-cathouse
 >hotsauec
 The bottle of CATHOUSE perfume suddenly smells a bit spicier.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bottle of CATHOUSE perfume. Keep at it.
@@ -346,23 +346,23 @@ by one point
 >soutache
 The hot sauce doesn't need a decorative trimming.
 
-#ttc-table-of-sortie-done-rejects-hotsauce
+#testcase-table-of-sortie-done-rejects-hotsauce
 >hotsauec
 Best not to get too crazy with food preparation.
 
-#ttc-table-of-kitchen-nudges-cause
+#testcase-table-of-kitchen-nudges-cause
 >caues
 No need to do more with the hot sauce.
 
-#ttc-table-of-kitchen-nudges-packet
+#testcase-table-of-kitchen-nudges-packet
 >packte
 Fiddling with sauce packets is so awful! Until it's easy. And it should be, here. Just PUT the sauce on any food.
 
-#ttc-table-of-kitchen-nudges-cheesy
+#testcase-table-of-kitchen-nudges-cheesy
 >cheeys
 It's more that he's a spearman--but maybe his cheesiness is a clue.
 
-#ttc-table-of-readables-spearman
+#testcase-table-of-readables-spearman
 >take spearman
 As you pick up the spearman, you notice something on the bottom. Perhaps you could READ the spearman to see what it is.
 !Taken.
@@ -379,7 +379,7 @@ There are three additional bits of writing that may help you, too.
 !There are three additional bits of writing that may help you, too.
 /You also read, in red, one of three lines: (MEAN RAPS|MS\. P\. ARENA--crossed out, but red|AMEN, RASP)\.
 
-#ttc-table-of-sortie-spechelp-spearman
+#testcase-table-of-sortie-spechelp-spearman
 >parmesna
 The spearman's smile seems to get a bit cheesier--you may or may not need to try a few other pre-names.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cheesy spearman. Keep at it.
@@ -396,11 +396,11 @@ Your score has just gone up by one point.
 >score
 You currently have 7 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-sortie-done-rejects-parmesan
+#testcase-table-of-sortie-done-rejects-parmesan
 >parmesna
 Best not to get too crazy with food preparation.
 
-#ttc-table-of-sortie-spechelp-skate
+#testcase-table-of-sortie-spechelp-skate
 >steka
 You thought you smelled meat there, for a minute. Hm.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the skate. Keep at it.
@@ -439,19 +439,19 @@ You currently have 8 out of 27 total points for the Sortie region. You have foun
 This is wordplay, not poetry. The steak is what it needs to be.
 !But the skate
 
-#ttc-table-of-sortie-done-rejects-steak
+#testcase-table-of-sortie-done-rejects-steak
 >steka
 Best not to get too crazy with food preparation.
 
-#ttc-table-of-kitchen-nudges-cutup
+#testcase-table-of-kitchen-nudges-cutup
 >cutpu
 The steak's just right as is.
 
-#ttc-table-of-kitchen-nudges-cutupsteak
+#testcase-table-of-kitchen-nudges-cutupsteak
 >cutupsteka
 The steak's just right as is.
 
-#ttc-table-of-sortie-spechelp-cult-tee
+#testcase-table-of-sortie-spechelp-cult-tee
 >lettuec
 The cult tee seems to vegetate there. Change things around and it may become something.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cult tee. Keep at it.
@@ -462,11 +462,11 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 The cult tee seems to vegetate there. Change things around and it may become something.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cult tee. Keep at it.
 
-#ttc-table-of-kitchen-nudges-cult
+#testcase-table-of-kitchen-nudges-cult
 >cutl
 The whole t-shirt.
 
-#ttc-table-of-kitchen-nudges-tee
+#testcase-table-of-kitchen-nudges-tee
 >eet
 The whole t-shirt.
 
@@ -476,7 +476,7 @@ Your score has just gone up by one point.
 >score
 You currently have 9 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-sortie-done-rejects-lettuce
+#testcase-table-of-sortie-done-rejects-lettuce
 >lettuec
 Best not to get too crazy with food preparation.
 
@@ -497,11 +497,11 @@ Your score has just gone up by one point.
 >score
 You currently have 10 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#+ttc-table-of-kitchen-nudges-rendin
+#+testcase-table-of-kitchen-nudges-rendin
 >rendni
 You don't need to change the red inn. It supported your cooking efforts.
 
-#ttc-table-of-sortie-spechelp-taco
+#testcase-table-of-sortie-spechelp-taco
 >cota
 Weird. The taco almost seemed to grow arms, or even sleeves.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the taco. Keep at it.
@@ -531,7 +531,7 @@ The mud is stuck that way. You don't need to change it.
 >cato
 You don't need to know your classics, here.
 
-#ttc-table-of-sortie-done-rejects-coat
+#testcase-table-of-sortie-done-rejects-coat
 >cota
 No need for fashion tweaks.
 
@@ -542,11 +542,11 @@ No need for fashion tweaks.
 >s
 /^Room
 
-#ttc-table-of-sortie-nudges-were
+#testcase-table-of-sortie-nudges-were
 >weer
 The cask is changeable, but not like that. WERE-EWER just clues it can be changed.
 
-#ttc-table-of-sortie-spechelp-cask
+#testcase-table-of-sortie-spechelp-cask
 >cska
 Nothing happens. Maybe you are trying to do too much to change the cask.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the cask. Keep at it.
@@ -563,7 +563,7 @@ Your score has just gone up by one point.
 >score
 You currently have 12 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-sortie-spechelp-sack
+#testcase-table-of-sortie-spechelp-sack
 >cska
 You doubt the sack/cask has a triple purpose.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sack. Keep at it.
@@ -574,19 +574,19 @@ You doubt the sack/cask has a triple purpose.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the sack. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-sortie-nudges-burlap
+#testcase-table-of-sortie-nudges-burlap
 >burlpa
 The sack itself seems pliable, but its individual fibers aren't.
 
-#ttc-table-of-sortie-nudges-pair
+#testcase-table-of-sortie-nudges-pair
 >pari
 Many things can be a pair, but these hoses--well, a pair of HOSES is kind of odd.
 
-#ttc-table-of-sortie-nudges-wart
+#testcase-table-of-sortie-nudges-wart
 >wrat
 Why zap just one wart? Go for all of them!
 
-#ttc-table-of-sortie-spechelp-warts
+#testcase-table-of-sortie-spechelp-warts
 >strwa
 The warts itch slightly.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the warts. Keep at it.
@@ -605,11 +605,11 @@ You currently have 13 out of 27 total points for the Sortie region. You have fou
 
 >put straw in sack
 
-#ttc-table-of-sortie-done-rejects-straw
+#testcase-table-of-sortie-done-rejects-straw
 >strwa
 The straw remains motionless.
 
-#ttc-table-of-sortie-nudges-shoe
+#testcase-table-of-sortie-nudges-shoe
 >heos
 There's more than one hose here.
 
@@ -618,7 +618,7 @@ There's more than one hose here.
 You need more than one shoe.
 >undo
 
-#ttc-table-of-sortie-spechelp-hoses
+#testcase-table-of-sortie-spechelp-hoses
 >shose
 Something leaks out of the hoses. Hm. What else can be rubber, now.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the pair of hoses. Keep at it.
@@ -643,15 +643,15 @@ One, there's more than one shoe. Two, this isn't that sort of game. Innuendo onl
 >score
 You currently have 14 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-sortie-nudges-sheo
+#testcase-table-of-sortie-nudges-sheo
 >heos
 But you're wearing the shoes. That might cause problems.
 
-#ttc-table-of-sortie-nudges-shoes
+#testcase-table-of-sortie-nudges-shoes
 >hesso
 But you're wearing the shoes. That might cause problems.
 
-#ttc-table-of-sortie-spechelp-r2
+#testcase-table-of-sortie-spechelp-r2
 >romo
 You almost feel something picking you up for a second. You must have been close.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
@@ -691,23 +691,23 @@ The moor sways a bit. You do some brief mental calculation. There's no third pla
 >emir
 You're not looking for a leader, and they wouldn't come somewhere this cheerless, anyway.
 
-#ttc-table-of-moor-nudges-mire
+#testcase-table-of-moor-nudges-mire
 >meir
 You can't change the rime-mire. You probably don't need to go wandering off, anyway. There's enough to do here.
 
-#ttc-table-of-moor-nudges-woefulpat
+#testcase-table-of-moor-nudges-woefulpat
 >woefulpta
 Pat will always be woeful. He sort of likes it that way. Focus on his poetry.
 
-#ttc-table-of-moor-nudges-woeful
+#testcase-table-of-moor-nudges-woeful
 >woeflu
 Pat will always be woeful. He sort of likes it that way. Focus on his poetry.
 
-#ttc-table-of-moor-nudges-afwul
+#testcase-table-of-moor-nudges-afwul
 >afwlu
 Pat will always be woeful. He sort of likes it that way. Focus on his poetry.
 
-#ttc-table-of-moor-nudges-peto
+#testcase-table-of-moor-nudges-peto
 >peot
 Pat will always be woeful. He sort of likes it that way. Focus on his poetry.
 
@@ -722,27 +722,27 @@ Pat will always be woeful. He sort of likes it that way. Focus on his poetry.
 >z
 >z
 
-#ttc-table-of-sortie-nudges-expo
+#testcase-table-of-sortie-nudges-expo
 >exop
 Thinking of the flier leads you back to the anapest.
 
-#ttc-table-of-sortie-nudges-expoflier
+#testcase-table-of-sortie-nudges-expoflier
 >expoflire
 Thinking of the flier leads you back to the anapest.
 
-#ttc-table-of-sortie-nudges-flire
+#testcase-table-of-sortie-nudges-flire
 >flire
 Thinking of the flier leads you back to the anapest.
 
-#ttc-table-of-moor-nudges-anapests
+#testcase-table-of-moor-nudges-anapests
 >anapesst
 Well, there are many, but the poem is in anapest.
 
-#ttc-table-of-moor-nudges-peom
+#testcase-table-of-moor-nudges-peom
 >epmo
 Pat won't react kindly to modifications of his poem.
 
-#ttc-table-of-moor-nudges-poerty
+#testcase-table-of-moor-nudges-poerty
 >poetyr
 Pat won't react kindly to modifications of his poem.
 
@@ -759,7 +759,7 @@ Pat won't react kindly to modifications of his poem.
 >rifle
 Shooting things up is not the answer
 
-#ttc-table-of-sortie-spechelp-anapest
+#testcase-table-of-sortie-spechelp-anapest
 >peasatn
 You think you had the right idea, but your execution was poor. Maybe be more workmanlike.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the anapest. Keep at it.
@@ -786,7 +786,7 @@ Instead of trading, use GIVE X TO Y.
 >trade zozimus
 Instead of trading, use GIVE X TO Y.
 
-#ttc-table-of-sortie-done-rejects-peasant
+#testcase-table-of-sortie-done-rejects-peasant
 >peasatn
 The peasant doesn't need to change himself. Just his possessions. Maybe you can trade.
 
@@ -801,35 +801,35 @@ You currently have 17 out of 27 total points for the Sortie region. You have fou
 >yah
 You're glad you've got the hay, but you're not excited, and you can't fake it.
 
-#ttc-table-of-moor-nudges-pome
+#testcase-table-of-moor-nudges-pome
 >epmo
 The peasant's poem is about as good as it can be, for what it is. It's better than Pat's.
 
-#ttc-table-of-moor-nudges-poetyr
+#testcase-table-of-moor-nudges-poetyr
 >poetyr
 The peasant's poem is about as good as it can be, for what it is. It's better than Pat's.
 
-#ttc-table-of-sortie-nudges-hay
+#testcase-table-of-sortie-nudges-hay
 >hya
 Hay is not terribly magical. It's more for trading or building.
 
-#ttc-table-of-sortie-nudges-graffiit
+#testcase-table-of-sortie-nudges-graffiit
 >graffiit
 Hm, there has to be a clue in it.
 
-#ttc-table-of-sortie-nudges-redgraffiti
+#testcase-table-of-sortie-nudges-redgraffiti
 >redgraffiit
 Hm, there has to be a clue in it.
 
-#ttc-table-of-moor-nudges-roda
+#testcase-table-of-moor-nudges-roda
 >roda
 No, the full roadblock.
 
-#ttc-table-of-moor-nudges-block
+#testcase-table-of-moor-nudges-block
 >blokc
 No, the full roadblock.
 
-#ttc-table-of-sortie-spechelp-m2
+#testcase-table-of-sortie-spechelp-m2
 >romo
 The moor sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from all around. Keep at it.
@@ -843,11 +843,11 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >room
 "The room's smoother," you muse...
 
-#ttc-table-of-sortie-nudges-room
+#testcase-table-of-sortie-nudges-room
 >oorm
 The room sways a bit. You do some brief mental calculation. There's no third place between the room and the moor.
 
-#+ttc-table-of-sortie-nudges-kitchen
+#+testcase-table-of-sortie-nudges-kitchen
 >ketchin
 You can just walk to the kitchen. There's no need to revisit the nick, and there's no third location between them.
 
@@ -868,25 +868,25 @@ You aren't going to sea in this game.
 
 >w
 
-#+ttc-table-of-kitchen-nudges-kitchne
+#+testcase-table-of-kitchen-nudges-kitchne
 >ketchni
 There's no room between the nick and kitchen. You already found a better way out, anyway.
 
 >e
 
-#ttc-table-of-stiller-trellis-nudges-trellis
+#testcase-table-of-stiller-trellis-nudges-trellis
 >trellsi
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
-#ttc-table-of-stiller-trellis-nudges-wall
+#testcase-table-of-stiller-trellis-nudges-wall
 >wlla
 The scraped wall doesn't respond or come any closer to being a hallway.
 
-#ttc-table-of-stiller-trellis-nudges-scraped
+#testcase-table-of-stiller-trellis-nudges-scraped
 >scrapde
 The scraped wall doesn't respond or come any closer to being a hallway.
 
-#ttc-table-of-readables-scraped-wall
+#testcase-table-of-readables-scraped-wall
 >read wall
 !You can no longer read
 HALLWAY UNDER (UN-)UN-CONSTRUCTION.
@@ -898,7 +898,7 @@ Your score has just gone up by one point.
 >score
 You currently have 18 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-sortie-spechelp-scraped-wall
+#testcase-table-of-sortie-spechelp-scraped-wall
 >hallwya
 Hm, yes, a haywall might become something more passable, if you muddle it right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the scraped wall. Keep at it.
@@ -909,7 +909,7 @@ Hm, yes, a haywall might become something more passable, if you muddle it right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the scraped wall. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#+ttc-table-of-readables-spearman
+#+testcase-table-of-readables-spearman
 >read wall
 You can no longer see where it says HALLWAY UNDER (UN-)UN-CONSTRUCTION.
 
@@ -919,7 +919,7 @@ Your score has just gone up by one point.
 >score
 You currently have 19 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-sortie-done-rejects-hallway
+#testcase-table-of-sortie-done-rejects-hallway
 >hallwya
 You already have a passage east. Don't close it.
 
@@ -954,59 +954,59 @@ You must serve by going forth on your mission of warlikeness and love.
 >sever
 Violence or vandalism in such a holy place? For shame.
 
-#ttc-table-of-sacred-cedars-nudges-cedars
+#testcase-table-of-sacred-cedars-nudges-cedars
 >cedasr
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
-#ttc-table-of-sacred-cedars-nudges-cedar
+#testcase-table-of-sacred-cedars-nudges-cedar
 >cedra
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
-#ttc-table-of-sacred-cedars-nudges-drawing
+#testcase-table-of-sacred-cedars-nudges-drawing
 >drawign
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 
-#ttc-table-of-sacred-cedars-nudges-drawings
+#testcase-table-of-sacred-cedars-nudges-drawings
 >drawinsg
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 
-#ttc-table-of-sacred-cedars-nudges-verse
+#testcase-table-of-sacred-cedars-nudges-verse
 >veres
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 
-#ttc-table-of-sacred-cedars-nudges-spout
+#testcase-table-of-sacred-cedars-nudges-spout
 >spotu
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 
-#ttc-table-of-sacred-cedars-nudges-pout
+#testcase-table-of-sacred-cedars-nudges-pout
 >potu
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 
-#ttc-table-of-sacred-cedars-nudges-minerva
+#testcase-table-of-sacred-cedars-nudges-minerva
 >minerav
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 
-#ttc-table-of-sacred-cedars-nudges-chalice
+#testcase-table-of-sacred-cedars-nudges-chalice
 >chaliec
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 
-#ttc-table-of-sacred-cedars-nudges-candle
+#testcase-table-of-sacred-cedars-nudges-candle
 >candel
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 
-#ttc-table-of-sacred-cedars-nudges-lance
+#testcase-table-of-sacred-cedars-nudges-lance
 >lanec
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 
-#ttc-table-of-sacred-cedars-nudges-idols
+#testcase-table-of-sacred-cedars-nudges-idols
 >idosl
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 
-#ttc-table-of-sacred-cedars-nudges-cliche
+#testcase-table-of-sacred-cedars-nudges-cliche
 >cliceh
 Best not defile this shrine. Or even try to. The oils from the spout are gift enough.
 
-#ttc-table-of-sortie-nudges-lois
+#testcase-table-of-sortie-nudges-lois
 >losi
 You should possess the oils before doing anything with them. As for changing Lois, the provider of the oils? Very unlikely indeed.
 
@@ -1025,11 +1025,11 @@ Gainly laying the cask under the spout, you pour in some oils.
 >lois
 Lois is silent. You must figure what to pour, where.
 
-#+ttc-table-of-sortie-nudges-lois
+#+testcase-table-of-sortie-nudges-lois
 >oisl
 The oils need a purpose--to build something great. Nobody would see your handiwork in this enclosed space.
 
-#ttc-table-of-sortie-nudges-oil
+#testcase-table-of-sortie-nudges-oil
 >lio
 Really, they're oils. There's so much more you can do with oils than oil. Well, two things YOU can do.
 
@@ -1041,19 +1041,19 @@ Really, they're oils. There's so much more you can do with oils than oil. Well, 
 >pray
 Things aren't THAT bad.
 
-#ttc-table-of-sortie-nudges-folded
+#testcase-table-of-sortie-nudges-folded
 >foldde
 !It's a plane, now, for sure.
 
-#ttc-table-of-sortie-nudges-paper
+#testcase-table-of-sortie-nudges-paper
 >papre
 !It's a plane, now, for sure.
 
-#ttc-table-of-sortie-nudges-papers
+#testcase-table-of-sortie-nudges-papers
 >papesr
 !It's a plane, now, for sure.
 
-#ttc-table-of-sortie-spechelp-smilies
+#testcase-table-of-sortie-spechelp-smilies
 >missiel
 The smilies momentarily grow eyebrows that point aggressively, then vanish.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the smilies. Keep at it.
@@ -1098,7 +1098,7 @@ You can't create something abstract from something concrete. Or plutonium. Or wh
 >score
 You currently have 20 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-sortie-done-rejects-missile
+#testcase-table-of-sortie-done-rejects-missile
 >missiel
 The missile emits an almost giggly sound but doesn't actually change.
 
@@ -1106,19 +1106,19 @@ The missile emits an almost giggly sound but doesn't actually change.
 (the poem)
 You fold the paper, and it looks sort of like a paper plane.
 
-#+ttc-table-of-sortie-nudges-folded
+#+testcase-table-of-sortie-nudges-folded
 >foldde
 It's a plane, now, for sure.
 
-#+ttc-table-of-sortie-nudges-paper
+#+testcase-table-of-sortie-nudges-paper
 >papre
 It's a plane, now, for sure.
 
-#+ttc-table-of-sortie-nudges-papers
+#+testcase-table-of-sortie-nudges-papers
 >papesr
 It's a plane, now, for sure.
 
-#ttc-table-of-sortie-spechelp-poem
+#testcase-table-of-sortie-spechelp-poem
 >panle
 The plane can probably become something else, but not that.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the folded paper plane. Keep at it.
@@ -1143,11 +1143,11 @@ You currently have 21 out of 27 total points for the Sortie region. You have fou
 >mope
 You mope, but you imagine no poem.
 
-#ttc-table-of-sortie-done-rejects-panel
+#testcase-table-of-sortie-done-rejects-panel
 >panle
 The panel bleeps a "stop that" sort of warning.
 
-#ttc-table-of-sortie-spechelp-oils
+#testcase-table-of-sortie-spechelp-oils
 >soli
 The oils could change the moor into something more fertile, but not that.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the oils. Keep at it.
@@ -1164,15 +1164,15 @@ Your score has just gone up by one point.
 >score
 You currently have 22 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-sortie-done-rejects-soil
+#testcase-table-of-sortie-done-rejects-soil
 >soli
 The soil is there to support something, but not quite that.
 
-#+ttc-table-of-sortie-nudges-were
+#+testcase-table-of-sortie-nudges-were
 >weer
 There's no other way to change the cask than to and from the sack. WERE-EWER just clued
 
-#ttc-table-of-sortie-spechelp-roadblock
+#testcase-table-of-sortie-spechelp-roadblock
 >black doro
 The roadblock changes all the colors of the rainbow, but none seem appropriate.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the roadblock. Keep at it.
@@ -1201,27 +1201,27 @@ Hm, no, keep religion out of it--you have what you need.
 >score
 You currently have 23 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-sortie-done-rejects-black-door
+#testcase-table-of-sortie-done-rejects-black-door
 >black doro
 The black door is good as it is.
 
-#ttc-table-of-moor-nudges-blakc
+#testcase-table-of-moor-nudges-blakc
 >blakc
 The black door is good as it is.
 
-#ttc-table-of-moor-nudges-droo
+#testcase-table-of-moor-nudges-droo
 >droo
 The black door is good as it is.
 
-#ttc-table-of-moor-nudges-warhead
+#testcase-table-of-moor-nudges-warhead
 >warheda
 You don't want to change the missile's message, which seems rather nice.
 
-#ttc-table-of-moor-nudges-wires
+#testcase-table-of-moor-nudges-wires
 >wirse
 Despite the magic you can do, electricity still feels like, well, total magic. Plus you don't want to mess those wires up.
 
-#ttc-table-of-moor-nudges-wire
+#testcase-table-of-moor-nudges-wire
 >wier
 Despite the magic you can do, electricity still feels like, well, total magic. Plus you don't want to mess those wires up.
 
@@ -1238,7 +1238,7 @@ A voice calls SO NOW HALLS SHALL SWOON. You're pretty sure it has a particular o
 >lois
 You feel guilt at asking Lois for more.
 
-#+ttc-table-of-sortie-nudges-oil
+#+testcase-table-of-sortie-nudges-oil
 >lio
 Really, they're oils. There's so much more you can do with oils than oil. Well, one more thing YOU can do.
 
@@ -1247,19 +1247,19 @@ You hear a creaking above as you exit. You see the trellis's archings crashing o
 
 /^Crashing Archings
 
-#ttc-table-of-stiller-trellis-nudges-arching
+#testcase-table-of-stiller-trellis-nudges-arching
 >archign
 Neither arching shakes. They're probably too sturdy, and you're probably not meant to go back.
 
-#ttc-table-of-stiller-trellis-nudges-crashing
+#testcase-table-of-stiller-trellis-nudges-crashing
 >crashign
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
-#ttc-table-of-stiller-trellis-nudges-rubble
+#testcase-table-of-stiller-trellis-nudges-rubble
 >rubbel
 The rubble is too dense to rearrange, physically or magically. You should have as much of the oils as you need.
 
-#+ttc-table-of-stiller-trellis-nudges-trellis
+#+testcase-table-of-stiller-trellis-nudges-trellis
 >trellsi
 You can't seem to start to reconstruct the trellis. You only hope your work in Sacred Cedars is done.
 
@@ -1269,7 +1269,7 @@ You can't seem to start to reconstruct the trellis. You only hope your work in S
 
 you muse once again
 
-#ttc-table-of-sortie-spechelp-oils2
+#testcase-table-of-sortie-spechelp-oils2
 >soli
 The soil is there to support something, but not quite that.
 
@@ -1284,7 +1284,7 @@ Your score has just gone up by one point.
 >score
 You currently have 24 out of 27 total points for the Sortie region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#+ttc-table-of-sortie-done-rejects-soil
+#+testcase-table-of-sortie-done-rejects-soil
 >soli
 The silo is quite an accomplishment. You wouldn't want to ruin it
 
@@ -1295,7 +1295,7 @@ The silo is quite an accomplishment. You wouldn't want to ruin it
 Lois may not hear you out here--she has left you to your own devices, but you must be close.
 >moor
 
-#+ttc-table-of-sortie-done-rejects-soil
+#+testcase-table-of-sortie-done-rejects-soil
 >siol
 The silo is quite an accomplishment. You wouldn't want to ruin it.
 
@@ -1316,47 +1316,47 @@ You start fruitlessly double- and triple- thinking whether you should change the
 >reest
 You are noisily uncooperative for a minute. With what, I don't know. But you are.
 
-#ttc-table-of-moor-nudges-buttons
+#testcase-table-of-moor-nudges-buttons
 >buttosn
 It's the buttons' purposes that need changing.
 
-#ttc-table-of-moor-nudges-button
+#testcase-table-of-moor-nudges-button
 >buttno
 It's the buttons' purposes that need changing.
 
-#ttc-table-of-moor-nudges-hoot
+#testcase-table-of-moor-nudges-hoot
 >hoto
 No, the hoots button is plural.
 
-#ttc-table-of-moor-nudges-tree
+#testcase-table-of-moor-nudges-tree
 >tere
 No, the trees button is plural.
 
-#ttc-table-of-moor-nudges-leftbutton
+#testcase-table-of-moor-nudges-leftbutton
 >leftbuttno
 Hm, no, that'd be too abstruse. It's what the button says, probably.
 
-#ttc-table-of-moor-nudges-rightbutton
+#testcase-table-of-moor-nudges-rightbutton
 >rightbuttno
 Hm, no, that'd be too abstruse. It's what the button says, probably.
 
-#ttc-table-of-moor-nudges-letf
+#testcase-table-of-moor-nudges-letf
 >letf
 Hm, no, that'd be too abstruse. It's what the button says, probably.
 
-#ttc-table-of-moor-nudges-rigth
+#testcase-table-of-moor-nudges-rigth
 >rigth
 Hm, no, that'd be too abstruse. It's what the button says, probably.
 
-#ttc-table-of-moor-nudges-shootbutton
+#testcase-table-of-moor-nudges-shootbutton
 >shotobutton
 No, you're overthinking it. Just the text.
 
-#ttc-table-of-moor-nudges-treesbutton
+#testcase-table-of-moor-nudges-treesbutton
 >tresebutton
 No, you're overthinking it. Just the text.
 
-#ttc-table-of-sortie-spechelp-trees-button
+#testcase-table-of-sortie-spechelp-trees-button
 >teres
 Hmm, that doesn't work, but you bet you can bull your way through things.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the trees button. Keep at it.
@@ -1410,7 +1410,7 @@ You currently have 25 out of 27 total points for the Sortie region. You have fou
 >terse
 Already good.
 
-#ttc-table-of-sortie-spechelp-hoots-button
+#testcase-table-of-sortie-spechelp-hoots-button
 >shoto
 You suppress a few minor swears as you realize that can't be right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the hoots button. Keep at it.
@@ -1439,15 +1439,15 @@ You currently have 26 out of 27 total points for the Sortie region. You have fou
 >sooth
 Close...what you need to do will sooth, in a bit.
 
-#+ttc-table-of-moor-nudges-button
+#+testcase-table-of-moor-nudges-button
 >buttno
 It's the buttons' purposes that needed changing.
 
-#ttc-table-of-sortie-done-rejects-steer-button
+#testcase-table-of-sortie-done-rejects-steer-button
 >stree
 No, the steer button HAS to be right.
 
-#ttc-table-of-sortie-done-rejects-shoot-button
+#testcase-table-of-sortie-done-rejects-shoot-button
 >shtoo
 No, the shoot button HAS to be right.
 

@@ -17,14 +17,14 @@
 >forest
 Your score has just gone up by one point.
 
-#ttc-table-of-stores-done-rejects-scented-descent
+#testcase-table-of-stores-done-rejects-scented-descent
 >fretso
 The scented descent to the forest doesn't need to be changed.
 
 >rs sw
 >in
 
-#ttc-table-of-forest-nudges-whiff
+#testcase-table-of-forest-nudges-whiff
 >whfif
 No, that's not the essence of the whiff of stew.
 >undo
@@ -34,22 +34,22 @@ No, that's not the essence of the whiff of stew.
 Getting lost in a swamp would be even worse than getting lost in a forest.
 >undo
 
-#ttc-table-of-forest-nudges-north
+#testcase-table-of-forest-nudges-north
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
 
-#ttc-table-of-forest-nudges-south
+#testcase-table-of-forest-nudges-south
 >souht
 You think you're on to something, but you still feel stuck.
 >undo
 
-#ttc-table-of-forest-nudges-west
+#testcase-table-of-forest-nudges-west
 >twes
 Your internal compass feels extra jumbled. The stew smells a bit burnt for a minute. No, that can't quite be it.
 >undo
 
-#ttc-table-of-forest-nudges-east
+#testcase-table-of-forest-nudges-east
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -57,32 +57,32 @@ You think you're on to something, but you still feel stuck.
 by one point
 /^Rest of Forest
 
-#ttc-table-of-rest-of-forest-nudges-rest
+#testcase-table-of-rest-of-forest-nudges-rest
 >rets
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 >undo
 
-#ttc-table-of-forest-nudges-rambling
+#testcase-table-of-forest-nudges-rambling
 >ramblign
 No, that's not the essence of the rambling shout.
 >undo
 
-#+ttc-table-of-forest-nudges-north
+#+testcase-table-of-forest-nudges-north
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
 
-#+ttc-table-of-forest-nudges-south
+#+testcase-table-of-forest-nudges-south
 >suoth
 The shout wavers for a bit. Maybe you're on to something.
 >undo
 
-#+ttc-table-of-forest-nudges-west
+#+testcase-table-of-forest-nudges-west
 >twes
 Your internal compass feels extra jumbled. You remember the whiff of stew, but there's probably a different challenge here.
 >undo
 
-#+ttc-table-of-forest-nudges-east
+#+testcase-table-of-forest-nudges-east
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -97,17 +97,17 @@ by one point
 >rs ne
 >in
 
-#ttc-table-of-forest-nudges-aroma
+#testcase-table-of-forest-nudges-aroma
 >aroam
 No, that's not the essence of the aroma of teas.
 >undo
 
-#+ttc-table-of-forest-nudges-east
+#+testcase-table-of-forest-nudges-east
 >aest
 Your internal compass feels extra jumbled. The scent of teas changes slightly.
 >undo
 
-#ttc-table-of-forest-nudges-eat
+#testcase-table-of-forest-nudges-eat
 >eta
 The scent of teas changes slightly. Anyway, it doesn't smell like just one tea.
 >undo
@@ -127,12 +127,12 @@ You need the opposite of a seat, here. But at the same time, you're also very cl
 This game is nonviolent--well, except for a few puns.
 >undo
 
-#+ttc-table-of-forest-nudges-eat
+#+testcase-table-of-forest-nudges-eat
 >aet
 Your internal compass feels extra jumbled. The scent of teas changes slightly. Anyway, it doesn't smell like just one tea.
 >undo
 
-#+ttc-table-of-forest-nudges-north
+#+testcase-table-of-forest-nudges-north
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
@@ -140,22 +140,22 @@ You think you're on to something, but you still feel stuck.
 by one point
 /^Rest of Forest
 
-#+ttc-table-of-forest-nudges-north
+#+testcase-table-of-forest-nudges-north
 >ornth
 Your internal compass feels extra jumbled. The thorn wilts slightly for a second.
 >undo
 
-#+ttc-table-of-forest-nudges-south
+#+testcase-table-of-forest-nudges-south
 >souht
 You think you're on to something, but you still feel stuck.
 >undo
 
-#+ttc-table-of-forest-nudges-west
+#+testcase-table-of-forest-nudges-west
 >twes
 You think you're on to something, but you still feel stuck.
 >undo
 
-#+ttc-table-of-forest-nudges-east
+#+testcase-table-of-forest-nudges-east
 >aest
 Your internal compass feels extra jumbled. You remember the aroma of teas, but there's probably a different challenge here.
 >undo
@@ -170,22 +170,22 @@ by one point
 >sr ne
 >in
 
-#+ttc-table-of-forest-nudges-north
+#+testcase-table-of-forest-nudges-north
 >norht
 Your internal compass feels extra jumbled. The thorn wilts slightly for a second.
 >undo
 
-#+ttc-table-of-forest-nudges-south
+#+testcase-table-of-forest-nudges-south
 >souht
 You think you're on to something, but you still feel stuck.
 >undo
 
-#+ttc-table-of-forest-nudges-west
+#+testcase-table-of-forest-nudges-west
 >twes
 You think you're on to something, but you still feel stuck.
 >undo
 
-#+ttc-table-of-forest-nudges-east
+#+testcase-table-of-forest-nudges-east
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -193,22 +193,22 @@ You think you're on to something, but you still feel stuck.
 by one point
 /^Rest of Forest
 
-#+ttc-table-of-forest-nudges-north
+#+testcase-table-of-forest-nudges-north
 >norht
 Your internal compass feels extra jumbled. You remember the thorn, but there's probably a different challenge here.
 >undo
 
-#+ttc-table-of-forest-nudges-south
+#+testcase-table-of-forest-nudges-south
 >souht
 You think you're on to something, but you still feel stuck.
 >undo
 
-#+ttc-table-of-forest-nudges-west
+#+testcase-table-of-forest-nudges-west
 >twes
 You think you're on to something, but you still feel stuck.
 >undo
 
-#+ttc-table-of-forest-nudges-east
+#+testcase-table-of-forest-nudges-east
 >aest
 Your internal compass feels extra jumbled. The scent of teas changes slightly.
 >undo
@@ -223,22 +223,22 @@ by one point
 >sr sw
 >in
 
-#+ttc-table-of-forest-nudges-north
+#+testcase-table-of-forest-nudges-north
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
 
-#+ttc-table-of-forest-nudges-south
+#+testcase-table-of-forest-nudges-south
 >souht
 Your internal compass feels extra jumbled. The shout wavers for a bit. Maybe you're on to something.
 >undo
 
-#+ttc-table-of-forest-nudges-west
+#+testcase-table-of-forest-nudges-west
 >twes
 You think you're on to something, but you still feel stuck.
 >undo
 
-#+ttc-table-of-forest-nudges-east
+#+testcase-table-of-forest-nudges-east
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -246,22 +246,22 @@ You think you're on to something, but you still feel stuck.
 by one point
 /^Rest of Forest
 
-#+ttc-table-of-forest-nudges-north
+#+testcase-table-of-forest-nudges-north
 >norht
 You think you're on to something, but you still feel stuck.
 >undo
 
-#+ttc-table-of-forest-nudges-south
+#+testcase-table-of-forest-nudges-south
 >souht
 Your internal compass feels extra jumbled. You remember the rambling shout, but there's probably a different challenge here.
 >undo
 
-#+ttc-table-of-forest-nudges-west
+#+testcase-table-of-forest-nudges-west
 >twes
 The stew smells a bit burnt for a minute. No, that can't quite be it.
 >undo
 
-#+ttc-table-of-forest-nudges-east
+#+testcase-table-of-forest-nudges-east
 >aest
 You think you're on to something, but you still feel stuck.
 >undo
@@ -282,19 +282,19 @@ by one point
 /^Softer Forest
 
 #these are universal to SF/RF
-#ttc-table-of-forest-nudges-forest
+#testcase-table-of-forest-nudges-forest
 >forets
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
-#ttc-table-of-forest-nudges-conifer
+#testcase-table-of-forest-nudges-conifer
 >conifre
 No conifers appear. Maybe you can just use your senses, and it's easier than that.
 
-#ttc-table-of-forest-nudges-conifers
+#testcase-table-of-forest-nudges-conifers
 >conifesr
 No conifers appear. Maybe you can just use your senses, and it's easier than that.
 
-#ttc-table-of-forest-nudges-leaves
+#testcase-table-of-forest-nudges-leaves
 >leavse
 You have no time to play with leaves.
 
@@ -321,59 +321,59 @@ It is too late to help the line of no life by showing love.
 >lief
 It is too late to help the line of no life by showing love.
 
-#+ttc-table-of-forest-nudges-forest
+#+testcase-table-of-forest-nudges-forest
 >forets
 You don't want to change a region drastically while you're in it
 
-#ttc-table-of-self-id-fields-nudges-selfid
+#testcase-table-of-self-id-fields-nudges-selfid
 >selfdi
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
-#ttc-table-of-self-id-fields-nudges-self
+#testcase-table-of-self-id-fields-nudges-self
 >sefl
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
-#ttc-table-of-self-id-fields-nudges-field
+#testcase-table-of-self-id-fields-nudges-field
 >ifdle
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
-#ttc-table-of-self-id-fields-nudges-selves
+#testcase-table-of-self-id-fields-nudges-selves
 >selvse
 The selves vessel is much too sturdy to manipulate.
 
-#ttc-table-of-self-id-fields-nudges-vesel
+#testcase-table-of-self-id-fields-nudges-vesel
 >vesle
 The selves vessel is much too sturdy to manipulate.
 
-#ttc-table-of-self-id-fields-nudges-line
+#testcase-table-of-self-id-fields-nudges-line
 >inle
 They're dead and not interfering with you. Greater powers than you will determine their final fate.
 
-#ttc-table-of-self-id-fields-nudges-life
+#testcase-table-of-self-id-fields-nudges-life
 >ilef
 They're dead and not interfering with you. Greater powers than you will determine their final fate.
 
-#ttc-table-of-self-id-fields-nudges-lineof
+#testcase-table-of-self-id-fields-nudges-lineof
 >linefo
 They're dead and not interfering with you. Greater powers than you will determine their final fate.
 
-#ttc-table-of-self-id-fields-nudges-undead
+#testcase-table-of-self-id-fields-nudges-undead
 >undeda
 You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later.
 
-#ttc-table-of-self-id-fields-nudges-undeads
+#testcase-table-of-self-id-fields-nudges-undeads
 >undeasd
 You can't do much to change the undead. You're not THAT powerful. Well, maybe specific undead, a bit later.
 
-#ttc-table-of-self-id-fields-nudges-crosse
+#testcase-table-of-self-id-fields-nudges-crosse
 >croses
 Whatever you could do to Corses Crosse, it might do worse to you.
 
-#ttc-table-of-self-id-fields-nudges-cross
+#testcase-table-of-self-id-fields-nudges-cross
 >crsos
 Whatever you could do to Corses Crosse, it might do worse to you.
 
-#ttc-table-of-self-id-fields-nudges-crose
+#testcase-table-of-self-id-fields-nudges-crose
 >croes
 Whatever you could do to Corses Crosse, it might do worse to you.
 
@@ -404,79 +404,79 @@ There's a list inside the slit, so that's not what it could become.
 >e
 /^Gnarliest Triangles
 
-#ttc-table-of-gnarliest-triangles-nudges-triangles
+#testcase-table-of-gnarliest-triangles-nudges-triangles
 >trianglse
 The triangles need no alterings.
 
-#ttc-table-of-gnarliest-triangles-nudges-triangle
+#testcase-table-of-gnarliest-triangles-nudges-triangle
 >triangel
 No triangle needs altering.
 
-#ttc-table-of-gnarliest-triangles-nudges-shell
+#testcase-table-of-gnarliest-triangles-nudges-shell
 >shlel
 It doesn't rattle, but the dashes seem to.
 
-#ttc-table-of-gnarliest-triangles-nudges-bucket
+#testcase-table-of-gnarliest-triangles-nudges-bucket
 >buckte
 It doesn't rattle, but the ones seem to.
 
-#ttc-table-of-gnarliest-triangles-nudges-bubble
+#testcase-table-of-gnarliest-triangles-nudges-bubble
 >bubbel
 It doesn't rattle, but the noughts seem to.
 
-#ttc-table-of-gnarliest-triangles-nudges-elegy
+#testcase-table-of-gnarliest-triangles-nudges-elegy
 >eleyg
 The elegy doesn't need to be twisted any more.
 
-#ttc-table-of-gnarliest-triangles-nudges-tacks
+#testcase-table-of-gnarliest-triangles-nudges-tacks
 >tacsk
 No need to try to turn the stack into a heap. Ho ho ho.
 
-#ttc-table-of-gnarliest-triangles-nudges-tack
+#testcase-table-of-gnarliest-triangles-nudges-tack
 >takc
 No need to try to turn the stack into a heap. Ho ho ho.
 
-#ttc-table-of-gnarliest-triangles-nudges-notes
+#testcase-table-of-gnarliest-triangles-nudges-notes
 >notse
 The notes stone is just for reading.
 
-#ttc-table-of-gnarliest-triangles-nudges-note
+#testcase-table-of-gnarliest-triangles-nudges-note
 >noet
 The notes stone is just for reading.
 
-#ttc-table-of-gnarliest-triangles-nudges-stick
+#testcase-table-of-gnarliest-triangles-nudges-stick
 >stikc
 Don't vandalize the art, man.
 
-#ttc-table-of-gnarliest-triangles-nudges-figure
+#testcase-table-of-gnarliest-triangles-nudges-figure
 >figuer
 Don't vandalize the art, man.
 
-#ttc-table-of-gnarliest-triangles-nudges-figures
+#testcase-table-of-gnarliest-triangles-nudges-figures
 >figurse
 Don't vandalize the art, man.
 
-#ttc-table-of-gnarliest-triangles-nudges-zeros
+#testcase-table-of-gnarliest-triangles-nudges-zeros
 >zerso
 They're noughts, not zeros.
 
-#ttc-table-of-gnarliest-triangles-nudges-zeroes
+#testcase-table-of-gnarliest-triangles-nudges-zeroes
 >zerose
 They're noughts, not zeroes.
 
-#ttc-table-of-gnarliest-triangles-nudges-eon
+#testcase-table-of-gnarliest-triangles-nudges-eon
 >eno
 They're ones, not a one.
 
-#ttc-table-of-gnarliest-triangles-nudges-naught
+#testcase-table-of-gnarliest-triangles-nudges-naught
 >naugth
 The naughts, err, noughts seem zero-y enough to contain an o.
 
-#ttc-table-of-gnarliest-triangles-nudges-naughts
+#testcase-table-of-gnarliest-triangles-nudges-naughts
 >naughst
 The naughts, err, noughts seem zero-y enough to contain an o.
 
-#ttc-table-of-gnarliest-triangles-nudges-nought
+#testcase-table-of-gnarliest-triangles-nudges-nought
 >nougth
 There's more than one nought.
 
@@ -487,7 +487,7 @@ I think this game is hard enough without bringing Calculus into it.
 >integrals
 I think this game is hard enough without bringing Calculus into it.
 
-#ttc-table-of-gnarliest-triangles-nudges-dash
+#testcase-table-of-gnarliest-triangles-nudges-dash
 >dahs
 There's more than one dash.
 
@@ -538,7 +538,7 @@ No, you can't afford to wait that long.
 >eons
 No, you can't afford to wait that long.
 
-#ttc-table-of-forest-spechelp-ones
+#testcase-table-of-forest-spechelp-ones
 >noes
 The ones rattle a bit. Maybe you can sense out what they should be.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the ones. Keep at it.
@@ -563,7 +563,7 @@ A certain deputy sheriff from Hazzard County would be more than willing to help,
 >score
 You currently have 3 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
-#ttc-table-of-forest-done-rejects-nose
+#testcase-table-of-forest-done-rejects-nose
 >noes
 Don't get that nose bent out of shape.
 
@@ -575,7 +575,7 @@ Hey! Guns are dangerous! It won't be that easy to get one. Besides, changing the
 >gunshot
 You need something more tangible than that. Something that could make a gunshot, perhaps
 
-#ttc-table-of-forest-spechelp-noughts
+#testcase-table-of-forest-spechelp-noughts
 >shotgnu
 Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the noughts. Keep at it.
@@ -586,7 +586,7 @@ Hmm. The noughts rattled, but nothing. Perhaps the elegy will help you.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the noughts. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-forest-spechelp-dashes
+#testcase-table-of-forest-spechelp-dashes
 >shadse
 The dashes seemed to rattle a bit, but you feel slightly uncool.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the dashes. Keep at it.
@@ -603,7 +603,7 @@ Your score has just gone up by one point.
 >score
 You currently have 4 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
-#ttc-table-of-forest-done-rejects-shades
+#testcase-table-of-forest-done-rejects-shades
 >shadse
 Anything you do to bend the shades might break them.
 
@@ -613,11 +613,11 @@ Your score has just gone up by one point.
 >score
 You currently have 5 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
-#ttc-table-of-forest-nudges-muzzle
+#testcase-table-of-forest-nudges-muzzle
 >muzzel
 You don't want to mess the muzzle up. You can fire bullets through it, and that's good enough.
 
-#ttc-table-of-forest-done-rejects-shotgun
+#testcase-table-of-forest-done-rejects-shotgun
 >shotgnu
 Anything you do might violate firearm safety rules, or something.
 
@@ -637,43 +637,43 @@ Shotgun: gnu? Tosh!
 >w
 /^Flesh Shelf
 
-#ttc-table-of-flesh-shelf-nudges-shelf
+#testcase-table-of-flesh-shelf-nudges-shelf
 >shefl
 The shelf is frozen that way. Ba dum bum.
 
-#ttc-table-of-flesh-shelf-nudges-skin
+#testcase-table-of-flesh-shelf-nudges-skin
 >skni
 The skin sink is frozen that way. Ba dum bum.
 
-#ttc-table-of-flesh-shelf-nudges-ink
+#testcase-table-of-flesh-shelf-nudges-ink
 >ikn
 The skin sink is frozen that way. Ba dum bum.
 
-#ttc-table-of-flesh-shelf-nudges-cities
+#testcase-table-of-flesh-shelf-nudges-cities
 >citise
 Taking care of the main menace may change the iciest cities
 
-#ttc-table-of-flesh-shelf-nudges-city
+#testcase-table-of-flesh-shelf-nudges-city
 >ciyt
 Taking care of the main menace may change the iciest cities
 
-#ttc-table-of-forest-nudges-sandwich
+#testcase-table-of-forest-nudges-sandwich
 >sandwihc
 Hmm. That's a lot of letters. You wonder if pulling the sandwich apart might break it into smaller, more manageable (or anagrammable) pieces.
 
-#ttc-table-of-flesh-shelf-nudges-canister
+#testcase-table-of-flesh-shelf-nudges-canister
 >canistre
 The canister just sits there. Perhaps it has a more mundane purpose or fate.
 
-#ttc-table-of-flesh-shelf-nudges-grinder
+#testcase-table-of-flesh-shelf-nudges-grinder
 >grindre
 The grinder just sits there. Perhaps it has a more mundane purpose or fate.
 
-#ttc-table-of-flesh-shelf-nudges-grin
+#testcase-table-of-flesh-shelf-nudges-grin
 >grni
 The ring does not bend.
 
-#ttc-table-of-flesh-shelf-nudges-hams
+#testcase-table-of-flesh-shelf-nudges-hams
 >hasm
 You think "Hm, as..." but don't know what to do. Maybe that is just writing, and you just put stuff in the canister.
 
@@ -698,19 +698,19 @@ Whether you're hoping to see a deceased relative or send a relative you really, 
 >debar
 If there are any lawyers here, they've already been debarred.
 
-#ttc-table-of-flesh-shelf-nudges-bleads
+#testcase-table-of-flesh-shelf-nudges-bleads
 >bleasd
 The blades, buried in the grinder, remain lifeless.
 
-#ttc-table-of-forest-nudges-meat
+#testcase-table-of-forest-nudges-meat
 >meta
 You'll need to be more specific about the meat to poke at.
 
-#ttc-table-of-forest-nudges-meats
+#testcase-table-of-forest-nudges-meats
 >meast
 You'll need to be more specific about the meat to poke at.
 
-#ttc-table-of-forest-nudges-liver
+#testcase-table-of-forest-nudges-liver
 >livre
 The one liver seems inactive by itself.
 
@@ -728,7 +728,7 @@ spasm
 >amps
 You are trying to save a magic world, not start a garage band. Besides, there's too much noise behind store M anyway.
 
-#ttc-table-of-forest-spechelp-spam
+#testcase-table-of-forest-spechelp-spam
 >masp
 Nothing happens, but you think you can make out odd shapes in the Spam for a moment.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the Spam. Keep at it.
@@ -745,7 +745,7 @@ Your score has just gone up by one point.
 >score
 You currently have 6 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
-#ttc-table-of-forest-done-rejects-maps
+#testcase-table-of-forest-done-rejects-maps
 >masp
 The maps are probably right, you hope. No need to change them.
 
@@ -753,7 +753,7 @@ The maps are probably right, you hope. No need to change them.
 >bared
 It's kind of cold a lot of places here. Keep your clothes on.
 
-#ttc-table-of-forest-spechelp-bread
+#testcase-table-of-forest-spechelp-bread
 >beadr
 A few crumbs fall from the bread and leave a scuzzy growth before vanishing.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the bread. Keep at it.
@@ -770,7 +770,7 @@ Your score has just gone up by one point.
 >score
 You currently have 7 out of 17 total points for the Forest region. Your minimum possible score on solving is 15, and the maximum is 17
 
-#ttc-table-of-forest-done-rejects-beard
+#testcase-table-of-forest-done-rejects-beard
 >beadr
 For a beard, it's actually pretty cool.
 
@@ -781,7 +781,7 @@ You've made a full disguise now!
 
 >e
 
-#ttc-table-of-forest-spechelp-slit
+#testcase-table-of-forest-spechelp-slit
 >ilst
 The slit waxes and wanes a bit.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the slit. Keep at it.
@@ -807,27 +807,27 @@ Your score has just gone up by one point.
 >score
 You currently have 9 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
 
-#ttc-table-of-emptiness-sepiments-nudges-emptiness
+#testcase-table-of-emptiness-sepiments-nudges-emptiness
 >emptinsse
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
-#ttc-table-of-emptiness-sepiments-nudges-sepiment
+#testcase-table-of-emptiness-sepiments-nudges-sepiment
 >sepimetn
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
-#ttc-table-of-emptiness-sepiments-nudges-scoffin
+#testcase-table-of-emptiness-sepiments-nudges-scoffin
 >scoffni
 You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
 
-#ttc-table-of-emptiness-sepiments-nudges-coffin
+#testcase-table-of-emptiness-sepiments-nudges-coffin
 >coffni
 You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
 
-#ttc-table-of-emptiness-sepiments-nudges-coffer
+#testcase-table-of-emptiness-sepiments-nudges-coffer
 >coffre
 You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
 
-#ttc-table-of-emptiness-sepiments-nudges-coffers
+#testcase-table-of-emptiness-sepiments-nudges-coffers
 >coffesr
 You know the scoffer coffers and scoffin' coffins can't be changed, and the more you tried, the worse the smirking would get.
 
@@ -847,7 +847,7 @@ James Spader is pretty cool, but he can't help with supernatural stuff. Okay, ma
 >parsed
 You can just read the spread instead. The messages here aren't cryptic enough to be parsed.
 
-#ttc-table-of-forest-spechelp-banshee
+#testcase-table-of-forest-spechelp-banshee
 >hasbene
 The banshee whines, sure someone is trying to kill it! Or send it to a lower ring of the death-kingdom.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the banshee. Keep at it.
@@ -858,7 +858,7 @@ The banshee whines, sure someone is trying to kill it! Or send it to a lower rin
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the banshee. Keep at it.
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
-#ttc-table-of-forest-spechelp-liches
+#testcase-table-of-forest-spechelp-liches
 >chisle
 The liches whine, sure someone is trying to kill them! Or send it to a lower ring of the death-kingdom.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the liches. Keep at it.
@@ -887,7 +887,7 @@ Your score has just gone up by one point.
 >score
 You currently have 11 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-forest-done-rejects-chisel
+#testcase-table-of-forest-done-rejects-chisel
 >chisle
 It's a perfectly good tool. Trying to refine it might break it.
 
@@ -898,7 +898,7 @@ Cr-r-r-r-k.
 
 >e
 
-#+ttc-table-of-forest-nudges-liver
+#+testcase-table-of-forest-nudges-liver
 >livre
 Your thoughts go to the other liver.
 
@@ -907,11 +907,11 @@ Your thoughts go to the other liver.
 >peel viler liver
 Cr-r-r-r-k.
 
-#ttc-table-of-forest-nudges-ville
+#testcase-table-of-forest-nudges-ville
 >vilel
 It's just a liver. No need to parse the brand name.
 
-#ttc-table-of-forest-nudges-river
+#testcase-table-of-forest-nudges-river
 >rivre
 It's just a liver. No need to parse the brand name.
 
@@ -939,7 +939,7 @@ You temporarily console yourself with positive things you know are true. For ins
 
 >put river ville in canister
 
-#+ttc-table-of-forest-nudges-liver
+#+testcase-table-of-forest-nudges-liver
 >livre
 C'mon. You put one liver where it needs to be. No need to futz with the remaining liver.
 
@@ -951,11 +951,11 @@ LIVERS.
 >score
 You currently have 12 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#+ttc-table-of-flesh-shelf-nudges-canister
+#+testcase-table-of-flesh-shelf-nudges-canister
 >canistre
 The canister has suffered enough abuse. No need to break it further.
 
-#+ttc-table-of-flesh-shelf-nudges-hams
+#+testcase-table-of-flesh-shelf-nudges-hams
 >hasm
 You think "Hm, as..." but don't know what to do. Maybe that is just writing, and in any case, you broke the canister, anyway.
 
@@ -967,7 +967,7 @@ You've already done enough with the meats.
 >grin
 You smirk at the grinder you trashed.
 
-#ttc-table-of-forest-spechelp-livers
+#testcase-table-of-forest-spechelp-livers
 >slivre
 The livers seem to prick you for a moment, as if to say you're not quite right.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the livers. Keep at it.
@@ -1004,13 +1004,13 @@ You currently have 13 out of 17 total points for the Forest region. You have fou
 >e
 >n
 
-#ttc-table-of-forest-spechelp-spread
+#testcase-table-of-forest-spechelp-spread
 >drepsa
 As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the spread. Keep at it.
 >undo
 
-#ttc-table-of-emptiness-sepiments-nudges-cloth
+#testcase-table-of-emptiness-sepiments-nudges-cloth
 >cloht
 No, the material of the spread isn't important, here.
 
@@ -1034,7 +1034,7 @@ red asp!
 >spared
 That is too passive, to ask to be spared.
 
-#ttc-table-of-forest-spechelp-red-asp
+#testcase-table-of-forest-spechelp-red-asp
 >drapse
 The red asp strikes at something you can't see, unaware it's you that's trying to change it.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the red asp. Keep at it.
@@ -1051,11 +1051,11 @@ Your score has just gone up by one point.
 >score
 You currently have 14 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#+ttc-table-of-emptiness-sepiments-nudges-cloth
+#+testcase-table-of-emptiness-sepiments-nudges-cloth
 >cloht
 No, the material of the drapes isn't important, here.
 
-#ttc-table-of-forest-done-rejects-drapes
+#testcase-table-of-forest-done-rejects-drapes
 >drapse
 They look forbidding, but you might turn them into something worse. Maybe you can just dispose of them physically.
 
@@ -1065,34 +1065,34 @@ The drapes are too thick.
 >cut drapes
 The drapes vanish as they are cut, revealing ... well, something leading somewhere. A voice whispers "Enter the missend dimness ... if you dare." Mis-send or miss-end? Either way, you probably need to be prepared.
 
-#ttc-table-of-emptiness-sepiments-nudges-doorway
+#testcase-table-of-emptiness-sepiments-nudges-doorway
 >doorwya
 The dimness is unchangeable from out here. You'll have to find a way in.
 
-#ttc-table-of-emptiness-sepiments-nudges-mis
+#testcase-table-of-emptiness-sepiments-nudges-mis
 >msi
 The dimness is unchangeable from out here. You'll have to find a way in.
 
-#ttc-table-of-emptiness-sepiments-nudges-miss
+#testcase-table-of-emptiness-sepiments-nudges-miss
 >mssi
 The dimness is unchangeable from out here. You'll have to find a way in.
 
-#ttc-table-of-emptiness-sepiments-nudges-dimness
+#testcase-table-of-emptiness-sepiments-nudges-dimness
 >dimnsse
 The dimness is unchangeable from out here. You'll have to find a way in.
 
-#ttc-table-of-emptiness-sepiments-nudges-send
+#testcase-table-of-emptiness-sepiments-nudges-send
 >sedn
 The dimness is unchangeable from out here. You'll have to find a way in.
 
-#ttc-table-of-emptiness-sepiments-nudges-nde
+#testcase-table-of-emptiness-sepiments-nudges-nde
 >ned
 The dimness is unchangeable from out here. You'll have to find a way in.
 
 >n
 You don't know what's
 
-#ttc-table-of-forest-spechelp-sliver
+#testcase-table-of-forest-spechelp-sliver
 >silvre
 The sliver seems to bend, but it snaps back.
 !As if it's impatient
@@ -1107,14 +1107,14 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 >silver
 Your score has just gone up by one point.
 
-#ttc-table-of-forest-nudges-cylinder
+#testcase-table-of-forest-nudges-cylinder
 >cylindre
 It's the shape it should be. You don't need to make a key, or a charm.
 
 >score
 You currently have 15 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-forest-done-rejects-silver
+#testcase-table-of-forest-done-rejects-silver
 >silvre
 Hard to beat silver. It's what it should be.
 
@@ -1139,31 +1139,31 @@ If there were any treasure here, it'd probably do something terrible to you once
 >cluer
 This place is too stark to offer clues, and if it did, they'd probably be wrong anyway.
 
-#ttc-table-of-ghouls-slough-nudges-slough
+#testcase-table-of-ghouls-slough-nudges-slough
 >slouhg
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
-#ttc-table-of-ghouls-slough-nudges-lough
+#testcase-table-of-ghouls-slough-nudges-lough
 >louhg
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
-#ttc-table-of-ghouls-slough-nudges-cruel
+#testcase-table-of-ghouls-slough-nudges-cruel
 >crule
 The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
 
-#ttc-table-of-ghouls-slough-nudges-ones
+#testcase-table-of-ghouls-slough-nudges-ones
 >onse
 The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
 
-#ttc-table-of-ghouls-slough-nudges-enclosure
+#testcase-table-of-ghouls-slough-nudges-enclosure
 >enclosuer
 The enclosure is not changeable, and it's small-time compared to the ultimate challenge ahead.
 
-#ttc-table-of-ghouls-slough-nudges-marsh
+#testcase-table-of-ghouls-slough-nudges-marsh
 >marhs
 The marsh and lake are symptoms of--whatever evil is beyond here.
 
-#ttc-table-of-ghouls-slough-nudges-lake
+#testcase-table-of-ghouls-slough-nudges-lake
 >laek
 The marsh and lake are symptoms of--whatever evil is beyond here.
 
@@ -1194,51 +1194,51 @@ You currently have 15 out of 17 total points for the Forest region. You have fou
 >x maps
 /^Frost Forts
 
-#ttc-table-of-frost-forts-nudges-frost
+#testcase-table-of-frost-forts-nudges-frost
 >frots
 Unless a room has no way out, or your gadget spontaneously gives a reading, you probably won't need to act on the whole room.
 
-#ttc-table-of-frost-forts-nudges-snow
+#testcase-table-of-frost-forts-nudges-snow
 >snwo
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 
-#ttc-table-of-frost-forts-nudges-capital
+#testcase-table-of-frost-forts-nudges-capital
 >capitla
 You need to deal with all the capitals. And they're specific letters.
 
-#ttc-table-of-frost-forts-nudges-capitals
+#testcase-table-of-frost-forts-nudges-capitals
 >capitasl
 They aren't just any capitals. They're specific letters.
 
-#ttc-table-of-frost-forts-nudges-icecap
+#testcase-table-of-frost-forts-nudges-icecap
 >icecpa
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 
-#ttc-table-of-frost-forts-nudges-iced
+#testcase-table-of-frost-forts-nudges-iced
 >icde
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 
-#ttc-table-of-frost-forts-nudges-ice
+#testcase-table-of-frost-forts-nudges-ice
 >iec
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 
-#ttc-table-of-frost-forts-nudges-sleet
+#testcase-table-of-frost-forts-nudges-sleet
 >slete
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 
-#ttc-table-of-frost-forts-nudges-bumps
+#testcase-table-of-frost-forts-nudges-bumps
 >bumsp
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 
-#ttc-table-of-frost-forts-nudges-bmup
+#testcase-table-of-frost-forts-nudges-bmup
 >bmup
 The scenery here's mostly frozen that way. Ha ha ha. Except those vowels.
 
-#ttc-table-of-frost-forts-nudges-vowel
+#testcase-table-of-frost-forts-nudges-vowel
 >vowle
 You need to deal with all the vowels.
 
-#ttc-table-of-forest-spechelp-vowels
+#testcase-table-of-forest-spechelp-vowels
 >wolvse
 The vowels continue to howl in defiance. OU...AIE...like a wild animal.
 DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull coming from the vowels. Keep at it.
@@ -1255,30 +1255,30 @@ Your score has just gone up by one point.
 >score
 You currently have 16 out of 17 total points for the Forest region. You have found all the secret points in the region, so you will get the maximum score once you solve it.
 
-#ttc-table-of-frost-forts-nudges-werewolves
+#testcase-table-of-frost-forts-nudges-werewolves
 >werewolvse
 They won't be changed with magic. Thankfully, you've got something more direct.
 
-#ttc-table-of-frost-forts-nudges-lupine
+#testcase-table-of-frost-forts-nudges-lupine
 >lupien
 They are the lupine lineup from your notes, but for your purpose, they're wolves.
 
-#+ttc-table-of-frost-forts-nudges-snow
+#+testcase-table-of-frost-forts-nudges-snow
 >snwo
 The scenery here's mostly frozen that way. Ha ha ha
 !Except those vowels.
 
-#+ttc-table-of-frost-forts-nudges-icecap
+#+testcase-table-of-frost-forts-nudges-icecap
 >icecpa
 The scenery here's mostly frozen that way. Ha ha ha.
 !Except those vowels.
 
-#+ttc-table-of-frost-forts-nudges-iced
+#+testcase-table-of-frost-forts-nudges-iced
 >icde
 The scenery here's mostly frozen that way. Ha ha ha.
 !Except those vowels.
 
-#ttc-table-of-forest-done-rejects-wolves
+#testcase-table-of-forest-done-rejects-wolves
 >wolvse
 You can't change them back. But maybe you can get rid of them. You do have a weapon.
 

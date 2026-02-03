@@ -31,7 +31,7 @@ A reading (well, a bunch of papers) has blown in since last time you were here. 
 >beast
 That might unleash a beast on innocent citizens. If there is one, you must face it in its own lair.
 
-#ttc-table-of-preflip-clues-beast
+#testcase-table-of-preflip-clues-beast
 >pf
 Stuff you figured, but you couldn't use it right away:
 beats -> beast
@@ -58,7 +58,7 @@ You currently have 1 out of 18 total points for the Metros region. Your minimum 
 >sword
 The words become a sword, too large and terrifying to carry. The talk resumes as the sword disappears. You'll probably need something to put the sword, or the words, in.
 
-#ttc-table-of-preflip-clues-sword
+#testcase-table-of-preflip-clues-sword
 >pf
 words -> sword
 
@@ -112,7 +112,7 @@ So, though you never know when a keycard is handy, Ix-nay on the agic-may 'til t
 >keycard
 This would create quite a (negative) scene with people still in the bastion.
 
-#ttc-table-of-preflip-clues-keycard
+#testcase-table-of-preflip-clues-keycard
 >pf
 dry cake -> keycard
 
@@ -272,7 +272,7 @@ You currently have 12 out of 18 total points for the Metros region. You have fou
 >switch emitter
 by one point
 
-#ttc-table-of-tulip-acquisition-methods-1
+#testcase-table-of-tulip-acquisition-methods-1
 >alts
 --the other ways to get the tulip are to ASK NERDS ABOUT DARKNESS or OPEN NOISE BAG in the Esoteric Coteries after getting the begonias.
 >undo
@@ -343,8 +343,8 @@ You currently have 17 out of 18 total points for the Metros region. You have fou
 While the other regions are linear, the Metros has five paths based on the flowers you choose from Fo' Real Florae Fare, Lo (two ways) and how you get the tulip (three ways). One way of getting the tulip requires a specific flower.
 You could have gotten the begonias from Fo' Real Florae Fare, Lo.
 
-#ttc-table-of-tulip-acquisition-methods-2
-#ttc-table-of-tulip-acquisition-methods-3
+#testcase-table-of-tulip-acquisition-methods-2
+#testcase-table-of-tulip-acquisition-methods-3
 --the other ways to get the tulip are to OPEN NOISE BAG in the Esoteric Coteries after getting the begonias or SHOW EMITTER TO DEADBEAT after using it in Obtains/Boastin' Bastion, then using it again in the Esoteric Coteries.
 
 >attack beast

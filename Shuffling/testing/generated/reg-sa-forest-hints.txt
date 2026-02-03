@@ -146,15 +146,15 @@ Go east and look around a bit. There're only three rooms to start, and passing C
 
 DEBUG: ones being objhinted.
 
-#ttc-table-of-forest-anagrams-ones
+#testcase-table-of-forest-anagrams-ones
 >xx ones
 Your vision blurs a bit, and instead you see a nose.
 
-#ttc-table-of-forest-anagrams-dashes
+#testcase-table-of-forest-anagrams-dashes
 >xx dashes
 Your vision blurs a bit, and instead you see shades.
 
-#ttc-table-of-forest-anagrams-noughts
+#testcase-table-of-forest-anagrams-noughts
 >xx noughts
 Your vision blurs a bit, and instead you see a shotgun.
 
@@ -175,7 +175,7 @@ Your score has just gone up by one point.
 
 DEBUG: dashes being objhinted.
 
-#ttc-table-of-nowheres-gnarliest-triangles
+#testcase-table-of-nowheres-gnarliest-triangles
 >e
 You don't need an alert sign to know running into the walls any direction but west would cause a real sting.
 
@@ -216,18 +216,18 @@ The only way to exit is east, so let's go that way.
 >exits
 The only way you seem to be able to go is east to Self-ID Fields.
 
-#ttc-table-of-nowheres-flesh-shelf
+#testcase-table-of-nowheres-flesh-shelf
 >w
 It's too steep down every way except back east.
 
 >open sandwich
 bread from the Spam
 
-#ttc-table-of-forest-anagrams-bread
+#testcase-table-of-forest-anagrams-bread
 >xx bread
 Your vision blurs a bit, and instead you see a beard.
 
-#ttc-table-of-forest-anagrams-spam
+#testcase-table-of-forest-anagrams-spam
 >xx spam
 Your vision blurs a bit, and instead you see maps.
 >beard
@@ -262,7 +262,7 @@ You should be able to walk NORTH from Self-ID Fields now with your disguise.
 
 >e
 
-#ttc-table-of-forest-anagrams-slit
+#testcase-table-of-forest-anagrams-slit
 >xx slit
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 Your vision blurs a bit, and instead you see a silt.
@@ -288,7 +288,7 @@ You see the liches working their way under the meats, which fall into the grinde
 >angle
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the banshee (faint) and the liches for a few seconds.
 
-#ttc-table-of-nowheres-emptiness-sepiments
+#testcase-table-of-nowheres-emptiness-sepiments
 >e
 The scoffer coffers and scoffin' coffins are impenetrable. But even if they weren't, there are probably slayer layers, or worse, behind.
 
@@ -304,13 +304,13 @@ The only way you seem to be able to go is south to Self-ID Fields.
 >score
 You currently have 9 out of 17 total points for the Forest region. Your minimum possible score on solving is 16, and the maximum is 17
 
-#ttc-table-of-forest-anagrams-banshee
+#testcase-table-of-forest-anagrams-banshee
 
 >xx banshee
 Some aftertaste from the saltine doesn't feel great. You wonder if this is the best way to use your vision. Use it anyway?
 The banshee seems to howl about becoming a has-been.
 
-#ttc-table-of-forest-anagrams-liches
+#testcase-table-of-forest-anagrams-liches
 >xx liches
 Your vision blurs a bit, and instead you see a chisel.
 
@@ -355,7 +355,7 @@ LIVERS.
 
 DEBUG: livers being objhinted.
 
-#ttc-table-of-forest-anagrams-livers
+#testcase-table-of-forest-anagrams-livers
 >xx livers
 Your vision blurs a bit, and instead you see a silver sliver.
 
@@ -374,7 +374,7 @@ DEBUG: spread being objhinted.
 >angle
 You stare into the blue lube for a bit, then look around. You notice a weird haze around the sliver for a few seconds.
 
-#ttc-table-of-forest-anagrams-sliver
+#testcase-table-of-forest-anagrams-sliver
 >xx sliver
 The sliver turns silver for a moment.
 
@@ -390,14 +390,14 @@ You see the spread fluttering as if outside an open window.
 You see a snake-skin patterned cloth hanging and swaying from an unseen wind.
 >undo
 
-#ttc-table-of-forest-anagrams-spread
+#testcase-table-of-forest-anagrams-spread
 >xx spread
 Your vision blurs a bit, and instead the spread seems to become a red asp, then drapes. Hmm. The drapes seem much safer.
 >undo
 >drepsa
 As you ponder the spread, it turns bright red and burst into something else--a red asp! You jump away.
 
-#ttc-table-of-forest-anagrams-red-asp
+#testcase-table-of-forest-anagrams-red-asp
 >xx red asp
 Your vision blurs a bit, and instead drapes seem to flutter in front of the red asp.
 >undo
@@ -480,7 +480,7 @@ You might get lost going in any direction without help. Hmm.
 >gt fields
 You've done all you could in Emptiness Sepiments and before. Onward.
 
-#ttc-table-of-nowheres-ghouls-slough
+#testcase-table-of-nowheres-ghouls-slough
 >e
 Without any sort of guide to look at you'd be (ugh) SOL--or it'd be a pointless, uh, slog.
 
@@ -492,7 +492,7 @@ You currently have 15 out of 17 total points for the Forest region. You have fou
 
 You see the vowels grow slavering teeth.
 
-#ttc-table-of-forest-anagrams-vowels
+#testcase-table-of-forest-anagrams-vowels
 >xx vowels
 Your vision blurs a bit, and instead you see wolves.
 
@@ -508,7 +508,7 @@ The gnash hangs would, err, shnag you.
 >exits
 You're stuck here. This is the final battle!
 
-#ttc-table-of-nowheres-frost-forts
+#testcase-table-of-nowheres-frost-forts
 >e
 The gnash hangs would, err, shnag you.
 
@@ -528,7 +528,7 @@ DEBUG: wolves being objhinted.
 >angle
 You won't need the blue lube to inform you that the wolves need to be dealt with. Un-magically.
 
-#+ttc-table-of-nowheres-frost-forts
+#+testcase-table-of-nowheres-frost-forts
 >e
 The werewolves will catch you easily.
 
