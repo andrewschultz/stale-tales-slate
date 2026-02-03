@@ -39,7 +39,7 @@
 >au 1
 >showtab
 
-#ttc-table-of-megachatter-table-of-job-searcher-names
+#testcase-table-of-megachatter-table-of-job-searcher-names
 >x name list
 The list is slim, but it's long. Several names: (table of job searcher names)
 A list of names has always left you feeling like you wouldn't fit in, but this is a step beyond.
@@ -69,7 +69,7 @@ A list of names has always left you feeling like you wouldn't fit in, but this i
 >n
 >w
 
-#ttc-table-of-megachatter-table-of-evil-locations
+#testcase-table-of-megachatter-table-of-evil-locations
 >x slit
 Peeking through the slit, you see a list ... of horribly named places, each with its own image too disturbing to describe here. You shudder at
 (table of evil locations)
@@ -108,7 +108,7 @@ Peeking through the slit, you see a list ... of horribly named places, each with
 >shoes
 >moor
 
-#ttc-table-of-megachatter-table-of-poem-codas
+#testcase-table-of-megachatter-table-of-poem-codas
 >z
 (table of poem codas)You cringe as Pat ends a verse with
 
@@ -124,11 +124,11 @@ Peeking through the slit, you see a list ... of horribly named places, each with
 
 >gardenia
 
-#ttc-table-of-megachatter-table-of-garrison-chants
+#testcase-table-of-megachatter-table-of-garrison-chants
 >n
 (table of garrison chants)Emosion (sic) from the noisome Moonies:
 
-#+ttc-table-of-megachatter-table-of-garrison-chants
+#+testcase-table-of-megachatter-table-of-garrison-chants
 >z
 (table of garrison chants)Mo' noise from the noisome Moonies:
 
@@ -139,7 +139,7 @@ Peeking through the slit, you see a list ... of horribly named places, each with
 >w
 >throw tomato
 
-#ttc-table-of-megachatter-table-of-bastion-dialogue
+#testcase-table-of-megachatter-table-of-bastion-dialogue
 >x mattress
 >e
 >n
@@ -167,7 +167,7 @@ Peeking through the slit, you see a list ... of horribly named places, each with
 >s
 >s
 
-#ttc-table-of-megachatter-table-of-psas
+#testcase-table-of-megachatter-table-of-psas
 >x psas
 (table of psas)You watch for the next Pa's PSA (and yeah, they're kind of paternalistic and probably can't help you one bit):
 
@@ -179,7 +179,7 @@ Peeking through the slit, you see a list ... of horribly named places, each with
 >n
 >put card on sensor
 
-#ttc-table-of-megachatter-table-of-nerd-natter
+#testcase-table-of-megachatter-table-of-nerd-natter
 >e
 (table of nerd natter)
 /(Brainy brayin'|Wits fly swiftly|BLANK)\.
@@ -209,7 +209,7 @@ Peeking through the slit, you see a list ... of horribly named places, each with
 >grips
 >slope
 
-#ttc-table-of-megachatter-table-of-riot-slogans
+#testcase-table-of-megachatter-table-of-riot-slogans
 >e
 (table of riot slogans)Voices babble.
 
@@ -220,7 +220,7 @@ Peeking through the slit, you see a list ... of horribly named places, each with
 
 >potters
 
-#ttc-table-of-megachatter-table-of-red-bull-taunts
+#testcase-table-of-megachatter-table-of-red-bull-taunts
 >x slit
 >z
 (table of red bull taunts)"GET OUT!!!!" yells Red Bull Burdell.

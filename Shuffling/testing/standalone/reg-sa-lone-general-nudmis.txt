@@ -10,25 +10,25 @@
 
 * dirtest-general-intro
 
-#ttc-table-of-general-nudges-notepad
+#testcase-table-of-general-nudges-notepad
 >notepda
 You mess around with all the possibilities for a bit
 [NOTE: this was the right idea, though what you tried to switch can't be anagrammed. Trying stuff is encouraged, though generally, you'll get a response saying nothing meaningful happens if you try to change scenery that doesn't need it.]
 
-#ttc-table-of-general-nudges-dope
+#testcase-table-of-general-nudges-dope
 >doep
 You mess around with all the possibilities for a bit
 !this was the right idea
 
-#ttc-table-of-general-nudges-tan
+#testcase-table-of-general-nudges-tan
 >tna
 You mess around with all the possibilities for a bit
 
-#ttc-table-of-general-nudges-toad
+#testcase-table-of-general-nudges-toad
 >toda
 If you changed the pen,
 
-#ttc-table-of-general-nudges-pen
+#testcase-table-of-general-nudges-pen
 >enp
 If you changed the pen,
 
@@ -40,176 +40,176 @@ You hum "And I Ran" to yourself, wishing you had somewhere to run, to get away.
 You hum "And I Ran" to yourself, wishing you had somewhere to run, to get away.
 !great guess
 
-#ttc-table-of-general-nudges-northwest
+#testcase-table-of-general-nudges-northwest
 >northwets
 This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief.
 
-#ttc-table-of-general-nudges-northeast
+#testcase-table-of-general-nudges-northeast
 >northeats
 This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief.
 
-#ttc-table-of-general-nudges-southwest
+#testcase-table-of-general-nudges-southwest
 >southwets
 This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief.
 
-#ttc-table-of-general-nudges-southeast
+#testcase-table-of-general-nudges-southeast
 >southeats
 This game doesn't require you to mess with diagonal directions, or even go that way, so I hope that's a small relief.
 
 
-#ttc-table-of-general-nudges-down
+#testcase-table-of-general-nudges-down
 >donw
 This game usually doesn't require you to mess with cardinal directions
 
-#ttc-table-of-general-nudges-norht
+#testcase-table-of-general-nudges-norht
 >norht
 This game usually doesn't require you to mess with cardinal directions
 
-#ttc-table-of-general-nudges-souht
+#testcase-table-of-general-nudges-souht
 >souht
 This game usually doesn't require you to mess with cardinal directions
 
-#ttc-table-of-general-nudges-eats
+#testcase-table-of-general-nudges-eats
 >eats
 This game usually doesn't require you to mess with cardinal directions
 
-#ttc-table-of-general-nudges-ewst
+#testcase-table-of-general-nudges-ewst
 >ewts
 This game usually doesn't require you to mess with cardinal directions
 
-#ttc-table-of-general-nudges-xyyzz
+#testcase-table-of-general-nudges-xyyzz
 >xyyzz
 A hollow voice booms
 
-#ttc-table-of-general-nudges-plugh
+#testcase-table-of-general-nudges-plugh
 >gluph
 A hollow voice booms
 
-#ttc-table-of-general-nudges-plover
+#testcase-table-of-general-nudges-plover
 >provel
 A hollow voice booms
 
 
-#ttc-table-of-general-nudges-iths
+#testcase-table-of-general-nudges-iths
 >itsh
 You're not fooling ME.
 
-#ttc-table-of-general-nudges-kcuf
+#testcase-table-of-general-nudges-kcuf
 >kcuf
 You're not fooling ME.
 
-#ttc-table-of-general-nudges-mand
+#testcase-table-of-general-nudges-mand
 >mand
 You're not fooling ME.
 
-#ttc-table-of-general-nudges-lelh
+#testcase-table-of-general-nudges-lelh
 >lelh
 You're not fooling ME.
 
-#ttc-table-of-general-nudges-parc
+#testcase-table-of-general-nudges-parc
 >parc
 You're not fooling ME.
 
-#ttc-table-of-general-nudges-heck
+#testcase-table-of-general-nudges-heck
 >hekc
 You're not fooling ME.
 
-#ttc-table-of-general-nudges-smell
+#testcase-table-of-general-nudges-smell
 >smlle
 Your sense of smell doesn't change
 
-#ttc-table-of-general-nudges-writing
+#testcase-table-of-general-nudges-writing
 >writign
 You don't need to do anything with writing besides EXAMINE or READ it for possible hints.
 
-#ttc-table-of-general-nudges-pockets
+#testcase-table-of-general-nudges-pockets
 >pockest
 You don't need to mess with your pockets
 
-#ttc-table-of-general-nudges-pocket
+#testcase-table-of-general-nudges-pocket
 >pockte
 You don't need to mess with your pockets
 
-#ttc-table-of-general-nudges-jump
+#testcase-table-of-general-nudges-jump
 >jmpu
 impressively uncoordinated
 
-#ttc-table-of-general-nudges-verb
+#testcase-table-of-general-nudges-verb
 >vebr
 There's no secret verb or verbs to find trying that
 
-#ttc-table-of-general-nudges-verbs
+#testcase-table-of-general-nudges-verbs
 >versb
 There's no secret verb or verbs to find trying that
 
-#ttc-table-of-general-nudges-think
+#testcase-table-of-general-nudges-think
 >thikn
 things always get jumbled
 
-#ttc-table-of-general-nudges-score
+#testcase-table-of-general-nudges-score
 >scoer
 There's no way to scramble your score
 
-#ttc-table-of-general-nudges-scores
+#testcase-table-of-general-nudges-scores
 >scoers
 There's no way to scramble your score
 
-#ttc-table-of-general-nudges-about
+#testcase-table-of-general-nudges-about
 >abotu
 "about" section, but I'm flattered you looked for it
 
-#ttc-table-of-general-nudges-credits
+#testcase-table-of-general-nudges-credits
 >credist
 "credits" section, but I'm flattered you looked for it
 
-#ttc-table-of-general-nudges-credit
+#testcase-table-of-general-nudges-credit
 >credti
 "credits" section, but I'm flattered you looked for it
 
-#ttc-table-of-general-nudges-sites
+#testcase-table-of-general-nudges-sites
 >sitse
 Meta-commands don't have any easter eggs, sadly
 
-#ttc-table-of-general-nudges-tech
+#testcase-table-of-general-nudges-tech
 >tehc
 Meta-commands don't have any easter eggs, sadly
 
 >son
 This option means nothing until you have acquired the gadget.
 
-#ttc-table-of-general-nudges-spaceon
+#testcase-table-of-general-nudges-spaceon
 >psaceon
 Meta-commands don't have any easter eggs, sadly
 
-#ttc-table-of-general-nudges-spaceson
+#testcase-table-of-general-nudges-spaceson
 >psaceson
 Meta-commands don't have any easter eggs, sadly
 
-#ttc-table-of-general-nudges-spaces
+#testcase-table-of-general-nudges-spaces
 >psaces
 Meta-commands don't have any easter eggs, sadly
 
-#ttc-table-of-general-nudges-space
+#testcase-table-of-general-nudges-space
 >psace
 Meta-commands don't have any easter eggs, sadly
 
-#ttc-table-of-general-nudges-access
+#testcase-table-of-general-nudges-access
 >accses
 Meta-commands don't have any easter eggs, sadly
 
-#ttc-table-of-general-nudges-opts
+#testcase-table-of-general-nudges-opts
 >opst
 Meta-commands don't have any easter eggs, sadly
 
-#ttc-table-of-general-nudges-options
+#testcase-table-of-general-nudges-options
 >optiosn
 Meta-commands don't have any easter eggs, sadly
 
-#ttc-table-of-general-nudges-version
+#testcase-table-of-general-nudges-version
 >versino
 Meta-commands don't have any easter eggs, sadly
 
-#ttc-table-of-general-nudges-something
+#testcase-table-of-general-nudges-something
 >somethign
 Instead of messing with SOMETHING
 
@@ -219,89 +219,89 @@ Instead of messing with SOMETHING
 
 >purloin gadget
 
-#ttc-table-of-general-nudges-son
+#testcase-table-of-general-nudges-son
 >sno
 Meta-commands don't have any easter eggs, sadly
 
 >opt in
 
-#ttc-table-of-general-nudges-point
+#testcase-table-of-general-nudges-point
 >ption
 There's no secret cheat between NO TIP and OPT IN.
 
-#ttc-table-of-general-nudges-parse
+#testcase-table-of-general-nudges-parse
 >pares
 There's no in-between for the PARSE and SPARE commands for the gadget.
 
-#ttc-table-of-general-nudges-tightknot
+#testcase-table-of-general-nudges-tightknot
 >tightknto
 It's a bit too thick to mess with. Both because of the consonants, and, well...you don't need to remove the knot, anyway.
 
-#ttc-table-of-general-nudges-tight
+#testcase-table-of-general-nudges-tight
 >tigth
 It's a bit too thick to mess with. Both because of the consonants, and, well...you don't need to remove the knot, anyway.
 
-#ttc-table-of-general-nudges-knot
+#testcase-table-of-general-nudges-knot
 >nkot
 It's a bit too thick to mess with. Both because of the consonants, and, well...you don't need to remove the knot, anyway.
 
-#ttc-table-of-general-nudges-tagged
+#testcase-table-of-general-nudges-tagged
 >taggde
 Bad idea to mess with electronics you don't understand.
 
-#ttc-table-of-general-nudges-lemon
+#testcase-table-of-general-nudges-lemon
 >lemno
 That's just an example, for CERTIFY.
 
-#ttc-table-of-general-nudges-paste
+#testcase-table-of-general-nudges-paste
 >paset
 That's just an example, for RECTIFY.
 
-#ttc-table-of-general-nudges-arrow
+#testcase-table-of-general-nudges-arrow
 >arrwo
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
 
-#ttc-table-of-general-nudges-hows
+#testcase-table-of-general-nudges-hows
 >hosw
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
 
-#ttc-table-of-general-nudges-blurb
+#testcase-table-of-general-nudges-blurb
 >blubr
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
 
-#ttc-table-of-general-nudges-tag
+#testcase-table-of-general-nudges-tag
 >tga
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
 
-#ttc-table-of-general-nudges-screen
+#testcase-table-of-general-nudges-screen
 >screne
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
 
-#ttc-table-of-general-nudges-buttno
+#testcase-table-of-general-nudges-buttno
 >buttno
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
 
-#ttc-table-of-general-nudges-handle
+#testcase-table-of-general-nudges-handle
 >handel
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
 
-#ttc-table-of-general-nudges-example
+#testcase-table-of-general-nudges-example
 >exampel
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
 
-#ttc-table-of-general-nudges-examples
+#testcase-table-of-general-nudges-examples
 >examplse
 You don't need to mess with the gadget or any part of it. It's probably better not to try.
 
-#ttc-table-of-general-nudges-certify
+#testcase-table-of-general-nudges-certify
 >certiyf
 There's no extra setting besides CERTIFY and RECTIFY.
 
-#ttc-table-of-general-nudges-secure
+#testcase-table-of-general-nudges-secure
 >secuer
 There's no extra setting besides SECURE, and you can't do anything besides RECUSE once you SECURE.
 
-#ttc-table-of-general-nudges-tip
+#testcase-table-of-general-nudges-tip
 >tpi
 You can just switch the gadget instead.
 
@@ -312,15 +312,15 @@ You can just switch the gadget instead.
 >angel
 You've got enough practical help. You don't need anything supernatural.
 
-#ttc-table-of-general-nudges-angle
+#testcase-table-of-general-nudges-angle
 >anleg
 There's no secret command between ANGLE and GLEAN that gives special clues.
 
-#ttc-table-of-general-nudges-phail
+#testcase-table-of-general-nudges-phail
 >phila
 Whatever organic compounds exist in the blue lube or PHAIL phial don't need rearranging. That stuff's beyond you. They will help you when you want or need it. You just need to GLEAN or ANGLE.
 
-#ttc-table-of-general-nudges-blue
+#testcase-table-of-general-nudges-blue
 >bleu
 Whatever organic compounds exist in the blue lube or PHAIL phial don't need rearranging. That stuff's beyond you. They will help you when you want or need it. You just need to GLEAN or ANGLE.
 
@@ -328,29 +328,29 @@ Whatever organic compounds exist in the blue lube or PHAIL phial don't need rear
 
 >purloin prep paper
 
-#ttc-table-of-general-nudges-aprep
+#testcase-table-of-general-nudges-aprep
 >aprpe
 You can't really second-guess the help on the prep paper.
 
-#ttc-table-of-general-nudges-papesr
+#testcase-table-of-general-nudges-papesr
 >papesr
 You can't really second-guess the help on the prep paper.
 
-#ttc-table-of-general-nudges-prep
+#testcase-table-of-general-nudges-prep
 >prpe
 You can't really second-guess the help on the prep paper.
 
-#ttc-table-of-general-nudges-sheet
+#testcase-table-of-general-nudges-sheet
 >shete
 You can't really second-guess the help on the prep paper.
 
-#ttc-table-of-general-nudges-firm
+#testcase-table-of-general-nudges-firm
 >fimr
 FIMR is just a mnemonic for the places
 
 >purloin tinfoil
 
-#ttc-table-of-general-nudges-tinfoil
+#testcase-table-of-general-nudges-tinfoil
 >tinfoli
 Wrestling with the ramblings on the tinfoil info-lit won't help anyone.
 
@@ -358,13 +358,13 @@ Wrestling with the ramblings on the tinfoil info-lit won't help anyone.
 
 >gonear notices
 
-#ttc-table-of-general-nudges-yorpwald
+#testcase-table-of-general-nudges-yorpwald
 >yorpwadl
 You can't change Old Warpy. You have to just trust it
 
 >purloin saltine
 
-#ttc-table-of-general-nudges-salient
+#testcase-table-of-general-nudges-salient
 >saltein
 The saltine's there to help you. Changing it might work against you.
 
@@ -373,7 +373,7 @@ That's not something you can say, do or see here. For a list of common verbs, ty
 
 >x broad board
 
-#ttc-table-of-general-nudges-retry
+#testcase-table-of-general-nudges-retry
 >rerty
 You consider trying to mess with RETRY to wind up somewhere that will cut out a few puzzles, but it might cut out a few items you need to solve other puzzles. So, no.
 
@@ -384,27 +384,27 @@ You consider trying to mess with RETRY to wind up somewhere that will cut out a 
 
 >certify store f
 
-#+ttc-table-of-general-nudges-yorpwald
+#+testcase-table-of-general-nudges-yorpwald
 >yorpwadl
 You'll need to change Yorpwald one anagram at a time.
 
 >terry
 Nothing happens. Perhaps this is where you'd be sent back to once you're able to look around.
 
-#+ttc-table-of-general-nudges-firm
+#+testcase-table-of-general-nudges-firm
 >fimr
 FIMR is just a mnemonic for the stores you need to explore, somehow.
 
 >forest
 >in
 
-#+ttc-table-of-general-nudges-retry
+#+testcase-table-of-general-nudges-retry
 >ryter
 Being able to RETRY is good enough. You don't want to do anything too weird. It could backfire.
 
 # verb anagram(s)
 
-#ttc-table-of-general-nudges-resave
+#testcase-table-of-general-nudges-resave
 >resaev
 Alas, there is nothing between RESAVE and AVERSE to load a special game state.
 
