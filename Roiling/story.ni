@@ -1536,39 +1536,12 @@ carry out gotoing:
 
 when play begins (this is the seed room progress for GO TO rule) :
 	repeat through table of goto sectioning:
-		if there is a regs entry:
+		if there is a rm entry:
+			now progval of rm entry is rmprog entry;
+	repeat through table of goto sectioning:
+		if there is no rm entry:
 			repeat with myrm running through rooms in regs entry:
 				if progval of myrm is 0, now progval of myrm is rmprog entry;
-		else:
-			now progval of rm entry is rmprog entry;
-
-table of goto sectioning [this determines which rooms are definitively ahead of others, so GO TO can't go backwards. Also, if a room is shunned, you can't go there any more.]
-rm	rmprog	regs	why-not
---	1	Ordeal Reload	"Your Means Manse was surrounded, and you escaped. Bad idea to turn back."
-Carven Cavern	2	--	[Ordeal Reload]
---	1	routes	"[if progval of location of player >= 4]You're not going back across the water. You're closer to the end of your quest[else]Brother Horbert would be sad to see you return, unsuccessful. And you can't, anyway[end if]."
-Harms Marsh	2	--	"You already muddled your way out of Harms Marsh. You may be lost now, but [if player is in Ripe Pier]walking[else]sailing[end if] back would be worse."
-Ripe Pier	3	--	"[if progval of location of player is 4]You have no idea how to turn the Cripple Clipper around, and you don't want to[else]It's time to go forward, not backwards[end if]."
-Cripple Clipper	4	--	"The Sonancy Canyons lead to your destiny."
-Sonancy Canyons	5	--	[routes]
-Posh Hops Shop	1	--	"The LOLstr trolls would not welcome you back[if progval of location of player > 2], and it'd take too long to get there[end if]."
-Olde Lode	2	--	"You don't want to go back near that urn[if progval of location of player > 3], and it'd be hard, being on the other side of the shore[end if]."
-Disease Seaside	3	--	"No sense crossing back. There's more on [if progval of location of player is 4]the other[else]this[end if] side of the shore."
-Fighter Freight	4	--	"You don't really want to revisit the crays."
---	5	oyster	[oyster]
-Loftier Trefoil	1	--	"[if progval of location of player is 2]You had your fun in there[else]That's way in the past[end if]."
---	2	towers	"You don't want to cross Leak Lake again."
-Rawest Waster Waters	3	--	"The Rawest Waster Waters of Leak Lake would probably be even less fun the second time around."
-Mesprise Premises	4	--
-Mislit Limits	4	--	[towers]
-
-[note:
---others does not need this, because you can always visit Curtis
---Demo Dome has no boundaries
---in stores, Cruelest Lectures is walled off
---otters doesn't block off any finished areas
---troves has a generic message about going forward
-]
 
 chapter persuasions
 
