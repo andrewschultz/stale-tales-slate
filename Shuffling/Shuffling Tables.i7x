@@ -1436,19 +1436,6 @@ to say lubeit: now lube-asked is true.
 
 to say ana-true: now anapest-clued is true.
 
-the Memo Tote Tome is a boring thing in Esoteric Coteries. bore-text is "Maybe you could [b]EXAMINE[r] or [b]READ[r] the book, but you can't do much else with it.". initial appearance of Memo Tote Tome is "A Memo Tote Tome lies here. Perhaps it has some simple information useful to you amidst all the weird stuff the nerds use it for.". description of memo tote tome is "You should never see this, because the check rules should prevent it.".
-
-check reading the Memo Tote Tome: say "Too dense. Really, only examining the Tome briefly [if memo tote tome is examined]could be[else]might've been[end if] worth trying." instead;
-
-check examining the Memo Tote Tome:
-	say "Even the author names are pretentious and important sounding. Think they're worth remembering?";
-	if the player yes-consents:
-		say "All in red: [rcn]Srs. Ek and Rensskad-Knessard";
-		now Memo Tote Tome is examined;
-	else:
-		say "Hm, yes. The nerds may give less cryptic hints, eventually.";
-	the rule succeeds;
-
 to say rose-sore: if player does not have gardenia, say "[one of]. It will probably be tougher than getting a sore and changing it to a rose[or][stopping]"
 
 table of unmatched topic responses
@@ -1482,10 +1469,6 @@ nerds	"The nerds look at each other, wondering why you would ask about that, rea
 yourself	"You start a small mental conversation to take stock of your surroundings and what you might like to do."
 
 to say riot-trio-blather: say "You're not going to reason with them. Maybe reason about them, though.[no line break]"
-
-Bud Helm is a useless person. "You should not see Bud Helm.". description of Bud Helm is "He has been condemned to obscurity."
-
-Raw Rori is a useless person. "You should not see Raw Rori.". description of Raw Rori is "Condemned to obscurity."
 
 does the player mean objasking generically the deadbeat: it is unlikely.
 does the player mean objasking about the deadbeat: it is unlikely.

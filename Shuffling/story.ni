@@ -3461,6 +3461,12 @@ understand "old man" and "man" as gateman when player is in Notices Section and 
 
 check taking gateman: say "'Gateman, get a man, very clever. But thing is, you'll be working with things, not ideas or actions.'" instead; [??]
 
+section people gateman refers to
+
+Bud Helm is a useless person. "You should not see Bud Helm.". description of Bud Helm is "He has been condemned to obscurity."
+
+Raw Rori is a useless person. "You should not see Raw Rori.". description of Raw Rori is "Condemned to obscurity."
+
 chapter broad board
 
 the broad board is scenery in Notices Section."[one of]Welcome to YORPWALD![paragraph break]OUR NEEDS ENDURE SO![paragraph break]--Person willing to turn self into humiliating identification to aid adventurers in rescuing our fair land. Must have strength or magic touch to raise big metal gate. Benefits include unlimited complaining to rescuer/prospective hero. Obligations include explaining situation to rescuer/prospective hero. Risks include hero getting stuck on requisite four- then three-letter word combination to release you.[line break][2da]fellow named Terry to allow quick way for temporarily stuck adventurers to [b]RETRY[r] and return to Trips Strip.[paragraph break]You hear a big VOOP. The writing on the board is replaced by even more writing, but not before you write some basic stuff down in your notepad.[board-note][or][2da]quester request: text adventurer with savoir-savior to save shuffled Yorpwald from being fflushed. High chance of real fun, flaneur, low chance of funeral. No crudities like diuretics needed! Also, nothing above eight letters.[line break][2da]Canny Nancy or Brain-Bairn Brian preferred to Manly Lyman or Army Mary. Skill kills![line break][2da]Scrabble, MasterMind, and/or Boggle expertise a plus. Simple on-the-game training provi... oh! Hi! You're here. Futz with the static if you want[if nametag is fungible]. Nametag: it grants starting. You can't just walk into the gateway--and not like you can find [first custom style]a tan gem[r][end if]. But you won't have to go to [first custom style]Mt. Egana (Mt. Agena?) [r]I forget! [paragraph break]Also, the color red is all wrong, but now you know that, it can help you be right. So look out for red writing.[stopping]"
@@ -8439,6 +8445,21 @@ chapter Earliest Ateliers
 Earliest Ateliers are plural-named bounding boring scenery in Esoteric Coteries. description of Earliest Ateliers is "The ateliers are full of research that makes stuff like...well, that lit-up tulip. But you don't need to worry about how things are made. You need to get that tulip.". bore-text is "You can't do anything meaningful with the Earliest Ateliers. They're for the nerds."
 
 understand "earliest atelier" and "atelier" as Earliest Ateliers.
+
+chapter Memo Tote Tome
+
+the Memo Tote Tome is a boring thing in Esoteric Coteries. bore-text is "Maybe you could [b]EXAMINE[r] or [b]READ[r] the book, but you can't do much else with it.". initial appearance of Memo Tote Tome is "A Memo Tote Tome lies here. Perhaps it has some simple information useful to you amidst all the weird stuff the nerds use it for.". description of memo tote tome is "You should never see this, because the check rules should prevent it.".
+
+check reading the Memo Tote Tome: say "Too dense. Really, only examining the Tome briefly [if memo tote tome is examined]could be[else]might've been[end if] worth trying." instead;
+
+check examining the Memo Tote Tome:
+	say "Even the author names are pretentious and important sounding. Think they're worth remembering?";
+	if the player yes-consents:
+		say "All in red: [rcn]Srs. Ek and Rensskad-Knessard";
+		now Memo Tote Tome is examined;
+	else:
+		say "Hm, yes. The nerds may give less cryptic hints, eventually.";
+	the rule succeeds;
 
 book Elm Train Terminal
 
