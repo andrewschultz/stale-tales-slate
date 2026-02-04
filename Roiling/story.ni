@@ -5585,7 +5585,9 @@ check eating (this is the general eating rule):
 	if noun is grid, say "Well, maybe if you were a spy like Elmo. Rather, you should digest the information written therein." instead; [ordeal reload]
 	if noun is balancer barnacle, say "It is a balancer barnacle. Another would come along to eat you." instead; [stores]
 	if noun is stupor sprout, say "One of them is probably poisonous, and not even I can tell[if list o toils is examined]. Plus, Brother Horbert needs them[end if]." instead; [routes]
-	if noun is Bortles Lobster, say "You don't quite feel you deserve to eat it, yet." instead; [troves]
+	if noun is pipe soot, say "Well, it doesn't [b]SMELL[r] that bad, but...umm, no." instead;
+	if noun is lager, say "It drinks like a meal, you're sure, but you need more nourishment than that." instead; [troves]
+	if noun is Bortles Lobster, say "You don't quite feel you deserve to eat it, yet." instead;
 	if noun is escaroles, say "The escaroles aren't nearly substantial enough." instead; [presto]
 	if noun is casserole, say "Ugh. You're not sure what's in the casserole, and you're probably thinking too much about what is. You'd have to be a gourmand to eat this, even after a heavy workout." instead;
 	if noun is gum, say "Seriously. It's tough to program and chew gum at the same time.[paragraph break]No, I didn't mean it that way! I meant, the noise from your gum chewing would be distracting, with all that deep thinking you would have to do." instead;
@@ -5599,6 +5601,8 @@ check eating (this is the general eating rule):
 	if noun is bleary barley, say "That'd go down terribly." instead; [otters]
 	if noun is the player, try swearing obscenely instead;
 	if noun is a person, say "There's no clean way to interpret that. Behave." instead;
+
+carry out eating (this is the general eating reject rule):
 	say "[if noun is plural-named]Those aren't[else]That's not[end if] in a test-taste state." instead;
 
 check eating fretful truffle:
@@ -10440,7 +10444,6 @@ a-text of pipe soot is "YRRYRYRY". b-text of pipe soot is "YRPYPYRY". parse-text
 
 the description of pipe soot is "If you picked it apart, which you don't need to, there might be evidence it was once tobacco. It actually smells more like some fruit you can't, and won't, recognize."
 
-check eating pipe soot: say "Well, it doesn't [b]SMELL[r] that bad, but...umm, no." instead;
 
 book Idle Deli
 
@@ -10925,8 +10928,6 @@ The can of Large Regal Lager is a vanishing LLPish thing in Drain Nadir. descrip
 check opening Large Regal Lager: try drinking Large Regal Lager instead;
 
 a-text of Large Regal Lager is "RRYRY". b-text of Large Regal Lager is "RRYR?". parse-text of large regal lager is "G[sp]x[sp]-[sp]x[sp]-". large regal lager is parse-spoilable.
-
-check eating lager: say "It drinks like a meal, you're sure, but you need more nourishment than that." instead;
 
 check taking lager: say "No, touching or holding a can almost always leads to drinking from it. You may even be able to ignore the Large Regal Lager altogether. But you will need to steel yourself before taking it." instead;
 
