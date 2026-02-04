@@ -2783,7 +2783,7 @@ this is the region-done-check rule:
 	if cur-score of mrlp is poss-score of mrlp - 1, continue the action;
 	if bonus-point-available and cur-score of mrlp is poss-score of mrlp - 2, continue the action;
 	now mrlp is miss-point-warned;
-	say "[warn-left-text of mrlp] Stay back and clean up everything[if poss-score of mrlp < max-score of mrlp] you can[end if]?";
+	say "[warn-left-text of mrlp] Stay back and try to clean up everything[if poss-score of mrlp < max-score of mrlp] you can[end if]?";
 	if the player dir-consents, the rule succeeds;
 	say "Okay[one of]. This nag will appear once for each region where you have points you can earn[or][stopping].";
 	continue the action;
@@ -5245,7 +5245,8 @@ check taking inventory:
 		if mrlp is towers and snaks-held > 0:
 			say "You've found [if snaks-held is 1]a skan-snak[else]some skan-snaks[end if]";
 			if player has rosetta toaster:
-				say " and a Rosetta Toaster to heat [if snaks-held is 1]it[else]them[end if] with:[line break]  ";
+				say " and a Rosetta Toaster to heat [if snaks-held is 1]it[else]them[end if] with";
+			say ":[line break]";
 			say "  [list of skansnaks carried by the player with indefinite articles][line break]";
 	now all things enclosed by player are unmarked for listing;
 	now all warpable things enclosed by player are marked for listing;
@@ -15860,7 +15861,7 @@ book Baldest Blasted Saltbed
 
 Baldest Blasted Saltbed is a sideroom. It is north of Scope Copse. It is in Towers. "This is a dreary place that doesn't seem worth guarding, [if guar-here is 0]but you took care of everyone here[else]so maybe people, or things close enough, are just stopping you leaving[end if]. Some old ice is to the west[if old ice are reflexive][one of]. You doubt it's blocking anything, but it might look more impressive if it were less, well, flat[or][stopping][else]. You made it coiled, so it looks cool[end if]. The stew wets behind the old ice are too dangerous[tow-dirs].". roomnud of Baldest Blasted Saltbed is table of Baldest Blasted Saltbed nudges. missed-text of Baldest Blasted Saltbed is "an area on the west edge with an LLP".
 
-check going west in Baldest Blasted Saltbed: say "The stew wets are way too dangerous. But any other way is okay." instead;
+check going west in Baldest Blasted Saltbed: say "The stew wets are way too dangerous[if old ice is not moot], even if you did something with the old ice[end if]. But any other way is okay." instead;
 
 chapter scenery
 
@@ -16135,7 +16136,7 @@ to decide which guardian is the-hostile:
 	if player is male, decide on hostile is he lot;
 	decide on lois the hostile;
 
-Artist Traits Strait is a sideroom in Towers. it is north of Danger Garden and east of Treading Gradient. "Coulds-Clouds above (strati) give this strait a feeling of reflective gloom. Leak Lake spans to the east, too far to cross. A Thearchy Hatchery[if the-hostile is moot], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here, not to be confused with a lone shire[tow-dirs].". roomnud of Artist Traits Strait is table of Artist Traits Strait nudges. missed-text of Artist Traits Strait is "a room on the east edge south of [coastlines]".
+Artist Traits Strait is a sideroom in Towers. it is north of Danger Garden and east of Treading Gradient. "Coulds-Clouds above (strati) give this strait a feeling of reflective gloom. Leak Lake spans to the east, too far to cross. A Thearchy Hatchery[if the-hostile is moot], where [relig-mf] went,[else], possibly for [relig-mf],[end if] lies disused here on this shoreline, not to be confused with a lone shire[tow-dirs].". roomnud of Artist Traits Strait is table of Artist Traits Strait nudges. missed-text of Artist Traits Strait is "a room on the east edge south of [coastlines]".
 
 chapter coulds clouds
 
@@ -16581,7 +16582,7 @@ printed name of solve a loaves is "solve-a-loaves".
 
 chapter a bot boat
 
-description of bot boat is "You don't see much on the boat you understand, except some turbos and a blaster. [if turbos are reflexed]The turbos seem robust enough[else]A pair of turbos doesn't look quite ...hardy? No, some other word ... to help propel you across Leak Lake[end if]. [if blaster is reflexed]The blaster seems stabler than it used to be[else]The blaster hums and shakes erratically[end if].[paragraph break][if weirder red wire is fungible]The bot boat is nicely rewired, now[else]Some wires inside are also connected [i]weirder[r] than they should be. Maybe they can be fixed, though that's probably not as important as the main hardware[end if]."
+description of bot boat is "You don't see much on the boat you understand, except some turbos and a blaster. [if turbos are reflexed]The turbos seem robust enough[else]A pair of turbos doesn't look quite ...hardy? No, some other word ... to help propel you across Leak Lake[end if]. [if blaster is reflexed]The blaster seems stabler than it used to be[else]The blaster hums and shakes erratically[end if].[paragraph break][if weirder red wire is not fungible]The bot boat is nicely rewired, now[else]Some wires inside are also connected [i]weirder[r] than they should be. Maybe they can be fixed, though that's probably not as important as the main hardware[end if]."
 
 t-or-b is a thing that varies.
 

@@ -850,17 +850,12 @@ You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines
 
 /^Mislit Limits
 
-#}}CURMIN=SCORE
-#}}CURMIN++
-#}}CURMAX=SCORE
-#}}CURMAX+=7
-
 #testcase-table-of-towers-anagrams-spectacular
 >xr curst palace
 After a thoughtful gaze, you reckon the Curst Palace could be SPECTACULAR.
 
 >score
-Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 58.
+Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
 
 #testcase-table-of-towers-anagrams-punier
 >xr unripe
@@ -874,7 +869,7 @@ After a thoughtful gaze, you reckon the unripe ur-pine could be PUNIER.
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 50 out of 57 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 58.
+Score in a scenario: 50 out of 57 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 57.
 
 #testcase-table-of-towers-anagrams-antsier
 >xr retinas
@@ -885,7 +880,7 @@ After a thoughtful gaze, you reckon the nastier stainer retinas could be ANTSIER
 >antsier
 by one point
 >score
-Score in a scenario: 51 out of 57 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 58.
+Score in a scenario: 51 out of 57 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 57.
 
 #testcase-table-of-towers-anagrams-present
 >xr serpent
@@ -897,7 +892,7 @@ After a thoughtful gaze, you reckon the repents serpent could be PRESENT.
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 52 out of 57 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 58.
+Score in a scenario: 52 out of 57 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 57.
 
 >in
 
@@ -912,7 +907,7 @@ After a thoughtful gaze, you reckon the itster could make the Tetris Sitter TRIS
 >triste
 Your score has just gone up by one point
 >score
-Score in a scenario: 53 out of 57 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 58.
+Score in a scenario: 53 out of 57 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 57.
 
 #testcase-table-of-towers-anagrams-annoyed
 >xr anodyne
@@ -925,12 +920,12 @@ You already remember the word ANNOYED--which seems right, just a matter of getti
 >annoyed
 Your score has just gone up by one point
 >score
-Score in a scenario: 54 out of 57 total points in the current region, Towers. Lowest score to solve is 55. Maximum score available is 58.
+Score in a scenario: 54 out of 57 total points in the current region, Towers. Lowest score to solve is 55. Maximum score available is 57.
 
 >give pot to sitter
 Your score has just gone up by one point
 >score
-Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 58.
+Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.
 
 >out
 

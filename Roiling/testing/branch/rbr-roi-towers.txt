@@ -5180,10 +5180,10 @@ You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines
 
 /^Mislit Limits
 
-#}}CURMIN=SCORE
-#}}CURMIN++
-#}}CURMAX=SCORE
-#}}CURMAX+=7
+}}CURMIN=SCORE
+}}CURMIN++
+}}CURMAX=SCORE
+}}CURMAX+=7
 
 @!minh,mini
 }}CURMAX++

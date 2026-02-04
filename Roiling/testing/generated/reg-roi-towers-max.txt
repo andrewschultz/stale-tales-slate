@@ -827,11 +827,6 @@ You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines
 
 /^Mislit Limits
 
-#}}CURMIN=SCORE
-#}}CURMIN++
-#}}CURMAX=SCORE
-#}}CURMAX+=7
-
 #testcase-table-of-castle-approaching-narratives-9
 #testcase-table-of-towers-progress-comments-mislit-limits
 The palace--well, you can see why it was spectacular, once.
@@ -842,7 +837,7 @@ This will restore the Curst Palace, but you can also figure what to do with that
 >undo
 
 >score
-Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 58.
+Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
 
 >thisalt
 --If you'd only half-repaired a bot boat, you'd have been kicked to the Rawest Waster Waters, where you'd have needed to bring the Earnest Eastern Neaters NEAREST.
@@ -850,12 +845,12 @@ Score in a scenario: 49 out of 57 total points in the current region, Towers. Lo
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 50 out of 57 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 58.
+Score in a scenario: 50 out of 57 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 57.
 
 >antsier
 by one point
 >score
-Score in a scenario: 51 out of 57 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 58.
+Score in a scenario: 51 out of 57 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 57.
 
 #testcase-postrule-table-of-towers-anagrams-post-retinas-antsier-rule
 >x succor crocus
@@ -865,7 +860,7 @@ It looks much better than the blub bulb it was.
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 52 out of 57 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 58.
+Score in a scenario: 52 out of 57 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 57.
 
 >in
 
@@ -882,7 +877,7 @@ She mumbles "'S trite," but she does seem slightly intrigued. Maybe you need to 
 >triste
 Your score has just gone up by one point
 >score
-Score in a scenario: 53 out of 57 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 58.
+Score in a scenario: 53 out of 57 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 57.
 
 #testcase-postrule-table-of-towers-anagrams-post-itster-triste-rule
 >x st teri
@@ -894,12 +889,12 @@ St. Teri seems interested, but her hands reflexively grasp the Done-Any Anodyne.
 >annoyed
 Your score has just gone up by one point
 >score
-Score in a scenario: 54 out of 57 total points in the current region, Towers. Lowest score to solve is 55. Maximum score available is 58.
+Score in a scenario: 54 out of 57 total points in the current region, Towers. Lowest score to solve is 55. Maximum score available is 57.
 
 >give pot to sitter
 Your score has just gone up by one point
 >score
-Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 58.
+Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.
 
 >ask teri about palace
 It can be something super special.

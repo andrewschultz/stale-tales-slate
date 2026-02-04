@@ -5536,7 +5536,7 @@ observ
 "Now that you're at the shores of Leak Lake, it's too far to swim. You may need some craft. And crossing here might leave you far from the palace."
 "You can see the other side of Leak Lake from here. It's still too far to swim, but it's clearly closer than anywhere else you've been."
 "Since your head's barely above water, you can't see a shore any more. But you know it must be there."
-"The palace--well, you can see why it was spectacular, once."
+"The palace--well, you can see why it was dazzling, once. Dazzling? No, another word."
 
 table of guardian specific taunts
 guaname	guagone	guatext

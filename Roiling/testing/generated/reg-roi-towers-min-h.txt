@@ -220,13 +220,8 @@ You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines
 
 /^Mislit Limits
 
-#}}CURMIN=SCORE
-#}}CURMIN++
-#}}CURMAX=SCORE
-#}}CURMAX+=7
-
 >score
-Score in a scenario: 25 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 51.
+Score in a scenario: 25 out of 57 total points in the current region, Towers. Lowest score to solve is 26. Maximum score available is 32.
 
 >au 0
 

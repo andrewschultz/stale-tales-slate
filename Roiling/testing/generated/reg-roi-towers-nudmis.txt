@@ -2781,13 +2781,8 @@ You speed across the deeps of the Rawest Waster Waters as if on nine-seg engines
 
 /^Mislit Limits
 
-#}}CURMIN=SCORE
-#}}CURMIN++
-#}}CURMAX=SCORE
-#}}CURMAX+=7
-
 >score
-Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 58.
+Score in a scenario: 49 out of 57 total points in the current region, Towers. Lowest score to solve is 50. Maximum score available is 57.
 
 #+testcase-table-of-towers-readables-curst-palace
 >read curst palace
@@ -2864,7 +2859,7 @@ You're beyond the lake now.
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 50 out of 57 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 58.
+Score in a scenario: 50 out of 57 total points in the current region, Towers. Lowest score to solve is 51. Maximum score available is 57.
 
 #testcase-table-of-towers-scannotes-nastier-stainer-retinas
 >scan retinas
@@ -2921,13 +2916,13 @@ Clever, but maybe you can make the nastier stainer retinas so they feel a need t
 >antsier
 by one point
 >score
-Score in a scenario: 51 out of 57 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 58.
+Score in a scenario: 51 out of 57 total points in the current region, Towers. Lowest score to solve is 52. Maximum score available is 57.
 
 >present
 Your score has just gone up by one point
 # add minimum point here
 >score
-Score in a scenario: 52 out of 57 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 58.
+Score in a scenario: 52 out of 57 total points in the current region, Towers. Lowest score to solve is 53. Maximum score available is 57.
 
 #testcase-table-of-mislit-limits-nudges-present
 >pretnes
@@ -2978,7 +2973,7 @@ No physical sciences are necessary here.
 >triste
 Your score has just gone up by one point
 >score
-Score in a scenario: 53 out of 57 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 58.
+Score in a scenario: 53 out of 57 total points in the current region, Towers. Lowest score to solve is 54. Maximum score available is 57.
 
 #testcase-table-of-mesprise-premises-nudges-teri
 >teir
@@ -3017,7 +3012,7 @@ You helped St. Teri directly. Now you need to deal with the Done-Any Anodyne.
 >annoyed
 Your score has just gone up by one point
 >score
-Score in a scenario: 54 out of 57 total points in the current region, Towers. Lowest score to solve is 55. Maximum score available is 58.
+Score in a scenario: 54 out of 57 total points in the current region, Towers. Lowest score to solve is 55. Maximum score available is 57.
 
 #testcase-table-of-mesprise-premises-nudges-stteri
 >stteir
@@ -3026,7 +3021,7 @@ St. Teri is just fine now, thanks to you.
 >give pot to sitter
 Your score has just gone up by one point
 >score
-Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 58.
+Score in a scenario: 55 out of 57 total points in the current region, Towers. Lowest score to solve is 56. Maximum score available is 57.
 
 >ask teri about curst palace
 "It can be something super special.
