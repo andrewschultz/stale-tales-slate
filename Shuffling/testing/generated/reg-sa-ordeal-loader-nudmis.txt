@@ -359,7 +359,7 @@ Your score has just gone up by one point.
 Your score has just gone up by one point.
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 7
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 #testcase-table-of-ordeal-loader-done-rejects-deer
 >rdee
@@ -377,7 +377,7 @@ The remains of the shrub and brush waver, then point towards the opening in the 
 /^Notices Section
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 5
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 #testcase-table-of-readables-gateway
 >read gateway
@@ -424,7 +424,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 [NOTE: you may have misspelled things, though. Too many or few of one letter.]
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 5
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 >attics
 Your score has just gone up by one point.

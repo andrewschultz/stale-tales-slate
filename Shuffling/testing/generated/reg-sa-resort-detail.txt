@@ -120,25 +120,25 @@ DEBUG INFO: Cert-text: -----.
 by one point
 
 >score
-You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
+You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
 >toeholds
 Your score has just gone up by two points.
 
 >score
-You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
+You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
 >ropes
 Your score has just gone up by one point.
 
 >score
-You currently have 8 out of 15 total points for the Resort region. Your minimum possible score on solving is 13, and the maximum is 13
+You currently have 8 out of 15 total points for the Resort region. Your minimum possible score on solving is 13, and the maximum is 15
 
 >grips
 Your score has just gone up by one point.
 
 >score
-You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 13
+You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
 >e
 
@@ -164,7 +164,7 @@ Your score has just gone up by one point.
 You're not going to reason with them. Maybe reason about them, though.
 
 >score
-You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 11
+You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
 #gadget test: protest to potters
 >rc protest
@@ -187,7 +187,7 @@ by one point
 Your score has just gone up by one point.
 
 >score
-You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 11
+You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
 >china
 Your score has just gone up by one point.

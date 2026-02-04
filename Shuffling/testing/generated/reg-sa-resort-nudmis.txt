@@ -286,7 +286,7 @@ There's not much of that left in this game, and more of it won't help you up the
 by one point
 
 >score
-You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
+You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
 #testcase-table-of-resort-done-rejects-slope
 >pelso
@@ -323,7 +323,7 @@ Red writing shows the U-Lock brand is OLD THOSE.
 Your score has just gone up by two points.
 
 >score
-You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
+You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
 #testcase-table-of-resort-done-rejects-toeholds
 >toeholsd
@@ -344,7 +344,7 @@ DEBUG NOTE FOR WHAT IS SEEN IN RELEASE: You feel a slight psychic push-pull comi
 Your score has just gone up by one point.
 
 >score
-You currently have 8 out of 15 total points for the Resort region. Your minimum possible score on solving is 13, and the maximum is 13
+You currently have 8 out of 15 total points for the Resort region. Your minimum possible score on solving is 13, and the maximum is 15
 
 #+testcase-mistake-shuffling-prose
 >prose
@@ -385,7 +385,7 @@ Grumbling about prigs, or showing those prigs, won't help now. You should probab
 Your score has just gone up by one point.
 
 >score
-You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 13
+You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
 #+testcase-mistake-shuffling-prigs
 >prigs
@@ -466,7 +466,7 @@ Your score has just gone up by one point.
 Getting one of the protestor's names right won't lessen their disfavor.
 
 >score
-You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 11
+You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
 #testcase-table-of-resort-done-rejects-protest
 >troi
@@ -517,7 +517,7 @@ No, the clay is a clue to what the protest really wants to do.
 Your score has just gone up by one point.
 
 >score
-You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 11
+You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
 #testcase-table-of-potshot-hotspot-nudges-potter
 >pottre

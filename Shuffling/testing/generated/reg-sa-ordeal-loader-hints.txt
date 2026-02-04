@@ -152,7 +152,7 @@ you can go IN--there are no specific directions here
 Your score has just gone up by one point.
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 7
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 >in
 /^Notices Section
@@ -173,7 +173,7 @@ You hear tectonic noises, then an evil voice whispering "Once it's..." You sense
 Sooner or later, you're probably going to want to ENTER the getaway gateway.
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 5
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 #testcase-table-of-nowheres-notices-section
 >w
@@ -197,7 +197,7 @@ Goodness, no.
 You hear tectonic noises, then an evil voice whispering "Once it's..." You sense running away wouldn't work. You should probably explicitly ENTER the gateway, though it'd be nice to have some help first.
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 5
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 >attics
 Your score has just gone up by one point.

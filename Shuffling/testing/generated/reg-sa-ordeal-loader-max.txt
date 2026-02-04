@@ -155,7 +155,7 @@ by one point
 by one point
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 7
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 >undo
 >undo
@@ -170,13 +170,13 @@ Your score has just gone up by one point.
 #testcase-postrule-table-of-ordeal-loader-anagrams-post-reed-deer-rule
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 7
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 >in
 /^Notices Section
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 5
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 #testcase-table-of-ranks-3
 You haven't solved any regions yet. You have the rank of stunted student.
@@ -185,7 +185,7 @@ You haven't solved any regions yet. You have the rank of stunted student.
 mega-ant
 
 >score
-You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 5
+You currently have 6 out of 8 total points for the Ordeal Loader region. Your minimum possible score on solving is 7, and the maximum is 8
 
 >attics
 Your score has just gone up by one point.

@@ -64,7 +64,7 @@ You currently have 3 out of 18 total points for the Metros region. Your minimum 
 >switch emitter
 Your score has just gone up by one point.
 >score
-You currently have 5 out of 18 total points for the Metros region. Your minimum possible score on solving is 18, and the maximum is 18
+You currently have 4 out of 18 total points for the Metros region. Your minimum possible score on solving is 17, and the maximum is 18
 
 >get dry cake
 You take care not to let the cake tear as you pick it up.
@@ -75,17 +75,17 @@ You take care not to let the cake tear as you pick it up.
 Your score has just gone up by one point.
 
 >score
-You currently have 6 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 5 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >keycard
 
 >score
-You currently have 7 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 6 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >velcro
 
 >score
-You currently have 8 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 7 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >e
 /^Fo' Real Florae
@@ -98,7 +98,7 @@ You currently have 8 out of 18 total points for the Metros region. Your final po
 Your score has just gone up by one point.
 
 >score
-You currently have 9 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 8 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >take brocade
 "It is the least we can do for you! Thank you for helping us!"
@@ -110,14 +110,14 @@ You currently have 9 out of 18 total points for the Metros region. Your final po
 >sword
 
 >score
-You currently have 10 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 9 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >e
 
 >barcode
 
 >score
-You currently have 11 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 10 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >s
 
@@ -134,7 +134,7 @@ The signers' ingress slides shut quietly and efficiently.
 /^Esoteric Coteries
 
 >score
-You currently have 12 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 11 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >ask nerds about darkness
 "What, you want us to do everything for you? We're exhausted from building this soundproofing. But whatever. Here. Have this lit-up tulip. There might be some smart people suffering from the beats."
@@ -144,7 +144,7 @@ You currently have 12 out of 18 total points for the Metros region. Your final p
 /^Undesired Underside
 
 >score
-You currently have 13 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 12 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >s
 /^Elm Train Terminal
@@ -152,7 +152,7 @@ You currently have 13 out of 18 total points for the Metros region. Your final p
 >opening
 
 >score
-You currently have 14 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 13 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >u
 The Velcro strip is just the thing to climb the cafe face and reach the small recess.
@@ -160,7 +160,7 @@ The Velcro strip is just the thing to climb the cafe face and reach the small re
 >put controls in opening
 
 >score
-You currently have 15 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 14 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >d
 
@@ -171,12 +171,12 @@ You currently have 15 out of 18 total points for the Metros region. Your final p
 >resin
 
 >score
-You currently have 16 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 15 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >beast
 
 >score
-You currently have 17 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
+You currently have 16 out of 18 total points for the Metros region. Your final possible score is fixed. You missed something you can't go back for.
 
 >take sword
 
@@ -189,6 +189,6 @@ You currently have 17 out of 18 total points for the Metros region. Your final p
 /^Trips Strip
 
 >score
-You have scored 18 out of 18 total points for the Metros region.
+You have scored 17 out of 18 total points for the Metros region.
 Won now: the Ordeal Loader and Metros regions.
 

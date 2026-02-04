@@ -202,7 +202,7 @@ by one point
 You see two visions: one, the tool shed being destroyed, and another, you wearing the sprig, modified and the spore, modified. In each, you climb east.
 
 >score
-You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
+You currently have 5 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
 >ropes
 by one point
@@ -242,19 +242,19 @@ You see yourself climbing east without much trouble.
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the spore (faint) and the sprig (faint) for a few seconds.
 
 >score
-You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 13
+You currently have 7 out of 15 total points for the Resort region. Your minimum possible score on solving is 12, and the maximum is 15
 
 >ropes
 Your score has just gone up by one point.
 
 >score
-You currently have 8 out of 15 total points for the Resort region. Your minimum possible score on solving is 13, and the maximum is 13
+You currently have 8 out of 15 total points for the Resort region. Your minimum possible score on solving is 13, and the maximum is 15
 
 >grips
 Your score has just gone up by one point.
 
 >score
-You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 13
+You currently have 9 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
 >angle
 You stare into the blue lube for a bit, then look around. Nothing looks different here. Looks like you have very little magic to do.
@@ -300,7 +300,7 @@ You see the trio, happier now, discussing art and wearing dirty smocks.
 You stare into the blue lube for a bit, then look around. You notice weird hazes around the chain links and the protest for a few seconds.
 
 >score
-You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 11
+You currently have 10 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
 #testcase-table-of-resort-anagrams-protest
 >xx protest
@@ -310,7 +310,7 @@ You see the trio stopping their protest to get to work as potters.
 Your score has just gone up by one point.
 
 >score
-You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 11
+You currently have 11 out of 15 total points for the Resort region. Your minimum possible score on solving is 14, and the maximum is 15
 
 #testcase-table-of-resort-anagrams-chain-links
 >xx chain links
