@@ -16407,7 +16407,9 @@ check going northeast in Actionless Coastlines: try going north instead; [crossi
 
 chapter Coasting Agnostic
 
-Coasting Agnostic is a proper-named person. "[Agnostic], the Coasting Agnostic, [if dinger is in Actionless Coastlines]continues to read listlessly[else]smiles happily, half lost in technical abstract thought[end if]."
+Coasting Agnostic is a proper-named person. "[Agnostic], the Coasting Agnostic, [if player is in subsector][ten-att][else if dinger is in Actionless Coastlines]continues to read listlessly[else]smiles happily, half lost in technical abstract thought[end if][if yow is moot and gizmo is not moot]. Perhaps you can help [him-her] put Dr. Yow's lessons to practical use with a gift of the right tool[end if]."
+
+to say ten-att: say "[if atblock is moot]attentive[else][i]tentative[r][end if]"
 
 understand "idk/kid" and "idk kid" as Coasting Agnostic.
 
@@ -16465,7 +16467,7 @@ to say if-tent:
 	if player is in Actionless Coastlines:
 		say ", looking far-off, as if for inspiration [he-she] hasn't found yet";
 	if player is in Obscurest Subsector:
-		say ", looking [if atblock is moot]attentive[else]tentative[end if]"
+		say ", looking [ten-att]"
 
 check answering agnostic that: if the player's command includes "doctor" or the player's command includes "yow" or the player's command includes "dr", try objasking agnostic about Dr Yow instead;
 
@@ -16519,10 +16521,7 @@ check giving gizmo to agnostic:
 	else:
 		say "'Wow! That'd be neat if I had something to build.'" instead;
 
-description of agnostic is "Freckly-faced and buck-toothed and talking to [him-her]self[if Dr Yow is fungible]. [he-she-c]'s visibly [i][at-ten][r] just being around Dr. Yow[end if].";
-
-to say at-ten:
-	say "[if agnostic is reflexed]attentive[else]tentative[end if]"
+description of agnostic is "Freckly-faced and buck-toothed and talking to [him-her]self[if Dr Yow is fungible]. [he-she-c]'s visibly [i][ten-att][r] just being around Dr. Yow[end if].";
 
 the agnostic can be lonely or following or found. agnostic is lonely.
 
@@ -16533,7 +16532,7 @@ to say what-ag-does: [?? this is orpaned text -- it seems useful for the initial
 		say "nodding at the trashy [i]Reading a Dinger[r]";
 		continue the action;
 	if agnostic is in Obscurest Subsector:
-		say "looking [if agnostic is reflexed]attentive[else]tentative[end if]ly at Dr. Yow";
+		say "looking [ten-att]ly at Dr. Yow";
 		continue the action;
 	say "[if bot boat is in Actionless Coastlines]looking proud of [his-her] bot bot boat[else]pacing slightly, looking for more than a silly bestseller could ever give [him-her]"
 
