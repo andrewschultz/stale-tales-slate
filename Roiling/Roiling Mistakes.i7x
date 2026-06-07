@@ -224,7 +224,7 @@ understand "beneath" as a mistake ("Nice try, but wrong preposition for the situ
 
 understand "bowel" and "elbow" and "bowels" and "elbows" as a mistake ("The [woe bow bell] sounds disembodied, but you don't want to give it a body. Find a direction to duck.") when player is in Same Mesa and WOE BOW BELL is in Same Mesa.
 
-understand "car" as a mistake ("Oscar's Uhh-Tut Hut isn't much, but he'd be upset if you left him homeless. Even if the car you made him was nice.") when player is in Same Mesa.
+understand "car" as a mistake ("It's a home, or a passage to one. Even if a nice car would be created, someone would be trapped inside.") when player is in Same Mesa.
 
 understand "gats" and "tags" as a mistake ("[this-game] is not violent enough for tags with gats.") when Gast is fungible.
 
@@ -261,8 +261,6 @@ understand "under" as a mistake ("You already went [b]UNDER[r]. You need somethi
 
 chapter Cleric Circle
 
-[?? pat's inside and out, as well as oscar's]
-
 understand "man let" and "let man" as a mistake ("Your heart is in the right place, but telling the mantle to cool it won't do much good.") when player is in Cleric Circle.
 
 understand "noops" as a mistake ("The snoop spoon isn't as complicated as assembly language.") when player has snoop spoon.
@@ -271,9 +269,11 @@ understand "opposite" as a mistake ("Hm. The list doesn't seem to be what you ne
 
 chapter Adobe Abode
 
-understand "orcas" as a mistake ("But the whales would be beached. [if player is in same mesa]Inside or outside of Oscar's[else if list o toils is unexamined]There's no sign Oscar himself needs or wants such a change[else if pipe soot is in Adobe Abode]Besides, it's the pipe soot you want[else]Besides, you got the pipe soot[end if].") when player is in Same Mesa or player is in Adobe Abode.
+understand "orcas" as a mistake ("But the whales would be beached. Besides, [if pipe soot is in Adobe Abode]it's the pipe soot you want[else]you got the pipe soot[end if].") when player is in Same Mesa.
 
-understand "poopiest" as a mistake ("This is the wrong area for adjectives, clean or unclean. And [if player is not in Adobe Abode]the pipe soot is icky enough as-is[else]Oscar's abode is, well, dingy enough[end if].") when player is in Adobe Abode or player has pipe soot.
+understand "poopiest" as a mistake ("This is the wrong area for adjectives, clean or unclean. And [if player is not in Adobe Abode]the pipe soot is icky enough as-is[else]Pope Otis would take action against saying such things[end if].") when player is in Adobe Abode or player has pipe soot.
+
+understand "oscars" as a mistake ("[if player is in same mesa]No awards ceremony starts[else]This will be Oscar's, once he comes back[end if].") when player is in Same Mesa or player is in Adobe Abode.
 
 understand "scoar" and "scoars" as a mistake ("You don't get points just for asking them.") when player is in Same Mesa or player is in Adobe Abode.
 
