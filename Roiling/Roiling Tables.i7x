@@ -4175,7 +4175,7 @@ preflip	pretodo
 sit a nag	"You can lean [b]AGAINST[r] the [sit a nag] [now-once of whether or not list o toils is examined] you feel less fear and more purpose."
 side art	"You can sit [b]ASTRIDE[r] the [sit a nag] [now-if-dealt of sit a nag] you have a reason to."
 lairage regalia	"You can go [b]ACROSS[r] the lairage regalia through the SOS Arc O'Scars [now-gast-gone]."
-adsorbing signboard	"You can go [b]PAST[r] the adsorbing signboard to Pat's Stap [now-gast-gone]."
+adsorbing signboard	"You can go [b]PAST[r] the adsorbing signboard to PT's Pasta [now-gast-gone]."
 worst ad	"You can go [b]TOWARDS[r] the worst ad [now-gast-gone]."
 hurt hog	"You can go [b]THROUGH[r] [now-if-dealt of bent ewe] you've managed to deal with the bent ewe."
 

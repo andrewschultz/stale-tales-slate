@@ -4307,7 +4307,7 @@ a hintstub rule for a thing (called th) (this is the point-to-mesa rule):
 		now spoilit is false instead;
 
 this is the routes-hinting rule:
-	if cur-score of routes is 0 and prep-spoil is false, say "[one of]You maybe haven't figured out what sort of word is needed in this zone yet. [SOS ARC], PT's Pasta, and the message on the scripture picturers are clues.[plus][or]They make for relatively short words, so maybe you can guess from them.[plus][or]Did you notice you can't seem to go in any compass direction?[plus][or]What's another sort of word that can describe a direction?[plus][or]It anagrams Poison Stripe.[plus][or]Prepositions[p-spo].[minus][cycling]" instead;
+	if cur-score of routes is 0 and prep-spoil is false, say "[one of]You maybe haven't figured out what sort of word is needed in this zone yet. The SOS Arc O' Scars, PT's Pasta, and the message on the scripture picturers are clues.[plus][or]They make for relatively short words, so maybe you can guess from them.[plus][or]Did you notice you can't seem to go in any compass direction?[plus][or]What's another sort of word that can describe a direction?[plus][or]It anagrams Poison Stripe.[plus][or]Prepositions[p-spo].[minus][cycling]" instead;
 	abide by the point-to-mesa rule for bev o be ova;
 	abide by the point-to-mesa rule for MORF FORM;
 	abide by the point-to-mesa rule for THE BEAN;
@@ -10101,11 +10101,11 @@ check scaning resto store:
 
 does the player mean scaning resto store: it is likely.
 
-the adsorbing signboard is reflexive scenery in Same Mesa. "[b][ast]Pat's Stap[ast][r][one of] (ugh! You cringe at the forced short-a anagram, as well as how Elvira blamed you for this sort of thing.)[or][stopping][paragraph break]Only the fliest filets![paragraph break]Hopefully, that's figurative and not literal. You also note the intended pronunciation of Stap is probably Stahp, because that sort of forced anagramming is abused in Yorpwald these days. True, there are bigger problems, but..."
+the adsorbing signboard is reflexive scenery in Same Mesa. "[b][ast]PT'S PASTA[ast][r].[paragraph break]Only the fliest filets![paragraph break]Hopefully, that's figurative and not literal. You also note the slightly forced anagramming. It became trendy in Yorpwald after Elvira arrived, but somehow she blamed you for it."
 
 understand "sign/board" and "adsorbing sign/board" as signboard.
 
-understand "pats/pat" and "pats/pat stap" as the resto store when player is in Same Mesa.
+understand "pts pasta" and "pts/pasta" as the resto store when player is in Same Mesa.
 
 a-text of adsorbing signboard is "RYRR". b-text of adsorbing signboard is "??RR". parse-text of adsorbing signboard is "?[sp]?[sp]x[sp]T". adsorbing signboard is any-spoilable.
 
