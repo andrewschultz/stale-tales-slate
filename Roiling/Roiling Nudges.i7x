@@ -341,8 +341,8 @@ table of same mesa nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "mesa"	290343046	--	--	"[locname]."
 "circle"	349947767	--	--	"[if cleric circle is visited]You already found a way [b]INSIDE[r][else]You may need to read the scripture picturers to figure how to enter the Cleric Circle[end if]."
-"orcas"	277143749	--	--	"[seed-plural-nag][if regalia is reflexed]No, you found the way in, with the extra s[else]Hm, it's Oscar'S[end if]."
-"pat"	186763795	--	--	"[seed-plural-nag][if regalia is reflexed]No, you found the way in, with the extra s[else]Hm, it's Pat'S[end if]."
+"orcas"	277143749	--	--	"[seed-plural-nag]Yes, Oscar is indeed the owner of the area behind the regalia, but you [if regalia is reflexed]figured what to do with the SOS Arc[else]want to focus on the arc's full message to get inside[end if]."
+"pat"	186763795	--	--	"[seed-plural-nag][if adsorbing signboard is reflexed]You don't need to do anything with Pat[else]Yes, Pat is inside, but you need to deal with the whole bit[end if]."
 "towards"	490212044	--	got-towards rule	"You search around for the worst ad some more, but you can't find it, or anything else you could do to or with it."
 "uhh"	179670405	--	--	"[name-worry of adobe abode]."
 "tut"	311325843	--	--	"[name-worry of adobe abode]."
@@ -350,7 +350,7 @@ this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "cripture"	652133930	--	--	"[picturer-change]."
 "picture"	566810127	--	--	"[picturer-change]."
 "pictures"	663084093	--	--	"[picturer-change]."
-"lairage"	348911935	--	--	"Lairage regalia is already tailored to the resident's style. So it's not yours to change[if regalia is reflexed], and you don't need to, now you've visited Oscar[else], but maybe noting what's on it will help you get in[end if]."
+"lairage"	348911935	--	--	"Lairage regalia is already tailored to the resident's style. So it's not yours to change[if regalia is reflexed], and you don't need to, now you've gotten inside[else], but maybe noting what's on it will help you get in[end if]."
 "sos"	266900509	--	--	"[sos-arc]."
 "arc"	106517206	--	--	"[sos-arc]."
 "satin"	315472156	--	--	"The church's name is not as important as its mission."
@@ -388,7 +388,7 @@ to say name-worry of (rm - a room): say "[if rm is visited]You did well enough[e
 
 to say picturer-change: say "It's more likely that scripture can change you[if picturers are reflexive], or help you see something a bit simpler to say[else], and it already has, whether or not you believe[end if]";
 
-to say sos-arc: say "[if Adobe Abode is visited]You already figured how to get into Oscar's. There's nothing else to do[else]You need to figure out what the whole [b]SOS ARC[r] in the lairage regalia can become[end if]"
+to say sos-arc: say "[if Adobe Abode is visited]You already figured how to get past the arc. There's nothing else to do[else]You need to figure out what the whole [b]SOS ARC[r] in the lairage regalia can become[end if]"
 
 to say board-change: say "It's what's on the board you need[if signboard is reflexed]ed[end if] to fix"
 
@@ -452,7 +452,7 @@ chapter adobe abode
 table of adobe abode nudges
 this-cmd	hashval	this-item	this-rule (rule)	this-clue
 "adobe"	243794498	--	--	"[locname]."
-"oscar"	277143749	--	--	"You don't need to do anything with Oscar[if pipe soot is in Adobe Abode and list o toils is examined], but maybe you can sneak the pipe soot away[else if pipe soot is not in Adobe Abode], and you already got the pipe soot[end if]."
+"oscar"	277143749	--	--	"Oscar is the owner, but there's no way to summon him back. [if pipe soot is in Adobe Abode and list o toils is examined]The pipe soot is the only thing here worth taking[else if pipe soot is not in Adobe Abode]You already got the pipe soot[end if]."
 "ashtray"	448724974	ashtray	--	"[ash-soot]."
 "trashy"	446537156	ashtray	--	"[ash-soot]."
 
