@@ -263,7 +263,7 @@ this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INS
 			say "You try the walking into the alley trick again, but the building stays still. You're a bit disappointed you can just walk in like that.";
 			move player to Idle Deli instead;
 
-this is the post-across rule: now uhh tut hut is clue-used;
+this is the post-across rule: now SOS Arc is clue-used;
 
 this is the post-past rule: now resto store is clue-used; [?? rivets/Trevis Vister clue used too?]
 
@@ -4375,8 +4375,8 @@ rs	"They're there to re-enforce your lack of direction."
 worst ad	"[one of]How would you approach the worst ad?[plus][or][b]RADWOST[r] is what the ad sells, whatever that is. That plus the settler gets you the vowels. A big clue for this Last Lousy Point.[plus][or][if cur-score of routes is 0]I'll check if you want to find what sort of words work here before going on[else]There are only so many prepositions in the English language[end if].[plus][or][b]TOWARDS[r].[minus][cycling]"	--	"[b]TOWARDS[r]"
 adsorbing signboard	"[one of]You can't walk into Pat's as normal. It moves, and you never seem to get to the door.[plus][or]You just need to flip two letters to enter Pat's.[plus][or][b]PAST[r] works.[minus][cycling]"	--	"[b]PAST[r]"
 resto store	--	adsorbing signboard
-lairage regalia	"[one of]You can't walk into the SOS Arc O' Scars as normal. It moves to the other side.[plus][or]What's a preposition that's anagrammatic to SOS ARC or O' Scars?[plus][or]You don't need to go down to enter but perpendicular.[plus][or][b]ACROSS[r].[minus][cycling]"	--	"[b]ACROSS[r]"
-uhh tut hut	--	lairage regalia
+SOS Arc	"[one of]You can't walk into the SOS Arc O' Scars as normal. It moves to the other side.[plus][or]What's a preposition that's anagrammatic to SOS ARC or O' Scars?[plus][or]You don't need to go down to enter but perpendicular.[plus][or][b]ACROSS[r].[minus][cycling]"	--	"[b]ACROSS[r]"
+lairage regalia	--	SOS Arc
 Gast	"[if Gast is off-stage]The giant is not in view yet. You need to examine the list-o-toils in the church[else if Gast is moot]You're done with [Gast][else]BUG. You should be directed to the [sit a nag] or relevant part you need to figure, now[end if]."
 side art	"[one of][Gast] seems to want you to listen to [his-her] tirades.[plus][or]This is a bit tricky--but the letters settler may help quite a bit. You know where the T is, and three consonants in a row aren't common.[plus][or][b]ASTRIDE[r].[minus][cycling]"	--	"[b]ASTRIDE[r]"
 tirades	--	side art

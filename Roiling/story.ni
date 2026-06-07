@@ -7118,7 +7118,7 @@ check fliptoing when mrlp is otters and power-back is false (this is the don't f
 
 this is the mesa-pass rule:
 	if gast is fungible, continue the action;
-	if noun is lairage regalia and adobe abode is visited, try entering Uhh Tut Hut instead;
+	if noun is lairage regalia and adobe abode is visited, try entering SOS Arc instead;
 	if noun is adsorbing signboard and Idle Deli is visited, try entering resto store instead;
 	if noun is scripture picturers and Cleric Circle is visited, try entering snatchier chantries instead;
 
@@ -9940,7 +9940,13 @@ when play begins (this is the make one way passages rule):
 	now same mesa is mapped outside cleric circle;
 	now horned hedron is mapped outside end den;
 
-Same Mesa is a room in Routes. last-loc of routes is Same Mesa. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]a Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if tut hut is visited]The Uhh-Tut Hut is back [b]ACROSS[r][else]There's an Uhh-Tut Hut with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a resto store advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here, but you're probably done with it[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if].". roomnud of Same Mesa is table of Same Mesa nudges.
+Same Mesa is a room in Routes. last-loc of routes is Same Mesa. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]a Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe abode is visited]The Uhh-Tut Hut is back [b]ACROSS[r][else][lrsosarc] marks an Uhh-Tut Hut[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a resto store advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here, but you're probably done with it[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if].". roomnud of Same Mesa is table of Same Mesa nudges.
+
+to say lrsosarc:
+	if lairage regalia is examined:
+		say "The [sos arc]";
+	else:
+		say "Some lairage regalia";
 
 outside-text of Same Mesa is "[if a bev o be ova is off-stage]Any direction from the Same Mesa seems as bad or good as any other. Perhaps there will be better clues what to do if you look around[else]There's something new to observe here since you helped Brother Horbert. Maybe it will lead where you need to go[end if]."
 
@@ -10055,33 +10061,43 @@ check entering the snatchier chantries:
 
 chapter Uhh Tut Hut
 
-the Uhh Tut Hut is auxiliary scenery in Same Mesa. "Yorpwaldian Uhh-Tut Huts are forbidding places. You're in no physical danger, but it's no fun to go in.[paragraph break]The lairage regalia announces the Uhh-Tut Hut's more proper name. [if lairage regalia is reflexed]Which you used to figure how to get in[else]That might be a helpful clue[end if].".
+the SOS Arc O Scars is auxiliary scenery in Same Mesa. "[sos-scenery]". printed name is "SOS Arc O['] Scars".
 
-enter-hut is a truth state that varies. enter-hut is usually false.
+check scaning SOS Arc:
+	say "The Uhh-Tut Hut gives nothing, but the lairage regalia above it gives a reading.";
+	try scaning lairage regalia instead;
 
-check entering Uhh Tut Hut:
+to say sos-scenery:
+	if pipe soot is not in adobe abode:
+		say "Under the SOS Arc O['] Scars, the adobe abode looks more welcoming now";
+	else:
+		say "Yorpwaldian Uhh-Tut Huts are forbidding places. You're in no physical danger, but it's no fun to go in.[paragraph break]The lairage regalia announces the Uhh-Tut Hut's more proper name. [if lairage regalia is reflexed]Which you used to figure how to get in[else]That might be a helpful clue[end if]."
+
+enter-hut-fail is a truth state that varies. enter-hut-fail is usually false.
+
+check entering SOS Arc:
 	if Gast is in Same Mesa, gast-block instead;
 	if Adobe Abode is unvisited:
-		now enter-hut is true;
+		now enter-hut-fail is true;
 		say "You try going directly into the Uhh-Tut Hut, but the place curves away from you." instead;
 	else:
-		if enter-hut is true:
+		if enter-hut-fail is true:
 			say "No more funny business from the hut. You walk in without having to pretend to walk away.";
-			now enter-hut is false;
+			now enter-hut-fail is false;
 		now player is in Adobe Abode;
 	the rule succeeds;
 
-does the player mean scaning Uhh Tut Hut: it is likely.
+does the player mean scaning SOS Arc: it is likely.
 
-understand "oscar's/oscars/oscar/scars" and "sos/arc" and "sos arc" as the Uhh Tut Hut when player is in Same Mesa.
+understand "uhh tut/hut" and "tut hut" and "uhh tut hut" and "uhh/tut/hut" as SOS Arc when player is in Same Mesa and pipe soot is in adobe abode.
+
+understand "adobe/abode" and "adobe abode" as SOS Arc when player is in Same Mesa and pipe soot is not in adobe abode.
+
+chapter lairage regalia
 
 the lairage regalia is reflexive scenery in Same Mesa. "[one of]As Yorpwaldian lairage regalia go, it's cheerless and unwelcoming. It says: [or][stopping][b][ast]SOS ARC O' Scars[ast][r]. [if Adobe Abode is visited]Well, you escaped without mental or physical scarring[else]Whoever's in there will probably be a bit of a complainer[end if]."
 
 to say ast: say "[if screenread is true] ** [end if]"
-
-check scaning Uhh Tut Hut:
-	say "The uhh tut hut gives nothing, but the lairage regalia above it gives a reading.";
-	try scaning lairage regalia instead;
 
 a-text of lairage regalia is "YRRYRR". b-text of lairage regalia is "YRRYR?". parse-text of lairage regalia is "UNIQUE". lairage regalia is parse-spoilable.
 
@@ -10109,7 +10125,7 @@ understand "pts pasta" and "pts/pasta" as the resto store when player is in Same
 
 a-text of adsorbing signboard is "RYRR". b-text of adsorbing signboard is "??RR". parse-text of adsorbing signboard is "?[sp]?[sp]x[sp]T". adsorbing signboard is any-spoilable.
 
-does the player mean entering the Uhh Tut Hut:
+does the player mean entering the SOS Arc:
 	if lairage regalia is reflexed, it is very likely;
 	it is likely;
 
@@ -10117,7 +10133,7 @@ does the player mean entering the resto store:
 	if adsorbing signboard is reflexed, it is very likely;
 	it is likely;
 
-check entering lairage regalia: try entering Uhh Tut Hut instead;
+check entering lairage regalia: try entering SOS Arc instead;
 check entering adsorbing signboard: try entering resto store instead;
 
 chapter bench
