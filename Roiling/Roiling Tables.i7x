@@ -238,10 +238,12 @@ raptest patters	raptest patters	false	575888338	5783936	--	"without"	"without"	-
 hurt hog	hurt hog	false	475056505	1720512	--	"through"	"through"	pre-hurt-hog-through rule	post-hurt-hog-through rule	"You realize it's time to move on. So you do. It feels a bit ritualistic and all, but the hurt hog and bent ewe, no longer hurt or bent, move on physically as well. You come upon a yob den nearby. Only your wisdom, or abstract anagram-solving skills, can help you determine whether to visit for a while, or not."
 yob den	yob den	false	432873440	16801818	Strip of Profits	"beyond"	"beyond"	pre-yob-den-beyond rule	--	"You ignore the yob den. That'll sort itself out later. What's important is to find a way out, back to the surface. And you do... it's much quicker than you'd think! You turn around, and there's the yob den, cheering for you. A drama armada is also there, beneath a ramada, of course. They're applauding you. You realize you're just outside of the poison stripe, and it turns a final shade of bright green before it winks out and vanishes. 'Pardone...a pro end! One, pard!' It's Brother Horbert. 'These other people, well, they promoted me to an Aproned Padrone. I hope I'm up to it. But I know you have other places to be ... thank you... just one more thing?'[paragraph break]In private, you help him change a Groans Sarong back to organs, which will spread joy and music and art through Yorpwald. Behind the sarong is a way through Old Warpy. As you enter, you notice No-Lag Logan has joined the crowd waving to you."
 
+to gast-block: say "Walking away would upset [Gast]. I mean, into doing something, not just talking. And [he-she] is bigger than you. Maybe listening will help[if noun is not prefigured and noun is not reflexed], and you can move that way later[end if].";
+
 this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INSIDE or TOWARDS]
 	[if noun is scripture picturers or noun is lairage regalia or noun is adsorbing signboard or noun is worst ad:]
 	if Gast is in Same Mesa:
-		say "Walking away would upset [Gast]. I mean, into doing something, not just talking. And [he-she] is bigger than you. Maybe listening will help[if noun is not prefigured and noun is not reflexed], and you can move that way later[end if].";
+		gast-block;
 		preef noun; [?? obvious test here is PAST, AGAINST, PAST, PF]
 		[
 		preef worst ad;

@@ -10058,7 +10058,7 @@ chapter Uhh Tut Hut
 the Uhh Tut Hut is auxiliary scenery in Same Mesa. "Yorpwaldian Uhh Tut Huts are usually round and house a grouchy resident, one who wants to see people in order to complain to them a bit.[paragraph break]The lairage regalia announces the Uhh Tut Hut's owner. That might be a helpful clue."
 
 check entering Uhh Tut Hut:
-	if Gast is in Same Mesa, try fliptoing lairage instead;
+	if Gast is in Same Mesa, gast-block instead;
 	if Adobe Abode is unvisited:
 		now oscar-annoy is true;
 		say "You try going directly to Oscar's, but the place curves away from you." instead;
@@ -10089,7 +10089,7 @@ the resto store is auxiliary scenery in Same Mesa. "The resto store looks terrib
 
 check entering resto store:
 	if Idle Deli is unvisited, say "You try to do so, but the building shifts further away." instead;
-	if Gast is in Same Mesa, try fliptoing signboard instead;
+	if Gast is in Same Mesa, gast-block instead;
 	say "You walk back into Pat's Idle Deli more confidently the second time. The building does not shift.";
 	now player is in Idle Deli instead;
 
