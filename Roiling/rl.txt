@@ -200,18 +200,28 @@ But the first letter is P or S, so the second letter is the vowel.
 The fourth letter gives a red reading, so it can't be S or P. It is T.
 This leaves two possibilities, PAST or SAPT.
 Go PAST.
-# logic for Oscar's SOS ARC
-?How do I enter Oscar's SOS Arc?
-The YRRYR? reading means the final letter is a consonant, but we already kmew it was S or C, so that's not really helpful. But having the SOS ARC helps us place a lot of letters.
+# logic for SOS ARC O' Scars
+?How do I enter the SOS Arc O' Scars?
+The YRRYR? reading means the final letter is a consonant, but we already knew it was S or C, so that's not really helpful. Still, we can get a lot from the other letters.
 The first letter is a vowel, so it must be O. That means the fourth letter must be A. (We could also solve the fourth, then the first.)
-S cannot be in positions 2 or 3. That leaves 5 and 6.
-So with A--OSS, you may be able to guess, but just in case, position 3 can't be C. That solves everything.
+S cannot be in positions 2 or 3. That leaves 5 and 6, since there are 2 S's.
+So with A--OSS, you may be able to guess already, but just in case, position 3 can't be C. That solves everything.
 ACROSS.
 # logic for anti sag sit a nag
 ?What's with the Anti Sag Sit a Nag?
 It has a few question marks, but the double A's help a lot. Slot 4 must be a vowel and 5 must be a consonant, making slot 1 an A. A(GST)(AI)(AI)(NS)(GNST)(NST).
 We can try some gimmicks like placing G in slot 6, giving NGS or NGT or SGN or SGT, none of which make promising words. So AG(AI)(AI)(NS)(NST)(NST) and then SNT/STN clog up a bit, so AG(AI)(AI)N(ST)(ST).
 There are also a few red clues, but AGAINST comes out of all this.
+# logic for Pope Otis St Pepito
+What do I do with Pope Otis St. Pepito and the pipe soot?
+(Fourth wall break) I was proud of coming up with Pope Otis's full name. It was a bit tricky. For must phrases, the vowels came in the wrong spot to do anything good.
+We can't tell which question mark is the vowel or the consonant, but we can tell something else.
+In particular, slots 6 and 7 are both either I or T, which eliminates possibilities for other slots.
+Slot 8 must be a vowel, but it can't be O, and from the previous step, it can't be I, so it is E.
+Now there are only two remaining vowels, both O's. They go in slots 1 and 4 for sure.
+O.PO...E is left, but 2 and 5 must be consonants, and since T is taken, that means they're S and P.
+P cannot be slot 5, giving us OPPOS..E.
+That leaves OPPOSTIE and OPPOSITE. In other words, OPPOSITE.
 # logic for rude n nuder
 ?How do I decipher what to do with Rude 'N Nuder?
 The YRPG? gives you a lot of clues. The question mark is a consonant, so it's N or R. The green is E, making the first letter U.
