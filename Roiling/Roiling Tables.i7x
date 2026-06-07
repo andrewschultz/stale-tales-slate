@@ -216,13 +216,13 @@ table of routes anagrams
 the-from	the-to	taked	fullhash	binhash	roomjump	right-word	right-cmd (topic)	pre-rule	post-rule	the-msg
 worst ad	worst ad	false	490212044	5128201	--	"towards"	"towards/toward"	pre-mesa-dir-flip rule	a rule	"You walk towards the ad to see what it says, and when you do, you find yourself not caring what direction you are going in. Then you hear a crackle, and someone yells, 'Catch that intruder!'[paragraph break]Ow! Darts! You pass out and wake up in the center of the Same Mesa again. The ad is gone. You may not be closer to saving Yorpwald, but you've made it fractionally more livable, so yay there."
 scripture picturers	scripture picturers	false	404002364	270616	Cleric Circle	"inside"	"inside"	pre-mesa-dir-flip rule	--	"The structure resigns ingress."
-lairage regalia	lairage regalia	false	373417715	409605	Adobe Abode	"across"	"across"	pre-mesa-dir-flip rule	post-across rule	"You walk across, not worrying about what is in front of you. Oscar's appears in front of you. You walk in."
+lairage regalia	lairage regalia	false	373417715	409605	Adobe Abode	"across"	"across"	pre-mesa-dir-flip rule	post-across rule	"You walk across, not worrying about what is in front of you. Then the entry is unavoidable. You walk in."
 adsorbing signboard	adsorbing signboard	false	283037761	819201	Idle Deli	"past"	"past"	pre-mesa-dir-flip rule	post-past rule	"You decide to walk past Pat's. Then, you turn and enter the alley just past it. The building lurches sideways toward you, and you manage to jump through the doorway with only a minor bump as it slams into you. You hear taps spat as you enter."
 sit a nag	Gast	false	350259676	794945	--	"against"	"against"	pre-sitanag-against rule	post-sitanag-against rule	"Quakes squeak as someone approaches, and you think 'Angst! Ai!' [he-she-c] is a lot bigger than you. [he-she-c] sits down and begins, 'tantrums! Must rant!'[paragraph break]The buggin['] biggun wants you to [b]LISTEN[r] to its staired tirades but also occasionally gestures to the side art on the [sit a nag][if side art is unexamined] you missed before[end if]."
 side art	side art	false	480723649	917785	--	"astride"	"astride"	pre-side-art-astride rule	post-side-art-astride rule	"You sit right on the end of the [sit a nag], prepared for a tired tirade. The brokest sob-trek ever--and yet, even with your yelling, 'Nag it, giant!'[paragraph break][gast] changes pace. You hear something in the distance. 'The [woe bow bell]!' [Gast] moans, distracted."
 WOE BOW BELL	Rude N Nuder	false	382326203	4212754	--	"below"	"below"	--	post-below rule	"It's worth a shot. You duck below the [sit a nag]. Not actually kneeling, of course, because that would be sort of like bowing. But [Gast] decides, why not join you, just in case? After several minutes, [the woe bow bell] stops. Perhaps there was a correlation. Perhaps not. But [Gast] has decided to change the subject, pulling out a book labeled [rude n nuder] and launching new complaints about how this is what Yorpwald is reduced to these days."
 Rude N Nuder	U NERD ENDUR REDUN	true	408172316	1187864	--	"under"	"under"	--	post-under rule	"You can't take [Gast] waving the, um, literature around. You look under--the parts [Gast] won't let you see--and you wonder what's the big deal. Disgusted that nobody will listen any more, [Gast] throws [rude n nuder] in the air. The slip-on cover rips! It falls away to reveal a different book ... [i]Runner Dude[r], by Nurene Rudd and Derrun Edun. Wait, no! That's another false cover. The book's real title is [b]U NERD: ENDUR (REDUN)[r]! And boy, it is runed.[paragraph break]Well, whoever hid it was clever. Hide something EXTRA taboo under something that just gets everyone moderately uncomfortable." [bold-ok]
-pipe soot	pipe soot	true	683820011	835856	--	"opposite"	"opposite"	--	post-pipesoot-opposite rule	"You inch to the other side of the room, engaging in small talk, complimenting Oscar on how nice the place is. With your back to the ashtray, you grab a big chunk of pipe soot, which you stuff in your super purse. You may or may not be a six footer, but you're a soot fixer[if list o toils is examined]--maybe you can find someone the soot is useful for[end if]!"
+pipe soot	pipe soot	true	683820011	835856	--	"opposite"	"opposite"	--	post-pipesoot-opposite rule	"You inch to the other side of the room, engaging in small talk, complimenting Pope Otis on his strong moral stances, whatever they may be. Eventually he rolls his eyes and turns away in disgust. Quickly, you grab a big chunk of pipe soot, which you stuff in your super purse. You may or may not be a six footer, but you're a soot fixer[if list o toils is examined]--maybe you can find someone the soot is useful for[end if]!"
 seed pit	stupor sprout	true	602484096	819480	--	"despite"	"despite"	--	post-seedpit-despite rule	"You ignore Pat's 'pits go to pigs' and 'yon pit, no pity' warnings and the sign. 'You can't...'[paragraph break]But you do. It's yucky and squishy, but it's not the seediest seed site ever. You hold your nose, hoping you can find what you want. Suddenly, you feel irrationally happy to find a small plant--you even think 'TO SPUR PO['] RUTS. PORT US!' Yes, it must be a stupor sprout! You take it, leaving the mere pit emptier." [bold-ok]
 be ova	MORF FORM	false	329930229	2113555	--	"above"	"above"	--	--	"You look up. There is a giant [morf form]! How did you miss it before? It's so big and huge and intimidating, you stumble back and kick [be ova], which rolls out of sight.[paragraph break]Okay, so now to deal with [the morf form]."
 MORF FORM	THE BEAN	false	250266429	151584	--	"from"	"from"	--	--	"The [morf form] suddenly falls, becoming FROM above. You watch a blot bloat as it gets closer. You duck and don't hear the thud. When you wake up, whatever was inside it is in the shape of a bean--but not just a bean. It's labeled [the bean].[paragraph break]You grumble to yourself: 'Mesa's a mess!' / 'Intact? It can't...'" [bold-ok]
@@ -236,7 +236,7 @@ thickness sketchins	thickness sketchins	false	441136547	4849793	Sonancy Canyons	
 bent ewe	bent ewe	false	681789531	4726802	--	"between"	"between"	--	--	"You stand bravely between the hog and the bee. Surprisingly, they don't seem upset. They actually appreciate your company."
 raptest patters	raptest patters	false	575888338	5783936	--	"without"	"without"	--	--	"It's always tough to figure how to ignore stuff. Do you focus on it directly, to find a way to get rid of it, or do you try to block it out? Either way, you realize that you just want to be without that sort of drivel, and ... amazingly, when you think of the more important things you have to do, it goes away."
 hurt hog	hurt hog	false	475056505	1720512	--	"through"	"through"	pre-hurt-hog-through rule	post-hurt-hog-through rule	"You realize it's time to move on. So you do. It feels a bit ritualistic and all, but the hurt hog and bent ewe, no longer hurt or bent, move on physically as well. You come upon a yob den nearby. Only your wisdom, or abstract anagram-solving skills, can help you determine whether to visit for a while, or not."
-yob den	yob den	false	432873440	16801818	Strip of Profits	"beyond"	"beyond"	pre-yob-den-beyond rule	--	"You ignore the yob den. That'll sort itself out later. What's important is to find a way out, back to the surface. And you do... it's much quicker than you'd think! You turn around, and there's the yob den, cheering for you. A drama armada is also there, beneath a ramada, of course. They're applauding you. You realize you're just outside of the poison stripe, and it turns a final shade of bright green before it winks out and vanishes. 'Pardone...a pro end! One, pard!' It's Brother Horbert. 'These other people, well, they promoted me to an Aproned Padrone. I hope I'm up to it. But I know you have other places to be ... thank you... just one more thing?'[paragraph break]In private, you help him change a Groans Sarong back to organs, which will spread joy and music and art through Yorpwald. Behind the sarong is a way through Old Warpy. As you enter, you notice No-Lag Logan has joined the crowd waving to you."
+yob den	yob den	false	432873440	16801818	Strip of Profits	"beyond"	"beyond"	pre-yob-den-beyond rule	--	"You ignore the yob den. That'll sort itself out later. What's important is to find a way out, back to the surface. And you do... it's much quicker than you'd think! You turn around, and there's the yob den, cheering for you. A drama armada is also there, beneath a ramada, of course. They're applauding you. You realize you're just outside of the poison stripe, and it turns a final shade of bright green before it winks out and vanishes. You even see someone who must be Oscar outside the Adobe Abode. 'Pardone...a pro end! One, pard!' It's Brother Horbert. 'These other people, well, they promoted me to an Aproned Padrone. I hope I'm up to it. But I know you have other places to be ... thank you... just one more thing?'[paragraph break]In private, you help him change a Groans Sarong back to organs, which will spread joy and music and art through Yorpwald. Behind the sarong is a way through Old Warpy. As you enter, you notice No-Lag Logan has joined the crowd waving to you."
 
 to gast-block: say "Walking away would upset [Gast]. I mean, into doing something, not just talking. And [he-she] is bigger than you. Maybe listening will help[if noun is not prefigured and noun is not reflexed], and you can move that way later[end if].";
 
@@ -255,8 +255,8 @@ this is the pre-mesa-dir-flip rule: [check general rejects for ACROSS, PAST, INS
 			say "You go back inside, being a bit over-cautious with protocol. You could've just said [b]IN[r].";
 			move player to Cleric Circle instead;
 		if noun is lairage:
-			if pipe soot is not in Adobe Abode, say "There was nothing else but the pipe soot in Oscar's." instead;
-			say "Yeah, [b]ACROSS[r] is fewer keystrokes than [b]ENTER OSCAR[r]'S, so hey...";
+			if pipe soot is not in Adobe Abode, say "There was nothing else but the pipe soot behind the SOS Arc." instead;
+			say "Yeah, [b]ACROSS[r] is fewer keystrokes than [b]ENTER HUT[r], so hey...";
 			move player to Adobe Abode instead;
 		if noun is adsorbing signboard:
 			if stupor sprout is not off-stage, say "You got the stupor sprout in Pat's. There wasn't much else there." instead;
@@ -2362,7 +2362,7 @@ table of routes readables
 to-read	what-read	alt-read
 worst ad	"'WARTS DO SOW, DRAT' is written below [first custom style]RADWOST[r] but not in red. Hmm." [bold-ok]
 cravings carvings	"When you squint the right way, '[first custom style]SPEED IT? SIT. DEEP.[r]' is written in red."
-trashy ashtray	"On this side is [first custom style][one of]PEST OP, OI[or]PO['] SPITE, O[cycling][r]. You can read the other side [one of][or]again [stopping]if you want." [bold-ok]
+trashy ashtray	"On this side is [first custom style][one of]PEST! PO, OI[or]P. S. OI, POET[cycling]![run paragraph on][r] You can read the other side [one of][or]again [stopping]if you want." [bold-ok]
 A Bev O Be Ova	"The self-proclaimed genius behind this marketing idea was Ev Abo. You see red at people gaining fame the easy way, instead of by saving imaginary worlds and stuff."
 Admits Mist Ad	"[first custom style][one of]IT'S MAD[or]DAT'S [']IM[or][ad-auth][or][ad-auth][or][ad-auth][in random order][r], in red."
 
@@ -2479,7 +2479,7 @@ table of routes unmatched topic responses
 askee	dialogue-text
 Brother Horbert	"[one of]'Saint Tina's Nun of No Fun left a list-o-toils for possible curse cures. Check thou it before proceeding, if you haven't.'[or]After a fret, he says, 'The list-o-toils!'[stopping] He seems pretty focused on that." [begin routes]
 Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[or]Sparest repasts[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [pat-on-pit].'"
-Oscar	"He's too grouchy to give much help here. He mutters on about slotted dottles--which, well, you [if player has pipe soot]already have pipe soot[else if read-list is true]don't think will help you get any pipe soot[else]don't know or care much about, now, yet[end if]."
+Pope Otis	"Pope Otis cannot be bothered with small talk about slotted dottles or whatever. You don't [if player has pipe soot]want to alert him to how you stole the pipe soot[else if read-list is true]don't think you can charm him into letting you have the pipe soot[else]think he can help tell you what you need to do here. Well, not explicitly[end if]."
 Gast	"[Gast] is sort of controlling the conversation, and [he-she]'s bigger than you. You probably just need to sympathize and avoid getting hit by flailing limbs and so forth."
 
 to say pat-rant: now pat-whine is whether or not pat-whine is false; [this is for asking pat anything to get random deli foods]
@@ -2671,7 +2671,7 @@ table of routes ask x about x
 askee	dialogue-text
 Brother Horbert	"He mentions he cannot do much--the Same Mesa needs magic to undo the curse, but the list-o-toils is on the wall[if list o toils is examined], as you've seen[end if]." [reflex ROUTES]
 Gast	"[Gast] is already talking about [him-her]self, [his-her] complaints, and so forth."
-Oscar	"'I'm just this guy, in this house, with that ashtray [if pipe soot is in adobe]full of nice smelling pipe soot[else]some self-appointed do-gooder cleaned out. Well, I can make more[end if].' Nope, he doesn't seem to have much to say."
+Pope Otis	"Pope Otis gives a 'Do we really need to talk about that?' look. You [if player has pipe soot]got what you needed[else]need to tiptoe around Pope Otis, somehow[end if]."
 Pat	"'[one of]No dine. Done in[or]Not much to munch[or]Food? Us? Doofus[cycling]. No [pat-rant][randbla] or [randbla][pat-rant]. [pat-on-pit].'"
 
 to say pat-rant: now pat-whine is whether or not pat-whine is false; [this is for asking pat anything to get random deli foods]
@@ -2821,21 +2821,22 @@ Brother Horbert	list o toils	"[if list o toils is unexamined]Why not examine the
 Brother Horbert	form	"[if form is off-stage]Brother Horbert mutters something about the gift of second sight.[else]Brother Horbert says, 'If you found the reagents, surely dealing with that form will be easier!'[end if]"
 Brother Horbert	Pat	"[lost-faith]"
 Brother Horbert	Oscar	"[lost-faith]"
+Brother Horbert	Pope Otis	"'One cannot speak ill of a fellow clergyman,' mumbles Brother Horbert, looking a bit ill."
 Brother Horbert	Gast	"'Well-meaning, but [his-her] wrath is misplaced. I can hear [him-her] from here. You [if Gast is moot]did well to listen to [him-her][else]may profit from listening to [him-her], but there is really nothing to fear[end if].'"
 Brother Horbert	Elvira	"'Perhaps she was good once. But her influence on religion is...disturbing.'"
 Gast	sit a nag	"There's not much dispute over the ownership. And [Gast] isn't trying to shoo you away. Maybe you should listen to [him-her] in general."
 Gast	Elvira	"[Gast] becomes momentarily more vocal and upset."
-oscar	ashtray	"[if player has pipe soot]Best not to call attention to your thievery.[else]'It's not pretty, but it's mine.'[end if]"
-oscar	pipe soot	"[if player has pipe soot]You don't need to mention you have it.[else]'Potpourri. Don't think you can just take it with me looking.'[end if]"
-oscar	pat	"'I went there once. That seed pit...ugh.'"
-oscar	Gast	"'Keeps my home less quiet, I'm sure!'"
-oscar	Brother Horbert	"'[bh-mw].'"
-oscar	Elvira	"'Hmph. Glad she's kept away from ME, so far.'"
-pat	seed pit	"'[if stupor sprout is off-stage]It scares[else]Well, it didn't scare YOU, but it'll still scare[end if] customers. It was nicer before the Poison Stripe, but I can't afford to remove it.'"
-pat	oscar	"'Him and his filthy pipe. Not welcome here.'"
-pat	Gast	"'Probably not good for business.'"
-pat	Brother Horbert	"'Brother Horbert means well, but he's too unfocused to DO anything by himself.'"
-pat	Elvira	"'Business is bad enough. I don't need trouble with her.'"
+Pat	seed pit	"'[if stupor sprout is off-stage]It scares[else]Well, it didn't scare YOU, but it'll still scare[end if] customers. It was nicer before the Poison Stripe, but I can't afford to remove it.'"
+Pat	Pope Otis	"'Well, he hasn't dropped by here yet.'"
+Pat	Gast	"'Probably not good for business.'"
+Pat	Brother Horbert	"'Brother Horbert means well, but he's too unfocused to DO anything by himself.'"
+Pat	Elvira	"'Business is bad enough. I don't need trouble with her.'"
+Pope Otis	ashtray	"[if player has pipe soot]Best not to call attention to your thievery.[else]'It's not pretty, but it's mine.'[end if]"
+Pope Otis	pipe soot	"[if player has pipe soot]You don't need to mention you have it.[else]'Potpourri. Don't think you can just take it with me looking.'[end if]"
+Pope Otis	pat	"'I went there once. That seed pit...ugh.'"
+Pope Otis	Gast	"'Keeps my home less quiet, I'm sure!'"
+Pope Otis	Brother Horbert	"'[bh-mw].'"
+Pope Otis	Elvira	"'Hmph. Glad she's kept away from ME, so far.'"
 
 to say lost-faith: say "'One of many of my flock who have lost faith they can help.'[no line break]";
 
@@ -3396,7 +3397,7 @@ book routes
 table of routes scannotes
 thing-to-note	b-only	clue-only-once	clued-yet	bothscan	postscanclue
 worst ad	true	false	false	false	"Hm! The worst ad seems like it should be simple, but maybe you need to [b]READ[r] the whole ad to see where the weird reading is coming from."
-lairage regalia	true	false	false	false	"OSCAR'S SOS ARC doesn't leave many possibilities. And only one ambiguous reading means you might be able to use standard logic." [bold-ok]
+lairage regalia	true	false	false	false	"SOS Arc O' Scars doesn't leave many possibilities. And only one ambiguous letter reading means you might be able to use standard logic." [bold-ok]
 adsorbing signboard	true	false	false	false	"While signboard is nine letters, the text on it suggests a four-letter solution. If only you could figure where the vowel was, it'd be a slam-dunk."
 anti sag sit a nag	true	false	false	false	"Hmm! Maybe the weird name for the (not) bench can help you sort things out."
 Rude N Nuder	true	false	false	false	"Only one inconclusive clue, and you have some direct hits. This shouldn't be too bad."
@@ -4173,7 +4174,7 @@ table of routes prefigurings
 preflip	pretodo
 sit a nag	"You can lean [b]AGAINST[r] the [sit a nag] [now-once of whether or not list o toils is examined] you feel less fear and more purpose."
 side art	"You can sit [b]ASTRIDE[r] the [sit a nag] [now-if-dealt of sit a nag] you have a reason to."
-lairage regalia	"You can go [b]ACROSS[r] the lairage regalia to Oscar's SOS Arc [now-gast-gone]."
+lairage regalia	"You can go [b]ACROSS[r] the lairage regalia through the SOS Arc O'Scars [now-gast-gone]."
 adsorbing signboard	"You can go [b]PAST[r] the adsorbing signboard to Pat's Stap [now-gast-gone]."
 worst ad	"You can go [b]TOWARDS[r] the worst ad [now-gast-gone]."
 hurt hog	"You can go [b]THROUGH[r] [now-if-dealt of bent ewe] you've managed to deal with the bent ewe."
@@ -4374,18 +4375,18 @@ rs	"They're there to re-enforce your lack of direction."
 worst ad	"[one of]How would you approach the worst ad?[plus][or][b]RADWOST[r] is what the ad sells, whatever that is. That plus the settler gets you the vowels. A big clue for this Last Lousy Point.[plus][or][if cur-score of routes is 0]I'll check if you want to find what sort of words work here before going on[else]There are only so many prepositions in the English language[end if].[plus][or][b]TOWARDS[r].[minus][cycling]"	--	"[b]TOWARDS[r]"
 adsorbing signboard	"[one of]You can't walk into Pat's as normal. It moves, and you never seem to get to the door.[plus][or]You just need to flip two letters to enter Pat's.[plus][or][b]PAST[r] works.[minus][cycling]"	--	"[b]PAST[r]"
 resto store	--	adsorbing signboard
-lairage regalia	"[one of]You can't walk into Oscar's as normal. It moves to the other side.[plus][or]What's a preposition that's anagrammatic to Oscar's?[plus][or]Not down to enter Oscar's--perpendicular.[plus][or][b]ACROSS[r].[minus][cycling]"	--	"[b]ACROSS[r]"
+lairage regalia	"[one of]You can't walk into the SOS Arc O' Scars as normal. It moves to the other side.[plus][or]What's a preposition that's anagrammatic to SOS ARC or O' Scars?[plus][or]You don't need to go down to enter but perpendicular.[plus][or][b]ACROSS[r].[minus][cycling]"	--	"[b]ACROSS[r]"
 uhh tut hut	--	lairage regalia
 Gast	"[if Gast is off-stage]The giant is not in view yet. You need to examine the list-o-toils in the church[else if Gast is moot]You're done with [Gast][else]BUG. You should be directed to the [sit a nag] or relevant part you need to figure, now[end if]."
 side art	"[one of][Gast] seems to want you to listen to [his-her] tirades.[plus][or]This is a bit tricky--but the letters settler may help quite a bit. You know where the T is, and three consonants in a row aren't common.[plus][or][b]ASTRIDE[r].[minus][cycling]"	--	"[b]ASTRIDE[r]"
 tirades	--	side art
 WOE BOW BELL	"[one of]The [b]WOE BOW BELL[r] doesn't have a ten-letter anagram, but a five-letter one.[plus][or]Since the [b]WOE BOW BELL[r] makes you see red, that also helps with what the letters should be, if you don't want to scan things. There's a direction you can go that might make you feel better about avoiding the bell.[plus][or]Go [b]BELOW[r].[minus][cycling]"	--	"[b]BELOW[r]"
 Rude N Nuder	"[one of]The contents of [Nuder] are probably worse than [Gast] ranting. But again, you need to avoid [his-her] flailing entirely. You need to duck something that's over.[plus][or]On cheat mode, [Nuder] scans oddly and gives you the solution.[plus][or]You need to go [b]UNDER[r].[minus][cycling]"	--	"[b]UNDER[r]"
-Oscar	"Oscar has little to say, [if U NERD ENDUR REDUN is in Adobe Abode]but the pipe soot is something you may need[else]and you got the pipe soot[end if]."
+Pope Otis	"Pope Otis has little to say, [if pipe soot is in Adobe Abode]but the pipe soot is something you may need[else]and you got the pipe soot[end if]."
 Pat	"Pat has little to say, other than to discourage you from the seed pit, [if seed pit is reflexed]but you got through there[else]so you need to enter it despite Pat's objections[end if]."
 U NERD ENDUR REDUN	"U NERD ENDUR REDUN is part of the spiers['] potion that will help let people see directions again[if Cleric Circle is unvisited]. But you need to get into the Cleric Circle first[end if]."
 a trashy ashtray	--	pipe soot
-pipe soot	"[if pipe soot is not in Adobe Abode]You got the pipe soot.[else][one of]You can't just walk over to the ashtray and get the pipe soot. Oscar wants you facing him.[plus][or]How can you face someone and be far away?[plus][or]Be completely [b]OPPOSITE[r].[minus][cycling]"	--	"[b]OPPOSITE[r]"
+pipe soot	"[if pipe soot is not in Adobe Abode]You got the pipe soot.[else][one of]You can't just walk over to the ashtray and get the pipe soot directly. Pope Otis is watching.[plus][or]How can you face someone and be far away?[plus][or]Be completely [b]OPPOSITE[r]. You will be able to keep Pope Otis distracted.[minus][cycling]"	--	"[b]OPPOSITE[r]"
 seed pit	"[one of]Pat's not going to let you have the stupor sprout you probably need from the seed pit.[plus][or]However, Pat mentions a lot are worthless. The seed pit is too dangerous. You need to say something to ignore the seed pit warning.[plus][or]Tell Pat you'll go in [b]DESPITE[r] the warnings.[minus][cycling]"	--	"[b]DESPITE[r]"
 stupor sprout	"The stupor sprout is part of the spiers['] potion that will help let people see directions again[if Cleric Circle is unvisited]. But you need to get into the Cleric Circle first[end if]."
 cravings carvings	"The cravings carvings clue how to get into the seed pit."
@@ -5512,7 +5513,7 @@ sum-page
 "People listened to Rev. Ali, and his austerity helped prevent hearing about Elvira's latest charm offensive. But he got more and more severe, restricting where people could go, and even directions how to get there. If people knew where they wanted to go, and it was really important, they'd get there."
 "Then Elvira dropped by. Rev. Ali took the time to admit he was wrong! In doing so, he informed the residents of the Same Mesa that they would do well to follow his lead. Terrified, they accepted. Elvira's excitement had matured, and he didn't realize how good she was at pointing out people's faults. It would help to improve them."
 "Rev. Ali left, but with one final 'character-building' challenge. The roads out of the Same Mesa would lead nowhere until someone found a new clever way out beyond them. And if nobody found the way out--well, there were some wise guys who were all about thinking for yourself. Maybe they were not as good at it as they claimed to be."
-"It was rumored Rev. Ali moved on to a new community to 'help.' His legacy remains, though. People are not willing even to visit Pat's and Oscar's. Why should they? The Same Mesa is a mix of countermanding and warnings about what you can't do, and how you can't even get the basics right, like cardinal directions. Someone needs to break through, somehow."
+"It was rumored Rev. Ali moved on to a new community to 'help.' His legacy remains, though. He left behind another clergyman to keep on eye on things. People don't get together any more. Why should they? The Same Mesa is a mix of countermanding and warnings about what you can't do, and how you can't even get the basics right, like cardinal directions. Someone needs to break through, somehow."
 
 book oyster specific
 

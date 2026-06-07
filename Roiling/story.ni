@@ -1589,7 +1589,7 @@ persuasion rule for asking Pat to try doing something:
 	say "He seems too despondent to do much of anything.";
 	persuasion fails;
 
-persuasion rule for asking Oscar to try doing something:
+persuasion rule for asking Pope Otis to try doing something:
 	say "He's too grouchy to be asked what to do.";
 	persuasion fails;
 
@@ -4307,7 +4307,7 @@ a hintstub rule for a thing (called th) (this is the point-to-mesa rule):
 		now spoilit is false instead;
 
 this is the routes-hinting rule:
-	if cur-score of routes is 0 and prep-spoil is false, say "[one of]You maybe haven't figured out what sort of word is needed in this zone yet. Oscar's, Pat's, and the scripture picturers are clues.[plus][or]They're relatively short words, so maybe you can guess from them.[plus][or]Did you notice you can't seem to go in any compass direction?[plus][or]What's another sort of word that can describe a direction?[plus][or]It anagrams Poison Stripe.[plus][or]Prepositions[p-spo].[minus][cycling]" instead;
+	if cur-score of routes is 0 and prep-spoil is false, say "[one of]You maybe haven't figured out what sort of word is needed in this zone yet. [SOS ARC], PT's Pasta, and the message on the scripture picturers are clues.[plus][or]They make for relatively short words, so maybe you can guess from them.[plus][or]Did you notice you can't seem to go in any compass direction?[plus][or]What's another sort of word that can describe a direction?[plus][or]It anagrams Poison Stripe.[plus][or]Prepositions[p-spo].[minus][cycling]" instead;
 	abide by the point-to-mesa rule for bev o be ova;
 	abide by the point-to-mesa rule for MORF FORM;
 	abide by the point-to-mesa rule for THE BEAN;
@@ -4335,7 +4335,7 @@ this is the routes-hinting rule:
 		try objhinting seed pit instead;
 	if location of player is Adobe Abode:
 		if pipe soot is in adobe, try objhinting pipe soot instead;
-		say "[if spoilit is true]The spoon points you out of[else]You're done here in[end if] Oscar's.";
+		say "[if spoilit is true]The spoon points you out of[else]You're done here in[end if] the Adobe Abode.";
 		now spoilit is false instead;
 	if location of player is Harms Marsh:
 		if NULL IT unit is in Harms Marsh, try objhinting NULL IT unit instead;
@@ -4355,7 +4355,7 @@ this is the routes-hinting rule:
 	repeat with QQ running through quest-items:
 		if QQ is off-stage:
 			if QQ is stupor sprout, say "You need to [if Idle Deli is unvisited]figure how to enter[else]go back to[end if] Pat's for the stupor sprout." instead;
-			if QQ is pipe soot, say "You need to [if Adobe Abode is unvisited]figure how to enter[else]go back to[end if] Oscar's for the pipe soot." instead;
+			if QQ is pipe soot, say "You need to [if Adobe Abode is unvisited]figure how to enter[else]go back to[end if] the SOS ARC under the lairage regalia for the pipe soot." instead;
 			if QQ is U NERD ENDUR REDUN, say "You need to work out how to sit all over the [Gast]'s [sit a nag] to get Rude [']N Nuder (which is, trivial spoiler, the runed book)." instead;
 	say "I can't give you any advice right now. You may want to hint individual items or even let me know via a transcript (or even a save file) at [email]." instead;
 
@@ -9940,7 +9940,7 @@ when play begins (this is the make one way passages rule):
 	now same mesa is mapped outside cleric circle;
 	now horned hedron is mapped outside end den;
 
-Same Mesa is a room in Routes. last-loc of routes is Same Mesa. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]a Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if adobe is visited]Oscar's is back across[else]There's an Uhh Tut Hut with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a resto store advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here, but you're probably done with it[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if].". roomnud of Same Mesa is table of Same Mesa nudges.
+Same Mesa is a room in Routes. last-loc of routes is Same Mesa. "Routes lead in all directions here, but they seem to twist before going anywhere[if worst ad is in Same Mesa]. Far off, beyond the perimeter of the poison stripe, you can see the worst ad you've ever seen[go-worst][end if].[paragraph break]You see three places to enter: [if cleric is visited]back into the Cleric Circle[else]a Cleric Circle, covered by scripture picturers, looks almost welcoming[end if]. [if tut hut is visited]The Uhh-Tut Hut is back [b]ACROSS[r][else]There's an Uhh-Tut Hut with lairage regalia[end if], and [if Idle Deli is visited]you can go back past to Pat's[else]a resto store advertises with an adsorbing signboard[end if].[paragraph break]Finally, [if Gast is moot]that [sit a nag] [Gast] sat on still lies here, but you're probably done with it[else if Gast is in Same Mesa][Gast]'s [sit a nag] lies here[else]there's a [sit a nag][one of] (okay, a bench, but this is Yorpwald,)[or],[stopping] which is rather big, so it must be a giant's[end if].". roomnud of Same Mesa is table of Same Mesa nudges.
 
 outside-text of Same Mesa is "[if a bev o be ova is off-stage]Any direction from the Same Mesa seems as bad or good as any other. Perhaps there will be better clues what to do if you look around[else]There's something new to observe here since you helped Brother Horbert. Maybe it will lead where you need to go[end if]."
 
@@ -10055,25 +10055,27 @@ check entering the snatchier chantries:
 
 chapter Uhh Tut Hut
 
-the Uhh Tut Hut is auxiliary scenery in Same Mesa. "Yorpwaldian Uhh Tut Huts are usually round and house a grouchy resident, one who wants to see people in order to complain to them a bit.[paragraph break]The lairage regalia announces the Uhh Tut Hut's owner. That might be a helpful clue."
+the Uhh Tut Hut is auxiliary scenery in Same Mesa. "Yorpwaldian Uhh-Tut Huts are forbidding places. You're in no physical danger, but it's no fun to go in.[paragraph break]The lairage regalia announces the Uhh-Tut Hut's more proper name. [if lairage regalia is reflexed]Which you used to figure how to get in[else]That might be a helpful clue[end if].".
+
+enter-hut is a truth state that varies. enter-hut is usually false.
 
 check entering Uhh Tut Hut:
 	if Gast is in Same Mesa, gast-block instead;
 	if Adobe Abode is unvisited:
-		now oscar-annoy is true;
-		say "You try going directly to Oscar's, but the place curves away from you." instead;
+		now enter-hut is true;
+		say "You try going directly into the Uhh-Tut Hut, but the place curves away from you." instead;
 	else:
-		if oscar-annoy is true:
-			say "No more funny business from Oscar's. You walk in without having to pretend to walk away.";
-			now oscar-annoy is false;
+		if enter-hut is true:
+			say "No more funny business from the hut. You walk in without having to pretend to walk away.";
+			now enter-hut is false;
 		now player is in Adobe Abode;
 	the rule succeeds;
 
 does the player mean scaning Uhh Tut Hut: it is likely.
 
-understand "oscar's/oscars/oscar" and "sos/arc" and "sos arc" as the Uhh Tut Hut when player is in Same Mesa.
+understand "oscar's/oscars/oscar/scars" and "sos/arc" and "sos arc" as the Uhh Tut Hut when player is in Same Mesa.
 
-the lairage regalia is reflexive scenery in Same Mesa. "[one of]As Yorpwaldian lairage regalia go, it's cheerless and unwelcoming. It says: [or][stopping][b][ast]Oscar's SOS ARC[ast][r]. [if Adobe Abode is visited]Well, Oscar wasn't so bad[else]Whoever's in there will probably be a bit of a complainer[end if]."
+the lairage regalia is reflexive scenery in Same Mesa. "[one of]As Yorpwaldian lairage regalia go, it's cheerless and unwelcoming. It says: [or][stopping][b][ast]SOS ARC O' Scars[ast][r]. [if Adobe Abode is visited]Well, you escaped without mental or physical scarring[else]Whoever's in there will probably be a bit of a complainer[end if]."
 
 to say ast: say "[if screenread is true] ** [end if]"
 
@@ -10249,7 +10251,7 @@ to say only-mesa: say "You can only go back out to the Same Mesa"
 after printing the locale description of Cleric Circle (this is the horbert quest item return rule):
 	if number of held quest-items is 3:
 		mootl list of all quest-items;
-		say "'You have all the reagents! Wonderful!' Brother Horbert sniffs the pipe soot. 'Pope Otis brand! Wow! Even better than Opie Post or P. S. Pie too!'[paragraph break]The priest gains esprit. 'Mixture...mixture...true mix! To censor crones like the Spiter Sprite and repeal the red orb border, changing the moronic omicron to dreamiest diameters, nag ol['] No-Lag Logan beyond an un-road to dig an urn during an... rarify this friary ... act divine. Vindicate.' He rushes off to a private office.[paragraph break]No-Lag Logan. That's an odd name. You write it down.";
+		say "'You have all the reagents! Wonderful!' Brother Horbert sniffs the pipe soot. 'Opie Post brand! Wow! Even better than P. S. Pie Too!'[paragraph break]The priest gains esprit. 'Mixture...mixture...true mix! To censor crones like the Spiter Sprite and repeal the red orb border, changing the moronic omicron to dreamiest diameters, nag ol['] No-Lag Logan beyond an un-road to dig an urn during an... rarify this friary ... act divine. Vindicate.' He rushes off to a private office.[paragraph break]No-Lag Logan. That's an odd name. You write it down.";
 		pad-rec "No-Lag Logan";
 		moot Brother Horbert;
 		pad-del "reagents";
@@ -10405,7 +10407,7 @@ to say list-o-toils-text:
 
 book Adobe Abode
 
-Adobe Abode is an innie room in Routes. "A dilapidated residence with a trashy ashtray, which [if pipe soot is in Adobe Abode]could use some emptying[else]you emptied, so there's probably not much left to do here[end if]. The only exit is out to the Mesa.".roomnud of adobe abode is table of adobe abode nudges.
+Adobe Abode is an innie room in Routes. "A dilapidated residence with a trashy ashtray, which [if pipe soot is in Adobe Abode]could use some emptying[else]you emptied, so there's probably not much left to do here[end if]. The only exit is out to the Mesa.".roomnud of adobe abode is table of adobe abode nudges. printed name of Adobe Abode is "[if pipe soot is reflexed]Adobe Abode[else]'Uhh, Tut' Hut[end if]".
 
 exits-text of Adobe Abode is "[only-mesa].".
 
@@ -10415,35 +10417,39 @@ check going outside in Adobe Abode:
 	say "You leave the adobe/abode.";
 	now player is in Same Mesa instead;
 
-chapter oscar
+chapter Pope Otis St Pepito
 
-Oscar is a person in Adobe Abode. description is "He gives a weary hi. 'Haywire.'". "[one of]Someone who must be Oscar, this being Oscar's and all,[or]Oscar[stopping] mopes around here, probably not willing to talk about more than himself."
+Pope Otis St Pepito is a person in Adobe Abode. "Pope Otis St. Pepito sniffs about here. He makes it clear you're unwelcome, but he also seems to be getting something out of having someone around to tell they're unwelcome."
+
+a-text of popeotis is "YRRYRYRY". b-text of popeotis is "YRPYRYRY". parse-text of popeotis is "-[sp]x[sp]p[sp]-[sp]x[sp]-[sp]x[sp]-".
 
 chapter ashtray
 
-a trashy ashtray is boring scenery in Adobe Abode. description of a trashy ashtray is "[if pipe soot is in Adobe Abode]The ashtray is full of pipe soot, but at least, no Pepsi too[else]You emptied the ashtray[end if].". bore-text is "You can't do much with the ashtray besides be all 'Artsy, ha!' or 'Ay, trash.'". bore-check is the bore-ashtray rule.
+a trashy ashtray is boring scenery in Adobe Abode. description of a trashy ashtray is "[if pipe soot is in Adobe Abode]The ashtray is full of pipe soot, but at least, no Pepsi too[else]You emptied the ashtray[end if].". bore-text is "Besides reading it, you can't do much with the ashtray besides be all 'Artsy, ha!' or 'Ay, trash.'". bore-check is the bore-ashtray rule.
 
 understand "ash/tray" as ashtray.
 
 this is the bore-ashtray rule:
+	if current action is reading, continue the action;
 	if current action is sbing or current action is scaning:
 		if player does not have pipe soot:
 			say "Only the pipe soot does anything to the settler, so you focus on that.[paragraph break]";
 			try scaning pipe soot instead;
-
-oscar-annoy is a truth state that varies. oscar-annoy is usually false.
 
 chapter pipe soot
 
 some pipe soot is a reflexive singular-named quest-item in Adobe Abode. it is scenery. the indefinite article of pipe soot is "some".
 
 check taking the pipe soot when soot is in adobe:
-	say "Oscar snaps at you. 'Hey! Whoa! No stealing! Even worthless stuff!'[paragraph break]Maybe if you could position yourself so he can't see you taking it." instead;
+	say "Pope Otis snaps at you. 'Hey! Whoa! No stealing! Even worthless stuff!'[paragraph break]Maybe if you could position yourself so he can't see you taking it." instead;
 
 a-text of pipe soot is "YRRYRYRY". b-text of pipe soot is "YRPYPYRY". parse-text of pipe soot is "-[sp]x[sp]P[sp]-[sp]S[sp]-[sp]x[sp]-".
 
 the description of pipe soot is "If you picked it apart, which you don't need to, there might be evidence it was once tobacco. It actually smells more like some fruit you can't, and won't, recognize."
 
+chapter oscar
+
+Oscar is a person. description is "He gives a weary hi. 'Haywire.'". "[one of]Someone who must be Oscar, this being Oscar's and all,[or]Oscar[stopping] mopes around here, probably not willing to talk about more than himself."
 
 book Idle Deli
 
