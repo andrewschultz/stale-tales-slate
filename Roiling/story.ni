@@ -4153,7 +4153,7 @@ this is the stores-hinting rule:
 		if Store K is fungible, try objhinting Store K instead;
 		if Store N is fungible, try objhinting Store N instead;
 		say "[if debug-state is true]DEBUG: [list of unsolved regions][end if] You have nothing more to do here. You need to [if number of unsolved regions > 0]work your way through what's behind other stores, then [end if]go between the otters for your final destiny!" instead;
-	if number of portals in Strip of Profits > 0, say "While [the slickest portal in Strip of Profits] [if number of portals in Strip of Profits is 1]leads to a new adventure[else]is what I'd recommend entering[end if], here is how to deal with another store...[paragraph break]";
+	if number of maingame portals in Strip of Profits > 0, say "While [the slickest portal in Strip of Profits] [if number of maingame portals in Strip of Profits is 1]leads to a new adventure[else]is what I'd recommend entering[end if], here is how to deal with another store...[paragraph break]";
 	if cur-hint-sto is not in Strip of Profits:
 		if Store U is in Strip of Profits:
 			now cur-hint-sto is Store U;
@@ -19078,10 +19078,10 @@ to clean-for-roving:
 	moot magneto;
 	now others is unsolved;
 	move player to Strip of Profits;
-	if number of portals in Strip of Profits > 0:
+	if number of maingame portals in Strip of Profits > 0:
 		say "Moving [list of portals in Strip of Profits] out of the Strip. They shouldn't be there. This is a bug but not game-critical." ;
-		repeat with myport running through portals in Strip of Profits:
-			if myport is not Throes Hoster, moot myport;
+		repeat with myport running through maingame portals in Strip of Profits:
+			moot myport;
 
 chapter whistleing
 
